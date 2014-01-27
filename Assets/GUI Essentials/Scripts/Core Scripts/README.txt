@@ -1,0 +1,1 @@
+Experienced GUI Essentials users who are just looking for the core functionality of GUI Essentials without bloating their project should use the scripts contained in this folder (and the Editor folder) and delete the rest of the asset.   
