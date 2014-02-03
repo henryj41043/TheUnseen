@@ -75,7 +75,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Bolts_Type
       value:
-        scalar[0]: 1.01800001
+        scalar[0]: 1.04900002
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -124,7 +124,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Patterns_Type
       value:
-        scalar[0]: 1.03299999
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0

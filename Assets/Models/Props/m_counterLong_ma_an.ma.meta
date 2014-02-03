@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 00941f77df04a444d8861fe08a981378
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCylinder1
+    100004: pCylinder1 1
+    100006: pCylinder1 2
+    100008: pCylinder2
+    100010: pCylinder2 1
+    100012: pCylinder2 2
+    100014: pCylinder5
+    100016: pCylinder5 1
+    100018: pCylinder5 2
+    100020: pCylinder6
+    100022: pCylinder6 1
+    100024: pCylinder6 2
+    100026: Shelf_Pin_1
+    100028: Shelf_Pin_2
+    100030: Shelf_Pin_3
+    100032: Shelf_wood
+    400000: //RootNode
+    400002: pCylinder1
+    400004: pCylinder1 1
+    400006: pCylinder1 2
+    400008: pCylinder2
+    400010: pCylinder2 1
+    400012: pCylinder2 2
+    400014: pCylinder5
+    400016: pCylinder5 1
+    400018: pCylinder5 2
+    400020: pCylinder6
+    400022: pCylinder6 1
+    400024: pCylinder6 2
+    400026: Shelf_Pin_1
+    400028: Shelf_Pin_2
+    400030: Shelf_Pin_3
+    400032: Shelf_wood
+    2300000: pCylinder1
+    2300002: pCylinder1 1
+    2300004: pCylinder1 2
+    2300006: pCylinder2
+    2300008: pCylinder2 1
+    2300010: pCylinder2 2
+    2300012: pCylinder5
+    2300014: pCylinder5 1
+    2300016: pCylinder5 2
+    2300018: pCylinder6
+    2300020: pCylinder6 1
+    2300022: pCylinder6 2
+    2300024: Shelf_wood
+    3300000: pCylinder1
+    3300002: pCylinder1 1
+    3300004: pCylinder1 2
+    3300006: pCylinder2
+    3300008: pCylinder2 1
+    3300010: pCylinder2 2
+    3300012: pCylinder5
+    3300014: pCylinder5 1
+    3300016: pCylinder5 2
+    3300018: pCylinder6
+    3300020: pCylinder6 1
+    3300022: pCylinder6 2
+    3300024: Shelf_wood
+    4300000: Shelf_wood
+    4300002: pCylinder1
+    4300004: pCylinder2
+    4300006: pCylinder5
+    4300008: pCylinder6
+    4300010: pCylinder1
+    4300012: pCylinder2
+    4300014: pCylinder5
+    4300016: pCylinder6
+    4300018: pCylinder1
+    4300020: pCylinder2
+    4300022: pCylinder5
+    4300024: pCylinder6
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

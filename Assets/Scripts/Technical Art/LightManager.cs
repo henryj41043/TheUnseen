@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LightManager : MonoBehaviour {
 
+	// Script is no longer needed while we are using lightmaps
+	/*
 	public bool useAreaLights;
 	public bool useUnityLights;
 
@@ -69,5 +71,5 @@ public class LightManager : MonoBehaviour {
 		}
 	}
 
-
+*/
 }

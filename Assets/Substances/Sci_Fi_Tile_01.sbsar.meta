@@ -213,17 +213,17 @@ SubstanceImporter:
     - name: Sci_Fi_Tile_01_Diffuse
       alphaSource: 5
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: Sci_Fi_Tile_01_Specular
       alphaSource: 0
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: Sci_Fi_Tile_01_Normal
       alphaSource: 0
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: Sci_Fi_Tile_01_Bump
       alphaSource: 0
