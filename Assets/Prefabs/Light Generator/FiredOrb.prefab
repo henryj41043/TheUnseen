@@ -8,12 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: FiredOrb
-  m_TagString: Untagged
+  m_TagString: FiredOrb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,17 +200,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d65d82ec6069843a399b6061bc6963, type: 3}
+  m_Script: {fileID: 11500000, guid: f38533e142712c541bdfe83e98ea0f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orbLight: {fileID: 100002}
-  sizeScale: .508193791
-  speed: 1077.8634
-  intensity: 2.54096889
-  range: 2.54096889
-  lightDecay: .5
-  rangeDecay: .5
-  dieThreshold: 1
+  sizeScale: .354648292
+  speed: 1273.24146
+  intensity: 3.06197715
+  range: 12.7324142
+  lightDecay: 0
+  rangeDecay: 0
+  dieThreshold: 0
   age: 1
 --- !u!122 &12200000
 Halo:
