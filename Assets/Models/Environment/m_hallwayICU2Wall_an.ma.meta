@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: a46854025b39a1145b2b6101244895c1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bevel
+    100002: bevel 1
+    100004: ceiling
+    100006: floor
+    100008: hallwaySide1
+    100010: hallwaySide2
+    100012: light1
+    100014: light1 1
+    100016: light2
+    100018: light2 1
+    100020: light3
+    100022: light3 1
+    100024: light4
+    100026: light4 1
+    100028: //RootNode
+    100030: moulding
+    100032: moulding 1
+    100034: pillar
+    100036: pillar 1
+    100038: wall
+    100040: wall 1
+    100042: pillar1
+    400000: bevel
+    400002: bevel 1
+    400004: ceiling
+    400006: floor
+    400008: hallwaySide1
+    400010: hallwaySide2
+    400012: light1
+    400014: light1 1
+    400016: light2
+    400018: light2 1
+    400020: light3
+    400022: light3 1
+    400024: light4
+    400026: light4 1
+    400028: //RootNode
+    400030: moulding
+    400032: moulding 1
+    400034: pillar
+    400036: pillar 1
+    400038: wall
+    400040: wall 1
+    400042: pillar1
+    2300000: bevel
+    2300002: bevel 1
+    2300004: ceiling
+    2300006: floor
+    2300008: light1
+    2300010: light1 1
+    2300012: light2
+    2300014: light2 1
+    2300016: light3
+    2300018: light3 1
+    2300020: light4
+    2300022: light4 1
+    2300024: moulding
+    2300026: moulding 1
+    2300028: pillar
+    2300030: pillar 1
+    2300032: wall
+    2300034: wall 1
+    2300036: pillar1
+    3300000: bevel
+    3300002: bevel 1
+    3300004: ceiling
+    3300006: floor
+    3300008: light1
+    3300010: light1 1
+    3300012: light2
+    3300014: light2 1
+    3300016: light3
+    3300018: light3 1
+    3300020: light4
+    3300022: light4 1
+    3300024: moulding
+    3300026: moulding 1
+    3300028: pillar
+    3300030: pillar 1
+    3300032: wall
+    3300034: wall 1
+    3300036: pillar1
+    4300000: wall
+    4300002: bevel
+    4300004: moulding
+    4300006: pillar
+    4300008: light1
+    4300010: light2
+    4300012: light3
+    4300014: light4
+    4300016: wall
+    4300018: bevel
+    4300020: moulding
+    4300022: pillar
+    4300024: light1
+    4300026: light2
+    4300028: light3
+    4300030: light4
+    4300032: ceiling
+    4300034: floor
+    4300036: pillar1
+    6400000: bevel
+    6400002: bevel 1
+    6400004: ceiling
+    6400006: floor
+    6400008: light1
+    6400010: light1 1
+    6400012: light2
+    6400014: light2 1
+    6400016: light3
+    6400018: light3 1
+    6400020: light4
+    6400022: light4 1
+    6400024: moulding
+    6400026: moulding 1
+    6400028: pillar
+    6400030: pillar 1
+    6400032: wall
+    6400034: wall 1
+    6400036: pillar1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

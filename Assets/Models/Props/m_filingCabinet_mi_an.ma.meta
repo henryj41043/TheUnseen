@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 5a719ea7af3cf5b4287b7c99f70552d5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: drawerBot
+    100002: drawerMid
+    100004: drawerTop
+    100006: handleBot
+    100008: handleMid
+    100010: handleTop
+    100012: lockBot
+    100014: lockMid
+    100016: lockTop
+    100018: //RootNode
+    100020: nameFrameBot
+    100022: nameFrameMid
+    100024: nameFrameTop
+    400000: drawerBot
+    400002: drawerMid
+    400004: drawerTop
+    400006: handleBot
+    400008: handleMid
+    400010: handleTop
+    400012: lockBot
+    400014: lockMid
+    400016: lockTop
+    400018: //RootNode
+    400020: nameFrameBot
+    400022: nameFrameMid
+    400024: nameFrameTop
+    2300000: drawerBot
+    2300002: drawerMid
+    2300004: drawerTop
+    2300006: handleBot
+    2300008: handleMid
+    2300010: handleTop
+    2300012: lockBot
+    2300014: lockMid
+    2300016: lockTop
+    2300018: //RootNode
+    2300020: nameFrameBot
+    2300022: nameFrameMid
+    2300024: nameFrameTop
+    3300000: drawerBot
+    3300002: drawerMid
+    3300004: drawerTop
+    3300006: handleBot
+    3300008: handleMid
+    3300010: handleTop
+    3300012: lockBot
+    3300014: lockMid
+    3300016: lockTop
+    3300018: //RootNode
+    3300020: nameFrameBot
+    3300022: nameFrameMid
+    3300024: nameFrameTop
+    4300000: cabinet
+    4300002: drawerTop
+    4300004: handleTop
+    4300006: nameFrameTop
+    4300008: lockTop
+    4300010: drawerMid
+    4300012: handleMid
+    4300014: nameFrameMid
+    4300016: lockMid
+    4300018: drawerBot
+    4300020: handleBot
+    4300022: nameFrameBot
+    4300024: lockBot
+    6400000: drawerBot
+    6400002: drawerMid
+    6400004: drawerTop
+    6400006: handleBot
+    6400008: handleMid
+    6400010: handleTop
+    6400012: lockBot
+    6400014: lockMid
+    6400016: lockTop
+    6400018: //RootNode
+    6400020: nameFrameBot
+    6400022: nameFrameMid
+    6400024: nameFrameTop
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

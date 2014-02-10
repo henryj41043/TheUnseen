@@ -23,7 +23,7 @@ PlayerSettings:
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
-  m_UseDX11: 0
+  m_UseDX11: 1
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   displayResolutionDialog: 1
@@ -118,7 +118,7 @@ PlayerSettings:
   - m_BuildTarget: Web
     m_StaticBatching: 1
     m_DynamicBatching: 1
-  webPlayerTemplate: APPLICATION:Default
+  webPlayerTemplate: APPLICATION:No Context Menu
   m_TemplateCustomTags: {}
   wiiRegion: 1
   wiiGameCode: RABA

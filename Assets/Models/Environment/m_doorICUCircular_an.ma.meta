@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: a4ae3b6c4376b5148bae05dd5ef29790
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: doorBottom
+    100002: doorFrame
+    100004: doorTop
+    100006: //RootNode
+    100008: wall
+    400000: doorBottom
+    400002: doorFrame
+    400004: doorTop
+    400006: //RootNode
+    400008: wall
+    2300000: doorBottom
+    2300002: doorFrame
+    2300004: doorTop
+    2300006: wall
+    3300000: doorBottom
+    3300002: doorFrame
+    3300004: doorTop
+    3300006: wall
+    4300000: doorTop
+    4300002: doorBottom
+    4300004: doorFrame
+    4300006: wall
+    6400000: doorBottom
+    6400002: doorFrame
+    6400004: doorTop
+    6400006: wall
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

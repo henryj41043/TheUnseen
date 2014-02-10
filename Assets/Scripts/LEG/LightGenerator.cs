@@ -3,8 +3,10 @@ using System.Collections;
 
 public class LightGenerator : MonoBehaviour
 {
+	public GUIText energyText;
+
 	public GameObject chargingOrb;
-	public GameObject chargeLight;
+	public Light chargeLight;
 	public GameObject playerCam;
 	public GameObject shootingOrb;
 
@@ -27,8 +29,11 @@ public class LightGenerator : MonoBehaviour
 	public float bulletScaleMax;
 	public float bulletScaleMin;
 
+	public float percentRechargePerSecond;
 	public float percentChargePerSecond;
 	public float drainPerSecond;
+
+	public bool recharging = true;
 
 	void Start () {
 		chargingOrb.SetActive(false);
@@ -37,7 +42,14 @@ public class LightGenerator : MonoBehaviour
 		
 	}
 
+	void Update(){
+		if (recharging){
+			AddEnergy ((maxEnergy*(percentRechargePerSecond/100))*Time.deltaTime);
+		}
+	}
+
 	void UpdateDisplay() {
+		energyText.text = energy.ToString();
 	}
 
 	public void AddEnergy(float e) {
@@ -64,11 +76,10 @@ public class LightGenerator : MonoBehaviour
 	void UpdateOrb (){
 		if (energy > 0.0f) {
 			float ratio = orbCharge/maxOrbCharge;
-			chargeLight.light.intensity = ratio*(maxLightIntensity-minLightIntensity)+minLightIntensity;
-			chargeLight.light.range = ratio*(maxLightRange-minLightRange)+minLightRange;
+			chargeLight.intensity = ratio*(maxLightIntensity-minLightIntensity)+minLightIntensity;
+			chargeLight.range = ratio*(maxLightRange-minLightRange)+minLightRange;
 			
 			float orbScale = ratio*(bulletScaleMax-bulletScaleMin)+bulletScaleMin;
-			print (ratio+" "+orbScale);
 			chargingOrb.transform.localScale = new Vector3(orbScale, orbScale, orbScale);
 			
 		} else {

@@ -7,7 +7,6 @@ public class DeveloperConsole : MonoBehaviour {
 	public GameObject consoleWindow;
 	public GameObject consoleText;
 	public GameObject fps;
-	public LightManager lightManager;
 
 	private bool isVisible = false;
 
@@ -34,16 +33,7 @@ public class DeveloperConsole : MonoBehaviour {
 			fps.SetActive(true);
 		} else if (s == "no fps") {
 			fps.SetActive(false);
-		} else if (s == "area lights") {
-			lightManager.UseAreaLights();
-			lightManager.DisableUnityLights();
-		} else if (s == "unity lights") {
-			lightManager.UseUnityLights();
-			lightManager.DisableAreaLights();
-		} else if (s.Contains("area intensity")) {
-			lightManager.SetAreaLightIntensity(float.Parse(s.Substring(s.LastIndexOf(" "))));
 		}
-
 		consoleWindow.SendMessage("Clear");
 
 	}

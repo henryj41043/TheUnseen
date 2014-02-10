@@ -1,0 +1,91 @@
+fileFormatVersion: 2
+guid: 314c362f728ef9849824f379275e8421
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Base
+    100002: Caps
+    100004: //RootNode
+    100006: Racks
+    100008: Screws
+    100010: Shelf 1
+    400000: Base
+    400002: Caps
+    400004: //RootNode
+    400006: Racks
+    400008: Screws
+    400010: Shelf 1
+    2300000: Base
+    2300002: Caps
+    2300004: Racks
+    2300006: Screws
+    2300008: Shelf 1
+    3300000: Base
+    3300002: Caps
+    3300004: Racks
+    3300006: Screws
+    3300008: Shelf 1
+    4300000: Shelf
+    4300002: Racks
+    4300004: Base
+    4300006: Screws
+    4300008: Caps
+    6400000: Base
+    6400002: Caps
+    6400004: Racks
+    6400006: Screws
+    6400008: Shelf 1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

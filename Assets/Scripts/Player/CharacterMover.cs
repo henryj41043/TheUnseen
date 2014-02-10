@@ -17,6 +17,8 @@ public class CharacterMover : MonoBehaviour
 	bool canControl = true;
 	bool useFixedUpdate = true;
 
+	public LayerMask onlyPlayer;
+
 	//Ryan Made This!
 	private CharacterStats stats;
 	private CameraBob camBob;
@@ -55,6 +57,10 @@ public class CharacterMover : MonoBehaviour
 
 		//Ryan Made This!
 		public float crouchShrink = .3f;
+		[System.NonSerialized]
+		public Vector3 baseScale;
+		[System.NonSerialized]
+		public float baseHeight;
 
 		//Ryan Made This!
 		[System.NonSerialized]
@@ -229,6 +235,9 @@ public class CharacterMover : MonoBehaviour
 		//Ryan Made This!
 		camBob = GetComponent<CameraBob>();
 		camBob.maxSpeed = movement.maxForwardSpeed;
+
+		movement.baseScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+		movement.baseHeight = controller.height;
 	}
 	
 	private void UpdateFunction()
@@ -380,38 +389,24 @@ public class CharacterMover : MonoBehaviour
 			if (grounded && canStand()) {
 				movement.isCrouching = false;
 				transform.position = new Vector3(transform.position.x, transform.position.y + (movement.crouchShrink*controller.height)/2, transform.position.z);
-				transform.localScale = new Vector3(1, 1, 1);
+				transform.localScale = movement.baseScale;
 			}
 		} else {
 			movement.isCrouching = true;
-			transform.localScale = new Vector3(1, 1-movement.crouchShrink, 1);
+			transform.localScale = new Vector3(movement.baseScale.x, movement.baseScale.y-movement.crouchShrink, movement.baseScale.z);
 			transform.position = new Vector3(transform.position.x, transform.position.y - (movement.crouchShrink*controller.height)/2, transform.position.z);
 		}	
 	}
 
 	//Ryan Made This! (Adapted from UFPS)
 	bool canStand () {
-		//want to circlecast upwards to make sure there's room to stand
-
-		/*
-// can't stop crouching if there is a blocking object above us
-		if (Physics.SphereCast(new Ray(Transform.position, Vector3.up),
-				m_CharacterController.radius,
-				(m_NormalHeight - m_CharacterController.radius + 0.01f),
-				vp_Layer.Mask.ExternalBlockers))
+		if (Physics.SphereCast(new Ray(transform.position, Vector3.up),
+		                       controller.radius,
+		                       (movement.baseHeight - controller.radius + 0.01f),
+		                       onlyPlayer))
 		{
-
-			// regulate stop test interval to reduce amount of sphere casts
-			Player.Crouch.NextAllowedStopTime = Time.time + 1.0f;
-
-			// found a low ceiling above us - abort getting up
 			return false;
-
 		}
-
-		// nothing above us - okay to get up
-		return true;
-		 */
 
 		return true;
 	}
@@ -593,38 +588,22 @@ public class CharacterMover : MonoBehaviour
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 
-		/**
-		 * 
-		 * var body : Rigidbody = hit.collider.attachedRigidbody;
- 
-    // no rigidbody
-    if (body != null && !body.isKinematic) {
- 
-    // We dont want to push objects below us
-    if (hit.moveDirection.y < -0.3) { return; }
- 
-    // Calculate push direction from move direction,
-    // we only push objects to the sides never up and down
-    var pushDir = Vector3 (hit.moveDirection.x, 0, hit.moveDirection.z);
- 
-    // If you know how fast your character is trying to move,
-    // then you can also multiply the push velocity by that.
- 
-    // Apply the push
-    body.velocity = pushDir * movement.pushPower;
-    }
+		Rigidbody body = hit.collider.attachedRigidbody;
 
-	if (hit.normal.y > 0 && hit.normal.y > groundNormal.y && hit.moveDirection.y < 0) {
-		if ((hit.point - movement.lastHitPoint).sqrMagnitude > 0.001 || lastGroundNormal == Vector3.zero)
-			groundNormal = hit.normal;
-		else
-			groundNormal = lastGroundNormal;
-		
-		movingPlatform.hitPlatform = hit.collider.transform;
-		movement.hitPoint = hit.point;
-		movement.frameVelocity = Vector3.zero;
-	}
-		 */
+		if (body != null && !body.isKinematic) {
+			if (hit.moveDirection.y < -0.3){
+				//We don't want to push objects below us
+				return;
+			}
+			// Calculate push direction from move direction,
+			// we only push objects to the sides never up and down
+			Vector3 pushDir = new Vector3 (hit.moveDirection.x, 0, hit.moveDirection.z);
+
+			// If you know how fast your character is trying to move,
+			// then you can also multiply the push velocity by that.
+			// Apply the push
+			body.velocity = pushDir * movement.pushPower;
+		}
 
 		if(hit.normal.y > 0 && hit.normal.y > groundNormal.y && hit.moveDirection.y < 0)
 		{

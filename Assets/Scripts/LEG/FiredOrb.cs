@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class FiredOrb : MonoBehaviour {
-	
-	public GameObject orbLight;
+
+	public GameObject orbImpact;
+	public Light orbLight;
 
 	public float sizeScale;
 	public float speed;
@@ -16,13 +17,15 @@ public class FiredOrb : MonoBehaviour {
 	
 	public float age = 1;
 
+	private bool touching = false;
+
 	// Use this for initialization
 	void Start () {
 		//Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").collider, this.collider, true);
 		Vector3 orbSize = new Vector3(sizeScale, sizeScale, sizeScale);
 		transform.localScale = orbSize;
-		orbLight.light.intensity = intensity;
-		orbLight.light.range = range;
+		orbLight.intensity = intensity;
+		orbLight.range = range;
 		rigidbody.AddForce(transform.forward*speed);
 	}
 	
@@ -31,13 +34,27 @@ public class FiredOrb : MonoBehaviour {
 		intensity -= lightDecay*Time.deltaTime;
 		range -= rangeDecay*Time.deltaTime;
 		
-		orbLight.light.intensity = intensity;
-		orbLight.light.range = range;
+		orbLight.intensity = intensity;
+		orbLight.range = range;
 		
-		if (orbLight.light.intensity < dieThreshold){
+		if (orbLight.intensity < dieThreshold){
 			Destroy(gameObject);	
 		}
 		
+	}
+
+	void OnCollisionEnter(Collision c) {
+		if (!touching) {
+			GameObject impact = Instantiate(orbImpact, transform.position, transform.rotation) as GameObject;
+		}
+	}
+
+	void OnCollisionStay (Collision c) {
+		touching = true;
+	}
+
+	void OnCollisionExit (Collision c) {
+		touching = false;
 	}
 
 }

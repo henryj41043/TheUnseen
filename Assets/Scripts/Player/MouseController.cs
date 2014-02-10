@@ -7,14 +7,23 @@ public class MouseController : MonoBehaviour {
 	public MouseLook mouseLook1;
 	public MouseLook mouseLook2;
 
+	public GameObject maincam;
+
+	public float interactDist;
+
 	public Texture2D crosshairTexture;
 	public float minCrosshairSize;
 	public float maxCrosshairSize;
 
+	public Texture2D interactTexture;
+	public float interactSize;
+
 	public LightGenerator lightGenerator;
 
 	private Rect defaultCursorPos;	
+	private Rect defaultInteractPos;	
 
+	private bool canInteract = false;
 	private bool isCharging = false;
 
 	private int screen = 1;
@@ -24,6 +33,7 @@ public class MouseController : MonoBehaviour {
 		Screen.showCursor = false;
 		Screen.lockCursor = true;
 		defaultCursorPos = new Rect((Screen.width - minCrosshairSize)/2, ((Screen.height - minCrosshairSize)/2), minCrosshairSize, minCrosshairSize);		
+		defaultInteractPos = new Rect((Screen.width - interactSize)/2, ((Screen.height - interactSize)/3), interactSize, interactSize);		
 	}
 	
 	// Update is called once per frame
@@ -31,6 +41,7 @@ public class MouseController : MonoBehaviour {
 		Screen.showCursor = false;
 		Screen.lockCursor = true;
 		LeftMouseChecks ();
+		InteractChecks ();
 
 		if (Input.GetKeyDown(KeyCode.P)) {
 			Screen.fullScreen = !Screen.fullScreen;	
@@ -40,6 +51,30 @@ public class MouseController : MonoBehaviour {
 			Application.CaptureScreenshot(screen.ToString() + ".png");
 			screen++;
 		}	
+
+		Ray ray = new Ray(maincam.transform.position, maincam.transform.forward);
+		RaycastHit hit = new RaycastHit();
+		if(Physics.Raycast (ray, out hit, interactDist)){
+			if (hit.transform.gameObject.GetComponent<Interactive>() != null && hit.transform.gameObject.GetComponent<Interactive>().powered){
+				canInteract = true;
+			}else{
+				canInteract = false;
+			}
+		}else{
+			canInteract = false;
+		}
+	}
+
+	void InteractChecks (){
+		if(Input.GetButtonDown("Interact")){
+			Ray ray = new Ray(maincam.transform.position, maincam.transform.forward);
+			RaycastHit hit = new RaycastHit();
+			if(Physics.Raycast (ray, out hit, interactDist)){
+				if (hit.transform.gameObject.GetComponent<Interactive>() != null){
+					hit.transform.gameObject.GetComponent<Interactive>().Interact();
+				}
+			}
+		}
 	}
 	
 	void LeftMouseChecks (){
@@ -67,6 +102,9 @@ public class MouseController : MonoBehaviour {
 			}else{
 				GUI.DrawTexture(defaultCursorPos, crosshairTexture);
 			}
+		}
+		if (canInteract) {
+			GUI.DrawTexture(defaultInteractPos, interactTexture);
 		}
 	}
 }

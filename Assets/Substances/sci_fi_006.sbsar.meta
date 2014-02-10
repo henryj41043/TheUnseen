@@ -247,17 +247,17 @@ SubstanceImporter:
     - name: sci_fi_006_Diffuse
       alphaSource: 5
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: sci_fi_006_Specular
       alphaSource: 0
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: sci_fi_006_Normal
       alphaSource: 0
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: sci_fi_006_Bump
       alphaSource: 0

@@ -68,7 +68,6 @@ public class CameraBob : MonoBehaviour
 				lastTimer = timer;
 				float translateChange = waveslice * bobAmplitude * (controller.velocity.magnitude/maxSpeed);
 				playerCam.transform.localPosition = new Vector3(startingCamPos.x, startingCamPos.y+translateChange, startingCamPos.z);
-				print (timer+" "+playerCam.transform.localPosition);
 			} else {
 				playerCam.transform.localPosition = startingCamPos;
 			}
