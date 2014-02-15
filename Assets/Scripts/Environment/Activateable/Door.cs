@@ -9,6 +9,9 @@ public class Door : Activateable {
 	
 	public GameObject topDoor;
 	public GameObject bottomDoor;
+
+	public AudioSource openSound;
+	public AudioSource closeSound;
 	
 	public float timeInterval = .04f;
 	public float fullDistToMove = 10f;
@@ -54,6 +57,7 @@ public class Door : Activateable {
 		}
 		
 		StartCoroutine(MoveDoor());
+		openSound.Play();
 	}
 	
 	public override void Deactivate(){
@@ -71,6 +75,7 @@ public class Door : Activateable {
 		}
 		
 		StartCoroutine(MoveDoor());
+		closeSound.Play();
 	}
 	
 	IEnumerator MoveDoor(){
