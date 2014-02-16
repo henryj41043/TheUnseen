@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FlickeringLightEvent : MonoBehaviour {
 
-	public flickeringLight[] lights;
+	public FlourescentFlicker[] lights;
 	public Battery battery;
 
 	void OnTriggerEnter(Collider c) {

@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 89026582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e01c868e9a6c9409254c74393865a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d206c1a429b86b14bb6e2f191ff1b3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips: {fileID: 11400000, guid: 1f9afa9e29333b143bc09eb5697048a2, type: 2}
@@ -6573,7 +6573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 201639808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e01c868e9a6c9409254c74393865a7, type: 3}
+  m_Script: {fileID: 11500000, guid: d206c1a429b86b14bb6e2f191ff1b3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips: {fileID: 11400000, guid: 1f9afa9e29333b143bc09eb5697048a2, type: 2}
@@ -30506,7 +30506,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 984459143}
   m_Layer: 0
-  m_Name: flickerLight
+  m_Name: ceilingLight_L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33718,10 +33718,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1949405182}
+  - {fileID: 984459143}
   - {fileID: 1690685256}
   - {fileID: 1873090247}
-  - {fileID: 984459143}
-  - {fileID: 1949405182}
   m_Father: {fileID: 0}
 --- !u!1 &1081568421
 GameObject:
@@ -59315,7 +59315,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1949405182}
   m_Layer: 0
-  m_Name: flickerLight
+  m_Name: ceilingLight_L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
