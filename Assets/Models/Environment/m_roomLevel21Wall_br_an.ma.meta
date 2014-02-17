@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 924fbf997d4be04478f65ffc338e51d4
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: floor
+    100004: largePipe
+    100006: largePipe 1
+    100008: left
+    100010: //RootNode
+    100012: pillar
+    100014: pipeHolder2
+    100016: pipeHolder3
+    100018: wall
+    100020: wall1
+    100022: wire1
+    100024: wire2
+    100026: wireHolder1
+    100028: wireHolder4
+    100030: wires
+    100032: pillar2
+    400000: ceiling
+    400002: floor
+    400004: largePipe
+    400006: largePipe 1
+    400008: left
+    400010: //RootNode
+    400012: pillar
+    400014: pipeHolder2
+    400016: pipeHolder3
+    400018: wall
+    400020: wall1
+    400022: wire1
+    400024: wire2
+    400026: wireHolder1
+    400028: wireHolder4
+    400030: wires
+    400032: pillar2
+    2300000: ceiling
+    2300002: floor
+    2300004: largePipe 1
+    2300006: pillar
+    2300008: pipeHolder2
+    2300010: pipeHolder3
+    2300012: wall
+    2300014: wire1
+    2300016: wire2
+    2300018: wireHolder1
+    2300020: wireHolder4
+    2300022: pillar2
+    3300000: ceiling
+    3300002: floor
+    3300004: largePipe 1
+    3300006: pillar
+    3300008: pipeHolder2
+    3300010: pipeHolder3
+    3300012: wall
+    3300014: wire1
+    3300016: wire2
+    3300018: wireHolder1
+    3300020: wireHolder4
+    3300022: pillar2
+    4300000: pillar
+    4300002: wall
+    4300004: floor
+    4300006: ceiling
+    4300008: pipeHolder2
+    4300010: largePipe
+    4300012: pipeHolder3
+    4300014: wireHolder1
+    4300016: wire2
+    4300018: wire1
+    4300020: wireHolder4
+    4300022: pillar2
+    6400000: ceiling
+    6400002: floor
+    6400004: largePipe 1
+    6400006: pillar
+    6400008: pipeHolder2
+    6400010: pipeHolder3
+    6400012: wall
+    6400014: wire1
+    6400016: wire2
+    6400018: wireHolder1
+    6400020: wireHolder4
+    6400022: pillar2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

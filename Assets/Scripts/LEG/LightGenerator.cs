@@ -9,6 +9,7 @@ public class LightGenerator : MonoBehaviour
 	public Light chargeLight;
 	public GameObject playerCam;
 	public GameObject shootingOrb;
+	public Transform firePos;
 
 	public float energy = 0.0f;
 	public float maxEnergy = 10.0f;
@@ -34,6 +35,11 @@ public class LightGenerator : MonoBehaviour
 	public float drainPerSecond;
 
 	public bool recharging = true;
+
+	public Animator PEG;
+
+	public AudioClip PEGfire;
+	public AudioClip PEGcharge;
 
 	void Start () {
 		chargingOrb.SetActive(false);
@@ -62,7 +68,10 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	public void StartShot (){
+		PEG.SetBool("mouseClick", true);
 		if (energy > 0.0f) {
+			audio.clip = PEGcharge;
+			audio.Play();
 			orbCharge = minOrbCharge;
 			UpdateOrb();
 			chargingOrb.SetActive(true);
@@ -89,7 +98,11 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	public void FireShot (){
+		PEG.SetBool("mouseHold", false);
+		PEG.SetBool("mouseClick", false);
 		if (energy > 0.0f) {
+			audio.clip = PEGfire;
+			audio.Play();
 			energy -= orbCharge;
 			chargingOrb.SetActive(false);
 			float ratio = orbCharge/maxOrbCharge;		
@@ -97,7 +110,7 @@ public class LightGenerator : MonoBehaviour
 			shootingOrb.GetComponent<FiredOrb>().intensity = ratio*(maxLightIntensity-minLightIntensity)+minLightIntensity;		
 			shootingOrb.GetComponent<FiredOrb>().range = ratio*(maxLightRange-minLightRange)+minLightRange;	
 			shootingOrb.GetComponent<FiredOrb>().speed = ratio*(maxOrbSpeed-minOrbSpeed)+minOrbSpeed;
-			GameObject bulletSpawn = (GameObject)Instantiate(shootingOrb, chargingOrb.transform.position, playerCam.transform.rotation);
+			GameObject bulletSpawn = (GameObject)Instantiate(shootingOrb, firePos.position, playerCam.transform.rotation);
 		}else {
 			chargingOrb.SetActive(false);
 			energy = 0.0f;	
@@ -106,6 +119,7 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	public void Charge (){
+		PEG.SetBool("mouseHold", true);
 		if (energy > 0.0f && energy > orbCharge) {
 			orbCharge += percentChargePerSecond/100*(maxOrbCharge-minOrbCharge)*Time.deltaTime;
 			if (orbCharge > maxOrbCharge){

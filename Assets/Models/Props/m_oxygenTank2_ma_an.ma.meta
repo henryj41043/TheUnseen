@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: d54c88520d9e6ec4bad130d4cddf368b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Base
+    100002: Base 1
+    100004: Horizontal_Cylinder
+    100006: //RootNode
+    100008: Middle
+    100010: polySurface1
+    100012: polySurface2
+    100014: polySurface3
+    100016: polySurface4
+    100018: Readout
+    100020: Top
+    100022: Turner
+    100024: Vertical_Cylinder
+    400000: Base
+    400002: Base 1
+    400004: Horizontal_Cylinder
+    400006: //RootNode
+    400008: Middle
+    400010: polySurface1
+    400012: polySurface2
+    400014: polySurface3
+    400016: polySurface4
+    400018: Readout
+    400020: Top
+    400022: Turner
+    400024: Vertical_Cylinder
+    2300000: Base
+    2300002: Base 1
+    2300004: Middle
+    2300006: polySurface2
+    2300008: polySurface3
+    2300010: polySurface4
+    2300012: Readout
+    2300014: Turner
+    2300016: Vertical_Cylinder
+    3300000: Base
+    3300002: Base 1
+    3300004: Middle
+    3300006: polySurface2
+    3300008: polySurface3
+    3300010: polySurface4
+    3300012: Readout
+    3300014: Turner
+    3300016: Vertical_Cylinder
+    4300000: Base
+    4300002: Middle
+    4300004: Base
+    4300006: polySurface3
+    4300008: polySurface4
+    4300010: polySurface2
+    4300012: Readout
+    4300014: Turner
+    4300016: Vertical_Cylinder
+    6400000: Base
+    6400002: Base 1
+    6400004: Middle
+    6400006: polySurface2
+    6400008: polySurface3
+    6400010: polySurface4
+    6400012: Readout
+    6400014: Turner
+    6400016: Vertical_Cylinder
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

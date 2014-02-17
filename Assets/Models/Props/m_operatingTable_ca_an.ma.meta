@@ -117,7 +117,7 @@ ModelImporter:
     globalScale: 2
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

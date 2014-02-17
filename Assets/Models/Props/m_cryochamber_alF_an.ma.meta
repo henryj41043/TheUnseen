@@ -14,6 +14,17 @@ ModelImporter:
     100016: ports
     100018: seatBottom
     100020: seatTop
+    100022: body
+    100024: bodyHinge
+    100026: doorHinge
+    100028: pCube1
+    100030: pCube2
+    100032: pCube3
+    100034: pCube4
+    100036: pCube5
+    100038: tube1
+    100040: tube2
+    100042: tube3
     400000: bars
     400002: bigCord
     400004: capsuleBack
@@ -25,6 +36,17 @@ ModelImporter:
     400016: ports
     400018: seatBottom
     400020: seatTop
+    400022: body
+    400024: bodyHinge
+    400026: doorHinge
+    400028: pCube1
+    400030: pCube2
+    400032: pCube3
+    400034: pCube4
+    400036: pCube5
+    400038: tube1
+    400040: tube2
+    400042: tube3
     2300000: bars
     2300002: bigCord
     2300004: capsuleBack
@@ -36,6 +58,17 @@ ModelImporter:
     2300016: ports
     2300018: seatBottom
     2300020: seatTop
+    2300022: body
+    2300024: bodyHinge
+    2300026: doorHinge
+    2300028: pCube1
+    2300030: pCube2
+    2300032: pCube3
+    2300034: pCube4
+    2300036: pCube5
+    2300038: tube1
+    2300040: tube2
+    2300042: tube3
     3300000: bars
     3300002: bigCord
     3300004: capsuleBack
@@ -47,6 +80,17 @@ ModelImporter:
     3300016: ports
     3300018: seatBottom
     3300020: seatTop
+    3300022: body
+    3300024: bodyHinge
+    3300026: doorHinge
+    3300028: pCube1
+    3300030: pCube2
+    3300032: pCube3
+    3300034: pCube4
+    3300036: pCube5
+    3300038: tube1
+    3300040: tube2
+    3300042: tube3
     4300000: body
     4300002: hinge
     4300004: Door
@@ -58,6 +102,16 @@ ModelImporter:
     4300016: bigCord
     4300018: ports
     4300020: cords
+    4300022: tube3
+    4300024: tube2
+    4300026: tube1
+    4300028: bodyHinge
+    4300030: pCube1
+    4300032: pCube2
+    4300034: pCube3
+    4300036: doorHinge
+    4300038: pCube4
+    4300040: pCube5
     6400000: bars
     6400002: bigCord
     6400004: capsuleBack
@@ -69,6 +123,17 @@ ModelImporter:
     6400016: ports
     6400018: seatBottom
     6400020: seatTop
+    6400022: body
+    6400024: bodyHinge
+    6400026: doorHinge
+    6400028: pCube1
+    6400030: pCube2
+    6400032: pCube3
+    6400034: pCube4
+    6400036: pCube5
+    6400038: tube1
+    6400040: tube2
+    6400042: tube3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -91,7 +156,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

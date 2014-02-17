@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: c1a406993c9d9474fa77dbe7365b25eb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: divider1
+    100004: divider2
+    100006: floor
+    100008: largePipe
+    100010: largePipe 1
+    100012: largePipe 2
+    100014: largePipe 3
+    100016: left
+    100018: //RootNode
+    100020: pillar
+    100022: pipeHolder1
+    100024: pipeHolder1 1
+    100026: pipeHolder3
+    100028: pipeHolder3 1
+    100030: wall
+    100032: wall 1
+    100034: wall1
+    100036: wall2
+    100038: wallCornerPiece
+    100040: wire1
+    100042: wire1 1
+    100044: wire2
+    100046: wire2 1
+    100048: wireHolder1
+    100050: wireHolder1 1
+    100052: wireHolder2
+    100054: wireHolder2 1
+    100056: wireHolder3
+    100058: wireHolder3 1
+    100060: wires
+    100062: wires 1
+    400000: ceiling
+    400002: divider1
+    400004: divider2
+    400006: floor
+    400008: largePipe
+    400010: largePipe 1
+    400012: largePipe 2
+    400014: largePipe 3
+    400016: left
+    400018: //RootNode
+    400020: pillar
+    400022: pipeHolder1
+    400024: pipeHolder1 1
+    400026: pipeHolder3
+    400028: pipeHolder3 1
+    400030: wall
+    400032: wall 1
+    400034: wall1
+    400036: wall2
+    400038: wallCornerPiece
+    400040: wire1
+    400042: wire1 1
+    400044: wire2
+    400046: wire2 1
+    400048: wireHolder1
+    400050: wireHolder1 1
+    400052: wireHolder2
+    400054: wireHolder2 1
+    400056: wireHolder3
+    400058: wireHolder3 1
+    400060: wires
+    400062: wires 1
+    2300000: ceiling
+    2300002: divider1
+    2300004: divider2
+    2300006: floor
+    2300008: largePipe 2
+    2300010: largePipe 3
+    2300012: pillar
+    2300014: pipeHolder1
+    2300016: pipeHolder1 1
+    2300018: pipeHolder3
+    2300020: pipeHolder3 1
+    2300022: wall
+    2300024: wall 1
+    2300026: wire1
+    2300028: wire1 1
+    2300030: wire2
+    2300032: wire2 1
+    2300034: wireHolder1
+    2300036: wireHolder1 1
+    2300038: wireHolder2
+    2300040: wireHolder2 1
+    2300042: wireHolder3
+    2300044: wireHolder3 1
+    3300000: ceiling
+    3300002: divider1
+    3300004: divider2
+    3300006: floor
+    3300008: largePipe 2
+    3300010: largePipe 3
+    3300012: pillar
+    3300014: pipeHolder1
+    3300016: pipeHolder1 1
+    3300018: pipeHolder3
+    3300020: pipeHolder3 1
+    3300022: wall
+    3300024: wall 1
+    3300026: wire1
+    3300028: wire1 1
+    3300030: wire2
+    3300032: wire2 1
+    3300034: wireHolder1
+    3300036: wireHolder1 1
+    3300038: wireHolder2
+    3300040: wireHolder2 1
+    3300042: wireHolder3
+    3300044: wireHolder3 1
+    4300000: pillar
+    4300002: ceiling
+    4300004: floor
+    4300006: wall
+    4300008: divider1
+    4300010: pipeHolder1
+    4300012: pipeHolder3
+    4300014: largePipe
+    4300016: wireHolder2
+    4300018: wireHolder3
+    4300020: wireHolder1
+    4300022: wire2
+    4300024: wire1
+    4300026: divider2
+    4300028: wall
+    4300030: pipeHolder1
+    4300032: pipeHolder3
+    4300034: largePipe
+    4300036: wireHolder2
+    4300038: wireHolder3
+    4300040: wireHolder1
+    4300042: wire2
+    4300044: wire1
+    6400000: ceiling
+    6400002: divider1
+    6400004: divider2
+    6400006: floor
+    6400008: largePipe 2
+    6400010: largePipe 3
+    6400012: pillar
+    6400014: pipeHolder1
+    6400016: pipeHolder1 1
+    6400018: pipeHolder3
+    6400020: pipeHolder3 1
+    6400022: wall
+    6400024: wall 1
+    6400026: wire1
+    6400028: wire1 1
+    6400030: wire2
+    6400032: wire2 1
+    6400034: wireHolder1
+    6400036: wireHolder1 1
+    6400038: wireHolder2
+    6400040: wireHolder2 1
+    6400042: wireHolder3
+    6400044: wireHolder3 1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

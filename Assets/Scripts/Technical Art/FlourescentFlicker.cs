@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Light))]
 public class FlourescentFlicker : MonoBehaviour {
+	public AreaLightColor light;
 	public float minIntensity = 0.4f;
 	public float maxIntensity = 0.5f;
 	public float threshold = 0.95f;
@@ -11,20 +11,20 @@ public class FlourescentFlicker : MonoBehaviour {
 	public AudioSource audioSource;
 	public AudioClipList audioClips;
 
-	new private Light light;
+	//new private Light light;
 
 	private void Awake() {
-		light = GetComponent<Light>();
+		//light = GetComponent<Light>();
 	}
 
 	private void Update() {
 		if (Random.Range(0.0f, 1.0f) > threshold) {
-			light.intensity = minIntensity;
+			light.Intensity = minIntensity;
 			if (playSound) {
 				audioSource.PlayOneShot(audioClips.GetRandom());
 			}
 		} else {
-			light.intensity = maxIntensity;
+			light.Intensity = maxIntensity;
 		}
 	}
 }

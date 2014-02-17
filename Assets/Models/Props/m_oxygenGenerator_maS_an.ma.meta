@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 04ae13f96a4781340b32ba84d0fb2947
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arc_Readout
+    100002: Arc_Readout 1
+    100004: Body
+    100006: Fans
+    100008: Feet
+    100010: Gauge
+    100012: Gauge 1
+    100014: Knob_Gauge
+    100016: Knob_Gauge 1
+    100018: //RootNode
+    100020: Panel
+    100022: Panel 1
+    100024: Panel1
+    100026: Panel2
+    100028: Switch
+    100030: Switch 1
+    100032: Vertical_Gauge
+    100034: Vertical_Gauge 1
+    400000: Arc_Readout
+    400002: Arc_Readout 1
+    400004: Body
+    400006: Fans
+    400008: Feet
+    400010: Gauge
+    400012: Gauge 1
+    400014: Knob_Gauge
+    400016: Knob_Gauge 1
+    400018: //RootNode
+    400020: Panel
+    400022: Panel 1
+    400024: Panel1
+    400026: Panel2
+    400028: Switch
+    400030: Switch 1
+    400032: Vertical_Gauge
+    400034: Vertical_Gauge 1
+    2300000: Arc_Readout
+    2300002: Arc_Readout 1
+    2300004: Body
+    2300006: Fans
+    2300008: Feet
+    2300010: Gauge
+    2300012: Gauge 1
+    2300014: Knob_Gauge
+    2300016: Knob_Gauge 1
+    2300018: Panel
+    2300020: Panel 1
+    2300022: Switch
+    2300024: Switch 1
+    2300026: Vertical_Gauge
+    2300028: Vertical_Gauge 1
+    3300000: Arc_Readout
+    3300002: Arc_Readout 1
+    3300004: Body
+    3300006: Fans
+    3300008: Feet
+    3300010: Gauge
+    3300012: Gauge 1
+    3300014: Knob_Gauge
+    3300016: Knob_Gauge 1
+    3300018: Panel
+    3300020: Panel 1
+    3300022: Switch
+    3300024: Switch 1
+    3300026: Vertical_Gauge
+    3300028: Vertical_Gauge 1
+    4300000: Body
+    4300002: Panel
+    4300004: Switch
+    4300006: Gauge
+    4300008: Arc_Readout
+    4300010: Vertical_Gauge
+    4300012: Knob_Gauge
+    4300014: Panel
+    4300016: Switch
+    4300018: Gauge
+    4300020: Arc_Readout
+    4300022: Vertical_Gauge
+    4300024: Knob_Gauge
+    4300026: Feet
+    4300028: Fans
+    6400000: Arc_Readout
+    6400002: Arc_Readout 1
+    6400004: Body
+    6400006: Fans
+    6400008: Feet
+    6400010: Gauge
+    6400012: Gauge 1
+    6400014: Knob_Gauge
+    6400016: Knob_Gauge 1
+    6400018: Panel
+    6400020: Panel 1
+    6400022: Switch
+    6400024: Switch 1
+    6400026: Vertical_Gauge
+    6400028: Vertical_Gauge 1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

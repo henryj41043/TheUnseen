@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 2d9e2dd3f3f93b7468bcaa6ace38c844
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: deadEndHallway
+    100004: endWall
+    100006: floor
+    100008: left
+    100010: //RootNode
+    100012: middleDivider
+    100014: middleDivider 1
+    100016: pillar1
+    100018: pillar2
+    100020: pillar3
+    100022: wall1
+    100024: wall1 1
+    100026: wall1 2
+    100028: wall2
+    400000: ceiling
+    400002: deadEndHallway
+    400004: endWall
+    400006: floor
+    400008: left
+    400010: //RootNode
+    400012: middleDivider
+    400014: middleDivider 1
+    400016: pillar1
+    400018: pillar2
+    400020: pillar3
+    400022: wall1
+    400024: wall1 1
+    400026: wall1 2
+    400028: wall2
+    2300000: ceiling
+    2300002: endWall
+    2300004: floor
+    2300006: middleDivider
+    2300008: middleDivider 1
+    2300010: pillar1
+    2300012: pillar2
+    2300014: pillar3
+    2300016: wall1 1
+    2300018: wall1 2
+    3300000: ceiling
+    3300002: endWall
+    3300004: floor
+    3300006: middleDivider
+    3300008: middleDivider 1
+    3300010: pillar1
+    3300012: pillar2
+    3300014: pillar3
+    3300016: wall1 1
+    3300018: wall1 2
+    4300000: floor
+    4300002: ceiling
+    4300004: wall1
+    4300006: middleDivider
+    4300008: endWall
+    4300010: wall1
+    4300012: middleDivider
+    4300014: pillar1
+    4300016: pillar2
+    4300018: pillar3
+    6400000: ceiling
+    6400002: endWall
+    6400004: floor
+    6400006: middleDivider
+    6400008: middleDivider 1
+    6400010: pillar1
+    6400012: pillar2
+    6400014: pillar3
+    6400016: wall1 1
+    6400018: wall1 2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
