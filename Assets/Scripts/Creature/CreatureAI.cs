@@ -20,6 +20,7 @@ public class CreatureAI : MonoBehaviour {
 	private Animator anim;
 	// Use this for initialization
 	void Awake () {
+		//player = GameObject.FindGameObjectWithTag ("Player");
 		aiPath = GetComponent<AIPath>();
 		sight = GetComponent<CreatureSight>();
 		anim = GetComponent<Animator>();

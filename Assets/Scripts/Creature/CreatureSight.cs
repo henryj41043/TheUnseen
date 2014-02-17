@@ -3,33 +3,32 @@ using System.Collections;
 
 public class CreatureSight : MonoBehaviour {
 	public float fovAngle = 110f;
+	public float angle = 0;
 	public bool inSight;
 	public float seeDist;
 	public Transform lastSighted;
 	public Vector3 resetLastSighting = new Vector3(1000f, 1000f, 1000f);
-	public GameObject playerCollider;
+	public GameObject player;
 	public bool chasingPlayer = false;
 
 	// Use this for initialization
 	void Awake () {
-		//player = GameObject.FindGameObjectWithTag ("Player");
-
 		lastSighted.position = resetLastSighting;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.DrawRay(transform.position, transform.forward, Color.white);
-		Vector3 direction = playerCollider.transform.position - transform.position;
-		float angle = Vector3.Angle (direction, Vector3.forward);
+		Vector3 direction = player.transform.position - transform.position;
+		direction.Normalize ();
+		angle = Vector3.Angle (direction, transform.forward);
 
 		if (angle < fovAngle * 0.5f) {
 			RaycastHit hit;
-			if (Physics.Raycast (transform.position, transform.forward, out hit, seeDist)) {
+			if (Physics.Raycast (transform.position, direction, out hit, seeDist)) {
 				if (hit.collider.gameObject.tag == "Player") {
 					chasingPlayer = true;
 					inSight = true;
-					lastSighted.position = playerCollider.transform.position;
+					lastSighted.position = player.transform.position;
 				}
 				else {
 					//inSight = false;
@@ -39,9 +38,9 @@ public class CreatureSight : MonoBehaviour {
 
 		if (chasingPlayer) {
 			RaycastHit hit;
-			if (Physics.Linecast (transform.position, playerCollider.transform.position, out hit)) {
+			if (Physics.Linecast (transform.position, player.transform.position, out hit)) {
 				if (hit.collider.gameObject.tag == "Player") {
-					lastSighted.position = playerCollider.transform.position;
+					lastSighted.position = player.transform.position;
 				} else {
 					chasingPlayer = false;
 					inSight = false;
