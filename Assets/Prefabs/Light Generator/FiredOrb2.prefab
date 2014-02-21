@@ -45,7 +45,6 @@ GameObject:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400014}
   - 108: {fileID: 10800000}
-  - 114: {fileID: 11400012}
   - 114: {fileID: 11400010}
   - 135: {fileID: 13500002}
   - 54: {fileID: 5400000}
@@ -57,7 +56,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -233,7 +232,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b42f1ea15ccac245b8d12820aaecdc1, type: 3}
   m_Name: 
@@ -260,7 +259,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dca56fa237cf4874db6522fef452c6d2, type: 3}
   m_Name: 
@@ -280,18 +279,6 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbbe61d882caa43499c1902297521f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 5
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -685,7 +672,7 @@ MonoBehaviour:
     _duration: 2
     delay: 0
     playOnAwake: 1
-    looping: 0
+    looping: 1
     prewarm: 0
     playbackSpeed: 1
     gravityMultiplier: 0
@@ -771,14 +758,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbImpact: {fileID: 100004, guid: 13ff3d8fa995e3140b4b0dd223b721bb, type: 2}
   orbLight: {fileID: 10800000}
-  sizeScale: .0860944465
-  speed: 1041.41663
-  intensity: 2.08283329
-  range: 8.60944462
-  lightDecay: .5
-  rangeDecay: .5
-  dieThreshold: .5
-  age: 1
+  ratioPower: 0
+  minLightIntensity: 1
+  maxLightIntensity: 4
+  minLightRange: 5
+  maxLightRange: 15
+  minOrbSpeed: 500
+  maxOrbSpeed: 2000
+  bulletScaleMax: .0500000007
+  bulletScaleMin: .150000006
+  ratioLossPerSecond: .100000001
+  dieThreshold: .0500000007
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

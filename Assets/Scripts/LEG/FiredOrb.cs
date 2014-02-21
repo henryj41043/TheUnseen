@@ -6,41 +6,59 @@ public class FiredOrb : MonoBehaviour {
 	public GameObject orbImpact;
 	public Light orbLight;
 
-	public float sizeScale;
-	public float speed;
-	public float intensity;
-	public float range;
-	
-	public float lightDecay;
-	public float rangeDecay;
+	public float ratioPower;
+
+	public float minLightIntensity = 1f;
+	public float maxLightIntensity = 4f;
+
+	public float minLightRange = 5f;
+	public float maxLightRange = 15f;
+
+	public float minOrbSpeed = 500f;
+	public float maxOrbSpeed = 2000f;
+
+	public float bulletScaleMax = .05f;
+	public float bulletScaleMin = .15f;
+		
+	public float ratioLossPerSecond;
 	public float dieThreshold;
-	
-	public float age = 1;
 
 	private bool touching = false;
+	private bool launched = false;
 
 	// Use this for initialization
 	void Start () {
 		//Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").collider, this.collider, true);
-		Vector3 orbSize = new Vector3(sizeScale, sizeScale, sizeScale);
-		transform.localScale = orbSize;
-		orbLight.intensity = intensity;
-		orbLight.range = range;
+		rigidbody.isKinematic = true;
+	}
+
+	void Redraw(){
+		float sizeScale = bulletScaleMin + (bulletScaleMax-bulletScaleMin)*ratioPower;
+		transform.localScale = new Vector3(sizeScale, sizeScale, sizeScale);
+
+		orbLight.intensity = minLightIntensity + (maxLightIntensity-minLightIntensity)*ratioPower;
+		orbLight.range = minLightRange + (maxLightRange-minLightRange)*ratioPower;
+	}
+
+	public void Launch(){
+		launched = true;
+		transform.parent = null;
+		rigidbody.isKinematic = false;
+		float speed = minOrbSpeed + (maxOrbSpeed-minOrbSpeed)*ratioPower;
 		rigidbody.AddForce(transform.forward*speed);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		intensity -= lightDecay*Time.deltaTime;
-		range -= rangeDecay*Time.deltaTime;
-		
-		orbLight.intensity = intensity;
-		orbLight.range = range;
-		
-		if (orbLight.intensity < dieThreshold){
-			Destroy(gameObject);	
+		Redraw ();
+
+		if (launched){
+			ratioPower -= ratioLossPerSecond*Time.deltaTime;
+			if (ratioPower < dieThreshold){
+				Destroy(gameObject);	
+			}
 		}
-		
+
 	}
 
 	void OnCollisionEnter(Collision c) {

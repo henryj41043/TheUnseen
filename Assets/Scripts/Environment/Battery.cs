@@ -12,7 +12,7 @@ public class Battery : MonoBehaviour {
 	public float secondsHoldsCharge = 0; //if is 0, means it holds charge forever
 	private float drainedSoFar = 0;
 
-	public float intensityToPowerRatio;
+	public float orbToBatteryPowerRatio = 5f;
 
 	public Activateable[] targets;
 
@@ -40,7 +40,7 @@ public class Battery : MonoBehaviour {
 		if (power < maxPower){
 			GameObject chargeOrb = other.transform.gameObject;
 			if (chargeOrb.tag == "FiredOrb"){
-				float chargePower = chargeOrb.GetComponent<FiredOrb>().intensity*intensityToPowerRatio;
+				float chargePower = chargeOrb.GetComponent<FiredOrb>().ratioPower*orbToBatteryPowerRatio;
 				power += chargePower;
 				this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);
 				this.light.range = power;

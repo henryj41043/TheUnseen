@@ -4,35 +4,19 @@ using System.Collections;
 public class LightGenerator : MonoBehaviour
 {
 	public GUIText energyText;
-
-	public GameObject chargingOrb;
-	public Light chargeLight;
+	
 	public GameObject playerCam;
 	public GameObject shootingOrb;
-	public Transform firePos;
 
 	public float energy = 0.0f;
 	public float maxEnergy = 10.0f;
 
-	private float orbCharge = 0;
 	public float minOrbCharge = 1;
 	public float maxOrbCharge = 3;
 
-	public float minLightIntensity;
-	public float maxLightIntensity;
-
-	public float minLightRange;
-	public float maxLightRange;
-
-	public float minOrbSpeed;
-	public float maxOrbSpeed;
-
-	public float bulletScaleMax;
-	public float bulletScaleMin;
-
-	public float percentRechargePerSecond;
-	public float percentChargePerSecond;
-	public float drainPerSecond;
+	public float energyRechargePerSecond;
+	public float ratioChargePerSecond;
+	public float energyDrainPerSecond;
 
 	public bool recharging = true;
 
@@ -41,16 +25,20 @@ public class LightGenerator : MonoBehaviour
 	public AudioClip PEGfire;
 	public AudioClip PEGcharge;
 
+	public GameObject orbChargeLoc;
+	private GameObject chargingOrb;
+	
 	void Start () {
-		chargingOrb.SetActive(false);
-		chargingOrb.transform.localScale = new Vector3(0, 0, 0);
+		chargingOrb = null;
 		UpdateDisplay();
 		
 	}
 
 	void Update(){
 		if (recharging){
-			AddEnergy ((maxEnergy*(percentRechargePerSecond/100))*Time.deltaTime);
+			if (chargingOrb == null){
+				AddEnergy (energyRechargePerSecond*Time.deltaTime);
+			}
 		}
 	}
 
@@ -67,74 +55,62 @@ public class LightGenerator : MonoBehaviour
 		UpdateDisplay();
 	}
 
+	public float GetRatio(){
+		if (chargingOrb == null){
+			return 0;
+		}else{
+			return chargingOrb.GetComponent<FiredOrb>().ratioPower;
+		}
+	}
+
 	public void StartShot (){
 		PEG.SetBool("mouseClick", true);
 		if (energy > 0.0f) {
 			audio.clip = PEGcharge;
 			audio.Play();
-			orbCharge = minOrbCharge;
-			UpdateOrb();
+			chargingOrb = (GameObject) Instantiate (shootingOrb, orbChargeLoc.transform.position, playerCam.transform.rotation);
+			chargingOrb.transform.parent = orbChargeLoc.transform;
+			chargingOrb.GetComponent<FiredOrb>().ratioPower = minOrbCharge/maxOrbCharge;
 			chargingOrb.SetActive(true);
 		}
 	}
 
-	public float GetRatio (){
-		return orbCharge/maxOrbCharge;
-	}
-
-	void UpdateOrb (){
-		if (energy > 0.0f) {
-			float ratio = orbCharge/maxOrbCharge;
-			chargeLight.intensity = ratio*(maxLightIntensity-minLightIntensity)+minLightIntensity;
-			chargeLight.range = ratio*(maxLightRange-minLightRange)+minLightRange;
-			
-			float orbScale = ratio*(bulletScaleMax-bulletScaleMin)+bulletScaleMin;
-			chargingOrb.transform.localScale = new Vector3(orbScale, orbScale, orbScale);
-			
-		} else {
-			chargingOrb.SetActive(false);	
-		}
-		UpdateDisplay();
-	}
-
 	public void FireShot (){
-		PEG.SetBool("mouseHold", false);
-		PEG.SetBool("mouseClick", false);
-		if (energy > 0.0f) {
+		if (chargingOrb != null){
+			PEG.SetBool("mouseHold", false);
+			PEG.SetBool("mouseClick", false);
 			audio.clip = PEGfire;
 			audio.Play();
-			energy -= orbCharge;
-			chargingOrb.SetActive(false);
-			float ratio = orbCharge/maxOrbCharge;		
-			shootingOrb.GetComponent<FiredOrb>().sizeScale = ratio*(bulletScaleMax-bulletScaleMin)+bulletScaleMin;
-			shootingOrb.GetComponent<FiredOrb>().intensity = ratio*(maxLightIntensity-minLightIntensity)+minLightIntensity;		
-			shootingOrb.GetComponent<FiredOrb>().range = ratio*(maxLightRange-minLightRange)+minLightRange;	
-			shootingOrb.GetComponent<FiredOrb>().speed = ratio*(maxOrbSpeed-minOrbSpeed)+minOrbSpeed;
-			GameObject bulletSpawn = (GameObject)Instantiate(shootingOrb, firePos.position, playerCam.transform.rotation);
-		}else {
-			chargingOrb.SetActive(false);
-			energy = 0.0f;	
+			energy -= chargingOrb.GetComponent<FiredOrb>().ratioPower*maxOrbCharge;
+			chargingOrb.GetComponent<FiredOrb>().Launch();
+			chargingOrb = null;
+			UpdateDisplay();
 		}
-		UpdateDisplay();
 	}
 
 	public void Charge (){
-		PEG.SetBool("mouseHold", true);
-		if (energy > 0.0f && energy > orbCharge) {
-			orbCharge += percentChargePerSecond/100*(maxOrbCharge-minOrbCharge)*Time.deltaTime;
-			if (orbCharge > maxOrbCharge){
-				orbCharge = maxOrbCharge;
-				energy -= drainPerSecond*Time.deltaTime;
+		if (chargingOrb != null){
+			PEG.SetBool("mouseHold", true);
+			if (energy > 0.0f && energy > chargingOrb.GetComponent<FiredOrb>().ratioPower*maxOrbCharge) {
+				chargingOrb.GetComponent<FiredOrb>().ratioPower += ratioChargePerSecond*Time.deltaTime;
+				if (chargingOrb.GetComponent<FiredOrb>().ratioPower > 1){
+					chargingOrb.GetComponent<FiredOrb>().ratioPower = 1;
+					energy -= energyDrainPerSecond*Time.deltaTime;
+				}
+			}
+			else if (energy > 0.0f) {
+				energy -= energyDrainPerSecond*Time.deltaTime;
+				chargingOrb.GetComponent<FiredOrb>().ratioPower = (energy/maxOrbCharge)*chargingOrb.GetComponent<FiredOrb>().ratioPower;
+			}
+			else {
+				//out of ammo sound effect
+				print ("fff");
+				Destroy (chargingOrb);
+				chargingOrb = null;
 			}
 		}
-		else if (orbCharge > energy && energy > 0.0f) {
-			energy -= drainPerSecond*Time.deltaTime;
-			orbCharge = energy;
-		}
-		else if (energy <= 0.0f) {
-			//out of ammo sound effect
-		}
-		UpdateOrb();
+		UpdateDisplay ();
+
 	}
 
 }
