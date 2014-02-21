@@ -16,8 +16,23 @@ public class CreatureAI : MonoBehaviour {
 	GameObject currentWaypoint = null;
 
 	public GameObject[] waypoints;
+
+	public float walkSpeed = 5f;
+	public float runSpeed = 10f;
+	public float chaseSpeed = 15f;
+
+	public float attackRange = 2f;
+	public float attackSpeed = 1f;
+	public float minWaypointRange = 1f;
+
+	public float searchTime = 3f;
+	public int attackDamage = 25;
+	private float chaseTimer = 0;
+
+	private bool isAttacking = false;
 	
 	private AIPath aiPath;
+	private Animator anim;
 
 	CreatureSight vision;
 	
@@ -28,6 +43,8 @@ public class CreatureAI : MonoBehaviour {
 		lastPosMarker = new GameObject();
 
 		aiPath = GetComponent<AIPath>();
+		anim = GetComponent<Animator>();
+		anim.SetBool ("Walk", true);
 		currentState = States.Wander;
 		Wander();
 	}
@@ -55,7 +72,7 @@ public class CreatureAI : MonoBehaviour {
 			if(aiPath.target == null) {
 				Wander();
 			}
-			else if(transform.position == aiPath.target.transform.position) {
+			else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
 				Wander();
 			}
 		}
@@ -64,28 +81,60 @@ public class CreatureAI : MonoBehaviour {
 		if(currentState == States.ChasePOI){
 			currentTarget = newTarget;
 			if (currentTarget != null){
+				anim.SetBool ("Run", true);
+				anim.SetBool ("Attack", false);
+				anim.SetBool ("Walk", false);
+				aiPath.speed = runSpeed;
 				aiPath.target = currentTarget.transform;
+
+				// needs to check if within absorb range and if so absorb!
 			}
-			// needs to check if within absorb range and if so absorb!
 		}
 		
 		// Chasing Player
 		if(currentState == States.ChasePlayer){
 			currentTarget = newTarget;
 			if (currentTarget != null){
+				anim.SetBool ("Run", true);
+				anim.SetBool ("Attack", false);
+				anim.SetBool ("Walk", false);
+				aiPath.speed = chaseSpeed;
 				aiPath.target = currentTarget.transform;
+
+				if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
+					if (!isAttacking) {
+						StartCoroutine(Attack());
+					}
+				}
 			}
 		}
 		
 		// Chasing Last known Position
 		if(currentState == States.ChaseLastKnown){
 			aiPath.target = lastPosMarker.transform;
-			if(transform.position == lastPosMarker.transform.position){
-				// needs to look around first, else go back to wandering
-				currentState = States.Wander;
-				currentTarget = null;
+			if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
+				aiPath.target = null;
+				chaseTimer += Time.deltaTime;
+				anim.SetBool ("Run", false);
+				anim.SetBool ("Searching", true);
+				
+				if(chaseTimer > searchTime){
+					currentState = States.Wander;
+					currentTarget = null;
+					chaseTimer = 0;
+				}
 			}
 		}
+	}
+
+	IEnumerator Attack() {
+		anim.SetBool ("Run", false);
+		anim.SetBool ("Walk", false);
+		anim.SetBool ("Attack", true);
+		isAttacking = true;
+		player.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+		yield return new WaitForSeconds(attackSpeed);
+		isAttacking = false;
 	}
 	
 	GameObject GetNewestTarget(){
@@ -139,6 +188,11 @@ public class CreatureAI : MonoBehaviour {
 	}
 	
 	void Wander() {
+		anim.SetBool ("Searching", false);
+		anim.SetBool ("Run", false);
+		anim.SetBool ("Attack", false);
+		anim.SetBool ("Walk", true);
+		aiPath.speed = walkSpeed;
 		int randWaypt;
 		randWaypt = (int) Mathf.Floor(Random.Range(0, waypoints.Length));
 		currentWaypoint = waypoints[randWaypt];
