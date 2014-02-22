@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Waypoint : MonoBehaviour {
 
-	public GameObject[] targets;
+	public Waypoint[] nextWaypoints;
 	
 	public GameObject NextWaypoint(){
-		GameObject next = targets[Random.Range(0, targets.Length)];
+		GameObject next = nextWaypoints[Random.Range(0, nextWaypoints.Length)].gameObject;
 		return next;
 	}
 }

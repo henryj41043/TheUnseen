@@ -13,23 +13,29 @@ public class CreatureAI : MonoBehaviour {
 	GameObject lastPosMarker;
 
 	GameObject currentTarget = null;
-	GameObject currentWaypoint = null;
-
-	public GameObject[] waypoints;
 
 	public float walkSpeed = 5f;
 	public float runSpeed = 10f;
 	public float chaseSpeed = 15f;
 
+	private float actualWalkSpeed;
+	private float actualRunSpeed;
+	private float actualChaseSpeed;
+
 	public float attackRange = 2f;
 	public float attackSpeed = 1f;
 	public float minWaypointRange = 1f;
+	public float drainRange = 2f;
 
 	public float searchTime = 3f;
 	public int attackDamage = 25;
 	private float chaseTimer = 0;
 
 	private bool isAttacking = false;
+
+	private bool enraged;
+
+	public float enragedSpeedMult;
 	
 	private AIPath aiPath;
 	private Animator anim;
@@ -37,6 +43,8 @@ public class CreatureAI : MonoBehaviour {
 	CreatureSight vision;
 	
 	void Awake() {
+
+		enraged = false;
 
 		vision = GetComponent<CreatureSight>();
 
@@ -46,82 +54,122 @@ public class CreatureAI : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		anim.SetBool ("Walk", true);
 		currentState = States.Wander;
-		Wander();
+		GetNearestWaypoint();
 	}
 	
 	void Update () {
-		GameObject newTarget = GetNewestTarget();
+		GameObject drainable = GetDrainable();
+		if (drainable != null){
+			//should technically go into some sort of absorb state here
 
-		if (newTarget != null){
-			lastPosMarker.transform.position = newTarget.transform.position;
-		}
+			print (drainable.tag);
 
-
-		if (newTarget == null && currentTarget != null){
-			currentState = States.ChaseLastKnown;
-		}else if (newTarget != null && newTarget.tag == "Player"){
-			currentState = States.ChasePlayer;
-		}else if (newTarget != null){
-			currentState = States.ChasePOI;
-		}
-
-
-
-		// Wandering State
-		if (currentState == States.Wander) {
-			if(aiPath.target == null) {
-				Wander();
+			if (drainable.tag == "FiredOrb"){
+				enraged = true;
+				Destroy (drainable);
 			}
-			else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
-				Wander();
+			if (drainable.tag == "Battery"){
+				enraged = true;
+				drainable.GetComponentInChildren<Battery>().PowerOff();
 			}
-		}
 
-		// Chasing POI target
-		if(currentState == States.ChasePOI){
-			currentTarget = newTarget;
-			if (currentTarget != null){
-				anim.SetBool ("Run", true);
+			print ("RAMPAGEEEEEEEEEEEEEEEE");
+
+		} else {
+
+			float mult = 1f;
+
+			if (enraged){
+				mult = enragedSpeedMult;
+			}
+			actualWalkSpeed = walkSpeed*mult;
+			actualRunSpeed = runSpeed*mult;
+			actualChaseSpeed = chaseSpeed*mult;
+				
+			GameObject newTarget = GetNewestTarget();
+
+			if (newTarget != null){
+				lastPosMarker.transform.position = newTarget.transform.position;
+			}
+
+
+			if (newTarget == null && currentTarget != null && currentTarget.tag != "Waypoint"){
+				currentState = States.ChaseLastKnown;
+			}else if (newTarget != null && newTarget.tag == "Player"){
+				currentState = States.ChasePlayer;
+			}else if (newTarget != null){
+				currentState = States.ChasePOI;
+			}
+
+			// Wandering State
+			if (currentState == States.Wander) {
+				anim.SetBool ("Searching", false);
+				anim.SetBool ("Run", false);
 				anim.SetBool ("Attack", false);
-				anim.SetBool ("Walk", false);
-				aiPath.speed = runSpeed;
-				aiPath.target = currentTarget.transform;
+				anim.SetBool ("Walk", true);
+				aiPath.speed = actualWalkSpeed;
 
-				// needs to check if within absorb range and if so absorb!
+				if(aiPath.target == null) {
+					GetNearestWaypoint();
+					aiPath.target = currentTarget.transform;
+				}else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
+					if (currentTarget.GetComponent<Waypoint>() != null){
+						currentTarget = currentTarget.GetComponent<Waypoint>().NextWaypoint();
+					}else{
+						GetNearestWaypoint ();
+					}
+					aiPath.target = currentTarget.transform;
+				}
 			}
-		}
-		
-		// Chasing Player
-		if(currentState == States.ChasePlayer){
-			currentTarget = newTarget;
-			if (currentTarget != null){
-				anim.SetBool ("Run", true);
-				anim.SetBool ("Attack", false);
-				anim.SetBool ("Walk", false);
-				aiPath.speed = chaseSpeed;
-				aiPath.target = currentTarget.transform;
 
-				if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
-					if (!isAttacking) {
-						StartCoroutine(Attack());
+			// Chasing POI target
+			if(currentState == States.ChasePOI){
+				currentTarget = newTarget;
+				if (currentTarget != null){
+					anim.SetBool ("Run", true);
+					anim.SetBool ("Attack", false);
+					anim.SetBool ("Walk", false);
+					aiPath.speed = actualRunSpeed;
+					aiPath.target = currentTarget.transform;
+
+				}
+			}
+			
+			// Chasing Player
+			if(currentState == States.ChasePlayer){
+				currentTarget = newTarget;
+				if (currentTarget != null){
+					anim.SetBool ("Run", true);
+					anim.SetBool ("Attack", false);
+					anim.SetBool ("Walk", false);
+					aiPath.speed = actualChaseSpeed;
+					aiPath.target = currentTarget.transform;
+
+					if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
+						if (!isAttacking) {
+							StartCoroutine(Attack());
+						}
 					}
 				}
 			}
-		}
-		
-		// Chasing Last known Position
-		if(currentState == States.ChaseLastKnown){
-			aiPath.target = lastPosMarker.transform;
-			if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
-				aiPath.target = null;
-				chaseTimer += Time.deltaTime;
-				anim.SetBool ("Run", false);
-				anim.SetBool ("Searching", true);
-				
-				if(chaseTimer > searchTime){
-					currentState = States.Wander;
-					currentTarget = null;
-					chaseTimer = 0;
+			
+			// Chasing Last known Position
+			if(currentState == States.ChaseLastKnown){
+				aiPath.target = lastPosMarker.transform;
+				if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
+
+					//should probably make it rotate or something here
+
+					aiPath.target = null;
+					chaseTimer += Time.deltaTime;
+					anim.SetBool ("Run", false);
+					anim.SetBool ("Searching", true);
+					
+					if(chaseTimer > searchTime){
+						currentState = States.Wander;
+						currentTarget = null;
+						chaseTimer = 0;
+					}
 				}
 			}
 		}
@@ -132,9 +180,32 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool ("Walk", false);
 		anim.SetBool ("Attack", true);
 		isAttacking = true;
-		player.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+		if (currentTarget.tag == "Player"){
+			currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+		}
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;
+	}
+
+	GameObject GetDrainable(){
+		GameObject[] batteries = GameObject.FindGameObjectsWithTag("Battery");
+		GameObject[] orbs = GameObject.FindGameObjectsWithTag("FiredOrb");
+
+		foreach(GameObject battery in batteries){
+			if ((transform.position - battery.transform.position).magnitude < drainRange){
+				if (battery.GetComponentInChildren<Battery>().power > 0){
+					return battery;
+				}
+			}
+		}
+
+		foreach(GameObject orb in orbs){
+			if ((transform.position - orb.transform.position).magnitude < drainRange){
+				return orb;
+			}
+		}
+
+		return null;
 	}
 	
 	GameObject GetNewestTarget(){
@@ -149,7 +220,9 @@ public class CreatureAI : MonoBehaviour {
 		}
 		foreach(GameObject battery in batteries){
 			if (vision.canSee (battery)){
-				listPOIs.Add(battery);
+				if (battery.GetComponentInChildren<Battery>().power > 0){
+					listPOIs.Add(battery);
+				}
 			}
 		}
 		foreach(GameObject orb in orbs){
@@ -159,7 +232,6 @@ public class CreatureAI : MonoBehaviour {
 		}
 
 		GameObject[] POIs = listPOIs.ToArray();
-
 		GameObject highest = null;
 
 		for (int i = 0; i < POIs.Length; i++){
@@ -186,16 +258,20 @@ public class CreatureAI : MonoBehaviour {
 		}
 		return 0;
 	}
-	
-	void Wander() {
-		anim.SetBool ("Searching", false);
-		anim.SetBool ("Run", false);
-		anim.SetBool ("Attack", false);
-		anim.SetBool ("Walk", true);
-		aiPath.speed = walkSpeed;
-		int randWaypt;
-		randWaypt = (int) Mathf.Floor(Random.Range(0, waypoints.Length));
-		currentWaypoint = waypoints[randWaypt];
-		aiPath.target = currentWaypoint.transform;
+
+	void GetNearestWaypoint(){
+		GameObject[] waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+		if (waypoints.Length > 0){
+			GameObject closest = waypoints[0];
+			float closestDist = (transform.position - closest.transform.position).sqrMagnitude;
+			for (int i = 1; i < waypoints.Length; i++){
+				float newDist = (transform.position - closest.transform.position).sqrMagnitude;
+				if (newDist < closestDist){
+					closest = waypoints[i];
+					closestDist = newDist;
+				}
+			}
+			currentTarget = closest;
+		}
 	}
 }

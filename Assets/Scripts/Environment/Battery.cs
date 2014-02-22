@@ -65,7 +65,7 @@ public class Battery : MonoBehaviour {
 
 	public void PowerOff(){
 		for (int i = 0; i < targets.Length; i++){
-			targets[i].Activate();
+			targets[i].Deactivate();
 		}
 		drainedSoFar = 0;
 		power = 0;

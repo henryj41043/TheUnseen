@@ -9,8 +9,8 @@ TagManager:
   - FiredOrb
   - Battery
   - CreatureVisionTarget
+  - Waypoint
   - 
-  - SpraycastTarget
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
