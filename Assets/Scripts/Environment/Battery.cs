@@ -43,7 +43,7 @@ public class Battery : MonoBehaviour {
 				float chargePower = chargeOrb.GetComponent<FiredOrb>().ratioPower*orbToBatteryPowerRatio;
 				power += chargePower;
 				this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);
-				this.light.range = power;
+				this.light.range += power;
 				if (power >= maxPower){
 					power = maxPower;
 					PowerOn ();

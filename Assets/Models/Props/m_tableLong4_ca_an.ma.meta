@@ -4,19 +4,19 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: tl_4_legs
-    100004: tl_4_top
+    100002: t4legs
+    100004: t4top
     400000: //RootNode
-    400002: tl_4_legs
-    400004: tl_4_top
-    2300000: tl_4_legs
-    2300002: tl_4_top
-    3300000: tl_4_legs
-    3300002: tl_4_top
-    4300000: tl_4_top
-    4300002: tl_4_legs
-    6400000: tl_4_legs
-    6400002: tl_4_top
+    400002: t4legs
+    400004: t4top
+    2300000: t4legs
+    2300002: t4top
+    3300000: t4legs
+    3300002: t4top
+    4300000: t4legs
+    4300002: t4top
+    6400000: t4legs
+    6400002: t4top
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,7 +39,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

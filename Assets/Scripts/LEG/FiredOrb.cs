@@ -62,7 +62,7 @@ public class FiredOrb : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		if (!touching) {
+		if (!touching && orbImpact != null) {
 			GameObject impact = Instantiate(orbImpact, transform.position, transform.rotation) as GameObject;
 		}
 	}

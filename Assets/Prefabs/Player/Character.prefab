@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400012}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400018}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -1641,7 +1642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f67d2ba59e8f64d8d62533a5bcd21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyText: {fileID: 0}
   playerCam: {fileID: 100002}
   shootingOrb: {fileID: 100006, guid: bf71bbaea2d474a43a9009463c567130, type: 2}
   energy: 10
@@ -1841,6 +1841,22 @@ MonoBehaviour:
   blurIterations: 3
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70770917ce18e944d99b4d01299d445d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackedEvents: 00000000
+  TrackedEventsFoldOut: 1
+  TrackTarget: 1
+  ShowGizmo: 1
+  BreadCrumbTrackInterval: 1
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1

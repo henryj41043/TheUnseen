@@ -1,64 +1,50 @@
 fileFormatVersion: 2
-guid: 3515f216fed53ae4f8ccb4be11288d18
+guid: d9d91dffdc76a9540a814516beb2d172
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: ceiling
-    100002: column4
-    100004: column7
-    100006: //RootNode
+    100002: floor
+    100004: //RootNode
+    100006: moulding
     100008: moulding1
-    100010: moulding4
-    100012: wall1
-    100014: wall3
-    100016: ceiling1
-    100018: wall4
+    100010: pillar
+    100012: pillar1
+    100014: wall1
+    100016: wall2
     400000: ceiling
-    400002: column4
-    400004: column7
-    400006: //RootNode
+    400002: floor
+    400004: //RootNode
+    400006: moulding
     400008: moulding1
-    400010: moulding4
-    400012: wall1
-    400014: wall3
-    400016: ceiling1
-    400018: wall4
+    400010: pillar
+    400012: pillar1
+    400014: wall1
+    400016: wall2
     2300000: ceiling
-    2300002: column4
-    2300004: column7
+    2300002: floor
+    2300004: moulding
     2300006: moulding1
-    2300008: moulding4
-    2300010: wall1
-    2300012: wall3
-    2300014: ceiling1
-    2300016: wall4
+    2300008: pillar
+    2300010: pillar1
+    2300012: wall1
+    2300014: wall2
     3300000: ceiling
-    3300002: column4
-    3300004: column7
+    3300002: floor
+    3300004: moulding
     3300006: moulding1
-    3300008: moulding4
-    3300010: wall1
-    3300012: wall3
-    3300014: ceiling1
-    3300016: wall4
-    4300000: column7
-    4300002: moulding1
+    3300008: pillar
+    3300010: pillar1
+    3300012: wall1
+    3300014: wall2
+    4300000: floor
+    4300002: ceiling
     4300004: wall1
-    4300006: ceiling
-    4300008: wall3
-    4300010: moulding4
-    4300012: column4
-    4300014: ceiling1
-    4300016: wall4
-    6400000: ceiling
-    6400002: column4
-    6400004: column7
-    6400006: moulding1
-    6400008: moulding4
-    6400010: wall1
-    6400012: wall3
-    6400014: ceiling1
-    6400016: wall4
+    4300006: moulding
+    4300008: moulding1
+    4300010: wall2
+    4300012: pillar
+    4300014: pillar1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -80,10 +66,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
-    importBlendShapes: 0
+    addColliders: 0
+    importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -94,7 +80,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -110,6 +96,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

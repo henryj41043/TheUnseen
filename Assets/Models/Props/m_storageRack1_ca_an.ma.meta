@@ -7,22 +7,34 @@ ModelImporter:
     100002: s1_metal
     100004: s1_platform
     100006: s1_frame
+    100008: storage2Frame
+    100010: storage2Platform
     400000: //RootNode
     400002: s1_metal
     400004: s1_platform
     400006: s1_frame
+    400008: storage2Frame
+    400010: storage2Platform
     2300000: s1_metal
     2300002: s1_platform
     2300004: s1_frame
+    2300006: storage2Frame
+    2300008: storage2Platform
     3300000: s1_metal
     3300002: s1_platform
     3300004: s1_frame
+    3300006: storage2Frame
+    3300008: storage2Platform
     4300000: s1_platform
     4300002: s1_metal
     4300004: s1_frame
+    4300006: storage2Frame
+    4300008: storage2Platform
     6400000: s1_metal
     6400002: s1_platform
     6400004: s1_frame
+    6400006: storage2Frame
+    6400008: storage2Platform
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -45,7 +57,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

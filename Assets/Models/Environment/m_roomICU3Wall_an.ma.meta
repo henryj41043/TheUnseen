@@ -1,112 +1,86 @@
 fileFormatVersion: 2
-guid: d1072404248a06841a539abbb34fe603
+guid: 8182dbecabee9ad4ca4e6b1991162959
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: column4
-    100002: column7
-    100004: column8
-    100006: column9
-    100008: //RootNode
-    100010: moulding1
-    100012: moulding2
-    100014: moulding3
-    100016: moulding4
-    100018: pPlane1
-    100020: pPlane2
-    100022: wall
-    100024: wall1
-    100026: wall2
-    100028: wall3
-    100030: column1
-    100032: column2
-    100034: column3
-    400000: column4
-    400002: column7
-    400004: column8
-    400006: column9
-    400008: //RootNode
-    400010: moulding1
-    400012: moulding2
-    400014: moulding3
-    400016: moulding4
-    400018: pPlane1
-    400020: pPlane2
-    400022: wall
-    400024: wall1
-    400026: wall2
-    400028: wall3
-    400030: column1
-    400032: column2
-    400034: column3
-    2300000: column4
-    2300002: column7
-    2300004: column8
-    2300006: column9
-    2300008: moulding1
-    2300010: moulding2
-    2300012: moulding3
-    2300014: moulding4
-    2300016: pPlane1
-    2300018: pPlane2
-    2300020: wall
+    100000: ceiling
+    100002: corner
+    100004: cornerMoulding
+    100006: floor
+    100008: group
+    100010: hallway
+    100012: //RootNode
+    100014: moulding
+    100016: moulding1
+    100018: moulding2
+    100020: pasted__hallway
+    100022: pasted__pillar
+    100024: pasted__pillar1
+    100026: pasted__pillar2
+    100028: pasted__pillar3
+    100030: wall1
+    100032: wall2
+    100034: wall3
+    400000: ceiling
+    400002: corner
+    400004: cornerMoulding
+    400006: floor
+    400008: group
+    400010: hallway
+    400012: //RootNode
+    400014: moulding
+    400016: moulding1
+    400018: moulding2
+    400020: pasted__hallway
+    400022: pasted__pillar
+    400024: pasted__pillar1
+    400026: pasted__pillar2
+    400028: pasted__pillar3
+    400030: wall1
+    400032: wall2
+    400034: wall3
+    2300000: ceiling
+    2300002: corner
+    2300004: cornerMoulding
+    2300006: floor
+    2300008: moulding
+    2300010: moulding1
+    2300012: moulding2
+    2300014: pasted__pillar
+    2300016: pasted__pillar1
+    2300018: pasted__pillar2
+    2300020: pasted__pillar3
     2300022: wall1
     2300024: wall2
     2300026: wall3
-    2300028: column1
-    2300030: column2
-    2300032: column3
-    3300000: column4
-    3300002: column7
-    3300004: column8
-    3300006: column9
-    3300008: moulding1
-    3300010: moulding2
-    3300012: moulding3
-    3300014: moulding4
-    3300016: pPlane1
-    3300018: pPlane2
-    3300020: wall
+    3300000: ceiling
+    3300002: corner
+    3300004: cornerMoulding
+    3300006: floor
+    3300008: moulding
+    3300010: moulding1
+    3300012: moulding2
+    3300014: pasted__pillar
+    3300016: pasted__pillar1
+    3300018: pasted__pillar2
+    3300020: pasted__pillar3
     3300022: wall1
     3300024: wall2
     3300026: wall3
-    3300028: column1
-    3300030: column2
-    3300032: column3
-    4300000: wall
-    4300002: column4
-    4300004: column7
-    4300006: column8
-    4300008: column9
-    4300010: moulding1
-    4300012: moulding2
-    4300014: moulding3
-    4300016: moulding4
-    4300018: wall1
-    4300020: wall2
-    4300022: wall3
-    4300024: pPlane1
-    4300026: pPlane2
-    4300028: column1
-    4300030: column2
-    4300032: column3
-    6400000: column4
-    6400002: column7
-    6400004: column8
-    6400006: column9
-    6400008: moulding1
-    6400010: moulding2
-    6400012: moulding3
-    6400014: moulding4
-    6400016: pPlane1
-    6400018: pPlane2
-    6400020: wall
-    6400022: wall1
-    6400024: wall2
-    6400026: wall3
-    6400028: column1
-    6400030: column2
-    6400032: column3
+    4300000: floor
+    4300002: ceiling
+    4300004: wall1
+    4300006: moulding
+    4300008: moulding1
+    4300010: wall2
+    4300012: wall3
+    4300014: moulding2
+    4300016: corner
+    4300018: cornerMoulding
+    4300020: pasted__pillar
+    4300022: pasted__pillar1
+    4300024: pasted__pillar2
+    4300026: pasted__pillar3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -128,10 +102,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
-    importBlendShapes: 0
+    addColliders: 0
+    importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -142,7 +116,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -158,6 +132,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

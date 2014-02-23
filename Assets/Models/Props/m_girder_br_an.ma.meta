@@ -3,26 +3,12 @@ guid: 2371f79487f40424586a25c9ff30492c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: bottom
-    100002: //RootNode
-    100004: middle
-    100006: top1
-    400000: bottom
-    400002: //RootNode
-    400004: middle
-    400006: top1
-    2300000: bottom
-    2300002: middle
-    2300004: top1
-    3300000: bottom
-    3300002: middle
-    3300004: top1
-    4300000: top1
-    4300002: middle
-    4300004: bottom
-    6400000: bottom
-    6400002: middle
-    6400004: top1
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: girder
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -45,7 +31,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
