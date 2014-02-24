@@ -39,7 +39,7 @@ GameObject:
   - 114: {fileID: 11400014}
   - 81: {fileID: 8100000}
   - 114: {fileID: 11400016}
-  - 114: {fileID: 11400024}
+  - 114: {fileID: 11400020}
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1473,7 +1473,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 100
@@ -1481,7 +1481,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 2
   m_TargetTexture: {fileID: 0}
   m_HDR: 1
   m_OcclusionCulling: 1
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   TrackTarget: 1
   ShowGizmo: 1
   BreadCrumbTrackInterval: 1
---- !u!114 &11400024
+--- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1866,6 +1866,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LinearColorSpace: 0
+  m_albedoMaterial: {fileID: 2100000, guid: 620b60def607d44459f0defe1dc109b3, type: 2}
+  m_normalMaterial: {fileID: 2100000, guid: 73cb0fcb4cdb24d44becabbc96c46233, type: 2}
+  m_transparencyMaterial: {fileID: 2100000, guid: d59853d15cca3b34e92fdc577a85bdb3,
+    type: 2}
   SceneCamera: {fileID: 2000000}
   RayOffset: 0
 --- !u!124 &12400000
