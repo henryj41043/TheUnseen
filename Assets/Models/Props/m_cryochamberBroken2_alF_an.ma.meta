@@ -53,6 +53,7 @@ ModelImporter:
     4300014: seatTop
     4300016: ports
     4300018: cords
+    4300020: cryochamber
     6400000: bars
     6400002: capsuleBack
     6400004: cords

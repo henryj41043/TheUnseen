@@ -44,6 +44,7 @@ ModelImporter:
     2300020: ports
     2300022: seatBottom
     2300024: seatTop
+    2300026: //RootNode
     3300000: bars
     3300002: bigCord
     3300004: body
@@ -57,6 +58,7 @@ ModelImporter:
     3300020: ports
     3300022: seatBottom
     3300024: seatTop
+    3300026: //RootNode
     4300000: body
     4300002: hinge
     4300004: Door
@@ -70,6 +72,7 @@ ModelImporter:
     4300020: cords
     4300022: Door2
     4300024: Body2
+    4300026: cryochamber
     6400000: bars
     6400002: bigCord
     6400004: body
@@ -83,6 +86,7 @@ ModelImporter:
     6400020: ports
     6400022: seatBottom
     6400024: seatTop
+    6400026: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

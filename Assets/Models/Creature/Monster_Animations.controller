@@ -32,6 +32,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: kdsajf
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -44,6 +50,33 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!206 &20600000
+BlendTree:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: walk_search
+  m_Childs:
+  - m_Motion: {fileID: 7400000, guid: a3f72076a77cce149a8c17a37c7206c4, type: 3}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  - m_Motion: {fileID: 7400016, guid: a3f72076a77cce149a8c17a37c7206c4, type: 3}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  m_BlendParameter: kdsajf
+  m_BlendParameterY: New Float
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 0
+  m_BlendType: 0
 --- !u!1101 &110100000
 Transition:
   m_ObjectHideFlags: 3
@@ -746,7 +779,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: kdsajf
     m_EventTreshold: 0
     m_ExitTime: .666666627
   m_Atomic: 1
@@ -794,7 +827,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: kdsajf
     m_EventTreshold: 0
     m_ExitTime: .890909076
   m_Atomic: 1
@@ -917,7 +950,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400008, guid: 820fc4d89a75a6e4b9745f1561623349, type: 3}
+  - {fileID: 7400006, guid: a3f72076a77cce149a8c17a37c7206c4, type: 3}
   m_ParentStateMachine: {fileID: 110784402}
   m_Position: {x: 336, y: 36, z: 0}
   m_IKOnFeet: 0
@@ -949,7 +982,7 @@ State:
   m_Motions:
   - {fileID: 7400004, guid: 820fc4d89a75a6e4b9745f1561623349, type: 3}
   m_ParentStateMachine: {fileID: 110726386}
-  m_Position: {x: 396, y: 48, z: 0}
+  m_Position: {x: 276, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -964,7 +997,23 @@ State:
   m_Motions:
   - {fileID: 7400002, guid: 820fc4d89a75a6e4b9745f1561623349, type: 3}
   m_ParentStateMachine: {fileID: 110726386}
-  m_Position: {x: 300, y: -120, z: 0}
+  m_Position: {x: 480, y: -204, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110251968
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Blend Tree
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 20600000}
+  - {fileID: 0}
+  m_ParentStateMachine: {fileID: 110726386}
+  m_Position: {x: 348, y: -108, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -992,7 +1041,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400006, guid: 820fc4d89a75a6e4b9745f1561623349, type: 3}
+  - {fileID: 7400004, guid: a3f72076a77cce149a8c17a37c7206c4, type: 3}
   m_ParentStateMachine: {fileID: 110784402}
   m_Position: {x: 336, y: -192, z: 0}
   m_IKOnFeet: 0
@@ -1053,6 +1102,9 @@ StateMachine:
       - {fileID: 110124716}
       - {fileID: 110185816}
     data:
+      first: {fileID: 110251968}
+      second: []
+    data:
       first: {fileID: 110206298}
       second:
       - {fileID: 110115140}
@@ -1106,6 +1158,7 @@ StateMachine:
   m_States:
   - {fileID: 110236716}
   - {fileID: 110229668}
+  - {fileID: 110251968}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}

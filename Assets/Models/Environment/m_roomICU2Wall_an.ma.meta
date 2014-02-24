@@ -45,6 +45,14 @@ ModelImporter:
     4300010: wall2
     4300012: pillar
     4300014: pillar1
+    6400000: ceiling
+    6400002: floor
+    6400004: moulding
+    6400006: moulding1
+    6400008: pillar
+    6400010: pillar1
+    6400012: wall1
+    6400014: wall2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -66,10 +74,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -80,7 +88,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

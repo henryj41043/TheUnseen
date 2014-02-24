@@ -25,6 +25,20 @@ ModelImporter:
     100038: tube1
     100040: tube2
     100042: tube3
+    100044: door
+    100046: hinge1
+    100048: hinge2
+    100050: hinge3
+    100052: hinge4
+    100054: hinge5
+    100056: hingebar
+    100058: hingebar_cover1
+    100060: hingebar_cover2
+    100062: inside
+    100064: outside
+    100066: tube1_inset
+    100068: tube2_inset
+    100070: tube3_inset
     400000: bars
     400002: bigCord
     400004: capsuleBack
@@ -47,6 +61,20 @@ ModelImporter:
     400038: tube1
     400040: tube2
     400042: tube3
+    400044: door
+    400046: hinge1
+    400048: hinge2
+    400050: hinge3
+    400052: hinge4
+    400054: hinge5
+    400056: hingebar
+    400058: hingebar_cover1
+    400060: hingebar_cover2
+    400062: inside
+    400064: outside
+    400066: tube1_inset
+    400068: tube2_inset
+    400070: tube3_inset
     2300000: bars
     2300002: bigCord
     2300004: capsuleBack
@@ -69,6 +97,20 @@ ModelImporter:
     2300038: tube1
     2300040: tube2
     2300042: tube3
+    2300044: door
+    2300046: hinge1
+    2300048: hinge2
+    2300050: hinge3
+    2300052: hinge4
+    2300054: hinge5
+    2300056: hingebar
+    2300058: hingebar_cover1
+    2300060: hingebar_cover2
+    2300062: inside
+    2300064: outside
+    2300066: tube1_inset
+    2300068: tube2_inset
+    2300070: tube3_inset
     3300000: bars
     3300002: bigCord
     3300004: capsuleBack
@@ -91,6 +133,20 @@ ModelImporter:
     3300038: tube1
     3300040: tube2
     3300042: tube3
+    3300044: door
+    3300046: hinge1
+    3300048: hinge2
+    3300050: hinge3
+    3300052: hinge4
+    3300054: hinge5
+    3300056: hingebar
+    3300058: hingebar_cover1
+    3300060: hingebar_cover2
+    3300062: inside
+    3300064: outside
+    3300066: tube1_inset
+    3300068: tube2_inset
+    3300070: tube3_inset
     4300000: body
     4300002: hinge
     4300004: Door
@@ -112,6 +168,20 @@ ModelImporter:
     4300036: doorHinge
     4300038: pCube4
     4300040: pCube5
+    4300042: tube3_inset
+    4300044: tube1_inset
+    4300046: tube2_inset
+    4300048: hinge1
+    4300050: hinge2
+    4300052: hinge3
+    4300054: hingebar
+    4300056: hinge4
+    4300058: hinge5
+    4300060: hingebar_cover1
+    4300062: hingebar_cover2
+    4300064: inside
+    4300066: outside
+    4300068: door
     6400000: bars
     6400002: bigCord
     6400004: capsuleBack
@@ -134,6 +204,20 @@ ModelImporter:
     6400038: tube1
     6400040: tube2
     6400042: tube3
+    6400044: door
+    6400046: hinge1
+    6400048: hinge2
+    6400050: hinge3
+    6400052: hinge4
+    6400054: hinge5
+    6400056: hingebar
+    6400058: hingebar_cover1
+    6400060: hingebar_cover2
+    6400062: inside
+    6400064: outside
+    6400066: tube1_inset
+    6400068: tube2_inset
+    6400070: tube3_inset
     9500000: //RootNode
   materials:
     importMaterials: 1

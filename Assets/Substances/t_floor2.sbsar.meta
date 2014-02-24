@@ -98,7 +98,7 @@ SubstanceImporter:
     - name: floorPattern2_diffuse
       alphaSource: 5
       filterMode: 1
-      aniso: 1
+      aniso: 9
       wrapMode: 0
     - name: floorPattern2_normal
       alphaSource: 0
@@ -116,6 +116,6 @@ SubstanceImporter:
       textureWidth: 512
       textureHeight: 512
       textureFormat: 0
-      loadingBehavior: 1
+      loadingBehavior: 2
   deletedPrototypes: []
   userData: 

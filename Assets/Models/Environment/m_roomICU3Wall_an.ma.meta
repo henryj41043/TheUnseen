@@ -81,6 +81,20 @@ ModelImporter:
     4300022: pasted__pillar1
     4300024: pasted__pillar2
     4300026: pasted__pillar3
+    6400000: ceiling
+    6400002: corner
+    6400004: cornerMoulding
+    6400006: floor
+    6400008: moulding
+    6400010: moulding1
+    6400012: moulding2
+    6400014: pasted__pillar
+    6400016: pasted__pillar1
+    6400018: pasted__pillar2
+    6400020: pasted__pillar3
+    6400022: wall1
+    6400024: wall2
+    6400026: wall3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -102,10 +116,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -116,7 +130,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
