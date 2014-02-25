@@ -29,18 +29,22 @@ public class CreatureAI : MonoBehaviour {
 	public float drainRange = 2f;
 
 	public float searchTime = 3f;
-	public float drainTime = 3f;
+	public float drainTime = 0.1f;
 	private float drainTimer = 0;
 	public int attackDamage = 25;
 	private float chaseTimer = 0;
+	public float drainAmount = 20f;
 
 	private bool isAttacking = false;
 	private bool isDraining = false;
 
 	private bool isSuperSayian = false;
 	public float superSayianSpeedMult = 1.5f;
-	public float superSayianTime = 5f;
+	public float superSayianTime = 1f;
 	private float superSayianTimer = 0;
+	public float SSChargeDecrease = 20f;
+	public float maxSuperSayianCharge = 100f;
+	private float superSayianCharge = 0;
 	
 	private AIPath aiPath;
 	private Animator anim;
@@ -56,7 +60,6 @@ public class CreatureAI : MonoBehaviour {
 	}
 	
 	void Update () {
-		Debug.Log(currentState);
 		GameObject newTarget = GetNewestTarget();
 
 		GameObject drainable = GetDrainable();
@@ -80,32 +83,37 @@ public class CreatureAI : MonoBehaviour {
 			anim.SetBool ("Attack", false);
 			isDraining = true;
 			if(drainTimer > drainTime){
-				if(currentTarget.tag == "Battery"){
-					currentTarget.GetComponentInChildren<Battery>().PowerOff();
-					//make these better
+				if(drainable != null){
+					if(!drainable.GetComponent<Drainable>().isEmpty){
+						drainable.GetComponent<Drainable>().Drain(drainAmount);
+						superSayianCharge += drainAmount;
+					}
 				}
-				else if(currentTarget.tag == "FiredOrb"){
-					Destroy (currentTarget);
-					//make these better
+				else{
+					isDraining = false;
+					drainTimer = 0;
+					currentState = States.Wander;
 				}
-				isDraining = false;
-				drainTimer = 0;
+			}
+			if(superSayianCharge >= maxSuperSayianCharge){
 				isSuperSayian = true;
-				currentState = States.Wander;
 			}
 		}
-
-		if(superSayianTimer > superSayianTime){
-			isSuperSayian = false;
-			superSayianTimer = 0;
-		}
-
 		if(isSuperSayian){
 			enragedMarker.SetActive(true);
 			actualWalkSpeed = walkSpeed*superSayianSpeedMult;
 			actualRunSpeed = runSpeed*superSayianSpeedMult;
 			actualChaseSpeed = chaseSpeed*superSayianSpeedMult;
 			superSayianTimer += Time.deltaTime;
+			if(superSayianTimer > superSayianTime){
+				superSayianCharge -= SSChargeDecrease;
+			}
+			if(superSayianCharge <= 0){
+				isSuperSayian = false;
+				superSayianCharge = 0;
+				superSayianTimer = 0;
+			}
+
 		}else{
 			enragedMarker.SetActive(false);
 			actualWalkSpeed = walkSpeed;
