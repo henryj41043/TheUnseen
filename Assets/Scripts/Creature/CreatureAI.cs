@@ -30,6 +30,7 @@ public class CreatureAI : MonoBehaviour {
 
 	public float searchTime = 3f;
 	public float drainTime = 3f;
+	private float drainTimer = 0;
 	public int attackDamage = 25;
 	private float chaseTimer = 0;
 
@@ -55,13 +56,43 @@ public class CreatureAI : MonoBehaviour {
 	}
 	
 	void Update () {
-
+		Debug.Log(currentState);
 		GameObject newTarget = GetNewestTarget();
 
-		if (isSuperSayian){
-			enragedMarker.SetActive(true);
-		}else{
-			enragedMarker.SetActive(false);
+		GameObject drainable = GetDrainable();
+		if(drainable != null){
+			currentState = States.Absorbing;
+		}
+		else{
+			if (newTarget == null && currentTarget != null && currentTarget.tag != "Waypoint"){
+				currentState = States.ChaseLastKnown;
+			}else if (newTarget != null && newTarget.tag == "Player"){
+				currentState = States.ChasePlayer;
+			}else if (newTarget != null){
+				currentState = States.ChasePOI;
+			}
+		}
+
+		if(currentState == States.Absorbing){
+			drainTimer += Time.deltaTime;
+			anim.SetBool ("Run", false);
+			anim.SetBool ("Walk", false);
+			anim.SetBool ("Attack", false);
+			isDraining = true;
+			if(drainTimer > drainTime){
+				if(currentTarget.tag == "Battery"){
+					currentTarget.GetComponentInChildren<Battery>().PowerOff();
+					//make these better
+				}
+				else if(currentTarget.tag == "FiredOrb"){
+					Destroy (currentTarget);
+					//make these better
+				}
+				isDraining = false;
+				drainTimer = 0;
+				isSuperSayian = true;
+				currentState = States.Wander;
+			}
 		}
 
 		if(superSayianTimer > superSayianTime){
@@ -70,11 +101,13 @@ public class CreatureAI : MonoBehaviour {
 		}
 
 		if(isSuperSayian){
+			enragedMarker.SetActive(true);
 			actualWalkSpeed = walkSpeed*superSayianSpeedMult;
 			actualRunSpeed = runSpeed*superSayianSpeedMult;
 			actualChaseSpeed = chaseSpeed*superSayianSpeedMult;
 			superSayianTimer += Time.deltaTime;
 		}else{
+			enragedMarker.SetActive(false);
 			actualWalkSpeed = walkSpeed;
 			actualRunSpeed = runSpeed;
 			actualChaseSpeed = chaseSpeed;
@@ -82,15 +115,6 @@ public class CreatureAI : MonoBehaviour {
 
 		if (newTarget != null){
 			lastPosMarker.transform.position = newTarget.transform.position;
-		}
-
-
-		if (newTarget == null && currentTarget != null && currentTarget.tag != "Waypoint"){
-			currentState = States.ChaseLastKnown;
-		}else if (newTarget != null && newTarget.tag == "Player"){
-			currentState = States.ChasePlayer;
-		}else if (newTarget != null){
-			currentState = States.ChasePOI;
 		}
 
 		// Wandering State
@@ -125,9 +149,7 @@ public class CreatureAI : MonoBehaviour {
 				aiPath.target = currentTarget.transform;
 
 				if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < drainRange){
-					if(!isDraining){
-						StartCoroutine(Drain());
-					}
+					currentState = States.Absorbing;
 				}
 			}
 		}
@@ -183,24 +205,24 @@ public class CreatureAI : MonoBehaviour {
 		isAttacking = false;
 	}
 
-	// can be much more robust
-	IEnumerator Drain() {
-		anim.SetBool ("Run", false);
-		anim.SetBool ("Walk", false);
-		anim.SetBool ("Attack", true);
-		isDraining = true;
-		yield return new WaitForSeconds(drainTime);
-		if(currentTarget.tag == "Battery"){
-			currentTarget.GetComponentInChildren<Battery>().PowerOff();
-			//make these better
+	GameObject GetDrainable(){
+		GameObject[] batteries = GameObject.FindGameObjectsWithTag("Battery");
+		GameObject[] orbs = GameObject.FindGameObjectsWithTag("FiredOrb");
+
+		foreach(GameObject battery in batteries){
+			if ((transform.position - battery.transform.position).magnitude < drainRange){
+				if (battery.GetComponentInChildren<Battery>().power > 0){
+					return battery;
+				}
+			}
 		}
-		else{
-			Destroy (currentTarget);
-			//make these better
+
+		foreach(GameObject orb in orbs){
+			if ((transform.position - orb.transform.position).magnitude < drainRange){
+				return orb;
+			}
 		}
-		isDraining = false;
-		currentTarget = null;
-		isSuperSayian = true;
+		return null;
 	}
 	
 	GameObject GetNewestTarget(){
