@@ -480,7 +480,7 @@ MonoBehaviour:
   minLightRange: 5
   maxLightRange: 15
   minOrbSpeed: 500
-  maxOrbSpeed: 2000
+  maxOrbSpeed: 2500
   bulletScaleMax: .100000001
   bulletScaleMin: .200000003
   ratioLossPerSecond: .100000001
