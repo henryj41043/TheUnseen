@@ -91,20 +91,17 @@ public class LightGenerator : MonoBehaviour
 	public void Charge (){
 		if (chargingOrb != null){
 			PEG.SetBool("mouseHold", true);
-			if (energy > 0.0f && energy > chargingOrb.GetComponent<FiredOrb>().ratioPower*maxOrbCharge) {
+			if (energy > 0.0f && energy > maxOrbCharge) {
 				chargingOrb.GetComponent<FiredOrb>().ratioPower += ratioChargePerSecond*Time.deltaTime;
 				if (chargingOrb.GetComponent<FiredOrb>().ratioPower > 1){
 					chargingOrb.GetComponent<FiredOrb>().ratioPower = 1;
 					energy -= energyDrainPerSecond*Time.deltaTime;
 				}
-			}
-			else if (energy > 0.0f) {
+			}else if (energy > 0.0f) {
 				energy -= energyDrainPerSecond*Time.deltaTime;
 				chargingOrb.GetComponent<FiredOrb>().ratioPower = (energy/maxOrbCharge)*chargingOrb.GetComponent<FiredOrb>().ratioPower;
-			}
-			else {
+			}else {
 				//out of ammo sound effect
-				print ("fff");
 				Destroy (chargingOrb);
 				chargingOrb = null;
 			}
