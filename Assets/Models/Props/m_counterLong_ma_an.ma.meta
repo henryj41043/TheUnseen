@@ -3,104 +3,33 @@ guid: 00941f77df04a444d8861fe08a981378
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCylinder1
-    100004: pCylinder1 1
-    100006: pCylinder1 2
-    100008: pCylinder2
-    100010: pCylinder2 1
-    100012: pCylinder2 2
-    100014: pCylinder5
-    100016: pCylinder5 1
-    100018: pCylinder5 2
-    100020: pCylinder6
-    100022: pCylinder6 1
-    100024: pCylinder6 2
-    100026: Shelf_Pin_1
-    100028: Shelf_Pin_2
-    100030: Shelf_Pin_3
-    100032: Shelf_wood
-    100034: Bases
-    100036: Caps
-    100038: Pegs
-    100040: Screws
-    100042: Shelf 1
-    400000: //RootNode
-    400002: pCylinder1
-    400004: pCylinder1 1
-    400006: pCylinder1 2
-    400008: pCylinder2
-    400010: pCylinder2 1
-    400012: pCylinder2 2
-    400014: pCylinder5
-    400016: pCylinder5 1
-    400018: pCylinder5 2
-    400020: pCylinder6
-    400022: pCylinder6 1
-    400024: pCylinder6 2
-    400026: Shelf_Pin_1
-    400028: Shelf_Pin_2
-    400030: Shelf_Pin_3
-    400032: Shelf_wood
-    400034: Bases
-    400036: Caps
-    400038: Pegs
-    400040: Screws
-    400042: Shelf 1
-    2300000: pCylinder1
-    2300002: pCylinder1 1
-    2300004: pCylinder1 2
-    2300006: pCylinder2
-    2300008: pCylinder2 1
-    2300010: pCylinder2 2
-    2300012: pCylinder5
-    2300014: pCylinder5 1
-    2300016: pCylinder5 2
-    2300018: pCylinder6
-    2300020: pCylinder6 1
-    2300022: pCylinder6 2
-    2300024: Shelf_wood
-    2300026: Bases
-    2300028: Caps
-    2300030: Pegs
-    2300032: Screws
-    2300034: Shelf 1
-    3300000: pCylinder1
-    3300002: pCylinder1 1
-    3300004: pCylinder1 2
-    3300006: pCylinder2
-    3300008: pCylinder2 1
-    3300010: pCylinder2 2
-    3300012: pCylinder5
-    3300014: pCylinder5 1
-    3300016: pCylinder5 2
-    3300018: pCylinder6
-    3300020: pCylinder6 1
-    3300022: pCylinder6 2
-    3300024: Shelf_wood
-    3300026: Bases
-    3300028: Caps
-    3300030: Pegs
-    3300032: Screws
-    3300034: Shelf 1
-    4300000: Shelf_wood
-    4300002: pCylinder1
-    4300004: pCylinder2
-    4300006: pCylinder5
-    4300008: pCylinder6
-    4300010: pCylinder1
-    4300012: pCylinder2
-    4300014: pCylinder5
-    4300016: pCylinder6
-    4300018: pCylinder1
-    4300020: pCylinder2
-    4300022: pCylinder5
-    4300024: pCylinder6
-    4300026: Screws
-    4300028: Bases
-    4300030: Caps
-    4300032: Pegs
-    4300034: Shelf
+    100000: Bases
+    100002: Caps
+    100004: //RootNode
+    100006: Pegs
+    100008: Screws
+    100010: Shelf 1
+    400000: Bases
+    400002: Caps
+    400004: //RootNode
+    400006: Pegs
+    400008: Screws
+    400010: Shelf 1
+    2300000: Bases
+    2300002: Caps
+    2300004: Pegs
+    2300006: Screws
+    2300008: Shelf 1
+    3300000: Bases
+    3300002: Caps
+    3300004: Pegs
+    3300006: Screws
+    3300008: Shelf 1
+    4300000: Screws
+    4300002: Bases
+    4300004: Caps
+    4300006: Pegs
+    4300008: Shelf
     6400000: Bases
     6400002: Caps
     6400004: Pegs
@@ -128,7 +57,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

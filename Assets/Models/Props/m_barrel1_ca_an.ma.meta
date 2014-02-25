@@ -31,7 +31,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
@@ -42,7 +42,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 30
+    normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 1
     tangentImportMode: 1

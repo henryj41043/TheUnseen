@@ -2294,7 +2294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.3909454, y: -8.38006496, z: -16.3707142}
+  m_LocalPosition: {x: 68.148819, y: -8.38569069, z: -13.6643362}
   m_LocalScale: {x: .0239145178, y: .0239145178, z: .0239145178}
   m_Children:
   - {fileID: 400168}
@@ -3658,7 +3658,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 820fc4d89a75a6e4b9745f1561623349, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 6f9d2ebbddb6d714da64307f6b2a8885, type: 3}
   m_Controller: {fileID: 9100000, guid: b9b4f3260a02bc24fb1bf2bad131c56e, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
@@ -3675,15 +3675,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f57dda1cf1d2a4da197c5c34ea1de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  patrolSpeed: 3
+  walkSpeed: 3
+  runSpeed: 5
   chaseSpeed: 5
-  waitTimeAfterSight: 1
-  waypoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  attackRange: 2
+  attackSpeed: 1
+  minWaypointRange: 1
+  drainRange: 4
+  searchTime: 3
   attackDamage: 25
+  enragedSpeedMult: 1.10000002
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3695,13 +3696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3b92dd23d840d4cbff13bcd8026bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fovAngle: 110
-  inSight: 0
   seeDist: 100
-  lastSighted: {fileID: 0}
-  resetLastSighting: {x: 1000, y: 1000, z: 1000}
-  playerCollider: {fileID: 0}
-  chasingPlayer: 0
+  fovAngle: 180
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3767,7 +3763,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: b9b36b49c5063c040bf5ba7ebcafeabd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0

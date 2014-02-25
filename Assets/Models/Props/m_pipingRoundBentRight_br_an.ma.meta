@@ -4,37 +4,17 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: back
-    100002: bentPipeRight
-    100004: connectingRim
-    100006: left
-    100008: //RootNode
-    100010: mainTube
-    100012: middleRim1
-    100014: middleRim2
+    100002: bentLeft
+    100004: left
+    100006: //RootNode
     400000: back
-    400002: bentPipeRight
-    400004: connectingRim
-    400006: left
-    400008: //RootNode
-    400010: mainTube
-    400012: middleRim1
-    400014: middleRim2
-    2300000: connectingRim
-    2300002: mainTube
-    2300004: middleRim1
-    2300006: middleRim2
-    3300000: connectingRim
-    3300002: mainTube
-    3300004: middleRim1
-    3300006: middleRim2
-    4300000: mainTube
-    4300002: middleRim2
-    4300004: middleRim1
-    4300006: connectingRim
-    6400000: connectingRim
-    6400002: mainTube
-    6400004: middleRim1
-    6400006: middleRim2
+    400002: bentLeft
+    400004: left
+    400006: //RootNode
+    2300000: bentLeft
+    3300000: bentLeft
+    4300000: bentLeft
+    6400000: bentLeft
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -57,7 +37,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

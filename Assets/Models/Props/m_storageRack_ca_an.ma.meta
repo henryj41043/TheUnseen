@@ -4,25 +4,19 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: s3_metal
-    100004: s3_platform
-    100006: s3_frame
+    100002: storage1Frame
+    100004: storage1Platform
     400000: //RootNode
-    400002: s3_metal
-    400004: s3_platform
-    400006: s3_frame
-    2300000: s3_metal
-    2300002: s3_platform
-    2300004: s3_frame
-    3300000: s3_metal
-    3300002: s3_platform
-    3300004: s3_frame
-    4300000: s3_metal
-    4300002: s3_platform
-    4300004: s3_frame
-    6400000: s3_metal
-    6400002: s3_platform
-    6400004: s3_frame
+    400002: storage1Frame
+    400004: storage1Platform
+    2300000: storage1Frame
+    2300002: storage1Platform
+    3300000: storage1Frame
+    3300002: storage1Platform
+    4300000: storage1Frame
+    4300002: storage1Platform
+    6400000: storage1Frame
+    6400002: storage1Platform
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -45,7 +39,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

@@ -16,6 +16,20 @@ ModelImporter:
     100020: nameFrameBot
     100022: nameFrameMid
     100024: nameFrameTop
+    100026: drawer_Top
+    100028: filingCabinetBody:polySurface1
+    100030: filingCabinetDrawer:polySurface1
+    100032: filingCabinetHandle:polySurface1
+    100034: filingCabinetLock:polySurface1
+    100036: filingCabinetName:polySurface1
+    100038: polySurface1
+    100040: polySurface1 1
+    100042: polySurface2
+    100044: polySurface2 1
+    100046: polySurface3
+    100048: polySurface3 1
+    100050: polySurface4
+    100052: polySurface4 1
     400000: drawerBot
     400002: drawerMid
     400004: drawerTop
@@ -29,6 +43,20 @@ ModelImporter:
     400020: nameFrameBot
     400022: nameFrameMid
     400024: nameFrameTop
+    400026: drawer_Top
+    400028: filingCabinetBody:polySurface1
+    400030: filingCabinetDrawer:polySurface1
+    400032: filingCabinetHandle:polySurface1
+    400034: filingCabinetLock:polySurface1
+    400036: filingCabinetName:polySurface1
+    400038: polySurface1
+    400040: polySurface1 1
+    400042: polySurface2
+    400044: polySurface2 1
+    400046: polySurface3
+    400048: polySurface3 1
+    400050: polySurface4
+    400052: polySurface4 1
     2300000: drawerBot
     2300002: drawerMid
     2300004: drawerTop
@@ -42,6 +70,19 @@ ModelImporter:
     2300020: nameFrameBot
     2300022: nameFrameMid
     2300024: nameFrameTop
+    2300026: filingCabinetBody:polySurface1
+    2300028: filingCabinetDrawer:polySurface1
+    2300030: filingCabinetHandle:polySurface1
+    2300032: filingCabinetLock:polySurface1
+    2300034: filingCabinetName:polySurface1
+    2300036: polySurface1
+    2300038: polySurface1 1
+    2300040: polySurface2
+    2300042: polySurface2 1
+    2300044: polySurface3
+    2300046: polySurface3 1
+    2300048: polySurface4
+    2300050: polySurface4 1
     3300000: drawerBot
     3300002: drawerMid
     3300004: drawerTop
@@ -55,6 +96,19 @@ ModelImporter:
     3300020: nameFrameBot
     3300022: nameFrameMid
     3300024: nameFrameTop
+    3300026: filingCabinetBody:polySurface1
+    3300028: filingCabinetDrawer:polySurface1
+    3300030: filingCabinetHandle:polySurface1
+    3300032: filingCabinetLock:polySurface1
+    3300034: filingCabinetName:polySurface1
+    3300036: polySurface1
+    3300038: polySurface1 1
+    3300040: polySurface2
+    3300042: polySurface2 1
+    3300044: polySurface3
+    3300046: polySurface3 1
+    3300048: polySurface4
+    3300050: polySurface4 1
     4300000: cabinet
     4300002: drawerTop
     4300004: handleTop
@@ -68,6 +122,19 @@ ModelImporter:
     4300020: handleBot
     4300022: nameFrameBot
     4300024: lockBot
+    4300026: filingCabinetBody:polySurface1
+    4300028: filingCabinetDrawer:polySurface1
+    4300030: filingCabinetHandle:polySurface1
+    4300032: filingCabinetLock:polySurface1
+    4300034: filingCabinetName:polySurface1
+    4300036: polySurface1
+    4300038: polySurface2
+    4300040: polySurface3
+    4300042: polySurface4
+    4300044: polySurface1
+    4300046: polySurface2
+    4300048: polySurface3
+    4300050: polySurface4
     6400000: drawerBot
     6400002: drawerMid
     6400004: drawerTop
@@ -81,6 +148,19 @@ ModelImporter:
     6400020: nameFrameBot
     6400022: nameFrameMid
     6400024: nameFrameTop
+    6400026: filingCabinetBody:polySurface1
+    6400028: filingCabinetDrawer:polySurface1
+    6400030: filingCabinetHandle:polySurface1
+    6400032: filingCabinetLock:polySurface1
+    6400034: filingCabinetName:polySurface1
+    6400036: polySurface1
+    6400038: polySurface1 1
+    6400040: polySurface2
+    6400042: polySurface2 1
+    6400044: polySurface3
+    6400046: polySurface3 1
+    6400048: polySurface4
+    6400050: polySurface4 1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -103,7 +183,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

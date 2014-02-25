@@ -13,9 +13,9 @@ public class AreaLightRenderer : MonoBehaviour
   private RenderTexture m_normalBuffer;
   private RenderTexture m_transparencyBuffer;
 
-  private Material m_albedoMaterial;
-  private Material m_normalMaterial;
-  private Material m_transparencyMaterial;
+  public Material m_albedoMaterial;
+  public Material m_normalMaterial;
+  public Material m_transparencyMaterial;
 
   private Matrix4x4 m_matViewProjInverse;
   private Matrix4x4 m_normalMatrix;
@@ -130,23 +130,22 @@ public class AreaLightRenderer : MonoBehaviour
   {
     // init render buffer
     ResetBuffer();
-
     // solid albedo buffer       
-    m_albedoMaterial = new Material(Shader.Find("redPlant/UnlitAlbedo"));
+    //m_albedoMaterial = new Material(Shader.Find("redPlant/UnlitAlbedo"));
     if (m_albedoMaterial == null)
     {
       Debug.LogError("Unable to find shader redPlant/UnlitAlbedo");
     }
 
     // transparency buffer       
-    m_transparencyMaterial = new Material(Shader.Find("redPlant/UnlitTransparency"));
+    //m_transparencyMaterial = new Material(Shader.Find("redPlant/UnlitTransparency"));
     if (m_transparencyMaterial == null)
     {
       Debug.LogError("Unable to find shader redPlant/UnlitTransparency");
     }
 
     // normal buffer
-    m_normalMaterial = new Material(Shader.Find("redPlant/WorldNormal"));
+    //m_normalMaterial = new Material(Shader.Find("redPlant/WorldNormal"));
     if (m_normalMaterial == null)
     {
       Debug.LogError("Unable to find shader redPlant/WorldNormal");

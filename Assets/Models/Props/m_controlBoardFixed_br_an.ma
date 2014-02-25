@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
-//Name: m_controlBoardFixed_br_01.ma
-//Last modified: Thu, Feb 13, 2014 07:26:04 PM
+//Name: m_controlBoardFIXED_br.ma
+//Last modified: Sun, Feb 23, 2014 06:19:24 AM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,12 +90,12 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.061246615376362175 0.20931586194831323 -2.9901251736007541 ;
-	setAttr ".r" -type "double3" 4.4616472704325911 180.99999999999432 0 ;
+	setAttr ".t" -type "double3" 0.90812582002060471 1.0251979585100548 -1.3472123750115055 ;
+	setAttr ".r" -type "double3" -21.938352729554012 152.19999999996651 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 3.1382323822652167;
+	setAttr ".coi" 1.7478305119347417;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -108,7 +108,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 3.5919867187417758;
+	setAttr ".ow" 3.5919867187417762;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -116,12 +116,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.451040285627888 0.016483199806999201 100.1 ;
+	setAttr ".t" -type "double3" -0.28357144850246235 0.42280103414409725 100.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 12.298630871149847;
+	setAttr ".ow" 1.7561879844661978;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -156,46 +156,24 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "controlBoard";
+	setAttr ".t" -type "double3" 0 0 -0.25507718085624809 ;
+	setAttr ".rp" -type "double3" 0 0 0.25507718085624809 ;
+	setAttr ".sp" -type "double3" 0 0 0.25507718085624809 ;
 createNode transform -n "topButtons" -p "controlBoard";
-createNode transform -n "topSquareButton6" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.086512103096948845 0.53869343805563741 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" 0.086512103096948845 0.53869343805563741 -0.0081457669908875374 ;
-createNode mesh -n "topSquareButtonShape6" -p "topSquareButton6";
+createNode transform -n "topSquareButton1" -p "topButtons";
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape1" -p "topSquareButton1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56325924 0.66905266 -0.50814575 
-		-0.39068016 0.66905266 -0.50814575 0.56325924 0.40833423 -0.48967832 -0.39068016 
-		0.40833423 -0.48967832 0.56325924 0.44877765 0.26698446 -0.39068016 0.44877765 0.26698446 
-		0.56325924 0.70949608 0.24851702 -0.39068016 0.70949608 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton6";
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -260,11 +238,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton6";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton5" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.084204933626232936 0.61188596597398237 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.084204933626232936 0.61188596597398237 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape5" -p "topSquareButton5";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton1";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -275,10 +251,10 @@ createNode mesh -n "topSquareButtonShape5" -p "topSquareButton5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56095207 0.7422452 -0.50825053 
-		-0.39298734 0.7422452 -0.50825053 0.56095207 0.48152676 -0.48978308 -0.39298734 0.48152676 
-		-0.48978308 0.56095207 0.52197021 0.26687971 -0.39298734 0.52197021 0.26687971 0.56095207 
-		0.78268862 0.24841225 -0.39298734 0.78268862 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -298,7 +274,20 @@ createNode mesh -n "topSquareButtonShape5" -p "topSquareButton5";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton5";
+createNode transform -n "smallSquareButton1" -p "topButtons";
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape1" -p "smallSquareButton1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape1" -p "smallSquareButton1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -363,11 +352,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton5";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton4" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.084204933626232936 0.6829696857974199 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.084204933626232936 0.6829696857974199 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape4" -p "topSquareButton4";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton1";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -378,10 +365,10 @@ createNode mesh -n "topSquareButtonShape4" -p "topSquareButton4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56095207 0.81332892 -0.50825053 
-		-0.39298734 0.81332892 -0.50825053 0.56095207 0.55261046 -0.48978308 -0.39298734 
-		0.55261046 -0.48978308 0.56095207 0.59305388 0.26687971 -0.39298734 0.59305388 0.26687971 
-		0.56095207 0.85377234 0.24841225 -0.39298734 0.85377234 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -401,209 +388,206 @@ createNode mesh -n "topSquareButtonShape4" -p "topSquareButton4";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton4";
+createNode transform -n "leftTopKnob1" -p "topButtons";
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftTopKnobShape1" -p "leftTopKnob1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape5" -p "leftTopKnob1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton3" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.18730965088501556 0.53869343805563741 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" 0.18730965088501556 0.53869343805563741 -0.0081457669908875374 ;
-createNode mesh -n "topSquareButtonShape3" -p "topSquareButton3";
+createNode transform -n "leftTopKnob5" -p "topButtons";
+	setAttr ".rp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+createNode mesh -n "leftTopKnobShape5" -p "leftTopKnob5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5131665560548293 0.48547003162227526 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.66405678 0.66905266 -0.50814575 
-		-0.28988263 0.66905266 -0.50814575 0.66405678 0.40833423 -0.48967832 -0.28988263 
-		0.40833423 -0.48967832 0.66405678 0.44877765 0.26698446 -0.28988263 0.44877765 0.26698446 
-		0.66405678 0.70949608 0.24851702 -0.28988263 0.70949608 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton3";
+createNode mesh -n "polySurfaceShape6" -p "leftTopKnob5";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.42779666 0.55880177 0.022528322 
+		0.42112932 0.54982394 0.02874445 0.41446194 0.55880177 0.022528322 0.41170025 0.58047616 
+		0.0075212633 0.41446194 0.60215056 -0.0074857948 0.42112932 0.61112839 -0.013701922 
+		0.42779666 0.60215056 -0.0074857958 0.43055835 0.58047616 0.0075212633 0.42779666 
+		0.5352965 -0.011419903 0.42112932 0.52631867 -0.0052037756 0.41446194 0.5352965 -0.011419903 
+		0.41170025 0.55697089 -0.026426962 0.41446194 0.57864529 -0.04143402 0.42112932 0.58762312 
+		-0.047650147 0.42779666 0.57864529 -0.04143402 0.43055835 0.55697089 -0.026426962 
+		0.42112932 0.55697089 -0.026426962;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "topSquareButton2" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.18500248141429965 0.61188596597398237 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.18500248141429965 0.61188596597398237 -0.0082505349434951469 ;
+	setAttr ".t" -type "double3" 0 -0.069947577961565144 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
 createNode mesh -n "topSquareButtonShape2" -p "topSquareButton2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.7422452 -0.50825053 
-		-0.29218978 0.7422452 -0.50825053 0.6617496 0.48152676 -0.48978308 -0.29218978 0.48152676 
-		-0.48978308 0.6617496 0.52197021 0.26687971 -0.29218978 0.52197021 0.26687971 0.6617496 
-		0.78268862 0.24841225 -0.29218978 0.78268862 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
 	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 0 1 2 3
 		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
+		mu 0 4 4 5 6 7
 		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
+		mu 0 4 7 6 1 0
 		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 1 6 9 8
 		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -672,11 +656,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton2";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton1" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape1" -p "topSquareButton1";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton2";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -710,7 +692,44 @@ createNode mesh -n "topSquareButtonShape1" -p "topSquareButton1";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton1";
+createNode transform -n "topSquareButton3" -p "topButtons";
+	setAttr ".t" -type "double3" 0 -0.14254613937144631 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape3" -p "topSquareButton3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton3";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -775,11 +794,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton1";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton12" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.10511925138379197 0.53869343805563741 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.10511925138379197 0.53869343805563741 -0.0081457669908875374 ;
-createNode mesh -n "topSquareButtonShape12" -p "topSquareButton12";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton3";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -790,10 +807,10 @@ createNode mesh -n "topSquareButtonShape12" -p "topSquareButton12";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.37162787 0.66905266 -0.50814575 
-		-0.58231151 0.66905266 -0.50814575 0.37162787 0.40833423 -0.48967832 -0.58231151 
-		0.40833423 -0.48967832 0.37162787 0.44877765 0.26698446 -0.58231151 0.44877765 0.26698446 
-		0.37162787 0.70949608 0.24851702 -0.58231151 0.70949608 0.24851702;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -813,7 +830,44 @@ createNode mesh -n "topSquareButtonShape12" -p "topSquareButton12";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton12";
+createNode transform -n "topSquareButton4" -p "topButtons";
+	setAttr ".t" -type "double3" -0.097926590982333889 0 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape4" -p "topSquareButton4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -878,11 +932,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton12";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton11" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.10742642085450771 0.61188596597398237 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.10742642085450771 0.61188596597398237 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape11" -p "topSquareButton11";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton4";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -893,10 +945,10 @@ createNode mesh -n "topSquareButtonShape11" -p "topSquareButton11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.36932069 0.7422452 -0.50825053 
-		-0.58461869 0.7422452 -0.50825053 0.36932069 0.48152676 -0.48978308 -0.58461869 0.48152676 
-		-0.48978308 0.36932069 0.52197021 0.26687971 -0.58461869 0.52197021 0.26687971 0.36932069 
-		0.78268862 0.24841225 -0.58461869 0.78268862 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -916,7 +968,44 @@ createNode mesh -n "topSquareButtonShape11" -p "topSquareButton11";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton11";
+createNode transform -n "topSquareButton5" -p "topButtons";
+	setAttr ".t" -type "double3" -0.097926590982333889 -0.069947577961565144 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape5" -p "topSquareButton5";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton5";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -981,11 +1070,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton11";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton10" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.10742642085450771 0.6829696857974199 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.10742642085450771 0.6829696857974199 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape10" -p "topSquareButton10";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton5";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -996,10 +1083,10 @@ createNode mesh -n "topSquareButtonShape10" -p "topSquareButton10";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.36932069 0.81332892 -0.50825053 
-		-0.58461869 0.81332892 -0.50825053 0.36932069 0.55261046 -0.48978308 -0.58461869 
-		0.55261046 -0.48978308 0.36932069 0.59305388 0.26687971 -0.58461869 0.59305388 0.26687971 
-		0.36932069 0.85377234 0.24841225 -0.58461869 0.85377234 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1019,7 +1106,44 @@ createNode mesh -n "topSquareButtonShape10" -p "topSquareButton10";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "topSquareButton10";
+createNode transform -n "topSquareButton6" -p "topButtons";
+	setAttr ".t" -type "double3" -0.097926590982333889 -0.14254613937144631 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape6" -p "topSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton6";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -1081,44 +1205,79 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton10";
 		mu 0 4 2 3 28 27
 		f 4 -21 -28 -8 -6
 		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "topSquareButton7" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.01104552370621803 0.6829696857974199 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.01104552370621803 0.6829696857974199 -0.0082505349434951469 ;
+	setAttr ".t" -type "double3" -0.19303547385472741 0 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
 createNode mesh -n "topSquareButtonShape7" -p "topSquareButton7";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46570158 0.81332892 -0.50825053 
-		-0.4882378 0.81332892 -0.50825053 0.46570158 0.55261046 -0.48978308 -0.4882378 0.55261046 
-		-0.48978308 0.46570158 0.59305388 0.26687971 -0.4882378 0.59305388 0.26687971 0.46570158 
-		0.85377234 0.24841225 -0.4882378 0.85377234 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
 	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 0 1 2 3
 		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
+		mu 0 4 4 5 6 7
 		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
+		mu 0 4 7 6 1 0
 		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 1 6 9 8
 		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1187,11 +1346,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton7";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton8" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.01104552370621803 0.61188596597398237 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.01104552370621803 0.61188596597398237 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape8" -p "topSquareButton8";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton7";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1202,10 +1359,10 @@ createNode mesh -n "topSquareButtonShape8" -p "topSquareButton8";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46570158 0.7422452 -0.50825053 
-		-0.4882378 0.7422452 -0.50825053 0.46570158 0.48152676 -0.48978308 -0.4882378 0.48152676 
-		-0.48978308 0.46570158 0.52197021 0.26687971 -0.4882378 0.52197021 0.26687971 0.46570158 
-		0.78268862 0.24841225 -0.4882378 0.78268862 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1222,6 +1379,43 @@ createNode mesh -n "topSquareButtonShape8" -p "topSquareButton8";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton8" -p "topButtons";
+	setAttr ".t" -type "double3" -0.19303547385472741 -0.069947577961565144 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape8" -p "topSquareButton8";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1290,11 +1484,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton8";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton9" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.0087383542355021215 0.53869343805563741 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.0087383542355021215 0.53869343805563741 -0.0081457669908875374 ;
-createNode mesh -n "topSquareButtonShape9" -p "topSquareButton9";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton8";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1305,10 +1497,10 @@ createNode mesh -n "topSquareButtonShape9" -p "topSquareButton9";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46800876 0.66905266 -0.50814575 
-		-0.48593062 0.66905266 -0.50814575 0.46800876 0.40833423 -0.48967832 -0.48593062 
-		0.40833423 -0.48967832 0.46800876 0.44877765 0.26698446 -0.48593062 0.44877765 0.26698446 
-		0.46800876 0.70949608 0.24851702 -0.48593062 0.70949608 0.24851702;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1325,6 +1517,43 @@ createNode mesh -n "topSquareButtonShape9" -p "topSquareButton9";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton9" -p "topButtons";
+	setAttr ".t" -type "double3" -0.19303547385472741 -0.14254613937144631 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape9" -p "topSquareButton9";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1393,11 +1622,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton9";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton13" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.20219155612110828 0.68296968579742012 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.20219155612110828 0.68296968579742012 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape13" -p "topSquareButton13";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton9";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1408,10 +1635,10 @@ createNode mesh -n "topSquareButtonShape13" -p "topSquareButton13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27455556 0.81332892 -0.50825053 
-		-0.67938381 0.81332892 -0.50825053 0.27455556 0.55261046 -0.48978308 -0.67938381 
-		0.55261046 -0.48978308 0.27455556 0.59305388 0.26687971 -0.67938381 0.59305388 0.26687971 
-		0.27455556 0.85377234 0.24841225 -0.67938381 0.85377234 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1428,6 +1655,457 @@ createNode mesh -n "topSquareButtonShape13" -p "topSquareButton13";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton10" -p "topButtons";
+	setAttr ".t" -type "double3" -0.28898020248417911 -0.14254613937144631 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape10" -p "topSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton11" -p "topButtons";
+	setAttr ".t" -type "double3" -0.28898020248417911 -0.069947577961565144 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape11" -p "topSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton12" -p "topButtons";
+	setAttr ".t" -type "double3" -0.28898020248417911 0 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape12" -p "topSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "topSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton13" -p "topButtons";
+	setAttr ".t" -type "double3" -0.38306166874066927 -0.14254613937144631 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape13" -p "topSquareButton13";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1496,11 +2174,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton13";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton14" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.20219155612110828 0.61188596597398259 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.20219155612110828 0.61188596597398259 -0.0082505349434951469 ;
-createNode mesh -n "topSquareButtonShape14" -p "topSquareButton14";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton13";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1511,10 +2187,10 @@ createNode mesh -n "topSquareButtonShape14" -p "topSquareButton14";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27455556 0.7422452 -0.50825053 
-		-0.67938381 0.7422452 -0.50825053 0.27455556 0.48152676 -0.48978308 -0.67938381 0.48152676 
-		-0.48978308 0.27455556 0.52197021 0.26687971 -0.67938381 0.52197021 0.26687971 0.27455556 
-		0.78268862 0.24841225 -0.67938381 0.78268862 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1531,6 +2207,43 @@ createNode mesh -n "topSquareButtonShape14" -p "topSquareButton14";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton14" -p "topButtons";
+	setAttr ".t" -type "double3" -0.38306166874066927 -0.069947577961565144 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape14" -p "topSquareButton14";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1599,11 +2312,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton14";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "topSquareButton15" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.19988438665039254 0.53869343805563763 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.19988438665039254 0.53869343805563763 -0.0081457669908875374 ;
-createNode mesh -n "topSquareButtonShape15" -p "topSquareButton15";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton14";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1614,10 +2325,10 @@ createNode mesh -n "topSquareButtonShape15" -p "topSquareButton15";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27686274 0.66905266 -0.50814575 
-		-0.67707664 0.66905266 -0.50814575 0.27686274 0.40833423 -0.48967832 -0.67707664 
-		0.40833423 -0.48967832 0.27686274 0.44877765 0.26698446 -0.67707664 0.44877765 0.26698446 
-		0.27686274 0.70949608 0.24851702 -0.67707664 0.70949608 0.24851702;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1634,6 +2345,43 @@ createNode mesh -n "topSquareButtonShape15" -p "topSquareButton15";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "topSquareButton15" -p "topButtons";
+	setAttr ".t" -type "double3" -0.38306166874066927 0 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "topSquareButtonShape15" -p "topSquareButton15";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -1702,11 +2450,9 @@ createNode mesh -n "polySurfaceShape1" -p "topSquareButton15";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton3" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.40457098259440882 0.68396423810575468 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.40457098259440882 0.68396423810575468 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape3" -p "smallSquareButton3";
+createNode mesh -n "polySurfaceShape3" -p "topSquareButton15";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1717,10 +2463,10 @@ createNode mesh -n "smallSquareButtonShape3" -p "smallSquareButton3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.085056387 0.81432348 -0.50825053 
-		-0.8943969 0.81432348 -0.50825053 0.085056387 0.55360502 -0.50001258 -0.8943969 0.55360502 
-		-0.50001258 0.085056387 0.57164598 0.25665021 -0.8943969 0.57164598 0.25665021 0.085056387 
-		0.83236444 0.24841225 -0.8943969 0.83236444 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -1737,212 +2483,43 @@ createNode mesh -n "smallSquareButtonShape3" -p "smallSquareButton3";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "smallSquareButton3";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton1" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape1" -p "smallSquareButton1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
-		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
-		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
-		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "smallSquareButton1";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "smallSquareButton2" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.37188608810456425 0.68396423810575468 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.37188608810456425 0.68396423810575468 -0.0082505349434951469 ;
+	setAttr ".t" -type "double3" -0.032744852562040794 0 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
 createNode mesh -n "smallSquareButtonShape2" -p "smallSquareButton2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.11774128 0.81432348 -0.50825053 
-		-0.86171204 0.81432348 -0.50825053 0.11774128 0.55360502 -0.50001258 -0.86171204 
-		0.55360502 -0.50001258 0.11774128 0.57164598 0.25665021 -0.86171204 0.57164598 0.25665021 
-		0.11774128 0.83236444 0.24841225 -0.86171204 0.83236444 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
 	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 0 1 2 3
 		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
+		mu 0 4 4 5 6 7
 		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
+		mu 0 4 7 6 1 0
 		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 1 6 8 9
 		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2011,11 +2588,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton2";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton6" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.40457098259440882 0.65509000709633858 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.40457098259440882 0.65509000709633858 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape6" -p "smallSquareButton6";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton2";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2026,10 +2601,10 @@ createNode mesh -n "smallSquareButtonShape6" -p "smallSquareButton6";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.085056387 0.78544921 -0.50825053 
-		-0.8943969 0.78544921 -0.50825053 0.085056387 0.5247308 -0.50001258 -0.8943969 0.5247308 
-		-0.50001258 0.085056387 0.54277176 0.25665021 -0.8943969 0.54277176 0.25665021 0.085056387 
-		0.80349022 0.24841225 -0.8943969 0.80349022 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2049,7 +2624,44 @@ createNode mesh -n "smallSquareButtonShape6" -p "smallSquareButton6";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "smallSquareButton6";
+createNode transform -n "smallSquareButton3" -p "topButtons";
+	setAttr ".t" -type "double3" -0.064764460489931563 0 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape3" -p "smallSquareButton3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "smallSquareButton3";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -2114,11 +2726,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton6";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton4" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.33987750655959226 0.65509000709633858 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.33987750655959226 0.65509000709633858 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape4" -p "smallSquareButton4";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton3";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2129,10 +2739,10 @@ createNode mesh -n "smallSquareButtonShape4" -p "smallSquareButton4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.78544921 -0.50825053 
-		-0.82970345 0.78544921 -0.50825053 0.14974986 0.5247308 -0.50001258 -0.82970345 0.5247308 
-		-0.50001258 0.14974986 0.54277176 0.25665021 -0.82970345 0.54277176 0.25665021 0.14974986 
-		0.80349022 0.24841225 -0.82970345 0.80349022 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2149,6 +2759,43 @@ createNode mesh -n "smallSquareButtonShape4" -p "smallSquareButton4";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton4" -p "topButtons";
+	setAttr ".t" -type "double3" 0 -0.02803305480024354 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape4" -p "smallSquareButton4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2217,11 +2864,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton4";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton5" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.37188608810456425 0.65509000709633858 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.37188608810456425 0.65509000709633858 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape5" -p "smallSquareButton5";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton4";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2232,10 +2877,10 @@ createNode mesh -n "smallSquareButtonShape5" -p "smallSquareButton5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.11774128 0.78544921 -0.50825053 
-		-0.86171204 0.78544921 -0.50825053 0.11774128 0.5247308 -0.50001258 -0.86171204 0.5247308 
-		-0.50001258 0.11774128 0.54277176 0.25665021 -0.86171204 0.54277176 0.25665021 0.11774128 
-		0.80349022 0.24841225 -0.86171204 0.80349022 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2252,6 +2897,43 @@ createNode mesh -n "smallSquareButtonShape5" -p "smallSquareButton5";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton5" -p "topButtons";
+	setAttr ".t" -type "double3" -0.032744852562040794 -0.02803305480024354 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape5" -p "smallSquareButton5";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2320,11 +3002,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton5";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton9" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.40457098259440882 0.62851334883727805 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.40457098259440882 0.62851334883727805 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape9" -p "smallSquareButton9";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton5";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2335,10 +3015,10 @@ createNode mesh -n "smallSquareButtonShape9" -p "smallSquareButton9";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.085056387 0.75887257 -0.50825053 
-		-0.8943969 0.75887257 -0.50825053 0.085056387 0.49815413 -0.50001258 -0.8943969 0.49815413 
-		-0.50001258 0.085056387 0.51619512 0.25665021 -0.8943969 0.51619512 0.25665021 0.085056387 
-		0.77691352 0.24841225 -0.8943969 0.77691352 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2358,7 +3038,44 @@ createNode mesh -n "smallSquareButtonShape9" -p "smallSquareButton9";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "smallSquareButton9";
+createNode transform -n "smallSquareButton6" -p "topButtons";
+	setAttr ".t" -type "double3" -0.064764460489931563 -0.02803305480024354 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape6" -p "smallSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "smallSquareButton6";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -2423,11 +3140,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton9";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton7" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.33987750655959226 0.62851334883727805 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.33987750655959226 0.62851334883727805 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape7" -p "smallSquareButton7";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton6";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2438,10 +3153,10 @@ createNode mesh -n "smallSquareButtonShape7" -p "smallSquareButton7";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.75887257 -0.50825053 
-		-0.82970345 0.75887257 -0.50825053 0.14974986 0.49815413 -0.50001258 -0.82970345 
-		0.49815413 -0.50001258 0.14974986 0.51619512 0.25665021 -0.82970345 0.51619512 0.25665021 
-		0.14974986 0.77691352 0.24841225 -0.82970345 0.77691352 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2458,6 +3173,43 @@ createNode mesh -n "smallSquareButtonShape7" -p "smallSquareButton7";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton7" -p "topButtons";
+	setAttr ".t" -type "double3" 0 -0.055450919144842237 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape7" -p "smallSquareButton7";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2526,11 +3278,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton7";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton8" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.37188608810456425 0.62851334883727805 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.37188608810456425 0.62851334883727805 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape8" -p "smallSquareButton8";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton7";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2541,10 +3291,10 @@ createNode mesh -n "smallSquareButtonShape8" -p "smallSquareButton8";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.11774128 0.75887257 -0.50825053 
-		-0.86171204 0.75887257 -0.50825053 0.11774128 0.49815413 -0.50001258 -0.86171204 
-		0.49815413 -0.50001258 0.11774128 0.51619512 0.25665021 -0.86171204 0.51619512 0.25665021 
-		0.11774128 0.77691352 0.24841225 -0.86171204 0.77691352 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2561,6 +3311,43 @@ createNode mesh -n "smallSquareButtonShape8" -p "smallSquareButton8";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton8" -p "topButtons";
+	setAttr ".t" -type "double3" -0.032744852562040794 -0.055450919144842237 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape8" -p "smallSquareButton8";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2629,11 +3416,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton8";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton12" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.40457098259440882 0.60235951498841134 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.40457098259440882 0.60235951498841134 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape12" -p "smallSquareButton12";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton8";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2644,10 +3429,10 @@ createNode mesh -n "smallSquareButtonShape12" -p "smallSquareButton12";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.085056387 0.73271871 -0.50825053 
-		-0.8943969 0.73271871 -0.50825053 0.085056387 0.4720003 -0.50001258 -0.8943969 0.4720003 
-		-0.50001258 0.085056387 0.49004129 0.25665021 -0.8943969 0.49004129 0.25665021 0.085056387 
-		0.75075972 0.24841225 -0.8943969 0.75075972 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2667,7 +3452,44 @@ createNode mesh -n "smallSquareButtonShape12" -p "smallSquareButton12";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "smallSquareButton12";
+createNode transform -n "smallSquareButton9" -p "topButtons";
+	setAttr ".t" -type "double3" -0.064764460489931563 -0.055450919144842237 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape9" -p "smallSquareButton9";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "smallSquareButton9";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -2732,11 +3554,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton12";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton10" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.33987750655959226 0.60235951498841134 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.33987750655959226 0.60235951498841134 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape10" -p "smallSquareButton10";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton9";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2747,10 +3567,10 @@ createNode mesh -n "smallSquareButtonShape10" -p "smallSquareButton10";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.73271871 -0.50825053 
-		-0.82970345 0.73271871 -0.50825053 0.14974986 0.4720003 -0.50001258 -0.82970345 0.4720003 
-		-0.50001258 0.14974986 0.49004129 0.25665021 -0.82970345 0.49004129 0.25665021 0.14974986 
-		0.75075972 0.24841225 -0.82970345 0.75075972 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2767,6 +3587,43 @@ createNode mesh -n "smallSquareButtonShape10" -p "smallSquareButton10";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton10" -p "topButtons";
+	setAttr ".t" -type "double3" 0 -0.081154280636507647 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape10" -p "smallSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2835,11 +3692,9 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton10";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "smallSquareButton11" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.37188608810456425 0.60235951498841134 -0.0082505349434951487 ;
-	setAttr ".sp" -type "double3" -0.37188608810456425 0.60235951498841134 -0.0082505349434951469 ;
-createNode mesh -n "smallSquareButtonShape11" -p "smallSquareButton11";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton10";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2850,10 +3705,10 @@ createNode mesh -n "smallSquareButtonShape11" -p "smallSquareButton11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.11774128 0.73271871 -0.50825053 
-		-0.86171204 0.73271871 -0.50825053 0.11774128 0.4720003 -0.50001258 -0.86171204 0.4720003 
-		-0.50001258 0.11774128 0.49004129 0.25665021 -0.86171204 0.49004129 0.25665021 0.11774128 
-		0.75075972 0.24841225 -0.86171204 0.75075972 0.24841225;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -2870,6 +3725,43 @@ createNode mesh -n "smallSquareButtonShape11" -p "smallSquareButton11";
 		mu 0 4 1 10 11 3
 		f 4 8 11 4 6
 		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton11" -p "topButtons";
+	setAttr ".t" -type "double3" -0.032744852562040794 -0.081154280636507647 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape11" -p "smallSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -2938,11 +3830,250 @@ createNode mesh -n "polySurfaceShape1" -p "smallSquareButton11";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftTopKnob1" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.45666605421120787 0.69100754317119595 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.45666605421120787 0.69100754317119595 -0.0094528489984232952 ;
-createNode mesh -n "leftTopKnobShape1" -p "leftTopKnob1";
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton11";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "smallSquareButton12" -p "topButtons";
+	setAttr ".t" -type "double3" -0.064764460489931563 -0.081154280636507647 0 ;
+	setAttr ".rp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951487 ;
+	setAttr ".sp" -type "double3" -0.33987750655959226 0.68396423810575468 -0.0082505349434951469 ;
+createNode mesh -n "smallSquareButtonShape12" -p "smallSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.47136066854000097 0.51470351219177246 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.68459898 0.75808179
+		 0.68587011 0.27305928 0.88273162 0.2750845 0.88273162 0.75719011 0.059989721 0.75719011
+		 0.059989721 0.2750845 0.25724787 0.27392161 0.25661224 0.7575835 0.26196578 0.077138662
+		 0.68527538 0.077739537 0.68236309 0.95226836 0.25905311 0.95205867;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.35025012 0.68396425 -0.0082505345 -0.32970345 0.68396425 -0.0082505345
+		 -0.35025012 0.68396425 -1.257658e-005 -0.32970345 0.68396425 -1.257658e-005 -0.35025012 0.70200521 -1.257658e-005
+		 -0.32970345 0.70200521 -1.257658e-005 -0.35025012 0.70200521 -0.0082505345 -0.32970345 0.70200521 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 8 9
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "smallSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape4" -p "smallSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.14974986 0.81432348 -0.50825053 
+		-0.82970345 0.81432348 -0.50825053 0.14974986 0.55360502 -0.50001258 -0.82970345 
+		0.55360502 -0.50001258 0.14974986 0.57164598 0.25665021 -0.82970345 0.57164598 0.25665021 
+		0.14974986 0.83236444 0.24841225 -0.82970345 0.83236444 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftTopKnob2" -p "topButtons";
+	setAttr ".t" -type "double3" -0.065648077835829766 0 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftTopKnobShape2" -p "leftTopKnob2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftTopKnob2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3010,11 +4141,76 @@ createNode mesh -n "leftTopKnobShape1" -p "leftTopKnob1";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftTopKnob2" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.39049683986254785 0.69100754317119595 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.39049683986254785 0.69100754317119595 -0.0094528489984232952 ;
-createNode mesh -n "leftTopKnobShape2" -p "leftTopKnob2";
+createNode transform -n "leftTopKnob3" -p "topButtons";
+	setAttr ".t" -type "double3" 0 -0.058317251265998848 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftTopKnobShape3" -p "leftTopKnob3";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftTopKnob3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3028,14 +4224,14 @@ createNode mesh -n "leftTopKnobShape2" -p "leftTopKnob2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.39049685 0.68775314 0.017306847 
-		0.39049685 0.68153697 0.023522975 0.39049685 0.68775314 0.017306847 0.39049685 0.70276016 
-		0.00229979 0.39049685 0.71776724 -0.012707268 0.39049685 0.72398335 -0.018923396 
-		0.39049685 0.71776724 -0.012707269 0.39049685 0.70276016 0.00229979 0.39049685 0.66424787 
-		-0.00619843 0.39049685 0.6580317 1.7697619e-005 0.39049685 0.66424787 -0.00619843 
-		0.39049685 0.67925489 -0.021205489 0.39049685 0.69426197 -0.036212545 0.39049685 
-		0.70047808 -0.042428672 0.39049685 0.69426197 -0.036212549 0.39049685 0.67925489 
-		-0.021205489 0.39049685 0.67925489 -0.021205489;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
 	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
 		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
 		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
@@ -3083,82 +4279,75 @@ createNode mesh -n "leftTopKnobShape2" -p "leftTopKnob2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "leftTopKnob4" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.39049683986254785 0.63227735678156427 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.39049683986254785 0.63227735678156427 -0.0094528489984232952 ;
+	setAttr ".t" -type "double3" -0.065648077835829766 -0.058317251265998848 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
 createNode mesh -n "leftTopKnobShape4" -p "leftTopKnob4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.39049685 0.62902296 0.017306847 
-		0.39049685 0.62280679 0.023522975 0.39049685 0.62902296 0.017306847 0.39049685 0.64402997 
-		0.00229979 0.39049685 0.65903705 -0.012707268 0.39049685 0.66525316 -0.018923396 
-		0.39049685 0.65903705 -0.012707269 0.39049685 0.64402997 0.00229979 0.39049685 0.60551769 
-		-0.00619843 0.39049685 0.59930152 1.7697619e-005 0.39049685 0.60551769 -0.00619843 
-		0.39049685 0.6205247 -0.021205489 0.39049685 0.63553178 -0.036212545 0.39049685 0.64174789 
-		-0.042428672 0.39049685 0.63553178 -0.036212549 0.39049685 0.6205247 -0.021205489 
-		0.39049685 0.6205247 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
 	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
 		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
 		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
 		 14 16 1 15 16 1;
 	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
 		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
+		mu 0 4 0 1 2 3
 		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
+		mu 0 4 1 4 5 2
 		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
+		mu 0 4 4 7 8 5
 		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
+		mu 0 4 7 10 11 8
 		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
+		mu 0 4 10 12 13 11
 		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
+		mu 0 4 12 14 15 13
 		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
+		mu 0 4 16 17 18 19
 		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
+		mu 0 4 17 0 3 18
 		f 3 8 25 -25
-		mu 0 3 24 23 26
+		mu 0 3 3 23 24
 		f 3 9 26 -26
-		mu 0 3 23 22 26
+		mu 0 3 23 9 24
 		f 3 10 27 -27
-		mu 0 3 22 21 26
+		mu 0 3 9 21 24
 		f 3 11 28 -28
-		mu 0 3 21 20 26
+		mu 0 3 21 6 24
 		f 3 12 29 -29
-		mu 0 3 20 19 26
+		mu 0 3 6 22 24
 		f 3 13 30 -30
-		mu 0 3 19 18 26
+		mu 0 3 22 20 24
 		f 3 14 31 -31
-		mu 0 3 18 25 26
+		mu 0 3 20 18 24
 		f 3 15 24 -32
-		mu 0 3 25 24 26;
+		mu 0 3 18 3 24;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftTopKnob3" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.45666605421120787 0.63227735678156427 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.45666605421120787 0.63227735678156427 -0.0094528489984232952 ;
-createNode mesh -n "leftTopKnobShape3" -p "leftTopKnob3";
+createNode mesh -n "polySurfaceShape5" -p "leftTopKnob4";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3172,158 +4361,14 @@ createNode mesh -n "leftTopKnobShape3" -p "leftTopKnob3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.62902296 0.017306847 
-		0.45666605 0.62280679 0.023522975 0.45666605 0.62902296 0.017306847 0.45666605 0.64402997 
-		0.00229979 0.45666605 0.65903705 -0.012707268 0.45666605 0.66525316 -0.018923396 
-		0.45666605 0.65903705 -0.012707269 0.45666605 0.64402997 0.00229979 0.45666605 0.60551769 
-		-0.00619843 0.45666605 0.59930152 1.7697619e-005 0.45666605 0.60551769 -0.00619843 
-		0.45666605 0.6205247 -0.021205489 0.45666605 0.63553178 -0.036212545 0.45666605 0.64174789 
-		-0.042428672 0.45666605 0.63553178 -0.036212549 0.45666605 0.6205247 -0.021205489 
-		0.45666605 0.6205247 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftTopKnob5" -p "topButtons";
-	setAttr ".rp" -type "double3" 0.42112930429841333 0.5687235367390856 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.42112930429841333 0.5687235367390856 -0.0094528489984232952 ;
-createNode mesh -n "leftTopKnobShape5" -p "leftTopKnob5";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.42779666 0.55880177 0.022528322 
-		0.42112932 0.54982394 0.02874445 0.41446194 0.55880177 0.022528322 0.41170025 0.58047616 
-		0.0075212633 0.41446194 0.60215056 -0.0074857948 0.42112932 0.61112839 -0.013701922 
-		0.42779666 0.60215056 -0.0074857958 0.43055835 0.58047616 0.0075212633 0.42779666 
-		0.5352965 -0.011419903 0.42112932 0.52631867 -0.0052037756 0.41446194 0.5352965 -0.011419903 
-		0.41170025 0.55697089 -0.026426962 0.41446194 0.57864529 -0.04143402 0.42112932 0.58762312 
-		-0.047650147 0.42779666 0.57864529 -0.04143402 0.43055835 0.55697089 -0.026426962 
-		0.42112932 0.55697089 -0.026426962;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightTopKnob1" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.46666918380140121 0.69100754317119595 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.46666918380140121 0.69100754317119595 -0.0094528489984232952 ;
-createNode mesh -n "rightTopKnobShape1" -p "rightTopKnob1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.46666917 0.68775314 0.017306847 
-		-0.46666917 0.68153697 0.023522975 -0.46666917 0.68775314 0.017306847 -0.46666917 
-		0.70276016 0.00229979 -0.46666917 0.71776724 -0.012707268 -0.46666917 0.72398335 
-		-0.018923396 -0.46666917 0.71776724 -0.012707269 -0.46666917 0.70276016 0.00229979 
-		-0.46666917 0.66424787 -0.00619843 -0.46666917 0.6580317 1.7697619e-005 -0.46666917 
-		0.66424787 -0.00619843 -0.46666917 0.67925489 -0.021205489 -0.46666917 0.69426197 
-		-0.036212545 -0.46666917 0.70047808 -0.042428672 -0.46666917 0.69426197 -0.036212549 
-		-0.46666917 0.67925489 -0.021205489 -0.46666917 0.67925489 -0.021205489;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
 	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
 		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
 		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
@@ -3371,10 +4416,75 @@ createNode mesh -n "rightTopKnobShape1" -p "rightTopKnob1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "rightTopKnob2" -p "topButtons";
-	setAttr ".rp" -type "double3" -0.46666918380140121 0.63227735678156427 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.46666918380140121 0.63227735678156427 -0.0094528489984232952 ;
+	setAttr ".t" -type "double3" -0.92298364277308476 0 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
 createNode mesh -n "rightTopKnobShape2" -p "rightTopKnob2";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightTopKnob2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3388,14 +4498,151 @@ createNode mesh -n "rightTopKnobShape2" -p "rightTopKnob2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.46666917 0.62902296 0.017306847 
-		-0.46666917 0.62280679 0.023522975 -0.46666917 0.62902296 0.017306847 -0.46666917 
-		0.64402997 0.00229979 -0.46666917 0.65903705 -0.012707268 -0.46666917 0.66525316 
-		-0.018923396 -0.46666917 0.65903705 -0.012707269 -0.46666917 0.64402997 0.00229979 
-		-0.46666917 0.60551769 -0.00619843 -0.46666917 0.59930152 1.7697619e-005 -0.46666917 
-		0.60551769 -0.00619843 -0.46666917 0.6205247 -0.021205489 -0.46666917 0.63553178 
-		-0.036212545 -0.46666917 0.64174789 -0.042428672 -0.46666917 0.63553178 -0.036212549 
-		-0.46666917 0.6205247 -0.021205489 -0.46666917 0.6205247 -0.021205489;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightTopKnob3" -p "topButtons";
+	setAttr ".t" -type "double3" -0.92298364277308476 -0.058317251265998848 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "rightTopKnobShape3" -p "rightTopKnob3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightTopKnob3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
 	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
 		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
 		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
@@ -3443,1483 +4690,40 @@ createNode mesh -n "rightTopKnobShape2" -p "rightTopKnob2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "bottom_buttons" -p "controlBoard";
-createNode transform -n "bottomSquareButton1" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.18500248141429965 0.20536715182348159 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.18500248141429965 0.20536715182348159 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape1" -p "bottomSquareButton1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.33572638 -0.50825053 
-		-0.29218978 0.33572638 -0.50825053 0.6617496 0.075007938 -0.48978308 -0.29218978 
-		0.075007938 -0.48978308 0.6617496 0.11545137 0.26687971 -0.29218978 0.11545137 0.26687971 
-		0.6617496 0.3761698 0.24841225 -0.29218978 0.3761698 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton1";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton2" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.18500248141429965 0.13428343200004395 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.18500248141429965 0.13428343200004395 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape2" -p "bottomSquareButton2";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.26464266 -0.50825053 
-		-0.29218978 0.26464266 -0.50825053 0.6617496 0.0039242143 -0.48978308 -0.29218978 
-		0.0039242143 -0.48978308 0.6617496 0.044367649 0.26687971 -0.29218978 0.044367649 
-		0.26687971 0.6617496 0.30508608 0.24841225 -0.29218978 0.30508608 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton2";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton3" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.18730965088501556 0.061090904081698899 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" 0.18730965088501556 0.061090904081698899 -0.0081457669908875374 ;
-createNode mesh -n "bottomSquareButtonShape3" -p "bottomSquareButton3";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.66405678 0.19145012 -0.50814575 
-		-0.28988263 0.19145012 -0.50814575 0.66405678 -0.069268316 -0.48967832 -0.28988263 
-		-0.069268316 -0.48967832 0.66405678 -0.028824879 0.26698446 -0.28988263 -0.028824879 
-		0.26698446 0.66405678 0.23189355 0.24851702 -0.28988263 0.23189355 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton3";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton12" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.10511925138379197 0.061090904081698899 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.10511925138379197 0.061090904081698899 -0.0081457669908875374 ;
-createNode mesh -n "bottomSquareButtonShape12" -p "bottomSquareButton12";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.37162787 0.19145012 -0.50814575 
-		-0.58231151 0.19145012 -0.50814575 0.37162787 -0.069268316 -0.48967832 -0.58231151 
-		-0.069268316 -0.48967832 0.37162787 -0.028824879 0.26698446 -0.58231151 -0.028824879 
-		0.26698446 0.37162787 0.23189355 0.24851702 -0.58231151 0.23189355 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton12";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton11" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.10742642085450771 0.13428343200004395 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.10742642085450771 0.13428343200004395 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape11" -p "bottomSquareButton11";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.36932069 0.26464266 -0.50825053 
-		-0.58461869 0.26464266 -0.50825053 0.36932069 0.0039242143 -0.48978308 -0.58461869 
-		0.0039242143 -0.48978308 0.36932069 0.044367649 0.26687971 -0.58461869 0.044367649 
-		0.26687971 0.36932069 0.30508608 0.24841225 -0.58461869 0.30508608 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton11";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton10" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.10742642085450771 0.20536715182348159 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.10742642085450771 0.20536715182348159 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape10" -p "bottomSquareButton10";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.36932069 0.33572638 -0.50825053 
-		-0.58461869 0.33572638 -0.50825053 0.36932069 0.075007938 -0.48978308 -0.58461869 
-		0.075007938 -0.48978308 0.36932069 0.11545137 0.26687971 -0.58461869 0.11545137 0.26687971 
-		0.36932069 0.3761698 0.24841225 -0.58461869 0.3761698 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton10";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton7" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.01104552370621803 0.20536715182348159 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.01104552370621803 0.20536715182348159 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape7" -p "bottomSquareButton7";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46570158 0.33572638 -0.50825053 
-		-0.4882378 0.33572638 -0.50825053 0.46570158 0.075007938 -0.48978308 -0.4882378 0.075007938 
-		-0.48978308 0.46570158 0.11545137 0.26687971 -0.4882378 0.11545137 0.26687971 0.46570158 
-		0.3761698 0.24841225 -0.4882378 0.3761698 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton7";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton8" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.01104552370621803 0.13428343200004395 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.01104552370621803 0.13428343200004395 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape8" -p "bottomSquareButton8";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46570158 0.26464266 -0.50825053 
-		-0.4882378 0.26464266 -0.50825053 0.46570158 0.0039242143 -0.48978308 -0.4882378 
-		0.0039242143 -0.48978308 0.46570158 0.044367649 0.26687971 -0.4882378 0.044367649 
-		0.26687971 0.46570158 0.30508608 0.24841225 -0.4882378 0.30508608 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton8";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton9" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.0087383542355021215 0.061090904081698899 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.0087383542355021215 0.061090904081698899 -0.0081457669908875374 ;
-createNode mesh -n "bottomSquareButtonShape9" -p "bottomSquareButton9";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.46800876 0.19145012 -0.50814575 
-		-0.48593062 0.19145012 -0.50814575 0.46800876 -0.069268316 -0.48967832 -0.48593062 
-		-0.069268316 -0.48967832 0.46800876 -0.028824879 0.26698446 -0.48593062 -0.028824879 
-		0.26698446 0.46800876 0.23189355 0.24851702 -0.48593062 0.23189355 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton9";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton4" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.084204933626232936 0.20536715182348159 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.084204933626232936 0.20536715182348159 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape4" -p "bottomSquareButton4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56095207 0.33572638 -0.50825053 
-		-0.39298734 0.33572638 -0.50825053 0.56095207 0.075007938 -0.48978308 -0.39298734 
-		0.075007938 -0.48978308 0.56095207 0.11545137 0.26687971 -0.39298734 0.11545137 0.26687971 
-		0.56095207 0.3761698 0.24841225 -0.39298734 0.3761698 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton4";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton5" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.084204933626232936 0.13428343200004395 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" 0.084204933626232936 0.13428343200004395 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape5" -p "bottomSquareButton5";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56095207 0.26464266 -0.50825053 
-		-0.39298734 0.26464266 -0.50825053 0.56095207 0.0039242143 -0.48978308 -0.39298734 
-		0.0039242143 -0.48978308 0.56095207 0.044367649 0.26687971 -0.39298734 0.044367649 
-		0.26687971 0.56095207 0.30508608 0.24841225 -0.39298734 0.30508608 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton5";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton6" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.086512103096948845 0.061090904081698899 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" 0.086512103096948845 0.061090904081698899 -0.0081457669908875374 ;
-createNode mesh -n "bottomSquareButtonShape6" -p "bottomSquareButton6";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.56325924 0.19145012 -0.50814575 
-		-0.39068016 0.19145012 -0.50814575 0.56325924 -0.069268316 -0.48967832 -0.39068016 
-		-0.069268316 -0.48967832 0.56325924 -0.028824879 0.26698446 -0.39068016 -0.028824879 
-		0.26698446 0.56325924 0.23189355 0.24851702 -0.39068016 0.23189355 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton6";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton13" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.20219155612110828 0.2053671518234817 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.20219155612110828 0.2053671518234817 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButton13Shape" -p "bottomSquareButton13";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27455556 0.33572638 -0.50825053 
-		-0.67938381 0.33572638 -0.50825053 0.27455556 0.075007938 -0.48978308 -0.67938381 
-		0.075007938 -0.48978308 0.27455556 0.11545137 0.26687971 -0.67938381 0.11545137 0.26687971 
-		0.27455556 0.3761698 0.24841225 -0.67938381 0.3761698 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton13";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bottomSquareButton14" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.20219155612110828 0.13428343200004406 -0.0082505349434951521 ;
-	setAttr ".sp" -type "double3" -0.20219155612110828 0.13428343200004406 -0.0082505349434951469 ;
-createNode mesh -n "bottomSquareButtonShape14" -p "bottomSquareButton14";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27455556 0.26464266 -0.50825053 
-		-0.67938381 0.26464266 -0.50825053 0.27455556 0.0039242143 -0.48978308 -0.67938381 
-		0.0039242143 -0.48978308 0.27455556 0.044367649 0.26687971 -0.67938381 0.044367649 
-		0.26687971 0.27455556 0.30508608 0.24841225 -0.67938381 0.30508608 0.24841225;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
-		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton14";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
-		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
-		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
-		 0.35260421 0.72760415 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
-		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
-		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
-	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
-		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
-		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
-	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 18 17 -3 -16
-		mu 0 4 19 20 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 14 -11
-		mu 0 4 6 7 14 17
-		f 4 19 -12 -10 -18
-		mu 0 4 21 15 10 11
-		f 4 10 16 15 8
-		mu 0 4 12 16 18 13
-		f 4 -15 12 22 -14
-		mu 0 4 17 14 22 25
-		f 4 -17 13 24 23
-		mu 0 4 18 16 24 26
-		f 4 26 25 -19 -24
-		mu 0 4 27 28 20 19
-		f 4 27 -13 -20 -26
-		mu 0 4 29 23 15 21
-		f 4 -23 20 -1 -22
-		mu 0 4 25 22 9 8
-		f 4 -25 21 4 6
-		mu 0 4 26 24 0 2
-		f 4 1 7 -27 -7
-		mu 0 4 2 3 28 27
-		f 4 -21 -28 -8 -6
-		mu 0 4 1 23 29 3;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "bottomSquareButton15" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.19988438665039254 0.06109090408169901 -0.0081457669908875426 ;
-	setAttr ".sp" -type "double3" -0.19988438665039254 0.06109090408169901 -0.0081457669908875374 ;
+	setAttr ".t" -type "double3" -0.38306166874066927 -0.47577621549858967 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
 createNode mesh -n "bottomSquareButtonShape15" -p "bottomSquareButton15";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.27686274 0.19145012 -0.50814575 
-		-0.67707664 0.19145012 -0.50814575 0.27686274 -0.069268316 -0.48967832 -0.67707664 
-		-0.069268316 -0.48967832 0.27686274 -0.028824879 0.26698446 -0.67707664 -0.028824879 
-		0.26698446 0.27686274 0.23189355 0.24851702 -0.67707664 0.23189355 0.24851702;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
 	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 0 1 2 3
 		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
+		mu 0 4 4 5 6 7
 		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
+		mu 0 4 7 6 1 0
 		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 1 6 9 8
 		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
@@ -4988,731 +4792,9 @@ createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton15";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftBottomKnob1" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.45666605421120787 0.21179261442217934 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.45666605421120787 0.21179261442217934 -0.0094528489984232952 ;
-createNode mesh -n "leftBottomKnobShape1" -p "leftBottomKnob1";
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton15";
 	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.20853819 0.017306847 
-		0.45666605 0.20232207 0.023522975 0.45666605 0.20853819 0.017306847 0.45666605 0.22354525 
-		0.00229979 0.45666605 0.23855232 -0.012707268 0.45666605 0.24476844 -0.018923396 
-		0.45666605 0.23855232 -0.012707269 0.45666605 0.22354525 0.00229979 0.45666605 0.18503292 
-		-0.00619843 0.45666605 0.1788168 1.7697619e-005 0.45666605 0.18503292 -0.00619843 
-		0.45666605 0.20003998 -0.021205489 0.45666605 0.21504703 -0.036212545 0.45666605 
-		0.22126316 -0.042428672 0.45666605 0.21504703 -0.036212549 0.45666605 0.20003998 
-		-0.021205489 0.45666605 0.20003998 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftBottomKnob2" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.39049683986254785 0.21179261442217934 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.39049683986254785 0.21179261442217934 -0.0094528489984232952 ;
-createNode mesh -n "leftBottomKnobShape2" -p "leftBottomKnob2";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.39049685 0.20853819 0.017306847 
-		0.39049685 0.20232207 0.023522975 0.39049685 0.20853819 0.017306847 0.39049685 0.22354525 
-		0.00229979 0.39049685 0.23855232 -0.012707268 0.39049685 0.24476844 -0.018923396 
-		0.39049685 0.23855232 -0.012707269 0.39049685 0.22354525 0.00229979 0.39049685 0.18503292 
-		-0.00619843 0.39049685 0.1788168 1.7697619e-005 0.39049685 0.18503292 -0.00619843 
-		0.39049685 0.20003998 -0.021205489 0.39049685 0.21504703 -0.036212545 0.39049685 
-		0.22126316 -0.042428672 0.39049685 0.21504703 -0.036212549 0.39049685 0.20003998 
-		-0.021205489 0.39049685 0.20003998 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftBottomKnob4" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.39049683986254785 0.15306242803254766 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.39049683986254785 0.15306242803254766 -0.0094528489984232952 ;
-createNode mesh -n "leftBottomKnobShape4" -p "leftBottomKnob4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.39049685 0.149808 0.017306847 
-		0.39049685 0.14359188 0.023522975 0.39049685 0.149808 0.017306847 0.39049685 0.16481507 
-		0.00229979 0.39049685 0.17982213 -0.012707268 0.39049685 0.18603826 -0.018923396 
-		0.39049685 0.17982213 -0.012707269 0.39049685 0.16481507 0.00229979 0.39049685 0.12630273 
-		-0.00619843 0.39049685 0.1200866 1.7697619e-005 0.39049685 0.12630273 -0.00619843 
-		0.39049685 0.14130978 -0.021205489 0.39049685 0.15631685 -0.036212545 0.39049685 
-		0.16253297 -0.042428672 0.39049685 0.15631685 -0.036212549 0.39049685 0.14130978 
-		-0.021205489 0.39049685 0.14130978 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftBottomKnob3" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.45666605421120787 0.15306242803254766 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.45666605421120787 0.15306242803254766 -0.0094528489984232952 ;
-createNode mesh -n "leftBottomKnobShape3" -p "leftBottomKnob3";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.149808 0.017306847 
-		0.45666605 0.14359188 0.023522975 0.45666605 0.149808 0.017306847 0.45666605 0.16481507 
-		0.00229979 0.45666605 0.17982213 -0.012707268 0.45666605 0.18603826 -0.018923396 
-		0.45666605 0.17982213 -0.012707269 0.45666605 0.16481507 0.00229979 0.45666605 0.12630273 
-		-0.00619843 0.45666605 0.1200866 1.7697619e-005 0.45666605 0.12630273 -0.00619843 
-		0.45666605 0.14130978 -0.021205489 0.45666605 0.15631685 -0.036212545 0.45666605 
-		0.16253297 -0.042428672 0.45666605 0.15631685 -0.036212549 0.45666605 0.14130978 
-		-0.021205489 0.45666605 0.14130978 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "leftBottomKnob5" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" 0.42112930429841333 0.089508607990068989 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" 0.42112930429841333 0.089508607990068989 -0.0094528489984232952 ;
-createNode mesh -n "leftBottomKnobShape5" -p "leftBottomKnob5";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  0.42779666 0.079586841 0.022528322 
-		0.42112932 0.070609003 0.02874445 0.41446194 0.079586841 0.022528322 0.41170025 0.10126125 
-		0.0075212633 0.41446194 0.12293565 -0.0074857948 0.42112932 0.13191348 -0.013701922 
-		0.42779666 0.12293565 -0.0074857958 0.43055835 0.10126125 0.0075212633 0.42779666 
-		0.05608156 -0.011419903 0.42112932 0.047103725 -0.0052037756 0.41446194 0.05608156 
-		-0.011419903 0.41170025 0.077755973 -0.026426962 0.41446194 0.099430375 -0.04143402 
-		0.42112932 0.10840821 -0.047650147 0.42779666 0.099430375 -0.04143402 0.43055835 
-		0.077755973 -0.026426962 0.42112932 0.077755973 -0.026426962;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightBottomKnob1" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.36526117936404201 0.21179261442217934 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.36526117936404201 0.21179261442217934 -0.0094528489984232952 ;
-createNode mesh -n "rightBottomKnobShape1" -p "rightBottomKnob1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.36526117 0.20853819 0.017306847 
-		-0.36526117 0.20232207 0.023522975 -0.36526117 0.20853819 0.017306847 -0.36526117 
-		0.22354525 0.00229979 -0.36526117 0.23855232 -0.012707268 -0.36526117 0.24476844 
-		-0.018923396 -0.36526117 0.23855232 -0.012707269 -0.36526117 0.22354525 0.00229979 
-		-0.36526117 0.18503292 -0.00619843 -0.36526117 0.1788168 1.7697619e-005 -0.36526117 
-		0.18503292 -0.00619843 -0.36526117 0.20003998 -0.021205489 -0.36526117 0.21504703 
-		-0.036212545 -0.36526117 0.22126316 -0.042428672 -0.36526117 0.21504703 -0.036212549 
-		-0.36526117 0.20003998 -0.021205489 -0.36526117 0.20003998 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightBottomKnob2" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.43143039371270203 0.21179261442217934 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.43143039371270203 0.21179261442217934 -0.0094528489984232952 ;
-createNode mesh -n "rightBottomKnobShape2" -p "rightBottomKnob2";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.4314304 0.20853819 0.017306847 
-		-0.4314304 0.20232207 0.023522975 -0.4314304 0.20853819 0.017306847 -0.4314304 0.22354525 
-		0.00229979 -0.4314304 0.23855232 -0.012707268 -0.4314304 0.24476844 -0.018923396 
-		-0.4314304 0.23855232 -0.012707269 -0.4314304 0.22354525 0.00229979 -0.4314304 0.18503292 
-		-0.00619843 -0.4314304 0.1788168 1.7697619e-005 -0.4314304 0.18503292 -0.00619843 
-		-0.4314304 0.20003998 -0.021205489 -0.4314304 0.21504703 -0.036212545 -0.4314304 
-		0.22126316 -0.042428672 -0.4314304 0.21504703 -0.036212549 -0.4314304 0.20003998 
-		-0.021205489 -0.4314304 0.20003998 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightBottomKnob4" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.43143039371270203 0.15306242803254766 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.43143039371270203 0.15306242803254766 -0.0094528489984232952 ;
-createNode mesh -n "rightBottomKnobShape4" -p "rightBottomKnob4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.4314304 0.149808 0.017306847 
-		-0.4314304 0.14359188 0.023522975 -0.4314304 0.149808 0.017306847 -0.4314304 0.16481507 
-		0.00229979 -0.4314304 0.17982213 -0.012707268 -0.4314304 0.18603826 -0.018923396 
-		-0.4314304 0.17982213 -0.012707269 -0.4314304 0.16481507 0.00229979 -0.4314304 0.12630273 
-		-0.00619843 -0.4314304 0.1200866 1.7697619e-005 -0.4314304 0.12630273 -0.00619843 
-		-0.4314304 0.14130978 -0.021205489 -0.4314304 0.15631685 -0.036212545 -0.4314304 
-		0.16253297 -0.042428672 -0.4314304 0.15631685 -0.036212549 -0.4314304 0.14130978 
-		-0.021205489 -0.4314304 0.14130978 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightBottomKnob3" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.36526117936404201 0.15306242803254766 -0.0094528489984232952 ;
-	setAttr ".sp" -type "double3" -0.36526117936404201 0.15306242803254766 -0.0094528489984232952 ;
-createNode mesh -n "rightBottomKnobShape3" -p "rightBottomKnob3";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.36526117 0.149808 0.017306847 
-		-0.36526117 0.14359188 0.023522975 -0.36526117 0.149808 0.017306847 -0.36526117 0.16481507 
-		0.00229979 -0.36526117 0.17982213 -0.012707268 -0.36526117 0.18603826 -0.018923396 
-		-0.36526117 0.17982213 -0.012707269 -0.36526117 0.16481507 0.00229979 -0.36526117 
-		0.12630273 -0.00619843 -0.36526117 0.1200866 1.7697619e-005 -0.36526117 0.12630273 
-		-0.00619843 -0.36526117 0.14130978 -0.021205489 -0.36526117 0.15631685 -0.036212545 
-		-0.36526117 0.16253297 -0.042428672 -0.36526117 0.15631685 -0.036212549 -0.36526117 
-		0.14130978 -0.021205489 -0.36526117 0.14130978 -0.021205489;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "rightBottomKnob5" -p "bottom_buttons";
-	setAttr ".rp" -type "double3" -0.39849075980612064 0.089508607990068711 -0.0093480810458156857 ;
-	setAttr ".sp" -type "double3" -0.39849075980612064 0.089508607990068711 -0.0093480810458156857 ;
-createNode mesh -n "rightBottomKnobShape5" -p "rightBottomKnob5";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
-		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
-		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
-		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
-		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
-		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt[0:16]" -type "float3"  -0.39182341 0.079586841 0.022633089 
-		-0.39849076 0.070609003 0.028849216 -0.4051581 0.079586841 0.022633089 -0.40791982 
-		0.10126125 0.0076260311 -0.4051581 0.12293565 -0.0073810271 -0.39849076 0.13191348 
-		-0.013597154 -0.39182341 0.12293565 -0.007381028 -0.38906169 0.10126125 0.0076260311 
-		-0.39182341 0.05608156 -0.011315135 -0.39849076 0.047103725 -0.0050990079 -0.4051581 
-		0.05608156 -0.011315135 -0.40791982 0.077755973 -0.026322193 -0.4051581 0.099430375 
-		-0.04132925 -0.39849076 0.10840821 -0.047545377 -0.39182341 0.099430375 -0.041329253 
-		-0.38906169 0.077755973 -0.026322193 -0.39849076 0.077755973 -0.026322193;
-	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
-		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
-		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
-		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
-		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
-		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
-	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
-		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
-		 14 16 1 15 16 1;
-	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
-		f 4 0 17 -9 -17
-		mu 0 4 0 1 10 9
-		f 4 1 18 -10 -18
-		mu 0 4 1 2 11 10
-		f 4 2 19 -11 -19
-		mu 0 4 2 3 12 11
-		f 4 3 20 -12 -20
-		mu 0 4 3 4 13 12
-		f 4 4 21 -13 -21
-		mu 0 4 4 5 14 13
-		f 4 5 22 -14 -22
-		mu 0 4 5 6 15 14
-		f 4 6 23 -15 -23
-		mu 0 4 6 7 16 15
-		f 4 7 16 -16 -24
-		mu 0 4 7 8 17 16
-		f 3 8 25 -25
-		mu 0 3 24 23 26
-		f 3 9 26 -26
-		mu 0 3 23 22 26
-		f 3 10 27 -27
-		mu 0 3 22 21 26
-		f 3 11 28 -28
-		mu 0 3 21 20 26
-		f 3 12 29 -29
-		mu 0 3 20 19 26
-		f 3 13 30 -30
-		mu 0 3 19 18 26
-		f 3 14 31 -31
-		mu 0 3 18 25 26
-		f 3 15 24 -32
-		mu 0 3 25 24 26;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "mainBoard" -p "controlBoard";
-	setAttr ".rp" -type "double3" 0.0023071694707159085 -2.7755575615628914e-016 0.00010476795260772054 ;
-	setAttr ".sp" -type "double3" 0.0023071694707159085 -2.7755575615628914e-016 0.00010476795260772054 ;
-createNode mesh -n "mainBoardShape" -p "mainBoard";
-	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -5723,62 +4805,10 @@ createNode mesh -n "mainBoardShape" -p "mainBoard";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 18 ".pt";
-	setAttr ".pt[0]" -type "float3" -0.00252511 0.13035922 -0.49989524 ;
-	setAttr ".pt[1]" -type "float3" -0.00252511 0.13035922 -0.49989524 ;
-	setAttr ".pt[2]" -type "float3" -0.00252511 -0.13035922 -0.23917681 ;
-	setAttr ".pt[3]" -type "float3" -0.00252511 -0.13035922 -0.23917681 ;
-	setAttr ".pt[4]" -type "float3" -0.00252511 0.62630355 0.51748598 ;
-	setAttr ".pt[5]" -type "float3" -0.00252511 0.62630355 0.51748598 ;
-	setAttr ".pt[6]" -type "float3" -0.00252511 0.88702202 0.25676754 ;
-	setAttr ".pt[7]" -type "float3" -0.00252511 0.88702202 0.25676754 ;
-	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
-	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
-	setAttr -s 12 ".ed[0:11]"  6 7 0 0 2 0 1 3 0 2 4 0 4 6 0 5 7 0 7 1 0
-		 6 0 0 3 5 0 0 1 0 2 3 0 4 5 0;
-	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
-		f 4 -2 9 2 -11
-		mu 0 4 2 0 1 3
-		f 4 -1 -5 11 5
-		mu 0 4 7 6 4 5
-		f 4 0 6 -10 -8
-		mu 0 4 6 7 9 8
-		f 4 -7 -6 -9 -3
-		mu 0 4 1 10 11 3
-		f 4 4 7 1 3
-		mu 0 4 13 12 0 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "boardDetail" -p "controlBoard";
-	setAttr ".rp" -type "double3" 0 0.45930972791684294 -0.0090136087176319098 ;
-	setAttr ".sp" -type "double3" 0 0.45930972791684294 -0.0090136087176319046 ;
-createNode mesh -n "boardDetailShape" -p "boardDetail";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.0048322794 0.58966893 
-		-0.50901359 -0.0048322794 0.58966893 -0.50901359 -0.0048322794 0.32895052 -0.48605886 
-		-0.0048322794 0.32895052 -0.48605886 -0.0048322794 0.35207167 0.27060392 -0.0048322794 
-		0.35207167 0.27060392 -0.0048322794 0.61279011 0.24764918 -0.0048322794 0.61279011 
-		0.24764918;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
 		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
 		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
@@ -5798,46 +4828,44 @@ createNode mesh -n "boardDetailShape" -p "boardDetail";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "boardDetail2" -p "controlBoard";
-	setAttr ".rp" -type "double3" 0 0.28710965059980048 -0.0090136087176319098 ;
-	setAttr ".sp" -type "double3" 0 0.28710965059980048 -0.0090136087176319046 ;
-createNode mesh -n "boardDetailShape2" -p "boardDetail2";
+createNode transform -n "bottomSquareButton14" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.38306166874066927 -0.54572379346015487 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape14" -p "bottomSquareButton14";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.0048322794 0.41746888 
-		-0.50901359 -0.0048322794 0.41746888 -0.50901359 -0.0048322794 0.15675043 -0.48605886 
-		-0.0048322794 0.15675043 -0.48605886 -0.0048322794 0.17987159 0.27060392 -0.0048322794 
-		0.17987159 0.27060392 -0.0048322794 0.44059002 0.24764918 -0.0048322794 0.44059002 
-		0.24764918;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
-		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
-		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
 	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 0 1 2 3
 		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
+		mu 0 4 4 5 6 7
 		f 4 3 10 -1 -12
-		mu 0 4 6 7 9 8
+		mu 0 4 7 6 1 0
 		f 4 -11 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 1 6 9 8
 		f 4 8 11 4 6
-		mu 0 4 13 12 0 2;
+		mu 0 4 11 7 0 10;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "boardDetail2";
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton14";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -5902,9 +4930,3409 @@ createNode mesh -n "polySurfaceShape1" -p "boardDetail2";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton14";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton13" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.38306166874066927 -0.61832235487003606 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape13" -p "bottomSquareButton13";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton13";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton13";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton12" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.28898020248417911 -0.47577621549858967 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape12" -p "bottomSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton11" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.28898020248417911 -0.54572379346015487 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape11" -p "bottomSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton11";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton10" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.28898020248417911 -0.61832235487003606 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape10" -p "bottomSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton10";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton9" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.19303547385472741 -0.61832235487003606 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape9" -p "bottomSquareButton9";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton8" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.19303547385472741 -0.54572379346015487 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape8" -p "bottomSquareButton8";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton7" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.19303547385472741 -0.47577621549858967 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape7" -p "bottomSquareButton7";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton7";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton7";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton6" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.097926590982333889 -0.61832235487003606 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape6" -p "bottomSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton5" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.097926590982333889 -0.54572379346015487 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape5" -p "bottomSquareButton5";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton4" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.097926590982333889 -0.47577621549858967 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape4" -p "bottomSquareButton4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton3" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.61832235487003606 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape3" -p "bottomSquareButton3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton2" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.54572379346015487 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape2" -p "bottomSquareButton2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "bottomSquareButton1" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.47577621549858967 0 ;
+	setAttr ".rp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951521 ;
+	setAttr ".sp" -type "double3" 0.18500248141429965 0.6829696857974199 -0.0082505349434951469 ;
+createNode mesh -n "bottomSquareButtonShape1" -p "bottomSquareButton1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50134243717239735 0.50433247898224476 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.73391891 0.77013093
+		 0.73280329 0.23956288 0.94973862 0.2415061 0.94973862 0.76986915 0.05294627 0.76986915
+		 0.05294627 0.2415061 0.26658008 0.23941927 0.26539993 0.77023512 0.73153222 0.025778621
+		 0.26760501 0.025491506 0.72955739 0.98275679 0.26563019 0.98317343;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  0.1617496 0.68296969 -0.0082505345 0.20781022 0.68296969 -0.0082505345
+		 0.1617496 0.68296969 0.010216922 0.20781022 0.68296969 0.010216922 0.1617496 0.72341311 0.010216922
+		 0.20781022 0.72341311 0.010216922 0.1617496 0.72341311 -0.0082505345 0.20781022 0.72341311 -0.0082505345;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 6 9 8
+		f 4 8 11 4 6
+		mu 0 4 11 7 0 10;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape1" -p "bottomSquareButton1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0.84791791 0.77708203 0 0.22291794 0 0.375 0.84791791
+		 0.22291794 0.25 0.375 0.40208206 0.625 0.40208206 0.77708203 0.25 0.625 0.89739579
+		 0.72760415 0 0.27239582 0 0.375 0.89739579 0.27239582 0.25 0.375 0.35260421 0.625
+		 0.35260421 0.72760415 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279 0.5 -0.1303592 0.039700672
+		 -0.5 -0.1303592 0.039700672 -0.5 0.13035922 0.039700672 0.5 0.13035922 0.039700672
+		 0.5 -0.1303592 0.1894529 -0.5 -0.1303592 0.1894529 -0.5 0.13035922 0.1894529 0.5 0.13035922 0.1894529;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 14 0
+		 3 15 0 4 6 0 5 7 0 6 9 0 7 8 0 8 12 0 9 13 0 8 9 1 10 4 0 9 10 1 11 5 0 10 11 1 11 8 1
+		 12 1 0 13 0 0 12 13 1 14 10 0 13 14 1 15 11 0 14 15 1 15 12 1;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 18 17 -3 -16
+		mu 0 4 19 20 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 14 -11
+		mu 0 4 6 7 14 17
+		f 4 19 -12 -10 -18
+		mu 0 4 21 15 10 11
+		f 4 10 16 15 8
+		mu 0 4 12 16 18 13
+		f 4 -15 12 22 -14
+		mu 0 4 17 14 22 25
+		f 4 -17 13 24 23
+		mu 0 4 18 16 24 26
+		f 4 26 25 -19 -24
+		mu 0 4 27 28 20 19
+		f 4 27 -13 -20 -26
+		mu 0 4 29 23 15 21
+		f 4 -23 20 -1 -22
+		mu 0 4 25 22 9 8
+		f 4 -25 21 4 6
+		mu 0 4 26 24 0 2
+		f 4 1 7 -27 -7
+		mu 0 4 2 3 28 27
+		f 4 -21 -28 -8 -6
+		mu 0 4 1 23 29 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape3" -p "bottomSquareButton1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.6617496 0.81332892 -0.50825053 
+		-0.29218978 0.81332892 -0.50825053 0.6617496 0.55261046 -0.48978308 -0.29218978 0.55261046 
+		-0.48978308 0.6617496 0.59305388 0.26687971 -0.29218978 0.59305388 0.26687971 0.6617496 
+		0.85377234 0.24841225 -0.29218978 0.85377234 0.24841225;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftBottomKnob5" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.065648077835829766 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftBottomKnobShape5" -p "leftBottomKnob5";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftBottomKnob5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftBottomKnob4" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.53920808515209595 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftBottomKnobShape4" -p "leftBottomKnob4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftBottomKnob4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftBottomKnob3" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.065648077835829766 -0.53920808515209595 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftBottomKnobShape3" -p "leftBottomKnob3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftBottomKnob3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftBottomKnob2" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "leftBottomKnobShape2" -p "leftBottomKnob2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "leftBottomKnob2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "leftBottomKnob1" -p "bottom_buttons";
+	setAttr ".t" -type "double3" 0 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+createNode mesh -n "leftBottomKnobShape1" -p "leftBottomKnob1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5131665560548293 0.48547003162227526 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.47728911 0.71674114
+		 0.36595562 0.66949356 0.43837973 0.49803579 0.54957986 0.54522729 0.25527543 0.62293655
+		 0.32769939 0.45147878 0.057269264 0.2365917 0.14459558 0.57637978 0.22117221 0.40478462
+		 0.10702166 0.35705376 0.035127625 0.53014034 0.22532496 0.2365917 0.91904819 0.90240389
+		 0.8095082 0.85633451 0.88166559 0.68476444 0.99120557 0.73083353 0.69910133 0.81007653
+		 0.77125871 0.63850629 0.10649183 0.11775856 0.58869433 0.76381844 0.66085184 0.59224832
+		 0.39338031 0.2365917 0.22532496 0.068536147 0.34415805 0.35542512 0.34415805 0.11775856;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.44280371 0.54704911 0.0075212643 0.42112932 0.53807127 0.0075212643
+		 0.39945489 0.54704911 0.0075212643 0.39047706 0.5687235 0.0075212633 0.39945489 0.59039789 0.0075212633
+		 0.42112932 0.59937572 0.0075212633 0.44280371 0.59039789 0.0075212633 0.45178154 0.5687235 0.0075212633
+		 0.44280371 0.54704916 -0.02642696 0.42112932 0.53807133 -0.026426962 0.39945489 0.54704916 -0.02642696
+		 0.39047706 0.56872356 -0.026426962 0.39945489 0.59039795 -0.026426962 0.42112932 0.59937578 -0.026426962
+		 0.44280371 0.59039795 -0.02642696 0.45178154 0.56872356 -0.026426962 0.42112932 0.56872356 -0.026426962;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 9 8
+		f 4 4 21 -13 -21
+		mu 0 4 12 13 14 15
+		f 4 5 22 -14 -22
+		mu 0 4 13 16 17 14
+		f 4 6 23 -15 -23
+		mu 0 4 16 19 20 17
+		f 4 7 16 -16 -24
+		mu 0 4 19 0 3 20
+		f 3 8 25 -25
+		mu 0 3 24 21 11
+		f 3 9 26 -26
+		mu 0 3 21 23 11
+		f 3 10 27 -27
+		mu 0 3 23 8 11
+		f 3 11 28 -28
+		mu 0 3 8 9 11
+		f 3 12 29 -29
+		mu 0 3 9 6 11
+		f 3 13 30 -30
+		mu 0 3 6 18 11
+		f 3 14 31 -31
+		mu 0 3 18 22 11
+		f 3 15 24 -32
+		mu 0 3 22 24 11;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape6" -p "leftBottomKnob1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.42779666 0.55880177 0.022528322 
+		0.42112932 0.54982394 0.02874445 0.41446194 0.55880177 0.022528322 0.41170025 0.58047616 
+		0.0075212633 0.41446194 0.60215056 -0.0074857948 0.42112932 0.61112839 -0.013701922 
+		0.42779666 0.60215056 -0.0074857958 0.43055835 0.58047616 0.0075212633 0.42779666 
+		0.5352965 -0.011419903 0.42112932 0.52631867 -0.0052037756 0.41446194 0.5352965 -0.011419903 
+		0.41170025 0.55697089 -0.026426962 0.41446194 0.57864529 -0.04143402 0.42112932 0.58762312 
+		-0.047650147 0.42779666 0.57864529 -0.04143402 0.43055835 0.55697089 -0.026426962 
+		0.42112932 0.55697089 -0.026426962;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightBottomKnob2" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.88754311898158467 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "rightBottomKnobShape2" -p "rightBottomKnob2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightBottomKnob2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightBottomKnob3" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.82189504114575485 -0.53920808515209595 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "rightBottomKnobShape3" -p "rightBottomKnob3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightBottomKnob3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightBottomKnob4" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.88754311898158467 -0.53920808515209595 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "rightBottomKnobShape4" -p "rightBottomKnob4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightBottomKnob4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightBottomKnob1" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.82189504114575485 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.45666605421120782 0.69100754317119595 -0.0094528489984232952 ;
+createNode mesh -n "rightBottomKnobShape1" -p "rightBottomKnob1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50569192435732291 0.50981408357620239 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.36239171 0.33516389
+		 0.46758935 0.37973464 0.39888787 0.54136884 0.29481089 0.49806783 0.57225364 0.4238252
+		 0.50286382 0.58516347 0.07071837 0.72492999 0.67653948 0.46879491 0.60646147 0.62983716
+		 0.29498035 0.72492999 0.78081518 0.51567698 0.71002799 0.67640698 0.88469183 0.56346357
+		 0.81319624 0.72388154 0.98711163 0.60911047 0.9156158 0.76952827 0.1533578 0.24825197
+		 0.25687432 0.29135412 0.18610656 0.45385537 0.085847966 0.41038772 0.07071837 0.50066775
+		 0.18284914 0.77137619 0.024272198 0.61279893 0.34142679 0.61279893 0.18284914 0.61279893;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.4716731 0.67600048 0.0022997893 0.45666605 0.66978431 0.0022997893
+		 0.441659 0.67600048 0.0022997893 0.43544286 0.69100749 0.00229979 0.441659 0.70601457 0.0022997903
+		 0.45666605 0.71223068 0.0022997893 0.4716731 0.70601457 0.0022997903 0.47788924 0.69100749 0.00229979
+		 0.4716731 0.67600054 -0.021205489 0.45666605 0.66978437 -0.021205489 0.441659 0.67600054 -0.021205489
+		 0.43544286 0.69100755 -0.021205489 0.441659 0.70601463 -0.021205487 0.45666605 0.71223074 -0.021205487
+		 0.4716731 0.70601463 -0.021205489 0.47788924 0.69100755 -0.021205489 0.45666605 0.69100755 -0.021205489;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 11 8
+		f 4 4 21 -13 -21
+		mu 0 4 10 12 13 11
+		f 4 5 22 -14 -22
+		mu 0 4 12 14 15 13
+		f 4 6 23 -15 -23
+		mu 0 4 16 17 18 19
+		f 4 7 16 -16 -24
+		mu 0 4 17 0 3 18
+		f 3 8 25 -25
+		mu 0 3 3 23 24
+		f 3 9 26 -26
+		mu 0 3 23 9 24
+		f 3 10 27 -27
+		mu 0 3 9 21 24
+		f 3 11 28 -28
+		mu 0 3 21 6 24
+		f 3 12 29 -29
+		mu 0 3 6 22 24
+		f 3 13 30 -30
+		mu 0 3 22 20 24
+		f 3 14 31 -31
+		mu 0 3 20 18 24
+		f 3 15 24 -32
+		mu 0 3 18 3 24;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape5" -p "rightBottomKnob1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.45666605 0.68775314 0.017306847 
+		0.45666605 0.68153697 0.023522975 0.45666605 0.68775314 0.017306847 0.45666605 0.70276016 
+		0.00229979 0.45666605 0.71776724 -0.012707268 0.45666605 0.72398335 -0.018923396 
+		0.45666605 0.71776724 -0.012707269 0.45666605 0.70276016 0.00229979 0.45666605 0.66424787 
+		-0.00619843 0.45666605 0.6580317 1.7697619e-005 0.45666605 0.66424787 -0.00619843 
+		0.45666605 0.67925489 -0.021205489 0.45666605 0.69426197 -0.036212545 0.45666605 
+		0.70047808 -0.042428672 0.45666605 0.69426197 -0.036212549 0.45666605 0.67925489 
+		-0.021205489 0.45666605 0.67925489 -0.021205489;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "rightBottomKnob5" -p "bottom_buttons";
+	setAttr ".t" -type "double3" -0.82189504114575485 -0.48089083388609694 0 ;
+	setAttr ".rp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+	setAttr ".sp" -type "double3" 0.42112930429841339 0.5687235367390856 -0.0094528489984232952 ;
+createNode mesh -n "rightBottomKnobShape5" -p "rightBottomKnob5";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5131665560548293 0.48547003162227526 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 25 ".uvst[0].uvsp[0:24]" -type "float2" 0.47728911 0.71674114
+		 0.36595562 0.66949356 0.43837973 0.49803579 0.54957986 0.54522729 0.25527543 0.62293655
+		 0.32769939 0.45147878 0.057269264 0.2365917 0.14459558 0.57637978 0.22117221 0.40478462
+		 0.10702166 0.35705376 0.035127625 0.53014034 0.22532496 0.2365917 0.91904819 0.90240389
+		 0.8095082 0.85633451 0.88166559 0.68476444 0.99120557 0.73083353 0.69910133 0.81007653
+		 0.77125871 0.63850629 0.10649183 0.11775856 0.58869433 0.76381844 0.66085184 0.59224832
+		 0.39338031 0.2365917 0.22532496 0.068536147 0.34415805 0.35542512 0.34415805 0.11775856;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".vt[0:16]"  0.44280371 0.54704911 0.0075212643 0.42112932 0.53807127 0.0075212643
+		 0.39945489 0.54704911 0.0075212643 0.39047706 0.5687235 0.0075212633 0.39945489 0.59039789 0.0075212633
+		 0.42112932 0.59937572 0.0075212633 0.44280371 0.59039789 0.0075212633 0.45178154 0.5687235 0.0075212633
+		 0.44280371 0.54704916 -0.02642696 0.42112932 0.53807133 -0.026426962 0.39945489 0.54704916 -0.02642696
+		 0.39047706 0.56872356 -0.026426962 0.39945489 0.59039795 -0.026426962 0.42112932 0.59937578 -0.026426962
+		 0.44280371 0.59039795 -0.02642696 0.45178154 0.56872356 -0.026426962 0.42112932 0.56872356 -0.026426962;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 2 3
+		f 4 1 18 -10 -18
+		mu 0 4 1 4 5 2
+		f 4 2 19 -11 -19
+		mu 0 4 4 7 8 5
+		f 4 3 20 -12 -20
+		mu 0 4 7 10 9 8
+		f 4 4 21 -13 -21
+		mu 0 4 12 13 14 15
+		f 4 5 22 -14 -22
+		mu 0 4 13 16 17 14
+		f 4 6 23 -15 -23
+		mu 0 4 16 19 20 17
+		f 4 7 16 -16 -24
+		mu 0 4 19 0 3 20
+		f 3 8 25 -25
+		mu 0 3 24 21 11
+		f 3 9 26 -26
+		mu 0 3 21 23 11
+		f 3 10 27 -27
+		mu 0 3 23 8 11
+		f 3 11 28 -28
+		mu 0 3 8 9 11
+		f 3 12 29 -29
+		mu 0 3 9 6 11
+		f 3 13 30 -30
+		mu 0 3 6 18 11
+		f 3 14 31 -31
+		mu 0 3 18 22 11
+		f 3 15 24 -32
+		mu 0 3 22 24 11;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape6" -p "rightBottomKnob5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0.375 0.3125 0.40625
+		 0.3125 0.4375 0.3125 0.46875 0.3125 0.5 0.3125 0.53125 0.3125 0.5625 0.3125 0.59375
+		 0.3125 0.625 0.3125 0.375 0.68843985 0.40625 0.68843985 0.4375 0.68843985 0.46875
+		 0.68843985 0.5 0.68843985 0.53125 0.68843985 0.5625 0.68843985 0.59375 0.68843985
+		 0.625 0.68843985 0.61048543 0.73326457 0.5 0.6875 0.38951457 0.73326457 0.34375 0.84375
+		 0.38951457 0.95423543 0.5 1 0.61048543 0.95423543 0.65625 0.84375 0.5 0.83749998;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 17 ".pt[0:16]" -type "float3"  0.42779666 0.55880177 0.022528322 
+		0.42112932 0.54982394 0.02874445 0.41446194 0.55880177 0.022528322 0.41170025 0.58047616 
+		0.0075212633 0.41446194 0.60215056 -0.0074857948 0.42112932 0.61112839 -0.013701922 
+		0.42779666 0.60215056 -0.0074857958 0.43055835 0.58047616 0.0075212633 0.42779666 
+		0.5352965 -0.011419903 0.42112932 0.52631867 -0.0052037756 0.41446194 0.5352965 -0.011419903 
+		0.41170025 0.55697089 -0.026426962 0.41446194 0.57864529 -0.04143402 0.42112932 0.58762312 
+		-0.047650147 0.42779666 0.57864529 -0.04143402 0.43055835 0.55697089 -0.026426962 
+		0.42112932 0.55697089 -0.026426962;
+	setAttr -s 17 ".vt[0:16]"  0.015007058 -0.011752639 -0.015007058 0 -0.011752639 -0.021223186
+		 -0.015007058 -0.011752639 -0.015007058 -0.021223186 -0.011752639 0 -0.015007058 -0.011752639 0.015007058
+		 0 -0.011752639 0.021223186 0.015007059 -0.011752639 0.015007059 0.021223187 -0.011752639 0
+		 0.015007058 0.011752639 -0.015007058 0 0.011752639 -0.021223186 -0.015007058 0.011752639 -0.015007058
+		 -0.021223186 0.011752639 0 -0.015007058 0.011752639 0.015007058 0 0.011752639 0.021223186
+		 0.015007059 0.011752639 0.015007059 0.021223187 0.011752639 0 0 0.011752639 0;
+	setAttr -s 32 ".ed[0:31]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 8 0 1 9 0 2 10 0
+		 3 11 0 4 12 0 5 13 0 6 14 0 7 15 0 8 16 1 9 16 1 10 16 1 11 16 1 12 16 1 13 16 1
+		 14 16 1 15 16 1;
+	setAttr -s 16 -ch 56 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 17 -9 -17
+		mu 0 4 0 1 10 9
+		f 4 1 18 -10 -18
+		mu 0 4 1 2 11 10
+		f 4 2 19 -11 -19
+		mu 0 4 2 3 12 11
+		f 4 3 20 -12 -20
+		mu 0 4 3 4 13 12
+		f 4 4 21 -13 -21
+		mu 0 4 4 5 14 13
+		f 4 5 22 -14 -22
+		mu 0 4 5 6 15 14
+		f 4 6 23 -15 -23
+		mu 0 4 6 7 16 15
+		f 4 7 16 -16 -24
+		mu 0 4 7 8 17 16
+		f 3 8 25 -25
+		mu 0 3 24 23 26
+		f 3 9 26 -26
+		mu 0 3 23 22 26
+		f 3 10 27 -27
+		mu 0 3 22 21 26
+		f 3 11 28 -28
+		mu 0 3 21 20 26
+		f 3 12 29 -29
+		mu 0 3 20 19 26
+		f 3 13 30 -30
+		mu 0 3 19 18 26
+		f 3 14 31 -31
+		mu 0 3 18 25 26
+		f 3 15 24 -32
+		mu 0 3 25 24 26;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "mainBoard" -p "controlBoard";
+	setAttr ".rp" -type "double3" 0.0023071694707159085 -2.7755575615628914e-016 0.00010476795260772054 ;
+	setAttr ".sp" -type "double3" 0.0023071694707159085 -2.7755575615628914e-016 0.00010476795260772054 ;
+createNode mesh -n "mainBoardShape" -p "mainBoard";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.4980108659375726 0.52228162135936018 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape2" -p "mainBoard";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt";
+	setAttr ".pt[0]" -type "float3" -0.00252511 0.13035922 -0.49989524 ;
+	setAttr ".pt[1]" -type "float3" -0.00252511 0.13035922 -0.49989524 ;
+	setAttr ".pt[2]" -type "float3" -0.00252511 -0.13035922 -0.23917681 ;
+	setAttr ".pt[3]" -type "float3" -0.00252511 -0.13035922 -0.23917681 ;
+	setAttr ".pt[4]" -type "float3" -0.00252511 0.62630355 0.51748598 ;
+	setAttr ".pt[5]" -type "float3" -0.00252511 0.62630355 0.51748598 ;
+	setAttr ".pt[6]" -type "float3" -0.00252511 0.88702202 0.25676754 ;
+	setAttr ".pt[7]" -type "float3" -0.00252511 0.88702202 0.25676754 ;
+	setAttr ".pt[8]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[9]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[12]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[13]" -type "float3" 0 1.4901161e-008 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-009 0 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  6 7 0 0 2 0 1 3 0 2 4 0 4 6 0 5 7 0 7 1 0
+		 6 0 0 3 5 0 0 1 0 2 3 0 4 5 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 -2 9 2 -11
+		mu 0 4 2 0 1 3
+		f 4 -1 -5 11 5
+		mu 0 4 7 6 4 5
+		f 4 0 6 -10 -8
+		mu 0 4 6 7 9 8
+		f 4 -7 -6 -9 -3
+		mu 0 4 1 10 11 3
+		f 4 4 7 1 3
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "boardDetail1" -p "controlBoard";
+	setAttr ".rp" -type "double3" 0 0.45930972791684294 -0.0090136087176319098 ;
+	setAttr ".sp" -type "double3" 0 0.45930972791684294 -0.0090136087176319046 ;
+createNode mesh -n "boardDetail1Shape" -p "boardDetail1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.35772146284580231 0.50054424908012152 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape7" -p "boardDetail1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.0048322794 0.58966893 
+		-0.50901359 -0.0048322794 0.58966893 -0.50901359 -0.0048322794 0.32895052 -0.48605886 
+		-0.0048322794 0.32895052 -0.48605886 -0.0048322794 0.35207167 0.27060392 -0.0048322794 
+		0.35207167 0.27060392 -0.0048322794 0.61279011 0.24764918 -0.0048322794 0.61279011 
+		0.24764918;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "boardDetail2" -p "controlBoard";
+	setAttr ".t" -type "double3" 0 -0.17160740315858125 0 ;
+	setAttr ".rp" -type "double3" 0 0.45930972791684294 -0.0090136087176319098 ;
+	setAttr ".sp" -type "double3" 0 0.45930972791684294 -0.0090136087176319046 ;
+createNode mesh -n "boardDetail2Shape" -p "boardDetail2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.35772146284580231 0.50054424908012152 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.37106112 0.96864784
+		 0.37062114 0.032613277 0.39361933 0.032613307 0.39328974 0.96864784 0.3218236 0.96745372
+		 0.3224012 0.031930029 0.34490639 0.03193 0.34537491 0.9674536 0.37150115 0.99145639
+		 0.39296013 0.99145639 0.32297879 0.0096321683 0.34443787 0.0096321087;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.50483227 0.4593097 -0.0090135932 0.49516773 0.4593097 -0.0090135932
+		 -0.50483227 0.45930976 0.013941139 0.49516773 0.45930976 0.013941139 -0.50483227 0.48243088 0.013941139
+		 0.49516773 0.48243088 0.013941139 -0.50483227 0.48243088 -0.0090136081 0.49516773 0.48243088 -0.0090136081;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 2 3
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 6 7
+		f 4 3 10 -1 -12
+		mu 0 4 7 6 1 0
+		f 4 -11 -10 -8 -6
+		mu 0 4 11 6 5 10
+		f 4 8 11 4 6
+		mu 0 4 9 8 0 3;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape7" -p "boardDetail2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.0048322794 0.58966893 
+		-0.50901359 -0.0048322794 0.58966893 -0.50901359 -0.0048322794 0.32895052 -0.48605886 
+		-0.0048322794 0.32895052 -0.48605886 -0.0048322794 0.35207167 0.27060392 -0.0048322794 
+		0.35207167 0.27060392 -0.0048322794 0.61279011 0.24764918 -0.0048322794 0.61279011 
+		0.24764918;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.13035922 0.5 0.5 -0.13035922 0.5
+		 -0.5 0.13035922 0.5 0.5 0.13035922 0.5 -0.5 0.13035922 -0.25666279 0.5 0.13035922 -0.25666279
+		 -0.5 -0.13035922 -0.25666279 0.5 -0.13035922 -0.25666279;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 7 1 0 6 0 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 10 -1 -12
+		mu 0 4 6 7 9 8
+		f 4 -11 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 8 11 4 6
+		mu 0 4 13 12 0 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "back";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0.15521384083914014 0.40096908883444526 -100.1 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+createNode camera -n "backShape" -p "back";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".coi" 100.1;
+	setAttr ".ow" 2.2324924107362984;
+	setAttr ".imn" -type "string" "back1";
+	setAttr ".den" -type "string" "back1_depth";
+	setAttr ".man" -type "string" "back1_mask";
+	setAttr ".hc" -type "string" "viewSet -b %camera";
+	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	setAttr -s 8 ".lnk";
+	setAttr -s 8 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -6116,19 +8544,19 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
 		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
 		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n"
-		+ "            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
-		+ "                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
-		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n"
-		+ "                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n"
-		+ "                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
-		+ "                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
+		+ "            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
+		+ "                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
+		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n"
+		+ "                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n"
+		+ "                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n"
+		+ "                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
+		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
+		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
+		+ "                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n"
+		+ "                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
 		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n"
 		+ "                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n"
@@ -6149,18 +8577,355 @@ createNode script -n "uiConfigurationScriptNode";
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
+createNode polyAutoProj -n "polyAutoProj1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.99999997019767761 0.99999997019767761 0.99999997019767761 ;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV1";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk";
+	setAttr ".uvtk[8]" -type "float2" -0.21635212 0.30017227 ;
+	setAttr ".uvtk[9]" -type "float2" -0.060544953 0.14365934 ;
+	setAttr ".uvtk[16]" -type "float2" -0.67058718 -0.15201505 ;
+	setAttr ".uvtk[17]" -type "float2" -0.51477993 -0.30852801 ;
+createNode polyMapSew -n "polyMapSew2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyTweakUV -n "polyTweakUV2";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[12:15]" -type "float2" -0.16626082 -0.0044338796
+		 -0.62049639 -0.45674843 -0.4646453 -0.61326146 -0.010409708 -0.16094688;
+createNode polyMapSew -n "polyMapSew3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyTweakUV -n "polyTweakUV3";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[0:3]" -type "float2" 0.78605455 0 0.78605455 0
+		 0.78605455 0 0.78605455 0;
+createNode polyMapSew -n "polyMapSew4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[9]";
+createNode polyTweakUV -n "polyTweakUV4";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".uvtk[0:11]" -type "float2" -0.057219099 0.22070228 -0.057219099
+		 0.22070222 -0.057219099 0.22070225 -0.057219099 0.22070225 -0.057219099 0.22070225
+		 -0.057219099 0.22070222 -0.057219107 0.22070228 -0.057219107 0.22070225 -0.057219099
+		 0.22070228 -0.057219099 0.22070225 -0.057219099 0.22070225 -0.057219099 0.22070228;
+createNode polyAutoProj -n "polyAutoProj2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -0.25507718085624809 1;
+	setAttr ".s" -type "double3" 0.046060621738433838 0.046060621738433838 0.046060621738433838 ;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV5";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[16:19]" -type "float2" -0.71301013 -0.25434881 -0.50135952
+		 -0.46618974 -0.037432361 -0.0026791319 -0.24908295 0.20916183;
+createNode polyMapSew -n "polyMapSew5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyMapSew -n "polyMapSew6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV6";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[4:7]" -type "float2" -0.90323567 0 -0.90323567
+		 0 -0.90323567 0 -0.90323567 0;
+createNode polyMapSew -n "polyMapSew7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV7";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk";
+	setAttr ".uvtk[8]" -type "float2" -0.25283444 -0.74781632 ;
+	setAttr ".uvtk[9]" -type "float2" -0.71676165 -1.2120308 ;
+	setAttr ".uvtk[12]" -type "float2" -0.46480653 -0.53597546 ;
+	setAttr ".uvtk[13]" -type "float2" -0.92873377 -1.00019 ;
+createNode polyMapSew -n "polyMapSew8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyTweakUV -n "polyTweakUV8";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".uvtk[0:11]" -type "float2" 0.2647261 0.23951405 0.2647261
+		 0.23951408 0.2647261 0.23951408 0.2647261 0.23951411 0.2647261 0.23951411 0.2647261
+		 0.23951408 0.2647261 0.23951408 0.2647261 0.23951405 0.2647261 0.23951408 0.2647261
+		 0.23951408 0.2647261 0.23951411 0.2647261 0.23951405;
+createNode polyAutoProj -n "polyAutoProj3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -0.25507718085624809 1;
+	setAttr ".s" -type "double3" 0.020546674728393555 0.020546674728393555 0.020546674728393555 ;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1:2]";
+createNode polyMapSew -n "polyMapSew10";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1:2]";
+createNode polyTweakUV -n "polyTweakUV9";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[0:3]" -type "float2" 0.83038378 0 0.83038378 0
+		 0.83038378 0 0.83038378 0;
+createNode polyMapSew -n "polyMapSew11";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV10";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk";
+	setAttr ".uvtk[10]" -type "float2" 0.026723862 0.19108775 ;
+	setAttr ".uvtk[11]" -type "float2" 0.22011447 -0.0022070953 ;
+	setAttr ".uvtk[16]" -type "float2" -0.39658612 -0.23243201 ;
+	setAttr ".uvtk[17]" -type "float2" -0.20319551 -0.42572683 ;
+createNode polyMapSew -n "polyMapSew12";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyTweakUV -n "polyTweakUV11";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[12:15]" -type "float2" -0.17006816 -0.49014646 -0.59337777
+		 -0.91405743 -0.39980862 -1.10735202 0.023501007 -0.6834411;
+createNode polyMapSew -n "polyMapSew13";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyMapSew -n "polyMapSew14";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV12";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".uvtk[0:11]" -type "float2" -0.14293881 0.27326536 -0.14293881
+		 0.27326536 -0.14293881 0.27326536 -0.14293881 0.27326539 -0.14293881 0.27326539 -0.14293881
+		 0.27326536 -0.14293881 0.27326536 -0.14293881 0.27326536 -0.14293879 0.27326536 -0.14293881
+		 0.27326536 -0.14293881 0.27326539 -0.14293879 0.27326539;
+createNode polyAutoProj -n "polyAutoProj4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:15]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -0.25507718085624809 1;
+	setAttr ".s" -type "double3" 0.042446434497833245 0.042446434497833245 0.042446434497833245 ;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV13";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[18:23]" -type "float2" 0.13527258 -1.27895176 0.31186047
+		 -1.014140129 -0.10290872 -0.73755586 -0.27949572 -1.0023658276 0.48844755 -0.74932998
+		 0.073678285 -0.47274563;
+createNode polyMapSew -n "polyMapSew15";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[15]";
+createNode polyTweakUV -n "polyTweakUV14";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[0:5]" -type "float2" -0.26724476 -0.20189108 -0.091203332
+		 -0.31834945 0.091203332 -0.042618964 -0.084838092 0.073839441 0.084838092 -0.43480784
+		 0.26724476 -0.15907736;
+createNode polyMapSew -n "polyMapSew16";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[16]";
+createNode polyTweakUV -n "polyTweakUV15";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[6:11]" -type "float2" -0.058714114 -0.43802246
+		 0.11668158 -0.5529806 0.29673991 -0.27826107 0.12134409 -0.16330293 0.29207852 -0.66793936
+		 0.47213581 -0.39321926;
+createNode polyMapSew -n "polyMapSew17";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV16";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[12:17]" -type "float2" 0.90239316 -0.819103 1.077109694
+		 -0.54995108 0.65554196 -0.27629557 0.48082533 -0.54544747 1.25182641 -0.28079918
+		 0.83025867 -0.0071436251;
+createNode polyMergeUV -n "polyMergeUV1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "map[10:12]" "map[15]";
+	setAttr ".d" 0.0099999997764825821;
+createNode polyTweakUV -n "polyTweakUV17";
+	setAttr ".uopa" yes;
+	setAttr -s 25 ".uvtk[0:24]" -type "float2" -0.21639572 0.53640741 -0.29065385
+		 0.5049454 -0.24215804 0.39084911 -0.16869102 0.42141494 -0.36453563 0.47382221 -0.31555396
+		 0.35993493 -0.010505946 0.26127481 -0.43815011 0.44207844 -0.38868266 0.32840011
+		 -0.16881053 0.26127481 -0.51175731 0.40898472 -0.46178919 0.29552689 -0.58508301
+		 0.37525252 -0.53461474 0.26201496 -0.65737993 0.34303099 -0.6069119 0.22979325 -0.068840422
+		 0.59775776 -0.14191179 0.56733233 -0.09195751 0.45262411 -0.021185851 0.48330757
+		 -0.010505946 0.41957965 -0.089658201 0.22848886 0.022280043 0.34042725 -0.20159678
+		 0.34042725 -0.089658201 0.34042725;
+createNode polyAutoProj -n "polyAutoProj5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:15]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -0.25507718085624809 1;
+	setAttr ".s" -type "double3" 0.06130450963973999 0.06130450963973999 0.06130450963973999 ;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV18";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[0:5]" -type "float2" 0.14798449 0 0.14798449 0
+		 0.14798449 0 0.14798449 0 0.14798449 0 0.14798449 0;
+createNode polyMapSew -n "polyMapSew18";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV19";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk[18:23]" -type "float2" 0.30521798 -0.38537624 0.30521798
+		 -0.38537624 0.30521798 -0.38537624 0.30521798 -0.38537624 0.30521798 -0.38537624
+		 0.30521798 -0.38537624;
+createNode polyMapSew -n "polyMapSew19";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[22]";
+createNode polyTweakUV -n "polyTweakUV20";
+	setAttr ".uopa" yes;
+	setAttr -s 10 ".uvtk";
+	setAttr ".uvtk[12]" -type "float2" 0.6037029 -1.7023277 ;
+	setAttr ".uvtk[13]" -type "float2" 0.60400045 -1.3197602 ;
+	setAttr ".uvtk[14]" -type "float2" 0.0047927797 -1.3192942 ;
+	setAttr ".uvtk[15]" -type "float2" 0.0044952333 -1.7018616 ;
+	setAttr ".uvtk[16]" -type "float2" 0.60482174 -0.93438464 ;
+	setAttr ".uvtk[17]" -type "float2" 0.0056140721 -0.93391901 ;
+	setAttr ".uvtk[19]" -type "float2" 0.60564315 -0.54900897 ;
+	setAttr ".uvtk[20]" -type "float2" 0.0064354837 -0.54854381 ;
+	setAttr ".uvtk[22]" -type "float2" 0.6059407 -0.16644242 ;
+	setAttr ".uvtk[23]" -type "float2" 0.0067330301 -0.16597745 ;
+createNode polyMapSew -n "polyMapSew20";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[16]";
+createNode polyTweakUV -n "polyTweakUV21";
+	setAttr ".uopa" yes;
+	setAttr -s 18 ".uvtk";
+	setAttr ".uvtk[0]" -type "float2" -0.31966773 1.0468009 ;
+	setAttr ".uvtk[1]" -type "float2" -0.49855247 0.77606618 ;
+	setAttr ".uvtk[2]" -type "float2" -0.082368881 0.50007391 ;
+	setAttr ".uvtk[3]" -type "float2" 0.09630125 0.77048546 ;
+	setAttr ".uvtk[4]" -type "float2" -0.67700076 0.50784445 ;
+	setAttr ".uvtk[5]" -type "float2" -0.26081729 0.23185191 ;
+	setAttr ".uvtk[7]" -type "float2" -0.85544842 0.23962352 ;
+	setAttr ".uvtk[8]" -type "float2" -0.43926504 -0.036369458 ;
+	setAttr ".uvtk[10]" -type "float2" -1.0316569 -0.026090577 ;
+	setAttr ".uvtk[11]" -type "float2" -0.61547351 -0.30208361 ;
+	setAttr ".uvtk[12]" -type "float2" 0.39281312 2.116998 ;
+	setAttr ".uvtk[13]" -type "float2" 0.21619114 1.8515574 ;
+	setAttr ".uvtk[14]" -type "float2" 0.63194525 1.5749184 ;
+	setAttr ".uvtk[15]" -type "float2" 0.80856705 1.8403584 ;
+	setAttr ".uvtk[16]" -type "float2" 0.037910797 1.5844094 ;
+	setAttr ".uvtk[17]" -type "float2" 0.45366487 1.3077701 ;
+	setAttr ".uvtk[19]" -type "float2" -0.14036971 1.3172611 ;
+	setAttr ".uvtk[20]" -type "float2" 0.27538446 1.0406222 ;
+createNode polyMapSew -n "polyMapSew21";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyTweakUV -n "polyTweakUV22";
+	setAttr ".uopa" yes;
+	setAttr -s 25 ".uvtk[0:24]" -type "float2" -0.20080087 -0.32851714 -0.13292307
+		 -0.29971117 -0.17707863 -0.19517666 -0.24487522 -0.22394842 -0.065443456 -0.27132624
+		 -0.10959896 -0.16679174 0.055277109 -0.035779215 0.0020359298 -0.24294141 -0.044651363
+		 -0.13832317 0.024944022 -0.10922262 0.068776414 -0.21475017 -0.047183219 -0.035779215
+		 -0.4701328 -0.44171208 -0.40334842 -0.41362447 -0.44734141 -0.30902159 -0.5141257
+		 -0.33710897 -0.33603552 -0.38542193 -0.38002846 -0.28081882 0.025267065 0.036671035
+		 -0.2687225 -0.35721928 -0.31271556 -0.2526162 -0.14964333 -0.035779215 -0.047183219
+		 0.066680983 -0.11963348 -0.1082297 -0.11963348 0.036671035;
+createNode polyAutoProj -n "polyAutoProj6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -0.25507718085624809 1;
+	setAttr ".o" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSew -n "polyMapSew22";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1:2]";
+createNode polyTweakUV -n "polyTweakUV23";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[8:11]" -type "float2" -0.083934866 0 -0.083934866
+		 0 -0.083934866 0 -0.083934866 0;
+createNode polyMapSew -n "polyMapSew23";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV24";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[4:7]" -type "float2" -0.082533382 0 -0.082533382
+		 0 -0.082533382 0 -0.082533382 0;
+createNode polyMapSew -n "polyMapSew24";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV25";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[12:15]" -type "float2" -0.13874878 -0.02448508 -0.13874878
+		 -0.02448508 -0.13874878 -0.02448508 -0.13874878 -0.02448508;
+createNode polyMapSew -n "polyMapSew25";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[9]";
+createNode polyTweakUV -n "polyTweakUV26";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[8:11]" -type "float2" -0.1157743 0.99856043 -0.1157743
+		 0.99856043 -0.1157743 0.99856043 -0.1157743 0.99856055;
+createNode polyMapSew -n "polyMapSew26";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[4]";
+createNode polyTweakUV -n "polyTweakUV27";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".uvtk[0:11]" -type "float2" 0.37195641 -0.030632496 0.37198523
+		 0.030621242 0.37048021 0.030621242 0.37050179 -0.030632496 0.37517849 -0.030554354
+		 0.3751407 0.030665971 0.37366796 0.030665956 0.37363729 -0.030554414 0.37192762 -0.032125115
+		 0.37052333 -0.032125115 0.37510291 0.032125123 0.37369862 0.032125123;
+createNode blinn -n "boardMiddleDetailTexture";
+createNode shadingEngine -n "blinn1SG";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+createNode lambert -n "topButtonsTexture";
+	setAttr ".c" -type "float3" 0.15993848 0.50980395 0.18904738 ;
+createNode shadingEngine -n "lambert2SG";
+	setAttr ".ihi" 0;
+	setAttr -s 15 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+createNode lambert -n "topSmallButtonsTexture";
+	setAttr ".c" -type "float3" 0.84810126 0.84810126 0.84810126 ;
+createNode shadingEngine -n "lambert3SG";
+	setAttr ".ihi" 0;
+	setAttr -s 12 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+createNode lambert -n "smallKnobsTexture";
+	setAttr ".c" -type "float3" 0.49571985 0.49571985 0.49571985 ;
+createNode shadingEngine -n "lambert4SG";
+	setAttr ".ihi" 0;
+	setAttr -s 14 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+createNode lambert -n "largeKnobTexture";
+	setAttr ".c" -type "float3" 0.21568628 0.21568628 0.21568628 ;
+createNode shadingEngine -n "lambert5SG";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+createNode lambert -n "bottomButtonsTexture";
+	setAttr ".c" -type "float3" 0.35443038 0.017945835 0.017945835 ;
+createNode shadingEngine -n "lambert6SG";
+	setAttr ".ihi" 0;
+	setAttr -s 15 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 8 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 62 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 2 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -6177,12 +8942,34 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+connectAttr "polyTweakUV8.out" "topSquareButtonShape1.i";
+connectAttr "polyTweakUV8.uvtk[0]" "topSquareButtonShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV12.out" "smallSquareButtonShape1.i";
+connectAttr "polyTweakUV12.uvtk[0]" "smallSquareButtonShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV17.out" "leftTopKnobShape1.i";
+connectAttr "polyTweakUV17.uvtk[0]" "leftTopKnobShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV22.out" "leftTopKnobShape5.i";
+connectAttr "polyTweakUV22.uvtk[0]" "leftTopKnobShape5.uvst[0].uvtw";
+connectAttr "polyTweakUV4.out" "mainBoardShape.i";
+connectAttr "polyTweakUV4.uvtk[0]" "mainBoardShape.uvst[0].uvtw";
+connectAttr "polyTweakUV27.out" "boardDetail1Shape.i";
+connectAttr "polyTweakUV27.uvtk[0]" "boardDetail1Shape.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
@@ -6190,67 +8977,167 @@ connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
 connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
+connectAttr "polySurfaceShape2.o" "polyAutoProj1.ip";
+connectAttr "mainBoardShape.wm" "polyAutoProj1.mp";
+connectAttr "polyAutoProj1.out" "polyMapSew1.ip";
+connectAttr "polyMapSew1.out" "polyTweakUV1.ip";
+connectAttr "polyTweakUV1.out" "polyMapSew2.ip";
+connectAttr "polyMapSew2.out" "polyTweakUV2.ip";
+connectAttr "polyTweakUV2.out" "polyMapSew3.ip";
+connectAttr "polyMapSew3.out" "polyTweakUV3.ip";
+connectAttr "polyTweakUV3.out" "polyMapSew4.ip";
+connectAttr "polyMapSew4.out" "polyTweakUV4.ip";
+connectAttr "|controlBoard|topButtons|topSquareButton1|polySurfaceShape3.o" "polyAutoProj2.ip"
+		;
+connectAttr "topSquareButtonShape1.wm" "polyAutoProj2.mp";
+connectAttr "polyAutoProj2.out" "polyTweakUV5.ip";
+connectAttr "polyTweakUV5.out" "polyMapSew5.ip";
+connectAttr "polyMapSew5.out" "polyMapSew6.ip";
+connectAttr "polyMapSew6.out" "polyTweakUV6.ip";
+connectAttr "polyTweakUV6.out" "polyMapSew7.ip";
+connectAttr "polyMapSew7.out" "polyTweakUV7.ip";
+connectAttr "polyTweakUV7.out" "polyMapSew8.ip";
+connectAttr "polyMapSew8.out" "polyTweakUV8.ip";
+connectAttr "|controlBoard|topButtons|smallSquareButton1|polySurfaceShape4.o" "polyAutoProj3.ip"
+		;
+connectAttr "smallSquareButtonShape1.wm" "polyAutoProj3.mp";
+connectAttr "polyAutoProj3.out" "polyMapSew9.ip";
+connectAttr "polyMapSew9.out" "polyMapSew10.ip";
+connectAttr "polyMapSew10.out" "polyTweakUV9.ip";
+connectAttr "polyTweakUV9.out" "polyMapSew11.ip";
+connectAttr "polyMapSew11.out" "polyTweakUV10.ip";
+connectAttr "polyTweakUV10.out" "polyMapSew12.ip";
+connectAttr "polyMapSew12.out" "polyTweakUV11.ip";
+connectAttr "polyTweakUV11.out" "polyMapSew13.ip";
+connectAttr "polyMapSew13.out" "polyMapSew14.ip";
+connectAttr "polyMapSew14.out" "polyTweakUV12.ip";
+connectAttr "|controlBoard|topButtons|leftTopKnob1|polySurfaceShape5.o" "polyAutoProj4.ip"
+		;
+connectAttr "leftTopKnobShape1.wm" "polyAutoProj4.mp";
+connectAttr "polyAutoProj4.out" "polyTweakUV13.ip";
+connectAttr "polyTweakUV13.out" "polyMapSew15.ip";
+connectAttr "polyMapSew15.out" "polyTweakUV14.ip";
+connectAttr "polyTweakUV14.out" "polyMapSew16.ip";
+connectAttr "polyMapSew16.out" "polyTweakUV15.ip";
+connectAttr "polyTweakUV15.out" "polyMapSew17.ip";
+connectAttr "polyMapSew17.out" "polyTweakUV16.ip";
+connectAttr "polyTweakUV16.out" "polyMergeUV1.ip";
+connectAttr "polyMergeUV1.out" "polyTweakUV17.ip";
+connectAttr "|controlBoard|topButtons|leftTopKnob5|polySurfaceShape6.o" "polyAutoProj5.ip"
+		;
+connectAttr "leftTopKnobShape5.wm" "polyAutoProj5.mp";
+connectAttr "polyAutoProj5.out" "polyTweakUV18.ip";
+connectAttr "polyTweakUV18.out" "polyMapSew18.ip";
+connectAttr "polyMapSew18.out" "polyTweakUV19.ip";
+connectAttr "polyTweakUV19.out" "polyMapSew19.ip";
+connectAttr "polyMapSew19.out" "polyTweakUV20.ip";
+connectAttr "polyTweakUV20.out" "polyMapSew20.ip";
+connectAttr "polyMapSew20.out" "polyTweakUV21.ip";
+connectAttr "polyTweakUV21.out" "polyMapSew21.ip";
+connectAttr "polyMapSew21.out" "polyTweakUV22.ip";
+connectAttr "|controlBoard|boardDetail1|polySurfaceShape7.o" "polyAutoProj6.ip";
+connectAttr "boardDetail1Shape.wm" "polyAutoProj6.mp";
+connectAttr "polyAutoProj6.out" "polyMapSew22.ip";
+connectAttr "polyMapSew22.out" "polyTweakUV23.ip";
+connectAttr "polyTweakUV23.out" "polyMapSew23.ip";
+connectAttr "polyMapSew23.out" "polyTweakUV24.ip";
+connectAttr "polyTweakUV24.out" "polyMapSew24.ip";
+connectAttr "polyMapSew24.out" "polyTweakUV25.ip";
+connectAttr "polyTweakUV25.out" "polyMapSew25.ip";
+connectAttr "polyMapSew25.out" "polyTweakUV26.ip";
+connectAttr "polyTweakUV26.out" "polyMapSew26.ip";
+connectAttr "polyMapSew26.out" "polyTweakUV27.ip";
+connectAttr "boardMiddleDetailTexture.oc" "blinn1SG.ss";
+connectAttr "boardDetail1Shape.iog" "blinn1SG.dsm" -na;
+connectAttr "boardDetail2Shape.iog" "blinn1SG.dsm" -na;
+connectAttr "blinn1SG.msg" "materialInfo1.sg";
+connectAttr "boardMiddleDetailTexture.msg" "materialInfo1.m";
+connectAttr "topButtonsTexture.oc" "lambert2SG.ss";
+connectAttr "topSquareButtonShape1.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape15.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape14.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape13.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape12.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape11.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape10.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape9.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape8.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape7.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape6.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape5.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape4.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape3.iog" "lambert2SG.dsm" -na;
+connectAttr "topSquareButtonShape2.iog" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.msg" "materialInfo2.sg";
+connectAttr "topButtonsTexture.msg" "materialInfo2.m";
+connectAttr "topSmallButtonsTexture.oc" "lambert3SG.ss";
+connectAttr "smallSquareButtonShape2.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape12.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape11.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape10.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape9.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape8.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape7.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape6.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape5.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape4.iog" "lambert3SG.dsm" -na;
+connectAttr "smallSquareButtonShape3.iog" "lambert3SG.dsm" -na;
+connectAttr "lambert3SG.msg" "materialInfo3.sg";
+connectAttr "topSmallButtonsTexture.msg" "materialInfo3.m";
+connectAttr "smallKnobsTexture.oc" "lambert4SG.ss";
+connectAttr "leftTopKnobShape1.iog" "lambert4SG.dsm" -na;
+connectAttr "leftTopKnobShape4.iog" "lambert4SG.dsm" -na;
+connectAttr "leftTopKnobShape3.iog" "lambert4SG.dsm" -na;
+connectAttr "leftTopKnobShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "rightTopKnobShape3.iog" "lambert4SG.dsm" -na;
+connectAttr "rightTopKnobShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "leftBottomKnobShape5.iog" "lambert4SG.dsm" -na;
+connectAttr "leftBottomKnobShape4.iog" "lambert4SG.dsm" -na;
+connectAttr "leftBottomKnobShape3.iog" "lambert4SG.dsm" -na;
+connectAttr "leftBottomKnobShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "rightBottomKnobShape1.iog" "lambert4SG.dsm" -na;
+connectAttr "rightBottomKnobShape4.iog" "lambert4SG.dsm" -na;
+connectAttr "rightBottomKnobShape3.iog" "lambert4SG.dsm" -na;
+connectAttr "rightBottomKnobShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "lambert4SG.msg" "materialInfo4.sg";
+connectAttr "smallKnobsTexture.msg" "materialInfo4.m";
+connectAttr "largeKnobTexture.oc" "lambert5SG.ss";
+connectAttr "leftTopKnobShape5.iog" "lambert5SG.dsm" -na;
+connectAttr "leftBottomKnobShape1.iog" "lambert5SG.dsm" -na;
+connectAttr "rightBottomKnobShape5.iog" "lambert5SG.dsm" -na;
+connectAttr "lambert5SG.msg" "materialInfo5.sg";
+connectAttr "largeKnobTexture.msg" "materialInfo5.m";
+connectAttr "bottomButtonsTexture.oc" "lambert6SG.ss";
+connectAttr "bottomSquareButtonShape15.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape1.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape2.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape3.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape4.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape5.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape6.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape7.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape8.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape9.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape10.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape11.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape12.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape13.iog" "lambert6SG.dsm" -na;
+connectAttr "bottomSquareButtonShape14.iog" "lambert6SG.dsm" -na;
+connectAttr "lambert6SG.msg" "materialInfo6.sg";
+connectAttr "bottomButtonsTexture.msg" "materialInfo6.m";
+connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert6SG.pa" ":renderPartition.st" -na;
 connectAttr "mainBoardShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "boardDetailShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "boardDetailShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape12.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButton13Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape14.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "bottomSquareButtonShape15.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape12.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "smallSquareButtonShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftTopKnobShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftTopKnobShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftTopKnobShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftTopKnobShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftTopKnobShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftBottomKnobShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftBottomKnobShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftBottomKnobShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftBottomKnobShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "leftBottomKnobShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightTopKnobShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightTopKnobShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightBottomKnobShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightBottomKnobShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightBottomKnobShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightBottomKnobShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "rightBottomKnobShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape12.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape13.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape14.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "topSquareButtonShape15.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "boardMiddleDetailTexture.msg" ":defaultShaderList1.s" -na;
+connectAttr "topButtonsTexture.msg" ":defaultShaderList1.s" -na;
+connectAttr "topSmallButtonsTexture.msg" ":defaultShaderList1.s" -na;
+connectAttr "smallKnobsTexture.msg" ":defaultShaderList1.s" -na;
+connectAttr "largeKnobTexture.msg" ":defaultShaderList1.s" -na;
+connectAttr "bottomButtonsTexture.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of m_controlBoardFixed_br_01.ma
+// End of m_controlBoardFIXED_br.ma

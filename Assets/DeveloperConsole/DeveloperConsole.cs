@@ -234,7 +234,7 @@ public class DeveloperConsole : MonoBehaviour
 		// Routinely finds the name of all gameobjects
 		StartCoroutine( FindAllGameObjects() );
 		
-		tagList = UnityEditorInternal.InternalEditorUtility.tags.ToList();
+		//tagList = UnityEngine.InternalEditorUtility.tags.ToList();
 		
 		// Puts all the aliases into a handy dictionary
 		for ( int aliasI = 0; aliasI < aliasList.Length; aliasI++ )

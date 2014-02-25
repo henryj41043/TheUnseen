@@ -3,32 +3,12 @@ guid: b38c62bb83802ad4daf8d5550e3fdb4c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: leftConnectingRim
-    100002: leftTube
-    100004: //RootNode
-    100006: mainTube
-    100008: straightConnectingRim
-    400000: leftConnectingRim
-    400002: leftTube
-    400004: //RootNode
-    400006: mainTube
-    400008: straightConnectingRim
-    2300000: leftConnectingRim
-    2300002: leftTube
-    2300004: mainTube
-    2300006: straightConnectingRim
-    3300000: leftConnectingRim
-    3300002: leftTube
-    3300004: mainTube
-    3300006: straightConnectingRim
-    4300000: mainTube
-    4300002: straightConnectingRim
-    4300004: leftTube
-    4300006: leftConnectingRim
-    6400000: leftConnectingRim
-    6400002: leftTube
-    6400004: mainTube
-    6400006: straightConnectingRim
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: leftBentTube
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -51,7 +31,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

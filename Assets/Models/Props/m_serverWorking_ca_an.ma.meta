@@ -8,27 +8,39 @@ ModelImporter:
     100004: hinges
     100006: //RootNode
     100008: servers
+    100010: serverBody
+    100012: serverFrame
     400000: cabinet
     400002: frame
     400004: hinges
     400006: //RootNode
     400008: servers
+    400010: serverBody
+    400012: serverFrame
     2300000: cabinet
     2300002: frame
     2300004: hinges
     2300006: servers
+    2300008: serverBody
+    2300010: serverFrame
     3300000: cabinet
     3300002: frame
     3300004: hinges
     3300006: servers
+    3300008: serverBody
+    3300010: serverFrame
     4300000: cabinet
     4300002: frame
     4300004: servers
     4300006: hinges
+    4300008: serverBody
+    4300010: serverFrame
     6400000: cabinet
     6400002: frame
     6400004: hinges
     6400006: servers
+    6400008: serverBody
+    6400010: serverFrame
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -51,7 +63,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

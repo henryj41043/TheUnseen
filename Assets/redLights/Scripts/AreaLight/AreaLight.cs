@@ -170,7 +170,7 @@ public class AreaLight : MonoBehaviour
 
     if (!shader.Equals("redPlant/"))
     {
-      Debug.Log(shader);
+      //Debug.Log(shader);
       m_lightMaterial = new Material(Shader.Find(shader));
     }
     else

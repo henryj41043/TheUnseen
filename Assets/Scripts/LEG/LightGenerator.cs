@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightGenerator : MonoBehaviour
 {
-	public GUIText energyText;
+	//public GUIText energyText;
 	
 	public GameObject playerCam;
 	public GameObject shootingOrb;
@@ -43,7 +43,7 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	void UpdateDisplay() {
-		energyText.text = energy.ToString();
+		//energyText.text = energy.ToString();
 	}
 
 	public void AddEnergy(float e) {

@@ -1,0 +1,79 @@
+fileFormatVersion: 2
+guid: 8d4e609bd5c7d4ab1a779ac7e83856a9
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 10
+    name: wallHallcool
+    prototypeName: pillar
+    shaderName: Bumped Specular
+    inputs:
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 2, y: 1}
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 1000}
+        data:
+          first:
+            name: _BumpMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 1000, y: 1000}
+      floats:
+        data:
+          first:
+            name: _Shininess
+          second: .363095701
+      colors:
+        data:
+          first:
+            name: _Color
+          second: {r: .948529422, g: .962478399, b: .962478399, a: 1}
+        data:
+          first:
+            name: _SpecColor
+          second: {r: .5, g: .5, b: .5, a: 1}
+    textureParameters:
+    - name: wallHallcool_diffuse
+      alphaSource: 5
+      filterMode: 1
+      aniso: 9
+      wrapMode: 0
+    - name: wallHallcool_normal
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: wallHallcool_specular
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 2
+  deletedPrototypes: []
+  userData: 

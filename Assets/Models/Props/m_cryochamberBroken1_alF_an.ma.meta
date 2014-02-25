@@ -58,6 +58,7 @@ ModelImporter:
     4300016: bigCord
     4300018: ports
     4300020: cords
+    4300022: cryochamber
     6400000: bars
     6400002: bigCord
     6400004: capsuleBack
@@ -91,7 +92,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1

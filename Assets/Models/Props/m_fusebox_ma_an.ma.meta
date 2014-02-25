@@ -13,8 +13,8 @@ ModelImporter:
     2300002: FuseBox_Door
     3300000: FuseBox_Base
     3300002: FuseBox_Door
-    4300000: FuseBox_Door
-    4300002: FuseBox_Base
+    4300000: FuseBox_Base
+    4300002: FuseBox_Door
     6400000: FuseBox_Base
     6400002: FuseBox_Door
     9500000: //RootNode
@@ -39,7 +39,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
