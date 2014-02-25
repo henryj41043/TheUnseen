@@ -13,6 +13,8 @@ public class CreatureAI : MonoBehaviour {
 	GameObject lastPosMarker;
 	GameObject currentTarget = null;
 
+	public GameObject enragedMarker;
+
 	public float walkSpeed = 5f;
 	public float runSpeed = 10f;
 	public float chaseSpeed = 15f;
@@ -55,6 +57,12 @@ public class CreatureAI : MonoBehaviour {
 	void Update () {
 
 		GameObject newTarget = GetNewestTarget();
+
+		if (isSuperSayian){
+			enragedMarker.SetActive(true);
+		}else{
+			enragedMarker.SetActive(false);
+		}
 
 		if(superSayianTimer > superSayianTime){
 			isSuperSayian = false;
