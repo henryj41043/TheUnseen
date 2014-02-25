@@ -181,7 +181,11 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool ("Attack", true);
 		isAttacking = true;
 		if (currentTarget.tag == "Player"){
-			currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			GameObject target = currentTarget;
+			while (target.transform.parent != null && target.transform.parent.tag == "Player"){
+				target = target.transform.parent.gameObject;
+			}
+			target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 		}
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;
