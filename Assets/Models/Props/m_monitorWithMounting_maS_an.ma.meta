@@ -9,28 +9,40 @@ ModelImporter:
     100006: MountingBracket
     100008: Screen
     100010: WallAttach
+    100012: monitor
+    100014: screen
     400000: //RootNode
     400002: MiddlePiece
     400004: MonitorAttach
     400006: MountingBracket
     400008: Screen
     400010: WallAttach
+    400012: monitor
+    400014: screen
     2300000: MiddlePiece
     2300002: MonitorAttach
     2300004: Screen
     2300006: WallAttach
+    2300008: monitor
+    2300010: screen
     3300000: MiddlePiece
     3300002: MonitorAttach
     3300004: Screen
     3300006: WallAttach
+    3300008: monitor
+    3300010: screen
     4300000: Screen
     4300002: MiddlePiece
     4300004: MonitorAttach
     4300006: WallAttach
+    4300008: screen
+    4300010: monitor
     6400000: MiddlePiece
     6400002: MonitorAttach
     6400004: Screen
     6400006: WallAttach
+    6400008: monitor
+    6400010: screen
     9500000: //RootNode
   materials:
     importMaterials: 1

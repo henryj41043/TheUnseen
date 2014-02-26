@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0bfbaed1076f04f982b0656ceaedc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreen: {fileID: 0}
+  deathScreen: {fileID: 2800000, guid: d4e5553d942b0394094b0565d15fc283, type: 3}
   maxSprintEnergy: 100
   sprintDrainPerSecond: 35
   sprintChargePerSecond: 15
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   crosshairTexture: {fileID: 2800000, guid: 7870ee69c954b8840b3972c1c8410da4, type: 3}
   minCrosshairSize: 25
   maxCrosshairSize: 50
-  interactTexture: {fileID: 2800000, guid: 448837deb229e734bbd46cfecfc479ef, type: 3}
+  interactText: Press "E" to interact
   interactSize: 50
   lightGenerator: {fileID: 11400000}
 --- !u!114 &11400014
@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da2c15aeb92ee1844a41078880e39f19, type: 3}
   m_Name: 

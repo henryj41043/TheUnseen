@@ -4,17 +4,21 @@ using Pathfinding;
 
 public class EnableSwitch : Activateable {
 
-	public Material powered;
-	public Material unpowered;
+	public GameObject redLight;
+	public GameObject greenLight;
 
 	public override void Activate(){
-		this.gameObject.renderer.material = powered;
-		GetComponent<Switch>().enabled = true;
+		this.GetComponent<Switch>().powered = true;
+		redLight.light.enabled = false;
+		greenLight.light.enabled = true;
+		animation.Play("Activate");
 	}
 
 	public override void Deactivate(){
-		this.gameObject.renderer.material = unpowered;
-		GetComponent<Switch>().enabled = false;
+		this.GetComponent<Switch>().powered = false;
+		redLight.light.enabled = true;
+		greenLight.light.enabled = false;
+		animation.Play("Deactivate");
 	}
 
 }

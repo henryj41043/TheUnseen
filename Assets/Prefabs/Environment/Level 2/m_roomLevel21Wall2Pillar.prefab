@@ -221,7 +221,7 @@ GameObject:
   - 33: {fileID: 3300020}
   - 23: {fileID: 2300020}
   - 64: {fileID: 6400020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

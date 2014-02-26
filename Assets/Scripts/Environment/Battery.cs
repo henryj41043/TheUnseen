@@ -67,6 +67,7 @@ public class Battery : MonoBehaviour {
 		for (int i = 0; i < targets.Length; i++){
 			targets[i].Deactivate();
 		}
+		greenLight.SetActive(false);
 		drainedSoFar = 0;
 		power = 0;
 	}

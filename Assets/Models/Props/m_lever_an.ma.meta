@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: d3a21c6f04ca4d3438069c25c6cce92f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bar
+    100002: base
+    100004: base1
+    100006: base2
+    100008: left_hole
+    100010: left_lever
+    100012: lever_rotate
+    100014: light_socket_1
+    100016: light_socket_2
+    100018: //RootNode
+    100020: right_hole
+    100022: right_lever
+    100024: rotating_base
+    400000: bar
+    400002: base
+    400004: base1
+    400006: base2
+    400008: left_hole
+    400010: left_lever
+    400012: lever_rotate
+    400014: light_socket_1
+    400016: light_socket_2
+    400018: //RootNode
+    400020: right_hole
+    400022: right_lever
+    400024: rotating_base
+    2300000: bar
+    2300002: base
+    2300004: base1
+    2300006: base2
+    2300008: left_hole
+    2300010: left_lever
+    2300012: light_socket_1
+    2300014: light_socket_2
+    2300016: right_hole
+    2300018: right_lever
+    2300020: rotating_base
+    3300000: bar
+    3300002: base
+    3300004: base1
+    3300006: base2
+    3300008: left_hole
+    3300010: left_lever
+    3300012: light_socket_1
+    3300014: light_socket_2
+    3300016: right_hole
+    3300018: right_lever
+    3300020: rotating_base
+    4300000: base
+    4300002: rotating_base
+    4300004: left_hole
+    4300006: right_hole
+    4300008: bar
+    4300010: left_lever
+    4300012: right_lever
+    4300014: base1
+    4300016: base2
+    4300018: light_socket_1
+    4300020: light_socket_2
+    7400000: Activate
+    7400002: On
+    7400004: Off
+    7400006: Deactivate
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Activate
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base
+        weight: 1
+      - path: base1
+        weight: 1
+      - path: base2
+        weight: 1
+      - path: lever_rotate
+        weight: 1
+      - path: lever_rotate/bar
+        weight: 1
+      - path: lever_rotate/bar/left_lever
+        weight: 1
+      - path: lever_rotate/bar/right_lever
+        weight: 1
+      - path: lever_rotate/rotating_base
+        weight: 1
+      - path: lever_rotate/rotating_base/left_hole
+        weight: 1
+      - path: lever_rotate/rotating_base/right_hole
+        weight: 1
+      - path: light_socket_1
+        weight: 1
+      - path: light_socket_2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: On
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base
+        weight: 1
+      - path: base1
+        weight: 1
+      - path: base2
+        weight: 1
+      - path: lever_rotate
+        weight: 1
+      - path: lever_rotate/bar
+        weight: 1
+      - path: lever_rotate/bar/left_lever
+        weight: 1
+      - path: lever_rotate/bar/right_lever
+        weight: 1
+      - path: lever_rotate/rotating_base
+        weight: 1
+      - path: lever_rotate/rotating_base/left_hole
+        weight: 1
+      - path: lever_rotate/rotating_base/right_hole
+        weight: 1
+      - path: light_socket_1
+        weight: 1
+      - path: light_socket_2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Off
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base
+        weight: 1
+      - path: base1
+        weight: 1
+      - path: base2
+        weight: 1
+      - path: lever_rotate
+        weight: 1
+      - path: lever_rotate/bar
+        weight: 1
+      - path: lever_rotate/bar/left_lever
+        weight: 1
+      - path: lever_rotate/bar/right_lever
+        weight: 1
+      - path: lever_rotate/rotating_base
+        weight: 1
+      - path: lever_rotate/rotating_base/left_hole
+        weight: 1
+      - path: lever_rotate/rotating_base/right_hole
+        weight: 1
+      - path: light_socket_1
+        weight: 1
+      - path: light_socket_2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Deactivate
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base
+        weight: 1
+      - path: base1
+        weight: 1
+      - path: base2
+        weight: 1
+      - path: lever_rotate
+        weight: 1
+      - path: lever_rotate/bar
+        weight: 1
+      - path: lever_rotate/bar/left_lever
+        weight: 1
+      - path: lever_rotate/bar/right_lever
+        weight: 1
+      - path: lever_rotate/rotating_base
+        weight: 1
+      - path: lever_rotate/rotating_base/left_hole
+        weight: 1
+      - path: lever_rotate/rotating_base/right_hole
+        weight: 1
+      - path: light_socket_1
+        weight: 1
+      - path: light_socket_2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

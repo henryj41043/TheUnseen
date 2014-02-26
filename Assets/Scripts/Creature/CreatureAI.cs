@@ -245,7 +245,7 @@ public class CreatureAI : MonoBehaviour {
 		}
 		foreach(GameObject battery in batteries){
 			if (vision.canSee (battery)){
-				if (battery.GetComponentInChildren<Battery>().power > 0){
+				if (battery.GetComponent<Battery>().power > 0.0f){
 					listPOIs.Add(battery);
 				}
 			}

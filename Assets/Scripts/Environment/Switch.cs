@@ -8,15 +8,19 @@ public class Switch : Interactive {
 	public Activateable[] targets;
 
 	public override void Interact(){
-		if (!turnedOn){
-			turnedOn = true;
-			for (int i = 0; i < targets.Length; i++){
-				targets[i].Activate();
-			}
-		}else {
-			turnedOn = false;
-			for (int i = 0; i < targets.Length; i++){
-				targets[i].Deactivate();
+		if (powered) {
+	 		if (!turnedOn){
+				animation.Play("On");
+				turnedOn = true;
+				for (int i = 0; i < targets.Length; i++){
+					targets[i].Activate();
+				}
+			}else {
+				animation.Play("Off");
+				turnedOn = false;
+				for (int i = 0; i < targets.Length; i++){
+					targets[i].Deactivate();
+				}
 			}
 		}
 	}

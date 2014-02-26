@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FiredOrb : MonoBehaviour {
 
-	public GameObject orbImpact;
+	public AudioClip orbImpact;
 	public Light orbLight;
 
 	public float ratioPower;
@@ -63,7 +63,7 @@ public class FiredOrb : MonoBehaviour {
 
 	void OnCollisionEnter(Collision c) {
 		if (!touching && orbImpact != null) {
-			GameObject impact = Instantiate(orbImpact, transform.position, transform.rotation) as GameObject;
+			audio.PlayOneShot(orbImpact, AudioListener.volume);
 		}
 	}
 

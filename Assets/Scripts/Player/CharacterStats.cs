@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 public class CharacterStats : MonoBehaviour
 {
-	public GUITexture deathScreen;
+	public Texture2D deathScreen;
 	public float maxSprintEnergy = 100f;
 	public float sprintDrainPerSecond = 35f;
 	public float sprintChargePerSecond = 15f;
@@ -20,9 +20,11 @@ public class CharacterStats : MonoBehaviour
 
 	private bool isDead = false;
 
+	private Transform respawnPoint;
+
 	public void Awake () {
 		sprintEnergy = maxSprintEnergy;
-
+		respawnPoint = GameObject.FindWithTag("RespawnPoint").transform;
 	}
 
 	void Update() {
@@ -54,12 +56,17 @@ public class CharacterStats : MonoBehaviour
 	IEnumerator Die() {
 		print ("You are dead");
 		isDead = true;
-		deathScreen.enabled = true;
 		yield return new WaitForSeconds(5.0f);
+		this.transform.position = respawnPoint.position;
 		playerHealth = 100;
 		isDead = false;
-		deathScreen.enabled = false;
 
+	}
+
+	void OnGUI() {
+		if (isDead) {
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), deathScreen, ScaleMode.StretchToFill, true, 0.0f);
+		}
 	}
 
 }

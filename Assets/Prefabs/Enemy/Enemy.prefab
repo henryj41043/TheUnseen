@@ -3744,8 +3744,11 @@ MonoBehaviour:
   searchTime: 3
   drainTime: 3
   attackDamage: 25
+  drainAmount: 20
   superSayianSpeedMult: 1.5
   superSayianTime: 5
+  SSChargeDecrease: 20
+  maxSuperSayianCharge: 100
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

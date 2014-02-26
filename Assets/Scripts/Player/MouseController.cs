@@ -15,7 +15,7 @@ public class MouseController : MonoBehaviour {
 	public float minCrosshairSize;
 	public float maxCrosshairSize;
 
-	public Texture2D interactTexture;
+	public string interactText;
 	public float interactSize;
 
 	public LightGenerator lightGenerator;
@@ -104,7 +104,8 @@ public class MouseController : MonoBehaviour {
 			}
 		}
 		if (canInteract) {
-			GUI.DrawTexture(defaultInteractPos, interactTexture);
+			GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 + 50, 200, 50), interactText);
+			//GUI.DrawTexture(defaultInteractPos, interactTexture);
 		}
 	}
 }
