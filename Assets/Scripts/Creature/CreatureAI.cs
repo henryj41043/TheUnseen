@@ -6,18 +6,20 @@ using System.Collections.Generic;
 
 public class CreatureAI : MonoBehaviour {
 
-	enum States {Wander, ChasePOI, ChasePlayer, ChaseLastKnown, Absorbing, Struggling};
+	public enum States {Wander, ChasePOI, ChasePlayer, ChaseLastKnown, Absorbing, Searching, Struggling};
 
-	States currentState = States.Wander;
+	public States currentState = States.Wander;
 	
 	GameObject lastPosMarker;
-	GameObject currentTarget = null;
 
+	public GameObject currentTarget = null;
+	public GameObject newTarget = null;
+	
 	public GameObject enragedMarker;
-
-	public float walkSpeed = 5f;
-	public float runSpeed = 10f;
-	public float chaseSpeed = 15f;
+	
+	public float walkSpeed = 3f;
+	public float runSpeed = 5f;
+	public float chaseSpeed = 7f;
 
 	private float actualWalkSpeed;
 	private float actualRunSpeed;
@@ -25,26 +27,24 @@ public class CreatureAI : MonoBehaviour {
 
 	public float attackRange = 2f;
 	public float attackSpeed = 1f;
-	public float minWaypointRange = 1f;
-	public float drainRange = 2f;
+	public float minWaypointRange = 3f;
+	public float drainRange = 4f;
 
+	public float timeSearchedSoFar = 0f;	
 	public float searchTime = 3f;
-	public float drainTime = 0.1f;
-	private float drainTimer = 0;
+	
 	public int attackDamage = 25;
-	private float chaseTimer = 0;
-	public float drainAmount = 20f;
+	public float ratioDrainPerSecond = .4f;
 
 	private bool isAttacking = false;
 	private bool isDraining = false;
 
 	private bool isSuperSayian = false;
 	public float superSayianSpeedMult = 1.5f;
-	public float superSayianTime = 1f;
+	public float superSayianTime = 10f;
 	private float superSayianTimer = 0;
-	public float SSChargeDecrease = 20f;
-	public float maxSuperSayianCharge = 100f;
-	private float superSayianCharge = 0;
+	public float SSChargeDecrease = .2f;
+	public float superSayianCharge = 0;
 	
 	private AIPath aiPath;
 	private Animator anim;
@@ -53,14 +53,14 @@ public class CreatureAI : MonoBehaviour {
 	
 	void Awake() {
 		vision = GetComponent<CreatureSight>();
-		lastPosMarker = new GameObject();
+		lastPosMarker = new GameObject(name+"  Last Known Position Marker");
 		aiPath = GetComponent<AIPath>();
 		anim = GetComponent<Animator>();
 		GetNearestWaypoint();
 	}
 	
 	void Update () {
-		GameObject newTarget = GetNewestTarget();
+		newTarget = GetNewestTarget();
 
 		GameObject drainable = GetDrainable();
 		if(drainable != null){
@@ -73,29 +73,22 @@ public class CreatureAI : MonoBehaviour {
 				currentState = States.ChasePlayer;
 			}else if (newTarget != null){
 				currentState = States.ChasePOI;
+			}else if (newTarget == null && currentTarget == null && currentState != States.ChaseLastKnown && currentState != States.Searching){
+				currentState = States.Wander;
 			}
 		}
 
 		if(currentState == States.Absorbing){
-			drainTimer += Time.deltaTime;
-			anim.SetBool ("Run", false);
-			anim.SetBool ("Walk", false);
-			anim.SetBool ("Attack", false);
 			isDraining = true;
-			if(drainTimer > drainTime){
-				if(drainable != null){
-					if(!drainable.GetComponent<Drainable>().isEmpty){
-						drainable.GetComponent<Drainable>().Drain(drainAmount);
-						superSayianCharge += drainAmount;
-					}
-				}
-				else{
-					isDraining = false;
-					drainTimer = 0;
-					currentState = States.Wander;
-				}
+			if(drainable != null){
+				print (drainable);
+				drainable.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
+				superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
+			}else{
+				isDraining = false;
+				currentState = States.Wander;
 			}
-			if(superSayianCharge >= maxSuperSayianCharge){
+			if(superSayianCharge >= 1){
 				isSuperSayian = true;
 			}
 		}
@@ -127,10 +120,6 @@ public class CreatureAI : MonoBehaviour {
 
 		// Wandering State
 		if (currentState == States.Wander) {
-			anim.SetBool ("Searching", false);
-			anim.SetBool ("Run", false);
-			anim.SetBool ("Attack", false);
-			anim.SetBool ("Walk", true);
 			aiPath.speed = actualWalkSpeed;
 
 			if(aiPath.target == null) {
@@ -150,9 +139,6 @@ public class CreatureAI : MonoBehaviour {
 		if(currentState == States.ChasePOI){
 			currentTarget = newTarget;
 			if (currentTarget != null){
-				anim.SetBool ("Run", true);
-				anim.SetBool ("Attack", false);
-				anim.SetBool ("Walk", false);
 				aiPath.speed = actualRunSpeed;
 				aiPath.target = currentTarget.transform;
 
@@ -166,9 +152,6 @@ public class CreatureAI : MonoBehaviour {
 		if(currentState == States.ChasePlayer){
 			currentTarget = newTarget;
 			if (currentTarget != null){
-				anim.SetBool ("Run", true);
-				anim.SetBool ("Attack", false);
-				anim.SetBool ("Walk", false);
 				aiPath.speed = actualChaseSpeed;
 				aiPath.target = currentTarget.transform;
 
@@ -179,26 +162,70 @@ public class CreatureAI : MonoBehaviour {
 				}
 			}
 		}
+
+		if (currentState == States.Searching){
+			timeSearchedSoFar += Time.deltaTime;
+			if (timeSearchedSoFar > searchTime){
+				currentState = States.Wander;
+				currentTarget = null;
+				aiPath.target = null;
+			}
+		}
 		
 		// Chasing Last known Position
 		if(currentState == States.ChaseLastKnown){
 			aiPath.target = lastPosMarker.transform;
 			if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
-
-				//should probably make it rotate or something here
-
+				currentState = States.Searching;
+				timeSearchedSoFar = 0;
 				aiPath.target = null;
-				chaseTimer += Time.deltaTime;
-				anim.SetBool ("Run", false);
-				anim.SetBool ("Searching", true);
-				
-				if(chaseTimer > searchTime){
-					currentState = States.Wander;
-					currentTarget = null;
-					chaseTimer = 0;
-				}
 			}
 		}
+
+
+		UpdateAnimations();
+	}
+
+	void UpdateAnimations(){
+
+		bool runAnim = false;
+		bool idleAnim = false;
+		bool walkAnim = false;
+		bool attackAnim = false;
+		bool searchAnim = false;
+
+		if (isAttacking){
+			attackAnim = true;
+		}else{
+			if (currentState == States.Wander){
+				walkAnim = true;
+			}else if (currentState == States.ChasePOI){
+				runAnim = true;
+			}else if (currentState == States.ChasePlayer){
+				runAnim = true;
+			}else if (currentState == States.ChaseLastKnown){
+				runAnim = true;
+			}else if (currentState == States.Absorbing){
+				idleAnim = true;
+			}else if (currentState == States.Searching){
+				searchAnim = true;
+			}else if (currentState == States.Struggling){
+				idleAnim = true;
+			}else{
+				throw new UnityException("In an unexpected state that doesn't have a mapped animation: "+currentState);
+			}
+		}
+		if (idleAnim = true){
+			runAnim = false;
+			walkAnim = false;
+			attackAnim = false;
+			searchAnim = false;
+		}
+		
+		anim.SetBool("Run", runAnim);
+		anim.SetBool("Walk", walkAnim);
+		anim.SetBool ("Attack", attackAnim);
+		anim.SetBool("Searching", searchAnim);
 	}
 
 	IEnumerator Attack() {
@@ -207,7 +234,7 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool ("Attack", true);
 		isAttacking = true;
 		if (currentTarget.tag == "Player"){
-			currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			//currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 		}
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;

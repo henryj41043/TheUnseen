@@ -87,14 +87,6 @@ public class Door : Activateable {
 		}		
 		
 		isOpen = !isOpen;
-		
-		//need to do stuff to redo to pathfinding
-		
-		/*
-		Bounds oldBounds = collider.bounds;
-		transform.position = new Vector3(transform.position.x, combinedY+(-3*distToMove), transform.position.z);
-		AstarPath.active.UpdateGraphs (collider.bounds);	
-		*/
 	}
 	
 }

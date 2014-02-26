@@ -55,10 +55,14 @@ public class FiredOrb : MonoBehaviour {
 		if (launched){
 			ratioPower -= ratioLossPerSecond*Time.deltaTime;
 			if (ratioPower < dieThreshold){
-				Destroy(gameObject);	
+				KillOrb();	
 			}
 		}
 
+	}
+
+	public void KillOrb(){
+		Destroy(gameObject);	
 	}
 
 	void OnCollisionEnter(Collision c) {

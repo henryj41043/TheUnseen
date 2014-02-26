@@ -99,7 +99,6 @@ GameObject:
   - 114: {fileID: 11400000}
   - 82: {fileID: 8200002}
   - 82: {fileID: 8200000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: door_L1
   m_TagString: Untagged
@@ -479,19 +478,6 @@ MonoBehaviour:
   fullDistToMove: 10
   halfDistToMove: 2
   timeToOpen: .5
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateError: 1
-  checkTime: .200000003
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
