@@ -229,9 +229,6 @@ public class CreatureAI : MonoBehaviour {
 	}
 
 	IEnumerator Attack() {
-		anim.SetBool ("Run", false);
-		anim.SetBool ("Walk", false);
-		anim.SetBool ("Attack", true);
 		isAttacking = true;
 		if (currentTarget.tag == "Player"){
 			//currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;

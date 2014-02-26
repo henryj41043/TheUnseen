@@ -2312,7 +2312,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.148819, y: -8.38569069, z: -13.6643362}
+  m_LocalPosition: {x: 0, y: -8.38569069, z: -13.6643362}
   m_LocalScale: {x: .0239145178, y: .0239145178, z: .0239145178}
   m_Children:
   - {fileID: 400168}
@@ -3733,22 +3733,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f57dda1cf1d2a4da197c5c34ea1de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  currentTarget: {fileID: 0}
+  newTarget: {fileID: 0}
   enragedMarker: {fileID: 100270}
   walkSpeed: 3
   runSpeed: 5
-  chaseSpeed: 5
+  chaseSpeed: 7
   attackRange: 2
   attackSpeed: 1
-  minWaypointRange: 1
+  minWaypointRange: 3
   drainRange: 4
+  timeSearchedSoFar: 0
   searchTime: 3
-  drainTime: 3
   attackDamage: 25
-  drainAmount: 20
+  ratioDrainPerSecond: .400000006
   superSayianSpeedMult: 1.5
-  superSayianTime: 5
-  SSChargeDecrease: 20
-  maxSuperSayianCharge: 100
+  superSayianTime: 10
+  SSChargeDecrease: .200000003
+  superSayianCharge: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
