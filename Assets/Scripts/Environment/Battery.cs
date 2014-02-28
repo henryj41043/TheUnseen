@@ -39,7 +39,7 @@ public class Battery : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (power < maxPower){
 			GameObject chargeOrb = other.transform.gameObject;
-			if (chargeOrb.tag == "FiredOrb"){
+			if (chargeOrb.tag == "FiredOrb" && chargeOrb.GetComponent<FiredOrb>().hasLaunched()){
 				float chargePower = chargeOrb.GetComponent<FiredOrb>().ratioPower*orbToBatteryPowerRatio;
 				power += chargePower;
 				this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);

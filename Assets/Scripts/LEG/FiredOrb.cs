@@ -40,6 +40,10 @@ public class FiredOrb : MonoBehaviour {
 		orbLight.range = minLightRange + (maxLightRange-minLightRange)*ratioPower;
 	}
 
+	public bool hasLaunched(){
+		return launched;
+	}
+
 	public void Launch(){
 		launched = true;
 		transform.parent = null;

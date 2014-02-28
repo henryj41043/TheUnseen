@@ -125,7 +125,7 @@ public class CreatureAI : MonoBehaviour {
 				GetNearestWaypoint();
 				aiPath.target = currentTarget.transform;
 			}else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
-				if (currentTarget.GetComponent<Waypoint>() != null){
+				if (currentTarget != null && currentTarget.GetComponent<Waypoint>() != null){
 					currentTarget = currentTarget.GetComponent<Waypoint>().NextWaypoint();
 				}else{
 					GetNearestWaypoint ();
@@ -242,7 +242,7 @@ public class CreatureAI : MonoBehaviour {
 		}
 
 		foreach(GameObject orb in orbs){
-			if ((transform.position - orb.transform.position).magnitude < drainRange){
+			if (orb.GetComponent<FiredOrb>().hasLaunched() && (transform.position - orb.transform.position).magnitude < drainRange){
 				return orb;
 			}
 		}
