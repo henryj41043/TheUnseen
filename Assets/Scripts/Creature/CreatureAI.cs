@@ -215,16 +215,17 @@ public class CreatureAI : MonoBehaviour {
 				throw new UnityException("In an unexpected state that doesn't have a mapped animation: "+currentState);
 			}
 		}
-		if (idleAnim = true){
+
+		if (idleAnim == true){
 			runAnim = false;
 			walkAnim = false;
 			attackAnim = false;
 			searchAnim = false;
 		}
-		
+
 		anim.SetBool("Run", runAnim);
 		anim.SetBool("Walk", walkAnim);
-		anim.SetBool ("Attack", attackAnim);
+		anim.SetBool("Attack", attackAnim);
 		anim.SetBool("Searching", searchAnim);
 	}
 
@@ -288,17 +289,17 @@ public class CreatureAI : MonoBehaviour {
 			return Mathf.NegativeInfinity;
 		}
 		if(obj.tag == "Player"){
-			return 1000;
+			return Mathf.Infinity;
 		}
 		if(obj.tag == "Battery"){
-			return 100;
+			return 1.5f*(obj.transform.position-transform.position).magnitude;
 		}
 		if(obj.tag == "FiredOrb"){
-			return 10;
+			return 1f*(obj.transform.position-transform.position).magnitude;
 		}
 		return 0;
 	}
-
+	
 	void GetNearestWaypoint(){
 		GameObject[] waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
 		if (waypoints.Length > 0){
