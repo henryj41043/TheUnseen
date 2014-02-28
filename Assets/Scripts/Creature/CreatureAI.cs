@@ -26,17 +26,14 @@ public class CreatureAI : MonoBehaviour {
 	private float actualChaseSpeed;
 
 	public float attackRange = 2f;
-	public float attackSpeed = 1f;
 	public float minWaypointRange = 3f;
 	public float drainRange = 4f;
 
 	public float timeSearchedSoFar = 0f;	
 	public float searchTime = 3f;
 	
-	public int attackDamage = 25;
 	public float ratioDrainPerSecond = .4f;
 
-	private bool isAttacking = false;
 	private bool isDraining = false;
 
 	private bool isSuperSayian = false;
@@ -50,9 +47,11 @@ public class CreatureAI : MonoBehaviour {
 	private Animator anim;
 
 	CreatureSight vision;
+	AttackHandler creatureAttack;
 	
 	void Awake() {
 		vision = GetComponent<CreatureSight>();
+		creatureAttack = GetComponent<AttackHandler>();
 		lastPosMarker = new GameObject(name+"  Last Known Position Marker");
 		aiPath = GetComponent<AIPath>();
 		anim = GetComponent<Animator>();
@@ -156,13 +155,14 @@ public class CreatureAI : MonoBehaviour {
 				aiPath.target = currentTarget.transform;
 
 				if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
-					if (!isAttacking) {
-						StartCoroutine(Attack());
+					if (!creatureAttack.isAttacking) {
+						creatureAttack.Attack(currentTarget);
 					}
 				}
 			}
 		}
 
+		// Searching
 		if (currentState == States.Searching){
 			timeSearchedSoFar += Time.deltaTime;
 			if (timeSearchedSoFar > searchTime){
@@ -194,7 +194,7 @@ public class CreatureAI : MonoBehaviour {
 		bool attackAnim = false;
 		bool searchAnim = false;
 
-		if (isAttacking){
+		if (creatureAttack.isAttacking){
 			attackAnim = true;
 		}else{
 			if (currentState == States.Wander){
@@ -226,15 +226,6 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool("Walk", walkAnim);
 		anim.SetBool ("Attack", attackAnim);
 		anim.SetBool("Searching", searchAnim);
-	}
-
-	IEnumerator Attack() {
-		isAttacking = true;
-		if (currentTarget.tag == "Player"){
-			//currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
-		}
-		yield return new WaitForSeconds(attackSpeed);
-		isAttacking = false;
 	}
 
 	GameObject GetDrainable(){
