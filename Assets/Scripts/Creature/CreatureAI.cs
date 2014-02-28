@@ -72,6 +72,8 @@ public class CreatureAI : MonoBehaviour {
 				currentState = States.ChasePlayer;
 			}else if (newTarget != null){
 				currentState = States.ChasePOI;
+			}else if (newTarget == null && currentTarget == null && tempTag == "FiredOrb" && currentState == States.ChasePOI){
+				currentState = States.ChaseLastKnown;
 			}else if (newTarget == null && currentTarget == null && currentState != States.ChaseLastKnown && currentState != States.Searching){
 				currentState = States.Wander;
 			}
@@ -113,8 +115,13 @@ public class CreatureAI : MonoBehaviour {
 			actualChaseSpeed = chaseSpeed;
 		} 
 
+		string tempTag;
 		if (newTarget != null){
 			lastPosMarker.transform.position = newTarget.transform.position;
+			tempTag = currentTarget.tag;
+		}
+		else{
+			tempTag = null;
 		}
 
 		// Wandering State
