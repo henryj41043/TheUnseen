@@ -1,25 +1,76 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TODO: Clean up ugly logic required to pause/unpause player.
 public class AudioLog : Interactive {
-
-	public AudioClip audioLog;
-	public GameObject popup;
-
-	private Camera c;
+	[SerializeField] private GameObject log;
+	[SerializeField] private GameObject on;
+	[SerializeField] private GameObject hum;
+	[SerializeField] private GameObject off;
+	[SerializeField] private GameObject popup;
+	private AudioSource logAudio;
+	private AudioSource onAudio;
+	private AudioSource humAudio;
+	private AudioSource offAudio;
 
 	public override void Interact() {
-		GameObject currentLog;
-		Time.timeScale = 0;
+		StartCoroutine(DisplayLog());
+	}
 
-		c = GameObject.FindGameObjectWithTag("MainCamera").camera;
+	private AudioSource InstantiateAudioSource(GameObject prefab) {
+		GameObject go = (GameObject)Instantiate(prefab);
+		return go.GetComponent<AudioSource>();
+	}
 
-		c.GetComponent<MouseLook> ().enabled = false;
-		c.transform.parent.gameObject.GetComponent<MouseLook> ().enabled = false;
-		currentLog = Instantiate (popup) as GameObject;
-		currentLog.transform.position = c.transform.position + c.transform.forward;
-		currentLog.transform.LookAt (c.transform.position);
-		audio.clip = audioLog;
-		audio.Play();
+	private void Awake() {
+		logAudio = InstantiateAudioSource(log);
+		onAudio = InstantiateAudioSource(on);
+		offAudio = InstantiateAudioSource(off);
+		humAudio = InstantiateAudioSource(hum);
+	}
+
+	private IEnumerator PlayLog() {
+		onAudio.Play();
+		humAudio.Play();
+		yield return new WaitForSeconds(onAudio.clip.length);
+		logAudio.Play();
+		yield return new WaitForSeconds(logAudio.clip.length);
+		humAudio.Stop();
+		offAudio.Play();
+	}
+
+	private IEnumerator DisplayLog() {
+		// Assuming that MainCamera is a child of Player
+		GameObject cam = GameObject.FindWithTag("MainCamera");
+		GameObject player = cam.transform.parent.gameObject;
+
+		MouseLook cml = cam.GetComponent<MouseLook>();
+		cml.enabled = false;
+
+		MouseLook pml = player.GetComponent<MouseLook>();
+		CharacterMover pcm = player.GetComponent<CharacterMover>();
+		CameraBob pcb = player.GetComponent<CameraBob>();
+		MouseController mc = player.GetComponent<MouseController>();
+		pml.enabled = false;
+		pcm.enabled = false;
+		pcb.enabled = false;
+		mc.enabled = false;
+		
+		GameObject logText = Instantiate(popup) as GameObject;
+		logText.transform.position = cml.transform.position + cml.transform.forward;
+		logText.transform.LookAt(cml.transform.position);
+
+		StartCoroutine("PlayLog");
+		while (!Input.GetKey(KeyCode.Tab)) {
+			yield return null;
+		}
+		Destroy(logText);
+
+		mc.enabled = true;
+		pcb.enabled = true;
+		pcm.enabled = true;
+		pml.enabled = true;
+
+		cml.enabled = true;
 	}
 }

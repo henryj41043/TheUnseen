@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 131: {fileID: 13100000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: AudioLogScreen
   m_TagString: Untagged
@@ -48,17 +47,6 @@ MonoBehaviour:
   yOffset: 0
   anchor: 5
   keepAspectRatio: 0
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 151dfa7f229698f40ab1d093a6debe59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
@@ -71,9 +59,9 @@ GUITexture:
   m_PixelInset:
     serializedVersion: 2
     x: -320
-    y: -240.000015
+    y: -240
     width: 640
-    height: 480.000031
+    height: 480
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
