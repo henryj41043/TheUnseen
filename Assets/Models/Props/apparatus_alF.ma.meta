@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 2b291f6de78957748af622a99384cfe4
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: m_apparatus_alF_04:arm1
+    100004: m_apparatus_alF_04:arm2
+    100006: m_apparatus_alF_04:arm3
+    100008: m_apparatus_alF_04:light
+    100010: m_apparatus_alF_04:lightArm
+    100012: m_apparatus_alF_04:lightShape
+    100014: m_apparatus_alF_04:link1
+    100016: m_apparatus_alF_04:link2
+    100018: m_apparatus_alF_04:link3
+    100020: m_apparatus_alF_04:pCube2
+    100022: m_apparatus_alF_04:pCube2 1
+    100024: m_apparatus_alF_04:pCube2 2
+    100026: m_apparatus_alF_04:pCube3
+    100028: m_apparatus_alF_04:pCube3 1
+    100030: m_apparatus_alF_04:pCube3 2
+    100032: m_apparatus_alF_04:pCube4
+    100034: m_apparatus_alF_04:pCube4 1
+    100036: m_apparatus_alF_04:pCube4 2
+    100038: m_apparatus_alF_04:pCube5
+    100040: m_apparatus_alF_04:pCube5 1
+    100042: m_apparatus_alF_04:pCube5 2
+    100044: m_apparatus_alF_04:pCube6
+    100046: m_apparatus_alF_04:pCube6 1
+    100048: m_apparatus_alF_04:pCube6 2
+    100050: m_apparatus_alF_04:pCylinder10
+    100052: m_apparatus_alF_04:pCylinder10 1
+    100054: m_apparatus_alF_04:pCylinder10 2
+    100056: m_apparatus_alF_04:pCylinder10 3
+    100058: m_apparatus_alF_04:pCylinder11
+    100060: m_apparatus_alF_04:pCylinder11 1
+    100062: m_apparatus_alF_04:pCylinder11 2
+    100064: m_apparatus_alF_04:pCylinder12
+    100066: m_apparatus_alF_04:pCylinder12 1
+    100068: m_apparatus_alF_04:pCylinder12 2
+    100070: m_apparatus_alF_04:pCylinder13
+    100072: m_apparatus_alF_04:pCylinder13 1
+    100074: m_apparatus_alF_04:pCylinder13 2
+    100076: m_apparatus_alF_04:pCylinder14
+    100078: m_apparatus_alF_04:pCylinder14 1
+    100080: m_apparatus_alF_04:pCylinder14 2
+    100082: m_apparatus_alF_04:pSphere1
+    100084: m_apparatus_alF_04:rod
+    100086: m_apparatus_alF_04:scalpel
+    100088: m_apparatus_alF_04:tong
+    400000: //RootNode
+    400002: m_apparatus_alF_04:arm1
+    400004: m_apparatus_alF_04:arm2
+    400006: m_apparatus_alF_04:arm3
+    400008: m_apparatus_alF_04:light
+    400010: m_apparatus_alF_04:lightArm
+    400012: m_apparatus_alF_04:lightShape
+    400014: m_apparatus_alF_04:link1
+    400016: m_apparatus_alF_04:link2
+    400018: m_apparatus_alF_04:link3
+    400020: m_apparatus_alF_04:pCube2
+    400022: m_apparatus_alF_04:pCube2 1
+    400024: m_apparatus_alF_04:pCube2 2
+    400026: m_apparatus_alF_04:pCube3
+    400028: m_apparatus_alF_04:pCube3 1
+    400030: m_apparatus_alF_04:pCube3 2
+    400032: m_apparatus_alF_04:pCube4
+    400034: m_apparatus_alF_04:pCube4 1
+    400036: m_apparatus_alF_04:pCube4 2
+    400038: m_apparatus_alF_04:pCube5
+    400040: m_apparatus_alF_04:pCube5 1
+    400042: m_apparatus_alF_04:pCube5 2
+    400044: m_apparatus_alF_04:pCube6
+    400046: m_apparatus_alF_04:pCube6 1
+    400048: m_apparatus_alF_04:pCube6 2
+    400050: m_apparatus_alF_04:pCylinder10
+    400052: m_apparatus_alF_04:pCylinder10 1
+    400054: m_apparatus_alF_04:pCylinder10 2
+    400056: m_apparatus_alF_04:pCylinder10 3
+    400058: m_apparatus_alF_04:pCylinder11
+    400060: m_apparatus_alF_04:pCylinder11 1
+    400062: m_apparatus_alF_04:pCylinder11 2
+    400064: m_apparatus_alF_04:pCylinder12
+    400066: m_apparatus_alF_04:pCylinder12 1
+    400068: m_apparatus_alF_04:pCylinder12 2
+    400070: m_apparatus_alF_04:pCylinder13
+    400072: m_apparatus_alF_04:pCylinder13 1
+    400074: m_apparatus_alF_04:pCylinder13 2
+    400076: m_apparatus_alF_04:pCylinder14
+    400078: m_apparatus_alF_04:pCylinder14 1
+    400080: m_apparatus_alF_04:pCylinder14 2
+    400082: m_apparatus_alF_04:pSphere1
+    400084: m_apparatus_alF_04:rod
+    400086: m_apparatus_alF_04:scalpel
+    400088: m_apparatus_alF_04:tong
+    2300000: //RootNode
+    2300002: m_apparatus_alF_04:arm1
+    2300004: m_apparatus_alF_04:arm2
+    2300006: m_apparatus_alF_04:arm3
+    2300008: m_apparatus_alF_04:light
+    2300010: m_apparatus_alF_04:lightArm
+    2300012: m_apparatus_alF_04:lightShape
+    2300014: m_apparatus_alF_04:link1
+    2300016: m_apparatus_alF_04:link2
+    2300018: m_apparatus_alF_04:link3
+    2300020: m_apparatus_alF_04:pCube2
+    2300022: m_apparatus_alF_04:pCube2 1
+    2300024: m_apparatus_alF_04:pCube2 2
+    2300026: m_apparatus_alF_04:pCube3
+    2300028: m_apparatus_alF_04:pCube3 1
+    2300030: m_apparatus_alF_04:pCube3 2
+    2300032: m_apparatus_alF_04:pCube4
+    2300034: m_apparatus_alF_04:pCube4 1
+    2300036: m_apparatus_alF_04:pCube4 2
+    2300038: m_apparatus_alF_04:pCube5
+    2300040: m_apparatus_alF_04:pCube5 1
+    2300042: m_apparatus_alF_04:pCube5 2
+    2300044: m_apparatus_alF_04:pCube6
+    2300046: m_apparatus_alF_04:pCube6 1
+    2300048: m_apparatus_alF_04:pCube6 2
+    2300050: m_apparatus_alF_04:pCylinder10
+    2300052: m_apparatus_alF_04:pCylinder10 1
+    2300054: m_apparatus_alF_04:pCylinder10 2
+    2300056: m_apparatus_alF_04:pCylinder10 3
+    2300058: m_apparatus_alF_04:pCylinder11
+    2300060: m_apparatus_alF_04:pCylinder11 1
+    2300062: m_apparatus_alF_04:pCylinder11 2
+    2300064: m_apparatus_alF_04:pCylinder12
+    2300066: m_apparatus_alF_04:pCylinder12 1
+    2300068: m_apparatus_alF_04:pCylinder12 2
+    2300070: m_apparatus_alF_04:pCylinder13
+    2300072: m_apparatus_alF_04:pCylinder13 1
+    2300074: m_apparatus_alF_04:pCylinder13 2
+    2300076: m_apparatus_alF_04:pCylinder14
+    2300078: m_apparatus_alF_04:pCylinder14 1
+    2300080: m_apparatus_alF_04:pCylinder14 2
+    2300082: m_apparatus_alF_04:pSphere1
+    2300084: m_apparatus_alF_04:rod
+    2300086: m_apparatus_alF_04:scalpel
+    2300088: m_apparatus_alF_04:tong
+    3300000: //RootNode
+    3300002: m_apparatus_alF_04:arm1
+    3300004: m_apparatus_alF_04:arm2
+    3300006: m_apparatus_alF_04:arm3
+    3300008: m_apparatus_alF_04:light
+    3300010: m_apparatus_alF_04:lightArm
+    3300012: m_apparatus_alF_04:lightShape
+    3300014: m_apparatus_alF_04:link1
+    3300016: m_apparatus_alF_04:link2
+    3300018: m_apparatus_alF_04:link3
+    3300020: m_apparatus_alF_04:pCube2
+    3300022: m_apparatus_alF_04:pCube2 1
+    3300024: m_apparatus_alF_04:pCube2 2
+    3300026: m_apparatus_alF_04:pCube3
+    3300028: m_apparatus_alF_04:pCube3 1
+    3300030: m_apparatus_alF_04:pCube3 2
+    3300032: m_apparatus_alF_04:pCube4
+    3300034: m_apparatus_alF_04:pCube4 1
+    3300036: m_apparatus_alF_04:pCube4 2
+    3300038: m_apparatus_alF_04:pCube5
+    3300040: m_apparatus_alF_04:pCube5 1
+    3300042: m_apparatus_alF_04:pCube5 2
+    3300044: m_apparatus_alF_04:pCube6
+    3300046: m_apparatus_alF_04:pCube6 1
+    3300048: m_apparatus_alF_04:pCube6 2
+    3300050: m_apparatus_alF_04:pCylinder10
+    3300052: m_apparatus_alF_04:pCylinder10 1
+    3300054: m_apparatus_alF_04:pCylinder10 2
+    3300056: m_apparatus_alF_04:pCylinder10 3
+    3300058: m_apparatus_alF_04:pCylinder11
+    3300060: m_apparatus_alF_04:pCylinder11 1
+    3300062: m_apparatus_alF_04:pCylinder11 2
+    3300064: m_apparatus_alF_04:pCylinder12
+    3300066: m_apparatus_alF_04:pCylinder12 1
+    3300068: m_apparatus_alF_04:pCylinder12 2
+    3300070: m_apparatus_alF_04:pCylinder13
+    3300072: m_apparatus_alF_04:pCylinder13 1
+    3300074: m_apparatus_alF_04:pCylinder13 2
+    3300076: m_apparatus_alF_04:pCylinder14
+    3300078: m_apparatus_alF_04:pCylinder14 1
+    3300080: m_apparatus_alF_04:pCylinder14 2
+    3300082: m_apparatus_alF_04:pSphere1
+    3300084: m_apparatus_alF_04:rod
+    3300086: m_apparatus_alF_04:scalpel
+    3300088: m_apparatus_alF_04:tong
+    4300000: m_apparatus_alF_04:apparatusCenter
+    4300002: m_apparatus_alF_04:link1
+    4300004: m_apparatus_alF_04:arm1
+    4300006: m_apparatus_alF_04:pCylinder10
+    4300008: m_apparatus_alF_04:pCylinder11
+    4300010: m_apparatus_alF_04:pCube2
+    4300012: m_apparatus_alF_04:pCylinder12
+    4300014: m_apparatus_alF_04:pCube3
+    4300016: m_apparatus_alF_04:pCylinder13
+    4300018: m_apparatus_alF_04:pCube4
+    4300020: m_apparatus_alF_04:pCube5
+    4300022: m_apparatus_alF_04:pCylinder14
+    4300024: m_apparatus_alF_04:pCube6
+    4300026: m_apparatus_alF_04:scalpel
+    4300028: m_apparatus_alF_04:link2
+    4300030: m_apparatus_alF_04:arm2
+    4300032: m_apparatus_alF_04:pCylinder10
+    4300034: m_apparatus_alF_04:pCylinder11
+    4300036: m_apparatus_alF_04:pCube2
+    4300038: m_apparatus_alF_04:pCylinder12
+    4300040: m_apparatus_alF_04:pCube3
+    4300042: m_apparatus_alF_04:pCylinder13
+    4300044: m_apparatus_alF_04:pCube4
+    4300046: m_apparatus_alF_04:pCube5
+    4300048: m_apparatus_alF_04:pCylinder14
+    4300050: m_apparatus_alF_04:pCube6
+    4300052: m_apparatus_alF_04:rod
+    4300054: m_apparatus_alF_04:link3
+    4300056: m_apparatus_alF_04:arm3
+    4300058: m_apparatus_alF_04:pCylinder10
+    4300060: m_apparatus_alF_04:pCylinder11
+    4300062: m_apparatus_alF_04:pCube2
+    4300064: m_apparatus_alF_04:pCylinder12
+    4300066: m_apparatus_alF_04:pCube3
+    4300068: m_apparatus_alF_04:pCylinder13
+    4300070: m_apparatus_alF_04:pCube4
+    4300072: m_apparatus_alF_04:pCube5
+    4300074: m_apparatus_alF_04:pCylinder14
+    4300076: m_apparatus_alF_04:pCube6
+    4300078: m_apparatus_alF_04:tong
+    4300080: m_apparatus_alF_04:lightArm
+    4300082: m_apparatus_alF_04:pCylinder10
+    4300084: m_apparatus_alF_04:pSphere1
+    4300086: m_apparatus_alF_04:lightShape
+    4300088: m_apparatus_alF_04:light
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

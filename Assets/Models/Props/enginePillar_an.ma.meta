@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 716b72d10d03d7c47ac92abd71abe96f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: base
+    100002: cylinder1
+    100004: cylinder10
+    100006: cylinder2
+    100008: cylinder3
+    100010: cylinder4
+    100012: cylinder5
+    100014: cylinder6
+    100016: cylinder7
+    100018: cylinder8
+    100020: cylinder9
+    100022: //RootNode
+    100024: mini_pillars
+    100026: pillar
+    100028: pillar 1
+    100030: pillar 2
+    100032: pillar 3
+    100034: pillar 4
+    100036: pillar1
+    100038: pillar2
+    100040: pillar3
+    100042: pillar_base_bottom
+    100044: pillar_base_bottom 1
+    100046: pillar_base_bottom 2
+    100048: pillar_base_bottom 3
+    100050: pillar_base_top
+    100052: pillar_base_top 1
+    100054: pillar_base_top 2
+    100056: pillar_base_top 3
+    100058: propeller
+    100060: top1
+    400000: base
+    400002: cylinder1
+    400004: cylinder10
+    400006: cylinder2
+    400008: cylinder3
+    400010: cylinder4
+    400012: cylinder5
+    400014: cylinder6
+    400016: cylinder7
+    400018: cylinder8
+    400020: cylinder9
+    400022: //RootNode
+    400024: mini_pillars
+    400026: pillar
+    400028: pillar 1
+    400030: pillar 2
+    400032: pillar 3
+    400034: pillar 4
+    400036: pillar1
+    400038: pillar2
+    400040: pillar3
+    400042: pillar_base_bottom
+    400044: pillar_base_bottom 1
+    400046: pillar_base_bottom 2
+    400048: pillar_base_bottom 3
+    400050: pillar_base_top
+    400052: pillar_base_top 1
+    400054: pillar_base_top 2
+    400056: pillar_base_top 3
+    400058: propeller
+    400060: top1
+    2300000: base
+    2300002: cylinder1
+    2300004: cylinder10
+    2300006: cylinder2
+    2300008: cylinder3
+    2300010: cylinder4
+    2300012: cylinder5
+    2300014: cylinder6
+    2300016: cylinder7
+    2300018: cylinder8
+    2300020: cylinder9
+    2300022: mini_pillars
+    2300024: pillar 1
+    2300026: pillar 2
+    2300028: pillar 3
+    2300030: pillar 4
+    2300032: pillar_base_bottom
+    2300034: pillar_base_bottom 1
+    2300036: pillar_base_bottom 2
+    2300038: pillar_base_bottom 3
+    2300040: pillar_base_top
+    2300042: pillar_base_top 1
+    2300044: pillar_base_top 2
+    2300046: pillar_base_top 3
+    2300048: propeller
+    2300050: top1
+    3300000: base
+    3300002: cylinder1
+    3300004: cylinder10
+    3300006: cylinder2
+    3300008: cylinder3
+    3300010: cylinder4
+    3300012: cylinder5
+    3300014: cylinder6
+    3300016: cylinder7
+    3300018: cylinder8
+    3300020: cylinder9
+    3300022: mini_pillars
+    3300024: pillar 1
+    3300026: pillar 2
+    3300028: pillar 3
+    3300030: pillar 4
+    3300032: pillar_base_bottom
+    3300034: pillar_base_bottom 1
+    3300036: pillar_base_bottom 2
+    3300038: pillar_base_bottom 3
+    3300040: pillar_base_top
+    3300042: pillar_base_top 1
+    3300044: pillar_base_top 2
+    3300046: pillar_base_top 3
+    3300048: propeller
+    3300050: top1
+    4300000: base
+    4300002: mini_pillars
+    4300004: cylinder1
+    4300006: cylinder2
+    4300008: cylinder4
+    4300010: cylinder5
+    4300012: cylinder6
+    4300014: cylinder7
+    4300016: cylinder8
+    4300018: cylinder9
+    4300020: cylinder10
+    4300022: cylinder3
+    4300024: top1
+    4300026: pillar_base_bottom
+    4300028: pillar_base_top
+    4300030: pillar
+    4300032: pillar_base_bottom
+    4300034: pillar_base_top
+    4300036: pillar
+    4300038: pillar_base_bottom
+    4300040: pillar_base_top
+    4300042: pillar
+    4300044: pillar_base_bottom
+    4300046: pillar_base_top
+    4300048: pillar
+    4300050: propeller
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
