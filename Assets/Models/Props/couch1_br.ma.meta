@@ -60,6 +60,17 @@ ModelImporter:
     4300016: rightArmRest
     4300018: cushionRightArmRest
     4300020: leftSupport1
+    6400000: bottomSeat
+    6400002: chairBack
+    6400004: cushionLeftArmRest
+    6400006: cushionRightArmRest
+    6400008: leftArmRest
+    6400010: leftBottom
+    6400012: leftSupport
+    6400014: leftSupport1
+    6400016: rightArmRest
+    6400018: rightBottom
+    6400020: seat
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -81,10 +92,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

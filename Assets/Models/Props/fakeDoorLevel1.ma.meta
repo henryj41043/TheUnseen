@@ -144,6 +144,33 @@ ModelImporter:
     4300048: topLeftDoorDesign
     4300050: leftVerticalDoorDesign
     4300052: rightVerticalDoorDesign
+    6400000: bottomDoorInset
+    6400002: bottomLeftDoorDesign
+    6400004: bottomOfDoor
+    6400006: bottomRightDoorDesign
+    6400008: doorFrame 1
+    6400010: leftBottomDoorFramePanel
+    6400012: leftDoorFramePanelBottom
+    6400014: leftDoorFramePanelMiddle
+    6400016: leftDoorFramePanelMiddle1
+    6400018: leftTopDoorWayDesign
+    6400020: leftVerticalDoorDesign
+    6400022: leftVerticalDoorWayDesign
+    6400024: mainDoor
+    6400026: middleDoorInset
+    6400028: middleLeftDoorDesign
+    6400030: middleRightDoorDesign
+    6400032: rightBottomDoorFramePanel
+    6400034: rightDoorFramePanelBottom
+    6400036: rightDoorFramePanelMiddle
+    6400038: rightDoorFramePanelTop
+    6400040: rightTopDoorWayDesign
+    6400042: rightVerticalDoorDesign
+    6400044: rightVerticalDoorWayDesign
+    6400046: topDoorInset
+    6400048: topLeftDoorDesign
+    6400050: topLight
+    6400052: topRightDoorDesign
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -165,10 +192,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

@@ -228,6 +228,51 @@ ModelImporter:
     4300084: m_apparatus_alF_04:pSphere1
     4300086: m_apparatus_alF_04:lightShape
     4300088: m_apparatus_alF_04:light
+    6400000: //RootNode
+    6400002: m_apparatus_alF_04:arm1
+    6400004: m_apparatus_alF_04:arm2
+    6400006: m_apparatus_alF_04:arm3
+    6400008: m_apparatus_alF_04:light
+    6400010: m_apparatus_alF_04:lightArm
+    6400012: m_apparatus_alF_04:lightShape
+    6400014: m_apparatus_alF_04:link1
+    6400016: m_apparatus_alF_04:link2
+    6400018: m_apparatus_alF_04:link3
+    6400020: m_apparatus_alF_04:pCube2
+    6400022: m_apparatus_alF_04:pCube2 1
+    6400024: m_apparatus_alF_04:pCube2 2
+    6400026: m_apparatus_alF_04:pCube3
+    6400028: m_apparatus_alF_04:pCube3 1
+    6400030: m_apparatus_alF_04:pCube3 2
+    6400032: m_apparatus_alF_04:pCube4
+    6400034: m_apparatus_alF_04:pCube4 1
+    6400036: m_apparatus_alF_04:pCube4 2
+    6400038: m_apparatus_alF_04:pCube5
+    6400040: m_apparatus_alF_04:pCube5 1
+    6400042: m_apparatus_alF_04:pCube5 2
+    6400044: m_apparatus_alF_04:pCube6
+    6400046: m_apparatus_alF_04:pCube6 1
+    6400048: m_apparatus_alF_04:pCube6 2
+    6400050: m_apparatus_alF_04:pCylinder10
+    6400052: m_apparatus_alF_04:pCylinder10 1
+    6400054: m_apparatus_alF_04:pCylinder10 2
+    6400056: m_apparatus_alF_04:pCylinder10 3
+    6400058: m_apparatus_alF_04:pCylinder11
+    6400060: m_apparatus_alF_04:pCylinder11 1
+    6400062: m_apparatus_alF_04:pCylinder11 2
+    6400064: m_apparatus_alF_04:pCylinder12
+    6400066: m_apparatus_alF_04:pCylinder12 1
+    6400068: m_apparatus_alF_04:pCylinder12 2
+    6400070: m_apparatus_alF_04:pCylinder13
+    6400072: m_apparatus_alF_04:pCylinder13 1
+    6400074: m_apparatus_alF_04:pCylinder13 2
+    6400076: m_apparatus_alF_04:pCylinder14
+    6400078: m_apparatus_alF_04:pCylinder14 1
+    6400080: m_apparatus_alF_04:pCylinder14 2
+    6400082: m_apparatus_alF_04:pSphere1
+    6400084: m_apparatus_alF_04:rod
+    6400086: m_apparatus_alF_04:scalpel
+    6400088: m_apparatus_alF_04:tong
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -249,10 +294,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

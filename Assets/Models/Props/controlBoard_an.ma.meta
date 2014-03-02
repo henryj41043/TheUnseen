@@ -42,6 +42,13 @@ ModelImporter:
     4300008: control_panel_1
     4300010: control_panel_base_1
     4300012: leg
+    6400000: control_panel_1
+    6400002: control_panel_2
+    6400004: control_panel_base_1
+    6400006: control_panel_base_2
+    6400008: leg
+    6400010: table_surface
+    6400012: touchscreen_frame
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -63,10 +70,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

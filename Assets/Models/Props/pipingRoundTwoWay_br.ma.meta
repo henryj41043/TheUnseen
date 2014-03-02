@@ -12,6 +12,7 @@ ModelImporter:
     2300000: pipingRounDTwoWay
     3300000: pipingRounDTwoWay
     4300000: pipingRounDTwoWay
+    6400000: pipingRounDTwoWay
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -33,10 +34,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

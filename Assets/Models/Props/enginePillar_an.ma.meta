@@ -143,6 +143,32 @@ ModelImporter:
     4300046: pillar_base_top
     4300048: pillar
     4300050: propeller
+    6400000: base
+    6400002: cylinder1
+    6400004: cylinder10
+    6400006: cylinder2
+    6400008: cylinder3
+    6400010: cylinder4
+    6400012: cylinder5
+    6400014: cylinder6
+    6400016: cylinder7
+    6400018: cylinder8
+    6400020: cylinder9
+    6400022: mini_pillars
+    6400024: pillar 1
+    6400026: pillar 2
+    6400028: pillar 3
+    6400030: pillar 4
+    6400032: pillar_base_bottom
+    6400034: pillar_base_bottom 1
+    6400036: pillar_base_bottom 2
+    6400038: pillar_base_bottom 3
+    6400040: pillar_base_top
+    6400042: pillar_base_top 1
+    6400044: pillar_base_top 2
+    6400046: pillar_base_top 3
+    6400048: propeller
+    6400050: top1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -164,10 +190,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

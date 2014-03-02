@@ -62,6 +62,17 @@ ModelImporter:
     4300016: base2
     4300018: light_socket_1
     4300020: light_socket_2
+    6400000: bar
+    6400002: base
+    6400004: base1
+    6400006: base2
+    6400008: left_hole
+    6400010: left_lever
+    6400012: light_socket_1
+    6400014: light_socket_2
+    6400016: right_hole
+    6400018: right_lever
+    6400020: rotating_base
     7400000: Activate
     7400002: On
     7400004: Off
@@ -296,7 +307,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1

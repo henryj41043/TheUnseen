@@ -112,6 +112,27 @@ ModelImporter:
     4300036: leftLightBulb
     4300038: upButton
     4300040: downButton
+    6400000: button1
+    6400002: button2
+    6400004: button3
+    6400006: circleRail
+    6400008: downButton
+    6400010: leftLightBase
+    6400012: leftLightBulb
+    6400014: light1
+    6400016: lightBase1
+    6400018: plate
+    6400020: rightLightBase
+    6400022: rightLightBulb
+    6400024: rightLink1
+    6400026: rightLink2
+    6400028: rightLink3
+    6400030: rightLink4
+    6400032: rightLink5
+    6400034: rightLink6
+    6400036: //RootNode
+    6400038: screen
+    6400040: upButton
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -133,10 +154,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

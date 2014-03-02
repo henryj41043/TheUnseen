@@ -25,6 +25,10 @@ ModelImporter:
     4300002: Inlay_Border
     4300004: Desk
     4300006: CounterTop
+    6400000: CounterTop
+    6400002: Desk
+    6400004: Inlay_Border
+    6400006: Inlays
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -46,10 +50,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

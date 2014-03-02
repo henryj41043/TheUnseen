@@ -84,6 +84,21 @@ ModelImporter:
     4300024: top1
     4300026: top2
     4300028: bottom_molding
+    6400000: back_mesh
+    6400002: bar1
+    6400004: bar2
+    6400006: bar3
+    6400008: bar4
+    6400010: bar5
+    6400012: base
+    6400014: bevel1
+    6400016: bevel2
+    6400018: bevel3
+    6400020: bottom_molding
+    6400022: front_cover_piece
+    6400024: side_door
+    6400026: top1
+    6400028: top2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -105,10 +120,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

@@ -50,6 +50,15 @@ ModelImporter:
     4300012: rightPanelDetail2
     4300014: mainDoor
     4300016: bottom
+    6400000: bottom
+    6400002: doorFrame
+    6400004: leftPanel
+    6400006: leftPanelDetail1
+    6400008: leftPanelDetail2
+    6400010: mainDoor
+    6400012: rightPanel
+    6400014: rightPanelDetail1
+    6400016: rightPanelDetail2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -71,10 +80,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

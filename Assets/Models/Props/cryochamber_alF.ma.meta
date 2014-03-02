@@ -100,6 +100,25 @@ ModelImporter:
     4300032: door
     4300034: seatBottom
     4300036: seatTop
+    6400000: door
+    6400002: hinge1
+    6400004: hinge2
+    6400006: hinge3
+    6400008: hinge4
+    6400010: hinge5
+    6400012: hingebar
+    6400014: hingebar_cover1
+    6400016: hingebar_cover2
+    6400018: inside
+    6400020: outside
+    6400022: seatBottom
+    6400024: seatTop
+    6400026: tube1
+    6400028: tube1_inset
+    6400030: tube2
+    6400032: tube2_inset
+    6400034: tube3
+    6400036: tube3_inset
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -121,10 +140,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

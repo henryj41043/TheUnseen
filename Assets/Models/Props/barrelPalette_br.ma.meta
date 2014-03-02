@@ -114,6 +114,27 @@ ModelImporter:
     4300036: topLong2
     4300038: topLong3
     4300040: straps
+    6400000: barrel1
+    6400002: barrel10
+    6400004: barrel13
+    6400006: barrel14
+    6400008: barrel15
+    6400010: barrel2
+    6400012: barrel3
+    6400014: barrel8
+    6400016: barrel9
+    6400018: bottomLong1
+    6400020: bottomLong4
+    6400022: bottomSupport
+    6400024: bracket1
+    6400026: bracket2
+    6400028: bracket3
+    6400030: bracket4
+    6400032: middleSupport
+    6400034: straps
+    6400036: topLong1
+    6400038: topLong2
+    6400040: topLong3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -135,10 +156,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
