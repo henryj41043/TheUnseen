@@ -32,6 +32,9 @@ public class CreatureAI : MonoBehaviour {
 
 	public float timeSearchedSoFar = 0f;	
 	public float searchTime = 3f;
+
+	public float lastKnownTimer = 0f;
+	public float lastKnownTimeLimit = 5f;
 	
 	public float ratioDrainPerSecond = .4f;
 
@@ -182,6 +185,15 @@ public class CreatureAI : MonoBehaviour {
 		// Chasing Last known Position
 		if(currentState == States.ChaseLastKnown){
 			aiPath.target = lastPosMarker.transform;
+			lastKnownTimer += Time.deltaTime;
+
+			if(lastKnownTimer > lastKnownTimeLimit){
+				currentState = States.Wander;
+				lastKnownTimer = 0f;
+				aiPath.target = null;
+				currentTarget = null;
+			}
+
 			if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
 				currentState = States.Searching;
 				timeSearchedSoFar = 0;
