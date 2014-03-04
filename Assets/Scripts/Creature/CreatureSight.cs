@@ -7,6 +7,9 @@ public class CreatureSight : MonoBehaviour {
 	public float fovAngle = 180f;
 
 	public bool canSee(GameObject poi){
+		if(poi == null){
+			return false;
+		}
 
 		//first, check from center of gameobject
 		if (raycastHits (poi, poi.tag)){
