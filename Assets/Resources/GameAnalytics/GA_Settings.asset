@@ -28,7 +28,7 @@ MonoBehaviour:
   GameKey: e7628bd7b0b4a2323de2ade4c03e05c4
   SecretKey: d554764c2ea4453ab995ad091349f6773a27f335
   ApiKey: 5323838b25436b266be4b6f78b3f63020b05a9af
-  Build: 0.1
+  Build: 0.2
   DebugMode: 1
   DebugAddEvent: 0
   SendExampleGameDataToMyGame: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   HeatmapGridSize: {x: 1, y: 1, z: 1}
   CustomUserID: 0
   SubmitInterval: 10
-  InternetConnectivity: 0
+  InternetConnectivity: 1
   CurrentInspectorState: 0
   ClosedHints: 
   DisplayHints: 0

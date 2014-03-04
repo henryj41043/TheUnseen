@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: ff725648d14ba41d29742354bb98a1fb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: divider1
+    100004: divider1 1
+    100006: divider2
+    100008: divider3
+    100010: floor
+    100012: largePipe
+    100014: largePipe 1
+    100016: largePipe 2
+    100018: largePipe 3
+    100020: largePipe 4
+    100022: largePipe 5
+    100024: left
+    100026: //RootNode
+    100028: pillar1
+    100030: pillar2
+    100032: pipeHolder1
+    100034: pipeHolder1 1
+    100036: pipeHolder1 2
+    100038: pipeHolder3
+    100040: pipeHolder3 1
+    100042: wall
+    100044: wall 1
+    100046: wall 2
+    100048: wall1
+    100050: wall2
+    100052: wall3
+    100054: wallCornerPiece
+    100056: wire1
+    100058: wire1 1
+    100060: wire1 2
+    100062: wire2
+    100064: wire2 1
+    100066: wire2 2
+    100068: wireHolder1
+    100070: wireHolder1 1
+    100072: wireHolder1 2
+    100074: wireHolder2
+    100076: wireHolder2 1
+    100078: wireHolder2 2
+    100080: wireHolder3
+    100082: wireHolder3 1
+    100084: wireHolder3 2
+    100086: wires
+    100088: wires 1
+    100090: wires 2
+    400000: ceiling
+    400002: divider1
+    400004: divider1 1
+    400006: divider2
+    400008: divider3
+    400010: floor
+    400012: largePipe
+    400014: largePipe 1
+    400016: largePipe 2
+    400018: largePipe 3
+    400020: largePipe 4
+    400022: largePipe 5
+    400024: left
+    400026: //RootNode
+    400028: pillar1
+    400030: pillar2
+    400032: pipeHolder1
+    400034: pipeHolder1 1
+    400036: pipeHolder1 2
+    400038: pipeHolder3
+    400040: pipeHolder3 1
+    400042: wall
+    400044: wall 1
+    400046: wall 2
+    400048: wall1
+    400050: wall2
+    400052: wall3
+    400054: wallCornerPiece
+    400056: wire1
+    400058: wire1 1
+    400060: wire1 2
+    400062: wire2
+    400064: wire2 1
+    400066: wire2 2
+    400068: wireHolder1
+    400070: wireHolder1 1
+    400072: wireHolder1 2
+    400074: wireHolder2
+    400076: wireHolder2 1
+    400078: wireHolder2 2
+    400080: wireHolder3
+    400082: wireHolder3 1
+    400084: wireHolder3 2
+    400086: wires
+    400088: wires 1
+    400090: wires 2
+    2300000: ceiling
+    2300002: divider1
+    2300004: divider1 1
+    2300006: divider2
+    2300008: divider3
+    2300010: floor
+    2300012: largePipe 3
+    2300014: largePipe 4
+    2300016: largePipe 5
+    2300018: pillar1
+    2300020: pillar2
+    2300022: pipeHolder1
+    2300024: pipeHolder1 1
+    2300026: pipeHolder1 2
+    2300028: pipeHolder3
+    2300030: pipeHolder3 1
+    2300032: wall
+    2300034: wall 1
+    2300036: wall 2
+    2300038: wire1
+    2300040: wire1 1
+    2300042: wire1 2
+    2300044: wire2
+    2300046: wire2 1
+    2300048: wire2 2
+    2300050: wireHolder1
+    2300052: wireHolder1 1
+    2300054: wireHolder1 2
+    2300056: wireHolder2
+    2300058: wireHolder2 1
+    2300060: wireHolder2 2
+    2300062: wireHolder3
+    2300064: wireHolder3 1
+    2300066: wireHolder3 2
+    3300000: ceiling
+    3300002: divider1
+    3300004: divider1 1
+    3300006: divider2
+    3300008: divider3
+    3300010: floor
+    3300012: largePipe 3
+    3300014: largePipe 4
+    3300016: largePipe 5
+    3300018: pillar1
+    3300020: pillar2
+    3300022: pipeHolder1
+    3300024: pipeHolder1 1
+    3300026: pipeHolder1 2
+    3300028: pipeHolder3
+    3300030: pipeHolder3 1
+    3300032: wall
+    3300034: wall 1
+    3300036: wall 2
+    3300038: wire1
+    3300040: wire1 1
+    3300042: wire1 2
+    3300044: wire2
+    3300046: wire2 1
+    3300048: wire2 2
+    3300050: wireHolder1
+    3300052: wireHolder1 1
+    3300054: wireHolder1 2
+    3300056: wireHolder2
+    3300058: wireHolder2 1
+    3300060: wireHolder2 2
+    3300062: wireHolder3
+    3300064: wireHolder3 1
+    3300066: wireHolder3 2
+    4300000: pillar1
+    4300002: pillar2
+    4300004: ceiling
+    4300006: floor
+    4300008: wall
+    4300010: divider1
+    4300012: pipeHolder1
+    4300014: largePipe
+    4300016: wireHolder2
+    4300018: wireHolder3
+    4300020: wireHolder1
+    4300022: wire2
+    4300024: wire1
+    4300026: divider3
+    4300028: divider2
+    4300030: wall
+    4300032: pipeHolder1
+    4300034: pipeHolder3
+    4300036: largePipe
+    4300038: wireHolder2
+    4300040: wireHolder3
+    4300042: wireHolder1
+    4300044: wire2
+    4300046: wire1
+    4300048: wall
+    4300050: divider1
+    4300052: pipeHolder1
+    4300054: pipeHolder3
+    4300056: largePipe
+    4300058: wireHolder2
+    4300060: wireHolder3
+    4300062: wireHolder1
+    4300064: wire2
+    4300066: wire1
+    6400000: ceiling
+    6400002: divider1
+    6400004: divider1 1
+    6400006: divider2
+    6400008: divider3
+    6400010: floor
+    6400012: largePipe 3
+    6400014: largePipe 4
+    6400016: largePipe 5
+    6400018: pillar1
+    6400020: pillar2
+    6400022: pipeHolder1
+    6400024: pipeHolder1 1
+    6400026: pipeHolder1 2
+    6400028: pipeHolder3
+    6400030: pipeHolder3 1
+    6400032: wall
+    6400034: wall 1
+    6400036: wall 2
+    6400038: wire1
+    6400040: wire1 1
+    6400042: wire1 2
+    6400044: wire2
+    6400046: wire2 1
+    6400048: wire2 2
+    6400050: wireHolder1
+    6400052: wireHolder1 1
+    6400054: wireHolder1 2
+    6400056: wireHolder2
+    6400058: wireHolder2 1
+    6400060: wireHolder2 2
+    6400062: wireHolder3
+    6400064: wireHolder3 1
+    6400066: wireHolder3 2
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

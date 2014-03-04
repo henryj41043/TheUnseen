@@ -11,7 +11,7 @@ TagManager:
   - CreatureVisionTarget
   - Waypoint
   - RespawnPoint
-  - 
+  - Enemy
   - SpraycastTarget
   - Music
   - SFX

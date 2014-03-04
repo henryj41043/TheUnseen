@@ -44,8 +44,10 @@ public class Battery : MonoBehaviour {
 				power += chargePower;
 				this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);
 				this.light.range += power;
+				this.renderer.material.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 200.0f);
 				if (power >= maxPower){
 					power = maxPower;
+					this.renderer.material.color = new Color(0.0f, 255.0f, 0.0f, 200.0f);
 					PowerOn ();
 				}
 				Destroy (chargeOrb);
@@ -68,6 +70,7 @@ public class Battery : MonoBehaviour {
 			targets[i].Deactivate();
 		}
 		greenLight.SetActive(false);
+		this.renderer.material.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 200.0f);
 		drainedSoFar = 0;
 		power = 0;
 	}

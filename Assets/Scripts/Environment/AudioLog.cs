@@ -18,7 +18,7 @@ public class AudioLog : Interactive {
 	}
 
 	private AudioSource InstantiateAudioSource(GameObject prefab) {
-		GameObject go = (GameObject)Instantiate(prefab);
+		GameObject go = (GameObject)Instantiate(prefab, this.transform.position, prefab.transform.rotation);
 		return go.GetComponent<AudioSource>();
 	}
 

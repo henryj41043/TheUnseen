@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: d95e6f45548114451b0c9a534e08984f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: floor
+    100004: largePipe
+    100006: largePipe 1
+    100008: //RootNode
+    100010: pillar2
+    100012: pipeHolder2
+    100014: pipeHolder3
+    100016: wall
+    100018: wire1
+    100020: wire2
+    100022: wireHolder1
+    100024: wireHolder4
+    100026: wires
+    100028: hallway
+    100030: hallwaySide1
+    100032: polySurface1
+    100034: wall1
+    400000: ceiling
+    400002: floor
+    400004: largePipe
+    400006: largePipe 1
+    400008: //RootNode
+    400010: pillar2
+    400012: pipeHolder2
+    400014: pipeHolder3
+    400016: wall
+    400018: wire1
+    400020: wire2
+    400022: wireHolder1
+    400024: wireHolder4
+    400026: wires
+    400028: hallway
+    400030: hallwaySide1
+    400032: polySurface1
+    400034: wall1
+    2300000: ceiling
+    2300002: floor
+    2300004: largePipe 1
+    2300006: pillar2
+    2300008: pipeHolder2
+    2300010: pipeHolder3
+    2300012: wall
+    2300014: wire1
+    2300016: wire2
+    2300018: wireHolder1
+    2300020: wireHolder4
+    2300022: polySurface1
+    3300000: ceiling
+    3300002: floor
+    3300004: largePipe 1
+    3300006: pillar2
+    3300008: pipeHolder2
+    3300010: pipeHolder3
+    3300012: wall
+    3300014: wire1
+    3300016: wire2
+    3300018: wireHolder1
+    3300020: wireHolder4
+    3300022: polySurface1
+    4300000: wall
+    4300002: floor
+    4300004: ceiling
+    4300006: pipeHolder2
+    4300008: largePipe
+    4300010: pipeHolder3
+    4300012: wireHolder1
+    4300014: wire2
+    4300016: wire1
+    4300018: wireHolder4
+    4300020: pillar2
+    4300022: polySurface1
+    6400000: ceiling
+    6400002: floor
+    6400004: largePipe 1
+    6400006: pillar2
+    6400008: pipeHolder2
+    6400010: pipeHolder3
+    6400012: wall
+    6400014: wire1
+    6400016: wire2
+    6400018: wireHolder1
+    6400020: wireHolder4
+    6400022: polySurface1
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

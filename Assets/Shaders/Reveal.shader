@@ -1,7 +1,7 @@
 ﻿Shader "Unseen/Reveal" {
 Properties {
 	_MainTex ("Base (RGB) Reveal (A)", 2D) = "white" {}
-	_Cutoff ("Cutoff", Range(-0.5, 0.5)) = 0
+	_Cutoff ("Cutoff", Range(0.0, 0.5)) = 0
 }
 SubShader {
 	Tags {

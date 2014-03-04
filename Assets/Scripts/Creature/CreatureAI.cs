@@ -46,7 +46,13 @@ public class CreatureAI : MonoBehaviour {
 	private float superSayianTimer = 0;
 	public float SSChargeDecrease = .2f;
 	public float superSayianCharge = 0;
-	
+
+	public AudioSource soundSource;
+	public AudioClip absorbingSound;
+	public AudioClip attackSound;
+	public AudioClip[] growls;
+	public AudioClip[] roars;
+
 	private AIPath aiPath;
 	private Animator anim;
 
@@ -84,6 +90,10 @@ public class CreatureAI : MonoBehaviour {
 		}
 
 		if(currentState == States.Absorbing){
+			soundSource.clip = absorbingSound;
+			if (soundSource.isPlaying == false) {
+				soundSource.Play();
+			}
 			isDraining = true;
 			if(drainable != null){
 				print (drainable);
@@ -166,7 +176,11 @@ public class CreatureAI : MonoBehaviour {
 
 				if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
 					if (!creatureAttack.isAttacking) {
-						creatureAttack.Attack(currentTarget);
+						soundSource.clip = attackSound;
+						if (soundSource.isPlaying == false) {
+							soundSource.Play();
+						}
+						StartCoroutine(creatureAttack.Attack(currentTarget));
 					}
 				}
 			}

@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 89c54671f6c8541b18f0bf3b51e35f15
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: cornerPieceHallway
+    100004: floor
+    100006: left
+    100008: //RootNode
+    100010: middleDivider
+    100012: middleDivider 1
+    100014: pillar
+    100016: pillar1
+    100018: wall1
+    100020: wall1 1
+    100022: wall1 2
+    100024: wall2
+    100026: group
+    100028: group1
+    100030: hallway
+    100032: hallwaySide1
+    100034: pasted__group
+    100036: pasted__pasted__polySurface1
+    100038: pasted__polySurface1
+    100040: pasted__pPlane1
+    100042: pillarFull_polySurface1
+    100044: polySurface1
+    100046: pPlane1
+    400000: ceiling
+    400002: cornerPieceHallway
+    400004: floor
+    400006: left
+    400008: //RootNode
+    400010: middleDivider
+    400012: middleDivider 1
+    400014: pillar
+    400016: pillar1
+    400018: wall1
+    400020: wall1 1
+    400022: wall1 2
+    400024: wall2
+    400026: group
+    400028: group1
+    400030: hallway
+    400032: hallwaySide1
+    400034: pasted__group
+    400036: pasted__pasted__polySurface1
+    400038: pasted__polySurface1
+    400040: pasted__pPlane1
+    400042: pillarFull_polySurface1
+    400044: polySurface1
+    400046: pPlane1
+    2300000: ceiling
+    2300002: floor
+    2300004: middleDivider
+    2300006: middleDivider 1
+    2300008: pillar
+    2300010: pillar1
+    2300012: wall1 1
+    2300014: wall1 2
+    2300016: pasted__pasted__polySurface1
+    2300018: pasted__polySurface1
+    2300020: pasted__pPlane1
+    2300022: pillarFull_polySurface1
+    2300024: polySurface1
+    2300026: pPlane1
+    3300000: ceiling
+    3300002: floor
+    3300004: middleDivider
+    3300006: middleDivider 1
+    3300008: pillar
+    3300010: pillar1
+    3300012: wall1 1
+    3300014: wall1 2
+    3300016: pasted__pasted__polySurface1
+    3300018: pasted__polySurface1
+    3300020: pasted__pPlane1
+    3300022: pillarFull_polySurface1
+    3300024: polySurface1
+    3300026: pPlane1
+    4300000: floor
+    4300002: ceiling
+    4300004: wall1
+    4300006: middleDivider
+    4300008: wall1
+    4300010: pillar
+    4300012: middleDivider
+    4300014: pillar1
+    4300016: pPlane1
+    4300018: pasted__polySurface1
+    4300020: pasted__pPlane1
+    4300022: pasted__pasted__polySurface1
+    4300024: polySurface1
+    4300026: pillarFull_polySurface1
+    6400000: ceiling
+    6400002: floor
+    6400004: middleDivider
+    6400006: middleDivider 1
+    6400008: pillar
+    6400010: pillar1
+    6400012: wall1 1
+    6400014: wall1 2
+    6400016: pasted__pasted__polySurface1
+    6400018: pasted__polySurface1
+    6400020: pasted__pPlane1
+    6400022: pillarFull_polySurface1
+    6400024: polySurface1
+    6400026: pPlane1
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
