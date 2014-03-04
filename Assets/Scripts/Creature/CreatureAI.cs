@@ -6,41 +6,44 @@ using System.Collections.Generic;
 
 public class CreatureAI : MonoBehaviour {
 
-	public enum States {Wander, ChasePOI, ChasePlayer, ChaseLastKnown, Searching, Struggling};
+	public enum States {Wander, ChasePOI, ChasePlayer, ChaseLastKnown, Absorbing, Searching, Struggling};
 
 	public States currentState = States.Wander;
 	
 	GameObject lastPosMarker;
+
 	public GameObject currentTarget = null;
 	public GameObject newTarget = null;
 	public GameObject currentWaypoint = null;
 	public GameObject enragedMarker;
 
-	public float attackSpeed = 1f;
-	public int attackDamage = 25;
-	public bool isAttacking = false;
+	private float currentProgress = 0f;
+	private float lastProgress = 0f;
+	private float progressTimer = 0f;
+	public float checkProgressTime = 1f;
 	
 	public float walkSpeed = 3f;
 	public float runSpeed = 5f;
 	public float chaseSpeed = 7f;
+
 	private float actualWalkSpeed;
 	private float actualRunSpeed;
 	private float actualChaseSpeed;
 
+	public float attackSpeed = 1f;
+	public int attackDamage = 25;
+	public bool isAttacking = false;
+
 	public float attackRange = 2f;
 	public float minWaypointRange = 3f;
 	public float drainRange = 4f;
-	public float ratioDrainPerSecond = .4f;
-	private bool isDraining = false;
 
 	public float timeSearchedSoFar = 0f;	
 	public float searchTime = 3f;
+	
+	public float ratioDrainPerSecond = .4f;
 
-	public float lastKnownTimer = 0f;
-	public float lastKnownTimeLimit = 5f;
-
-	public float updateTargetTimer = 0f;
-	public float updateTargetTime = 1f;
+	private bool isDraining = false;
 
 	private bool isSuperSayian = false;
 	public float superSayianSpeedMult = 1.5f;
@@ -48,7 +51,13 @@ public class CreatureAI : MonoBehaviour {
 	private float superSayianTimer = 0;
 	public float SSChargeDecrease = .2f;
 	public float superSayianCharge = 0;
-	
+
+	public AudioSource soundSource;
+	public AudioClip absorbingSound;
+	public AudioClip attackSound;
+	public AudioClip[] growls;
+	public AudioClip[] roars;
+
 	private AIPath aiPath;
 	private Animator anim;
 
@@ -63,11 +72,22 @@ public class CreatureAI : MonoBehaviour {
 	}
 	
 	void Update () {
-		// update target if enough time has past
-		updateTargetTimer += Time.deltaTime;
-		if(updateTargetTimer > updateTargetTime){
-			newTarget = GetNewestTarget();
-			updateTargetTimer = 0f;
+		// Update Target
+		newTarget = GetNewestTarget();
+
+		// Update State
+		if(currentState != States.Absorbing){
+			if (newTarget == null && currentTarget != null){
+				currentState = States.ChaseLastKnown;
+			}else if (newTarget != null && newTarget.tag == "Player"){
+				currentState = States.ChasePlayer;
+			}else if (newTarget != null){
+				currentState = States.ChasePOI;
+			}else if (newTarget == null && currentTarget == null &&  currentState == States.ChasePOI){
+				currentState = States.ChaseLastKnown;
+			}else if (newTarget == null && currentTarget == null && currentState != States.ChaseLastKnown && currentState != States.Searching){
+				currentState = States.Wander;
+			}
 		}
 
 		// Check if Enraged
@@ -93,144 +113,99 @@ public class CreatureAI : MonoBehaviour {
 			actualChaseSpeed = chaseSpeed;
 		} 
 
+		if (newTarget != null){
+			lastPosMarker.transform.position = newTarget.transform.position;
+		}
+
 		// Check State
 		if (currentState == States.Wander) {
-			currentTarget = newTarget;
-			if(currentTarget == null){
-				aiPath.speed = actualWalkSpeed;
-				if(aiPath.target == null) {
-					GetNearestWaypoint();
-					aiPath.target = currentWaypoint.transform;
-				}else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
-					if (currentWaypoint != null && currentWaypoint.GetComponent<Waypoint>() != null){
-						currentWaypoint = currentWaypoint.GetComponent<Waypoint>().NextWaypoint();
-					}else{
-						GetNearestWaypoint();
-					}
-					aiPath.target = currentWaypoint.transform;
+			aiPath.speed = actualWalkSpeed;
+			if(aiPath.target == null) {
+				GetNearestWaypoint();
+				aiPath.target = currentWaypoint.transform;
+			}else if(Vector3.Distance(transform.position, aiPath.target.transform.position) < minWaypointRange) {
+				if (currentWaypoint != null && currentWaypoint.GetComponent<Waypoint>() != null){
+					currentWaypoint = currentWaypoint.GetComponent<Waypoint>().NextWaypoint();
+				}else{
+					GetNearestWaypoint ();
 				}
-			}
-			else{
-				if(currentTarget.tag == "Player"){
-					currentState = States.ChasePlayer;
-				}
-				else{
-					currentState = States.ChasePOI;
-				}
+				aiPath.target = currentWaypoint.transform;
 			}
 		}else if(currentState == States.ChasePOI){
-			if(currentTarget == newTarget){
-				if(vision.canSee(currentTarget)){
-					lastPosMarker.transform.position = currentTarget.transform.position;
-					aiPath.speed = actualRunSpeed;
-					aiPath.target = currentTarget.transform;
-					if(Vector3.Distance(transform.position, currentTarget.transform.position) < drainRange){
-						isDraining = true;
-						if(currentTarget != null){
-							currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
-							superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
-						}else{
-							isDraining = false;
-							currentState = States.Wander;
-						}
-						if(superSayianCharge >= 1){
-							isSuperSayian = true;
-						}
-					}
-				}
-				else{
-					currentState = States.ChaseLastKnown;
-					currentTarget = null;
-				}
-			}
-			else{
-				currentTarget = newTarget;
-				if(currentTarget.tag == "Player"){
-					currentState = States.ChasePlayer;
-				}
-				else{
-					currentState = States.ChasePOI;
+			currentTarget = newTarget;
+			if (currentTarget != null){
+				aiPath.speed = actualRunSpeed;
+				aiPath.target = currentTarget.transform;
+				if(Vector3.Distance(transform.position, currentTarget.transform.position) < drainRange){
+					currentState = States.Absorbing;
 				}
 			}
 		}else if(currentState == States.ChasePlayer){
-			if(currentTarget == newTarget){
-				if(vision.canSee(currentTarget)){
-					if (currentTarget != null){
-						lastPosMarker.transform.position = currentTarget.transform.position;
-						aiPath.speed = actualChaseSpeed;
-						aiPath.target = currentTarget.transform;
-						if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
-							if (!isAttacking) {
-								StartCoroutine(Attack(currentTarget));
-							}
+			currentTarget = newTarget;
+			if (currentTarget != null){
+				aiPath.speed = actualChaseSpeed;
+				aiPath.target = currentTarget.transform;
+				if(Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange) {
+					if (!isAttacking) {
+						soundSource.clip = attackSound;
+						if (soundSource.isPlaying == false) {
+							soundSource.Play();
 						}
+						StartCoroutine(Attack(currentTarget));
 					}
-					else{
-						currentState = States.Wander;
-					}
-				}
-				else{
-					currentState = States.ChaseLastKnown;
-					currentTarget = null;
-				}
-			}
-			else{
-				currentTarget = newTarget;
-				if(currentTarget.tag == "Player"){
-					currentState = States.ChasePlayer;
-				}
-				else{
-					currentState = States.ChasePOI;
 				}
 			}
 		}else if(currentState == States.ChaseLastKnown){
-			if(lastPosMarker != null){
-				if(currentTarget == newTarget){
-					aiPath.target = lastPosMarker.transform;
-					lastKnownTimer += Time.deltaTime;
-
-					if(lastKnownTimer > lastKnownTimeLimit){
-						currentState = States.Wander;
-						lastKnownTimer = 0f;
-						aiPath.target = null;
-						currentTarget = null;
-					}
-
-					if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
-						currentState = States.Searching;
-						timeSearchedSoFar = 0;
-						aiPath.target = null;
-						currentTarget = null;
-					}
-				}
-				else{
-					currentTarget = newTarget;
-					if(currentTarget.tag == "Player"){
-						currentState = States.ChasePlayer;
-					}
-					else{
-						currentState = States.ChasePOI;
-					}
-				}
+			aiPath.target = lastPosMarker.transform;
+			if(progressTimer == 0f){
+				lastProgress = (lastPosMarker.transform.position - transform.position).magnitude;
 			}
-			else{
+			progressTimer += Time.deltaTime;
+			if(progressTimer > checkProgressTime){
+				currentProgress = (lastPosMarker.transform.position - transform.position).magnitude;
+				if(currentProgress >= lastProgress){
+					currentState = States.Wander;
+					currentTarget = null;
+					aiPath.target = null;
+					newTarget = null;
+				}
+				progressTimer = 0f;
+			}
+			if(Vector3.Distance(transform.position, lastPosMarker.transform.position) < minWaypointRange){
+				currentState = States.Searching;
+				timeSearchedSoFar = 0;
+				aiPath.target = null;
+			}
+		}else if(currentState == States.Absorbing){
+			soundSource.clip = absorbingSound;
+			if (soundSource.isPlaying == false) {
+				soundSource.Play();
+			}
+			isDraining = true;
+			if(currentTarget != null){
+				currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
+				superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
+			}else{
+				isDraining = false;
 				currentState = States.Wander;
 				currentTarget = null;
-				newTarget = null;
 				aiPath.target = null;
-				lastKnownTimer = 0;
+				newTarget = null;
 			}
-		}else if(currentState == States.Searching){
+			if(superSayianCharge >= 1){
+				isSuperSayian = true;
+			}
+		}else if (currentState == States.Searching){
 			timeSearchedSoFar += Time.deltaTime;
 			if (timeSearchedSoFar > searchTime){
 				currentState = States.Wander;
 				currentTarget = null;
 				aiPath.target = null;
+				newTarget = null;
 			}
 		}
 
 		UpdateAnimations();
-		Debug.Log(currentState);
 	}
 
 	void UpdateAnimations(){
@@ -252,6 +227,8 @@ public class CreatureAI : MonoBehaviour {
 				runAnim = true;
 			}else if (currentState == States.ChaseLastKnown){
 				runAnim = true;
+			}else if (currentState == States.Absorbing){
+				idleAnim = true;
 			}else if (currentState == States.Searching){
 				searchAnim = true;
 			}else if (currentState == States.Struggling){
@@ -276,7 +253,13 @@ public class CreatureAI : MonoBehaviour {
 
 	public IEnumerator Attack(GameObject target) {
 		isAttacking = true;
-		target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+		if (target.tag == "Player"){
+			if (target.transform.parent != null) {
+				target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			} else {
+				target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			}
+		}
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;
 	}
