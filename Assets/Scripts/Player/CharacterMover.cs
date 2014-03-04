@@ -19,6 +19,8 @@ public class CharacterMover : MonoBehaviour
 
 	public LayerMask onlyPlayer;
 
+	public Animator PEG;
+
 	//Ryan Made This!
 	private CharacterStats stats;
 	private CameraBob camBob;
@@ -244,6 +246,10 @@ public class CharacterMover : MonoBehaviour
 	{
 		// We copy the actual velocity into a temporary variable that we can manipulate.
 		Vector3 velocity = movement.velocity;
+
+		if(velocity == Vector3.zero) {
+			PEG.SetBool("walking", false);
+		}
 		
 		// Update velocity based on input
 		velocity = ApplyInputVelocityChange(velocity);
@@ -744,15 +750,19 @@ public class CharacterMover : MonoBehaviour
 				movement.isSprinting = true;
 			} else {
 				movement.isSprinting = false;
+				PEG.SetBool("sprinting", false);
 				//ran out of sprint energy here
 			}
 		} else {
 			movement.isSprinting = false;
+			PEG.SetBool("sprinting", false);
 			stats.RechargeSprint();
 		}
 
 		//Ryan Made This!
 		if (movement.isSprinting) {
+			PEG.SetBool("sprinting", true);
+			PEG.SetBool ("walking", false);
 			modifiedMaxForward *= movement.sprintModifier;
 			modifiedMaxBackwards *= movement.sprintModifier;
 			modifiedMaxSideways *= movement.sprintModifier;
@@ -760,14 +770,21 @@ public class CharacterMover : MonoBehaviour
 
 		//Ryan Made This!
 		if (movement.isCrouching && grounded){
+			PEG.SetBool("sprinting", false);
 			modifiedMaxForward *= movement.crouchModifier;
 			modifiedMaxBackwards *= movement.crouchModifier;
 			modifiedMaxSideways *= movement.crouchModifier;
 		}
+		
 
 		float zAxisEllipseMultiplier = (desiredMovementDirection.z > 0 ? modifiedMaxForward : modifiedMaxBackwards) / modifiedMaxSideways;
 		Vector3 temp = new Vector3(desiredMovementDirection.x, 0, desiredMovementDirection.z / zAxisEllipseMultiplier).normalized;
 		float length = new Vector3(temp.x, 0, temp.z * zAxisEllipseMultiplier).magnitude * modifiedMaxSideways;
+
+		if (grounded && !movement.isSprinting && length > 0) {
+			PEG.SetBool ("walking", true);
+		}
+
 		return length;
 	}
 	

@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: dc2a39a96ba664ed4a1e86275151dc56
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ceiling
+    100002: floor
+    100004: hallway
+    100006: left
+    100008: //RootNode
+    100010: middleDivider
+    100012: pillar2
+    100014: pPlane1
+    100016: pPlane2
+    100018: wall1
+    100020: wall1 1
+    100022: wall2
+    100024: group1
+    100026: hallwaySide1
+    100028: pasted__polySurface2
+    100030: pillarFull_hallway
+    100032: polySurface13
+    100034: polySurface14
+    100036: polySurface2
+    100038: polySurface3
+    100040: polySurface4
+    100042: polySurface8
+    100044: polySurface9
+    400000: ceiling
+    400002: floor
+    400004: hallway
+    400006: left
+    400008: //RootNode
+    400010: middleDivider
+    400012: pillar2
+    400014: pPlane1
+    400016: pPlane2
+    400018: wall1
+    400020: wall1 1
+    400022: wall2
+    400024: group1
+    400026: hallwaySide1
+    400028: pasted__polySurface2
+    400030: pillarFull_hallway
+    400032: polySurface13
+    400034: polySurface14
+    400036: polySurface2
+    400038: polySurface3
+    400040: polySurface4
+    400042: polySurface8
+    400044: polySurface9
+    2300000: ceiling
+    2300002: floor
+    2300004: middleDivider
+    2300006: pillar2
+    2300008: pPlane1
+    2300010: pPlane2
+    2300012: wall1 1
+    2300014: polySurface13
+    2300016: polySurface14
+    2300018: polySurface3
+    2300020: polySurface4
+    2300022: polySurface8
+    2300024: polySurface9
+    3300000: ceiling
+    3300002: floor
+    3300004: middleDivider
+    3300006: pillar2
+    3300008: pPlane1
+    3300010: pPlane2
+    3300012: wall1 1
+    3300014: polySurface13
+    3300016: polySurface14
+    3300018: polySurface3
+    3300020: polySurface4
+    3300022: polySurface8
+    3300024: polySurface9
+    4300000: floor
+    4300002: ceiling
+    4300004: wall1
+    4300006: middleDivider
+    4300008: pillar2
+    4300010: pPlane1
+    4300012: pPlane2
+    4300014: polySurface3
+    4300016: polySurface4
+    4300018: polySurface8
+    4300020: polySurface9
+    4300022: polySurface13
+    4300024: polySurface14
+    6400000: ceiling
+    6400002: floor
+    6400004: middleDivider
+    6400006: pillar2
+    6400008: pPlane1
+    6400010: pPlane2
+    6400012: wall1 1
+    6400014: polySurface13
+    6400016: polySurface14
+    6400018: polySurface3
+    6400020: polySurface4
+    6400022: polySurface8
+    6400024: polySurface9
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

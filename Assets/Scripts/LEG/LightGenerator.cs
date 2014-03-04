@@ -25,13 +25,18 @@ public class LightGenerator : MonoBehaviour
 	public AudioClip PEGfire;
 	public AudioClip PEGcharge;
 
+	public Material PEGscreen;
+	private int PEGcutoff;
+	private Shader reveal;
+
 	public GameObject orbChargeLoc;
 	private GameObject chargingOrb;
 	
 	void Start () {
 		chargingOrb = null;
 		UpdateDisplay();
-		
+		reveal = Shader.Find("Unseen/Reveal");
+		PEGcutoff = Shader.PropertyToID("_Cutoff");
 	}
 
 	void Update(){
@@ -43,7 +48,7 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	void UpdateDisplay() {
-		//energyText.text = energy.ToString();
+		PEGscreen.SetFloat(PEGcutoff, (energy / maxEnergy) - 0.5f);
 	}
 
 	public void AddEnergy(float e) {

@@ -10,7 +10,11 @@ public class AttackHandler : MonoBehaviour {
 	public IEnumerator Attack(GameObject currentTarget) {
 		isAttacking = true;
 		if (currentTarget.tag == "Player"){
-			currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			if (currentTarget.transform.parent != null) {
+				currentTarget.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			} else {
+				currentTarget.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+			}
 		}
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;

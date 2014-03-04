@@ -18,7 +18,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 2, y: 1}
+      scale: {x: 1, y: 1}
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
@@ -30,19 +30,19 @@ SubstanceImporter:
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
-            offset: {x: 0, y: 1000}
+            offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
-            offset: {x: 1000, y: 1000}
+            offset: {x: 0, y: 0}
       floats:
         data:
           first:
             name: _Shininess
-          second: .363095701
+          second: .078125
       colors:
         data:
           first:
@@ -56,7 +56,7 @@ SubstanceImporter:
     - name: wallHallcool_diffuse
       alphaSource: 5
       filterMode: 1
-      aniso: 9
+      aniso: 1
       wrapMode: 0
     - name: wallHallcool_normal
       alphaSource: 0
@@ -74,6 +74,6 @@ SubstanceImporter:
       textureWidth: 512
       textureHeight: 512
       textureFormat: 0
-      loadingBehavior: 2
+      loadingBehavior: 1
   deletedPrototypes: []
   userData: 

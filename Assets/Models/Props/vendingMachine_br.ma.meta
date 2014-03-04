@@ -50,6 +50,15 @@ ModelImporter:
     4300012: smallBottom
     4300014: screen
     4300016: card_reader
+    6400000: buttons
+    6400002: card_reader
+    6400004: drinkDoor
+    6400006: largeBottom
+    6400008: LargeMachine
+    6400010: screen
+    6400012: screenFrame
+    6400014: smallBottom
+    6400016: smallMachine
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -71,10 +80,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -85,7 +94,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
