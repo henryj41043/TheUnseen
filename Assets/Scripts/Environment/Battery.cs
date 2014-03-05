@@ -36,15 +36,19 @@ public class Battery : MonoBehaviour {
 		}
 	}
 
+	void UpdateLight(){
+		this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);
+		this.light.range = 1+power;
+		this.renderer.material.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 200.0f);
+	}
+
 	void OnTriggerEnter (Collider other) {
 		if (power < maxPower){
 			GameObject chargeOrb = other.transform.gameObject;
 			if (chargeOrb.tag == "FiredOrb" && chargeOrb.GetComponent<FiredOrb>().hasLaunched()){
 				float chargePower = chargeOrb.GetComponent<FiredOrb>().ratioPower*orbToBatteryPowerRatio;
 				power += chargePower;
-				this.light.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 0.0f);
-				this.light.range += power;
-				this.renderer.material.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 200.0f);
+				UpdateLight ();
 				if (power >= maxPower){
 					power = maxPower;
 					this.renderer.material.color = new Color(0.0f, 255.0f, 0.0f, 200.0f);
@@ -70,9 +74,9 @@ public class Battery : MonoBehaviour {
 			targets[i].Deactivate();
 		}
 		greenLight.SetActive(false);
-		this.renderer.material.color = new Color(1.0f - ((power / maxPower) / 2), ((power / maxPower) / 2), 0.0f, 200.0f);
+		this.light.enabled = true;
 		drainedSoFar = 0;
 		power = 0;
+		UpdateLight ();
 	}
-
 }

@@ -136,7 +136,7 @@ public class CreatureAI : MonoBehaviour {
 			if (currentTarget != null){
 				aiPath.speed = actualRunSpeed;
 				aiPath.target = currentTarget.transform;
-				if(Vector3.Distance(transform.position, currentTarget.transform.position) < drainRange){
+				if(Vector3.Distance(transform.position, currentTarget.transform.position) < drainRange && CanDrain(currentTarget)){
 					currentState = States.Absorbing;
 				}
 			}
@@ -182,7 +182,7 @@ public class CreatureAI : MonoBehaviour {
 				soundSource.Play();
 			}
 			isDraining = true;
-			if(currentTarget != null){
+			if(currentTarget != null && CanDrain(currentTarget)){
 				if(Vector3.Distance(transform.position, currentTarget.transform.position) > drainRange){
 					currentState = States.ChasePOI;
 				}else{
@@ -267,7 +267,20 @@ public class CreatureAI : MonoBehaviour {
 		yield return new WaitForSeconds(attackSpeed);
 		isAttacking = false;
 	}
-	
+
+	public bool CanDrain(GameObject obj){
+		if (obj == null){
+			return false;
+		}
+		if (obj.GetComponent<Drainable>() == null){
+			return false;
+		}
+		if (obj.tag == "Battery" && obj.GetComponent<Battery>().power == 0){
+			return false;
+		}
+		return true;
+	}
+
 	GameObject GetNewestTarget(){
 		List<GameObject> listPOIs = new List<GameObject>();
 
