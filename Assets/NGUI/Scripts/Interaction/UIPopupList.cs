@@ -632,6 +632,10 @@ public class UIPopupList : UIWidgetContainer
 			t.localRotation = Quaternion.identity;
 			t.localScale = Vector3.one;
 
+			Vector3 temp = mChild.transform.localPosition;
+			temp.y += 30.0f;
+			mChild.transform.localPosition = temp;
+
 			// Add a sprite for the background
 			mBackground = NGUITools.AddSprite(mChild, atlas, backgroundSprite);
 			mBackground.pivot = UIWidget.Pivot.TopLeft;
@@ -642,6 +646,8 @@ public class UIPopupList : UIWidgetContainer
 			Vector4 bgPadding = mBackground.border;
 			mBgBorder = bgPadding.y;
 			mBackground.cachedTransform.localPosition = new Vector3(0f, bgPadding.y, 0f);
+
+
 
 			// Add a sprite used for the selection
 			mHighlight = NGUITools.AddSprite(mChild, atlas, highlightSprite);
@@ -715,7 +721,7 @@ public class UIPopupList : UIWidgetContainer
 			}
 
 			x += (bgPadding.x + padding.x) * 2f;
-			y -= bgPadding.y;
+			y -= bgPadding.y + 10;
 
 			// Scale the background sprite to envelop the entire set of items
 			mBackground.width = Mathf.RoundToInt(x);
@@ -723,7 +729,7 @@ public class UIPopupList : UIWidgetContainer
 
 			// Scale the highlight sprite to envelop a single item
 			float scaleFactor = 2f * atlas.pixelSize;
-			float w = x - (bgPadding.x + padding.x) * 2f + hlsp.borderLeft * scaleFactor;
+			float w = x - (bgPadding.x + padding.x) * 1.5f + hlsp.borderLeft * scaleFactor;
 			float h = labelHeight + hlspHeight * scaleFactor;
 			mHighlight.width = Mathf.RoundToInt(w);
 			mHighlight.height = Mathf.RoundToInt(h);

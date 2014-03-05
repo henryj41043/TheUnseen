@@ -6,9 +6,11 @@ using System.Collections;
 public class InputMap : MonoBehaviour {
 
 	CharacterMover mover;
+	PauseState pause;
 
 	void Awake (){
 		mover = GetComponent<CharacterMover>();
+		pause = GameObject.Find("PauseState").GetComponent<PauseState>();
 	}
 
 	// Update is called once per frame
@@ -35,6 +37,12 @@ public class InputMap : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Crouch")){
 			mover.ToggleCrouch();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			pause.Initialize();
+			pause.PauseGame(true);
 		}
 	}
 }

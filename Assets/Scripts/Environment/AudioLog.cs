@@ -7,7 +7,7 @@ public class AudioLog : Interactive {
 	[SerializeField] private GameObject on;
 	[SerializeField] private GameObject hum;
 	[SerializeField] private GameObject off;
-	[SerializeField] private GameObject popup;
+	[SerializeField] public GameObject audioLogPanel;
 	private AudioSource logAudio;
 	private AudioSource onAudio;
 	private AudioSource humAudio;
@@ -55,16 +55,19 @@ public class AudioLog : Interactive {
 		pcm.enabled = false;
 		pcb.enabled = false;
 		mc.enabled = false;
-		
-		GameObject logText = Instantiate(popup) as GameObject;
-		logText.transform.position = cml.transform.position + cml.transform.forward;
-		logText.transform.LookAt(cml.transform.position);
+		Screen.showCursor = true;
+		Screen.lockCursor = false;
+
+		NGUITools.SetActive(audioLogPanel, true);
+		//GameObject logText = Instantiate(popup) as GameObject;
+		//audioLogPanel.transform.position = cml.transform.position + cml.transform.forward;
+		//audioLogPanel.transform.LookAt(cml.transform.position);
 
 		StartCoroutine("PlayLog");
 		while (!Input.GetKey(KeyCode.Tab)) {
 			yield return null;
 		}
-		Destroy(logText);
+		//Destroy(logText);
 
 		mc.enabled = true;
 		pcb.enabled = true;

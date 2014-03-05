@@ -15,7 +15,8 @@ public class MouseController : MonoBehaviour {
 	public float minCrosshairSize;
 	public float maxCrosshairSize;
 
-	public string interactText;
+	//public string interactText;
+	public UILabel interactLabel;
 	public float interactSize;
 
 	public LightGenerator lightGenerator;
@@ -33,7 +34,7 @@ public class MouseController : MonoBehaviour {
 		Screen.showCursor = false;
 		Screen.lockCursor = true;
 		defaultCursorPos = new Rect((Screen.width - minCrosshairSize)/2, ((Screen.height - minCrosshairSize)/2), minCrosshairSize, minCrosshairSize);		
-		defaultInteractPos = new Rect((Screen.width - interactSize)/2, ((Screen.height - interactSize)/3), interactSize, interactSize);		
+		//defaultInteractPos = new Rect((Screen.width - interactSize)/2, ((Screen.height - interactSize)/3), interactSize, interactSize);		
 	}
 	
 	// Update is called once per frame
@@ -63,6 +64,11 @@ public class MouseController : MonoBehaviour {
 		}else{
 			canInteract = false;
 		}
+
+		if (canInteract)
+			NGUITools.SetActive(interactLabel.gameObject, true);
+		else
+			NGUITools.SetActive(interactLabel.gameObject, false);
 	}
 
 	void InteractChecks (){
@@ -92,6 +98,8 @@ public class MouseController : MonoBehaviour {
 			}
 		}
 	}
+
+
 	
 	void OnGUI(){		
 		if (crosshairTexture != null) {
@@ -103,9 +111,9 @@ public class MouseController : MonoBehaviour {
 				GUI.DrawTexture(defaultCursorPos, crosshairTexture);
 			}
 		}
-		if (canInteract) {
-			GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 + 50, 200, 50), interactText);
+		//if (canInteract) {
+		//	GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 + 50, 200, 50), interactText);
 			//GUI.DrawTexture(defaultInteractPos, interactTexture);
-		}
+		//}
 	}
 }
