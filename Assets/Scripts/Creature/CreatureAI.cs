@@ -183,8 +183,12 @@ public class CreatureAI : MonoBehaviour {
 			}
 			isDraining = true;
 			if(currentTarget != null){
-				currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
-				superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
+				if(Vector3.Distance(transform.position, currentTarget.transform.position) > drainRange){
+					currentState = States.ChasePOI;
+				}else{
+					currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
+					superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
+				}
 			}else{
 				isDraining = false;
 				currentState = States.Wander;

@@ -328,7 +328,6 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400008}
   - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: Enemy
@@ -3936,10 +3935,15 @@ MonoBehaviour:
   currentState: 0
   currentTarget: {fileID: 0}
   newTarget: {fileID: 0}
+  currentWaypoint: {fileID: 0}
   enragedMarker: {fileID: 100270}
+  checkProgressTime: 1
   walkSpeed: 3
   runSpeed: 5
   chaseSpeed: 7
+  attackSpeed: 1
+  attackDamage: 25
+  isAttacking: 0
   attackRange: 2
   minWaypointRange: 3
   drainRange: 4
@@ -3951,8 +3955,8 @@ MonoBehaviour:
   SSChargeDecrease: .200000003
   superSayianCharge: 0
   soundSource: {fileID: 8200000}
-  absorbingSound: {fileID: 8300000, guid: ab0453969ff0098449c3f3fed4ccd29e, type: 3}
-  attackSound: {fileID: 8300000, guid: a9907a9aea5d426438f411aea1a556f5, type: 3}
+  absorbingSound: {fileID: 0}
+  attackSound: {fileID: 0}
   growls: []
   roars: []
 --- !u!114 &11400002
@@ -4018,20 +4022,6 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c24a701fba447178d487b27a77bf08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackSpeed: 1
-  attackDamage: 50
-  isAttacking: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
