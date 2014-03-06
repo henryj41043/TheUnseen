@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: -.1209336
+        second: .5
       data:
         first:
           name: _EmissionLM
