@@ -7,7 +7,8 @@ public class AudioLog : Interactive {
 	[SerializeField] private GameObject on;
 	[SerializeField] private GameObject hum;
 	[SerializeField] private GameObject off;
-	[SerializeField] public GameObject audioLogPanel;
+
+	public GameObject audioLogPanel;
 	public bool islevel2AudioLog1;
 	public bool islevel2AudioLog2;
 	public bool islevel2AudioLog3;
@@ -16,6 +17,9 @@ public class AudioLog : Interactive {
 	private AudioSource onAudio;
 	private AudioSource humAudio;
 	private AudioSource offAudio;
+
+	void Start(){
+	}
 
 	public override void Interact() {
 		StartCoroutine("DisplayLog");

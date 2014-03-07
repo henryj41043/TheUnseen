@@ -248,7 +248,9 @@ public class CharacterMover : MonoBehaviour
 		Vector3 velocity = movement.velocity;
 
 		if(velocity == Vector3.zero) {
-			PEG.SetBool("walking", false);
+			if (PEG.gameObject.activeInHierarchy){
+				PEG.SetBool("walking", false);
+			}
 		}
 		
 		// Update velocity based on input
@@ -750,19 +752,25 @@ public class CharacterMover : MonoBehaviour
 				movement.isSprinting = true;
 			} else {
 				movement.isSprinting = false;
-				PEG.SetBool("sprinting", false);
+				if (PEG.gameObject.activeInHierarchy){
+					PEG.SetBool("sprinting", false);
+				}
 				//ran out of sprint energy here
 			}
 		} else {
 			movement.isSprinting = false;
-			PEG.SetBool("sprinting", false);
+			if (PEG.gameObject.activeInHierarchy){
+				PEG.SetBool("sprinting", false);
+			}
 			stats.RechargeSprint();
 		}
 
 		//Ryan Made This!
 		if (movement.isSprinting) {
-			PEG.SetBool("sprinting", true);
-			PEG.SetBool ("walking", false);
+			if (PEG.gameObject.activeInHierarchy){
+				PEG.SetBool("sprinting", true);
+				PEG.SetBool ("walking", false);
+			}
 			modifiedMaxForward *= movement.sprintModifier;
 			modifiedMaxBackwards *= movement.sprintModifier;
 			modifiedMaxSideways *= movement.sprintModifier;
@@ -770,7 +778,9 @@ public class CharacterMover : MonoBehaviour
 
 		//Ryan Made This!
 		if (movement.isCrouching && grounded){
-			PEG.SetBool("sprinting", false);
+			if (PEG.gameObject.activeInHierarchy){
+				PEG.SetBool("sprinting", false);
+			}
 			modifiedMaxForward *= movement.crouchModifier;
 			modifiedMaxBackwards *= movement.crouchModifier;
 			modifiedMaxSideways *= movement.crouchModifier;
@@ -782,7 +792,9 @@ public class CharacterMover : MonoBehaviour
 		float length = new Vector3(temp.x, 0, temp.z * zAxisEllipseMultiplier).magnitude * modifiedMaxSideways;
 
 		if (grounded && !movement.isSprinting && length > 0) {
-			PEG.SetBool ("walking", true);
+			if (PEG.gameObject.activeInHierarchy){
+				PEG.SetBool ("walking", true);
+			}
 		}
 
 		return length;

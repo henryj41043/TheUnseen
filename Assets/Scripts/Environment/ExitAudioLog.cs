@@ -16,6 +16,9 @@ public class ExitAudioLog : MonoBehaviour {
 		CameraBob pcb = player.GetComponent<CameraBob>();
 		MouseController mc = player.GetComponent<MouseController>();
 
+		MouseLook cml = c.GetComponent<MouseLook>();
+
+		cml.enabled = true;
 		pml.enabled = true;
 		pcm.enabled = true;
 		pcb.enabled = true;
