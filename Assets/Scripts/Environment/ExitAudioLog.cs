@@ -4,24 +4,24 @@ using System.Collections;
 public class ExitAudioLog : MonoBehaviour {
 
 	private Camera c;
-	
-	// Update is called once per frame
-//	void Update () {
-//		if (Input.GetKeyDown (KeyCode.Tab)) {
-//			Time.timeScale = 1;
-//			c = GameObject.FindGameObjectWithTag("MainCamera").camera;
-//			c.GetComponent<MouseLook> ().enabled = true;
-//			c.transform.parent.gameObject.GetComponent<MouseLook> ().enabled = true;
-//			Destroy (this.gameObject);
-//		}
-//	}
 
 	public void OnCloseClick()
 	{
 		Time.timeScale = 1;
 		c = GameObject.FindGameObjectWithTag("MainCamera").camera;
-		c.GetComponent<MouseLook> ().enabled = true;
-		c.transform.parent.gameObject.GetComponent<MouseLook> ().enabled = true;
+		GameObject player = c.transform.parent.gameObject;
+
+		MouseLook pml = player.GetComponent<MouseLook>();
+		CharacterMover pcm = player.GetComponent<CharacterMover>();
+		CameraBob pcb = player.GetComponent<CameraBob>();
+		MouseController mc = player.GetComponent<MouseController>();
+
+		pml.enabled = true;
+		pcm.enabled = true;
+		pcb.enabled = true;
+		mc.enabled = true;
+		mc.interactLabel.enabled = true;
+		mc.interactLabel.GetComponentInChildren<UISprite>().enabled = true;
 		Screen.showCursor = false;
 		Screen.lockCursor = true;
 
