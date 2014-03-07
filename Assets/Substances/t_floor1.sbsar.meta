@@ -4,7 +4,7 @@ SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 10
-    name: floor1
+    name: floorCircle
     prototypeName: floor1
     shaderName: Bumped Specular
     inputs:
@@ -95,17 +95,17 @@ SubstanceImporter:
             name: _SpecColor
           second: {r: .5, g: .5, b: .5, a: 1}
     textureParameters:
-    - name: floor1_diffuse
+    - name: floorCircle_diffuse
       alphaSource: 5
       filterMode: 1
       aniso: 9
       wrapMode: 0
-    - name: floor1_normal
+    - name: floorCircle_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: floor1_specular
+    - name: floorCircle_specular
       alphaSource: 0
       filterMode: 1
       aniso: 1

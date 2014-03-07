@@ -59,7 +59,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Contrast
       value:
-        scalar[0]: 0
+        scalar[0]: .0869999975
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0

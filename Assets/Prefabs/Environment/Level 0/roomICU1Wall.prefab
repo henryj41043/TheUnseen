@@ -241,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 20.27598, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400026}
@@ -410,10 +410,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .1953125, y: .1953125, z: .266815186, w: .469940186}
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 839446126, guid: 62c443877c638441ca1df196b39da33d, type: 3}
+  - {fileID: 2100000, guid: e81773568b6a7c6429dcc2b2fc009341, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -431,10 +431,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .1953125, y: .1953125, z: .801971436, w: -.000762939453}
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 839446126, guid: 62c443877c638441ca1df196b39da33d, type: 3}
+  - {fileID: 2100000, guid: e81773568b6a7c6429dcc2b2fc009341, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -452,10 +452,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .0361328125, y: .0361328125, z: .939311981, w: .262554169}
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 839446126, guid: 62c443877c638441ca1df196b39da33d, type: 3}
+  - {fileID: 2100000, guid: e81773568b6a7c6429dcc2b2fc009341, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -473,10 +473,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .041015625, y: .041015625, z: .146324158, w: .97542572}
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: -1196055691, guid: dfb356932748f46eba1f0ace611ee4c7, type: 3}
+  - {fileID: 2100000, guid: f70f49972ee65ca468d83ada983bb435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -494,10 +494,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .137695312, y: .137695312, z: .802196503, w: .193798065}
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: -876541855, guid: 47142b376f2af460e9d120b9d2eb7a57, type: 3}
+  - {fileID: 2100000, guid: 460092f881e4b7c4ab3daff45b43d5cf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -629,7 +629,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -643,7 +643,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -664,7 +664,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: .100000001
   m_Range: 10
   m_SpotAngle: 30
@@ -678,7 +678,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -699,7 +699,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: .100000001
   m_Range: 10
   m_SpotAngle: 30
@@ -713,7 +713,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -734,7 +734,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -748,7 +748,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -769,7 +769,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -783,7 +783,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -804,7 +804,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: .100000001
   m_Range: 10
   m_SpotAngle: 30
@@ -818,7 +818,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -839,7 +839,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: .100000001
   m_Range: 10
   m_SpotAngle: 30
@@ -853,7 +853,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -874,7 +874,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 3
-  m_Color: {r: .686274529, g: .882352948, b: 1, a: 1}
+  m_Color: {r: .566176474, g: .837316155, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -888,7 +888,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 1
+  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:

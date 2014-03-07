@@ -4,7 +4,7 @@ SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 10
-    name: floor1
+    name: sidePanel
     prototypeName: floor1
     shaderName: Bumped Specular
     inputs:
@@ -79,7 +79,7 @@ SubstanceImporter:
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
-            offset: {x: 0, y: 500}
+            offset: {x: 0, y: 0}
       floats:
         data:
           first:
@@ -95,17 +95,17 @@ SubstanceImporter:
             name: _SpecColor
           second: {r: .5, g: .5, b: .5, a: 1}
     textureParameters:
-    - name: floor1_diffuse
+    - name: sidePanel_diffuse
       alphaSource: 5
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: floor1_normal
+    - name: sidePanel_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: floor1_specular
+    - name: sidePanel_specular
       alphaSource: 0
       filterMode: 1
       aniso: 1

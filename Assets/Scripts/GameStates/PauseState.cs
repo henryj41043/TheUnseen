@@ -13,11 +13,13 @@ public class PauseState : MonoBehaviour
 
 	public void Initialize()
 	{
-		mouseController = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>();
-		mouseLook1 = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseLook>();
+		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player")) {
+			if (g.GetComponent<MouseController>() != null) {
+				mouseController = g.GetComponent<MouseController>();
+				mouseLook1 = g.GetComponent<MouseLook>();
+			}
+		}
 		mouseLook2 = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
-		print (GameObject.FindGameObjectWithTag("Player"));
-		print (mouseController);
 		tempCrossHairTexture = mouseController.crosshairTexture;
 	}
 

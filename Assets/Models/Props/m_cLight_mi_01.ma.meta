@@ -9,20 +9,36 @@ ModelImporter:
     100006: m_cLightBase_mi_01:pCube1
     100008: polySurface2
     100010: polySurface3
+    100012: light_copy:Group2
+    100014: light_copy:Group3
     400000: locator6
     400002: //RootNode
     400004: m_cLightBase_mi_01:locator6
     400006: m_cLightBase_mi_01:pCube1
     400008: polySurface2
     400010: polySurface3
+    400012: light_copy:Group2
+    400014: light_copy:Group3
     2300000: polySurface2
     2300002: polySurface3
+    2300004: light_copy:Group2
+    2300006: light_copy:Group3
+    2300008: //RootNode
     3300000: polySurface2
     3300002: polySurface3
+    3300004: light_copy:Group2
+    3300006: light_copy:Group3
+    3300008: //RootNode
     4300000: polySurface2
     4300002: polySurface3
+    4300004: light_copy:Group2
+    4300006: light_copy:Group3
+    4300008: light
     6400000: polySurface2
     6400002: polySurface3
+    6400004: light_copy:Group2
+    6400006: light_copy:Group3
+    6400008: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -6,7 +6,7 @@ SubstanceImporter:
   - serializedVersion: 10
     name: floor2Level2
     prototypeName: Galvanized_Metal
-    shaderName: Bumped Specular
+    shaderName: Unseen/Environment/Bumped Specular
     inputs:
     - name: $randomseed
       value:
@@ -96,7 +96,7 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _BumpMap
+            name: _Normal
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -106,6 +106,10 @@ SubstanceImporter:
           first:
             name: _Shininess
           second: .078125
+        data:
+          first:
+            name: _Brightness
+          second: 1
       colors:
         data:
           first:

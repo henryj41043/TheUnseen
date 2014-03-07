@@ -24,14 +24,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Normal_Intensity
       value:
-        scalar[0]: .529999971
+        scalar[0]: .888000011
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Lighting_Intensity
       value:
-        scalar[0]: .5
+        scalar[0]: .31099999
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -59,7 +59,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Contrast
       value:
-        scalar[0]: .0399999991
+        scalar[0]: .0599999987
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0

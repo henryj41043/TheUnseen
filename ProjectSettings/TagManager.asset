@@ -31,7 +31,7 @@ TagManager:
   User Layer 9: Player
   User Layer 10: Enemy
   User Layer 11: InvisibleToPlayer
-  User Layer 12: 
+  User Layer 12: DynamicLight
   User Layer 13: 
   User Layer 14: 
   User Layer 15: 
@@ -55,4 +55,8 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    userID: 1
+    uniqueID: 1189388071
     locked: 0
