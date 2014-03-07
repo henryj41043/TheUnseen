@@ -16,8 +16,26 @@ public class CameraTexture : MonoBehaviour {
 	private int tsize  = 16; // must be equal to camera's target texture size
     private Texture2D tex;
 
+    public LightmapData[] lightmapData;
+    public Texture2D[] maps;
+
 	void Start(){
 		tex = new Texture2D(tsize, tsize, TextureFormat.ARGB32, false);
+		InitLightmaps();
+	}
+
+	private void InitLightmaps(){
+	    lightmapData = new LightmapData[4];
+
+	    for(int i = 0 ; i < 4 ; i++ ){
+	        lightmapData[i] = new LightmapData();
+	    }
+
+	    for( int i = 0 ; i < 4 ; i++ )
+	    {			
+	        lightmapData[i].lightmapFar = maps[i];
+	    }
+	    LightmapSettings.lightmaps = lightmapData;
 	}
 	
 	void OnPostRender(){
@@ -27,6 +45,11 @@ public class CameraTexture : MonoBehaviour {
 	    }
 
 		if(update){
+			LightmapData[] emptyData = new LightmapData[4];
+			for(int i = 0 ; i < 4 ; i++ ){
+	        	emptyData[i] = new LightmapData();
+	    	}
+			LightmapSettings.lightmaps = emptyData;
 			update = false;
 
 			if(false){
@@ -75,6 +98,7 @@ public class CameraTexture : MonoBehaviour {
 			//Display1.material.mainTexture = tex; // use to display what the creature sees
 			//Display2.material.mainTexture = tex; // use to display what the creature sees
 		}
+		LightmapSettings.lightmaps = lightmapData;
 	}
 
 	float CompareColor(Color pixcol, Color refcol){
