@@ -3,7 +3,7 @@
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 	}
 	SubShader {
-		Tags { "RenderType"="VisionTarget2" "MyTag" = "Target2Tag" }
+		Tags { "RenderType"="VisionTarget1" "MyTag" = "Target1Tag" }
 		LOD 200
 		
 		CGPROGRAM
