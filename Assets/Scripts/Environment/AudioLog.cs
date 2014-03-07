@@ -8,13 +8,17 @@ public class AudioLog : Interactive {
 	[SerializeField] private GameObject hum;
 	[SerializeField] private GameObject off;
 	[SerializeField] public GameObject audioLogPanel;
+	public bool islevel2AudioLog1;
+	public bool islevel2AudioLog2;
+	public bool islevel2AudioLog3;
+
 	private AudioSource logAudio;
 	private AudioSource onAudio;
 	private AudioSource humAudio;
 	private AudioSource offAudio;
 
 	public override void Interact() {
-		StartCoroutine(DisplayLog());
+		StartCoroutine("DisplayLog");
 	}
 
 	private AudioSource InstantiateAudioSource(GameObject prefab) {
@@ -39,7 +43,7 @@ public class AudioLog : Interactive {
 		offAudio.Play();
 	}
 
-	private IEnumerator DisplayLog() {
+	private void DisplayLog() {
 		// Assuming that MainCamera is a child of Player
 		GameObject cam = GameObject.FindWithTag("MainCamera");
 		GameObject player = cam.transform.parent.gameObject;
@@ -51,6 +55,8 @@ public class AudioLog : Interactive {
 		CharacterMover pcm = player.GetComponent<CharacterMover>();
 		CameraBob pcb = player.GetComponent<CameraBob>();
 		MouseController mc = player.GetComponent<MouseController>();
+		mc.interactLabel.enabled = false;
+		mc.interactLabel.GetComponentInChildren<UISprite>().enabled = false;
 		pml.enabled = false;
 		pcm.enabled = false;
 		pcb.enabled = false;
@@ -59,21 +65,8 @@ public class AudioLog : Interactive {
 		Screen.lockCursor = false;
 
 		NGUITools.SetActive(audioLogPanel, true);
-		//GameObject logText = Instantiate(popup) as GameObject;
-		//audioLogPanel.transform.position = cml.transform.position + cml.transform.forward;
 		//audioLogPanel.transform.LookAt(cml.transform.position);
 
 		StartCoroutine("PlayLog");
-		while (!Input.GetKey(KeyCode.Tab)) {
-			yield return null;
-		}
-		//Destroy(logText);
-
-		mc.enabled = true;
-		pcb.enabled = true;
-		pcm.enabled = true;
-		pml.enabled = true;
-
-		cml.enabled = true;
 	}
 }
