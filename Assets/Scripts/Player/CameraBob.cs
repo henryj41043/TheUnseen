@@ -39,6 +39,7 @@ public class CameraBob : MonoBehaviour
 	}
 
 	void Update () {
+
 		if (shaking) {
 			playerCam.transform.localPosition = new Vector3(startingCamPos.x+Random.Range(0, shakeAmplitudeX), startingCamPos.y+Random.Range(0, shakeAmplitudeY), startingCamPos.z);
 		} else {
