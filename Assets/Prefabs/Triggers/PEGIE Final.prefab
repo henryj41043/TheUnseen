@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebb8c99cd1e9ac41a42d041d491fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speech: {fileID: 8300000, guid: e774cfea5dde9d84fa755fa29b75ce11, type: 3}
+  speech: {fileID: 8300000, guid: f2072cd3b4db6d24fbf002b52aa395ce, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
