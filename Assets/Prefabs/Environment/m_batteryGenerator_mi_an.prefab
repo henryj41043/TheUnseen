@@ -320,7 +320,7 @@ AudioSource:
   Mute: 0
   Priority: 10
   DopplerLevel: 1
-  MinDistance: 3
+  MinDistance: 5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
