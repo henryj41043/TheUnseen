@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 8512067cad4613948af380476f0f50b8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bottomSeat
+    100002: chairBack
+    100004: //RootNode
+    100006: cushionLeftArmRest
+    100008: cushionRightArmRest
+    100010: leftArmRest
+    100012: leftBottom
+    100014: leftSupport
+    100016: leftSupport1
+    100018: rightArmRest
+    100020: rightBottom
+    100022: seat
+    400000: bottomSeat
+    400002: chairBack
+    400004: //RootNode
+    400006: cushionLeftArmRest
+    400008: cushionRightArmRest
+    400010: leftArmRest
+    400012: leftBottom
+    400014: leftSupport
+    400016: leftSupport1
+    400018: rightArmRest
+    400020: rightBottom
+    400022: seat
+    2300000: bottomSeat
+    2300002: chairBack
+    2300004: cushionLeftArmRest
+    2300006: cushionRightArmRest
+    2300008: leftArmRest
+    2300010: leftBottom
+    2300012: leftSupport
+    2300014: leftSupport1
+    2300016: rightArmRest
+    2300018: rightBottom
+    2300020: seat
+    2300022: //RootNode
+    3300000: bottomSeat
+    3300002: chairBack
+    3300004: cushionLeftArmRest
+    3300006: cushionRightArmRest
+    3300008: leftArmRest
+    3300010: leftBottom
+    3300012: leftSupport
+    3300014: leftSupport1
+    3300016: rightArmRest
+    3300018: rightBottom
+    3300020: seat
+    3300022: //RootNode
+    4300000: seat
+    4300002: leftBottom
+    4300004: bottomSeat
+    4300006: leftArmRest
+    4300008: chairBack
+    4300010: cushionLeftArmRest
+    4300012: leftSupport
+    4300014: rightBottom
+    4300016: rightArmRest
+    4300018: cushionRightArmRest
+    4300020: leftSupport1
+    4300022: couchOBJ
+    6400000: bottomSeat
+    6400002: chairBack
+    6400004: cushionLeftArmRest
+    6400006: cushionRightArmRest
+    6400008: leftArmRest
+    6400010: leftBottom
+    6400012: leftSupport
+    6400014: leftSupport1
+    6400016: rightArmRest
+    6400018: rightBottom
+    6400020: seat
+    6400022: //RootNode
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

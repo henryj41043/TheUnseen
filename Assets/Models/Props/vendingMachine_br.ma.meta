@@ -13,6 +13,7 @@ ModelImporter:
     100014: smallBottom
     100016: smallMachine
     100018: //RootNode
+    100020: vendingMachineFrame
     400000: buttons
     400002: card_reader
     400004: drinkDoor
@@ -23,6 +24,7 @@ ModelImporter:
     400014: smallBottom
     400016: smallMachine
     400018: //RootNode
+    400020: vendingMachineFrame
     2300000: buttons
     2300002: card_reader
     2300004: drinkDoor
@@ -32,6 +34,7 @@ ModelImporter:
     2300012: screenFrame
     2300014: smallBottom
     2300016: smallMachine
+    2300018: vendingMachineFrame
     3300000: buttons
     3300002: card_reader
     3300004: drinkDoor
@@ -41,6 +44,7 @@ ModelImporter:
     3300012: screenFrame
     3300014: smallBottom
     3300016: smallMachine
+    3300018: vendingMachineFrame
     4300000: LargeMachine
     4300002: smallMachine
     4300004: screenFrame
@@ -50,6 +54,7 @@ ModelImporter:
     4300012: smallBottom
     4300014: screen
     4300016: card_reader
+    4300018: vendingMachineFrame
     6400000: buttons
     6400002: card_reader
     6400004: drinkDoor
@@ -59,6 +64,7 @@ ModelImporter:
     6400012: screenFrame
     6400014: smallBottom
     6400016: smallMachine
+    6400018: vendingMachineFrame
     9500000: //RootNode
   materials:
     importMaterials: 1

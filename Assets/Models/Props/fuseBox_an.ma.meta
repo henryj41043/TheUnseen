@@ -20,21 +20,25 @@ ModelImporter:
     2300004: flap_right
     2300006: frame
     2300008: metal_mesh
+    2300010: //RootNode
     3300000: card_reader
     3300002: flap_left
     3300004: flap_right
     3300006: frame
     3300008: metal_mesh
+    3300010: //RootNode
     4300000: metal_mesh
     4300002: frame
     4300004: flap_right
     4300006: card_reader
     4300008: flap_left
+    4300010: fuseBox
     6400000: card_reader
     6400002: flap_left
     6400004: flap_right
     6400006: frame
     6400008: metal_mesh
+    6400010: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

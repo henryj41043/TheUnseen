@@ -28,6 +28,7 @@ ModelImporter:
     2300008: leg
     2300010: table_surface
     2300012: touchscreen_frame
+    2300014: //RootNode
     3300000: control_panel_1
     3300002: control_panel_2
     3300004: control_panel_base_1
@@ -35,6 +36,7 @@ ModelImporter:
     3300008: leg
     3300010: table_surface
     3300012: touchscreen_frame
+    3300014: //RootNode
     4300000: table_surface
     4300002: touchscreen_frame
     4300004: control_panel_2
@@ -42,6 +44,7 @@ ModelImporter:
     4300008: control_panel_1
     4300010: control_panel_base_1
     4300012: leg
+    4300014: controlBoard
     6400000: control_panel_1
     6400002: control_panel_2
     6400004: control_panel_base_1
@@ -49,6 +52,7 @@ ModelImporter:
     6400008: leg
     6400010: table_surface
     6400012: touchscreen_frame
+    6400014: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class FlourescentFlicker : MonoBehaviour {
-	public AreaLightColor light;
+	public Light[] lights;
 	public float minIntensity = 0.4f;
 	public float maxIntensity = 0.5f;
 	public float threshold = 0.95f;
@@ -19,12 +19,16 @@ public class FlourescentFlicker : MonoBehaviour {
 
 	private void Update() {
 		if (Random.Range(0.0f, 1.0f) > threshold) {
-			light.Intensity = minIntensity;
+			foreach (Light l in lights) {
+				l.intensity = minIntensity;
+			}
 			if (playSound) {
 				audioSource.PlayOneShot(audioClips.GetRandom());
 			}
 		} else {
-			light.Intensity = maxIntensity;
+			foreach (Light l in lights) {
+				l.intensity = maxIntensity;
+			}
 		}
 	}
 }

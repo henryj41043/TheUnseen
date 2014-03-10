@@ -72,6 +72,7 @@ ModelImporter:
     2300036: topLong1
     2300038: topLong2
     2300040: topLong3
+    2300042: //RootNode
     3300000: barrel1
     3300002: barrel10
     3300004: barrel13
@@ -93,6 +94,7 @@ ModelImporter:
     3300036: topLong1
     3300038: topLong2
     3300040: topLong3
+    3300042: //RootNode
     4300000: barrel1
     4300002: barrel2
     4300004: barrel3
@@ -114,6 +116,7 @@ ModelImporter:
     4300036: topLong2
     4300038: topLong3
     4300040: straps
+    4300042: barrelPalette
     6400000: barrel1
     6400002: barrel10
     6400004: barrel13
@@ -135,6 +138,7 @@ ModelImporter:
     6400036: topLong1
     6400038: topLong2
     6400040: topLong3
+    6400042: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

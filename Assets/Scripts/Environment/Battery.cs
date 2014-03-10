@@ -13,6 +13,8 @@ public class Battery : MonoBehaviour {
 	private float drainedSoFar = 0;
 
 	public float orbToBatteryPowerRatio = 5f;
+	public AudioClip powerOn;
+	public AudioClip powerOff;
 
 	public Activateable[] targets;
 
@@ -61,6 +63,7 @@ public class Battery : MonoBehaviour {
 	}
 
 	void PowerOn(){
+		audio.PlayOneShot(powerOn);
 		for (int i = 0; i < targets.Length; i++){
 			targets[i].Activate();
 		}
@@ -70,6 +73,7 @@ public class Battery : MonoBehaviour {
 	}
 
 	public void PowerOff(){
+		audio.PlayOneShot(powerOff);
 		for (int i = 0; i < targets.Length; i++){
 			targets[i].Deactivate();
 		}

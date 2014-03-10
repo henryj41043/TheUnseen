@@ -1,32 +1,32 @@
 fileFormatVersion: 2
-guid: 20af1223bb746224cb480c8d0ee38493
+guid: 59bcce7ae82266f4981f36bb5701848c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: base
-    100002: display
-    100004: interactiveKiosk
+    100000: Base
+    100002: Display
+    100004: left
     100006: //RootNode
-    100008: left
-    100010: screen
-    400000: base
-    400002: display
-    400004: interactiveKiosk
+    100008: Monitor
+    100010: polySurface1
+    400000: Base
+    400002: Display
+    400004: left
     400006: //RootNode
-    400008: left
-    400010: screen
-    2300000: base
-    2300002: display
-    2300004: screen
-    3300000: base
-    3300002: display
-    3300004: screen
-    4300000: display
-    4300002: screen
-    4300004: base
-    6400000: base
-    6400002: display
-    6400004: screen
+    400008: Monitor
+    400010: polySurface1
+    2300000: Base
+    2300002: Display
+    2300004: polySurface1
+    3300000: Base
+    3300002: Display
+    3300004: polySurface1
+    4300000: Display
+    4300002: Base
+    4300004: polySurface1
+    6400000: Base
+    6400002: Display
+    6400004: polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -23,6 +23,27 @@ ModelImporter:
     100034: tube2_inset
     100036: tube3
     100038: tube3_inset
+    100040: cryochamber
+    100042: joint1
+    100044: joint2
+    100046: joint3
+    100048: base
+    100050: capsule
+    100052: chair
+    100054: cryo:Group10
+    100056: cryo:Group11
+    100058: cryo:Group12
+    100060: cryo:Group15
+    100062: cryo:Group16
+    100064: cryo:Group3
+    100066: cryo:Group4
+    100068: cryo:Group5
+    100070: cryo:Group6
+    100072: cryo:Group9
+    100074: hinge
+    100076: pipeHoles
+    100078: pipes
+    100080: straps
     400000: //RootNode
     400002: door
     400004: hinge1
@@ -43,6 +64,27 @@ ModelImporter:
     400034: tube2_inset
     400036: tube3
     400038: tube3_inset
+    400040: cryochamber
+    400042: joint1
+    400044: joint2
+    400046: joint3
+    400048: base
+    400050: capsule
+    400052: chair
+    400054: cryo:Group10
+    400056: cryo:Group11
+    400058: cryo:Group12
+    400060: cryo:Group15
+    400062: cryo:Group16
+    400064: cryo:Group3
+    400066: cryo:Group4
+    400068: cryo:Group5
+    400070: cryo:Group6
+    400072: cryo:Group9
+    400074: hinge
+    400076: pipeHoles
+    400078: pipes
+    400080: straps
     2300000: door
     2300002: hinge1
     2300004: hinge2
@@ -62,6 +104,19 @@ ModelImporter:
     2300032: tube2_inset
     2300034: tube3
     2300036: tube3_inset
+    2300038: base
+    2300040: capsule
+    2300042: cryo:Group10
+    2300044: cryo:Group11
+    2300046: cryo:Group12
+    2300048: cryo:Group15
+    2300050: cryo:Group16
+    2300052: cryo:Group3
+    2300054: cryo:Group4
+    2300056: cryo:Group5
+    2300058: cryo:Group6
+    2300060: cryo:Group9
+    2300062: hinge
     3300000: door
     3300002: hinge1
     3300004: hinge2
@@ -81,6 +136,19 @@ ModelImporter:
     3300032: tube2_inset
     3300034: tube3
     3300036: tube3_inset
+    3300038: base
+    3300040: capsule
+    3300042: cryo:Group10
+    3300044: cryo:Group11
+    3300046: cryo:Group12
+    3300048: cryo:Group15
+    3300050: cryo:Group16
+    3300052: cryo:Group3
+    3300054: cryo:Group4
+    3300056: cryo:Group5
+    3300058: cryo:Group6
+    3300060: cryo:Group9
+    3300062: hinge
     4300000: tube3_inset
     4300002: tube1_inset
     4300004: tube2_inset
@@ -100,6 +168,19 @@ ModelImporter:
     4300032: door
     4300034: seatBottom
     4300036: seatTop
+    4300038: hinge
+    4300040: base
+    4300042: capsule
+    4300044: cryo:Group16
+    4300046: cryo:Group15
+    4300048: cryo:Group12
+    4300050: cryo:Group11
+    4300052: cryo:Group6
+    4300054: cryo:Group9
+    4300056: cryo:Group10
+    4300058: cryo:Group5
+    4300060: cryo:Group4
+    4300062: cryo:Group3
     6400000: door
     6400002: hinge1
     6400004: hinge2
@@ -119,7 +200,27 @@ ModelImporter:
     6400032: tube2_inset
     6400034: tube3
     6400036: tube3_inset
+    6400038: base
+    6400040: capsule
+    6400042: cryo:Group10
+    6400044: cryo:Group11
+    6400046: cryo:Group12
+    6400048: cryo:Group15
+    6400050: cryo:Group16
+    6400052: cryo:Group3
+    6400054: cryo:Group4
+    6400056: cryo:Group5
+    6400058: cryo:Group6
+    6400060: cryo:Group9
+    6400062: hinge
+    7400000: OpenDoor
     9500000: //RootNode
+    11100000: //RootNode
+    13700000: door
+    13700002: hinge4
+    13700004: hinge5
+    13700006: hingebar_cover1
+    13700008: hingebar_cover2
   materials:
     importMaterials: 1
     materialName: 0
@@ -134,7 +235,81 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: OpenDoor
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cryochamber
+        weight: 1
+      - path: cryochamber/door
+        weight: 1
+      - path: cryochamber/hinge1
+        weight: 1
+      - path: cryochamber/hinge2
+        weight: 1
+      - path: cryochamber/hinge3
+        weight: 1
+      - path: cryochamber/hinge4
+        weight: 1
+      - path: cryochamber/hinge5
+        weight: 1
+      - path: cryochamber/hingebar
+        weight: 1
+      - path: cryochamber/hingebar_cover1
+        weight: 1
+      - path: cryochamber/hingebar_cover2
+        weight: 1
+      - path: cryochamber/inside
+        weight: 1
+      - path: cryochamber/outside
+        weight: 1
+      - path: cryochamber/seatBottom
+        weight: 1
+      - path: cryochamber/seatTop
+        weight: 1
+      - path: cryochamber/tube1
+        weight: 1
+      - path: cryochamber/tube1_inset
+        weight: 1
+      - path: cryochamber/tube2
+        weight: 1
+      - path: cryochamber/tube2_inset
+        weight: 1
+      - path: cryochamber/tube3
+        weight: 1
+      - path: cryochamber/tube3_inset
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/joint2
+        weight: 1
+      - path: joint1/joint2/joint3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -170,6 +345,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 

@@ -26,6 +26,29 @@ ModelImporter:
     100040: screen
     100042: slideDoor
     100044: upButton
+    100046: body
+    100048: ceilingLight
+    100050: ceilingLightRim
+    100052: door1
+    100054: door1Part1
+    100056: door1Part2
+    100058: door1Part3
+    100060: door2
+    100062: door2Part1
+    100064: door2Part2
+    100066: door2Part3
+    100068: insideButton1
+    100070: insideButton2
+    100072: insideButton3
+    100074: light1Rim
+    100076: light2
+    100078: light2Rim
+    100080: outerButton1
+    100082: outerButton2
+    100084: railing
+    100086: touchPanel
+    100088: touchScreen
+    100090: wallEle:wall
     400000: button1
     400002: button2
     400004: button3
@@ -49,6 +72,29 @@ ModelImporter:
     400040: screen
     400042: slideDoor
     400044: upButton
+    400046: body
+    400048: ceilingLight
+    400050: ceilingLightRim
+    400052: door1
+    400054: door1Part1
+    400056: door1Part2
+    400058: door1Part3
+    400060: door2
+    400062: door2Part1
+    400064: door2Part2
+    400066: door2Part3
+    400068: insideButton1
+    400070: insideButton2
+    400072: insideButton3
+    400074: light1Rim
+    400076: light2
+    400078: light2Rim
+    400080: outerButton1
+    400082: outerButton2
+    400084: railing
+    400086: touchPanel
+    400088: touchScreen
+    400090: wallEle:wall
     2300000: button1
     2300002: button2
     2300004: button3
@@ -70,6 +116,27 @@ ModelImporter:
     2300036: //RootNode
     2300038: screen
     2300040: upButton
+    2300042: body
+    2300044: ceilingLight
+    2300046: ceilingLightRim
+    2300048: door1Part1
+    2300050: door1Part2
+    2300052: door1Part3
+    2300054: door2Part1
+    2300056: door2Part2
+    2300058: door2Part3
+    2300060: insideButton1
+    2300062: insideButton2
+    2300064: insideButton3
+    2300066: light1Rim
+    2300068: light2
+    2300070: light2Rim
+    2300072: outerButton1
+    2300074: outerButton2
+    2300076: railing
+    2300078: touchPanel
+    2300080: touchScreen
+    2300082: wallEle:wall
     3300000: button1
     3300002: button2
     3300004: button3
@@ -91,6 +158,27 @@ ModelImporter:
     3300036: //RootNode
     3300038: screen
     3300040: upButton
+    3300042: body
+    3300044: ceilingLight
+    3300046: ceilingLightRim
+    3300048: door1Part1
+    3300050: door1Part2
+    3300052: door1Part3
+    3300054: door2Part1
+    3300056: door2Part2
+    3300058: door2Part3
+    3300060: insideButton1
+    3300062: insideButton2
+    3300064: insideButton3
+    3300066: light1Rim
+    3300068: light2
+    3300070: light2Rim
+    3300072: outerButton1
+    3300074: outerButton2
+    3300076: railing
+    3300078: touchPanel
+    3300080: touchScreen
+    3300082: wallEle:wall
     4300000: rooundElevator
     4300002: plate
     4300004: button1
@@ -112,6 +200,27 @@ ModelImporter:
     4300036: leftLightBulb
     4300038: upButton
     4300040: downButton
+    4300042: body
+    4300044: touchPanel
+    4300046: insideButton1
+    4300048: insideButton2
+    4300050: insideButton3
+    4300052: touchScreen
+    4300054: ceilingLightRim
+    4300056: ceilingLight
+    4300058: railing
+    4300060: light2Rim
+    4300062: light2
+    4300064: light1Rim
+    4300066: outerButton2
+    4300068: outerButton1
+    4300070: wallEle:wall
+    4300072: door2Part1
+    4300074: door2Part2
+    4300076: door2Part3
+    4300078: door1Part3
+    4300080: door1Part2
+    4300082: door1Part1
     6400000: button1
     6400002: button2
     6400004: button3
@@ -133,7 +242,31 @@ ModelImporter:
     6400036: //RootNode
     6400038: screen
     6400040: upButton
+    6400042: body
+    6400044: ceilingLight
+    6400046: ceilingLightRim
+    6400048: door1Part1
+    6400050: door1Part2
+    6400052: door1Part3
+    6400054: door2Part1
+    6400056: door2Part2
+    6400058: door2Part3
+    6400060: insideButton1
+    6400062: insideButton2
+    6400064: insideButton3
+    6400066: light1Rim
+    6400068: light2
+    6400070: light2Rim
+    6400072: outerButton1
+    6400074: outerButton2
+    6400076: railing
+    6400078: touchPanel
+    6400080: touchScreen
+    6400082: wallEle:wall
+    7400000: Open
+    7400002: Close
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -148,7 +281,159 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Open
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: ceilingLight
+        weight: 1
+      - path: ceilingLightRim
+        weight: 1
+      - path: door1
+        weight: 1
+      - path: door1/door1Part1
+        weight: 1
+      - path: door1/door1Part2
+        weight: 1
+      - path: door1/door1Part3
+        weight: 1
+      - path: door2
+        weight: 1
+      - path: door2/door2Part1
+        weight: 1
+      - path: door2/door2Part2
+        weight: 1
+      - path: door2/door2Part3
+        weight: 1
+      - path: insideButton1
+        weight: 1
+      - path: insideButton2
+        weight: 1
+      - path: insideButton3
+        weight: 1
+      - path: light1
+        weight: 1
+      - path: light1Rim
+        weight: 1
+      - path: light2
+        weight: 1
+      - path: light2Rim
+        weight: 1
+      - path: outerButton1
+        weight: 1
+      - path: outerButton2
+        weight: 1
+      - path: railing
+        weight: 1
+      - path: touchPanel
+        weight: 1
+      - path: touchScreen
+        weight: 1
+      - path: wallEle:wall
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Close
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: ceilingLight
+        weight: 1
+      - path: ceilingLightRim
+        weight: 1
+      - path: door1
+        weight: 1
+      - path: door1/door1Part1
+        weight: 1
+      - path: door1/door1Part2
+        weight: 1
+      - path: door1/door1Part3
+        weight: 1
+      - path: door2
+        weight: 1
+      - path: door2/door2Part1
+        weight: 1
+      - path: door2/door2Part2
+        weight: 1
+      - path: door2/door2Part3
+        weight: 1
+      - path: insideButton1
+        weight: 1
+      - path: insideButton2
+        weight: 1
+      - path: insideButton3
+        weight: 1
+      - path: light1
+        weight: 1
+      - path: light1Rim
+        weight: 1
+      - path: light2
+        weight: 1
+      - path: light2Rim
+        weight: 1
+      - path: outerButton1
+        weight: 1
+      - path: outerButton2
+        weight: 1
+      - path: railing
+        weight: 1
+      - path: touchPanel
+        weight: 1
+      - path: touchScreen
+        weight: 1
+      - path: wallEle:wall
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -184,6 +469,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 

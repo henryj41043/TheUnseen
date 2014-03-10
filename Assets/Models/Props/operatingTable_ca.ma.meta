@@ -11,12 +11,16 @@ ModelImporter:
     400004: //RootNode
     2300000: base
     2300002: cushion
+    2300004: //RootNode
     3300000: base
     3300002: cushion
+    3300004: //RootNode
     4300000: base
     4300002: cushion
+    4300004: operatingTable
     6400000: base
     6400002: cushion
+    6400004: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

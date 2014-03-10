@@ -101,21 +101,21 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Outline
       value:
-        scalar[0]: 1.23000002
+        scalar[0]: 1.00999999
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Pattern_Size_X
       value:
-        scalar[0]: 25
+        scalar[0]: 50
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Pattern_Size_Y
       value:
-        scalar[0]: 25
+        scalar[0]: 50
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -136,7 +136,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Age
       value:
-        scalar[0]: .5
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -159,7 +159,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateAllOutputs: 0
+      generateAllOutputs: 1
       animationUpdateRate: 42
     materialProperties:
       serializedVersion: 2

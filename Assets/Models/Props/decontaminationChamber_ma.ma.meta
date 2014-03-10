@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: 300aba9c8810650439b312ef3bc513a8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bottomBracket1
+    100002: bottomBracket2
+    100004: BottomHinge
+    100006: BottomHinge 1
+    100008: BottomHinge_Arrow
+    100010: BottomHinge_Arrow1
+    100012: BottomHinge_Base
+    100014: BottomHinge_Base 1
+    100016: BottomHinge_Cylinder
+    100018: BottomHinge_Cylinder 1
+    100020: //RootNode
+    100022: Display1
+    100024: Display2
+    100026: Door1
+    100028: Door1_Hinges
+    100030: Door2
+    100032: Door2_Hinges
+    100034: Doors
+    100036: MiddleHinge
+    100038: MiddleHinge 1
+    100040: MiddleHinge_Arrow
+    100042: MiddleHinge_Arrow1
+    100044: MiddleHinge_Base
+    100046: MiddleHinge_Base 1
+    100048: MiddleHinge_Cylinder
+    100050: MiddleHinge_Cylinder 1
+    100052: Room
+    100054: TopHinge
+    100056: TopHinge 1
+    100058: TopHinge_Arrow
+    100060: TopHinge_Arrow1
+    100062: TopHinge_Base
+    100064: TopHinge_Base 1
+    100066: TopHinge_Cylinder
+    100068: TopHinge_Cylinder 1
+    100070: wheel1
+    100072: wheel2
+    100074: Base
+    100076: base
+    100078: Base 1
+    100080: base2
+    100082: baseBevel
+    100084: card_reader1
+    100086: card_reader2
+    100088: cylinder1
+    100090: floorMounts
+    100092: Latch1
+    100094: Latch2
+    100096: LatchCylinder
+    100098: LatchCylinder 1
+    100100: LatchHandle
+    100102: LatchHandle 1
+    100104: pipe
+    100106: Second
+    100108: Second 1
+    100110: sprinkler
+    100112: sprinklerArms
+    100114: sprinklerCylinder
+    100116: sprinklerTips
+    100118: Third
+    100120: Third 1
+    100122: wallBracket
+    400000: bottomBracket1
+    400002: bottomBracket2
+    400004: BottomHinge
+    400006: BottomHinge 1
+    400008: BottomHinge_Arrow
+    400010: BottomHinge_Arrow1
+    400012: BottomHinge_Base
+    400014: BottomHinge_Base 1
+    400016: BottomHinge_Cylinder
+    400018: BottomHinge_Cylinder 1
+    400020: //RootNode
+    400022: Display1
+    400024: Display2
+    400026: Door1
+    400028: Door1_Hinges
+    400030: Door2
+    400032: Door2_Hinges
+    400034: Doors
+    400036: MiddleHinge
+    400038: MiddleHinge 1
+    400040: MiddleHinge_Arrow
+    400042: MiddleHinge_Arrow1
+    400044: MiddleHinge_Base
+    400046: MiddleHinge_Base 1
+    400048: MiddleHinge_Cylinder
+    400050: MiddleHinge_Cylinder 1
+    400052: Room
+    400054: TopHinge
+    400056: TopHinge 1
+    400058: TopHinge_Arrow
+    400060: TopHinge_Arrow1
+    400062: TopHinge_Base
+    400064: TopHinge_Base 1
+    400066: TopHinge_Cylinder
+    400068: TopHinge_Cylinder 1
+    400070: wheel1
+    400072: wheel2
+    400074: Base
+    400076: base
+    400078: Base 1
+    400080: base2
+    400082: baseBevel
+    400084: card_reader1
+    400086: card_reader2
+    400088: cylinder1
+    400090: floorMounts
+    400092: Latch1
+    400094: Latch2
+    400096: LatchCylinder
+    400098: LatchCylinder 1
+    400100: LatchHandle
+    400102: LatchHandle 1
+    400104: pipe
+    400106: Second
+    400108: Second 1
+    400110: sprinkler
+    400112: sprinklerArms
+    400114: sprinklerCylinder
+    400116: sprinklerTips
+    400118: Third
+    400120: Third 1
+    400122: wallBracket
+    2300000: bottomBracket1
+    2300002: bottomBracket2
+    2300004: BottomHinge_Arrow
+    2300006: BottomHinge_Arrow1
+    2300008: BottomHinge_Base
+    2300010: BottomHinge_Base 1
+    2300012: BottomHinge_Cylinder
+    2300014: BottomHinge_Cylinder 1
+    2300016: Display1
+    2300018: Display2
+    2300020: Door1
+    2300022: Door2
+    2300024: MiddleHinge_Arrow
+    2300026: MiddleHinge_Arrow1
+    2300028: MiddleHinge_Base
+    2300030: MiddleHinge_Base 1
+    2300032: MiddleHinge_Cylinder
+    2300034: MiddleHinge_Cylinder 1
+    2300036: Room
+    2300038: TopHinge_Arrow
+    2300040: TopHinge_Arrow1
+    2300042: TopHinge_Base
+    2300044: TopHinge_Base 1
+    2300046: TopHinge_Cylinder
+    2300048: TopHinge_Cylinder 1
+    2300050: wheel1
+    2300052: wheel2
+    2300054: Base
+    2300056: base
+    2300058: Base 1
+    2300060: base2
+    2300062: baseBevel
+    2300064: card_reader1
+    2300066: card_reader2
+    2300068: cylinder1
+    2300070: floorMounts
+    2300072: LatchCylinder
+    2300074: LatchCylinder 1
+    2300076: LatchHandle
+    2300078: LatchHandle 1
+    2300080: pipe
+    2300082: Second
+    2300084: Second 1
+    2300086: sprinklerArms
+    2300088: sprinklerCylinder
+    2300090: sprinklerTips
+    2300092: Third
+    2300094: Third 1
+    2300096: wallBracket
+    3300000: bottomBracket1
+    3300002: bottomBracket2
+    3300004: BottomHinge_Arrow
+    3300006: BottomHinge_Arrow1
+    3300008: BottomHinge_Base
+    3300010: BottomHinge_Base 1
+    3300012: BottomHinge_Cylinder
+    3300014: BottomHinge_Cylinder 1
+    3300016: Display1
+    3300018: Display2
+    3300020: Door1
+    3300022: Door2
+    3300024: MiddleHinge_Arrow
+    3300026: MiddleHinge_Arrow1
+    3300028: MiddleHinge_Base
+    3300030: MiddleHinge_Base 1
+    3300032: MiddleHinge_Cylinder
+    3300034: MiddleHinge_Cylinder 1
+    3300036: Room
+    3300038: TopHinge_Arrow
+    3300040: TopHinge_Arrow1
+    3300042: TopHinge_Base
+    3300044: TopHinge_Base 1
+    3300046: TopHinge_Cylinder
+    3300048: TopHinge_Cylinder 1
+    3300050: wheel1
+    3300052: wheel2
+    3300054: Base
+    3300056: base
+    3300058: Base 1
+    3300060: base2
+    3300062: baseBevel
+    3300064: card_reader1
+    3300066: card_reader2
+    3300068: cylinder1
+    3300070: floorMounts
+    3300072: LatchCylinder
+    3300074: LatchCylinder 1
+    3300076: LatchHandle
+    3300078: LatchHandle 1
+    3300080: pipe
+    3300082: Second
+    3300084: Second 1
+    3300086: sprinklerArms
+    3300088: sprinklerCylinder
+    3300090: sprinklerTips
+    3300092: Third
+    3300094: Third 1
+    3300096: wallBracket
+    4300000: Door1
+    4300002: TopHinge_Arrow
+    4300004: MiddleHinge_Arrow
+    4300006: BottomHinge_Arrow
+    4300008: TopHinge_Cylinder
+    4300010: TopHinge_Base
+    4300012: MiddleHinge_Cylinder
+    4300014: MiddleHinge_Base
+    4300016: BottomHinge_Cylinder
+    4300018: BottomHinge_Base
+    4300020: Display1
+    4300022: Door2
+    4300024: TopHinge_Arrow1
+    4300026: MiddleHinge_Arrow1
+    4300028: BottomHinge_Arrow1
+    4300030: TopHinge_Cylinder
+    4300032: TopHinge_Base
+    4300034: MiddleHinge_Cylinder
+    4300036: MiddleHinge_Base
+    4300038: BottomHinge_Cylinder
+    4300040: BottomHinge_Base
+    4300042: Display2
+    4300044: Room
+    4300046: bottomBracket2
+    4300048: wheel1
+    4300050: wheel2
+    4300052: bottomBracket1
+    4300054: Base
+    4300056: Second
+    4300058: Third
+    4300060: LatchCylinder
+    4300062: LatchHandle
+    4300064: Base
+    4300066: Second
+    4300068: Third
+    4300070: LatchCylinder
+    4300072: LatchHandle
+    4300074: floorMounts
+    4300076: base
+    4300078: baseBevel
+    4300080: base2
+    4300082: cylinder1
+    4300084: sprinklerCylinder
+    4300086: sprinklerTips
+    4300088: sprinklerArms
+    4300090: pipe
+    4300092: wallBracket
+    4300094: card_reader1
+    4300096: card_reader2
+    6400000: Base
+    6400002: base
+    6400004: Base 1
+    6400006: base2
+    6400008: baseBevel
+    6400010: BottomHinge_Arrow
+    6400012: BottomHinge_Arrow1
+    6400014: BottomHinge_Base
+    6400016: BottomHinge_Base 1
+    6400018: BottomHinge_Cylinder
+    6400020: BottomHinge_Cylinder 1
+    6400022: card_reader1
+    6400024: card_reader2
+    6400026: cylinder1
+    6400028: Display1
+    6400030: Display2
+    6400032: Door1
+    6400034: Door2
+    6400036: floorMounts
+    6400038: LatchCylinder
+    6400040: LatchCylinder 1
+    6400042: LatchHandle
+    6400044: LatchHandle 1
+    6400046: MiddleHinge_Arrow
+    6400048: MiddleHinge_Arrow1
+    6400050: MiddleHinge_Base
+    6400052: MiddleHinge_Base 1
+    6400054: MiddleHinge_Cylinder
+    6400056: MiddleHinge_Cylinder 1
+    6400058: pipe
+    6400060: Room
+    6400062: Second
+    6400064: Second 1
+    6400066: sprinklerArms
+    6400068: sprinklerCylinder
+    6400070: sprinklerTips
+    6400072: Third
+    6400074: Third 1
+    6400076: TopHinge_Arrow
+    6400078: TopHinge_Arrow1
+    6400080: TopHinge_Base
+    6400082: TopHinge_Base 1
+    6400084: TopHinge_Cylinder
+    6400086: TopHinge_Cylinder 1
+    6400088: wallBracket
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

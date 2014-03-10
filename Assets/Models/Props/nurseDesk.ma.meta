@@ -8,27 +8,39 @@ ModelImporter:
     100004: Inlay_Border
     100006: Inlays
     100008: //RootNode
+    100010: nurseDesk
+    100012: nurseDeskSigns
     400000: CounterTop
     400002: Desk
     400004: Inlay_Border
     400006: Inlays
     400008: //RootNode
+    400010: nurseDesk
+    400012: nurseDeskSigns
     2300000: CounterTop
     2300002: Desk
     2300004: Inlay_Border
     2300006: Inlays
+    2300008: nurseDesk
+    2300010: nurseDeskSigns
     3300000: CounterTop
     3300002: Desk
     3300004: Inlay_Border
     3300006: Inlays
+    3300008: nurseDesk
+    3300010: nurseDeskSigns
     4300000: Inlays
     4300002: Inlay_Border
     4300004: Desk
     4300006: CounterTop
+    4300008: nurseDesk
+    4300010: nurseDeskSigns
     6400000: CounterTop
     6400002: Desk
     6400004: Inlay_Border
     6400006: Inlays
+    6400008: nurseDesk
+    6400010: nurseDeskSigns
     9500000: //RootNode
   materials:
     importMaterials: 1

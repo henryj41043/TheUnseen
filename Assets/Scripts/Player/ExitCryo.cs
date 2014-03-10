@@ -8,13 +8,17 @@ public class ExitCryo : MonoBehaviour {
 	public Transform startPos;
 	public Transform endPos;
 	public float transitionDuration;
+	public AudioClip[] sounds;
 
 	bool exiting = false;
 
 	// Use this for initialization
 	void Awake () {
-		Camera.main.transform.position = startPos.position;
+		this.transform.position = startPos.position;
 		Invoke ("OpenDoor", 2.0f);
+		foreach (AudioClip a in sounds) {
+			audio.PlayOneShot(a);
+		}
 	}
 	
 	// Update is called once per frame
@@ -31,8 +35,7 @@ public class ExitCryo : MonoBehaviour {
 	}
 
 	void OpenDoor() {
-		//animation.Play ();
-		//yield WaitForAnimation();
+		animation.Play("OpenDoor");
 
 		exiting = true;
 	}
@@ -50,7 +53,7 @@ public class ExitCryo : MonoBehaviour {
 		{
 			t += Time.deltaTime * (Time.timeScale/transitionDuration);
 			
-			Camera.main.transform.position = Vector3.Lerp(startPos.position, endPos.position, t);
+			this.transform.position = Vector3.Lerp(startPos.position, endPos.position, t);
 			yield return 0;
 		}
 	}

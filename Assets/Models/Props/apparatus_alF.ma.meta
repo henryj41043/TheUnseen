@@ -48,6 +48,55 @@ ModelImporter:
     100084: m_apparatus_alF_04:rod
     100086: m_apparatus_alF_04:scalpel
     100088: m_apparatus_alF_04:tong
+    100090: aparatus_alF
+    100092: m_apparatus_alF_04:apparatusCenter
+    100094: polySurface1
+    100096: transform1
+    100098: transform10
+    100100: transform11
+    100102: transform12
+    100104: transform13
+    100106: transform14
+    100108: transform15
+    100110: transform16
+    100112: transform17
+    100114: transform18
+    100116: transform19
+    100118: transform2
+    100120: transform20
+    100122: transform21
+    100124: transform22
+    100126: transform23
+    100128: transform24
+    100130: transform25
+    100132: transform26
+    100134: transform27
+    100136: transform28
+    100138: transform29
+    100140: transform3
+    100142: transform30
+    100144: transform31
+    100146: transform32
+    100148: transform33
+    100150: transform34
+    100152: transform35
+    100154: transform36
+    100156: transform37
+    100158: transform38
+    100160: transform39
+    100162: transform4
+    100164: transform40
+    100166: transform41
+    100168: transform42
+    100170: transform43
+    100172: transform44
+    100174: transform45
+    100176: transform46
+    100178: transform5
+    100180: transform6
+    100182: transform7
+    100184: transform8
+    100186: transform9
     400000: //RootNode
     400002: m_apparatus_alF_04:arm1
     400004: m_apparatus_alF_04:arm2
@@ -93,6 +142,55 @@ ModelImporter:
     400084: m_apparatus_alF_04:rod
     400086: m_apparatus_alF_04:scalpel
     400088: m_apparatus_alF_04:tong
+    400090: aparatus_alF
+    400092: m_apparatus_alF_04:apparatusCenter
+    400094: polySurface1
+    400096: transform1
+    400098: transform10
+    400100: transform11
+    400102: transform12
+    400104: transform13
+    400106: transform14
+    400108: transform15
+    400110: transform16
+    400112: transform17
+    400114: transform18
+    400116: transform19
+    400118: transform2
+    400120: transform20
+    400122: transform21
+    400124: transform22
+    400126: transform23
+    400128: transform24
+    400130: transform25
+    400132: transform26
+    400134: transform27
+    400136: transform28
+    400138: transform29
+    400140: transform3
+    400142: transform30
+    400144: transform31
+    400146: transform32
+    400148: transform33
+    400150: transform34
+    400152: transform35
+    400154: transform36
+    400156: transform37
+    400158: transform38
+    400160: transform39
+    400162: transform4
+    400164: transform40
+    400166: transform41
+    400168: transform42
+    400170: transform43
+    400172: transform44
+    400174: transform45
+    400176: transform46
+    400178: transform5
+    400180: transform6
+    400182: transform7
+    400184: transform8
+    400186: transform9
     2300000: //RootNode
     2300002: m_apparatus_alF_04:arm1
     2300004: m_apparatus_alF_04:arm2
@@ -138,6 +236,7 @@ ModelImporter:
     2300084: m_apparatus_alF_04:rod
     2300086: m_apparatus_alF_04:scalpel
     2300088: m_apparatus_alF_04:tong
+    2300090: aparatus_alF
     3300000: //RootNode
     3300002: m_apparatus_alF_04:arm1
     3300004: m_apparatus_alF_04:arm2
@@ -183,6 +282,7 @@ ModelImporter:
     3300084: m_apparatus_alF_04:rod
     3300086: m_apparatus_alF_04:scalpel
     3300088: m_apparatus_alF_04:tong
+    3300090: aparatus_alF
     4300000: m_apparatus_alF_04:apparatusCenter
     4300002: m_apparatus_alF_04:link1
     4300004: m_apparatus_alF_04:arm1
@@ -228,6 +328,7 @@ ModelImporter:
     4300084: m_apparatus_alF_04:pSphere1
     4300086: m_apparatus_alF_04:lightShape
     4300088: m_apparatus_alF_04:light
+    4300090: aparatus_alF
     6400000: //RootNode
     6400002: m_apparatus_alF_04:arm1
     6400004: m_apparatus_alF_04:arm2
@@ -273,6 +374,7 @@ ModelImporter:
     6400084: m_apparatus_alF_04:rod
     6400086: m_apparatus_alF_04:scalpel
     6400088: m_apparatus_alF_04:tong
+    6400090: aparatus_alF
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -292,7 +394,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2
     meshCompression: 0
     addColliders: 1
     importBlendShapes: 1

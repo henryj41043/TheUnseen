@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 8bb4058c75d6d454981334484071b009
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Blocks
+    100002: Box
+    100004: Box_Part
+    100006: CylinderTransistors
+    100008: Exhaust
+    100010: //RootNode
+    100012: Panel
+    100014: Panel2
+    100016: Pipes
+    100018: SquareRims
+    100020: SquareTransistors
+    100022: Transistors
+    100024: WallBase
+    100026: WallBevel
+    100028: Border
+    100030: Border 1
+    100032: LargeVent
+    100034: RoundedCards
+    100036: SmallVent
+    100038: SquareBorder
+    100040: Vent
+    100042: Vent 1
+    400000: Blocks
+    400002: Box
+    400004: Box_Part
+    400006: CylinderTransistors
+    400008: Exhaust
+    400010: //RootNode
+    400012: Panel
+    400014: Panel2
+    400016: Pipes
+    400018: SquareRims
+    400020: SquareTransistors
+    400022: Transistors
+    400024: WallBase
+    400026: WallBevel
+    400028: Border
+    400030: Border 1
+    400032: LargeVent
+    400034: RoundedCards
+    400036: SmallVent
+    400038: SquareBorder
+    400040: Vent
+    400042: Vent 1
+    2300000: Blocks
+    2300002: Box
+    2300004: Box_Part
+    2300006: CylinderTransistors
+    2300008: Exhaust
+    2300010: Panel
+    2300012: Panel2
+    2300014: Pipes
+    2300016: SquareRims
+    2300018: SquareTransistors
+    2300020: WallBase
+    2300022: WallBevel
+    2300024: Border
+    2300026: Border 1
+    2300028: RoundedCards
+    2300030: SquareBorder
+    2300032: Vent
+    2300034: Vent 1
+    3300000: Blocks
+    3300002: Box
+    3300004: Box_Part
+    3300006: CylinderTransistors
+    3300008: Exhaust
+    3300010: Panel
+    3300012: Panel2
+    3300014: Pipes
+    3300016: SquareRims
+    3300018: SquareTransistors
+    3300020: WallBase
+    3300022: WallBevel
+    3300024: Border
+    3300026: Border 1
+    3300028: RoundedCards
+    3300030: SquareBorder
+    3300032: Vent
+    3300034: Vent 1
+    4300000: Box
+    4300002: Box_Part
+    4300004: SquareRims
+    4300006: Blocks
+    4300008: Pipes
+    4300010: Panel
+    4300012: Panel2
+    4300014: Exhaust
+    4300016: WallBase
+    4300018: WallBevel
+    4300020: CylinderTransistors
+    4300022: SquareTransistors
+    4300024: Border
+    4300026: Vent
+    4300028: Border
+    4300030: Vent
+    4300032: SquareBorder
+    4300034: RoundedCards
+    6400000: Border
+    6400002: Border 1
+    6400004: Box
+    6400006: Box_Part
+    6400008: Panel
+    6400010: Panel2
+    6400012: Pipes
+    6400014: RoundedCards
+    6400016: SquareBorder
+    6400018: Vent
+    6400020: Vent 1
+    6400022: WallBase
+    6400024: WallBevel
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

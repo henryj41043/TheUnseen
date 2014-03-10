@@ -4,7 +4,7 @@ SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 10
-    name: justMetalLevel2
+    name: metalLevel2
     prototypeName: Galvanized_Metal
     shaderName: Bumped Specular
     inputs:
@@ -116,17 +116,17 @@ SubstanceImporter:
             name: _SpecColor
           second: {r: .5, g: .5, b: .5, a: 1}
     textureParameters:
-    - name: justMetalLevel2_Diffuse
+    - name: metalLevel2_Diffuse
       alphaSource: 5
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: justMetalLevel2_Specular
+    - name: metalLevel2_Specular
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: justMetalLevel2_Normal
+    - name: metalLevel2_Normal
       alphaSource: 0
       filterMode: 1
       aniso: 1

@@ -11,12 +11,16 @@ ModelImporter:
     400004: top
     2300000: leg
     2300002: top
+    2300004: //RootNode
     3300000: leg
     3300002: top
+    3300004: //RootNode
     4300000: leg
     4300002: top
+    4300004: table4
     6400000: leg
     6400002: top
+    6400004: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

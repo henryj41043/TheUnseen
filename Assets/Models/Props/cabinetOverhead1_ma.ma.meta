@@ -9,32 +9,94 @@ ModelImporter:
     100006: Left_Knob
     100008: Right_Door
     100010: Right_Knob
+    100012: cabinetOverhead1
+    100014: cabinetOverhead_copy:Group2
+    100016: cabinetOverhead_copy:Group3
+    100018: cabinetOverhead_copy:Group4
+    100020: cabinetOverhead_copy:Group5
+    100022: cabinetOverhead_copy:Group6
+    100024: base
+    100026: door1
+    100028: door2
+    100030: handle1
+    100032: handle2
     400000: Cabinet
     400002: //RootNode
     400004: Left_Door
     400006: Left_Knob
     400008: Right_Door
     400010: Right_Knob
+    400012: cabinetOverhead1
+    400014: cabinetOverhead_copy:Group2
+    400016: cabinetOverhead_copy:Group3
+    400018: cabinetOverhead_copy:Group4
+    400020: cabinetOverhead_copy:Group5
+    400022: cabinetOverhead_copy:Group6
+    400024: base
+    400026: door1
+    400028: door2
+    400030: handle1
+    400032: handle2
     2300000: Cabinet
     2300002: Left_Door
     2300004: Left_Knob
     2300006: Right_Door
     2300008: Right_Knob
+    2300010: cabinetOverhead_copy:Group2
+    2300012: cabinetOverhead_copy:Group3
+    2300014: cabinetOverhead_copy:Group4
+    2300016: cabinetOverhead_copy:Group5
+    2300018: cabinetOverhead_copy:Group6
+    2300020: base
+    2300022: door1
+    2300024: door2
+    2300026: handle1
+    2300028: handle2
     3300000: Cabinet
     3300002: Left_Door
     3300004: Left_Knob
     3300006: Right_Door
     3300008: Right_Knob
+    3300010: cabinetOverhead_copy:Group2
+    3300012: cabinetOverhead_copy:Group3
+    3300014: cabinetOverhead_copy:Group4
+    3300016: cabinetOverhead_copy:Group5
+    3300018: cabinetOverhead_copy:Group6
+    3300020: base
+    3300022: door1
+    3300024: door2
+    3300026: handle1
+    3300028: handle2
     4300000: Cabinet
     4300002: Left_Door
     4300004: Left_Knob
     4300006: Right_Door
     4300008: Right_Knob
+    4300010: cabinetOverhead_copy:Group2
+    4300012: cabinetOverhead_copy:Group3
+    4300014: cabinetOverhead_copy:Group4
+    4300016: cabinetOverhead_copy:Group5
+    4300018: cabinetOverhead_copy:Group6
+    4300020: base
+    4300022: door2
+    4300024: door1
+    4300026: handle2
+    4300028: handle1
     6400000: Cabinet
     6400002: Left_Door
     6400004: Left_Knob
     6400006: Right_Door
     6400008: Right_Knob
+    6400010: cabinetOverhead_copy:Group2
+    6400012: cabinetOverhead_copy:Group3
+    6400014: cabinetOverhead_copy:Group4
+    6400016: cabinetOverhead_copy:Group5
+    6400018: cabinetOverhead_copy:Group6
+    6400020: base
+    6400022: door1
+    6400024: door2
+    6400026: handle1
+    6400028: handle2
     9500000: //RootNode
   materials:
     importMaterials: 1

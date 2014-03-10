@@ -26,8 +26,7 @@ public class LightGenerator : MonoBehaviour
 	public AudioClip PEGcharge;
 
 	public Material PEGscreen;
-	private int PEGcutoff;
-	private Shader reveal;
+	public Texture2D[] screens;
 
 	public GameObject orbChargeLoc;
 	private GameObject chargingOrb;
@@ -35,8 +34,6 @@ public class LightGenerator : MonoBehaviour
 	void Start () {
 		chargingOrb = null;
 		UpdateDisplay();
-		reveal = Shader.Find("Unseen/Reveal");
-		PEGcutoff = Shader.PropertyToID("_Cutoff");
 	}
 
 	void Update(){
@@ -48,7 +45,7 @@ public class LightGenerator : MonoBehaviour
 	}
 
 	void UpdateDisplay() {
-		PEGscreen.SetFloat(PEGcutoff, (energy / maxEnergy) - 0.5f);
+		PEGscreen.mainTexture = screens[(int)((energy / maxEnergy) * (screens.Length-1))];
 	}
 
 	public void AddEnergy(float e) {

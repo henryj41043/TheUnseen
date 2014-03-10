@@ -32,6 +32,7 @@ ModelImporter:
     2300012: rightPanel
     2300014: rightPanelDetail1
     2300016: rightPanelDetail2
+    2300018: //RootNode
     3300000: bottom
     3300002: doorFrame
     3300004: leftPanel
@@ -41,6 +42,7 @@ ModelImporter:
     3300012: rightPanel
     3300014: rightPanelDetail1
     3300016: rightPanelDetail2
+    3300018: //RootNode
     4300000: doorFrame
     4300002: leftPanel
     4300004: leftPanelDetail1
@@ -50,6 +52,7 @@ ModelImporter:
     4300012: rightPanelDetail2
     4300014: mainDoor
     4300016: bottom
+    4300018: cargoBayDoor
     6400000: bottom
     6400002: doorFrame
     6400004: leftPanel
@@ -59,6 +62,7 @@ ModelImporter:
     6400012: rightPanel
     6400014: rightPanelDetail1
     6400016: rightPanelDetail2
+    6400018: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

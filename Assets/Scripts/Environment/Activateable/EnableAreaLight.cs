@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (AreaLightColor))]
 public class EnableAreaLight : Activateable {
 
+	public GameObject[] lights;
+
 	public override void Activate(){
-		this.GetComponent<AreaLightColor>().enabled = true;
+		foreach (GameObject g in lights) {
+			g.SetActive(true);
+		}
 		this.renderer.enabled = true;
 	}
 	
 	public override void Deactivate(){
-		this.GetComponent<AreaLightColor>().enabled = false;
+		foreach (GameObject g in lights) {
+			g.SetActive(false);
+		}
 		this.renderer.enabled = false;
 	}
 }

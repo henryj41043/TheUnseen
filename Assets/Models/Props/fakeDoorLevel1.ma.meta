@@ -33,6 +33,19 @@ ModelImporter:
     100054: topLeftDoorDesign
     100056: topLight
     100058: topRightDoorDesign
+    100060: fakeDoorLevel1
+    100062: polySurface1
+    100064: transform1
+    100066: transform10
+    100068: transform11
+    100070: transform2
+    100072: transform3
+    100074: transform4
+    100076: transform5
+    100078: transform6
+    100080: transform7
+    100082: transform8
+    100084: transform9
     400000: bottomDoorInset
     400002: bottomLeftDoorDesign
     400004: bottomOfDoor
@@ -63,6 +76,19 @@ ModelImporter:
     400054: topLeftDoorDesign
     400056: topLight
     400058: topRightDoorDesign
+    400060: fakeDoorLevel1
+    400062: polySurface1
+    400064: transform1
+    400066: transform10
+    400068: transform11
+    400070: transform2
+    400072: transform3
+    400074: transform4
+    400076: transform5
+    400078: transform6
+    400080: transform7
+    400082: transform8
+    400084: transform9
     2300000: bottomDoorInset
     2300002: bottomLeftDoorDesign
     2300004: bottomOfDoor
@@ -90,6 +116,7 @@ ModelImporter:
     2300048: topLeftDoorDesign
     2300050: topLight
     2300052: topRightDoorDesign
+    2300054: polySurface1
     3300000: bottomDoorInset
     3300002: bottomLeftDoorDesign
     3300004: bottomOfDoor
@@ -117,6 +144,7 @@ ModelImporter:
     3300048: topLeftDoorDesign
     3300050: topLight
     3300052: topRightDoorDesign
+    3300054: polySurface1
     4300000: doorFrame
     4300002: rightBottomDoorFramePanel
     4300004: rightDoorFramePanelBottom
@@ -144,6 +172,7 @@ ModelImporter:
     4300048: topLeftDoorDesign
     4300050: leftVerticalDoorDesign
     4300052: rightVerticalDoorDesign
+    4300054: polySurface1
     6400000: bottomDoorInset
     6400002: bottomLeftDoorDesign
     6400004: bottomOfDoor
@@ -171,6 +200,7 @@ ModelImporter:
     6400048: topLeftDoorDesign
     6400050: topLight
     6400052: topRightDoorDesign
+    6400054: polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1
