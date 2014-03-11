@@ -5,11 +5,13 @@ public class PauseState : MonoBehaviour
 {
 	public bool isPaused = false;
 	public GameObject pauseMenu;
+	public Texture2D CrossHairTexture;
 
+	Texture2D tempCrossHairTexture;
 	MouseLook mouseLook1;
 	MouseLook mouseLook2;
 	MouseController mouseController;
-	Texture2D tempCrossHairTexture;
+	UILabel interactLabel;
 
 	public void Initialize()
 	{
@@ -20,7 +22,8 @@ public class PauseState : MonoBehaviour
 			}
 		}
 		mouseLook2 = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
-		tempCrossHairTexture = mouseController.crosshairTexture;
+		//tempCrossHairTexture = mouseController.crosshairTexture;
+		interactLabel = mouseController.interactLabel;
 	}
 
 	public void PauseGame(bool paused)
@@ -31,7 +34,9 @@ public class PauseState : MonoBehaviour
 		{
 			Time.timeScale = 0;
 			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
-			mouseController.crosshairTexture = null;
+			tempCrossHairTexture = CrossHairTexture;
+			CrossHairTexture = null;
+			interactLabel.gameObject.SetActive(false);
 			Screen.lockCursor = false;
 			Screen.showCursor = true; 
 			mouseLook1.enabled = false;
@@ -42,12 +47,19 @@ public class PauseState : MonoBehaviour
 		{
 			Time.timeScale = 1;
 			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
-			mouseController.crosshairTexture = tempCrossHairTexture;
+			//mouseController.crosshairTexture = tempCrossHairTexture;
+			CrossHairTexture = tempCrossHairTexture;
 			Screen.lockCursor = true;
 			Screen.showCursor = false;  
 			mouseLook1.enabled = true;
 			mouseLook2.enabled = true;
 			mouseController.enabled = true;
+
+			interactLabel.gameObject.SetActive(true);
+
+			NGUITools.SetActive(GameObject.Find("OptionsMenu"), false);
+			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
+			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
 		}
 	}
 

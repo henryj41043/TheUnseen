@@ -32,7 +32,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400008}
   - 54: {fileID: 5400002}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: InteractPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400010}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: audioLogSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400012}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400014}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400016}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: titleLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - 114: {fileID: 11400020}
   - 114: {fileID: 11400018}
   - 114: {fileID: 11400006}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: closeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 114: {fileID: 11400024}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: glowBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400016}
   - 114: {fileID: 11400026}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: glowBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - 114: {fileID: 11400028}
   - 54: {fileID: 5400004}
   - 114: {fileID: 11400030}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: AudioLogPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400020}
   - 114: {fileID: 11400032}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - 114: {fileID: 11400036}
   - 114: {fileID: 11400034}
   - 114: {fileID: 11400038}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: audioLogLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,13 +216,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 114: {fileID: 11400040}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: interactLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -373,7 +373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -12.3999996, z: 0}
   m_LocalScale: {x: .473011047, y: .473011047, z: .473011047}
   m_Children:
   - {fileID: 400016}
@@ -402,7 +402,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8192
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
@@ -540,7 +540,7 @@ MonoBehaviour:
   alwaysOnScreen: 0
   anchorOffset: 0
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3002
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5e1210a659c71f49b09ec14c4d40e77, type: 3}
   m_Name: 
@@ -1199,13 +1199,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 144
+  mWidth: 146
   mHeight: 20
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 8
+  aspectRatio: 7.19999981
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 9f7efc3843c587446be631583b0b5a19, type: 3}
   mFont: {fileID: 0}
