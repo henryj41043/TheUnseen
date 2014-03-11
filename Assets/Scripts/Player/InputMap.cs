@@ -41,7 +41,6 @@ public class InputMap : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			pause.Initialize();
 			pause.PauseGame(!pause.isPaused);
 		}
 	}

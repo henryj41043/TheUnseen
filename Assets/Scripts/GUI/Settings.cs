@@ -330,7 +330,9 @@ public class Settings : MonoBehaviour
 
 		foreach (Resolution res in resolutions) 
 		{
-			resolutionDropDown.items.Add(res.width + "x" + res.height);
+
+			if (res.width % 16 == 0 && res.height % 9 == 0)
+				resolutionDropDown.items.Add(res.width + "x" + res.height);
 		}
 
 		//if (string.IsNullOrEmpty(PlayerPrefs.GetString("Resolution")))

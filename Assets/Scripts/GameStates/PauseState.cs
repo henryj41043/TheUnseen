@@ -32,13 +32,13 @@ public class PauseState : MonoBehaviour
 
 		if (isPaused)
 		{
+			Initialize();
 			Time.timeScale = 0;
 			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
 			tempCrossHairTexture = CrossHairTexture;
 			CrossHairTexture = null;
 			interactLabel.gameObject.SetActive(false);
-			Screen.lockCursor = false;
-			Screen.showCursor = true; 
+			toggleCursor();
 			mouseLook1.enabled = false;
 			mouseLook2.enabled = false;
 			mouseController.enabled = false;
@@ -46,21 +46,25 @@ public class PauseState : MonoBehaviour
 		else
 		{
 			Time.timeScale = 1;
-			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
-			//mouseController.crosshairTexture = tempCrossHairTexture;
 			CrossHairTexture = tempCrossHairTexture;
-			Screen.lockCursor = true;
-			Screen.showCursor = false;  
+			toggleCursor();
 			mouseLook1.enabled = true;
 			mouseLook2.enabled = true;
 			mouseController.enabled = true;
 
 			interactLabel.gameObject.SetActive(true);
 
+			NGUITools.SetActive(GameObject.Find("PauseMenu"), false);
 			NGUITools.SetActive(GameObject.Find("OptionsMenu"), false);
 			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
 			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
 		}
+	}
+
+	private void toggleCursor()
+	{
+		Screen.lockCursor = !Screen.lockCursor;
+		Screen.showCursor = !Screen.showCursor;  
 	}
 
 }
