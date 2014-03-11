@@ -24,7 +24,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +362,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400040}
   - 114: {fileID: 11400064}
-  - 114: {fileID: 11400062}
   - 114: {fileID: 11400060}
   m_Layer: 13
   m_Name: audioLogLabel
@@ -2220,6 +2219,7 @@ MonoBehaviour:
   PEGfire: {fileID: 8300000, guid: b6248a30cca403a47b08cbcbd4aaa3dd, type: 3}
   PEGcharge: {fileID: 8300000, guid: 6be608670f8c79e46bfac66dbe1176c1, type: 3}
   PEGscreen: {fileID: 2100000, guid: fb46b1c19de45d34ead147a62e713595, type: 2}
+  screens: []
   orbChargeLoc: {fileID: 100008}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -2364,12 +2364,12 @@ MonoBehaviour:
   mouseLook1: {fileID: 11400004}
   mouseLook2: {fileID: 11400014}
   maincam: {fileID: 100002}
+  LightDevice: {fileID: 0}
   interactDist: 4
   crosshairTexture: {fileID: 2800000, guid: 7870ee69c954b8840b3972c1c8410da4, type: 3}
   minCrosshairSize: 25
   maxCrosshairSize: 50
   interactLabel: {fileID: 11400024}
-  interactSize: 50
   lightGenerator: {fileID: 11400000}
 --- !u!114 &11400014
 MonoBehaviour:
@@ -3123,18 +3123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f27a0e2439f63f40af953338f151487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11400062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5e1210a659c71f49b09ec14c4d40e77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charsPerSecond: 20
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1

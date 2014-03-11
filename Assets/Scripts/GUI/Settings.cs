@@ -63,6 +63,7 @@ public class Settings : MonoBehaviour
 			soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
 			dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
 		}
+
 	}
 
 	public void OnMusicSliderChange()
