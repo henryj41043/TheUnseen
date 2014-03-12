@@ -5,11 +5,13 @@ public class PauseState : MonoBehaviour
 {
 	public bool isPaused = false;
 	public GameObject pauseMenu;
+	public Texture2D CrossHairTexture;
 
+	Texture2D tempCrossHairTexture;
 	MouseLook mouseLook1;
 	MouseLook mouseLook2;
 	MouseController mouseController;
-	Texture2D tempCrossHairTexture;
+	UILabel interactLabel;
 
 	public void Initialize()
 	{
@@ -20,7 +22,8 @@ public class PauseState : MonoBehaviour
 			}
 		}
 		mouseLook2 = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>();
-		tempCrossHairTexture = mouseController.crosshairTexture;
+		//tempCrossHairTexture = mouseController.crosshairTexture;
+		interactLabel = mouseController.interactLabel;
 	}
 
 	public void PauseGame(bool paused)
@@ -29,11 +32,13 @@ public class PauseState : MonoBehaviour
 
 		if (isPaused)
 		{
+			Initialize();
 			Time.timeScale = 0;
 			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
-			mouseController.crosshairTexture = null;
-			Screen.lockCursor = false;
-			Screen.showCursor = true; 
+			tempCrossHairTexture = CrossHairTexture;
+			CrossHairTexture = null;
+			interactLabel.gameObject.SetActive(false);
+			toggleCursor();
 			mouseLook1.enabled = false;
 			mouseLook2.enabled = false;
 			mouseController.enabled = false;
@@ -41,14 +46,25 @@ public class PauseState : MonoBehaviour
 		else
 		{
 			Time.timeScale = 1;
-			pauseMenu.GetComponent<PauseMenu>().ToggleMenu(isPaused);
-			mouseController.crosshairTexture = tempCrossHairTexture;
-			Screen.lockCursor = true;
-			Screen.showCursor = false;  
+			CrossHairTexture = tempCrossHairTexture;
+			toggleCursor();
 			mouseLook1.enabled = true;
 			mouseLook2.enabled = true;
 			mouseController.enabled = true;
+
+			interactLabel.gameObject.SetActive(true);
+
+			NGUITools.SetActive(GameObject.Find("PauseMenu"), false);
+			NGUITools.SetActive(GameObject.Find("OptionsMenu"), false);
+			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
+			NGUITools.SetActive(GameObject.Find("SettingsMenus"), false);
 		}
+	}
+
+	private void toggleCursor()
+	{
+		Screen.lockCursor = !Screen.lockCursor;
+		Screen.showCursor = !Screen.showCursor;  
 	}
 
 }

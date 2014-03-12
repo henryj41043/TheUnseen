@@ -40,6 +40,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   pauseMenu: {fileID: 0}
+  CrossHairTexture: {fileID: 2800000, guid: 7870ee69c954b8840b3972c1c8410da4, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

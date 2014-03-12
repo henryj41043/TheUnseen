@@ -52,6 +52,10 @@ public class AudioLog : Interactive {
 		GameObject cam = GameObject.FindWithTag("MainCamera");
 		GameObject player = cam.transform.parent.gameObject;
 
+		AudioSource music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+
+		music.volume = 0.03f;
+
 		MouseLook cml = cam.GetComponent<MouseLook>();
 		cml.enabled = false;
 

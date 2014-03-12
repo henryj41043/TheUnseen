@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
+using UnityEditorInternal;
 
 /// <summary>
 /// Basic class with string fields required for an Alias
@@ -234,7 +235,7 @@ public class DeveloperConsole : MonoBehaviour
 		// Routinely finds the name of all gameobjects
 		StartCoroutine( FindAllGameObjects() );
 		
-		//tagList = UnityEngine.InternalEditorUtility.tags.ToList();
+		tagList = InternalEditorUtility.tags.ToList();
 		
 		// Puts all the aliases into a handy dictionary
 		for ( int aliasI = 0; aliasI < aliasList.Length; aliasI++ )

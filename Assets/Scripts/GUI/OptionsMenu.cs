@@ -19,7 +19,7 @@ public class OptionsMenu : MonoBehaviour
 		if (GameObject.Find("PauseState") != null)
 			pauseState = GameObject.Find("PauseState").GetComponent<PauseState>();
 	}
-	
+
 	public void OnBackClick()
 	{
 		if (pauseState != null && pauseState.isPaused)

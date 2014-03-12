@@ -59,10 +59,24 @@ public class Settings : MonoBehaviour
 			soundFXSlider = GameObject.Find("soundFXSlider").GetComponent<UISlider>();
 			dialogueSlider = GameObject.Find("dialogueSlider").GetComponent<UISlider>();
 
-			musicSlider.value = PlayerPrefs.GetFloat("MusicVol");
-			soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
-			dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
+
+			if (!PlayerPrefs.HasKey("MusicVol"))
+				gameVolume.MusicVolume = musicSlider.value;
+			else
+				musicSlider.value = PlayerPrefs.GetFloat("MusicVol");
+			
+			if (!PlayerPrefs.HasKey("SoundFXVol"))
+				gameVolume.AmbienceVolume = soundFXSlider.value;
+			else
+				soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
+			
+			if (!PlayerPrefs.HasKey("DialogueVol"))
+				gameVolume.AIVolume = dialogueSlider.value;
+			else
+				dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
+
 		}
+
 	}
 
 	public void OnMusicSliderChange()
@@ -329,7 +343,9 @@ public class Settings : MonoBehaviour
 
 		foreach (Resolution res in resolutions) 
 		{
-			resolutionDropDown.items.Add(res.width + "x" + res.height);
+
+			if (res.width % 16 == 0 && res.height % 9 == 0)
+				resolutionDropDown.items.Add(res.width + "x" + res.height);
 		}
 
 		//if (string.IsNullOrEmpty(PlayerPrefs.GetString("Resolution")))
