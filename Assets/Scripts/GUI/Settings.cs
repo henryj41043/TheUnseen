@@ -59,9 +59,22 @@ public class Settings : MonoBehaviour
 			soundFXSlider = GameObject.Find("soundFXSlider").GetComponent<UISlider>();
 			dialogueSlider = GameObject.Find("dialogueSlider").GetComponent<UISlider>();
 
-			musicSlider.value = PlayerPrefs.GetFloat("MusicVol");
-			soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
-			dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
+
+			if (!PlayerPrefs.HasKey("MusicVol"))
+				gameVolume.MusicVolume = musicSlider.value;
+			else
+				musicSlider.value = PlayerPrefs.GetFloat("MusicVol");
+			
+			if (!PlayerPrefs.HasKey("SoundFXVol"))
+				gameVolume.AmbienceVolume = soundFXSlider.value;
+			else
+				soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
+			
+			if (!PlayerPrefs.HasKey("DialogueVol"))
+				gameVolume.AIVolume = dialogueSlider.value;
+			else
+				dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
+
 		}
 
 	}
