@@ -2931,7 +2931,7 @@ GameObject:
   - 114: {fileID: 11400448}
   - 54: {fileID: 5400010}
   m_Layer: 13
-  m_Name: PauseGUI
+  m_Name: pauseGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5093,7 +5093,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 1
-  m_Depth: 1
+  m_Depth: 21
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 8192
