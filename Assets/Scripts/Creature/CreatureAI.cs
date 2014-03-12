@@ -45,7 +45,7 @@ public class CreatureAI : MonoBehaviour {
 
 	private bool isDraining = false;
 
-	private bool isSuperSayian = false;
+	public bool isSuperSayian = false;
 	public float superSayianSpeedMult = 1.5f;
 	public float superSayianTime = 10f;
 	private float superSayianTimer = 0;
@@ -213,13 +213,21 @@ public class CreatureAI : MonoBehaviour {
 	}
 
 	void UpdateAnimations(){
-
+		
 		bool runAnim = false;
 		bool idleAnim = false;
 		bool walkAnim = false;
 		bool attackAnim = false;
 		bool searchAnim = false;
-
+		bool enragedAnim = false;
+		bool absorbAnim = false;
+		
+		if (isSuperSayian) {
+			enragedAnim = true;
+		} else {
+			enragedAnim = false;
+		}
+		
 		if (isAttacking){
 			attackAnim = true;
 		}else{
@@ -232,27 +240,31 @@ public class CreatureAI : MonoBehaviour {
 			}else if (currentState == States.ChaseLastKnown){
 				runAnim = true;
 			}else if (currentState == States.Absorbing){
-				idleAnim = true;
+				absorbAnim = true;
 			}else if (currentState == States.Searching){
 				searchAnim = true;
 			}else if (currentState == States.Struggling){
-				idleAnim = true;
+				searchAnim = true;
 			}else{
 				throw new UnityException("In an unexpected state that doesn't have a mapped animation: "+currentState);
 			}
 		}
-
+		
 		if (idleAnim == true){
 			runAnim = false;
 			walkAnim = false;
 			attackAnim = false;
 			searchAnim = false;
+			enragedAnim = false;
+			absorbAnim = false;
 		}
-
+		
+		anim.SetBool("Enraged", enragedAnim);
 		anim.SetBool("Run", runAnim);
 		anim.SetBool("Walk", walkAnim);
 		anim.SetBool("Attack", attackAnim);
 		anim.SetBool("Searching", searchAnim);
+		anim.SetBool("Absorbing", absorbAnim);
 	}
 
 	public IEnumerator Attack(GameObject target) {
@@ -288,6 +300,8 @@ public class CreatureAI : MonoBehaviour {
 		GameObject[] batteries = GameObject.FindGameObjectsWithTag("Battery");
 		GameObject[] orbs = GameObject.FindGameObjectsWithTag("FiredOrb");
 
+		GameObject[] sounds = GameObject.FindGameObjectsWithTag("AttractiveSound");
+
 		if (vision.canSee(p)){
 			listPOIs.Add(p);
 		}
@@ -301,6 +315,12 @@ public class CreatureAI : MonoBehaviour {
 		foreach(GameObject orb in orbs){
 			if (vision.canSee (orb)){
 				listPOIs.Add(orb);
+			}
+		}
+
+		foreach(GameObject sound in sounds){
+			if ((sound.transform.position - transform.position).magnitude < sound.GetComponent<AttractiveSound>().range){
+				listPOIs.Add(sound);
 			}
 		}
 

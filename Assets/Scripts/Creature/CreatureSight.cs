@@ -3,7 +3,9 @@ using System.Collections;
 
 public class CreatureSight : MonoBehaviour {
 
-	public float seeDist = 100f;
+	public float playerSightDist = 10f;
+	public float poiSightDist = 100f;
+	public float enragedSightMult = 2f;
 	public float fovAngle = 180f;
 
 	public bool canSee(GameObject poi){
@@ -51,6 +53,15 @@ public class CreatureSight : MonoBehaviour {
 		float angle = Vector3.Angle (direction, transform.forward);
 		if (angle < fovAngle * 0.5f) {
 			RaycastHit hit;
+
+			float seeDist = poiSightDist;
+			if (poi.tag == "Player"){
+				seeDist = playerSightDist;
+			}
+			if (GetComponent<CreatureAI>() != null && GetComponent<CreatureAI>().isSuperSayian){
+				seeDist *= enragedSightMult;
+			}
+
 			if (Physics.Raycast (transform.position, direction, out hit, seeDist)) {
 				if (hit.collider.gameObject.tag == overallTag) {
 					return true;
