@@ -39,6 +39,19 @@ public class Settings : MonoBehaviour
 	bool isWindowed = true;
 	bool isVSync = true;
 
+	public LightmapBrightness lightmapManager;
+
+	void Start() {
+		lightmapManager = GameObject.FindGameObjectWithTag("Brightness").GetComponent<LightmapBrightness>();
+		if (PlayerPrefs.GetFloat("BrightnessLevel") != 0.0f) {
+			brightnessSlider.value = PlayerPrefs.GetFloat("BrightnessLevel");
+			lightmapManager.SetBrightness(brightnessSlider.value * 10.0f);
+		} else {
+			brightnessSlider.value = 0.1f;
+		}
+
+	}
+
 	void OnBackClick()
 	{
 		NGUITools.SetActive(OptionsMenu, true);
@@ -244,6 +257,9 @@ public class Settings : MonoBehaviour
 	public void OnBrightnessChange()
 	{
 		//To Do, something to make brighter or darker
+		if (lightmapManager != null) {
+			lightmapManager.SetBrightness(brightnessSlider.value * 10.0f);
+		}
 		PlayerPrefs.SetFloat("BrightnessLevel", brightnessSlider.value);
 	}
 

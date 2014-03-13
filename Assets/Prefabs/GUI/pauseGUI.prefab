@@ -2931,7 +2931,7 @@ GameObject:
   - 114: {fileID: 11400448}
   - 54: {fileID: 5400010}
   m_Layer: 13
-  m_Name: PauseGUI
+  m_Name: pauseGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   numberOfSteps: 0
   onChange:
   - mTarget: {fileID: 11400260}
-    mMethodName: OnMusicSliderChange
+    mMethodName: OnBrightnessChange
     oneShot: 0
   foreground: {fileID: 0}
   rawValue: 1
@@ -11018,6 +11018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionsMenu: {fileID: 100020}
+  lightmapManager: {fileID: 0}
 --- !u!114 &11400262
 MonoBehaviour:
   m_ObjectHideFlags: 1

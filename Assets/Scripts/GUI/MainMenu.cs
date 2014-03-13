@@ -6,10 +6,13 @@ public class MainMenu : MonoBehaviour
 	public GameObject optionsMenu;
 	public GameObject mainMenu;
 	public GameObject creditsMenu;
+	public GameObject cryoChamber;
 	
 	public void OnPlayClick()
 	{
-		Application.LoadLevel(1);
+		this.GetComponent<UIPanel>().enabled = false;
+		//NGUITools.SetActive(mainMenu, false);
+		StartCoroutine(LoadLevel());
 	}
 	
 	public void OnOptionsClick()
@@ -32,6 +35,22 @@ public class MainMenu : MonoBehaviour
 	public void OnTransitionClick()
 	{
 		NGUITools.SetActive(this.gameObject, false);
+	}
+
+	IEnumerator LoadLevel() {
+		if (cryoChamber != null) {
+			cryoChamber.animation.Play();
+		}
+		float start = Time.time;
+		while (Time.time < start + 2.0f) {
+			yield return new WaitForSeconds(0.1f);
+		}
+		AsyncOperation async = Application.LoadLevelAsync(1);
+
+		while (async.isDone == false) {
+			yield return new WaitForSeconds(0.1f);
+		}
+		yield return async;
 	}
 }
 
