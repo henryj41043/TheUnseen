@@ -4,9 +4,10 @@ using System.Collections;
 public class GoToScene : MonoBehaviour {
 
 	public string sceneName = "";
-	public Texture2D black;
 	public AudioClip startElevator;
+	public AudioClip elevatorRunning;
 	public GameObject elevator;
+	public ElevatorCutscene cutsceneScript;
 	private bool isLoading = false;
 
 	void OnTriggerEnter(Collider c) {
@@ -21,11 +22,30 @@ public class GoToScene : MonoBehaviour {
 			elevator.animation.Play("Close");
 		}
 		AsyncOperation async = Application.LoadLevelAsync(sceneName);
-		audio.PlayOneShot(startElevator);
-		while (async.isDone == false) {
-			print (async.progress);
+		audio.clip = startElevator;
+		audio.Play();
+		async.allowSceneActivation = false;
+		while (audio.isPlaying) {
 			yield return new WaitForSeconds(0.1f);
 		}
+
+		audio.clip = elevatorRunning;
+		audio.loop = true;
+		audio.Play();
+		yield return new WaitForSeconds(4.0f);
+
+		while (async.progress < 0.8f) {
+			yield return new WaitForSeconds(0.1f);
+		}
+
+		if (cutsceneScript != null) {
+			audio.Stop();
+			StartCoroutine(cutsceneScript.PlayCutscene());
+			while (cutsceneScript.isDone == false) {
+				yield return new WaitForSeconds(0.1f);
+			}
+		}
+		async.allowSceneActivation = true;
 		yield return async;
 	}
 
