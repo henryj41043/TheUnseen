@@ -3950,6 +3950,7 @@ MonoBehaviour:
   timeSearchedSoFar: 0
   searchTime: 3
   ratioDrainPerSecond: .400000006
+  isSuperSayian: 0
   superSayianSpeedMult: 1.5
   superSayianTime: 10
   SSChargeDecrease: .200000003
@@ -3959,6 +3960,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: a9907a9aea5d426438f411aea1a556f5, type: 3}
   growls: []
   roars: []
+  timeToWait: .10000000000000001
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3970,7 +3972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3b92dd23d840d4cbff13bcd8026bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeDist: 100
+  playerSightDist: 30
+  poiSightDist: 100
+  enragedSightMult: 2
   fovAngle: 180
 --- !u!114 &11400004
 MonoBehaviour:

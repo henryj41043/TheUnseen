@@ -3,10 +3,14 @@ using System.Collections;
 
 public class CreatureSight : MonoBehaviour {
 
-	public float playerSightDist = 10f;
+	public float playerSightDist = 30f;
 	public float poiSightDist = 100f;
 	public float enragedSightMult = 2f;
-	public float fovAngle = 180f;
+
+	public float attackingFovAngle = 360f;
+	public float standardFovAngle = 160f;
+	public float searchingFovAngle = 260f;
+
 
 	public bool canSee(GameObject poi){
 		if(poi == null){
@@ -50,7 +54,20 @@ public class CreatureSight : MonoBehaviour {
 	public bool raycastHits(GameObject poi, string overallTag){
 		Vector3 direction = poi.transform.position - transform.position;
 		direction.Normalize ();
-		float angle = Vector3.Angle (direction, transform.forward);
+
+		Vector3 compareAngle = new Vector3(direction.x, 0, direction.z);//we do this because otherwise the FOV would restrict vertical range which we assume to be infinite
+
+		float angle = Vector3.Angle (compareAngle, transform.forward);
+
+		float fovAngle = standardFovAngle;
+
+		if (GetComponent<CreatureAI>() != null && GetComponent<CreatureAI>().currentState == CreatureAI.States.Searching){
+			fovAngle = searchingFovAngle;
+		}
+		if (GetComponent<CreatureAI>() != null && GetComponent<CreatureAI>().isAttacking){
+			fovAngle = attackingFovAngle;
+		}
+
 		if (angle < fovAngle * 0.5f) {
 			RaycastHit hit;
 

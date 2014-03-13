@@ -49,7 +49,6 @@ public class Settings : MonoBehaviour
 
 	public void InitAudio()
 	{
-		//PlayerPrefs.DeleteAll();
 		gameVolume = GameObject.Find("2DAudio").GetComponent<Volume>();
 		
 		if (GameObject.Find("musicSlider") != null &&
@@ -62,17 +61,17 @@ public class Settings : MonoBehaviour
 
 
 			if (!PlayerPrefs.HasKey("MusicVol"))
-				musicSlider.value = gameVolume.MusicVolume;
+				gameVolume.MusicVolume = musicSlider.value;
 			else
 				musicSlider.value = PlayerPrefs.GetFloat("MusicVol");
 			
 			if (!PlayerPrefs.HasKey("SoundFXVol"))
-				soundFXSlider.value = gameVolume.AmbienceVolume;
+				gameVolume.AmbienceVolume = soundFXSlider.value;
 			else
 				soundFXSlider.value = PlayerPrefs.GetFloat("SoundFXVol");
 			
 			if (!PlayerPrefs.HasKey("DialogueVol"))
-				dialogueSlider.value = gameVolume.AIVolume;
+				gameVolume.AIVolume = dialogueSlider.value;
 			else
 				dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVol");
 
@@ -271,14 +270,11 @@ public class Settings : MonoBehaviour
 		{
 			if (resolutionDropDown != null)
 			{
-				if (resolutionDropDown.value != "")
-				{
-					string w = resolutionDropDown.value.Split('x')[0];
-					string h = resolutionDropDown.value.Split('x')[1];
+				string w = resolutionDropDown.value.Split('x')[0];
+				string h = resolutionDropDown.value.Split('x')[1];
 
-					if (resolutionDropDown.value == PlayerPrefs.GetString("Resolution"))
-						Screen.SetResolution(int.Parse(w), int.Parse(h), false);
-				}
+				if (resolutionDropDown.value == PlayerPrefs.GetString("Resolution"))
+					Screen.SetResolution(int.Parse(w), int.Parse(h), false);
 			}
 		}
 	}
@@ -348,9 +344,8 @@ public class Settings : MonoBehaviour
 		foreach (Resolution res in resolutions) 
 		{
 
-			if (res.width % 16 == 0)
-				if(res.height % 9 == 0)
-					resolutionDropDown.items.Add(res.width + "x" + res.height);
+			if (res.width % 16 == 0 && res.height % 9 == 0)
+				resolutionDropDown.items.Add(res.width + "x" + res.height);
 		}
 
 		//if (string.IsNullOrEmpty(PlayerPrefs.GetString("Resolution")))

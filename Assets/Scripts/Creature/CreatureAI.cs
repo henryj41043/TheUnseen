@@ -63,8 +63,8 @@ public class CreatureAI : MonoBehaviour {
 
 	CreatureSight vision;
 
-	public double timeToWait = .1;
-	private double timeWaited;
+	public float timeToWait = .1f;
+	private float timeWaited;
 
 	void Awake() {
 		timeWaited = timeToWait;
@@ -76,9 +76,17 @@ public class CreatureAI : MonoBehaviour {
 	}
 	
 	void Update () {
+
+		UpdateAnimations();
+
 		timeWaited += Time.deltaTime;
+
 		if (timeWaited >= timeToWait){
+
+			float delay = Time.deltaTime/timeWaited;
+
 			timeWaited = 0;
+
 			// Update Target
 			newTarget = GetNewestTarget();
 
@@ -103,7 +111,7 @@ public class CreatureAI : MonoBehaviour {
 				actualWalkSpeed = walkSpeed*superSayianSpeedMult;
 				actualRunSpeed = runSpeed*superSayianSpeedMult;
 				actualChaseSpeed = chaseSpeed*superSayianSpeedMult;
-				superSayianTimer += Time.deltaTime;
+				superSayianTimer += delay;
 				if(superSayianTimer > superSayianTime){
 					superSayianCharge -= SSChargeDecrease;
 				}
@@ -167,7 +175,7 @@ public class CreatureAI : MonoBehaviour {
 				if(progressTimer == 0f){
 					lastProgress = (lastPosMarker.transform.position - transform.position).magnitude;
 				}
-				progressTimer += Time.deltaTime;
+				progressTimer += delay;
 				if(progressTimer > checkProgressTime){
 					currentProgress = (lastPosMarker.transform.position - transform.position).magnitude;
 					if(currentProgress >= lastProgress){
@@ -193,8 +201,8 @@ public class CreatureAI : MonoBehaviour {
 					if(Vector3.Distance(transform.position, currentTarget.transform.position) > drainRange){
 						currentState = States.ChasePOI;
 					}else{
-						currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*Time.deltaTime);
-						superSayianCharge += ratioDrainPerSecond*Time.deltaTime;
+						currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*delay);
+						superSayianCharge += ratioDrainPerSecond*delay;
 					}
 				}else{
 					isDraining = false;
@@ -207,7 +215,7 @@ public class CreatureAI : MonoBehaviour {
 					isSuperSayian = true;
 				}
 			}else if (currentState == States.Searching){
-				timeSearchedSoFar += Time.deltaTime;
+				timeSearchedSoFar += delay;
 				if (timeSearchedSoFar > searchTime){
 					currentState = States.Wander;
 					currentTarget = null;
@@ -215,8 +223,6 @@ public class CreatureAI : MonoBehaviour {
 					newTarget = null;
 				}
 			}
-
-			UpdateAnimations();
 		}
 	}
 
@@ -279,9 +285,9 @@ public class CreatureAI : MonoBehaviour {
 		isAttacking = true;
 		if (target.tag == "Player"){
 			if (target.transform.parent != null) {
-				target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				//target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 			} else {
-				target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				//target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 			}
 		}
 		yield return new WaitForSeconds(attackSpeed);
