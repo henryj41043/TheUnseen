@@ -49,6 +49,16 @@ ModelImporter:
     100086: touchPanel
     100088: touchScreen
     100090: wallEle:wall
+    100092: door
+    100094: polySurface10
+    100096: polySurface11
+    100098: polySurface12
+    100100: polySurface7
+    100102: polySurface8
+    100104: polySurface9
+    100106: staticElevatorParts
+    100108: wall
+    100110: elevator
     400000: button1
     400002: button2
     400004: button3
@@ -95,6 +105,16 @@ ModelImporter:
     400086: touchPanel
     400088: touchScreen
     400090: wallEle:wall
+    400092: door
+    400094: polySurface10
+    400096: polySurface11
+    400098: polySurface12
+    400100: polySurface7
+    400102: polySurface8
+    400104: polySurface9
+    400106: staticElevatorParts
+    400108: wall
+    400110: elevator
     2300000: button1
     2300002: button2
     2300004: button3
@@ -137,6 +157,15 @@ ModelImporter:
     2300078: touchPanel
     2300080: touchScreen
     2300082: wallEle:wall
+    2300084: polySurface10
+    2300086: polySurface11
+    2300088: polySurface12
+    2300090: polySurface7
+    2300092: polySurface8
+    2300094: polySurface9
+    2300096: staticElevatorParts
+    2300098: wall
+    2300100: elevator
     3300000: button1
     3300002: button2
     3300004: button3
@@ -179,6 +208,15 @@ ModelImporter:
     3300078: touchPanel
     3300080: touchScreen
     3300082: wallEle:wall
+    3300084: polySurface10
+    3300086: polySurface11
+    3300088: polySurface12
+    3300090: polySurface7
+    3300092: polySurface8
+    3300094: polySurface9
+    3300096: staticElevatorParts
+    3300098: wall
+    3300100: elevator
     4300000: rooundElevator
     4300002: plate
     4300004: button1
@@ -221,6 +259,15 @@ ModelImporter:
     4300078: door1Part3
     4300080: door1Part2
     4300082: door1Part1
+    4300084: staticElevatorParts
+    4300086: wall
+    4300088: polySurface7
+    4300090: polySurface8
+    4300092: polySurface9
+    4300094: polySurface10
+    4300096: polySurface11
+    4300098: polySurface12
+    4300100: elevator
     6400000: button1
     6400002: button2
     6400004: button3
@@ -263,6 +310,15 @@ ModelImporter:
     6400078: touchPanel
     6400080: touchScreen
     6400082: wallEle:wall
+    6400084: polySurface10
+    6400086: polySurface11
+    6400088: polySurface12
+    6400090: polySurface7
+    6400092: polySurface8
+    6400094: polySurface9
+    6400096: staticElevatorParts
+    6400098: wall
+    6400100: elevator
     7400000: Open
     7400002: Close
     9500000: //RootNode
