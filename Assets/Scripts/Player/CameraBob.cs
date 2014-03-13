@@ -14,7 +14,7 @@ public class CameraBob : MonoBehaviour
 	[System.NonSerialized]
 	public bool grounded = true;
 	[System.NonSerialized]
-	public float maxSpeed = 8;
+	public float maxSpeed = 10;
 	
 	public float footstepStartPoint = 3*Mathf.PI/2;
 	
@@ -76,7 +76,7 @@ public class CameraBob : MonoBehaviour
 	}
 
 	void PlayFootstep () {
-
+		GetComponent<Footsteps>().Footstep((GetComponent<CharacterController>().velocity.magnitude/maxSpeed));
 	}
 
 }

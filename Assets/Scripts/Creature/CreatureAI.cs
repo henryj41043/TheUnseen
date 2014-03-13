@@ -83,7 +83,7 @@ public class CreatureAI : MonoBehaviour {
 
 		if (timeWaited >= timeToWait){
 
-			float delay = Time.deltaTime/timeWaited;
+			float delay = timeWaited;
 
 			timeWaited = 0;
 
@@ -278,16 +278,16 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool("Walk", walkAnim);
 		anim.SetBool("Attack", attackAnim);
 		anim.SetBool("Searching", searchAnim);
-		anim.SetBool("Absorbing", absorbAnim);
+		//anim.SetBool("Absorbing", absorbAnim);
 	}
 
 	public IEnumerator Attack(GameObject target) {
 		isAttacking = true;
 		if (target.tag == "Player"){
 			if (target.transform.parent != null) {
-				//target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 			} else {
-				//target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
 			}
 		}
 		yield return new WaitForSeconds(attackSpeed);

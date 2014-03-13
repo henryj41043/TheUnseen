@@ -370,6 +370,8 @@ public class CharacterMover : MonoBehaviour
 		// We were not grounded but just landed on something
 		else if(!grounded && IsGroundedTest())
 		{
+			GetComponent<Footsteps>().Land(velocity.y);
+
 			grounded = true;
 			jumping.jumping = false;
 			SubtractNewPlatformVelocity();

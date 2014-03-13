@@ -3960,7 +3960,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: a9907a9aea5d426438f411aea1a556f5, type: 3}
   growls: []
   roars: []
-  timeToWait: .10000000000000001
+  timeToWait: .100000001
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3975,7 +3975,9 @@ MonoBehaviour:
   playerSightDist: 30
   poiSightDist: 100
   enragedSightMult: 2
-  fovAngle: 180
+  attackingFovAngle: 360
+  standardFovAngle: 160
+  searchingFovAngle: 260
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

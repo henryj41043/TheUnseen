@@ -55,7 +55,7 @@ public class CreatureSight : MonoBehaviour {
 		Vector3 direction = poi.transform.position - transform.position;
 		direction.Normalize ();
 
-		Vector3 compareAngle = new Vector3(direction.x, 0, direction.z);//we do this because otherwise the FOV would restrict vertical range which we assume to be infinite
+		Vector3 compareAngle = new Vector3(direction.x, transform.forward.y, direction.z);//we do this because otherwise the FOV would restrict vertical range which we assume to be infinite
 
 		float angle = Vector3.Angle (compareAngle, transform.forward);
 
