@@ -3175,7 +3175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footAudio: []
   landAudio: []
-  attractiveSound: {fileID: 100000, guid: c3b1dd5c49c61ba4b9673c29c2134fab, type: 2}
+  attractiveSound: {fileID: 100000, guid: 8aa0ed7d9caf8ff42a7352f51f6cbfd9, type: 2}
   mult: 1
   standardStepRange: 4
   minStepIntensity: .100000001
