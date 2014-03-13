@@ -10,6 +10,7 @@ public class LightGenerator : MonoBehaviour
 
 	public float energy = 0.0f;
 	public float maxEnergy = 10.0f;
+	public float minEnergy = 3.0f;
 
 	public float minOrbCharge = 1;
 	public float maxOrbCharge = 3;
@@ -30,6 +31,8 @@ public class LightGenerator : MonoBehaviour
 
 	public GameObject orbChargeLoc;
 	private GameObject chargingOrb;
+	private float startTimeDelay;
+	public float timeDelay = 1f ;
 	
 	void Start () {
 		chargingOrb = null;
@@ -67,39 +70,42 @@ public class LightGenerator : MonoBehaviour
 
 	public void StartShot (){
 		PEG.SetBool("mouseClick", true);
-		if (energy > 0.0f) {
-			audio.clip = PEGcharge;
-			audio.Play();
-			chargingOrb = (GameObject) Instantiate (shootingOrb, orbChargeLoc.transform.position, playerCam.transform.rotation);
-			chargingOrb.transform.parent = orbChargeLoc.transform;
-			chargingOrb.GetComponent<FiredOrb>().ratioPower = minOrbCharge/maxOrbCharge;
-			chargingOrb.SetActive(true);
-		}
+	
+			
+				audio.clip = PEGcharge;
+				audio.Play();
+				chargingOrb = (GameObject) Instantiate (shootingOrb, orbChargeLoc.transform.position, playerCam.transform.rotation);
+				chargingOrb.transform.parent = orbChargeLoc.transform;
+				chargingOrb.GetComponent<FiredOrb>().ratioPower = minOrbCharge/maxOrbCharge;
+				chargingOrb.SetActive(true);
+			
 	}
 
 	public void FireShot (){
 		if (chargingOrb != null){
-			PEG.SetBool("mouseHold", false);
-			PEG.SetBool("mouseClick", false);
-			audio.clip = PEGfire;
-			audio.Play();
-			energy -= chargingOrb.GetComponent<FiredOrb>().ratioPower*maxOrbCharge;
-			chargingOrb.GetComponent<FiredOrb>().Launch();
-			chargingOrb = null;
-			UpdateDisplay();
+			
+				
+				PEG.SetBool("mouseHold", false);
+				PEG.SetBool("mouseClick", false);
+				audio.clip = PEGfire;
+				audio.Play();
+				energy -= chargingOrb.GetComponent<FiredOrb>().ratioPower*maxOrbCharge;
+				chargingOrb.GetComponent<FiredOrb>().Launch();
+				chargingOrb = null;
+				UpdateDisplay();
 		}
 	}
 
 	public void Charge (){
 		if (chargingOrb != null){
 			PEG.SetBool("mouseHold", true);
-			if (energy > 0.0f && energy > maxOrbCharge) {
+			if (energy > minEnergy && energy > maxOrbCharge) {
 				chargingOrb.GetComponent<FiredOrb>().ratioPower += ratioChargePerSecond*Time.deltaTime;
 				if (chargingOrb.GetComponent<FiredOrb>().ratioPower > 1){
 					chargingOrb.GetComponent<FiredOrb>().ratioPower = 1;
 					energy -= energyDrainPerSecond*Time.deltaTime;
 				}
-			}else if (energy > 0.0f) {
+			}else if (energy > minEnergy) {
 				energy -= energyDrainPerSecond*Time.deltaTime;
 				chargingOrb.GetComponent<FiredOrb>().ratioPower = (energy/maxOrbCharge)*chargingOrb.GetComponent<FiredOrb>().ratioPower;
 			}else {

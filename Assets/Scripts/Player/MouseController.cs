@@ -27,6 +27,8 @@ public class MouseController : MonoBehaviour {
 	
 	private int screen = 1;
 	
+	private float startTimeDelay;
+	public float timeDelay = 0.5f ;
 	// Use this for initialization
 	void Start () {
 		Screen.showCursor = false;
@@ -38,7 +40,7 @@ public class MouseController : MonoBehaviour {
 	void Update () {
 		Screen.showCursor = false;
 		Screen.lockCursor = true;
-		LeftMouseChecks ();
+		LeftMouseChecks();
 		InteractChecks ();
 		
 		if (Input.GetKeyDown(KeyCode.P)) {
@@ -80,17 +82,29 @@ public class MouseController : MonoBehaviour {
 			}
 		}
 	}
-	
 	void LeftMouseChecks (){
+		//put time delay
+		startTimeDelay += Time.deltaTime;
 		//Check that game object is active in the scene
 		if (LightDevice.activeInHierarchy) {
 			if (Input.GetMouseButton (0)) { //left
-				if (isCharging) {
-					lightGenerator.Charge ();
-				} else {
-					isCharging = true;
-					lightGenerator.StartShot ();
-				}
+						if (isCharging) 
+						{
+							lightGenerator.Charge ();
+						} 
+						// check the time delay
+						else 
+						{
+							if (Input.GetMouseButtonDown(0) && startTimeDelay > timeDelay )
+							{
+										isCharging = true;
+										lightGenerator.StartShot ();
+							}
+								//reset the start time delay to zero
+								startTimeDelay = 0;
+						}
+							
+					
 			} else {
 				if (isCharging) {
 					isCharging = false;
@@ -99,6 +113,11 @@ public class MouseController : MonoBehaviour {
 			}
 		}
 	}
+	public IEnumerator TimeDelay()
+	{
+		yield return new WaitForSeconds(1);
+	}
+	
 	void OnGUI(){		
 		if (crosshairTexture != null) {
 			if (isCharging){

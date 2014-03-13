@@ -6,8 +6,18 @@ public class Switch : Interactive {
 	public bool turnedOn;
 
 	public Activateable[] targets;
+	public GameObject pair;
 
 	public override void Interact(){
+		if(pair){
+			if (!pair.GetComponent<Switch>().turnedOn){
+				pair.GetComponent<Animation>().Play("On");
+				pair.GetComponent<Switch>().turnedOn = true;
+			}else {
+				pair.GetComponent<Animation>().Play("Off");
+				pair.GetComponent<Switch>().turnedOn = false;
+			}
+		}
 		if (powered) {
 	 		if (!turnedOn){
 				animation.Play("On");
