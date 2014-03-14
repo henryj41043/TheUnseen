@@ -1586,7 +1586,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100086}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -12.3322201, y: 1, z: -4.92720079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400132}
@@ -2276,7 +2276,7 @@ MonoBehaviour:
   maxCrosshairSize: 50
   interactLabel: {fileID: 11400036}
   lightGenerator: {fileID: 11400008}
-  timeDelay: .5
+  timeDelay: .349999994
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2392,7 +2392,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0161e7976b8a22b438a90d031a6075e3, type: 3}
   - {fileID: 2800000, guid: 14c84c41d0709894b985b582beb6f4f5, type: 3}
   orbChargeLoc: {fileID: 100120}
-  timeDelay: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
