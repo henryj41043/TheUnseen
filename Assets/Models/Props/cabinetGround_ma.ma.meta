@@ -35,6 +35,12 @@ ModelImporter:
     4300006: Right_Knob
     4300008: Left_Knob
     4300010: counterTop:Group2
+    6400000: Cabinet
+    6400002: counterTop:Group2
+    6400004: Left_Door
+    6400006: Left_Knob
+    6400008: Right_Door
+    6400010: Right_Knob
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -56,10 +62,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -70,7 +76,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

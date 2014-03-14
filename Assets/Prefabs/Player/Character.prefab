@@ -674,6 +674,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400064}
+  - 114: {fileID: 11400066}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -1044,6 +1045,22 @@ GameObject:
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400132}
+  - 82: {fileID: 8200002}
+  m_Layer: 0
+  m_Name: FootSteps
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1569,9 +1586,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100086}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -12.3322201, y: 1, z: -4.92720079}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 400132}
   - {fileID: 400082}
   - {fileID: 400110}
   - {fileID: 400090}
@@ -1839,6 +1857,17 @@ Transform:
   - {fileID: 400124}
   - {fileID: 400120}
   m_Father: {fileID: 400086}
+--- !u!4 &400132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100132}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: 0, y: -.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400086}
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -2076,6 +2105,64 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &8200002
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100132}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!92 &9200002
 Behaviour:
   m_ObjectHideFlags: 1
@@ -2189,6 +2276,7 @@ MonoBehaviour:
   maxCrosshairSize: 50
   interactLabel: {fileID: 11400036}
   lightGenerator: {fileID: 11400008}
+  timeDelay: .5
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2266,6 +2354,7 @@ MonoBehaviour:
   shootingOrb: {fileID: 100006, guid: bf71bbaea2d474a43a9009463c567130, type: 2}
   energy: 7
   maxEnergy: 7
+  minEnergy: 3
   minOrbCharge: 1
   maxOrbCharge: 3
   energyRechargePerSecond: .5
@@ -2303,6 +2392,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0161e7976b8a22b438a90d031a6075e3, type: 3}
   - {fileID: 2800000, guid: 14c84c41d0709894b985b582beb6f4f5, type: 3}
   orbChargeLoc: {fileID: 100120}
+  timeDelay: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3173,8 +3263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016e120d8ebd9d44c83cbc8c87d8b0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footAudio: []
-  landAudio: []
+  audioSource: {fileID: 8200002}
+  footAudio:
+  - {fileID: 8300000, guid: 5dbe1c26fe321cd428f6baf47b51a9c5, type: 3}
+  - {fileID: 8300000, guid: 0be533d6dabe71b429905269f53010b3, type: 3}
+  - {fileID: 8300000, guid: 7905600dd3105db4aaf5d1a87afb0e30, type: 3}
+  landAudio:
+  - {fileID: 8300000, guid: a2fa62c4107b0974c901e2a402545128, type: 3}
   attractiveSound: {fileID: 100000, guid: 8aa0ed7d9caf8ff42a7352f51f6cbfd9, type: 2}
   mult: 1
   standardStepRange: 4
@@ -3184,6 +3279,17 @@ MonoBehaviour:
   maxLandVal: 6.25
   minLangRange: 4
   maxLandRange: 15
+--- !u!114 &11400066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688aa519d7fdf5445b9328889263ee5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12400002
 Behaviour:
   m_ObjectHideFlags: 1

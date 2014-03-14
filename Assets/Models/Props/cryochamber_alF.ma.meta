@@ -44,6 +44,8 @@ ModelImporter:
     100076: pipeHoles
     100078: pipes
     100080: straps
+    100082: cryoChamber
+    100084: polySurface15
     400000: //RootNode
     400002: door
     400004: hinge1
@@ -85,6 +87,8 @@ ModelImporter:
     400076: pipeHoles
     400078: pipes
     400080: straps
+    400082: cryoChamber
+    400084: polySurface15
     2300000: door
     2300002: hinge1
     2300004: hinge2
@@ -117,6 +121,8 @@ ModelImporter:
     2300058: cryo:Group6
     2300060: cryo:Group9
     2300062: hinge
+    2300064: chair
+    2300066: polySurface15
     3300000: door
     3300002: hinge1
     3300004: hinge2
@@ -149,6 +155,8 @@ ModelImporter:
     3300058: cryo:Group6
     3300060: cryo:Group9
     3300062: hinge
+    3300064: chair
+    3300066: polySurface15
     4300000: tube3_inset
     4300002: tube1_inset
     4300004: tube2_inset
@@ -181,6 +189,8 @@ ModelImporter:
     4300058: cryo:Group5
     4300060: cryo:Group4
     4300062: cryo:Group3
+    4300064: polySurface15
+    4300066: chair
     6400000: door
     6400002: hinge1
     6400004: hinge2
@@ -213,7 +223,10 @@ ModelImporter:
     6400058: cryo:Group6
     6400060: cryo:Group9
     6400062: hinge
+    6400064: chair
+    6400066: polySurface15
     7400000: OpenDoor
+    7400002: CloseDoor
     9500000: //RootNode
     11100000: //RootNode
     13700000: door
@@ -240,7 +253,7 @@ ModelImporter:
       name: OpenDoor
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 100
+      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -301,6 +314,52 @@ ModelImporter:
       - path: cryochamber/tube3
         weight: 1
       - path: cryochamber/tube3_inset
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/joint2
+        weight: 1
+      - path: joint1/joint2/joint3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: CloseDoor
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cryoChamber
+        weight: 1
+      - path: cryoChamber/base
+        weight: 1
+      - path: cryoChamber/chair
+        weight: 1
+      - path: cryoChamber/door
+        weight: 1
+      - path: cryoChamber/inside
+        weight: 1
+      - path: cryoChamber/polySurface15
         weight: 1
       - path: joint1
         weight: 1

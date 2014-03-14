@@ -16,6 +16,10 @@ ModelImporter:
     100020: right_hole
     100022: right_lever
     100024: rotating_base
+    100026: polySurface18
+    100028: polySurface19
+    100030: polySurface20
+    100032: polySurface34
     400000: bar
     400002: base
     400004: base1
@@ -29,6 +33,10 @@ ModelImporter:
     400020: right_hole
     400022: right_lever
     400024: rotating_base
+    400026: polySurface18
+    400028: polySurface19
+    400030: polySurface20
+    400032: polySurface34
     2300000: bar
     2300002: base
     2300004: base1
@@ -40,6 +48,10 @@ ModelImporter:
     2300016: right_hole
     2300018: right_lever
     2300020: rotating_base
+    2300022: polySurface18
+    2300024: polySurface19
+    2300026: polySurface20
+    2300028: polySurface34
     3300000: bar
     3300002: base
     3300004: base1
@@ -51,6 +63,10 @@ ModelImporter:
     3300016: right_hole
     3300018: right_lever
     3300020: rotating_base
+    3300022: polySurface18
+    3300024: polySurface19
+    3300026: polySurface20
+    3300028: polySurface34
     4300000: base
     4300002: rotating_base
     4300004: left_hole
@@ -62,6 +78,10 @@ ModelImporter:
     4300016: base2
     4300018: light_socket_1
     4300020: light_socket_2
+    4300022: polySurface18
+    4300024: polySurface19
+    4300026: polySurface20
+    4300028: polySurface34
     6400000: bar
     6400002: base
     6400004: base1
@@ -73,6 +93,10 @@ ModelImporter:
     6400016: right_hole
     6400018: right_lever
     6400020: rotating_base
+    6400022: polySurface18
+    6400024: polySurface19
+    6400026: polySurface20
+    6400028: polySurface34
     7400000: Activate
     7400002: On
     7400004: Off

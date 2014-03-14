@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Footsteps : MonoBehaviour {
-	
+
+	public AudioSource audioSource;
 	public AudioClip[] footAudio;
 	public AudioClip[] landAudio;
 	
@@ -26,9 +27,9 @@ public class Footsteps : MonoBehaviour {
 		if (intensity < minStepIntensity){
 			intensity = minStepIntensity;	
 		}
-		//audio.volume = intensity;
-		//audio.clip = footAudio[Random.Range(0, footAudio.Length)];
-		//audio.Play();
+		audioSource.volume = intensity;
+		audioSource.clip = footAudio[Random.Range(0, footAudio.Length)];
+		audioSource.Play();
 		
 		makeSound (intensity*standardStepRange);
 	}
@@ -44,9 +45,9 @@ public class Footsteps : MonoBehaviour {
 			intensity = 1;	
 		}
 		
-		//audio.volume = minLandVal+(intensity*(maxLandVal-minLandVal));
-		//audio.clip = landAudio[Random.Range(0, landAudio.Length)];
-		//audio.Play();
+		audioSource.volume = minLandVal+(intensity*(maxLandVal-minLandVal));
+		audioSource.clip = landAudio[Random.Range(0, landAudio.Length)];
+		audioSource.Play();
 		
 		makeSound (intensity*maxLandRange);
 	}

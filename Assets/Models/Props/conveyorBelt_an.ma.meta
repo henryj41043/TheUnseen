@@ -45,6 +45,19 @@ ModelImporter:
     100078: wall6
     100080: wall7
     100082: wall8
+    100084: belt_shaft
+    100086: bevel1
+    100088: bevel2
+    100090: ceiling1
+    100092: ceiling2
+    100094: ground1
+    100096: ground2
+    100098: Group2
+    100100: Group3
+    100102: Group4
+    100104: Group5
+    100106: Group6
+    100108: room
     400000: column1
     400002: column15
     400004: conveyorBelt
@@ -87,6 +100,19 @@ ModelImporter:
     400078: wall6
     400080: wall7
     400082: wall8
+    400084: belt_shaft
+    400086: bevel1
+    400088: bevel2
+    400090: ceiling1
+    400092: ceiling2
+    400094: ground1
+    400096: ground2
+    400098: Group2
+    400100: Group3
+    400102: Group4
+    400104: Group5
+    400106: Group6
+    400108: room
     2300000: column1
     2300002: column15
     2300004: conveyorBelt
@@ -120,6 +146,18 @@ ModelImporter:
     2300060: wall6
     2300062: wall7
     2300064: wall8
+    2300066: belt_shaft
+    2300068: bevel1
+    2300070: bevel2
+    2300072: ceiling1
+    2300074: ceiling2
+    2300076: ground1
+    2300078: ground2
+    2300080: Group2
+    2300082: Group3
+    2300084: Group4
+    2300086: Group5
+    2300088: Group6
     3300000: column1
     3300002: column15
     3300004: conveyorBelt
@@ -153,6 +191,18 @@ ModelImporter:
     3300060: wall6
     3300062: wall7
     3300064: wall8
+    3300066: belt_shaft
+    3300068: bevel1
+    3300070: bevel2
+    3300072: ceiling1
+    3300074: ceiling2
+    3300076: ground1
+    3300078: ground2
+    3300080: Group2
+    3300082: Group3
+    3300084: Group4
+    3300086: Group5
+    3300088: Group6
     4300000: conveyorBelt
     4300002: rotator01
     4300004: column15
@@ -186,6 +236,18 @@ ModelImporter:
     4300060: pPlane9
     4300062: pasted__polySurface3
     4300064: pasted__polySurface6
+    4300066: ground1
+    4300068: ground2
+    4300070: ceiling2
+    4300072: ceiling1
+    4300074: bevel1
+    4300076: bevel2
+    4300078: Group3
+    4300080: Group4
+    4300082: Group5
+    4300084: Group6
+    4300086: Group2
+    4300088: belt_shaft
     6400000: column1
     6400002: column15
     6400004: conveyorBelt
@@ -219,6 +281,18 @@ ModelImporter:
     6400060: wall6
     6400062: wall7
     6400064: wall8
+    6400066: belt_shaft
+    6400068: bevel1
+    6400070: bevel2
+    6400072: ceiling1
+    6400074: ceiling2
+    6400076: ground1
+    6400078: ground2
+    6400080: Group2
+    6400082: Group3
+    6400084: Group4
+    6400086: Group5
+    6400088: Group6
     9500000: //RootNode
   materials:
     importMaterials: 1

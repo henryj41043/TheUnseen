@@ -22,9 +22,10 @@ public class GoToScene : MonoBehaviour {
 			elevator.animation.Play("Close");
 		}
 		AsyncOperation async = Application.LoadLevelAsync(sceneName);
+		async.allowSceneActivation = false;
+		yield return new WaitForSeconds(0.3f);
 		audio.clip = startElevator;
 		audio.Play();
-		async.allowSceneActivation = false;
 		while (audio.isPlaying) {
 			yield return new WaitForSeconds(0.1f);
 		}

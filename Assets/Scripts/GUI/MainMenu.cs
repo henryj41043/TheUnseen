@@ -10,6 +10,9 @@ public class MainMenu : MonoBehaviour
 	
 	public void OnPlayClick()
 	{
+		if (cryoChamber != null) {
+			cryoChamber.animation.Play("OpenDoor");
+		}
 		this.GetComponent<UIPanel>().enabled = false;
 		//NGUITools.SetActive(mainMenu, false);
 		StartCoroutine(LoadLevel());
@@ -38,9 +41,6 @@ public class MainMenu : MonoBehaviour
 	}
 
 	IEnumerator LoadLevel() {
-		if (cryoChamber != null) {
-			cryoChamber.animation.Play();
-		}
 		float start = Time.time;
 		while (Time.time < start + 2.0f) {
 			yield return new WaitForSeconds(0.1f);

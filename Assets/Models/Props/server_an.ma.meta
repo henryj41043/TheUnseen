@@ -54,6 +54,7 @@ ModelImporter:
     2300024: side_door
     2300026: top1
     2300028: top2
+    2300030: //RootNode
     3300000: back_mesh
     3300002: bar1
     3300004: bar2
@@ -69,6 +70,7 @@ ModelImporter:
     3300024: side_door
     3300026: top1
     3300028: top2
+    3300030: //RootNode
     4300000: bar1
     4300002: bar2
     4300004: bar3
@@ -84,6 +86,7 @@ ModelImporter:
     4300024: top1
     4300026: top2
     4300028: bottom_molding
+    4300030: server
     6400000: back_mesh
     6400002: bar1
     6400004: bar2
@@ -99,6 +102,7 @@ ModelImporter:
     6400024: side_door
     6400026: top1
     6400028: top2
+    6400030: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
