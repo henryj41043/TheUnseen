@@ -67,7 +67,6 @@ public class CreatureAI : MonoBehaviour {
 	private float timeWaited;
 
 	private bool lastRunAnim = false;
-	private bool lastIdleAnim = false;
 	private bool lastWalkAnim = false;
 	private bool lastAttackAnim = false;
 	private bool lastSearchAnim = false;
@@ -85,8 +84,8 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool("Run", false);
 		anim.SetBool("Walk", false);
 		anim.SetBool("Attack", false);
-		anim.SetBool("Searching", false);
-		anim.SetBool("Absorbing", false);
+		anim.SetBool("Search", false);
+		anim.SetBool("Absorb", false);
 
 		GetNearestWaypoint();
 	}
@@ -307,11 +306,11 @@ public class CreatureAI : MonoBehaviour {
 		}
 		if (searchAnim != lastSearchAnim){
 			lastSearchAnim = searchAnim;
-			anim.SetBool("Searching", searchAnim);
+			anim.SetBool("Search", searchAnim);
 		}
 		if (absorbAnim != lastAbsorbAnim){
 			lastAbsorbAnim = absorbAnim;
-			anim.SetBool("Absorbing", absorbAnim);
+			anim.SetBool("Absorb", absorbAnim);
 		}
 	}
 
