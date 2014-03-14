@@ -66,12 +66,28 @@ public class CreatureAI : MonoBehaviour {
 	public float timeToWait = .1f;
 	private float timeWaited;
 
+	private bool lastRunAnim = false;
+	private bool lastIdleAnim = false;
+	private bool lastWalkAnim = false;
+	private bool lastAttackAnim = false;
+	private bool lastSearchAnim = false;
+	private bool lastEnragedAnim = false;
+	private bool lastAbsorbAnim = false;
+
 	void Awake() {
 		timeWaited = timeToWait;
 		vision = GetComponent<CreatureSight>();
 		lastPosMarker = new GameObject(name+"  Last Known Position Marker");
 		aiPath = GetComponent<AIPath>();
 		anim = GetComponent<Animator>();
+
+		anim.SetBool("Enraged", false);
+		anim.SetBool("Run", false);
+		anim.SetBool("Walk", false);
+		anim.SetBool("Attack", false);
+		anim.SetBool("Searching", false);
+		anim.SetBool("Absorbing", false);
+
 		GetNearestWaypoint();
 	}
 	
@@ -272,13 +288,31 @@ public class CreatureAI : MonoBehaviour {
 			enragedAnim = false;
 			absorbAnim = false;
 		}
-		
-		anim.SetBool("Enraged", enragedAnim);
-		anim.SetBool("Run", runAnim);
-		anim.SetBool("Walk", walkAnim);
-		anim.SetBool("Attack", attackAnim);
-		anim.SetBool("Searching", searchAnim);
-		anim.SetBool("Absorbing", absorbAnim);
+
+		if (enragedAnim != lastEnragedAnim){
+			lastEnragedAnim = enragedAnim;
+			anim.SetBool("Enraged", enragedAnim);
+		}
+		if (runAnim != lastRunAnim){
+			lastRunAnim = runAnim;
+			anim.SetBool("Run", runAnim);
+		}
+		if (walkAnim != lastWalkAnim){
+			lastWalkAnim = walkAnim;
+			anim.SetBool("Walk", walkAnim);
+		}
+		if (attackAnim != lastAttackAnim){
+			lastAttackAnim = attackAnim;
+			anim.SetBool("Attack", attackAnim);
+		}
+		if (searchAnim != lastSearchAnim){
+			lastSearchAnim = searchAnim;
+			anim.SetBool("Searching", searchAnim);
+		}
+		if (absorbAnim != lastAbsorbAnim){
+			lastAbsorbAnim = absorbAnim;
+			anim.SetBool("Absorbing", absorbAnim);
+		}
 	}
 
 	public IEnumerator Attack(GameObject target) {
