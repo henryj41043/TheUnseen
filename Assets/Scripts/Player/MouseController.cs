@@ -97,11 +97,11 @@ public class MouseController : MonoBehaviour {
 						{
 							if (Input.GetMouseButtonDown(0) && startTimeDelay > timeDelay )
 							{
-										isCharging = true;
-										lightGenerator.StartShot ();
-							}
+								isCharging = true;
+								lightGenerator.StartShot ();
 								//reset the start time delay to zero
-								startTimeDelay = 0;
+								startTimeDelay = 0;							
+							}
 						}
 							
 					
