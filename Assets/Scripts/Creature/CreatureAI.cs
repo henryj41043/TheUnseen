@@ -278,7 +278,7 @@ public class CreatureAI : MonoBehaviour {
 		anim.SetBool("Walk", walkAnim);
 		anim.SetBool("Attack", attackAnim);
 		anim.SetBool("Searching", searchAnim);
-		//anim.SetBool("Absorbing", absorbAnim);
+		anim.SetBool("Absorbing", absorbAnim);
 	}
 
 	public IEnumerator Attack(GameObject target) {

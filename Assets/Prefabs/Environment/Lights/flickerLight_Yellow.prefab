@@ -672,7 +672,7 @@ MonoBehaviour:
   - {fileID: 10800000}
   minIntensity: 0
   maxIntensity: 1
-  threshold: .100000001
+  threshold: .200000003
   playSound: 1
   audioSource: {fileID: 8200000}
   audioClips: {fileID: 11400000, guid: 1f9afa9e29333b143bc09eb5697048a2, type: 2}

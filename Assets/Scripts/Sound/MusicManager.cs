@@ -12,7 +12,7 @@ public class MusicManager : MonoBehaviour {
 	private GameObject[] enemies;
 
 	IEnumerator Start () {
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1.0f);
 		source1StartVolume = source1.volume;
 		source2StartVolume = source2.volume;
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
