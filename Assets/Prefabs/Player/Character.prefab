@@ -2352,9 +2352,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 100130}
   shootingOrb: {fileID: 100006, guid: bf71bbaea2d474a43a9009463c567130, type: 2}
+  attractiveSound: {fileID: 100000, guid: 8aa0ed7d9caf8ff42a7352f51f6cbfd9, type: 2}
   energy: 7
   maxEnergy: 7
   minEnergy: 3
+  chargingRange: 6
+  firingRange: 7.5
+  soundDelay: 1
   minOrbCharge: 1
   maxOrbCharge: 3
   energyRechargePerSecond: .5

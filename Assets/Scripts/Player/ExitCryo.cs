@@ -15,7 +15,7 @@ public class ExitCryo : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		this.transform.position = startPos.position;
-		Invoke ("OpenDoor", 2.0f);
+		StartCoroutine(OpenDoor());
 		foreach (AudioClip a in sounds) {
 			audio.PlayOneShot(a);
 		}
@@ -31,12 +31,14 @@ public class ExitCryo : MonoBehaviour {
 
 	void ToggleFrozen() {
 		player.SetActive(true);
+		animation.Play("CloseDoor");
 		Destroy (this.gameObject);
 	}
 
-	void OpenDoor() {
+	IEnumerator OpenDoor() {
+		yield return new WaitForSeconds(2.0f);
 		animation.Play("OpenDoor");
-
+		yield return new WaitForSeconds(3.0f);
 		exiting = true;
 	}
 

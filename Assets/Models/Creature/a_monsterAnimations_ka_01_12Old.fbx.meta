@@ -909,7 +909,7 @@ ModelImporter:
       name: Run
       takeName: Take 001
       firstFrame: 80
-      lastFrame: 100
+      lastFrame: 101
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

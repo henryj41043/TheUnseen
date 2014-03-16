@@ -2032,24 +2032,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400270}
-  - 33: {fileID: 3300000}
-  - 135: {fileID: 13500000}
-  - 23: {fileID: 2300000}
-  m_Layer: 12
-  m_Name: EnragedMarker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &100276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,10 +2310,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.8055191, y: -8.39999962, z: -14.4015255}
+  m_LocalPosition: {x: 122.350998, y: -8.39999962, z: -14.6553802}
   m_LocalScale: {x: .0239145178, y: .0239145178, z: .0239145178}
   m_Children:
-  - {fileID: 400270}
   - {fileID: 400276}
   - {fileID: 400030}
   - {fileID: 400016}
@@ -3687,17 +3668,6 @@ Transform:
   - {fileID: 400172}
   - {fileID: 400066}
   m_Father: {fileID: 400192}
---- !u!4 &400270
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 128.144608, z: 0}
-  m_LocalScale: {x: 41.8156052, y: 41.8156052, z: 41.8156052}
-  m_Children: []
-  m_Father: {fileID: 400042}
 --- !u!4 &400276
 Transform:
   m_ObjectHideFlags: 1
@@ -3709,34 +3679,6 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400042}
---- !u!23 &2300000
-Renderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100270}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: bb52ca965679aa34dbea67e3791066a4, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
---- !u!33 &3300000
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100270}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3862,7 +3804,7 @@ Animator:
   m_GameObject: {fileID: 100042}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4f9533d6d4dd12a4581a76b051643fbc, type: 3}
-  m_Controller: {fileID: 9100000, guid: b9b4f3260a02bc24fb1bf2bad131c56e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ccff0a6a7991ed42877d1dce0a2a483, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -3878,24 +3820,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f57dda1cf1d2a4da197c5c34ea1de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 13700000}
   currentState: 0
   currentTarget: {fileID: 0}
   newTarget: {fileID: 0}
   currentWaypoint: {fileID: 0}
-  enragedMarker: {fileID: 100270}
+  superSayianGlow: {fileID: 2100000, guid: 2f203aee5c0fb304c8554a86a8df7389, type: 2}
+  normal: {fileID: 2100000, guid: 6a8b0bb4fbb55724e870b5c16edd15f1, type: 2}
   checkProgressTime: 1
   walkSpeed: 3
   runSpeed: 5
   chaseSpeed: 7
   attackSpeed: 1
-  attackDamage: 50
+  attackDamage: 34
   isAttacking: 0
   attackRange: 2
   minWaypointRange: 3
   drainRange: 4
   timeSearchedSoFar: 0
   searchTime: 3
-  ratioDrainPerSecond: 0
+  randomNoiseTime: 5
+  ratioDrainPerSecond: .200000003
   isSuperSayian: 0
   superSayianSpeedMult: 1.5
   superSayianTime: 10
@@ -3904,8 +3849,13 @@ MonoBehaviour:
   soundSource: {fileID: 8200000}
   absorbingSound: {fileID: 8300000, guid: ab0453969ff0098449c3f3fed4ccd29e, type: 3}
   attackSound: {fileID: 8300000, guid: a9907a9aea5d426438f411aea1a556f5, type: 3}
-  growls: []
-  roars: []
+  growls:
+  - {fileID: 8300000, guid: 32b65eee395e55648b69d54ade599c05, type: 3}
+  - {fileID: 8300000, guid: 9c0bb3e5b27d7e447a4d9ad0360417b4, type: 3}
+  - {fileID: 8300000, guid: d52e2eb64b8c1f545ae969f6ea488bdc, type: 3}
+  roars:
+  - {fileID: 8300000, guid: 3016ea97930386e4990df6ebfe431b8d, type: 3}
+  - {fileID: 8300000, guid: 063f020d7eab7bb429b3ed95f9b39dd5, type: 3}
   timeToWait: .100000001
 --- !u!114 &11400002
 MonoBehaviour:
@@ -3974,18 +3924,6 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!135 &13500000
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100270}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

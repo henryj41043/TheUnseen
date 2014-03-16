@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Objective : Interactive {
+	public MovieTexture off;
 	public Material red;
 	public Material green;
 	public GameObject screen;
@@ -9,6 +10,14 @@ public class Objective : Interactive {
 	public IL2Sign[] statusSign;
 
 	[SerializeField] private Activateable[] targets;
+
+	void Start() {
+		if (off != null) {
+			screen.renderer.material.mainTexture = off;
+			off.loop = true;
+			off.Play();
+		}
+	}
 
 	public override void Interact(){
 		screen.renderer.material = green;

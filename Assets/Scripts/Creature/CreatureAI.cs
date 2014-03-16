@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class CreatureAI : MonoBehaviour {
 
+	public Renderer meshRenderer;
+
 	public enum States {Wander, ChasePOI, ChasePlayer, ChaseLastKnown, Absorbing, Searching, Struggling};
 
 	public States currentState = States.Wander;
@@ -15,7 +17,8 @@ public class CreatureAI : MonoBehaviour {
 	public GameObject currentTarget = null;
 	public GameObject newTarget = null;
 	public GameObject currentWaypoint = null;
-	public GameObject enragedMarker;
+	public Material superSayianGlow;
+	public Material normal;
 
 	private float currentProgress = 0f;
 	private float lastProgress = 0f;
@@ -40,6 +43,9 @@ public class CreatureAI : MonoBehaviour {
 
 	public float timeSearchedSoFar = 0f;	
 	public float searchTime = 3f;
+
+	public float randomNoiseTime = 5f;
+	private float randomNoiseTimer = 0f;
 	
 	public float ratioDrainPerSecond = .4f;
 
@@ -111,8 +117,16 @@ public class CreatureAI : MonoBehaviour {
 					currentState = States.ChaseLastKnown;
 				}else if (newTarget != null && newTarget.tag == "Player"){
 					currentState = States.ChasePlayer;
+					soundSource.clip = roars[Random.Range(0, roars.Length)];
+					if (soundSource.isPlaying == false) {
+						soundSource.Play();
+					}
 				}else if (newTarget != null){
 					currentState = States.ChasePOI;
+					soundSource.clip = growls[Random.Range(0, growls.Length)];
+					if (soundSource.isPlaying == false) {
+						soundSource.Play();
+					}
 				}else if (newTarget == null && currentTarget == null &&  currentState == States.ChasePOI){
 					currentState = States.ChaseLastKnown;
 				}else if (newTarget == null && currentTarget == null && currentState != States.ChaseLastKnown && currentState != States.Searching){
@@ -122,7 +136,7 @@ public class CreatureAI : MonoBehaviour {
 
 			// Check if Enraged
 			if(isSuperSayian){
-				enragedMarker.SetActive(true);
+				meshRenderer.material = superSayianGlow;
 				actualWalkSpeed = walkSpeed*superSayianSpeedMult;
 				actualRunSpeed = runSpeed*superSayianSpeedMult;
 				actualChaseSpeed = chaseSpeed*superSayianSpeedMult;
@@ -137,7 +151,7 @@ public class CreatureAI : MonoBehaviour {
 				}
 
 			}else{
-				enragedMarker.SetActive(false);
+				meshRenderer.material = normal;
 				actualWalkSpeed = walkSpeed;
 				actualRunSpeed = runSpeed;
 				actualChaseSpeed = chaseSpeed;
@@ -149,6 +163,7 @@ public class CreatureAI : MonoBehaviour {
 
 			// Check State
 			if (currentState == States.Wander) {
+				randomNoiseTimer += Time.deltaTime;
 				aiPath.speed = actualWalkSpeed;
 				if(aiPath.target == null) {
 					GetNearestWaypoint();
@@ -160,6 +175,13 @@ public class CreatureAI : MonoBehaviour {
 						GetNearestWaypoint ();
 					}
 					aiPath.target = currentWaypoint.transform;
+				}
+				if(randomNoiseTimer >= randomNoiseTime){
+					soundSource.clip = growls[Random.Range(0, growls.Length)];
+					if (soundSource.isPlaying == false) {
+						soundSource.Play();
+					}
+					randomNoiseTimer = 0f;
 				}
 			}else if(currentState == States.ChasePOI){
 				currentTarget = newTarget;
@@ -228,6 +250,10 @@ public class CreatureAI : MonoBehaviour {
 				}
 				if(superSayianCharge >= 1){
 					isSuperSayian = true;
+					soundSource.clip = roars[Random.Range(0, roars.Length)];
+					if (soundSource.isPlaying == false) {
+						soundSource.Play();
+					}
 				}
 			}else if (currentState == States.Searching){
 				timeSearchedSoFar += delay;
@@ -236,6 +262,10 @@ public class CreatureAI : MonoBehaviour {
 					currentTarget = null;
 					aiPath.target = null;
 					newTarget = null;
+					soundSource.clip = growls[Random.Range(0, growls.Length)];
+					if (soundSource.isPlaying == false) {
+						soundSource.Play();
+					}
 				}
 			}
 		}

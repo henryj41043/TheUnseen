@@ -329,12 +329,14 @@ MonoBehaviour:
   opensHalfway: 0
   topDoor: {fileID: 100002}
   bottomDoor: {fileID: 100004}
+  attractiveSound: {fileID: 100000, guid: 8aa0ed7d9caf8ff42a7352f51f6cbfd9, type: 2}
   openSound: {fileID: 8200002}
   closeSound: {fileID: 8200000}
   timeInterval: .0399999991
   fullDistToMove: 5
   halfDistToMove: 1.79999995
   timeToOpen: .800000012
+  DoorRange: 12
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

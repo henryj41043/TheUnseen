@@ -472,12 +472,14 @@ MonoBehaviour:
   opensHalfway: 0
   topDoor: {fileID: 100006}
   bottomDoor: {fileID: 100008}
+  attractiveSound: {fileID: 100000, guid: 8aa0ed7d9caf8ff42a7352f51f6cbfd9, type: 2}
   openSound: {fileID: 8200002}
   closeSound: {fileID: 8200000}
   timeInterval: .0399999991
   fullDistToMove: 10
   halfDistToMove: 2
   timeToOpen: .5
+  DoorRange: 12
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
