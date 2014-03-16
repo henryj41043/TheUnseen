@@ -117,14 +117,14 @@ public class CreatureAI : MonoBehaviour {
 					currentState = States.ChaseLastKnown;
 				}else if (newTarget != null && newTarget.tag == "Player"){
 					currentState = States.ChasePlayer;
-					soundSource.clip = roars[Random.Range(0, roars.Length)];
 					if (soundSource.isPlaying == false) {
+						soundSource.clip = roars[Random.Range(0, roars.Length)];
 						soundSource.Play();
 					}
 				}else if (newTarget != null){
 					currentState = States.ChasePOI;
-					soundSource.clip = growls[Random.Range(0, growls.Length)];
 					if (soundSource.isPlaying == false) {
+						soundSource.clip = growls[Random.Range(0, growls.Length)];
 						soundSource.Play();
 					}
 				}else if (newTarget == null && currentTarget == null &&  currentState == States.ChasePOI){
@@ -177,8 +177,8 @@ public class CreatureAI : MonoBehaviour {
 					aiPath.target = currentWaypoint.transform;
 				}
 				if(randomNoiseTimer >= randomNoiseTime){
-					soundSource.clip = growls[Random.Range(0, growls.Length)];
 					if (soundSource.isPlaying == false) {
+						soundSource.clip = growls[Random.Range(0, growls.Length)];
 						soundSource.Play();
 					}
 					randomNoiseTimer = 0f;
@@ -262,8 +262,8 @@ public class CreatureAI : MonoBehaviour {
 					currentTarget = null;
 					aiPath.target = null;
 					newTarget = null;
-					soundSource.clip = growls[Random.Range(0, growls.Length)];
 					if (soundSource.isPlaying == false) {
+						soundSource.clip = growls[Random.Range(0, growls.Length)];
 						soundSource.Play();
 					}
 				}
