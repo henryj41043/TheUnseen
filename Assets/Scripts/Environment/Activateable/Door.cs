@@ -9,6 +9,7 @@ public class Door : Activateable {
 	
 	public GameObject topDoor;
 	public GameObject bottomDoor;
+	public GameObject attractiveSound;
 
 	public AudioSource openSound;
 	public AudioSource closeSound;
@@ -17,7 +18,8 @@ public class Door : Activateable {
 	public float fullDistToMove = 10f;
 	public float halfDistToMove = 1.5f;
 	public float timeToOpen = .5f;
-	private float timeOpening = 0f;
+	private float timeOpening = 0f; 
+	public float DoorRange = 12f;
 	
 	private Vector3 originalTop, originalBottom, fullTop, fullBottom, halfTop, halfBottom, startTop, startBottom, goalTop, goalBottom;
 	
@@ -58,6 +60,7 @@ public class Door : Activateable {
 		
 		StartCoroutine(MoveDoor());
 		openSound.Play();
+		makeSound(DoorRange);
 	}
 	
 	public override void Deactivate(){
@@ -76,6 +79,7 @@ public class Door : Activateable {
 		
 		StartCoroutine(MoveDoor());
 		closeSound.Play();
+		makeSound(DoorRange);
 	}
 	
 	IEnumerator MoveDoor(){
@@ -88,5 +92,12 @@ public class Door : Activateable {
 		
 		isOpen = !isOpen;
 	}
-	
+	void makeSound (float intensity){
+		if (intensity > 0){
+			attractiveSound.GetComponent<AttractiveSound>().range = intensity;
+			attractiveSound.GetComponent<AttractiveSound>().lifespan = 1f;		
+
+			GameObject sound = (GameObject)Instantiate(attractiveSound, transform.position, transform.rotation);
+		}
+	}
 }

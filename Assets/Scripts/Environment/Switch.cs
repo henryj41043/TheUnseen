@@ -9,16 +9,16 @@ public class Switch : Interactive {
 	public GameObject pair;
 
 	public override void Interact(){
-		if(pair){
-			if (!pair.GetComponent<Switch>().turnedOn){
-				pair.GetComponent<Animation>().Play("On");
-				pair.GetComponent<Switch>().turnedOn = true;
-			}else {
-				pair.GetComponent<Animation>().Play("Off");
-				pair.GetComponent<Switch>().turnedOn = false;
-			}
-		}
 		if (powered) {
+			if(pair){
+				if (!pair.GetComponent<Switch>().turnedOn){
+					pair.GetComponent<Animation>().Play("On");
+					pair.GetComponent<Switch>().turnedOn = true;
+				}else {
+					pair.GetComponent<Animation>().Play("Off");
+					pair.GetComponent<Switch>().turnedOn = false;
+				}
+			}
 	 		if (!turnedOn){
 				animation.Play("On");
 				turnedOn = true;
