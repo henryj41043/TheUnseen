@@ -14,7 +14,10 @@ public class CharacterStats : MonoBehaviour
 	public float sprintChargePerSecond = 15f;
 	public int playerHealth = 100;
 	public int maxHealth = 100;
+	public int healthGainedPerSecond;
+	public AudioClip[] hitSounds;
 	public AudioClip[] deathSounds;
+	public Texture2D[] bloodOverlay;
 	
 	[System.NonSerialized]
 	public float sprintEnergy;
@@ -26,12 +29,28 @@ public class CharacterStats : MonoBehaviour
 	public void Awake () {
 		sprintEnergy = maxSprintEnergy;
 		respawnPoint = GameObject.FindWithTag("RespawnPoint").transform;
+		StartCoroutine(RegenerateHealth());
+	}
+
+	IEnumerator RegenerateHealth() {
+		while (true) {
+			if (playerHealth < maxHealth) {
+				playerHealth += healthGainedPerSecond;
+			}
+			yield return new WaitForSeconds(1.0f);
+		}
 	}
 
 	void Update() {
 		if (isDead == false && playerHealth <= 0) {
 			Die();
 		}
+
+	}
+
+	public void TakeDamage(int damage) {
+		audio.PlayOneShot(hitSounds[Random.Range(0, hitSounds.Length-1)]);
+		playerHealth -= damage;
 	}
 
 	public void DrainSprint() {
@@ -69,6 +88,22 @@ public class CharacterStats : MonoBehaviour
 		if (isDead) {
 			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), deathScreen, ScaleMode.StretchToFill, true, 0.0f);
 		}
+
+		if (playerHealth < 100) {
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodOverlay[0], ScaleMode.StretchToFill, true, 0.0f);
+			GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
+		}
+		if (playerHealth < 66) {
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodOverlay[1], ScaleMode.StretchToFill, true, 0.0f);
+			GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
+		}
+		if (playerHealth < 33) {
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodOverlay[2], ScaleMode.StretchToFill, true, 0.0f);
+			GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
+		}
+		print(1-((float)playerHealth / (float)maxHealth));
+		//GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
+
 	}
 
 }

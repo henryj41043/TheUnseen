@@ -65,6 +65,13 @@ ModelImporter:
     100118: Third
     100120: Third 1
     100122: wallBracket
+    100124: cardReaders
+    100126: displays
+    100128: door1
+    100130: door2
+    100132: hinges
+    100134: sprinklerSystem
+    100136: walls
     400000: bottomBracket1
     400002: bottomBracket2
     400004: BottomHinge
@@ -127,6 +134,13 @@ ModelImporter:
     400118: Third
     400120: Third 1
     400122: wallBracket
+    400124: cardReaders
+    400126: displays
+    400128: door1
+    400130: door2
+    400132: hinges
+    400134: sprinklerSystem
+    400136: walls
     2300000: bottomBracket1
     2300002: bottomBracket2
     2300004: BottomHinge_Arrow
@@ -176,6 +190,13 @@ ModelImporter:
     2300092: Third
     2300094: Third 1
     2300096: wallBracket
+    2300098: cardReaders
+    2300100: displays
+    2300102: door1
+    2300104: door2
+    2300106: hinges
+    2300108: sprinklerSystem
+    2300110: walls
     3300000: bottomBracket1
     3300002: bottomBracket2
     3300004: BottomHinge_Arrow
@@ -225,6 +246,13 @@ ModelImporter:
     3300092: Third
     3300094: Third 1
     3300096: wallBracket
+    3300098: cardReaders
+    3300100: displays
+    3300102: door1
+    3300104: door2
+    3300106: hinges
+    3300108: sprinklerSystem
+    3300110: walls
     4300000: Door1
     4300002: TopHinge_Arrow
     4300004: MiddleHinge_Arrow
@@ -274,6 +302,13 @@ ModelImporter:
     4300092: wallBracket
     4300094: card_reader1
     4300096: card_reader2
+    4300098: walls
+    4300100: door2
+    4300102: door1
+    4300104: hinges
+    4300106: cardReaders
+    4300108: displays
+    4300110: sprinklerSystem
     6400000: Base
     6400002: base
     6400004: Base 1
@@ -319,6 +354,13 @@ ModelImporter:
     6400084: TopHinge_Cylinder
     6400086: TopHinge_Cylinder 1
     6400088: wallBracket
+    6400090: cardReaders
+    6400092: displays
+    6400094: door1
+    6400096: door2
+    6400098: hinges
+    6400100: sprinklerSystem
+    6400102: walls
     9500000: //RootNode
   materials:
     importMaterials: 1

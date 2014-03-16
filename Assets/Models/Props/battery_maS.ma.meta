@@ -15,6 +15,7 @@ ModelImporter:
     100018: Generator
     100020: m_battery_maS_br
     100022: transform1
+    100024: polySurface1
     400000: Bolts
     400002: Box
     400004: Gauge_Big
@@ -27,6 +28,7 @@ ModelImporter:
     400018: Generator
     400020: m_battery_maS_br
     400022: transform1
+    400024: polySurface1
     2300000: Bolts
     2300002: Box
     2300004: Gauge_Big
@@ -36,6 +38,7 @@ ModelImporter:
     2300012: Switches
     2300014: Tubes
     2300016: m_battery_maS_br
+    2300018: polySurface1
     3300000: Bolts
     3300002: Box
     3300004: Gauge_Big
@@ -45,6 +48,7 @@ ModelImporter:
     3300012: Switches
     3300014: Tubes
     3300016: m_battery_maS_br
+    3300018: polySurface1
     4300000: Small_Tubes
     4300002: Switches
     4300004: Tubes
@@ -54,6 +58,7 @@ ModelImporter:
     4300012: Box
     4300014: Gauge_Big
     4300016: m_battery_maS_br
+    4300018: polySurface1
     6400000: Bolts
     6400002: Box
     6400004: Gauge_Big
@@ -63,6 +68,7 @@ ModelImporter:
     6400012: Switches
     6400014: Tubes
     6400016: m_battery_maS_br
+    6400018: polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1

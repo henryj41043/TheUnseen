@@ -2115,7 +2115,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2424,10 +2424,20 @@ MonoBehaviour:
   sprintChargePerSecond: 15
   playerHealth: 100
   maxHealth: 100
+  healthGainedPerSecond: 2
+  hitSounds:
+  - {fileID: 8300000, guid: 6b41a8877b8118a418d3eb372d300f12, type: 3}
+  - {fileID: 8300000, guid: cf5f0066e89666240aa12c9bbc8e2ab3, type: 3}
+  - {fileID: 8300000, guid: 9d6c0d60bcacaa14a8ea95fa11613f1f, type: 3}
+  - {fileID: 8300000, guid: 0b5a794bdee7bf3479adec9a1db78497, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: 748d1429124c8a549ab966c7bb67060e, type: 3}
   - {fileID: 8300000, guid: 4ed61332d85dcca448a8bc082f7eb5b6, type: 3}
   - {fileID: 8300000, guid: 6a7ac61c5a2b7e14ab693b14392070ec, type: 3}
+  bloodOverlay:
+  - {fileID: 2800000, guid: 73d95208216daef49a3a9547e32bf932, type: 3}
+  - {fileID: 2800000, guid: 2239c216dca4ced4faf3cd64a1cb38e4, type: 3}
+  - {fileID: 2800000, guid: f04ceab7f0d078b45ad8830072b8f14a, type: 3}
   isDead: 0
 --- !u!114 &11400014
 MonoBehaviour:
@@ -2441,8 +2451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 100130}
-  bobSpeed: 4
-  bobAmplitude: .200000003
+  bobSpeed: 6.5
+  bobAmplitude: .100000001
   footstepStartPoint: 4.71238899
   maxMult: 1.25
   minMult: .800000012
@@ -3192,7 +3202,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100130}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
@@ -3282,7 +3292,7 @@ MonoBehaviour:
   mult: 1
   standardStepRange: 4
   minStepIntensity: .100000001
-  maxStepIntensity: 2
+  maxStepIntensity: .5
   minLandVal: 4
   maxLandVal: 6.25
   minLangRange: 4

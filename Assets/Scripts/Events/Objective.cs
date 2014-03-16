@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Objective : Interactive {
 	public MovieTexture off;
+	public MovieTexture on;
 	public Material red;
 	public Material green;
 	public GameObject screen;
@@ -21,6 +22,8 @@ public class Objective : Interactive {
 
 	public override void Interact(){
 		screen.renderer.material = green;
+		screen.renderer.material.mainTexture = on;
+		on.Play();
 		audio.PlayOneShot(activated);
 		audio.Play();
 		for (int j = 0; j < statusSign.Length; j++) {

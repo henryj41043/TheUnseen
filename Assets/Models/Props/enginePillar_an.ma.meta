@@ -34,6 +34,35 @@ ModelImporter:
     100056: pillar_base_top 3
     100058: propeller
     100060: top1
+    100062: engineRoomPillar1
+    100064: middle
+    100066: pillars
+    100068: polySurface1
+    100070: polySurface22
+    100072: polySurface23
+    100074: polySurface24
+    100076: polySurface25
+    100078: polySurface26
+    100080: polySurface27
+    100082: polySurface28
+    100084: polySurface29
+    100086: polySurface30
+    100088: polySurface31
+    100090: polySurface32
+    100092: polySurface33
+    100094: polySurface34
+    100096: polySurface35
+    100098: polySurface36
+    100100: polySurface37
+    100102: polySurface38
+    100104: polySurface39
+    100106: polySurface40
+    100108: polySurface41
+    100110: polySurface42
+    100112: polySurface43
+    100114: polySurface44
+    100116: polySurface45
+    100118: polySurface46
     400000: base
     400002: cylinder1
     400004: cylinder10
@@ -65,6 +94,35 @@ ModelImporter:
     400056: pillar_base_top 3
     400058: propeller
     400060: top1
+    400062: engineRoomPillar1
+    400064: middle
+    400066: pillars
+    400068: polySurface1
+    400070: polySurface22
+    400072: polySurface23
+    400074: polySurface24
+    400076: polySurface25
+    400078: polySurface26
+    400080: polySurface27
+    400082: polySurface28
+    400084: polySurface29
+    400086: polySurface30
+    400088: polySurface31
+    400090: polySurface32
+    400092: polySurface33
+    400094: polySurface34
+    400096: polySurface35
+    400098: polySurface36
+    400100: polySurface37
+    400102: polySurface38
+    400104: polySurface39
+    400106: polySurface40
+    400108: polySurface41
+    400110: polySurface42
+    400112: polySurface43
+    400114: polySurface44
+    400116: polySurface45
+    400118: polySurface46
     2300000: base
     2300002: cylinder1
     2300004: cylinder10
@@ -91,6 +149,32 @@ ModelImporter:
     2300046: pillar_base_top 3
     2300048: propeller
     2300050: top1
+    2300052: polySurface1
+    2300054: polySurface22
+    2300056: polySurface23
+    2300058: polySurface24
+    2300060: polySurface25
+    2300062: polySurface26
+    2300064: polySurface27
+    2300066: polySurface28
+    2300068: polySurface29
+    2300070: polySurface30
+    2300072: polySurface31
+    2300074: polySurface32
+    2300076: polySurface33
+    2300078: polySurface34
+    2300080: polySurface35
+    2300082: polySurface36
+    2300084: polySurface37
+    2300086: polySurface38
+    2300088: polySurface39
+    2300090: polySurface40
+    2300092: polySurface41
+    2300094: polySurface42
+    2300096: polySurface43
+    2300098: polySurface44
+    2300100: polySurface45
+    2300102: polySurface46
     3300000: base
     3300002: cylinder1
     3300004: cylinder10
@@ -117,6 +201,32 @@ ModelImporter:
     3300046: pillar_base_top 3
     3300048: propeller
     3300050: top1
+    3300052: polySurface1
+    3300054: polySurface22
+    3300056: polySurface23
+    3300058: polySurface24
+    3300060: polySurface25
+    3300062: polySurface26
+    3300064: polySurface27
+    3300066: polySurface28
+    3300068: polySurface29
+    3300070: polySurface30
+    3300072: polySurface31
+    3300074: polySurface32
+    3300076: polySurface33
+    3300078: polySurface34
+    3300080: polySurface35
+    3300082: polySurface36
+    3300084: polySurface37
+    3300086: polySurface38
+    3300088: polySurface39
+    3300090: polySurface40
+    3300092: polySurface41
+    3300094: polySurface42
+    3300096: polySurface43
+    3300098: polySurface44
+    3300100: polySurface45
+    3300102: polySurface46
     4300000: base
     4300002: mini_pillars
     4300004: cylinder1
@@ -143,6 +253,32 @@ ModelImporter:
     4300046: pillar_base_top
     4300048: pillar
     4300050: propeller
+    4300052: polySurface35
+    4300054: polySurface44
+    4300056: polySurface41
+    4300058: polySurface38
+    4300060: polySurface37
+    4300062: polySurface36
+    4300064: polySurface33
+    4300066: polySurface34
+    4300068: polySurface42
+    4300070: polySurface43
+    4300072: polySurface39
+    4300074: polySurface40
+    4300076: polySurface45
+    4300078: polySurface1
+    4300080: polySurface22
+    4300082: polySurface23
+    4300084: polySurface24
+    4300086: polySurface25
+    4300088: polySurface26
+    4300090: polySurface27
+    4300092: polySurface28
+    4300094: polySurface29
+    4300096: polySurface30
+    4300098: polySurface31
+    4300100: polySurface32
+    4300102: polySurface46
     6400000: base
     6400002: cylinder1
     6400004: cylinder10
@@ -169,6 +305,33 @@ ModelImporter:
     6400046: pillar_base_top 3
     6400048: propeller
     6400050: top1
+    6400052: polySurface1
+    6400054: polySurface22
+    6400056: polySurface23
+    6400058: polySurface24
+    6400060: polySurface25
+    6400062: polySurface26
+    6400064: polySurface27
+    6400066: polySurface28
+    6400068: polySurface29
+    6400070: polySurface30
+    6400072: polySurface31
+    6400074: polySurface32
+    6400076: polySurface33
+    6400078: polySurface34
+    6400080: polySurface35
+    6400082: polySurface36
+    6400084: polySurface37
+    6400086: polySurface38
+    6400088: polySurface39
+    6400090: polySurface40
+    6400092: polySurface41
+    6400094: polySurface42
+    6400096: polySurface43
+    6400098: polySurface44
+    6400100: polySurface45
+    6400102: polySurface46
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1

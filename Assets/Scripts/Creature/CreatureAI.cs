@@ -348,9 +348,9 @@ public class CreatureAI : MonoBehaviour {
 		isAttacking = true;
 		if (target.tag == "Player"){
 			if (target.transform.parent != null) {
-				target.transform.parent.gameObject.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				target.transform.parent.gameObject.GetComponent<CharacterStats>().TakeDamage(attackDamage);
 			} else {
-				target.GetComponent<CharacterStats>().playerHealth -= attackDamage;
+				target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
 			}
 		}
 		yield return new WaitForSeconds(attackSpeed);
