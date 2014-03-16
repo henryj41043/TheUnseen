@@ -52,9 +52,9 @@ public class AudioLog : Interactive {
 		GameObject cam = GameObject.FindWithTag("MainCamera");
 		GameObject player = cam.transform.parent.gameObject;
 
-		AudioSource music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+		//AudioSource music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
 
-		music.volume = 0.03f;
+		//music.volume = 0.03f;
 
 		MouseLook cml = cam.GetComponent<MouseLook>();
 		cml.enabled = false;
@@ -73,6 +73,7 @@ public class AudioLog : Interactive {
 		Screen.lockCursor = false;
 
 		NGUITools.SetActive(audioLogPanel, true);
+		audioLogPanel.GetComponentInChildren<AudioLogHandler>().PlayLevel2Log(this);
 		//audioLogPanel.transform.LookAt(cml.transform.position);
 
 		StartCoroutine("PlayLog");

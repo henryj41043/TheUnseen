@@ -2420,6 +2420,11 @@ MonoBehaviour:
   sprintChargePerSecond: 15
   playerHealth: 100
   maxHealth: 100
+  deathSounds:
+  - {fileID: 8300000, guid: 748d1429124c8a549ab966c7bb67060e, type: 3}
+  - {fileID: 8300000, guid: 4ed61332d85dcca448a8bc082f7eb5b6, type: 3}
+  - {fileID: 8300000, guid: 6a7ac61c5a2b7e14ab693b14392070ec, type: 3}
+  isDead: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1

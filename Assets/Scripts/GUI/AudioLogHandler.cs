@@ -6,8 +6,9 @@ using System.Linq;
 public class AudioLogHandler : MonoBehaviour
 {
 	List<string> audioLogs= new List<string>();
-	
-	void Start()
+	private UILabel log;
+
+	void Awake()
 	{
 		string tutorialAudioLog = 
 			"All systems set to archival mode. Last known recordings will play...\n\n" + 
@@ -66,7 +67,7 @@ public class AudioLogHandler : MonoBehaviour
 		audioLogs.Add(level2AudioLog2);
 		audioLogs.Add(level2AudioLog3);
 		
-		UILabel log = GetComponent<UILabel>();
+		log = GetComponent<UILabel>();
 		
 		switch (Application.loadedLevel)
 		{
@@ -77,7 +78,8 @@ public class AudioLogHandler : MonoBehaviour
 			log.text = audioLogs[1];
 			break;
 		case 3:
-			List<GameObject> logs = GameObject.FindGameObjectsWithTag("AudioLog").ToList();
+			/* This doesn't do what you think it does
+			GameObject[] logs = GameObject.FindGameObjectsWithTag("AudioLogKiosk");
 			
 			foreach(GameObject l in logs)
 			{
@@ -90,9 +92,19 @@ public class AudioLogHandler : MonoBehaviour
 				else if (al.islevel2AudioLog3)
 					log.text = audioLogs[4];
 			}
-			
+			*/
 			break;
 		}
 	}
+	
+	public void PlayLevel2Log(AudioLog kiosk) {
+		if (kiosk.islevel2AudioLog1)
+			log.text = audioLogs[2];
+		else if (kiosk.islevel2AudioLog2)
+			log.text = audioLogs[3];
+		else if (kiosk.islevel2AudioLog3)
+			log.text = audioLogs[4];
+	}
 }
+
 
