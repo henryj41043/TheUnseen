@@ -242,12 +242,12 @@ public class Settings : MonoBehaviour
 			
 			if (isWindowed)
 			{
-				Screen.fullScreen = false;
+				//Screen.fullScreen = false;
 				windowedToggle.value = true;
 			}
 			else
 			{
-				Screen.fullScreen = true;
+				//Screen.fullScreen = true;
 				windowedToggle.value = false;
 			}
 		}
@@ -256,7 +256,6 @@ public class Settings : MonoBehaviour
 
 	public void OnBrightnessChange()
 	{
-		//To Do, something to make brighter or darker
 		if (lightmapManager != null) {
 			lightmapManager.SetBrightness(brightnessSlider.value * 10.0f);
 		}
@@ -289,8 +288,9 @@ public class Settings : MonoBehaviour
 				string w = resolutionDropDown.value.Split('x')[0];
 				string h = resolutionDropDown.value.Split('x')[1];
 
-				if (resolutionDropDown.value == PlayerPrefs.GetString("Resolution"))
-					Screen.SetResolution(int.Parse(w), int.Parse(h), false);
+				if (resolutionDropDown.value == PlayerPrefs.GetString("Resolution")) {
+					//Screen.SetResolution(int.Parse(w), int.Parse(h), false);
+				}
 			}
 		}
 	}

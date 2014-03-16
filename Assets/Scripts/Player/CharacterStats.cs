@@ -14,11 +14,12 @@ public class CharacterStats : MonoBehaviour
 	public float sprintChargePerSecond = 15f;
 	public int playerHealth = 100;
 	public int maxHealth = 100;
+	public AudioClip[] deathSounds;
 	
 	[System.NonSerialized]
 	public float sprintEnergy;
 
-	private bool isDead = false;
+	public bool isDead = false;
 
 	private Transform respawnPoint;
 
@@ -29,7 +30,7 @@ public class CharacterStats : MonoBehaviour
 
 	void Update() {
 		if (isDead == false && playerHealth <= 0) {
-			StartCoroutine(Die());
+			Die();
 		}
 	}
 
@@ -53,14 +54,15 @@ public class CharacterStats : MonoBehaviour
 		}
 	}
 
-	IEnumerator Die() {
+	public void Die() {
 		print ("You are dead");
 		isDead = true;
-		yield return new WaitForSeconds(5.0f);
-		this.transform.position = respawnPoint.position;
-		playerHealth = 100;
-		isDead = false;
+		respawnPoint.GetComponent<Respawn>().respawn();
+		Destroy(this.gameObject);
+	}
 
+	public void PlayDeathSounds() {
+		audio.PlayOneShot(deathSounds[Random.Range(0, deathSounds.Length-1)]);
 	}
 
 	void OnGUI() {

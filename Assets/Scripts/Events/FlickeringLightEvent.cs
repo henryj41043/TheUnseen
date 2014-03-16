@@ -12,6 +12,7 @@ public class FlickeringLightEvent : MonoBehaviour {
 	public AudioClip sound;
 	public GameObject enable;
 	public GameObject disable;
+	public AIPath creature;
 	private bool hasTriggered = false;
 
 	void Start() {
@@ -37,6 +38,9 @@ public class FlickeringLightEvent : MonoBehaviour {
 				}
 				if (disable != null) {
 					disable.SetActive(false);
+				}
+				if (creature != null) {
+					creature.target = c.gameObject.transform;
 				}
 			}
 			if (battery != null) {
