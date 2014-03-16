@@ -1,10 +1,15 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+[Bb]uild/
 
 .DS_Store
+.Trashes
 *.csproj
 *.unityproj
 *.sln
 *.pidb
 *.userprefs
+*.svd
+*.user
+*.booproj
