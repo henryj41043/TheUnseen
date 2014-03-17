@@ -6,7 +6,7 @@ SubstanceImporter:
   - serializedVersion: 10
     name: frameDoorLevel2
     prototypeName: Galvanized_Metal
-    shaderName: Bumped Specular
+    shaderName: Unseen/Environment/Bumped Specular
     inputs:
     - name: $pixelsize
       value:
@@ -103,7 +103,7 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _BumpMap
+            name: _Normal
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -113,6 +113,10 @@ SubstanceImporter:
           first:
             name: _Shininess
           second: .078125
+        data:
+          first:
+            name: _Brightness
+          second: 1
       colors:
         data:
           first:
@@ -141,8 +145,8 @@ SubstanceImporter:
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 1024
+      textureHeight: 1024
       textureFormat: 0
       loadingBehavior: 1
   deletedPrototypes: []

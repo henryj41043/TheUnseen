@@ -22,6 +22,7 @@ public class EscapePod : Interactive {
 
 	public override void Interact(){
 		if(powered){
+			escapePodSound = GameObject.FindGameObjectWithTag("Player").audio;
 			StartCoroutine(playAnimations());
 			powered = false;
 		}

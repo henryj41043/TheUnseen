@@ -12,7 +12,7 @@ public class HatchTrigger : MonoBehaviour {
 			if(!isOpen){
 				escapePod.Play("Open");
 				isOpen = true;
-				escapePodSound.PlayOneShot(hatchOpenSound);
+				player.gameObject.audio.PlayOneShot(hatchOpenSound);
 			}
 		}
 	}

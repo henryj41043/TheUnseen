@@ -15,6 +15,7 @@ public class CreatureTrigger : MonoBehaviour {
 				battery.PowerOff();
 				creature.ratioDrainPerSecond = 0.2f;
 				hasTriggered = true;
+				Destroy(this.gameObject);
 			}
 		}
 	}
