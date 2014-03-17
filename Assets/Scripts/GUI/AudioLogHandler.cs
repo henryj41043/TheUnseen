@@ -25,13 +25,11 @@ public class AudioLogHandler : MonoBehaviour
 		
 		string level1AudioLog = 
 			"General Monen -\n" + 
-				"All staff still remaining, this is your general speaking.\n" + 
-				"This is not a drill, evacuate immediately.\n" + 
-				"I repeat, evacuate immediately, this is not a drill.\n" + 
-				"Avoid bright areas at all costs.  Don't let those things see you.\n" + 
-				"If they do, don't engage. It shrugs off bullets like nothing.\n" + 
-				"The only thing that's made it pause has been energy.  If you can distract it," + 
-				"you can try to run";
+						"All staff still remaining, this is your general speaking.\n" + 
+						"This is not a drill, evacuate immediately.\n" + 
+						"I repeat, evacuate immediately, this is not a drill.\n" + 
+						"Avoid bright areas at all costs.  Don't let those things see you.\n" + 
+						"If they do, they seem to like light.  Try to run.\n";
 		
 		string level2AudioLog1 = 
 			"Jones -\n" + 

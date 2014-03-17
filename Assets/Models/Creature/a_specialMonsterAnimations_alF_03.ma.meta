@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: de6b04e98990a034ba0a13ff83bc6d70
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: camera1
+    100004: curve1
+    100006: curve2
+    100008: head_root
+    100010: hips
+    100012: left__thumb1
+    100014: left__thumb2
+    100016: left__thumb3
+    100018: left_bot_mouth1
+    100020: left_bot_mouth2
+    100022: left_bot_mouth3
+    100024: left_bot_mouth4
+    100026: left_bot_mouth5
+    100028: left_bot_mouth6
+    100030: left_clavicle
+    100032: left_elbow
+    100034: left_foot
+    100036: left_foot2
+    100038: left_forearm_twist1
+    100040: left_forearm_twist2
+    100042: left_forearm_twist3
+    100044: left_hand
+    100046: left_hip
+    100048: left_knee
+    100050: left_l_toe1
+    100052: left_l_toe2
+    100054: left_l_toe3
+    100056: left_mid_toe1
+    100058: left_mid_toe2
+    100060: left_mid_toe3
+    100062: left_midfing1
+    100064: left_midfing2
+    100066: left_midfing3
+    100068: left_midfing4
+    100070: left_pinky1
+    100072: left_pinky2
+    100074: left_pinky3
+    100076: left_pinky4
+    100078: left_pointer1
+    100080: left_pointer2
+    100082: left_pointer3
+    100084: left_pointer4
+    100086: left_r_toe1
+    100088: left_r_toe2
+    100090: left_r_toe3
+    100092: left_rfing1
+    100094: left_rfing2
+    100096: left_rfing3
+    100098: left_rfing4
+    100100: left_shoulder
+    100102: left_tenticle1
+    100104: left_tenticle10
+    100106: left_tenticle2
+    100108: left_tenticle3
+    100110: left_tenticle4
+    100112: left_tenticle5
+    100114: left_tenticle6
+    100116: left_tenticle7
+    100118: left_tenticle8
+    100120: left_tenticle9
+    100122: left_tenticleCluster1
+    100124: left_tenticleCluster1_1
+    100126: left_tenticleCluster2
+    100128: left_tenticleCluster2_1
+    100130: left_tenticleCluster3
+    100132: left_tenticleCluster3_1
+    100134: left_tenticleCluster4
+    100136: left_tenticleCluster4_1
+    100138: left_tenticleCluster5
+    100140: left_tenticleCluster5_1
+    100142: left_tenticles
+    100144: left_top_mouth1
+    100146: left_top_mouth2
+    100148: left_top_mouth3
+    100150: left_top_mouth4
+    100152: left_top_mouth5
+    100154: left_top_mouth6
+    100156: left_wrist
+    100158: m_monster_raS_ka_01_40:polySurface1
+    100160: monster
+    100162: neck
+    100164: right__thumb1
+    100166: right__thumb2
+    100168: right__thumb3
+    100170: right_bot_mouth1
+    100172: right_bot_mouth2
+    100174: right_bot_mouth3
+    100176: right_bot_mouth4
+    100178: right_bot_mouth5
+    100180: right_bot_mouth6
+    100182: right_clavicle
+    100184: right_elbow
+    100186: right_foot
+    100188: right_foot2
+    100190: right_forearm_twist1
+    100192: right_forearm_twist2
+    100194: right_forearm_twist3
+    100196: right_hand
+    100198: right_hip
+    100200: right_knee
+    100202: right_l_toe1
+    100204: right_l_toe2
+    100206: right_l_toe3
+    100208: right_mid_toe1
+    100210: right_mid_toe2
+    100212: right_mid_toe3
+    100214: right_midfing1
+    100216: right_midfing2
+    100218: right_midfing3
+    100220: right_midfing4
+    100222: right_pinky1
+    100224: right_pinky2
+    100226: right_pinky3
+    100228: right_pinky4
+    100230: right_pointer1
+    100232: right_pointer2
+    100234: right_pointer3
+    100236: right_pointer4
+    100238: right_r_toe1
+    100240: right_r_toe2
+    100242: right_r_toe3
+    100244: right_rfing1
+    100246: right_rfing2
+    100248: right_rfing3
+    100250: right_rfing4
+    100252: right_shoulder
+    100254: right_tenticle1
+    100256: right_tenticle10
+    100258: right_tenticle2
+    100260: right_tenticle3
+    100262: right_tenticle4
+    100264: right_tenticle5
+    100266: right_tenticle6
+    100268: right_tenticle7
+    100270: right_tenticle8
+    100272: right_tenticle9
+    100274: right_tenticle_handle
+    100276: right_tenticleCluster1
+    100278: right_tenticleCluster1_1
+    100280: right_tenticleCluster2
+    100282: right_tenticleCluster2_1
+    100284: right_tenticleCluster3
+    100286: right_tenticleCluster3_1
+    100288: right_tenticleCluster4
+    100290: right_tenticleCluster4_1
+    100292: right_tenticleCluster5
+    100294: right_tenticleCluster5_1
+    100296: right_tenticles
+    100298: right_top_mouth1
+    100300: right_top_mouth2
+    100302: right_top_mouth3
+    100304: right_top_mouth4
+    100306: right_top_mouth5
+    100308: right_top_mouth6
+    100310: right_wrist
+    100312: root
+    100314: spine1
+    100316: spine2
+    100318: spine_3
+    100320: spine_4
+    100322: spine_5
+    100324: Z_left_tenticleCluster1_1
+    100326: Z_left_tenticleCluster2_1
+    100328: Z_left_tenticleCluster3_1
+    100330: Z_left_tenticleCluster4_1
+    100332: Z_left_tenticleCluster5_1
+    100334: Z_right_tenticleCluster1_1
+    100336: Z_right_tenticleCluster2_1
+    100338: Z_right_tenticleCluster3_1
+    100340: Z_right_tenticleCluster4_1
+    100342: Z_right_tenticleCluster5_1
+    400000: //RootNode
+    400002: camera1
+    400004: curve1
+    400006: curve2
+    400008: head_root
+    400010: hips
+    400012: left__thumb1
+    400014: left__thumb2
+    400016: left__thumb3
+    400018: left_bot_mouth1
+    400020: left_bot_mouth2
+    400022: left_bot_mouth3
+    400024: left_bot_mouth4
+    400026: left_bot_mouth5
+    400028: left_bot_mouth6
+    400030: left_clavicle
+    400032: left_elbow
+    400034: left_foot
+    400036: left_foot2
+    400038: left_forearm_twist1
+    400040: left_forearm_twist2
+    400042: left_forearm_twist3
+    400044: left_hand
+    400046: left_hip
+    400048: left_knee
+    400050: left_l_toe1
+    400052: left_l_toe2
+    400054: left_l_toe3
+    400056: left_mid_toe1
+    400058: left_mid_toe2
+    400060: left_mid_toe3
+    400062: left_midfing1
+    400064: left_midfing2
+    400066: left_midfing3
+    400068: left_midfing4
+    400070: left_pinky1
+    400072: left_pinky2
+    400074: left_pinky3
+    400076: left_pinky4
+    400078: left_pointer1
+    400080: left_pointer2
+    400082: left_pointer3
+    400084: left_pointer4
+    400086: left_r_toe1
+    400088: left_r_toe2
+    400090: left_r_toe3
+    400092: left_rfing1
+    400094: left_rfing2
+    400096: left_rfing3
+    400098: left_rfing4
+    400100: left_shoulder
+    400102: left_tenticle1
+    400104: left_tenticle10
+    400106: left_tenticle2
+    400108: left_tenticle3
+    400110: left_tenticle4
+    400112: left_tenticle5
+    400114: left_tenticle6
+    400116: left_tenticle7
+    400118: left_tenticle8
+    400120: left_tenticle9
+    400122: left_tenticleCluster1
+    400124: left_tenticleCluster1_1
+    400126: left_tenticleCluster2
+    400128: left_tenticleCluster2_1
+    400130: left_tenticleCluster3
+    400132: left_tenticleCluster3_1
+    400134: left_tenticleCluster4
+    400136: left_tenticleCluster4_1
+    400138: left_tenticleCluster5
+    400140: left_tenticleCluster5_1
+    400142: left_tenticles
+    400144: left_top_mouth1
+    400146: left_top_mouth2
+    400148: left_top_mouth3
+    400150: left_top_mouth4
+    400152: left_top_mouth5
+    400154: left_top_mouth6
+    400156: left_wrist
+    400158: m_monster_raS_ka_01_40:polySurface1
+    400160: monster
+    400162: neck
+    400164: right__thumb1
+    400166: right__thumb2
+    400168: right__thumb3
+    400170: right_bot_mouth1
+    400172: right_bot_mouth2
+    400174: right_bot_mouth3
+    400176: right_bot_mouth4
+    400178: right_bot_mouth5
+    400180: right_bot_mouth6
+    400182: right_clavicle
+    400184: right_elbow
+    400186: right_foot
+    400188: right_foot2
+    400190: right_forearm_twist1
+    400192: right_forearm_twist2
+    400194: right_forearm_twist3
+    400196: right_hand
+    400198: right_hip
+    400200: right_knee
+    400202: right_l_toe1
+    400204: right_l_toe2
+    400206: right_l_toe3
+    400208: right_mid_toe1
+    400210: right_mid_toe2
+    400212: right_mid_toe3
+    400214: right_midfing1
+    400216: right_midfing2
+    400218: right_midfing3
+    400220: right_midfing4
+    400222: right_pinky1
+    400224: right_pinky2
+    400226: right_pinky3
+    400228: right_pinky4
+    400230: right_pointer1
+    400232: right_pointer2
+    400234: right_pointer3
+    400236: right_pointer4
+    400238: right_r_toe1
+    400240: right_r_toe2
+    400242: right_r_toe3
+    400244: right_rfing1
+    400246: right_rfing2
+    400248: right_rfing3
+    400250: right_rfing4
+    400252: right_shoulder
+    400254: right_tenticle1
+    400256: right_tenticle10
+    400258: right_tenticle2
+    400260: right_tenticle3
+    400262: right_tenticle4
+    400264: right_tenticle5
+    400266: right_tenticle6
+    400268: right_tenticle7
+    400270: right_tenticle8
+    400272: right_tenticle9
+    400274: right_tenticle_handle
+    400276: right_tenticleCluster1
+    400278: right_tenticleCluster1_1
+    400280: right_tenticleCluster2
+    400282: right_tenticleCluster2_1
+    400284: right_tenticleCluster3
+    400286: right_tenticleCluster3_1
+    400288: right_tenticleCluster4
+    400290: right_tenticleCluster4_1
+    400292: right_tenticleCluster5
+    400294: right_tenticleCluster5_1
+    400296: right_tenticles
+    400298: right_top_mouth1
+    400300: right_top_mouth2
+    400302: right_top_mouth3
+    400304: right_top_mouth4
+    400306: right_top_mouth5
+    400308: right_top_mouth6
+    400310: right_wrist
+    400312: root
+    400314: spine1
+    400316: spine2
+    400318: spine_3
+    400320: spine_4
+    400322: spine_5
+    400324: Z_left_tenticleCluster1_1
+    400326: Z_left_tenticleCluster2_1
+    400328: Z_left_tenticleCluster3_1
+    400330: Z_left_tenticleCluster4_1
+    400332: Z_left_tenticleCluster5_1
+    400334: Z_right_tenticleCluster1_1
+    400336: Z_right_tenticleCluster2_1
+    400338: Z_right_tenticleCluster3_1
+    400340: Z_right_tenticleCluster4_1
+    400342: Z_right_tenticleCluster5_1
+    4300000: m_monster_raS_ka_01_40:polySurface1
+    7400000: Hand
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: m_monster_raS_ka_01_40:polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Hand
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: monster
+        weight: 1
+      - path: monster/m_monster_raS_ka_01_40:polySurface1
+        weight: 1
+      - path: monster/root
+        weight: 1
+      - path: monster/root/hips
+        weight: 1
+      - path: monster/root/hips/left_hip
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_l_toe1
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_l_toe1/left_l_toe2
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_l_toe1/left_l_toe2/left_l_toe3
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_mid_toe1
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_mid_toe1/left_mid_toe2
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_mid_toe1/left_mid_toe2/left_mid_toe3
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_r_toe1
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_r_toe1/left_r_toe2
+        weight: 1
+      - path: monster/root/hips/left_hip/left_knee/left_foot/left_foot2/left_r_toe1/left_r_toe2/left_r_toe3
+        weight: 1
+      - path: monster/root/hips/right_hip
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_l_toe1
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_l_toe1/right_l_toe2
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_l_toe1/right_l_toe2/right_l_toe3
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_mid_toe1
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_mid_toe1/right_mid_toe2
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_mid_toe1/right_mid_toe2/right_mid_toe3
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_r_toe1
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_r_toe1/right_r_toe2
+        weight: 1
+      - path: monster/root/hips/right_hip/right_knee/right_foot/right_foot2/right_r_toe1/right_r_toe2/right_r_toe3
+        weight: 1
+      - path: monster/root/spine1
+        weight: 1
+      - path: monster/root/spine1/spine2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/curve1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left__thumb1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left__thumb1/left__thumb2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left__thumb1/left__thumb2/left__thumb3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_midfing1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_midfing1/left_midfing2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_midfing1/left_midfing2/left_midfing3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_midfing1/left_midfing2/left_midfing3/left_midfing4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pinky1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pinky1/left_pinky2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pinky1/left_pinky2/left_pinky3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pinky1/left_pinky2/left_pinky3/left_pinky4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pointer1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pointer1/left_pointer2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pointer1/left_pointer2/left_pointer3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_pointer1/left_pointer2/left_pointer3/left_pointer4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_rfing1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_rfing1/left_rfing2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_rfing1/left_rfing2/left_rfing3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_rfing1/left_rfing2/left_rfing3/left_rfing4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5/left_tenticle6
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5/left_tenticle6/left_tenticle7
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5/left_tenticle6/left_tenticle7/left_tenticle8
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5/left_tenticle6/left_tenticle7/left_tenticle8/left_tenticle9
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticle1/left_tenticle2/left_tenticle3/left_tenticle4/left_tenticle5/left_tenticle6/left_tenticle7/left_tenticle8/left_tenticle9/left_tenticle10
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/left_tenticleCluster1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/left_tenticleCluster2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/left_tenticleCluster3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/left_tenticleCluster4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/left_tenticleCluster5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster1_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster1_1/left_tenticleCluster1_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster2_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster2_1/left_tenticleCluster2_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster3_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster3_1/left_tenticleCluster3_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster4_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster4_1/left_tenticleCluster4_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster5_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/left_clavicle/left_shoulder/left_elbow/left_forearm_twist1/left_forearm_twist2/left_forearm_twist3/left_wrist/left_hand/left_tenticles/Z_left_tenticleCluster5_1/left_tenticleCluster5_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/curve2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right__thumb1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right__thumb1/right__thumb2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right__thumb1/right__thumb2/right__thumb3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_midfing1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_midfing1/right_midfing2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_midfing1/right_midfing2/right_midfing3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_midfing1/right_midfing2/right_midfing3/right_midfing4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pinky1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pinky1/right_pinky2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pinky1/right_pinky2/right_pinky3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pinky1/right_pinky2/right_pinky3/right_pinky4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pointer1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pointer1/right_pointer2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pointer1/right_pointer2/right_pointer3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_pointer1/right_pointer2/right_pointer3/right_pointer4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_rfing1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_rfing1/right_rfing2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_rfing1/right_rfing2/right_rfing3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_rfing1/right_rfing2/right_rfing3/right_rfing4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5/right_tenticle6
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5/right_tenticle6/right_tenticle7
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5/right_tenticle6/right_tenticle7/right_tenticle8
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5/right_tenticle6/right_tenticle7/right_tenticle8/right_tenticle9
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticle1/right_tenticle2/right_tenticle3/right_tenticle4/right_tenticle5/right_tenticle6/right_tenticle7/right_tenticle8/right_tenticle9/right_tenticle10
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticle_handle
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticleCluster1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticleCluster2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticleCluster3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticleCluster4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/right_tenticleCluster5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster1_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster1_1/right_tenticleCluster1_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster2_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster2_1/right_tenticleCluster2_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster3_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster3_1/right_tenticleCluster3_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster4_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster4_1/right_tenticleCluster4_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster5_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/right_clavicle/right_shoulder/right_elbow/right_forearm_twist1/right_forearm_twist2/right_forearm_twist3/right_wrist/right_hand/right_tenticles/Z_right_tenticleCluster5_1/right_tenticleCluster5_1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1/left_bot_mouth2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1/left_bot_mouth2/left_bot_mouth3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1/left_bot_mouth2/left_bot_mouth3/left_bot_mouth4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1/left_bot_mouth2/left_bot_mouth3/left_bot_mouth4/left_bot_mouth5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_bot_mouth1/left_bot_mouth2/left_bot_mouth3/left_bot_mouth4/left_bot_mouth5/left_bot_mouth6
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1/left_top_mouth2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1/left_top_mouth2/left_top_mouth3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1/left_top_mouth2/left_top_mouth3/left_top_mouth4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1/left_top_mouth2/left_top_mouth3/left_top_mouth4/left_top_mouth5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/left_top_mouth1/left_top_mouth2/left_top_mouth3/left_top_mouth4/left_top_mouth5/left_top_mouth6
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1/right_bot_mouth2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1/right_bot_mouth2/right_bot_mouth3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1/right_bot_mouth2/right_bot_mouth3/right_bot_mouth4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1/right_bot_mouth2/right_bot_mouth3/right_bot_mouth4/right_bot_mouth5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_bot_mouth1/right_bot_mouth2/right_bot_mouth3/right_bot_mouth4/right_bot_mouth5/right_bot_mouth6
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1/right_top_mouth2
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1/right_top_mouth2/right_top_mouth3
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1/right_top_mouth2/right_top_mouth3/right_top_mouth4
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1/right_top_mouth2/right_top_mouth3/right_top_mouth4/right_top_mouth5
+        weight: 1
+      - path: monster/root/spine1/spine2/spine_3/spine_4/spine_5/neck/head_root/right_top_mouth1/right_top_mouth2/right_top_mouth3/right_top_mouth4/right_top_mouth5/right_top_mouth6
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

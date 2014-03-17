@@ -7,22 +7,44 @@ ModelImporter:
     100002: //RootNode
     100004: screen
     100006: screenRims
+    100008: persp1
+    100010: polySurface1
+    100012: polySurface2
+    100014: polySurface3
+    100016: polySurface4
+    100018: transform1
+    100020: transform2
+    100022: transform3
+    100024: transform4
     400000: base
     400002: //RootNode
     400004: screen
     400006: screenRims
+    400008: persp1
+    400010: polySurface1
+    400012: polySurface2
+    400014: polySurface3
+    400016: polySurface4
+    400018: transform1
+    400020: transform2
+    400022: transform3
+    400024: transform4
     2300000: base
     2300002: screen
     2300004: screenRims
+    2300006: polySurface4
     3300000: base
     3300002: screen
     3300004: screenRims
+    3300006: polySurface4
     4300000: screen
     4300002: base
     4300004: screenRims
+    4300006: polySurface4
     6400000: base
     6400002: screen
     6400004: screenRims
+    6400006: polySurface4
     7400000: Spin
     9500000: //RootNode
     11100000: //RootNode

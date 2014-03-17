@@ -2431,8 +2431,13 @@ ModelImporter:
     6400246: screenExtend_4 1
     6400248: screenExtend_holder
     6400250: screenExtend_holder1
-    7400000: Take 001
+    7400000: Open
+    7400002: Wake
+    7400004: Shake
+    7400006: Break
+    7400008: BreakEverything
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -2447,11 +2452,1486 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Open
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: polySurface439
+        weight: 1
+      - path: polySurface439/buttons_center
+        weight: 1
+      - path: polySurface439/buttons_center/pCube3
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1277
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1278
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1281
+        weight: 1
+      - path: polySurface439/buttons_right
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1277 1
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1278 1
+        weight: 1
+      - path: polySurface439/door
+        weight: 1
+      - path: polySurface439/door/doorHandle
+        weight: 1
+      - path: polySurface439/door/pCube6
+        weight: 1
+      - path: polySurface439/door/polySurface1282
+        weight: 1
+      - path: polySurface439/door/polySurface1283
+        weight: 1
+      - path: polySurface439/pCube4
+        weight: 1
+      - path: polySurface439/pCube5
+        weight: 1
+      - path: polySurface439/polySurface854
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface862
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface863
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface864
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface865
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface866
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface867
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface868
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface869
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface870
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface871
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface872
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface873
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface874
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface875
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface876
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1284
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1285
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface878
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface879
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface880
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface881
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface882
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface883
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface884
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface885
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface886
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface887
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface888
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface889
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface890
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface891
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface892
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface893
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface894
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface895
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface896
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface897
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface898
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface899
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface900
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface901
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface902
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface903
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface904
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface905
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface906
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface907
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface908
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface909
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface910
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface911
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface912
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface913
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface914
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface915
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface916
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface917
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface918
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface925
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface926
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface938
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface939
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface940
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface941
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface942
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface943
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface944
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface950
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface951
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface964
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface965
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface969
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface970
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface971
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface980
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface981
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface982
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface983
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface984
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface985
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface986
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1008
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1009
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1010
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1246
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1247
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1248
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1249
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1250
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1251
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1252
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1253
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1254
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1255
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1274
+        weight: 1
+      - path: polySurface439/polySurface1269
+        weight: 1
+      - path: polySurface439/polySurface1270
+        weight: 1
+      - path: polySurface439/polySurface1271
+        weight: 1
+      - path: polySurface439/polySurface1272
+        weight: 1
+      - path: polySurface439/polySurface1275
+        weight: 1
+      - path: polySurface439/polySurface1276
+        weight: 1
+      - path: polySurface439/polySurface1279
+        weight: 1
+      - path: polySurface439/polySurface1280
+        weight: 1
+      - path: polySurface439/screenExtend_holder
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3/screenExtend_4
+        weight: 1
+      - path: polySurface439/screenExtend_holder1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1/screenExtend_4 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Wake
+      takeName: Take 001
+      firstFrame: 136
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: polySurface439
+        weight: 1
+      - path: polySurface439/buttons_center
+        weight: 1
+      - path: polySurface439/buttons_center/pCube3
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1277
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1278
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1281
+        weight: 1
+      - path: polySurface439/buttons_right
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1277 1
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1278 1
+        weight: 1
+      - path: polySurface439/door
+        weight: 1
+      - path: polySurface439/door/doorHandle
+        weight: 1
+      - path: polySurface439/door/pCube6
+        weight: 1
+      - path: polySurface439/door/polySurface1282
+        weight: 1
+      - path: polySurface439/door/polySurface1283
+        weight: 1
+      - path: polySurface439/pCube4
+        weight: 1
+      - path: polySurface439/pCube5
+        weight: 1
+      - path: polySurface439/polySurface854
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface862
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface863
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface864
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface865
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface866
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface867
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface868
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface869
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface870
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface871
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface872
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface873
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface874
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface875
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface876
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1284
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1285
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface878
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface879
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface880
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface881
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface882
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface883
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface884
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface885
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface886
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface887
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface888
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface889
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface890
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface891
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface892
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface893
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface894
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface895
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface896
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface897
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface898
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface899
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface900
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface901
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface902
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface903
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface904
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface905
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface906
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface907
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface908
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface909
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface910
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface911
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface912
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface913
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface914
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface915
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface916
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface917
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface918
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface925
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface926
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface938
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface939
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface940
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface941
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface942
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface943
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface944
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface950
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface951
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface964
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface965
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface969
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface970
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface971
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface980
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface981
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface982
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface983
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface984
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface985
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface986
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1008
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1009
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1010
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1246
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1247
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1248
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1249
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1250
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1251
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1252
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1253
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1254
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1255
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1274
+        weight: 1
+      - path: polySurface439/polySurface1269
+        weight: 1
+      - path: polySurface439/polySurface1270
+        weight: 1
+      - path: polySurface439/polySurface1271
+        weight: 1
+      - path: polySurface439/polySurface1272
+        weight: 1
+      - path: polySurface439/polySurface1275
+        weight: 1
+      - path: polySurface439/polySurface1276
+        weight: 1
+      - path: polySurface439/polySurface1279
+        weight: 1
+      - path: polySurface439/polySurface1280
+        weight: 1
+      - path: polySurface439/screenExtend_holder
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3/screenExtend_4
+        weight: 1
+      - path: polySurface439/screenExtend_holder1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1/screenExtend_4 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Shake
+      takeName: Take 001
+      firstFrame: 260
+      lastFrame: 335
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: polySurface439
+        weight: 1
+      - path: polySurface439/buttons_center
+        weight: 1
+      - path: polySurface439/buttons_center/pCube3
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1277
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1278
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1281
+        weight: 1
+      - path: polySurface439/buttons_right
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1277 1
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1278 1
+        weight: 1
+      - path: polySurface439/door
+        weight: 1
+      - path: polySurface439/door/doorHandle
+        weight: 1
+      - path: polySurface439/door/pCube6
+        weight: 1
+      - path: polySurface439/door/polySurface1282
+        weight: 1
+      - path: polySurface439/door/polySurface1283
+        weight: 1
+      - path: polySurface439/pCube4
+        weight: 1
+      - path: polySurface439/pCube5
+        weight: 1
+      - path: polySurface439/polySurface854
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface862
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface863
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface864
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface865
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface866
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface867
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface868
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface869
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface870
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface871
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface872
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface873
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface874
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface875
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface876
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1284
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1285
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface878
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface879
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface880
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface881
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface882
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface883
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface884
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface885
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface886
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface887
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface888
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface889
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface890
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface891
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface892
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface893
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface894
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface895
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface896
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface897
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface898
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface899
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface900
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface901
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface902
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface903
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface904
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface905
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface906
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface907
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface908
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface909
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface910
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface911
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface912
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface913
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface914
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface915
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface916
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface917
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface918
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface925
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface926
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface938
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface939
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface940
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface941
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface942
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface943
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface944
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface950
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface951
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface964
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface965
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface969
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface970
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface971
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface980
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface981
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface982
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface983
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface984
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface985
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface986
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1008
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1009
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1010
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1246
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1247
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1248
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1249
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1250
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1251
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1252
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1253
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1254
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1255
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1274
+        weight: 1
+      - path: polySurface439/polySurface1269
+        weight: 1
+      - path: polySurface439/polySurface1270
+        weight: 1
+      - path: polySurface439/polySurface1271
+        weight: 1
+      - path: polySurface439/polySurface1272
+        weight: 1
+      - path: polySurface439/polySurface1275
+        weight: 1
+      - path: polySurface439/polySurface1276
+        weight: 1
+      - path: polySurface439/polySurface1279
+        weight: 1
+      - path: polySurface439/polySurface1280
+        weight: 1
+      - path: polySurface439/screenExtend_holder
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3/screenExtend_4
+        weight: 1
+      - path: polySurface439/screenExtend_holder1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1/screenExtend_4 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Break
+      takeName: Take 001
+      firstFrame: 336
+      lastFrame: 375
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: polySurface439
+        weight: 1
+      - path: polySurface439/buttons_center
+        weight: 1
+      - path: polySurface439/buttons_center/pCube3
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1277
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1278
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1281
+        weight: 1
+      - path: polySurface439/buttons_right
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1277 1
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1278 1
+        weight: 1
+      - path: polySurface439/door
+        weight: 1
+      - path: polySurface439/door/doorHandle
+        weight: 1
+      - path: polySurface439/door/pCube6
+        weight: 1
+      - path: polySurface439/door/polySurface1282
+        weight: 1
+      - path: polySurface439/door/polySurface1283
+        weight: 1
+      - path: polySurface439/pCube4
+        weight: 1
+      - path: polySurface439/pCube5
+        weight: 1
+      - path: polySurface439/polySurface854
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface862
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface863
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface864
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface865
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface866
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface867
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface868
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface869
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface870
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface871
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface872
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface873
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface874
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface875
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface876
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1284
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1285
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface878
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface879
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface880
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface881
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface882
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface883
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface884
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface885
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface886
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface887
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface888
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface889
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface890
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface891
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface892
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface893
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface894
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface895
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface896
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface897
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface898
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface899
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface900
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface901
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface902
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface903
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface904
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface905
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface906
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface907
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface908
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface909
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface910
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface911
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface912
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface913
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface914
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface915
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface916
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface917
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface918
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface925
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface926
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface938
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface939
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface940
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface941
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface942
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface943
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface944
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface950
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface951
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface964
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface965
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface969
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface970
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface971
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface980
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface981
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface982
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface983
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface984
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface985
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface986
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1008
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1009
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1010
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1246
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1247
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1248
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1249
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1250
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1251
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1252
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1253
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1254
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1255
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1274
+        weight: 1
+      - path: polySurface439/polySurface1269
+        weight: 1
+      - path: polySurface439/polySurface1270
+        weight: 1
+      - path: polySurface439/polySurface1271
+        weight: 1
+      - path: polySurface439/polySurface1272
+        weight: 1
+      - path: polySurface439/polySurface1275
+        weight: 1
+      - path: polySurface439/polySurface1276
+        weight: 1
+      - path: polySurface439/polySurface1279
+        weight: 1
+      - path: polySurface439/polySurface1280
+        weight: 1
+      - path: polySurface439/screenExtend_holder
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3/screenExtend_4
+        weight: 1
+      - path: polySurface439/screenExtend_holder1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1/screenExtend_4 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BreakEverything
+      takeName: Take 001
+      firstFrame: 136
+      lastFrame: 375
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: polySurface439
+        weight: 1
+      - path: polySurface439/buttons_center
+        weight: 1
+      - path: polySurface439/buttons_center/pCube3
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1277
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1278
+        weight: 1
+      - path: polySurface439/buttons_center/polySurface1281
+        weight: 1
+      - path: polySurface439/buttons_right
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1277 1
+        weight: 1
+      - path: polySurface439/buttons_right/polySurface1278 1
+        weight: 1
+      - path: polySurface439/door
+        weight: 1
+      - path: polySurface439/door/doorHandle
+        weight: 1
+      - path: polySurface439/door/pCube6
+        weight: 1
+      - path: polySurface439/door/polySurface1282
+        weight: 1
+      - path: polySurface439/door/polySurface1283
+        weight: 1
+      - path: polySurface439/pCube4
+        weight: 1
+      - path: polySurface439/pCube5
+        weight: 1
+      - path: polySurface439/polySurface854
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface862
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface863
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface864
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface865
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface866
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface867
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface868
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface869
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface870
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface871
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface872
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface873
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface874
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface875
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface876
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1284
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface877/polySurface1285
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface878
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface879
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface880
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface881
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface882
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface883
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface884
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface885
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface886
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface887
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface888
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface889
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface890
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface891
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface892
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface893
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface894
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface895
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface896
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface897
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface898
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface899
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface900
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface901
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface902
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface903
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface904
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface905
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface906
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface907
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface908
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface909
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface910
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface911
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface912
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface913
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface914
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface915
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface916
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface917
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface918
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface925
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface926
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface938
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface939
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface940
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface941
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface942
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface943
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface944
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface950
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface951
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface964
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface965
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface969
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface970
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface971
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface980
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface981
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface982
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface983
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface984
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface985
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface986
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1008
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1009
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1010
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1246
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1247
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1248
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1249
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1250
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1251
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1252
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1253
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1254
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1255
+        weight: 1
+      - path: polySurface439/polySurface854/polySurface1274
+        weight: 1
+      - path: polySurface439/polySurface1269
+        weight: 1
+      - path: polySurface439/polySurface1270
+        weight: 1
+      - path: polySurface439/polySurface1271
+        weight: 1
+      - path: polySurface439/polySurface1272
+        weight: 1
+      - path: polySurface439/polySurface1275
+        weight: 1
+      - path: polySurface439/polySurface1276
+        weight: 1
+      - path: polySurface439/polySurface1279
+        weight: 1
+      - path: polySurface439/polySurface1280
+        weight: 1
+      - path: polySurface439/screenExtend_holder
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3
+        weight: 1
+      - path: polySurface439/screenExtend_holder/screenExtend_1/screenExtend_2/screenExtend_3/screenExtend_4
+        weight: 1
+      - path: polySurface439/screenExtend_holder1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1
+        weight: 1
+      - path: polySurface439/screenExtend_holder1/screenExtend_1 1/screenExtend_2
+          1/screenExtend_3 1/screenExtend_4 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .200000003
+    globalScale: 1
     meshCompression: 0
     addColliders: 1
     importBlendShapes: 1
@@ -2483,6 +3963,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 

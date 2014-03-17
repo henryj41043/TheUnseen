@@ -101,8 +101,6 @@ public class CharacterStats : MonoBehaviour
 			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodOverlay[2], ScaleMode.StretchToFill, true, 0.0f);
 			GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
 		}
-		print(1-((float)playerHealth / (float)maxHealth));
-		//GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, 1-((float)playerHealth / (float)maxHealth));
 
 	}
 

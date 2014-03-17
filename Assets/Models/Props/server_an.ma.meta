@@ -87,6 +87,7 @@ ModelImporter:
     4300026: top2
     4300028: bottom_molding
     4300030: server
+    4300032: polySurface16
     6400000: back_mesh
     6400002: bar1
     6400004: bar2

@@ -14,10 +14,10 @@ public class ExitAudioLog : MonoBehaviour {
 		AudioSource log = GameObject.FindGameObjectWithTag("AudioLog").GetComponent<AudioSource>();
 		AudioSource music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
 
-		if(log.isPlaying)
-			log.Stop();
+		//if(log.isPlaying)
+		//	log.Stop();
 
-		music.volume = PlayerPrefs.GetFloat("MusicVol");
+		//music.volume = PlayerPrefs.GetFloat("MusicVol");
 
 		MouseLook cml = c.GetComponent<MouseLook>();
 		MouseLook pml = player.GetComponent<MouseLook>();

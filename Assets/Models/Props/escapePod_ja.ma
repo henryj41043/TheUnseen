@@ -1,68 +1,15 @@
 //Maya ASCII 2014 scene
-//Name: escapePod_ja.ma
-//Last modified: Sat, Mar 15, 2014 07:05:22 PM
-//Codeset: 1252
+//Name: escapePodFIXED_ja.ma
+//Last modified: Sun, Mar 16, 2014 12:28:23 PM
+//Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2014";
-fileInfo "version" "2014";
-fileInfo "cutIdentifier" "201307170459-880822";
-fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
-fileInfo "license" "student";
-createNode transform -s -n "persp";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.8826400975351039 3.9425880711277808 18.957168756219609 ;
-	setAttr ".r" -type "double3" -8.1383527295916043 6.5999999999975252 2.0011084909432054e-016 ;
-createNode camera -s -n "perspShape" -p "persp";
-	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.731664147643073;
-	setAttr ".imn" -type "string" "persp";
-	setAttr ".den" -type "string" "persp_depth";
-	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".hc" -type "string" "viewSet -p %camera";
-createNode transform -s -n "top";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
-	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
-createNode camera -s -n "topShape" -p "top";
-	setAttr -k off ".v" no;
-	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "top";
-	setAttr ".den" -type "string" "top_depth";
-	setAttr ".man" -type "string" "top_mask";
-	setAttr ".hc" -type "string" "viewSet -t %camera";
-	setAttr ".o" yes;
-createNode transform -s -n "front";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
-createNode camera -s -n "frontShape" -p "front";
-	setAttr -k off ".v" no;
-	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "front";
-	setAttr ".den" -type "string" "front_depth";
-	setAttr ".man" -type "string" "front_mask";
-	setAttr ".hc" -type "string" "viewSet -f %camera";
-	setAttr ".o" yes;
-createNode transform -s -n "side";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
-	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
-createNode camera -s -n "sideShape" -p "side";
-	setAttr -k off ".v" no;
-	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "side";
-	setAttr ".den" -type "string" "side_depth";
-	setAttr ".man" -type "string" "side_mask";
-	setAttr ".hc" -type "string" "viewSet -s %camera";
-	setAttr ".o" yes;
+fileInfo "version" "2014 x64";
+fileInfo "cutIdentifier" "201306050813-875228";
+fileInfo "osv" "Mac OS X 10.8.5";
+fileInfo "license" "education";
 createNode transform -n "camera1";
 createNode camera -n "cameraShape1" -p "camera1";
 	setAttr -k off ".v";
@@ -80,1248 +27,6 @@ createNode transform -n "polySurface439";
 	setAttr ".rp" -type "double3" 0 -1.408558932766748 2.9999999999999427 ;
 	setAttr ".sp" -type "double3" 0 -298.06714517136942 458.51692386710664 ;
 	setAttr ".spt" -type "double3" 0 296.65858623860254 -455.5169238671067 ;
-createNode transform -n "polySurface440" -p "polySurface439";
-createNode transform -n "transform414" -p "polySurface440";
-	setAttr ".v" no;
-createNode transform -n "polySurface441" -p "polySurface439";
-createNode transform -n "transform413" -p "polySurface441";
-	setAttr ".v" no;
-createNode transform -n "polySurface442" -p "polySurface439";
-createNode transform -n "transform412" -p "polySurface442";
-	setAttr ".v" no;
-createNode transform -n "polySurface443" -p "polySurface439";
-createNode transform -n "transform411" -p "polySurface443";
-	setAttr ".v" no;
-createNode transform -n "polySurface444" -p "polySurface439";
-createNode transform -n "transform410" -p "polySurface444";
-	setAttr ".v" no;
-createNode transform -n "polySurface445" -p "polySurface439";
-createNode transform -n "transform409" -p "polySurface445";
-	setAttr ".v" no;
-createNode transform -n "polySurface446" -p "polySurface439";
-createNode transform -n "transform408" -p "polySurface446";
-	setAttr ".v" no;
-createNode transform -n "polySurface447" -p "polySurface439";
-createNode transform -n "transform407" -p "polySurface447";
-	setAttr ".v" no;
-createNode transform -n "polySurface448" -p "polySurface439";
-createNode transform -n "transform406" -p "polySurface448";
-	setAttr ".v" no;
-createNode transform -n "polySurface449" -p "polySurface439";
-createNode transform -n "transform405" -p "polySurface449";
-	setAttr ".v" no;
-createNode transform -n "polySurface450" -p "polySurface439";
-createNode transform -n "transform404" -p "polySurface450";
-	setAttr ".v" no;
-createNode transform -n "polySurface451" -p "polySurface439";
-createNode transform -n "transform403" -p "polySurface451";
-	setAttr ".v" no;
-createNode transform -n "polySurface452" -p "polySurface439";
-createNode transform -n "transform402" -p "polySurface452";
-	setAttr ".v" no;
-createNode transform -n "polySurface453" -p "polySurface439";
-createNode transform -n "transform401" -p "polySurface453";
-	setAttr ".v" no;
-createNode transform -n "polySurface454" -p "polySurface439";
-createNode transform -n "transform400" -p "polySurface454";
-	setAttr ".v" no;
-createNode transform -n "polySurface455" -p "polySurface439";
-createNode transform -n "transform399" -p "polySurface455";
-	setAttr ".v" no;
-createNode transform -n "polySurface456" -p "polySurface439";
-createNode transform -n "transform398" -p "polySurface456";
-	setAttr ".v" no;
-createNode transform -n "polySurface457" -p "polySurface439";
-createNode transform -n "transform397" -p "polySurface457";
-	setAttr ".v" no;
-createNode transform -n "polySurface458" -p "polySurface439";
-createNode transform -n "transform396" -p "polySurface458";
-	setAttr ".v" no;
-createNode transform -n "polySurface459" -p "polySurface439";
-createNode transform -n "transform395" -p "polySurface459";
-	setAttr ".v" no;
-createNode transform -n "polySurface460" -p "polySurface439";
-createNode transform -n "transform394" -p "polySurface460";
-	setAttr ".v" no;
-createNode transform -n "polySurface461" -p "polySurface439";
-createNode transform -n "transform393" -p "polySurface461";
-	setAttr ".v" no;
-createNode transform -n "polySurface462" -p "polySurface439";
-createNode transform -n "transform392" -p "polySurface462";
-	setAttr ".v" no;
-createNode transform -n "polySurface463" -p "polySurface439";
-createNode transform -n "transform391" -p "polySurface463";
-	setAttr ".v" no;
-createNode transform -n "polySurface464" -p "polySurface439";
-createNode transform -n "transform390" -p "polySurface464";
-	setAttr ".v" no;
-createNode transform -n "polySurface465" -p "polySurface439";
-createNode transform -n "transform389" -p "polySurface465";
-	setAttr ".v" no;
-createNode transform -n "polySurface466" -p "polySurface439";
-createNode transform -n "transform388" -p "polySurface466";
-	setAttr ".v" no;
-createNode transform -n "polySurface467" -p "polySurface439";
-createNode transform -n "transform387" -p "polySurface467";
-	setAttr ".v" no;
-createNode transform -n "polySurface468" -p "polySurface439";
-createNode transform -n "transform386" -p "polySurface468";
-	setAttr ".v" no;
-createNode transform -n "polySurface469" -p "polySurface439";
-createNode transform -n "transform385" -p "polySurface469";
-	setAttr ".v" no;
-createNode transform -n "polySurface470" -p "polySurface439";
-createNode transform -n "transform384" -p "polySurface470";
-	setAttr ".v" no;
-createNode transform -n "polySurface471" -p "polySurface439";
-createNode transform -n "transform383" -p "polySurface471";
-	setAttr ".v" no;
-createNode transform -n "polySurface472" -p "polySurface439";
-createNode transform -n "transform382" -p "polySurface472";
-	setAttr ".v" no;
-createNode transform -n "polySurface473" -p "polySurface439";
-createNode transform -n "transform381" -p "polySurface473";
-	setAttr ".v" no;
-createNode transform -n "polySurface474" -p "polySurface439";
-createNode transform -n "transform380" -p "polySurface474";
-	setAttr ".v" no;
-createNode transform -n "polySurface475" -p "polySurface439";
-createNode transform -n "transform379" -p "polySurface475";
-	setAttr ".v" no;
-createNode transform -n "polySurface476" -p "polySurface439";
-createNode transform -n "transform378" -p "polySurface476";
-	setAttr ".v" no;
-createNode transform -n "polySurface477" -p "polySurface439";
-createNode transform -n "transform377" -p "polySurface477";
-	setAttr ".v" no;
-createNode transform -n "polySurface478" -p "polySurface439";
-createNode transform -n "transform376" -p "polySurface478";
-	setAttr ".v" no;
-createNode transform -n "polySurface479" -p "polySurface439";
-createNode transform -n "transform375" -p "polySurface479";
-	setAttr ".v" no;
-createNode transform -n "polySurface480" -p "polySurface439";
-createNode transform -n "transform374" -p "polySurface480";
-	setAttr ".v" no;
-createNode transform -n "polySurface481" -p "polySurface439";
-createNode transform -n "transform373" -p "polySurface481";
-	setAttr ".v" no;
-createNode transform -n "polySurface482" -p "polySurface439";
-createNode transform -n "transform372" -p "polySurface482";
-	setAttr ".v" no;
-createNode transform -n "polySurface483" -p "polySurface439";
-createNode transform -n "transform371" -p "polySurface483";
-	setAttr ".v" no;
-createNode transform -n "polySurface484" -p "polySurface439";
-createNode transform -n "transform370" -p "polySurface484";
-	setAttr ".v" no;
-createNode transform -n "polySurface485" -p "polySurface439";
-createNode transform -n "transform369" -p "polySurface485";
-	setAttr ".v" no;
-createNode transform -n "polySurface486" -p "polySurface439";
-createNode transform -n "transform368" -p "polySurface486";
-	setAttr ".v" no;
-createNode transform -n "polySurface487" -p "polySurface439";
-createNode transform -n "transform367" -p "polySurface487";
-	setAttr ".v" no;
-createNode transform -n "polySurface488" -p "polySurface439";
-createNode transform -n "transform366" -p "polySurface488";
-	setAttr ".v" no;
-createNode transform -n "polySurface489" -p "polySurface439";
-createNode transform -n "transform365" -p "polySurface489";
-	setAttr ".v" no;
-createNode transform -n "polySurface490" -p "polySurface439";
-createNode transform -n "transform364" -p "polySurface490";
-	setAttr ".v" no;
-createNode transform -n "polySurface491" -p "polySurface439";
-createNode transform -n "transform363" -p "polySurface491";
-	setAttr ".v" no;
-createNode transform -n "polySurface492" -p "polySurface439";
-createNode transform -n "transform362" -p "polySurface492";
-	setAttr ".v" no;
-createNode transform -n "polySurface493" -p "polySurface439";
-createNode transform -n "transform361" -p "polySurface493";
-	setAttr ".v" no;
-createNode transform -n "polySurface494" -p "polySurface439";
-createNode transform -n "transform360" -p "polySurface494";
-	setAttr ".v" no;
-createNode transform -n "polySurface495" -p "polySurface439";
-createNode transform -n "transform359" -p "polySurface495";
-	setAttr ".v" no;
-createNode transform -n "polySurface496" -p "polySurface439";
-createNode transform -n "transform358" -p "polySurface496";
-	setAttr ".v" no;
-createNode transform -n "polySurface497" -p "polySurface439";
-createNode transform -n "transform357" -p "polySurface497";
-	setAttr ".v" no;
-createNode transform -n "polySurface498" -p "polySurface439";
-createNode transform -n "transform356" -p "polySurface498";
-	setAttr ".v" no;
-createNode transform -n "polySurface499" -p "polySurface439";
-createNode transform -n "transform355" -p "polySurface499";
-	setAttr ".v" no;
-createNode transform -n "polySurface500" -p "polySurface439";
-createNode transform -n "transform354" -p "polySurface500";
-	setAttr ".v" no;
-createNode transform -n "polySurface501" -p "polySurface439";
-createNode transform -n "transform353" -p "polySurface501";
-	setAttr ".v" no;
-createNode transform -n "polySurface502" -p "polySurface439";
-createNode transform -n "transform352" -p "polySurface502";
-	setAttr ".v" no;
-createNode transform -n "polySurface503" -p "polySurface439";
-createNode transform -n "transform351" -p "polySurface503";
-	setAttr ".v" no;
-createNode transform -n "polySurface504" -p "polySurface439";
-createNode transform -n "transform350" -p "polySurface504";
-	setAttr ".v" no;
-createNode transform -n "polySurface505" -p "polySurface439";
-createNode transform -n "transform349" -p "polySurface505";
-	setAttr ".v" no;
-createNode transform -n "polySurface506" -p "polySurface439";
-createNode transform -n "transform348" -p "polySurface506";
-	setAttr ".v" no;
-createNode transform -n "polySurface507" -p "polySurface439";
-createNode transform -n "transform347" -p "polySurface507";
-	setAttr ".v" no;
-createNode transform -n "polySurface508" -p "polySurface439";
-createNode transform -n "transform346" -p "polySurface508";
-	setAttr ".v" no;
-createNode transform -n "polySurface509" -p "polySurface439";
-createNode transform -n "transform345" -p "polySurface509";
-	setAttr ".v" no;
-createNode transform -n "polySurface510" -p "polySurface439";
-createNode transform -n "transform344" -p "polySurface510";
-	setAttr ".v" no;
-createNode transform -n "polySurface511" -p "polySurface439";
-createNode transform -n "transform343" -p "polySurface511";
-	setAttr ".v" no;
-createNode transform -n "polySurface512" -p "polySurface439";
-createNode transform -n "transform342" -p "polySurface512";
-	setAttr ".v" no;
-createNode transform -n "polySurface513" -p "polySurface439";
-createNode transform -n "transform341" -p "polySurface513";
-	setAttr ".v" no;
-createNode transform -n "polySurface514" -p "polySurface439";
-createNode transform -n "transform340" -p "polySurface514";
-	setAttr ".v" no;
-createNode transform -n "polySurface515" -p "polySurface439";
-createNode transform -n "transform339" -p "polySurface515";
-	setAttr ".v" no;
-createNode transform -n "polySurface516" -p "polySurface439";
-createNode transform -n "transform338" -p "polySurface516";
-	setAttr ".v" no;
-createNode transform -n "polySurface517" -p "polySurface439";
-createNode transform -n "transform337" -p "polySurface517";
-	setAttr ".v" no;
-createNode transform -n "polySurface518" -p "polySurface439";
-createNode transform -n "transform336" -p "polySurface518";
-	setAttr ".v" no;
-createNode transform -n "polySurface519" -p "polySurface439";
-createNode transform -n "transform335" -p "polySurface519";
-	setAttr ".v" no;
-createNode transform -n "polySurface520" -p "polySurface439";
-createNode transform -n "transform334" -p "polySurface520";
-	setAttr ".v" no;
-createNode transform -n "polySurface521" -p "polySurface439";
-createNode transform -n "transform333" -p "polySurface521";
-	setAttr ".v" no;
-createNode transform -n "polySurface522" -p "polySurface439";
-createNode transform -n "transform332" -p "polySurface522";
-	setAttr ".v" no;
-createNode transform -n "polySurface523" -p "polySurface439";
-createNode transform -n "transform331" -p "polySurface523";
-	setAttr ".v" no;
-createNode transform -n "polySurface524" -p "polySurface439";
-createNode transform -n "transform330" -p "polySurface524";
-	setAttr ".v" no;
-createNode transform -n "polySurface525" -p "polySurface439";
-createNode transform -n "transform329" -p "polySurface525";
-	setAttr ".v" no;
-createNode transform -n "polySurface526" -p "polySurface439";
-createNode transform -n "transform328" -p "polySurface526";
-	setAttr ".v" no;
-createNode transform -n "polySurface527" -p "polySurface439";
-createNode transform -n "transform327" -p "polySurface527";
-	setAttr ".v" no;
-createNode transform -n "polySurface528" -p "polySurface439";
-createNode transform -n "transform326" -p "polySurface528";
-	setAttr ".v" no;
-createNode transform -n "polySurface529" -p "polySurface439";
-createNode transform -n "transform325" -p "polySurface529";
-	setAttr ".v" no;
-createNode transform -n "polySurface530" -p "polySurface439";
-createNode transform -n "transform324" -p "polySurface530";
-	setAttr ".v" no;
-createNode transform -n "polySurface531" -p "polySurface439";
-createNode transform -n "transform323" -p "polySurface531";
-	setAttr ".v" no;
-createNode transform -n "polySurface532" -p "polySurface439";
-createNode transform -n "transform322" -p "polySurface532";
-	setAttr ".v" no;
-createNode transform -n "polySurface533" -p "polySurface439";
-createNode transform -n "transform321" -p "polySurface533";
-	setAttr ".v" no;
-createNode transform -n "polySurface534" -p "polySurface439";
-createNode transform -n "transform320" -p "polySurface534";
-	setAttr ".v" no;
-createNode transform -n "polySurface535" -p "polySurface439";
-createNode transform -n "transform319" -p "polySurface535";
-	setAttr ".v" no;
-createNode transform -n "polySurface536" -p "polySurface439";
-createNode transform -n "transform318" -p "polySurface536";
-	setAttr ".v" no;
-createNode transform -n "polySurface537" -p "polySurface439";
-createNode transform -n "transform317" -p "polySurface537";
-	setAttr ".v" no;
-createNode transform -n "polySurface538" -p "polySurface439";
-createNode transform -n "transform316" -p "polySurface538";
-	setAttr ".v" no;
-createNode transform -n "polySurface539" -p "polySurface439";
-createNode transform -n "transform315" -p "polySurface539";
-	setAttr ".v" no;
-createNode transform -n "polySurface540" -p "polySurface439";
-createNode transform -n "transform314" -p "polySurface540";
-	setAttr ".v" no;
-createNode transform -n "polySurface541" -p "polySurface439";
-createNode transform -n "transform313" -p "polySurface541";
-	setAttr ".v" no;
-createNode transform -n "polySurface542" -p "polySurface439";
-createNode transform -n "transform312" -p "polySurface542";
-	setAttr ".v" no;
-createNode transform -n "polySurface543" -p "polySurface439";
-createNode transform -n "transform311" -p "polySurface543";
-	setAttr ".v" no;
-createNode transform -n "polySurface544" -p "polySurface439";
-createNode transform -n "transform310" -p "polySurface544";
-	setAttr ".v" no;
-createNode transform -n "polySurface545" -p "polySurface439";
-createNode transform -n "transform309" -p "polySurface545";
-	setAttr ".v" no;
-createNode transform -n "polySurface546" -p "polySurface439";
-createNode transform -n "transform308" -p "polySurface546";
-	setAttr ".v" no;
-createNode transform -n "polySurface547" -p "polySurface439";
-createNode transform -n "transform307" -p "polySurface547";
-	setAttr ".v" no;
-createNode transform -n "polySurface548" -p "polySurface439";
-createNode transform -n "transform306" -p "polySurface548";
-	setAttr ".v" no;
-createNode transform -n "polySurface549" -p "polySurface439";
-createNode transform -n "transform305" -p "polySurface549";
-	setAttr ".v" no;
-createNode transform -n "polySurface550" -p "polySurface439";
-createNode transform -n "transform304" -p "polySurface550";
-	setAttr ".v" no;
-createNode transform -n "polySurface551" -p "polySurface439";
-createNode transform -n "transform303" -p "polySurface551";
-	setAttr ".v" no;
-createNode transform -n "polySurface552" -p "polySurface439";
-createNode transform -n "transform302" -p "polySurface552";
-	setAttr ".v" no;
-createNode transform -n "polySurface553" -p "polySurface439";
-createNode transform -n "transform301" -p "polySurface553";
-	setAttr ".v" no;
-createNode transform -n "polySurface554" -p "polySurface439";
-createNode transform -n "transform300" -p "polySurface554";
-	setAttr ".v" no;
-createNode transform -n "polySurface555" -p "polySurface439";
-createNode transform -n "transform299" -p "polySurface555";
-	setAttr ".v" no;
-createNode transform -n "polySurface556" -p "polySurface439";
-createNode transform -n "transform298" -p "polySurface556";
-	setAttr ".v" no;
-createNode transform -n "polySurface557" -p "polySurface439";
-createNode transform -n "transform297" -p "polySurface557";
-	setAttr ".v" no;
-createNode transform -n "polySurface558" -p "polySurface439";
-createNode transform -n "transform296" -p "polySurface558";
-	setAttr ".v" no;
-createNode transform -n "polySurface559" -p "polySurface439";
-createNode transform -n "transform295" -p "polySurface559";
-	setAttr ".v" no;
-createNode transform -n "polySurface560" -p "polySurface439";
-createNode transform -n "transform294" -p "polySurface560";
-	setAttr ".v" no;
-createNode transform -n "polySurface561" -p "polySurface439";
-createNode transform -n "transform293" -p "polySurface561";
-	setAttr ".v" no;
-createNode transform -n "polySurface562" -p "polySurface439";
-createNode transform -n "transform292" -p "polySurface562";
-	setAttr ".v" no;
-createNode transform -n "polySurface563" -p "polySurface439";
-createNode transform -n "transform291" -p "polySurface563";
-	setAttr ".v" no;
-createNode transform -n "polySurface564" -p "polySurface439";
-createNode transform -n "transform290" -p "polySurface564";
-	setAttr ".v" no;
-createNode transform -n "polySurface565" -p "polySurface439";
-createNode transform -n "transform289" -p "polySurface565";
-	setAttr ".v" no;
-createNode transform -n "polySurface566" -p "polySurface439";
-createNode transform -n "transform288" -p "polySurface566";
-	setAttr ".v" no;
-createNode transform -n "polySurface567" -p "polySurface439";
-createNode transform -n "transform287" -p "polySurface567";
-	setAttr ".v" no;
-createNode transform -n "polySurface568" -p "polySurface439";
-createNode transform -n "transform286" -p "polySurface568";
-	setAttr ".v" no;
-createNode transform -n "polySurface569" -p "polySurface439";
-createNode transform -n "transform285" -p "polySurface569";
-	setAttr ".v" no;
-createNode transform -n "polySurface570" -p "polySurface439";
-createNode transform -n "transform284" -p "polySurface570";
-	setAttr ".v" no;
-createNode transform -n "polySurface571" -p "polySurface439";
-createNode transform -n "transform283" -p "polySurface571";
-	setAttr ".v" no;
-createNode transform -n "polySurface572" -p "polySurface439";
-createNode transform -n "transform282" -p "polySurface572";
-	setAttr ".v" no;
-createNode transform -n "polySurface573" -p "polySurface439";
-createNode transform -n "transform281" -p "polySurface573";
-	setAttr ".v" no;
-createNode transform -n "polySurface574" -p "polySurface439";
-createNode transform -n "transform280" -p "polySurface574";
-	setAttr ".v" no;
-createNode transform -n "polySurface575" -p "polySurface439";
-createNode transform -n "transform279" -p "polySurface575";
-	setAttr ".v" no;
-createNode transform -n "polySurface576" -p "polySurface439";
-createNode transform -n "transform278" -p "polySurface576";
-	setAttr ".v" no;
-createNode transform -n "polySurface577" -p "polySurface439";
-createNode transform -n "transform277" -p "polySurface577";
-	setAttr ".v" no;
-createNode transform -n "polySurface578" -p "polySurface439";
-createNode transform -n "transform276" -p "polySurface578";
-	setAttr ".v" no;
-createNode transform -n "polySurface579" -p "polySurface439";
-createNode transform -n "transform275" -p "polySurface579";
-	setAttr ".v" no;
-createNode transform -n "polySurface580" -p "polySurface439";
-createNode transform -n "transform274" -p "polySurface580";
-	setAttr ".v" no;
-createNode transform -n "polySurface581" -p "polySurface439";
-createNode transform -n "transform273" -p "polySurface581";
-	setAttr ".v" no;
-createNode transform -n "polySurface582" -p "polySurface439";
-createNode transform -n "transform272" -p "polySurface582";
-	setAttr ".v" no;
-createNode transform -n "polySurface583" -p "polySurface439";
-createNode transform -n "transform271" -p "polySurface583";
-	setAttr ".v" no;
-createNode transform -n "polySurface584" -p "polySurface439";
-createNode transform -n "transform270" -p "polySurface584";
-	setAttr ".v" no;
-createNode transform -n "polySurface585" -p "polySurface439";
-createNode transform -n "transform269" -p "polySurface585";
-	setAttr ".v" no;
-createNode transform -n "polySurface586" -p "polySurface439";
-createNode transform -n "transform268" -p "polySurface586";
-	setAttr ".v" no;
-createNode transform -n "polySurface587" -p "polySurface439";
-createNode transform -n "transform267" -p "polySurface587";
-	setAttr ".v" no;
-createNode transform -n "polySurface588" -p "polySurface439";
-createNode transform -n "transform266" -p "polySurface588";
-	setAttr ".v" no;
-createNode transform -n "polySurface589" -p "polySurface439";
-createNode transform -n "transform265" -p "polySurface589";
-	setAttr ".v" no;
-createNode transform -n "polySurface590" -p "polySurface439";
-createNode transform -n "transform264" -p "polySurface590";
-	setAttr ".v" no;
-createNode transform -n "polySurface591" -p "polySurface439";
-createNode transform -n "transform263" -p "polySurface591";
-	setAttr ".v" no;
-createNode transform -n "polySurface592" -p "polySurface439";
-createNode transform -n "transform262" -p "polySurface592";
-	setAttr ".v" no;
-createNode transform -n "polySurface593" -p "polySurface439";
-createNode transform -n "transform261" -p "polySurface593";
-	setAttr ".v" no;
-createNode transform -n "polySurface594" -p "polySurface439";
-createNode transform -n "transform260" -p "polySurface594";
-	setAttr ".v" no;
-createNode transform -n "polySurface595" -p "polySurface439";
-createNode transform -n "transform259" -p "polySurface595";
-	setAttr ".v" no;
-createNode transform -n "polySurface596" -p "polySurface439";
-createNode transform -n "transform258" -p "polySurface596";
-	setAttr ".v" no;
-createNode transform -n "polySurface597" -p "polySurface439";
-createNode transform -n "transform257" -p "polySurface597";
-	setAttr ".v" no;
-createNode transform -n "polySurface598" -p "polySurface439";
-createNode transform -n "transform256" -p "polySurface598";
-	setAttr ".v" no;
-createNode transform -n "polySurface599" -p "polySurface439";
-createNode transform -n "transform255" -p "polySurface599";
-	setAttr ".v" no;
-createNode transform -n "polySurface600" -p "polySurface439";
-createNode transform -n "transform254" -p "polySurface600";
-	setAttr ".v" no;
-createNode transform -n "polySurface601" -p "polySurface439";
-createNode transform -n "transform253" -p "polySurface601";
-	setAttr ".v" no;
-createNode transform -n "polySurface602" -p "polySurface439";
-createNode transform -n "transform252" -p "polySurface602";
-	setAttr ".v" no;
-createNode transform -n "polySurface603" -p "polySurface439";
-createNode transform -n "transform251" -p "polySurface603";
-	setAttr ".v" no;
-createNode transform -n "polySurface604" -p "polySurface439";
-createNode transform -n "transform250" -p "polySurface604";
-	setAttr ".v" no;
-createNode transform -n "polySurface605" -p "polySurface439";
-createNode transform -n "transform249" -p "polySurface605";
-	setAttr ".v" no;
-createNode transform -n "polySurface606" -p "polySurface439";
-createNode transform -n "transform248" -p "polySurface606";
-	setAttr ".v" no;
-createNode transform -n "polySurface607" -p "polySurface439";
-createNode transform -n "transform247" -p "polySurface607";
-	setAttr ".v" no;
-createNode transform -n "polySurface608" -p "polySurface439";
-createNode transform -n "transform246" -p "polySurface608";
-	setAttr ".v" no;
-createNode transform -n "polySurface609" -p "polySurface439";
-createNode transform -n "transform245" -p "polySurface609";
-	setAttr ".v" no;
-createNode transform -n "polySurface610" -p "polySurface439";
-createNode transform -n "transform244" -p "polySurface610";
-	setAttr ".v" no;
-createNode transform -n "polySurface611" -p "polySurface439";
-createNode transform -n "transform243" -p "polySurface611";
-	setAttr ".v" no;
-createNode transform -n "polySurface612" -p "polySurface439";
-createNode transform -n "transform242" -p "polySurface612";
-	setAttr ".v" no;
-createNode transform -n "polySurface613" -p "polySurface439";
-createNode transform -n "transform241" -p "polySurface613";
-	setAttr ".v" no;
-createNode transform -n "polySurface614" -p "polySurface439";
-createNode transform -n "transform240" -p "polySurface614";
-	setAttr ".v" no;
-createNode transform -n "polySurface615" -p "polySurface439";
-createNode transform -n "transform239" -p "polySurface615";
-	setAttr ".v" no;
-createNode transform -n "polySurface616" -p "polySurface439";
-createNode transform -n "transform238" -p "polySurface616";
-	setAttr ".v" no;
-createNode transform -n "polySurface617" -p "polySurface439";
-createNode transform -n "transform237" -p "polySurface617";
-	setAttr ".v" no;
-createNode transform -n "polySurface618" -p "polySurface439";
-createNode transform -n "transform236" -p "polySurface618";
-	setAttr ".v" no;
-createNode transform -n "polySurface619" -p "polySurface439";
-createNode transform -n "transform235" -p "polySurface619";
-	setAttr ".v" no;
-createNode transform -n "polySurface620" -p "polySurface439";
-createNode transform -n "transform234" -p "polySurface620";
-	setAttr ".v" no;
-createNode transform -n "polySurface621" -p "polySurface439";
-createNode transform -n "transform233" -p "polySurface621";
-	setAttr ".v" no;
-createNode transform -n "polySurface622" -p "polySurface439";
-createNode transform -n "transform232" -p "polySurface622";
-	setAttr ".v" no;
-createNode transform -n "polySurface623" -p "polySurface439";
-createNode transform -n "transform231" -p "polySurface623";
-	setAttr ".v" no;
-createNode transform -n "polySurface624" -p "polySurface439";
-createNode transform -n "transform230" -p "polySurface624";
-	setAttr ".v" no;
-createNode transform -n "polySurface625" -p "polySurface439";
-createNode transform -n "transform229" -p "polySurface625";
-	setAttr ".v" no;
-createNode transform -n "polySurface626" -p "polySurface439";
-createNode transform -n "transform228" -p "polySurface626";
-	setAttr ".v" no;
-createNode transform -n "polySurface627" -p "polySurface439";
-createNode transform -n "transform227" -p "polySurface627";
-	setAttr ".v" no;
-createNode transform -n "polySurface628" -p "polySurface439";
-createNode transform -n "transform226" -p "polySurface628";
-	setAttr ".v" no;
-createNode transform -n "polySurface629" -p "polySurface439";
-createNode transform -n "transform225" -p "polySurface629";
-	setAttr ".v" no;
-createNode transform -n "polySurface630" -p "polySurface439";
-createNode transform -n "transform224" -p "polySurface630";
-	setAttr ".v" no;
-createNode transform -n "polySurface631" -p "polySurface439";
-createNode transform -n "transform223" -p "polySurface631";
-	setAttr ".v" no;
-createNode transform -n "polySurface632" -p "polySurface439";
-createNode transform -n "transform222" -p "polySurface632";
-	setAttr ".v" no;
-createNode transform -n "polySurface633" -p "polySurface439";
-createNode transform -n "transform221" -p "polySurface633";
-	setAttr ".v" no;
-createNode transform -n "polySurface634" -p "polySurface439";
-createNode transform -n "transform220" -p "polySurface634";
-	setAttr ".v" no;
-createNode transform -n "polySurface635" -p "polySurface439";
-createNode transform -n "transform219" -p "polySurface635";
-	setAttr ".v" no;
-createNode transform -n "polySurface636" -p "polySurface439";
-createNode transform -n "transform218" -p "polySurface636";
-	setAttr ".v" no;
-createNode transform -n "polySurface637" -p "polySurface439";
-createNode transform -n "transform217" -p "polySurface637";
-	setAttr ".v" no;
-createNode transform -n "polySurface638" -p "polySurface439";
-createNode transform -n "transform216" -p "polySurface638";
-	setAttr ".v" no;
-createNode transform -n "polySurface639" -p "polySurface439";
-createNode transform -n "transform215" -p "polySurface639";
-	setAttr ".v" no;
-createNode transform -n "polySurface640" -p "polySurface439";
-createNode transform -n "transform214" -p "polySurface640";
-	setAttr ".v" no;
-createNode transform -n "polySurface641" -p "polySurface439";
-createNode transform -n "transform213" -p "polySurface641";
-	setAttr ".v" no;
-createNode transform -n "polySurface642" -p "polySurface439";
-createNode transform -n "transform212" -p "polySurface642";
-	setAttr ".v" no;
-createNode transform -n "polySurface643" -p "polySurface439";
-createNode transform -n "transform211" -p "polySurface643";
-	setAttr ".v" no;
-createNode transform -n "polySurface644" -p "polySurface439";
-createNode transform -n "transform210" -p "polySurface644";
-	setAttr ".v" no;
-createNode transform -n "polySurface645" -p "polySurface439";
-createNode transform -n "transform209" -p "polySurface645";
-	setAttr ".v" no;
-createNode transform -n "polySurface646" -p "polySurface439";
-createNode transform -n "transform208" -p "polySurface646";
-	setAttr ".v" no;
-createNode transform -n "polySurface647" -p "polySurface439";
-createNode transform -n "transform207" -p "polySurface647";
-	setAttr ".v" no;
-createNode transform -n "polySurface648" -p "polySurface439";
-createNode transform -n "transform206" -p "polySurface648";
-	setAttr ".v" no;
-createNode transform -n "polySurface649" -p "polySurface439";
-createNode transform -n "transform205" -p "polySurface649";
-	setAttr ".v" no;
-createNode transform -n "polySurface650" -p "polySurface439";
-createNode transform -n "transform204" -p "polySurface650";
-	setAttr ".v" no;
-createNode transform -n "polySurface651" -p "polySurface439";
-createNode transform -n "transform203" -p "polySurface651";
-	setAttr ".v" no;
-createNode transform -n "polySurface652" -p "polySurface439";
-createNode transform -n "transform202" -p "polySurface652";
-	setAttr ".v" no;
-createNode transform -n "polySurface653" -p "polySurface439";
-createNode transform -n "transform201" -p "polySurface653";
-	setAttr ".v" no;
-createNode transform -n "polySurface654" -p "polySurface439";
-createNode transform -n "transform200" -p "polySurface654";
-	setAttr ".v" no;
-createNode transform -n "polySurface655" -p "polySurface439";
-createNode transform -n "transform199" -p "polySurface655";
-	setAttr ".v" no;
-createNode transform -n "polySurface656" -p "polySurface439";
-createNode transform -n "transform198" -p "polySurface656";
-	setAttr ".v" no;
-createNode transform -n "polySurface657" -p "polySurface439";
-createNode transform -n "transform197" -p "polySurface657";
-	setAttr ".v" no;
-createNode transform -n "polySurface658" -p "polySurface439";
-createNode transform -n "transform196" -p "polySurface658";
-	setAttr ".v" no;
-createNode transform -n "polySurface659" -p "polySurface439";
-createNode transform -n "transform195" -p "polySurface659";
-	setAttr ".v" no;
-createNode transform -n "polySurface660" -p "polySurface439";
-createNode transform -n "transform194" -p "polySurface660";
-	setAttr ".v" no;
-createNode transform -n "polySurface661" -p "polySurface439";
-createNode transform -n "transform193" -p "polySurface661";
-	setAttr ".v" no;
-createNode transform -n "polySurface662" -p "polySurface439";
-createNode transform -n "transform192" -p "polySurface662";
-	setAttr ".v" no;
-createNode transform -n "polySurface663" -p "polySurface439";
-createNode transform -n "transform191" -p "polySurface663";
-	setAttr ".v" no;
-createNode transform -n "polySurface664" -p "polySurface439";
-createNode transform -n "transform190" -p "polySurface664";
-	setAttr ".v" no;
-createNode transform -n "polySurface665" -p "polySurface439";
-createNode transform -n "transform189" -p "polySurface665";
-	setAttr ".v" no;
-createNode transform -n "polySurface666" -p "polySurface439";
-createNode transform -n "transform188" -p "polySurface666";
-	setAttr ".v" no;
-createNode transform -n "polySurface667" -p "polySurface439";
-createNode transform -n "transform187" -p "polySurface667";
-	setAttr ".v" no;
-createNode transform -n "polySurface668" -p "polySurface439";
-createNode transform -n "transform186" -p "polySurface668";
-	setAttr ".v" no;
-createNode transform -n "polySurface669" -p "polySurface439";
-createNode transform -n "transform185" -p "polySurface669";
-	setAttr ".v" no;
-createNode transform -n "polySurface670" -p "polySurface439";
-createNode transform -n "transform184" -p "polySurface670";
-	setAttr ".v" no;
-createNode transform -n "polySurface671" -p "polySurface439";
-createNode transform -n "transform183" -p "polySurface671";
-	setAttr ".v" no;
-createNode transform -n "polySurface672" -p "polySurface439";
-createNode transform -n "transform182" -p "polySurface672";
-	setAttr ".v" no;
-createNode transform -n "polySurface673" -p "polySurface439";
-createNode transform -n "transform181" -p "polySurface673";
-	setAttr ".v" no;
-createNode transform -n "polySurface674" -p "polySurface439";
-createNode transform -n "transform180" -p "polySurface674";
-	setAttr ".v" no;
-createNode transform -n "polySurface675" -p "polySurface439";
-createNode transform -n "transform179" -p "polySurface675";
-	setAttr ".v" no;
-createNode transform -n "polySurface676" -p "polySurface439";
-createNode transform -n "transform178" -p "polySurface676";
-	setAttr ".v" no;
-createNode transform -n "polySurface677" -p "polySurface439";
-createNode transform -n "transform177" -p "polySurface677";
-	setAttr ".v" no;
-createNode transform -n "polySurface678" -p "polySurface439";
-createNode transform -n "transform176" -p "polySurface678";
-	setAttr ".v" no;
-createNode transform -n "polySurface679" -p "polySurface439";
-createNode transform -n "transform175" -p "polySurface679";
-	setAttr ".v" no;
-createNode transform -n "polySurface680" -p "polySurface439";
-createNode transform -n "transform174" -p "polySurface680";
-	setAttr ".v" no;
-createNode transform -n "polySurface681" -p "polySurface439";
-createNode transform -n "transform173" -p "polySurface681";
-	setAttr ".v" no;
-createNode transform -n "polySurface682" -p "polySurface439";
-createNode transform -n "transform172" -p "polySurface682";
-	setAttr ".v" no;
-createNode transform -n "polySurface683" -p "polySurface439";
-createNode transform -n "transform171" -p "polySurface683";
-	setAttr ".v" no;
-createNode transform -n "polySurface684" -p "polySurface439";
-createNode transform -n "transform170" -p "polySurface684";
-	setAttr ".v" no;
-createNode transform -n "polySurface685" -p "polySurface439";
-createNode transform -n "transform169" -p "polySurface685";
-	setAttr ".v" no;
-createNode transform -n "polySurface686" -p "polySurface439";
-createNode transform -n "transform168" -p "polySurface686";
-	setAttr ".v" no;
-createNode transform -n "polySurface687" -p "polySurface439";
-createNode transform -n "transform167" -p "polySurface687";
-	setAttr ".v" no;
-createNode transform -n "polySurface688" -p "polySurface439";
-createNode transform -n "transform166" -p "polySurface688";
-	setAttr ".v" no;
-createNode transform -n "polySurface689" -p "polySurface439";
-createNode transform -n "transform165" -p "polySurface689";
-	setAttr ".v" no;
-createNode transform -n "polySurface690" -p "polySurface439";
-createNode transform -n "transform164" -p "polySurface690";
-	setAttr ".v" no;
-createNode transform -n "polySurface691" -p "polySurface439";
-createNode transform -n "transform163" -p "polySurface691";
-	setAttr ".v" no;
-createNode transform -n "polySurface692" -p "polySurface439";
-createNode transform -n "transform162" -p "polySurface692";
-	setAttr ".v" no;
-createNode transform -n "polySurface693" -p "polySurface439";
-createNode transform -n "transform161" -p "polySurface693";
-	setAttr ".v" no;
-createNode transform -n "polySurface694" -p "polySurface439";
-createNode transform -n "transform160" -p "polySurface694";
-	setAttr ".v" no;
-createNode transform -n "polySurface695" -p "polySurface439";
-createNode transform -n "transform159" -p "polySurface695";
-	setAttr ".v" no;
-createNode transform -n "polySurface696" -p "polySurface439";
-createNode transform -n "transform158" -p "polySurface696";
-	setAttr ".v" no;
-createNode transform -n "polySurface697" -p "polySurface439";
-createNode transform -n "transform157" -p "polySurface697";
-	setAttr ".v" no;
-createNode transform -n "polySurface698" -p "polySurface439";
-createNode transform -n "transform156" -p "polySurface698";
-	setAttr ".v" no;
-createNode transform -n "polySurface699" -p "polySurface439";
-createNode transform -n "transform155" -p "polySurface699";
-	setAttr ".v" no;
-createNode transform -n "polySurface700" -p "polySurface439";
-createNode transform -n "transform154" -p "polySurface700";
-	setAttr ".v" no;
-createNode transform -n "polySurface701" -p "polySurface439";
-createNode transform -n "transform153" -p "polySurface701";
-	setAttr ".v" no;
-createNode transform -n "polySurface702" -p "polySurface439";
-createNode transform -n "transform152" -p "polySurface702";
-	setAttr ".v" no;
-createNode transform -n "polySurface703" -p "polySurface439";
-createNode transform -n "transform151" -p "polySurface703";
-	setAttr ".v" no;
-createNode transform -n "polySurface704" -p "polySurface439";
-createNode transform -n "transform150" -p "polySurface704";
-	setAttr ".v" no;
-createNode transform -n "polySurface705" -p "polySurface439";
-createNode transform -n "transform149" -p "polySurface705";
-	setAttr ".v" no;
-createNode transform -n "polySurface706" -p "polySurface439";
-createNode transform -n "transform148" -p "polySurface706";
-	setAttr ".v" no;
-createNode transform -n "polySurface707" -p "polySurface439";
-createNode transform -n "transform147" -p "polySurface707";
-	setAttr ".v" no;
-createNode transform -n "polySurface708" -p "polySurface439";
-createNode transform -n "transform146" -p "polySurface708";
-	setAttr ".v" no;
-createNode transform -n "polySurface709" -p "polySurface439";
-createNode transform -n "transform145" -p "polySurface709";
-	setAttr ".v" no;
-createNode transform -n "polySurface710" -p "polySurface439";
-createNode transform -n "transform144" -p "polySurface710";
-	setAttr ".v" no;
-createNode transform -n "polySurface711" -p "polySurface439";
-createNode transform -n "transform143" -p "polySurface711";
-	setAttr ".v" no;
-createNode transform -n "polySurface712" -p "polySurface439";
-createNode transform -n "transform142" -p "polySurface712";
-	setAttr ".v" no;
-createNode transform -n "polySurface713" -p "polySurface439";
-createNode transform -n "transform141" -p "polySurface713";
-	setAttr ".v" no;
-createNode transform -n "polySurface714" -p "polySurface439";
-createNode transform -n "transform140" -p "polySurface714";
-	setAttr ".v" no;
-createNode transform -n "polySurface715" -p "polySurface439";
-createNode transform -n "transform139" -p "polySurface715";
-	setAttr ".v" no;
-createNode transform -n "polySurface716" -p "polySurface439";
-createNode transform -n "transform138" -p "polySurface716";
-	setAttr ".v" no;
-createNode transform -n "polySurface717" -p "polySurface439";
-createNode transform -n "transform137" -p "polySurface717";
-	setAttr ".v" no;
-createNode transform -n "polySurface718" -p "polySurface439";
-createNode transform -n "transform136" -p "polySurface718";
-	setAttr ".v" no;
-createNode transform -n "polySurface719" -p "polySurface439";
-createNode transform -n "transform135" -p "polySurface719";
-	setAttr ".v" no;
-createNode transform -n "polySurface720" -p "polySurface439";
-createNode transform -n "transform134" -p "polySurface720";
-	setAttr ".v" no;
-createNode transform -n "polySurface721" -p "polySurface439";
-createNode transform -n "transform133" -p "polySurface721";
-	setAttr ".v" no;
-createNode transform -n "polySurface722" -p "polySurface439";
-createNode transform -n "transform132" -p "polySurface722";
-	setAttr ".v" no;
-createNode transform -n "polySurface723" -p "polySurface439";
-createNode transform -n "transform131" -p "polySurface723";
-	setAttr ".v" no;
-createNode transform -n "polySurface724" -p "polySurface439";
-createNode transform -n "transform130" -p "polySurface724";
-	setAttr ".v" no;
-createNode transform -n "polySurface725" -p "polySurface439";
-createNode transform -n "transform129" -p "polySurface725";
-	setAttr ".v" no;
-createNode transform -n "polySurface726" -p "polySurface439";
-createNode transform -n "transform128" -p "polySurface726";
-	setAttr ".v" no;
-createNode transform -n "polySurface727" -p "polySurface439";
-createNode transform -n "transform127" -p "polySurface727";
-	setAttr ".v" no;
-createNode transform -n "polySurface728" -p "polySurface439";
-createNode transform -n "transform126" -p "polySurface728";
-	setAttr ".v" no;
-createNode transform -n "polySurface729" -p "polySurface439";
-createNode transform -n "transform125" -p "polySurface729";
-	setAttr ".v" no;
-createNode transform -n "polySurface730" -p "polySurface439";
-createNode transform -n "transform124" -p "polySurface730";
-	setAttr ".v" no;
-createNode transform -n "polySurface731" -p "polySurface439";
-createNode transform -n "transform123" -p "polySurface731";
-	setAttr ".v" no;
-createNode transform -n "polySurface732" -p "polySurface439";
-createNode transform -n "transform122" -p "polySurface732";
-	setAttr ".v" no;
-createNode transform -n "polySurface733" -p "polySurface439";
-createNode transform -n "transform121" -p "polySurface733";
-	setAttr ".v" no;
-createNode transform -n "polySurface734" -p "polySurface439";
-createNode transform -n "transform120" -p "polySurface734";
-	setAttr ".v" no;
-createNode transform -n "polySurface735" -p "polySurface439";
-createNode transform -n "transform119" -p "polySurface735";
-	setAttr ".v" no;
-createNode transform -n "polySurface736" -p "polySurface439";
-createNode transform -n "transform118" -p "polySurface736";
-	setAttr ".v" no;
-createNode transform -n "polySurface737" -p "polySurface439";
-createNode transform -n "transform117" -p "polySurface737";
-	setAttr ".v" no;
-createNode transform -n "polySurface738" -p "polySurface439";
-createNode transform -n "transform116" -p "polySurface738";
-	setAttr ".v" no;
-createNode transform -n "polySurface739" -p "polySurface439";
-createNode transform -n "transform115" -p "polySurface739";
-	setAttr ".v" no;
-createNode transform -n "polySurface740" -p "polySurface439";
-createNode transform -n "transform114" -p "polySurface740";
-	setAttr ".v" no;
-createNode transform -n "polySurface741" -p "polySurface439";
-createNode transform -n "transform113" -p "polySurface741";
-	setAttr ".v" no;
-createNode transform -n "polySurface742" -p "polySurface439";
-createNode transform -n "transform112" -p "polySurface742";
-	setAttr ".v" no;
-createNode transform -n "polySurface743" -p "polySurface439";
-createNode transform -n "transform111" -p "polySurface743";
-	setAttr ".v" no;
-createNode transform -n "polySurface744" -p "polySurface439";
-createNode transform -n "transform110" -p "polySurface744";
-	setAttr ".v" no;
-createNode transform -n "polySurface745" -p "polySurface439";
-createNode transform -n "transform109" -p "polySurface745";
-	setAttr ".v" no;
-createNode transform -n "polySurface746" -p "polySurface439";
-createNode transform -n "transform108" -p "polySurface746";
-	setAttr ".v" no;
-createNode transform -n "polySurface747" -p "polySurface439";
-createNode transform -n "transform107" -p "polySurface747";
-	setAttr ".v" no;
-createNode transform -n "polySurface748" -p "polySurface439";
-createNode transform -n "transform106" -p "polySurface748";
-	setAttr ".v" no;
-createNode transform -n "polySurface749" -p "polySurface439";
-createNode transform -n "transform105" -p "polySurface749";
-	setAttr ".v" no;
-createNode transform -n "polySurface750" -p "polySurface439";
-createNode transform -n "transform104" -p "polySurface750";
-	setAttr ".v" no;
-createNode transform -n "polySurface751" -p "polySurface439";
-createNode transform -n "transform103" -p "polySurface751";
-	setAttr ".v" no;
-createNode transform -n "polySurface752" -p "polySurface439";
-createNode transform -n "transform102" -p "polySurface752";
-	setAttr ".v" no;
-createNode transform -n "polySurface753" -p "polySurface439";
-createNode transform -n "transform101" -p "polySurface753";
-	setAttr ".v" no;
-createNode transform -n "polySurface754" -p "polySurface439";
-createNode transform -n "transform100" -p "polySurface754";
-	setAttr ".v" no;
-createNode transform -n "polySurface755" -p "polySurface439";
-createNode transform -n "transform99" -p "polySurface755";
-	setAttr ".v" no;
-createNode transform -n "polySurface756" -p "polySurface439";
-createNode transform -n "transform98" -p "polySurface756";
-	setAttr ".v" no;
-createNode transform -n "polySurface757" -p "polySurface439";
-createNode transform -n "transform97" -p "polySurface757";
-	setAttr ".v" no;
-createNode transform -n "polySurface758" -p "polySurface439";
-createNode transform -n "transform96" -p "polySurface758";
-	setAttr ".v" no;
-createNode transform -n "polySurface759" -p "polySurface439";
-createNode transform -n "transform95" -p "polySurface759";
-	setAttr ".v" no;
-createNode transform -n "polySurface760" -p "polySurface439";
-createNode transform -n "transform94" -p "polySurface760";
-	setAttr ".v" no;
-createNode transform -n "polySurface761" -p "polySurface439";
-createNode transform -n "transform93" -p "polySurface761";
-	setAttr ".v" no;
-createNode transform -n "polySurface762" -p "polySurface439";
-createNode transform -n "transform92" -p "polySurface762";
-	setAttr ".v" no;
-createNode transform -n "polySurface763" -p "polySurface439";
-createNode transform -n "transform91" -p "polySurface763";
-	setAttr ".v" no;
-createNode transform -n "polySurface764" -p "polySurface439";
-createNode transform -n "transform90" -p "polySurface764";
-	setAttr ".v" no;
-createNode transform -n "polySurface765" -p "polySurface439";
-createNode transform -n "transform89" -p "polySurface765";
-	setAttr ".v" no;
-createNode transform -n "polySurface766" -p "polySurface439";
-createNode transform -n "transform88" -p "polySurface766";
-	setAttr ".v" no;
-createNode transform -n "polySurface767" -p "polySurface439";
-createNode transform -n "transform87" -p "polySurface767";
-	setAttr ".v" no;
-createNode transform -n "polySurface768" -p "polySurface439";
-createNode transform -n "transform86" -p "polySurface768";
-	setAttr ".v" no;
-createNode transform -n "polySurface769" -p "polySurface439";
-createNode transform -n "transform85" -p "polySurface769";
-	setAttr ".v" no;
-createNode transform -n "polySurface770" -p "polySurface439";
-createNode transform -n "transform84" -p "polySurface770";
-	setAttr ".v" no;
-createNode transform -n "polySurface771" -p "polySurface439";
-createNode transform -n "transform83" -p "polySurface771";
-	setAttr ".v" no;
-createNode transform -n "polySurface772" -p "polySurface439";
-createNode transform -n "transform82" -p "polySurface772";
-	setAttr ".v" no;
-createNode transform -n "polySurface773" -p "polySurface439";
-createNode transform -n "transform81" -p "polySurface773";
-	setAttr ".v" no;
-createNode transform -n "polySurface774" -p "polySurface439";
-createNode transform -n "transform80" -p "polySurface774";
-	setAttr ".v" no;
-createNode transform -n "polySurface775" -p "polySurface439";
-createNode transform -n "transform79" -p "polySurface775";
-	setAttr ".v" no;
-createNode transform -n "polySurface776" -p "polySurface439";
-createNode transform -n "transform78" -p "polySurface776";
-	setAttr ".v" no;
-createNode transform -n "polySurface777" -p "polySurface439";
-createNode transform -n "transform77" -p "polySurface777";
-	setAttr ".v" no;
-createNode transform -n "polySurface778" -p "polySurface439";
-createNode transform -n "transform76" -p "polySurface778";
-	setAttr ".v" no;
-createNode transform -n "polySurface779" -p "polySurface439";
-createNode transform -n "transform75" -p "polySurface779";
-	setAttr ".v" no;
-createNode transform -n "polySurface780" -p "polySurface439";
-createNode transform -n "transform74" -p "polySurface780";
-	setAttr ".v" no;
-createNode transform -n "polySurface781" -p "polySurface439";
-createNode transform -n "transform73" -p "polySurface781";
-	setAttr ".v" no;
-createNode transform -n "polySurface782" -p "polySurface439";
-createNode transform -n "transform72" -p "polySurface782";
-	setAttr ".v" no;
-createNode transform -n "polySurface783" -p "polySurface439";
-createNode transform -n "transform71" -p "polySurface783";
-	setAttr ".v" no;
-createNode transform -n "polySurface784" -p "polySurface439";
-createNode transform -n "transform70" -p "polySurface784";
-	setAttr ".v" no;
-createNode transform -n "polySurface785" -p "polySurface439";
-createNode transform -n "transform69" -p "polySurface785";
-	setAttr ".v" no;
-createNode transform -n "polySurface786" -p "polySurface439";
-createNode transform -n "transform68" -p "polySurface786";
-	setAttr ".v" no;
-createNode transform -n "polySurface787" -p "polySurface439";
-createNode transform -n "transform67" -p "polySurface787";
-	setAttr ".v" no;
-createNode transform -n "polySurface788" -p "polySurface439";
-createNode transform -n "transform66" -p "polySurface788";
-	setAttr ".v" no;
-createNode transform -n "polySurface789" -p "polySurface439";
-createNode transform -n "transform65" -p "polySurface789";
-	setAttr ".v" no;
-createNode transform -n "polySurface790" -p "polySurface439";
-createNode transform -n "transform64" -p "polySurface790";
-	setAttr ".v" no;
-createNode transform -n "polySurface791" -p "polySurface439";
-createNode transform -n "transform63" -p "polySurface791";
-	setAttr ".v" no;
-createNode transform -n "polySurface792" -p "polySurface439";
-createNode transform -n "transform62" -p "polySurface792";
-	setAttr ".v" no;
-createNode transform -n "polySurface793" -p "polySurface439";
-createNode transform -n "transform61" -p "polySurface793";
-	setAttr ".v" no;
-createNode transform -n "polySurface794" -p "polySurface439";
-createNode transform -n "transform60" -p "polySurface794";
-	setAttr ".v" no;
-createNode transform -n "polySurface795" -p "polySurface439";
-createNode transform -n "transform59" -p "polySurface795";
-	setAttr ".v" no;
-createNode transform -n "polySurface796" -p "polySurface439";
-createNode transform -n "transform58" -p "polySurface796";
-	setAttr ".v" no;
-createNode transform -n "polySurface797" -p "polySurface439";
-createNode transform -n "transform57" -p "polySurface797";
-	setAttr ".v" no;
-createNode transform -n "polySurface798" -p "polySurface439";
-createNode transform -n "transform56" -p "polySurface798";
-	setAttr ".v" no;
-createNode transform -n "polySurface799" -p "polySurface439";
-createNode transform -n "transform55" -p "polySurface799";
-	setAttr ".v" no;
-createNode transform -n "polySurface800" -p "polySurface439";
-createNode transform -n "transform54" -p "polySurface800";
-	setAttr ".v" no;
-createNode transform -n "polySurface801" -p "polySurface439";
-createNode transform -n "transform53" -p "polySurface801";
-	setAttr ".v" no;
-createNode transform -n "polySurface802" -p "polySurface439";
-createNode transform -n "transform52" -p "polySurface802";
-	setAttr ".v" no;
-createNode transform -n "polySurface803" -p "polySurface439";
-createNode transform -n "transform51" -p "polySurface803";
-	setAttr ".v" no;
-createNode transform -n "polySurface804" -p "polySurface439";
-createNode transform -n "transform50" -p "polySurface804";
-	setAttr ".v" no;
-createNode transform -n "polySurface805" -p "polySurface439";
-createNode transform -n "transform49" -p "polySurface805";
-	setAttr ".v" no;
-createNode transform -n "polySurface806" -p "polySurface439";
-createNode transform -n "transform48" -p "polySurface806";
-	setAttr ".v" no;
-createNode transform -n "polySurface807" -p "polySurface439";
-createNode transform -n "transform47" -p "polySurface807";
-	setAttr ".v" no;
-createNode transform -n "polySurface808" -p "polySurface439";
-createNode transform -n "transform46" -p "polySurface808";
-	setAttr ".v" no;
-createNode transform -n "polySurface809" -p "polySurface439";
-createNode transform -n "transform45" -p "polySurface809";
-	setAttr ".v" no;
-createNode transform -n "polySurface810" -p "polySurface439";
-createNode transform -n "transform44" -p "polySurface810";
-	setAttr ".v" no;
-createNode transform -n "polySurface811" -p "polySurface439";
-createNode transform -n "transform43" -p "polySurface811";
-	setAttr ".v" no;
-createNode transform -n "polySurface812" -p "polySurface439";
-createNode transform -n "transform42" -p "polySurface812";
-	setAttr ".v" no;
-createNode transform -n "polySurface813" -p "polySurface439";
-createNode transform -n "transform41" -p "polySurface813";
-	setAttr ".v" no;
-createNode transform -n "polySurface814" -p "polySurface439";
-createNode transform -n "transform40" -p "polySurface814";
-	setAttr ".v" no;
-createNode transform -n "polySurface815" -p "polySurface439";
-createNode transform -n "transform39" -p "polySurface815";
-	setAttr ".v" no;
-createNode transform -n "polySurface816" -p "polySurface439";
-createNode transform -n "transform38" -p "polySurface816";
-	setAttr ".v" no;
-createNode transform -n "polySurface817" -p "polySurface439";
-createNode transform -n "transform37" -p "polySurface817";
-	setAttr ".v" no;
-createNode transform -n "polySurface818" -p "polySurface439";
-createNode transform -n "transform36" -p "polySurface818";
-	setAttr ".v" no;
-createNode transform -n "polySurface819" -p "polySurface439";
-createNode transform -n "transform35" -p "polySurface819";
-	setAttr ".v" no;
-createNode transform -n "polySurface820" -p "polySurface439";
-createNode transform -n "transform34" -p "polySurface820";
-	setAttr ".v" no;
-createNode transform -n "polySurface821" -p "polySurface439";
-createNode transform -n "transform33" -p "polySurface821";
-	setAttr ".v" no;
-createNode transform -n "polySurface822" -p "polySurface439";
-createNode transform -n "transform32" -p "polySurface822";
-	setAttr ".v" no;
-createNode transform -n "polySurface823" -p "polySurface439";
-createNode transform -n "transform31" -p "polySurface823";
-	setAttr ".v" no;
-createNode transform -n "polySurface824" -p "polySurface439";
-createNode transform -n "transform30" -p "polySurface824";
-	setAttr ".v" no;
-createNode transform -n "polySurface825" -p "polySurface439";
-createNode transform -n "transform29" -p "polySurface825";
-	setAttr ".v" no;
-createNode transform -n "polySurface826" -p "polySurface439";
-createNode transform -n "transform28" -p "polySurface826";
-	setAttr ".v" no;
-createNode transform -n "polySurface827" -p "polySurface439";
-createNode transform -n "transform27" -p "polySurface827";
-	setAttr ".v" no;
-createNode transform -n "polySurface828" -p "polySurface439";
-createNode transform -n "transform26" -p "polySurface828";
-	setAttr ".v" no;
-createNode transform -n "polySurface829" -p "polySurface439";
-createNode transform -n "transform25" -p "polySurface829";
-	setAttr ".v" no;
-createNode transform -n "polySurface830" -p "polySurface439";
-createNode transform -n "transform24" -p "polySurface830";
-	setAttr ".v" no;
-createNode transform -n "polySurface831" -p "polySurface439";
-createNode transform -n "transform23" -p "polySurface831";
-	setAttr ".v" no;
-createNode transform -n "polySurface832" -p "polySurface439";
-createNode transform -n "transform22" -p "polySurface832";
-	setAttr ".v" no;
-createNode transform -n "polySurface833" -p "polySurface439";
-createNode transform -n "transform21" -p "polySurface833";
-	setAttr ".v" no;
-createNode transform -n "polySurface834" -p "polySurface439";
-createNode transform -n "transform20" -p "polySurface834";
-	setAttr ".v" no;
-createNode transform -n "polySurface835" -p "polySurface439";
-createNode transform -n "transform19" -p "polySurface835";
-	setAttr ".v" no;
-createNode transform -n "polySurface836" -p "polySurface439";
-createNode transform -n "transform18" -p "polySurface836";
-	setAttr ".v" no;
-createNode transform -n "polySurface837" -p "polySurface439";
-createNode transform -n "transform17" -p "polySurface837";
-	setAttr ".v" no;
-createNode transform -n "polySurface838" -p "polySurface439";
-createNode transform -n "transform16" -p "polySurface838";
-	setAttr ".v" no;
-createNode transform -n "polySurface839" -p "polySurface439";
-createNode transform -n "transform15" -p "polySurface839";
-	setAttr ".v" no;
-createNode transform -n "polySurface840" -p "polySurface439";
-createNode transform -n "transform14" -p "polySurface840";
-	setAttr ".v" no;
-createNode transform -n "polySurface841" -p "polySurface439";
-createNode transform -n "transform13" -p "polySurface841";
-	setAttr ".v" no;
-createNode transform -n "polySurface842" -p "polySurface439";
-createNode transform -n "transform12" -p "polySurface842";
-	setAttr ".v" no;
-createNode transform -n "polySurface843" -p "polySurface439";
-createNode transform -n "transform11" -p "polySurface843";
-	setAttr ".v" no;
-createNode transform -n "polySurface844" -p "polySurface439";
-createNode transform -n "transform10" -p "polySurface844";
-	setAttr ".v" no;
-createNode transform -n "polySurface845" -p "polySurface439";
-createNode transform -n "transform9" -p "polySurface845";
-	setAttr ".v" no;
-createNode transform -n "polySurface846" -p "polySurface439";
-createNode transform -n "transform8" -p "polySurface846";
-	setAttr ".v" no;
-createNode transform -n "polySurface847" -p "polySurface439";
-createNode transform -n "transform7" -p "polySurface847";
-	setAttr ".v" no;
-createNode transform -n "polySurface848" -p "polySurface439";
-createNode transform -n "transform6" -p "polySurface848";
-	setAttr ".v" no;
-createNode transform -n "polySurface849" -p "polySurface439";
-createNode transform -n "transform5" -p "polySurface849";
-	setAttr ".v" no;
-createNode transform -n "polySurface850" -p "polySurface439";
-createNode transform -n "transform4" -p "polySurface850";
-	setAttr ".v" no;
-createNode transform -n "polySurface851" -p "polySurface439";
-createNode transform -n "transform3" -p "polySurface851";
-	setAttr ".v" no;
-createNode transform -n "polySurface852" -p "polySurface439";
-createNode transform -n "transform2" -p "polySurface852";
-	setAttr ".v" no;
-createNode transform -n "polySurface853" -p "polySurface439";
-createNode transform -n "transform1" -p "polySurface853";
-	setAttr ".v" no;
 createNode transform -n "polySurface854" -p "polySurface439";
 	setAttr ".s" -type "double3" 20.907825017118792 20.907825017118792 20.907825017118792 ;
 createNode transform -n "polySurface862" -p "polySurface854";
@@ -1414,18 +119,18 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 0.79131359 0.05189408;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 98 ".vt[0:97]"  -1.65489721 -1.93405092 8.70664501 1.4298953e-009 -2.31917953 8.59132957
+	setAttr -s 98 ".vt[0:97]"  -1.65489721 -1.93405092 8.70664501 1.4298953e-09 -2.31917953 8.59132957
 		 1.65489721 -1.93405092 8.70664501 1.63488555 -2.22782135 9.18914318 1.64669442 -2.16766214 9.77103043
-		 1.3310854e-009 -2.53304219 9.78695774 -1.64669442 -2.16766214 9.77103043 -1.63488555 -2.22782135 9.18914318
-		 2.6913416e-009 -2.9030757 9.1028595 -1.91123664 -0.38735211 8.80153751 3.9344743e-011 -0.35516226 8.6628809
+		 1.3310854e-09 -2.53304219 9.78695774 -1.64669442 -2.16766214 9.77103043 -1.63488555 -2.22782135 9.18914318
+		 2.6913416e-09 -2.9030757 9.1028595 -1.91123664 -0.38735211 8.80153751 3.9344743e-11 -0.35516226 8.6628809
 		 1.91123664 -0.38735211 8.80153751 2.025141478 -0.45310405 9.38562489 1.91359937 -0.52466959 10.006731987
-		 3.63473e-011 -0.53328842 10.13792706 -1.91359937 -0.52466959 10.006731987 -2.025141478 -0.45310405 9.38562489
+		 3.63473e-11 -0.53328842 10.13792706 -1.91359937 -0.52466959 10.006731987 -2.025141478 -0.45310405 9.38562489
 		 -1.64370513 1.27886569 9.036568642 0 1.88986659 9.072727203 1.64370513 1.27886569 9.036568642
 		 1.61378336 1.24333835 9.58124542 1.63648307 0.94257528 10.18489552 0 1.3941431 10.30748081
 		 -1.63648307 0.94257528 10.18489552 -1.61378336 1.24333835 9.58124542 0 2.19889927 9.69149113
-		 2.3641435e-009 -2.72665381 8.77217007 -1.65059733 -2.10239482 8.88088512 1.65059733 -2.10239482 8.88088512
+		 2.3641435e-09 -2.72665381 8.77217007 -1.65059733 -2.10239482 8.88088512 1.65059733 -2.10239482 8.88088512
 		 2.028087616 -0.41955778 9.030972481 -2.028087616 -0.41955778 9.030972481 1.62726152 1.2953285 9.24166012
-		 -1.62726152 1.2953285 9.24166012 0 2.21555805 9.33401775 2.3685296e-009 -2.88674212 9.48090076
+		 -1.62726152 1.2953285 9.24166012 0 2.21555805 9.33401775 2.3685296e-09 -2.88674212 9.48090076
 		 -1.64492011 -2.2598381 9.54255199 1.64492011 -2.2598381 9.54255199 2.031162977 -0.50037724 9.76323509
 		 -2.031162977 -0.50037724 9.76323509 1.62789774 1.12971103 9.93632793 -1.62789774 1.1297158 9.93632793
 		 0 1.96444631 10.053700447 -0.95367646 -0.35343993 8.67015171 -0.9130888 -2.21603155 8.61567402
@@ -1445,8 +150,8 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 1.92106545 -1.45436931 8.93765926 1.9136759 -1.54684186 9.26590919 -1.92106545 -1.45436466 8.93765926
 		 -1.83014739 -1.35025048 8.72878933 -1.9136759 -1.54684186 9.26590919 1.92619741 -1.5833832 9.63677502
 		 1.83303142 -1.63021743 9.86429691 -1.92619741 -1.5833832 9.63677502 -1.83303142 -1.63021278 9.86429691
-		 -0.93800765 -1.45699036 8.59663773 4.3800491e-010 -1.50566602 8.58061504 0.93800765 -1.45699036 8.59663773
-		 0.93448269 -1.85649157 9.94579792 4.5460877e-010 -1.92618322 9.94001102 -0.93448269 -1.85649157 9.94579792;
+		 -0.93800765 -1.45699036 8.59663773 4.3800491e-10 -1.50566602 8.58061504 0.93800765 -1.45699036 8.59663773
+		 0.93448269 -1.85649157 9.94579792 4.5460877e-10 -1.92618322 9.94001102 -0.93448269 -1.85649157 9.94579792;
 	setAttr -s 192 ".ed";
 	setAttr ".ed[0:165]"  54 27 0 27 0 0 0 43 0 43 54 0 43 1 0 1 26 0 26 54 0
 		 55 7 0 7 27 0 54 55 0 26 8 0 8 55 0 56 26 0 1 45 0 45 56 0 45 2 0 2 28 0 28 56 0
@@ -1550,19 +255,19 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 -0.073953994 0.094386891 -0.99278486 -0.13698201 0.093286805 -0.98617107 -0.14050302
 		 0.15737902 -0.97749203 -0.14050302 0.15737902 -0.97749203 -0.51710278 0.43759981
 		 -0.73560268 -0.18345498 0.46153092 -0.86794788 -0.075722374 0.16441394 -0.98348063
-		 -3.0707e-005 0.17025501 -0.98540008 -6.0274233e-005 0.096474253 -0.99533546 -0.073953994
+		 -3.0707e-05 0.17025501 -0.98540008 -6.0274233e-05 0.096474253 -0.99533546 -0.073953994
 		 0.094386891 -0.99278486 -0.075722374 0.16441394 -0.98348063 -0.075722374 0.16441394
 		 -0.98348063 -0.18345498 0.46153092 -0.86794788 -0.012660196 0.47885686 -0.87780172
-		 -3.0707e-005 0.17025501 -0.98540008 0.07659559 0.16972199 -0.98251086 0.073612906
-		 0.094471805 -0.99280214 -6.0274233e-005 0.096474253 -0.99533546 -3.0707e-005 0.17025501
-		 -0.98540008 -3.0707e-005 0.17025501 -0.98540008 -0.012660196 0.47885686 -0.87780172
+		 -3.0707e-05 0.17025501 -0.98540008 0.07659559 0.16972199 -0.98251086 0.073612906
+		 0.094471805 -0.99280214 -6.0274233e-05 0.096474253 -0.99533546 -3.0707e-05 0.17025501
+		 -0.98540008 -3.0707e-05 0.17025501 -0.98540008 -0.012660196 0.47885686 -0.87780172
 		 0.20964912 0.46076828 -0.86240351 0.07659559 0.16972199 -0.98251086 0.14235705 0.16895907
 		 -0.97528833 0.13642098 0.090736084 -0.98648685 0.073612906 0.094471805 -0.99280214
 		 0.07659559 0.16972199 -0.98251086 0.07659559 0.16972199 -0.98251086 0.20964912 0.46076828
-		 -0.86240351 0.57302964 0.39844477 -0.71615559 0.14235705 0.16895907 -0.97528833 -5.2552485e-005
-		 -0.096460283 0.99533683 -7.4396572e-005 -0.14437796 0.98952264 0.070642874 -0.14296395
+		 -0.86240351 0.57302964 0.39844477 -0.71615559 0.14235705 0.16895907 -0.97528833 -5.2552485e-05
+		 -0.096460283 0.99533683 -7.4396572e-05 -0.14437796 0.98952264 0.070642874 -0.14296395
 		 0.9872036 0.08051502 -0.10179003 0.99154228 0.08051502 -0.10179003 0.99154228 0.16108201
-		 0.20849402 0.96466714 0.012429802 0.21971801 0.97548419 -5.2552485e-005 -0.096460283
+		 0.20849402 0.96466714 0.012429802 0.21971801 0.97548419 -5.2552485e-05 -0.096460283
 		 0.99533683 0.08051502 -0.10179003 0.99154228 0.070642874 -0.14296395 0.9872036 0.13421999
 		 -0.13879198 0.98118389 0.14899997 -0.10550298 0.9831928 0.14899997 -0.10550298 0.9831928
 		 0.48710176 0.2316549 0.8420617 0.16108201 0.20849402 0.96466714 0.08051502 -0.10179003
@@ -1570,8 +275,8 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 -0.071662731 -0.13719505 0.9879483 -0.081892408 -0.08765351 0.9927792 -0.081892408
 		 -0.08765351 0.9927792 -0.18869102 0.21027601 0.95925999 -0.54774505 0.20129001 0.81207007
 		 -0.15166298 -0.079551488 0.98522574 -0.081892408 -0.08765351 0.9927792 -0.071662731
-		 -0.13719505 0.9879483 -7.4396572e-005 -0.14437796 0.98952264 -5.2552485e-005 -0.096460283
-		 0.99533683 -5.2552485e-005 -0.096460283 0.99533683 0.012429802 0.21971801 0.97548419
+		 -0.13719505 0.9879483 -7.4396572e-05 -0.14437796 0.98952264 -5.2552485e-05 -0.096460283
+		 0.99533683 -5.2552485e-05 -0.096460283 0.99533683 0.012429802 0.21971801 0.97548419
 		 -0.18869102 0.21027601 0.95925999 -0.081892408 -0.08765351 0.9927792 0.94219393 -0.21017496
 		 -0.26095396 0.69879305 -0.50879008 -0.50281304 0.44704083 -0.2671839 -0.8536787 0.86901504
 		 -0.17190401 -0.46396303 0.86901504 -0.17190401 -0.46396303 0.91144586 0.037319493
@@ -1602,21 +307,21 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 0.13416597 -0.080266088 0.021670999 -0.99653786 -0.15677305 -0.23609108 -0.95900124
 		 -0.49153301 -0.24683602 -0.835145 -0.14455704 0.016658006 -0.98935622 -0.14455704
 		 0.016658006 -0.98935622 -0.13698201 0.093286805 -0.98617107 -0.073953994 0.094386891
-		 -0.99278486 -0.080266088 0.021670999 -0.99653786 9.5103249e-005 0.024718013 -0.99969453
+		 -0.99278486 -0.080266088 0.021670999 -0.99653786 9.5103249e-05 0.024718013 -0.99969453
 		 0.0067995884 -0.24265896 -0.97008783 -0.15677305 -0.23609108 -0.95900124 -0.080266088
 		 0.021670999 -0.99653786;
 	setAttr ".n[332:383]" -type "float3"  -0.080266088 0.021670999 -0.99653786
-		 -0.073953994 0.094386891 -0.99278486 -6.0274233e-005 0.096474253 -0.99533546 9.5103249e-005
+		 -0.073953994 0.094386891 -0.99278486 -6.0274233e-05 0.096474253 -0.99533546 9.5103249e-05
 		 0.024718013 -0.99969453 0.079667173 0.025764288 -0.99648851 0.13817395 -0.2362799
-		 -0.96181071 0.0067995884 -0.24265896 -0.97008783 9.5103249e-005 0.024718013 -0.99969453
-		 9.5103249e-005 0.024718013 -0.99969453 -6.0274233e-005 0.096474253 -0.99533546 0.073612906
+		 -0.96181071 0.0067995884 -0.24265896 -0.97008783 9.5103249e-05 0.024718013 -0.99969453
+		 9.5103249e-05 0.024718013 -0.99969453 -6.0274233e-05 0.096474253 -0.99533546 0.073612906
 		 0.094471805 -0.99280214 0.079667173 0.025764288 -0.99648851 0.14312105 0.028583812
 		 -0.98929238 0.44704083 -0.2671839 -0.8536787 0.13817395 -0.2362799 -0.96181071 0.079667173
 		 0.025764288 -0.99648851 0.079667173 0.025764288 -0.99648851 0.073612906 0.094471805
 		 -0.99280214 0.13642098 0.090736084 -0.98648685 0.14312105 0.028583812 -0.98929238
 		 -0.00022720097 -0.19629997 0.98054379 -0.0088820299 -0.49359399 0.86964709 0.16132201
 		 -0.48311609 0.86056608 0.073151521 -0.19563106 0.97794539 0.073151521 -0.19563106
-		 0.97794539 0.070642874 -0.14296395 0.9872036 -7.4396572e-005 -0.14437796 0.98952264
+		 0.97794539 0.070642874 -0.14296395 0.9872036 -7.4396572e-05 -0.14437796 0.98952264
 		 -0.00022720097 -0.19629997 0.98054379 0.073151521 -0.19563106 0.97794539 0.16132201
 		 -0.48311609 0.86056608 0.27900308 -0.46856418 0.83821529 0.13770503 -0.19716406 0.97065121
 		 0.13770503 -0.19716406 0.97065121 0.13421999 -0.13879198 0.98118389 0.070642874 -0.14296395
@@ -1626,7 +331,7 @@ createNode mesh -n "polySurface862Shape" -p "polySurface862";
 		 -0.13610198 -0.13161197 0.98191381 -0.13363099 -0.17955299 0.97462988 -0.071385689
 		 -0.18980697 0.97922283 -0.13735104 -0.48095614 0.86591923 -0.0088820299 -0.49359399
 		 0.86964709 -0.00022720097 -0.19629997 0.98054379 -0.00022720097 -0.19629997 0.98054379
-		 -7.4396572e-005 -0.14437796 0.98952264 -0.071662731 -0.13719505 0.9879483 -0.071385689
+		 -7.4396572e-05 -0.14437796 0.98952264 -0.071662731 -0.13719505 0.9879483 -0.071385689
 		 -0.18980697 0.97922283;
 	setAttr -s 96 -ch 384 ".fc[0:95]" -type "polyFaces" 
 		f 4 0 1 2 3
@@ -2010,18 +715,18 @@ createNode mesh -n "polySurface863Shape" -p "polySurface863";
 		 0.49787039 0.16496648 0.3964397 0.22225873 0.39867288;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 98 ".vt[0:97]"  -1.26328301 3.12102771 9.062635422 1.0915197e-009 2.91330647 9.015141487
+	setAttr -s 98 ".vt[0:97]"  -1.26328301 3.12102771 9.062635422 1.0915197e-09 2.91330647 9.015141487
 		 1.26328301 3.12102771 9.062635422 1.24800646 2.99648094 9.40556908 1.25701737 3.062437296 9.78772354
-		 1.0160981e-009 2.87281442 9.82598686 -1.25701737 3.062437296 9.78772354 -1.24800646 2.99648094 9.40556908
-		 2.0544606e-009 2.63916969 9.39935207 -1.45896101 3.93336463 9.0085897446 3.0034163e-011 3.94191194 8.91403103
+		 1.0160981e-09 2.87281442 9.82598686 -1.25701737 3.062437296 9.78772354 -1.24800646 2.99648094 9.40556908
+		 2.0544606e-09 2.63916969 9.39935207 -1.45896101 3.93336463 9.0085897446 3.0034163e-11 3.94191194 8.91403103
 		 1.45896101 3.93336463 9.0085897446 1.5459094 3.9337759 9.40174389 1.46076417 3.93335986 9.81995964
-		 2.7745977e-011 3.93666005 9.90777397 -1.46076417 3.93335986 9.81995964 -1.5459094 3.9337759 9.40174389
+		 2.7745977e-11 3.93666005 9.90777397 -1.46076417 3.93335986 9.81995964 -1.5459094 3.9337759 9.40174389
 		 -1.25473607 4.81637859 9.038625717 0 5.13716745 9.016385078 1.25473607 4.81637859 9.038625717
 		 1.23189759 4.83020115 9.40332127 1.24922609 4.70920324 9.82727718 0 4.9520216 9.8745327
 		 -1.24922609 4.70920324 9.82727718 -1.23189759 4.83020115 9.40332127 0 5.33513165 9.40423012
-		 1.804688e-009 2.71153021 9.16623306 -1.25999713 3.043583155 9.19120026 1.25999713 3.043583155 9.19120026
+		 1.804688e-09 2.71153021 9.16623306 -1.25999713 3.043583155 9.19120026 1.25999713 3.043583155 9.19120026
 		 1.54815722 3.93019843 9.16350746 -1.54815722 3.93019843 9.16350746 1.24218559 4.83713675 9.17364693
-		 -1.24218559 4.83713675 9.17364693 0 5.32260036 9.16537285 1.8080359e-009 2.67014861 9.64935398
+		 -1.24218559 4.83713675 9.17364693 0 5.32260036 9.16537285 1.8080359e-09 2.67014861 9.64935398
 		 -1.25566387 3.00078082085 9.64284897 1.25566387 3.00078082085 9.64284897 1.55050576 3.93156171 9.6562891
 		 -1.55050576 3.93156171 9.6562891 1.24266875 4.79203367 9.6479187 -1.24266875 4.79203367 9.6479187
 		 0 5.2343564 9.66269875 -0.7279954 3.9432416 8.91871834 -0.69701177 2.96855378 9.023511887
@@ -2041,8 +746,8 @@ createNode mesh -n "polySurface863Shape" -p "polySurface863";
 		 1.46646059 3.38493848 9.17981625 1.46082151 3.35621214 9.40499592 -1.46646059 3.38493848 9.17981625
 		 -1.39706063 3.42682695 9.033125877 -1.46082151 3.35621214 9.40499592 1.47037768 3.35919213 9.65423203
 		 1.39926088 3.34828711 9.80900764 -1.47037768 3.35919213 9.65423203 -1.39926088 3.34828711 9.80900764
-		 -0.7160334 3.36330533 8.95339394 3.3435471e-010 3.33696604 8.94645882 0.7160334 3.36330533 8.95339394
-		 0.71334541 3.2351141 9.88032055 3.4702941e-010 3.19841981 9.88170719 -0.71334541 3.2351141 9.88032055;
+		 -0.7160334 3.36330533 8.95339394 3.3435471e-10 3.33696604 8.94645882 0.7160334 3.36330533 8.95339394
+		 0.71334541 3.2351141 9.88032055 3.4702941e-10 3.19841981 9.88170719 -0.71334541 3.2351141 9.88032055;
 	setAttr -s 192 ".ed";
 	setAttr ".ed[0:165]"  54 27 0 27 0 0 0 43 0 43 54 0 43 1 0 1 26 0 26 54 0
 		 55 7 0 7 27 0 54 55 0 26 8 0 8 55 0 56 26 0 1 45 0 45 56 0 45 2 0 2 28 0 28 56 0
@@ -2146,74 +851,73 @@ createNode mesh -n "polySurface863Shape" -p "polySurface863";
 		 -0.06489522 -0.023710409 -0.99761033 -0.12027907 -0.024186812 -0.99244547 -0.12331401
 		 0.058309007 -0.99065316 -0.12331401 0.058309007 -0.99065316 -0.462753 0.43740302
 		 -0.77106309 -0.15241607 0.42953217 -0.89009631 -0.066421807 0.066199407 -0.99559313
-		 -2.6392094e-005 0.073234886 -0.99731481 -5.2407177e-005 -0.02142209 -0.99977058 -0.06489522
+		 -2.6392094e-05 0.073234886 -0.99731481 -5.2407177e-05 -0.02142209 -0.99977058 -0.06489522
 		 -0.023710409 -0.99761033 -0.066421807 0.066199407 -0.99559313 -0.066421807 0.066199407
 		 -0.99559313 -0.091715872 0.33029088 -0.93941265 -0.010192895 0.44439381 -0.89577365
-		 -2.6392094e-005 0.073234886 -0.99731481 0.067148402 0.073025897 -0.99506706 0.064594314
-		 -0.023611305 -0.99763232 -5.2407177e-005 -0.02142209 -0.99977058 -2.6392094e-005
-		 0.073234886 -0.99731481 -2.6392094e-005 0.073234886 -0.99731481 -0.010192895 0.44439381
-		 -0.89577365 0.17628998 0.43190193 -0.88452387 0.067148402 0.073025897 -0.99506706
-		 0.12489495 0.073218971 -0.98946464 0.11978103 -0.027467908 -0.99242026 0.064594314
-		 -0.023611305 -0.99763232 0.067148402 0.073025897 -0.99506706 0.067148402 0.073025897
-		 -0.99506706 0.17628998 0.43190193 -0.88452387 0.51853484 0.39757085 -0.75700676 0.12489495
-		 0.073218971 -0.98946464 -4.6887682e-005 0.021415193 0.9997707 -6.5515698e-005 -0.040040798
-		 0.99919808 0.061983023 -0.038604014 0.99733031 0.070696078 0.014139296 0.99739766
-		 0.070696078 0.014139296 0.99739766 0.13541093 0.37993684 0.91504765 0.010142406 0.39226019
-		 0.91979849 -4.6887682e-005 0.021415193 0.9997707 0.070696078 0.014139296 0.99739766
-		 0.061983023 -0.038604014 0.99733031 0.11783295 -0.034249384 0.99244267 0.13089804
-		 0.0082720323 0.99136132 0.13089804 0.0082720323 0.99136132 0.43693367 0.40660471
-		 0.80234742 0.13541093 0.37993684 0.91504765 0.070696078 0.014139296 0.99739766 -0.13320497
-		 0.041460689 0.99022084 -0.11950698 -0.025033195 0.99251777 -0.0628874 -0.031189801
-		 0.99753308 -0.071879067 0.032228086 0.99689257 -0.071879067 0.032228086 0.99689257
-		 -0.15996107 0.38353819 0.9095664 -0.4965159 0.36965197 0.78538489 -0.13320497 0.041460689
-		 0.99022084 -0.071879067 0.032228086 0.99689257 -0.0628874 -0.031189801 0.99753308
-		 -6.5515698e-005 -0.040040798 0.99919808 -4.6887682e-005 0.021415193 0.9997707 -4.6887682e-005
-		 0.021415193 0.9997707 0.010142406 0.39226019 0.91979849 -0.074591994 0.29233697 0.9534018
-		 -0.071879067 0.032228086 0.99689257 0.90956235 -0.32777113 -0.25546509 0.6076352
-		 -0.67508221 -0.41838211 0.39499521 -0.44943422 -0.8012414 0.82539773 -0.30226889
-		 -0.47681481 0.82539773 -0.30226889 -0.47681481 0.88895035 -0.013102005 -0.45781618
-		 0.97261047 -0.014913408 -0.23196211 0.90956235 -0.32777113 -0.25546509 0.94176203
-		 -0.33530501 -0.0255867 0.67624944 -0.73388839 -0.063988239 0.70678079 -0.65117776
-		 -0.27645692 0.90956235 -0.32777113 -0.25546509 0.90956235 -0.32777113 -0.25546509
-		 0.97261047 -0.014913408 -0.23196211 0.9999128 -0.012250398 -0.0049219187 0.94176203
-		 -0.33530501 -0.0255867 -0.83835965 -0.26979092 -0.47367281 -0.43882701 -0.425634
-		 -0.79137003 -0.64357507 -0.6455791 -0.41114306 -0.91489512 -0.31284004 -0.25514302
-		 -0.91489512 -0.31284004 -0.25514302 -0.97224933 -0.02431491 -0.23268008 -0.88775557
-		 -0.031840891 -0.45921278 -0.83835965 -0.26979092 -0.47367281 -0.91489512 -0.31284004
-		 -0.25514302 -0.73086834 -0.6243543 -0.27570516 -0.67482591 -0.73526889 -0.063163683
-		 -0.94205785 -0.33444595 -0.025941094 -0.94205785 -0.33444595 -0.025941094 -0.99990028
-		 -0.013182004 -0.0050842213 -0.97224933 -0.02431491 -0.23268008 -0.91489512 -0.31284004
-		 -0.25514302 0.93060523 -0.3185381 0.18029805 0.66669303 -0.68429804 0.29539204 0.67624944
-		 -0.73388839 -0.063988239 0.94176203 -0.33530501 -0.0255867 0.94176203 -0.33530501
-		 -0.0255867 0.9999128 -0.012250398 -0.0049219187 0.97640926 -0.0089603616 0.21574208
-		 0.93060523 -0.3185381 0.18029805 0.87795639 -0.28689116 0.38325718 0.47172487 -0.47927788
-		 0.74011379 0.66669303 -0.68429804 0.29539204 0.93060523 -0.3185381 0.18029805 0.93060523
-		 -0.3185381 0.18029805 0.97640926 -0.0089603616 0.21574208 0.89949143 -0.0087934434
-		 0.43684971 0.87795639 -0.28689116 0.38325718 -0.94205785 -0.33444595 -0.025941094
-		 -0.67482591 -0.73526889 -0.063163683 -0.63255203 -0.71440303 0.29917601 -0.92913288
-		 -0.32425895 0.17767496 -0.92913288 -0.32425895 0.17767496 -0.97635388 -0.0011676999
-		 0.21617498 -0.99990028 -0.013182004 -0.0050842213 -0.94205785 -0.33444595 -0.025941094
-		 -0.92913288 -0.32425895 0.17767496 -0.63255203 -0.71440303 0.29917601 -0.80365109
-		 -0.49209306 0.33464804 -0.87359464 -0.30396485 0.38004985 -0.87359464 -0.30396485
-		 0.38004985 -0.89886826 0.0087293331 0.43813211 -0.97635388 -0.0011676999 0.21617498
-		 -0.92913288 -0.32425895 0.17767496 -0.070244998 -0.11597501 -0.99076498 -0.13182499
-		 -0.41474095 -0.9003399 -0.43882701 -0.425634 -0.79137003 -0.12660506 -0.12142406
-		 -0.98449355 -0.12660506 -0.12142406 -0.98449355 -0.12027907 -0.024186812 -0.99244547
-		 -0.06489522 -0.023710409 -0.99761033 -0.070244998 -0.11597501 -0.99076498 7.9067882e-005
-		 -0.11249898 -0.99365181 0.0055451519 -0.42101613 -0.9070363 -0.13182499 -0.41474095
-		 -0.9003399 -0.070244998 -0.11597501 -0.99076498;
+		 -2.6392094e-05 0.073234886 -0.99731481 0.067148402 0.073025897 -0.99506706 0.064594314
+		 -0.023611305 -0.99763232 -5.2407177e-05 -0.02142209 -0.99977058 -2.6392094e-05 0.073234886
+		 -0.99731481 -2.6392094e-05 0.073234886 -0.99731481 -0.010192895 0.44439381 -0.89577365
+		 0.17628998 0.43190193 -0.88452387 0.067148402 0.073025897 -0.99506706 0.12489495
+		 0.073218971 -0.98946464 0.11978103 -0.027467908 -0.99242026 0.064594314 -0.023611305
+		 -0.99763232 0.067148402 0.073025897 -0.99506706 0.067148402 0.073025897 -0.99506706
+		 0.17628998 0.43190193 -0.88452387 0.51853484 0.39757085 -0.75700676 0.12489495 0.073218971
+		 -0.98946464 -4.6887682e-05 0.021415193 0.9997707 -6.5515698e-05 -0.040040798 0.99919808
+		 0.061983023 -0.038604014 0.99733031 0.070696078 0.014139296 0.99739766 0.070696078
+		 0.014139296 0.99739766 0.13541093 0.37993684 0.91504765 0.010142406 0.39226019 0.91979849
+		 -4.6887682e-05 0.021415193 0.9997707 0.070696078 0.014139296 0.99739766 0.061983023
+		 -0.038604014 0.99733031 0.11783295 -0.034249384 0.99244267 0.13089804 0.0082720323
+		 0.99136132 0.13089804 0.0082720323 0.99136132 0.43693367 0.40660471 0.80234742 0.13541093
+		 0.37993684 0.91504765 0.070696078 0.014139296 0.99739766 -0.13320497 0.041460689
+		 0.99022084 -0.11950698 -0.025033195 0.99251777 -0.0628874 -0.031189801 0.99753308
+		 -0.071879067 0.032228086 0.99689257 -0.071879067 0.032228086 0.99689257 -0.15996107
+		 0.38353819 0.9095664 -0.4965159 0.36965197 0.78538489 -0.13320497 0.041460689 0.99022084
+		 -0.071879067 0.032228086 0.99689257 -0.0628874 -0.031189801 0.99753308 -6.5515698e-05
+		 -0.040040798 0.99919808 -4.6887682e-05 0.021415193 0.9997707 -4.6887682e-05 0.021415193
+		 0.9997707 0.010142406 0.39226019 0.91979849 -0.074591994 0.29233697 0.9534018 -0.071879067
+		 0.032228086 0.99689257 0.90956235 -0.32777113 -0.25546509 0.6076352 -0.67508221 -0.41838211
+		 0.39499521 -0.44943422 -0.8012414 0.82539773 -0.30226889 -0.47681481 0.82539773 -0.30226889
+		 -0.47681481 0.88895035 -0.013102005 -0.45781618 0.97261047 -0.014913408 -0.23196211
+		 0.90956235 -0.32777113 -0.25546509 0.94176203 -0.33530501 -0.0255867 0.67624944 -0.73388839
+		 -0.063988239 0.70678079 -0.65117776 -0.27645692 0.90956235 -0.32777113 -0.25546509
+		 0.90956235 -0.32777113 -0.25546509 0.97261047 -0.014913408 -0.23196211 0.9999128
+		 -0.012250398 -0.0049219187 0.94176203 -0.33530501 -0.0255867 -0.83835965 -0.26979092
+		 -0.47367281 -0.43882701 -0.425634 -0.79137003 -0.64357507 -0.6455791 -0.41114306
+		 -0.91489512 -0.31284004 -0.25514302 -0.91489512 -0.31284004 -0.25514302 -0.97224933
+		 -0.02431491 -0.23268008 -0.88775557 -0.031840891 -0.45921278 -0.83835965 -0.26979092
+		 -0.47367281 -0.91489512 -0.31284004 -0.25514302 -0.73086834 -0.6243543 -0.27570516
+		 -0.67482591 -0.73526889 -0.063163683 -0.94205785 -0.33444595 -0.025941094 -0.94205785
+		 -0.33444595 -0.025941094 -0.99990028 -0.013182004 -0.0050842213 -0.97224933 -0.02431491
+		 -0.23268008 -0.91489512 -0.31284004 -0.25514302 0.93060523 -0.3185381 0.18029805
+		 0.66669303 -0.68429804 0.29539204 0.67624944 -0.73388839 -0.063988239 0.94176203
+		 -0.33530501 -0.0255867 0.94176203 -0.33530501 -0.0255867 0.9999128 -0.012250398 -0.0049219187
+		 0.97640926 -0.0089603616 0.21574208 0.93060523 -0.3185381 0.18029805 0.87795639 -0.28689116
+		 0.38325718 0.47172487 -0.47927788 0.74011379 0.66669303 -0.68429804 0.29539204 0.93060523
+		 -0.3185381 0.18029805 0.93060523 -0.3185381 0.18029805 0.97640926 -0.0089603616 0.21574208
+		 0.89949143 -0.0087934434 0.43684971 0.87795639 -0.28689116 0.38325718 -0.94205785
+		 -0.33444595 -0.025941094 -0.67482591 -0.73526889 -0.063163683 -0.63255203 -0.71440303
+		 0.29917601 -0.92913288 -0.32425895 0.17767496 -0.92913288 -0.32425895 0.17767496
+		 -0.97635388 -0.0011676999 0.21617498 -0.99990028 -0.013182004 -0.0050842213 -0.94205785
+		 -0.33444595 -0.025941094 -0.92913288 -0.32425895 0.17767496 -0.63255203 -0.71440303
+		 0.29917601 -0.80365109 -0.49209306 0.33464804 -0.87359464 -0.30396485 0.38004985
+		 -0.87359464 -0.30396485 0.38004985 -0.89886826 0.0087293331 0.43813211 -0.97635388
+		 -0.0011676999 0.21617498 -0.92913288 -0.32425895 0.17767496 -0.070244998 -0.11597501
+		 -0.99076498 -0.13182499 -0.41474095 -0.9003399 -0.43882701 -0.425634 -0.79137003
+		 -0.12660506 -0.12142406 -0.98449355 -0.12660506 -0.12142406 -0.98449355 -0.12027907
+		 -0.024186812 -0.99244547 -0.06489522 -0.023710409 -0.99761033 -0.070244998 -0.11597501
+		 -0.99076498 7.9067882e-05 -0.11249898 -0.99365181 0.0055451519 -0.42101613 -0.9070363
+		 -0.13182499 -0.41474095 -0.9003399 -0.070244998 -0.11597501 -0.99076498;
 	setAttr ".n[332:383]" -type "float3"  -0.070244998 -0.11597501 -0.99076498
-		 -0.06489522 -0.023710409 -0.99761033 -5.2407177e-005 -0.02142209 -0.99977058 7.9067882e-005
+		 -0.06489522 -0.023710409 -0.99761033 -5.2407177e-05 -0.02142209 -0.99977058 7.9067882e-05
 		 -0.11249898 -0.99365181 0.069774285 -0.11081498 -0.99138874 0.11585998 -0.41426292
-		 -0.90275276 0.0055451519 -0.42101613 -0.9070363 7.9067882e-005 -0.11249898 -0.99365181
-		 7.9067882e-005 -0.11249898 -0.99365181 -5.2407177e-005 -0.02142209 -0.99977058 0.064594314
+		 -0.90275276 0.0055451519 -0.42101613 -0.9070363 7.9067882e-05 -0.11249898 -0.99365181
+		 7.9067882e-05 -0.11249898 -0.99365181 -5.2407177e-05 -0.02142209 -0.99977058 0.064594314
 		 -0.023611305 -0.99763232 0.069774285 -0.11081498 -0.99138874 0.12542899 -0.10646099
 		 -0.9863739 0.39499521 -0.44943422 -0.8012414 0.11585998 -0.41426292 -0.90275276 0.069774285
 		 -0.11081498 -0.99138874 0.069774285 -0.11081498 -0.99138874 0.064594314 -0.023611305
 		 -0.99763232 0.11978103 -0.027467908 -0.99242026 0.12542899 -0.10646099 -0.9863739
 		 -0.00019489405 -0.10664303 0.99429733 -0.0071226121 -0.46337211 0.88613522 0.13422102
 		 -0.45620704 0.87969303 0.064022325 -0.10624804 0.99227637 0.064022325 -0.10624804
-		 0.99227637 0.061983023 -0.038604014 0.99733031 -6.5515698e-005 -0.040040798 0.99919808
+		 0.99227637 0.061983023 -0.038604014 0.99733031 -6.5515698e-05 -0.040040798 0.99919808
 		 -0.00019489405 -0.10664303 0.99429733 0.064022325 -0.10624804 0.99227637 0.13422102
 		 -0.45620704 0.87969303 0.47172487 -0.47927788 0.74011379 0.12061606 -0.10936506 0.98665655
 		 0.12061606 -0.10936506 0.98665655 0.11783295 -0.034249384 0.99244267 0.061983023
@@ -2223,7 +927,7 @@ createNode mesh -n "polySurface863Shape" -p "polySurface863";
 		 -0.031189801 0.99753308 -0.11950698 -0.025033195 0.99251777 -0.11715804 -0.086725421
 		 0.98931926 -0.062558874 -0.09875346 0.99314362 -0.11385301 -0.45118102 0.88514012
 		 -0.0071226121 -0.46337211 0.88613522 -0.00019489405 -0.10664303 0.99429733 -0.00019489405
-		 -0.10664303 0.99429733 -6.5515698e-005 -0.040040798 0.99919808 -0.0628874 -0.031189801
+		 -0.10664303 0.99429733 -6.5515698e-05 -0.040040798 0.99919808 -0.0628874 -0.031189801
 		 0.99753308 -0.062558874 -0.09875346 0.99314362;
 	setAttr -s 96 -ch 384 ".fc[0:95]" -type "polyFaces" 
 		f 4 0 1 2 3
@@ -2883,18 +1587,18 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 0.6635651 0.13423264;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 98 ".vt[0:97]"  -2.16791558 -3.17221403 5.36478567 1.8731601e-009 -3.11855507 4.96632242
+	setAttr -s 98 ".vt[0:97]"  -2.16791558 -3.17221403 5.36478567 1.8731601e-09 -3.11855507 4.96632242
 		 2.16791558 -3.17221403 5.36478567 2.14170074 -3.69471717 5.15008163 2.15717316 -4.26005554 5.30055141
-		 1.7437252e-009 -4.33292341 4.94216919 -2.15717316 -4.26005554 5.30055141 -2.14170074 -3.69471717 5.15008163
-		 3.5256609e-009 -3.71515942 4.469666 -2.50372291 -3.0239923 6.90727043 5.1541469e-011 -2.88200712 6.91736221
+		 1.7437252e-09 -4.33292341 4.94216919 -2.15717316 -4.26005554 5.30055141 -2.14170074 -3.69471717 5.15008163
+		 3.5256609e-09 -3.71515942 4.469666 -2.50372291 -3.0239923 6.90727043 5.1541469e-11 -2.88200712 6.91736221
 		 2.50372291 -3.0239923 6.90727043 2.65293503 -3.61116481 6.93371964 2.50681257 -4.23582554 6.96016932
-		 4.7615044e-011 -4.36671925 6.97217417 -2.50681257 -4.23582554 6.96016932 -2.65293503 -3.61116481 6.93371964
+		 4.7615044e-11 -4.36671925 6.97217417 -2.50681257 -4.23582554 6.96016932 -2.65293503 -3.61116481 6.93371964
 		 -2.15325117 -2.99545765 8.58975029 0 -2.93561387 9.19890022 2.15325117 -2.99545765 8.58975029
 		 2.1140554 -3.53898597 8.63987541 2.14379549 -4.18226671 8.43722439 0 -4.23270702 8.9024086
 		 -2.14379549 -4.18226671 8.43722439 -2.1140554 -3.53898597 8.63987541 0 -3.49840307 9.60090256
-		 3.0970271e-009 -3.3609283 4.59218025 -2.16228127 -3.37064242 5.22574711 2.16228127 -3.37064242 5.22574711
+		 3.0970271e-09 -3.3609283 4.59218025 -2.16228127 -3.37064242 5.22574711 2.16228127 -3.37064242 5.22574711
 		 2.65679479 -3.25563741 6.91133642 -2.65679479 -3.25563741 6.91133642 2.1317091 -3.19544005 8.63810635
-		 -2.1317091 -3.19544005 8.63810635 0 -3.14271331 9.56144428 3.1027712e-009 -4.085953236 4.54492998
+		 -2.1317091 -3.19544005 8.63810635 0 -3.14271331 9.56144428 3.1027712e-09 -4.085953236 4.54492998
 		 -2.15484405 -4.04877615 5.1737566 2.15484405 -4.048780918 5.1737566 2.66082191 -3.991539 6.94610739
 		 -2.66082191 -3.991539 6.94610739 2.13254595 -3.90748429 8.58319759 -2.13254595 -3.90748429 8.58319759
 		 0 -3.89283442 9.42599201 -1.24931705 -2.88889456 6.92023182 -1.19614553 -3.12647057 5.072024345
@@ -2914,8 +1618,8 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 2.51659369 -3.32531953 5.87469053 2.50691795 -3.66402531 5.83470535 -2.51659369 -3.32531953 5.87469053
 		 -2.39749479 -3.1027379 5.94485569 -2.50691795 -3.66402531 5.83470535 2.52331376 -4.036029339 5.85661125
 		 2.40127325 -4.26806259 5.84594536 -2.52331376 -4.036029339 5.85661125 -2.40127325 -4.26806259 5.84594536
-		 -1.22878873 -2.98891449 5.81873035 5.7378519e-010 -2.98073578 5.76817513 1.22878873 -2.98891449 5.81873035
-		 1.22417331 -4.38397121 5.63521099 5.9553779e-010 -4.3891511 5.56547594 -1.22417331 -4.38397121 5.63521099;
+		 -1.22878873 -2.98891449 5.81873035 5.7378519e-10 -2.98073578 5.76817513 1.22878873 -2.98891449 5.81873035
+		 1.22417331 -4.38397121 5.63521099 5.9553779e-10 -4.3891511 5.56547594 -1.22417331 -4.38397121 5.63521099;
 	setAttr -s 192 ".ed";
 	setAttr ".ed[0:165]"  54 27 0 27 0 0 0 43 0 43 54 0 43 1 0 1 26 0 26 54 0
 		 55 7 0 7 27 0 54 55 0 26 8 0 8 55 0 56 26 0 1 45 0 45 56 0 45 2 0 2 28 0 28 56 0
@@ -3019,20 +1723,20 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 0.24793312 -0.057975817 0.99828136 0.0085436031 -0.056612682 0.99645972 -0.062154379
 		 -0.10497801 0.9925161 -0.062381007 -0.10770001 0.99418014 0.0025494501 -0.10770001
 		 0.99418014 0.0025494501 -0.44437692 0.82820082 0.34148595 -0.14238098 0.93512487
-		 0.32445198 -0.057975817 0.99828136 0.0085436031 -2.3371995e-005 0.99990183 0.014008998
-		 -4.5950608e-005 0.99817312 -0.060418606 -0.056612682 0.99645972 -0.062154379 -0.057975817
+		 0.32445198 -0.057975817 0.99828136 0.0085436031 -2.3371995e-05 0.99990183 0.014008998
+		 -4.5950608e-05 0.99817312 -0.060418606 -0.056612682 0.99645972 -0.062154379 -0.057975817
 		 0.99828136 0.0085436031 -0.057975817 0.99828136 0.0085436031 -0.14238098 0.93512487
-		 0.32445198 -0.0097504081 0.94175881 0.3361479 -2.3371995e-005 0.99990183 0.014008998
-		 0.058650192 0.99818081 0.013965199 0.056350514 0.99647927 -0.06207772 -4.5950608e-005
-		 0.99817312 -0.060418606 -2.3371995e-005 0.99990183 0.014008998 -2.3371995e-005 0.99990183
+		 0.32445198 -0.0097504081 0.94175881 0.3361479 -2.3371995e-05 0.99990183 0.014008998
+		 0.058650192 0.99818081 0.013965199 0.056350514 0.99647927 -0.06207772 -4.5950608e-05
+		 0.99817312 -0.060418606 -2.3371995e-05 0.99990183 0.014008998 -2.3371995e-05 0.99990183
 		 0.014008998 -0.0097504081 0.94175881 0.3361479 0.16562301 0.93055403 0.32655501 0.058650192
 		 0.99818081 0.013965199 0.10913496 0.99392271 0.014396895 0.10454506 0.99239647 -0.064957932
 		 0.056350514 0.99647927 -0.06207772 0.058650192 0.99818081 0.013965199 0.058650192
 		 0.99818081 0.013965199 0.16562301 0.93055403 0.32655501 0.49643216 0.8123163 0.30610013
-		 0.10913496 0.99392271 0.014396895 -4.009391e-005 -0.99817228 0.060433015 -5.6784676e-005
+		 0.10913496 0.99392271 0.014396895 -4.009391e-05 -0.99817228 0.060433015 -5.6784676e-05
 		 -0.99992567 0.012194896 0.054077189 -0.99844885 0.013247998 0.061667293 -0.99659985
 		 0.054642491 0.061667293 -0.99659985 0.054642491 0.12436704 -0.92460829 0.36004508
-		 0.0095439581 -0.92901182 0.3699269 -4.009391e-005 -0.99817228 0.060433015 0.061667293
+		 0.0095439581 -0.92901182 0.3699269 -4.009391e-05 -0.99817228 0.060433015 0.061667293
 		 -0.99659985 0.054642491 0.054077189 -0.99844885 0.013247998 0.10284997 -0.99456066
 		 0.016467195 0.11427095 -0.99219859 0.049841482 0.11427095 -0.99219859 0.049841482
 		 0.41595104 -0.824229 0.38422802 0.12436704 -0.92460829 0.36004508 0.061667293 -0.99659985
@@ -3040,8 +1744,8 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 -0.05486238 -0.9983117 0.019075694 -0.062730089 -0.99565285 0.068850093 -0.062730089
 		 -0.99565285 0.068850093 -0.14794807 -0.92001247 0.36288917 -0.471641 -0.80907702
 		 0.35064101 -0.11633396 -0.99030364 0.075927772 -0.062730089 -0.99565285 0.068850093
-		 -0.05486238 -0.9983117 0.019075694 -5.6784676e-005 -0.99992567 0.012194896 -4.009391e-005
-		 -0.99817228 0.060433015 -4.009391e-005 -0.99817228 0.060433015 0.0095439581 -0.92901182
+		 -0.05486238 -0.9983117 0.019075694 -5.6784676e-05 -0.99992567 0.012194896 -4.009391e-05
+		 -0.99817228 0.060433015 -4.009391e-05 -0.99817228 0.060433015 0.0095439581 -0.92901182
 		 0.3699269 -0.14794807 -0.92001247 0.36288917 -0.062730089 -0.99565285 0.068850093
 		 0.91019714 0.27532202 -0.30941704 0.62065804 0.44915402 -0.64268512 0.37742084 0.82570571
 		 -0.41924179 0.80315793 0.52090096 -0.28913596 0.80315793 0.52090096 -0.28913596 0.86076981
@@ -3073,20 +1777,20 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 0.98898011 -0.13468702 -0.12149598 0.9143098 -0.38636294 -0.41821104 0.81692505 -0.397156
 		 -0.11083501 0.984079 -0.13893899 -0.11083501 0.984079 -0.13893899 -0.10497801 0.9925161
 		 -0.062381007 -0.056612682 0.99645972 -0.062154379 -0.061462209 0.98898011 -0.13468702
-		 7.2688505e-005 0.99125314 -0.13197401 0.0052108704 0.92012209 -0.39159703 -0.12149598
+		 7.2688505e-05 0.99125314 -0.13197401 0.0052108704 0.92012209 -0.39159703 -0.12149598
 		 0.9143098 -0.38636294 -0.061462209 0.98898011 -0.13468702;
 	setAttr ".n[332:383]" -type "float3"  -0.061462209 0.98898011 -0.13468702 -0.056612682
-		 0.99645972 -0.062154379 -4.5950608e-005 0.99817312 -0.060418606 7.2688505e-005 0.99125314
+		 0.99645972 -0.062154379 -4.5950608e-05 0.99817312 -0.060418606 7.2688505e-05 0.99125314
 		 -0.13197401 0.060999382 0.98955566 -0.13060896 0.10631604 0.91634727 -0.38601112
-		 0.0052108704 0.92012209 -0.39159703 7.2688505e-005 0.99125314 -0.13197401 7.2688505e-005
-		 0.99125314 -0.13197401 -4.5950608e-005 0.99817312 -0.060418606 0.056350514 0.99647927
+		 0.0052108704 0.92012209 -0.39159703 7.2688505e-05 0.99125314 -0.13197401 7.2688505e-05
+		 0.99125314 -0.13197401 -4.5950608e-05 0.99817312 -0.060418606 0.056350514 0.99647927
 		 -0.06207772 0.060999382 0.98955566 -0.13060896 0.10972299 0.98580486 -0.12708099
 		 0.37742084 0.82570571 -0.41924179 0.10631604 0.91634727 -0.38601112 0.060999382 0.98955566
 		 -0.13060896 0.060999382 0.98955566 -0.13060896 0.056350514 0.99647927 -0.06207772
 		 0.10454506 0.99239647 -0.064957932 0.10972299 0.98580486 -0.12708099 -0.00017344498
 		 -0.99917984 -0.040493492 -0.006804659 -0.93609887 -0.35167095 0.125329 -0.92981499
 		 -0.34603003 0.056006603 -0.99761611 -0.040315002 0.056006603 -0.99761611 -0.040315002
-		 0.054077189 -0.99844885 0.013247998 -5.6784676e-005 -0.99992567 0.012194896 -0.00017344498
+		 0.054077189 -0.99844885 0.013247998 -5.6784676e-05 -0.99992567 0.012194896 -0.00017344498
 		 -0.99917984 -0.040493492 0.056006603 -0.99761611 -0.040315002 0.125329 -0.92981499
 		 -0.34603003 0.45895785 -0.80306572 -0.38005689 0.10554603 -0.99347931 -0.043115314
 		 0.10554603 -0.99347931 -0.043115314 0.10284997 -0.99456066 0.016467195 0.054077189
@@ -3096,7 +1800,7 @@ createNode mesh -n "polySurface866Shape" -p "polySurface866";
 		 -0.9983117 0.019075694 -0.10430399 -0.99426281 0.023712194 -0.102394 -0.99443001
 		 -0.024988901 -0.054642003 -0.99791616 -0.034315303 -0.10569698 -0.93383485 -0.34173194
 		 -0.006804659 -0.93609887 -0.35167095 -0.00017344498 -0.99917984 -0.040493492 -0.00017344498
-		 -0.99917984 -0.040493492 -5.6784676e-005 -0.99992567 0.012194896 -0.05486238 -0.9983117
+		 -0.99917984 -0.040493492 -5.6784676e-05 -0.99992567 0.012194896 -0.05486238 -0.9983117
 		 0.019075694 -0.054642003 -0.99791616 -0.034315303;
 	setAttr -s 96 -ch 384 ".fc[0:95]" -type "polyFaces" 
 		f 4 0 1 2 3
@@ -5007,8 +3711,8 @@ createNode mesh -n "polySurface867Shape" -p "polySurface867";
 		 -0.49420816 -0.85084218 0.17839804 -0.49420816 -0.85084218 0.16567995 -0.49169284
 		 -0.85486168 0.16567995 -0.49169284 -0.85486168 -0.072365291 0.18808098 0.97948396
 		 -0.072365291 0.18808098 0.97948396 -0.060179278 0.17879294 0.98204464 -0.060179278
-		 0.17879294 0.98204464 0.99252927 0.12200703 -7.8952718e-005 0.99815059 0.040945582
-		 -0.044931583 0.99815059 0.040945582 -0.044931583 0.99252927 0.12200703 -7.8952718e-005
+		 0.17879294 0.98204464 0.99252927 0.12200703 -7.8952718e-05 0.99815059 0.040945582
+		 -0.044931583 0.99815059 0.040945582 -0.044931583 0.99252927 0.12200703 -7.8952718e-05
 		 0.052045211 -0.13526805 -0.98944128 0.052045211 -0.13526805 -0.98944128 0.031943113
 		 -0.12244304 -0.99196136 0.031943113 -0.12244304 -0.99196136 -0.98533052 0.17065692
 		 -0.00011044196 -0.98533052 0.17065692 -0.00011045796 -0.96066374 -0.27417195 0.044214793
@@ -5356,8 +4060,8 @@ createNode mesh -n "polySurface867Shape" -p "polySurface867";
 		 -0.17839804 -0.49420816 -0.85084218 -0.16567995 -0.49169284 -0.85486168 -0.16567995
 		 -0.49169284 -0.85486168 -0.17839804 -0.49420816 -0.85084218 0.072365291 0.18808098
 		 0.97948396 0.060179278 0.17879294 0.98204464 0.060179278 0.17879294 0.98204464 0.072365291
-		 0.18808098 0.97948396 -0.99252927 0.12200703 -7.8952718e-005 -0.99252927 0.12200703
-		 -7.8952718e-005 -0.99815059 0.040945582 -0.044931583 -0.99815059 0.040945582 -0.044931583
+		 0.18808098 0.97948396 -0.99252927 0.12200703 -7.8952718e-05 -0.99252927 0.12200703
+		 -7.8952718e-05 -0.99815059 0.040945582 -0.044931583 -0.99815059 0.040945582 -0.044931583
 		 -0.052045211 -0.13526805 -0.98944128 -0.031943113 -0.12244304 -0.99196136 -0.031943113
 		 -0.12244304 -0.99196136 -0.052045211 -0.13526805 -0.98944128 0.98533052 0.17065692
 		 -0.00011044196 0.96066374 -0.27417195 0.044214793 0.96066374 -0.27417195 0.044214793
@@ -8726,20 +7430,20 @@ createNode mesh -n "polySurface868Shape" -p "polySurface868";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr -s 42 ".vt[0:41]"  -14.1217947 -10.23396778 -6.37895107 -14.1217947 -8.74696445 -6.37895107
-		 -5.4191193e-016 -8.74696445 -6.37895107 14.1217947 -8.74696445 -6.37895107 14.1217947 -10.23396778 -6.37895107
-		 -3.7682352e-016 -10.23396778 -6.37895107 -10.11276913 -10.23396778 13.34639072 -10.11276913 -8.74696445 13.34639072
-		 -2.6816753e-016 -8.74696445 13.34639072 10.11276913 -8.74696445 13.34639072 10.11276913 -10.23396778 13.34639072
-		 -1.0307911e-016 -10.23396778 13.34639072 -10.11276913 -10.23396778 47.69377136 -10.11276913 -8.74696445 47.69377136
-		 2.0849801e-016 -8.74696445 47.69377136 10.11276913 -8.74696445 47.69377136 10.11276913 -10.23396778 47.69377136
-		 3.7358642e-016 -10.23396778 47.69377136 -10.11276913 -10.23396778 24.063001633 -10.11276913 -8.74696445 24.063001633
-		 -1.1944524e-016 -8.74696445 24.063001633 10.11276913 -8.74696445 24.063001633 10.11276913 -10.23396778 24.063001633
-		 4.5643389e-017 -10.23396778 24.063001633 -10.11276913 -10.23396778 24.5388031 -10.11276913 -8.74696445 24.5388031
-		 -1.1284149e-016 -8.74696445 24.5388031 10.11276913 -8.74696445 24.5388031 10.11276913 -10.23396778 24.5388031
-		 5.2246948e-017 -10.23396778 24.5388031 -9.19129562 -10.2485075 24.11403465 -9.19129562 -8.7323761 24.11403465
-		 -1.2035541e-016 -8.7323761 24.11403465 9.19129562 -8.7323761 24.11403465 9.19129562 -10.2485075 24.11403465
-		 4.797008e-017 -10.2485075 24.11403465 -9.19129562 -10.2485075 24.48777008 -9.19129562 -8.7323761 24.48777008
-		 -1.1516837e-016 -8.7323761 24.48777008 9.19129562 -8.7323761 24.48777008 9.19129562 -10.2485075 24.48777008
-		 5.3157131e-017 -10.2485075 24.48777008;
+		 -5.4191193e-16 -8.74696445 -6.37895107 14.1217947 -8.74696445 -6.37895107 14.1217947 -10.23396778 -6.37895107
+		 -3.7682352e-16 -10.23396778 -6.37895107 -10.11276913 -10.23396778 13.34639072 -10.11276913 -8.74696445 13.34639072
+		 -2.6816753e-16 -8.74696445 13.34639072 10.11276913 -8.74696445 13.34639072 10.11276913 -10.23396778 13.34639072
+		 -1.0307911e-16 -10.23396778 13.34639072 -10.11276913 -10.23396778 47.69377136 -10.11276913 -8.74696445 47.69377136
+		 2.0849801e-16 -8.74696445 47.69377136 10.11276913 -8.74696445 47.69377136 10.11276913 -10.23396778 47.69377136
+		 3.7358642e-16 -10.23396778 47.69377136 -10.11276913 -10.23396778 24.063001633 -10.11276913 -8.74696445 24.063001633
+		 -1.1944524e-16 -8.74696445 24.063001633 10.11276913 -8.74696445 24.063001633 10.11276913 -10.23396778 24.063001633
+		 4.5643389e-17 -10.23396778 24.063001633 -10.11276913 -10.23396778 24.5388031 -10.11276913 -8.74696445 24.5388031
+		 -1.1284149e-16 -8.74696445 24.5388031 10.11276913 -8.74696445 24.5388031 10.11276913 -10.23396778 24.5388031
+		 5.2246948e-17 -10.23396778 24.5388031 -9.19129562 -10.2485075 24.11403465 -9.19129562 -8.7323761 24.11403465
+		 -1.2035541e-16 -8.7323761 24.11403465 9.19129562 -8.7323761 24.11403465 9.19129562 -10.2485075 24.11403465
+		 4.797008e-17 -10.2485075 24.11403465 -9.19129562 -10.2485075 24.48777008 -9.19129562 -8.7323761 24.48777008
+		 -1.1516837e-16 -8.7323761 24.48777008 9.19129562 -8.7323761 24.48777008 9.19129562 -10.2485075 24.48777008
+		 5.3157131e-17 -10.2485075 24.48777008;
 	setAttr -s 80 ".ed[0:79]"  7 8 0 8 2 0 2 1 0 1 7 0 8 9 0 9 3 0 3 2 0
 		 10 11 0 11 5 0 5 4 0 4 10 0 11 6 0 6 0 0 0 5 0 20 8 0 7 19 0 19 20 0 21 9 0 20 21 0
 		 23 11 0 10 22 0 22 23 0 18 6 0 23 18 0 25 13 0 13 14 0 14 26 0 26 25 0 14 15 0 15 27 0
@@ -9283,19 +7987,18 @@ createNode mesh -n "polySurface873Shape" -p "polySurface873";
 		 0 12 0 9 2 0 6 11 0 15 7 0 7 3 0 7 4 0 4 0 0 14 4 0 5 10 0 8 1 0 19 8 0 10 16 0 16 19 0
 		 5 17 0 17 16 0 1 18 0 18 17 0 19 18 0 23 14 0 12 20 0 20 23 0 0 21 0 21 20 0 4 22 0
 		 22 21 0 23 22 0;
-	setAttr -s 88 ".n[0:87]" -type "float3"  0 -1 -3.32474e-006 0 -1 -3.32474e-006
-		 0 -1 -3.32474e-006 0 -1 -3.32474e-006 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 1.0504801e-005
-		 1 0 1.0504801e-005 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 4.6264904e-006 0 1 4.6264904e-006
-		 0 1 1.66237e-006 0 1 1.66237e-006 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 1.66237e-006 0
-		 1 0 0 1 0 0 1 1.66237e-006 0 1 4.6264904e-006 0 1 5.9282402e-006 0 1 5.9282402e-006
-		 0 1 4.6264904e-006 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0
-		 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -2.1009602e-005 -1 0 -2.1009602e-005
-		 -1 0 -2.1009602e-005 -1 0 -2.1009602e-005 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 2.1009502e-005
-		 1 0 1.0504801e-005 1 0 1.0504801e-005 1 0 2.1009502e-005 1 -1 0 0 -1 0 0 -1 0 0 -1
-		 0 0 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0
-		 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 -5.7468606e-006 0 -1 -5.7468606e-006 0 -1 -5.7468606e-006
-		 0 -1 -5.7468606e-006 0 -1 -5.9281006e-006 0 -1 -5.9281006e-006 0 -1 -5.9281006e-006
-		 0 -1 -5.9281006e-006;
+	setAttr -s 88 ".n[0:87]" -type "float3"  0 -1 -3.32474e-06 0 -1 -3.32474e-06
+		 0 -1 -3.32474e-06 0 -1 -3.32474e-06 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 1.0504801e-05
+		 1 0 1.0504801e-05 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 4.6264904e-06 0 1 4.6264904e-06
+		 0 1 1.66237e-06 0 1 1.66237e-06 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 1.66237e-06 0 1 0
+		 0 1 0 0 1 1.66237e-06 0 1 4.6264904e-06 0 1 5.9282402e-06 0 1 5.9282402e-06 0 1 4.6264904e-06
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0
+		 0 -1 0 0 -1 0 0 -1 0 0 0 -2.1009602e-05 -1 0 -2.1009602e-05 -1 0 -2.1009602e-05 -1
+		 0 -2.1009602e-05 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 2.1009502e-05 1 0 1.0504801e-05 1 0
+		 1.0504801e-05 1 0 2.1009502e-05 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0 0 1 0 0 1 0
+		 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0
+		 0 0 -1 -5.7468606e-06 0 -1 -5.7468606e-06 0 -1 -5.7468606e-06 0 -1 -5.7468606e-06
+		 0 -1 -5.9281006e-06 0 -1 -5.9281006e-06 0 -1 -5.9281006e-06 0 -1 -5.9281006e-06;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -10176,10 +8879,10 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.52414769 0.54749268 -0.65231967 0.36836198 0.66644692 -0.64819586 0.2669591 0.48308718
 		 -0.83388221 0.36366212 0.38437313 -0.84853232 0.36836198 0.66644692 -0.64819586 0.18983303
 		 0.7400341 -0.64522308 0.13775799 0.53713691 -0.83216989 0.2669591 0.48308718 -0.83388221
-		 0.18983303 0.7400341 -0.64522308 1.3847404e-007 0.76490319 -0.64414519 6.8043576e-008
-		 0.55545485 -0.83154672 0.13775799 0.53713691 -0.83216989 1.3847404e-007 0.76490319
+		 0.18983303 0.7400341 -0.64522308 1.3847404e-07 0.76490319 -0.64414519 6.8043576e-08
+		 0.55545485 -0.83154672 0.13775799 0.53713691 -0.83216989 1.3847404e-07 0.76490319
 		 -0.64414519 -0.18983303 0.7400341 -0.64522308 -0.13775799 0.53713691 -0.83216989
-		 6.8043576e-008 0.55545485 -0.83154672 -0.18983303 0.7400341 -0.64522308 -0.36836305
+		 6.8043576e-08 0.55545485 -0.83154672 -0.18983303 0.7400341 -0.64522308 -0.36836305
 		 0.66644704 -0.64819509 -0.2669591 0.48308718 -0.83388221 -0.13775799 0.53713691 -0.83216989
 		 -0.36836305 0.66644704 -0.64819509 -0.52414769 0.54749268 -0.65231967 -0.37916493
 		 0.3961359 -0.8362478 -0.2669591 0.48308718 -0.83388221 -0.52414769 0.54749268 -0.65231967
@@ -10216,9 +8919,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.2669591 0.48308718 -0.83388221 0.076554298 0.14636502 -0.98626405 0.030354511 0.058062721
 		 -0.99785131 0.2669591 0.48308718 -0.83388221 0.13775799 0.53713691 -0.83216989 0.048351102
 		 0.188631 -0.98085707 0.076554298 0.14636502 -0.98626405 0.13775799 0.53713691 -0.83216989
-		 6.8043576e-008 0.55545485 -0.83154672 -3.7500398e-009 0.19525202 -0.98075306 0.048351102
-		 0.188631 -0.98085707 6.8043576e-008 0.55545485 -0.83154672 -0.13775799 0.53713691
-		 -0.83216989 -0.048351102 0.188631 -0.98085707 -3.7500398e-009 0.19525202 -0.98075306
+		 6.8043576e-08 0.55545485 -0.83154672 -3.7500398e-09 0.19525202 -0.98075306 0.048351102
+		 0.188631 -0.98085707 6.8043576e-08 0.55545485 -0.83154672 -0.13775799 0.53713691
+		 -0.83216989 -0.048351102 0.188631 -0.98085707 -3.7500398e-09 0.19525202 -0.98075306
 		 -0.13775799 0.53713691 -0.83216989 -0.2669591 0.48308718 -0.83388221 -0.093450062
 		 0.16919893 -0.98114157 -0.048351102 0.188631 -0.98085707 -0.2669591 0.48308718 -0.83388221
 		 -0.37916493 0.3961359 -0.8362478 -0.10170303 0.13248703 -0.98595321 -0.093450062
@@ -10257,11 +8960,11 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.99785131 0.076554298 0.14636502 -0.98626405 -0.073593631 -0.079525925 -0.99411243
 		 -0.26877108 -0.16669405 -0.94867027 0.076554298 0.14636502 -0.98626405 0.048351102
 		 0.188631 -0.98085707 -0.0026490502 -0.0066860612 -0.99997413 -0.073593631 -0.079525925
-		 -0.99411243 0.048351102 0.188631 -0.98085707 -3.7500398e-009 0.19525202 -0.98075306
-		 -7.0106605e-009 1.3086601e-008 -1 -0.0026490502 -0.0066860612 -0.99997413 -3.7500398e-009
-		 0.19525202 -0.98075306 -0.048351102 0.188631 -0.98085707 8.1789402e-009 -7.4778912e-009
-		 -1 -7.0106605e-009 1.3086601e-008 -1 -0.048351102 0.188631 -0.98085707 -0.093450062
-		 0.16919893 -0.98114157 0.021374205 0.0073916526 -0.9997443 8.1789402e-009 -7.4778912e-009
+		 -0.99411243 0.048351102 0.188631 -0.98085707 -3.7500398e-09 0.19525202 -0.98075306
+		 -7.0106605e-09 1.3086601e-08 -1 -0.0026490502 -0.0066860612 -0.99997413 -3.7500398e-09
+		 0.19525202 -0.98075306 -0.048351102 0.188631 -0.98085707 8.1789402e-09 -7.4778912e-09
+		 -1 -7.0106605e-09 1.3086601e-08 -1 -0.048351102 0.188631 -0.98085707 -0.093450062
+		 0.16919893 -0.98114157 0.021374205 0.0073916526 -0.9997443 8.1789402e-09 -7.4778912e-09
 		 -1 -0.093450062 0.16919893 -0.98114157 -0.10170303 0.13248703 -0.98595321 0.14305994
 		 -0.00081303471 -0.98971367 0.021374205 0.0073916526 -0.9997443 -0.10170303 0.13248703
 		 -0.98595321 -0.025986295 0.076279588 -0.99674779 0.35185117 -0.029643714 -0.93558639
@@ -10297,10 +9000,10 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.94867027 -0.073593631 -0.079525925 -0.99411243 -0.25024197 -0.29613096 -0.9217838
 		 -0.5573898 -0.32997489 -0.76186168 -0.073593631 -0.079525925 -0.99411243 -0.0026490502
 		 -0.0066860612 -0.99997413 -0.062427115 -0.21677606 -0.97422332 -0.25024197 -0.29613096
-		 -0.9217838 -0.0026490502 -0.0066860612 -0.99997413 -7.0106605e-009 1.3086601e-008
-		 -1 -7.0313306e-009 -0.19525202 -0.98075306 -0.062427115 -0.21677606 -0.97422332 -7.0106605e-009
-		 1.3086601e-008 -1 8.1789402e-009 -7.4778912e-009 -1 0.051793203 -0.18765202 -0.98086911
-		 -7.0313306e-009 -0.19525202 -0.98075306 8.1789402e-009 -7.4778912e-009 -1 0.021374205
+		 -0.9217838 -0.0026490502 -0.0066860612 -0.99997413 -7.0106605e-09 1.3086601e-08 -1
+		 -7.0313306e-09 -0.19525202 -0.98075306 -0.062427115 -0.21677606 -0.97422332 -7.0106605e-09
+		 1.3086601e-08 -1 8.1789402e-09 -7.4778912e-09 -1 0.051793203 -0.18765202 -0.98086911
+		 -7.0313306e-09 -0.19525202 -0.98075306 8.1789402e-09 -7.4778912e-09 -1 0.021374205
 		 0.0073916526 -0.9997443 0.17996299 -0.147255 -0.97258902 0.051793203 -0.18765202
 		 -0.98086911 0.021374205 0.0073916526 -0.9997443 0.14305994 -0.00081303471 -0.98971367
 		 0.32753083 -0.095088646 -0.94004345 0.17996299 -0.147255 -0.97258902 0.14305994 -0.00081303471
@@ -10338,9 +9041,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.9217838 -0.43897203 -0.60468799 -0.664572 -0.74866891 -0.55400795 -0.36410195
 		 -0.25024197 -0.29613096 -0.9217838 -0.062427115 -0.21677606 -0.97422332 -0.16029795
 		 -0.57381874 -0.80314171 -0.43897203 -0.60468799 -0.664572 -0.062427115 -0.21677606
-		 -0.97422332 -7.0313306e-009 -0.19525202 -0.98075306 1.9440993e-008 -0.55545485 -0.83154672
-		 -0.16029795 -0.57381874 -0.80314171 -7.0313306e-009 -0.19525202 -0.98075306 0.051793203
-		 -0.18765202 -0.98086911 0.14779499 -0.53425193 -0.83230489 1.9440993e-008 -0.55545485
+		 -0.97422332 -7.0313306e-09 -0.19525202 -0.98075306 1.9440993e-08 -0.55545485 -0.83154672
+		 -0.16029795 -0.57381874 -0.80314171 -7.0313306e-09 -0.19525202 -0.98075306 0.051793203
+		 -0.18765202 -0.98086911 0.14779499 -0.53425193 -0.83230489 1.9440993e-08 -0.55545485
 		 -0.83154672 0.051793203 -0.18765202 -0.98086911 0.17996299 -0.147255 -0.97258902
 		 0.29544297 -0.40565497 -0.86496091 0.14779499 -0.53425193 -0.83230489 0.17996299
 		 -0.147255 -0.97258902 0.43880895 -0.11483198 -0.89121282 0.62910986 -0.31791997 -0.70932895
@@ -10357,9 +9060,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.24446012 0.73821336 -0.62871337 0.38881305 0.88017011 -0.27225903 0.6110757 0.70809269
 		 -0.35382384 0.24446012 0.73821336 -0.62871337 0.068566605 0.76141697 -0.64462602
 		 0.10377398 0.93124783 -0.34929693 0.33912995 0.81577587 -0.46850893 0.068566605 0.76141697
-		 -0.64462602 -0.0006475093 0.77269733 -0.63477433 1.3608696e-008 0.96459681 -0.26372895
+		 -0.64462602 -0.0006475093 0.77269733 -0.63477433 1.3608696e-08 0.96459681 -0.26372895
 		 0.10377398 0.93124783 -0.34929693 -0.0006475093 0.77269733 -0.63477433 -0.068494186
-		 0.7639879 -0.64158487 -0.17544305 0.94263625 -0.28400108 1.3608696e-008 0.96459681
+		 0.7639879 -0.64158487 -0.17544305 0.94263625 -0.28400108 1.3608696e-08 0.96459681
 		 -0.26372895 -0.068494186 0.7639879 -0.64158487 -0.22273095 0.71927387 -0.65805489
 		 -0.34884593 0.86216182 -0.36740094 -0.17544305 0.94263625 -0.28400108 -0.22273095
 		 0.71927387 -0.65805489 -0.46444279 0.63175678 -0.62062573 -0.58815593 0.68855894
@@ -10378,9 +9081,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.64182389 -0.034981791 -0.43897203 -0.60468799 -0.664572 -0.16029795 -0.57381874
 		 -0.80314171;
 	setAttr ".n[498:663]" -type "float3"  -0.23987591 -0.91692269 -0.31892389 -0.51259303
-		 -0.83140004 -0.21452802 -0.16029795 -0.57381874 -0.80314171 1.9440993e-008 -0.55545485
+		 -0.83140004 -0.21452802 -0.16029795 -0.57381874 -0.80314171 1.9440993e-08 -0.55545485
 		 -0.83154672 -0.044215292 -0.89000088 -0.45380992 -0.23987591 -0.91692269 -0.31892389
-		 1.9440993e-008 -0.55545485 -0.83154672 0.14779499 -0.53425193 -0.83230489 0.18687601
+		 1.9440993e-08 -0.55545485 -0.83154672 0.14779499 -0.53425193 -0.83230489 0.18687601
 		 -0.87079412 -0.45474702 0.044215389 -0.89000088 -0.45380992 0.14779499 -0.53425193
 		 -0.83230489 0.40282491 -0.4614149 -0.79046088 0.47347283 -0.7842797 -0.40090987 0.269833
 		 -0.84900206 -0.45429704 0.48723501 -0.51082402 -0.70828009 0.72703886 -0.36969393
@@ -10397,10 +9100,10 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.25868988 0.70519578 0.68091273 0.19762793 0.55494118 0.78672725 0.27037108 0.5779112
 		 0.80471319 0.13585003 0.70378393 0.67675388 0.21608397 0.56777608 0.82218003 0.040624104
 		 0.26992002 0.95917904 0.084372409 0.27800089 0.95965165 0.042240381 0.5779112 0.80471319
-		 0.13585003 0.19546497 0.95361584 -0.22893296 1.3608696e-008 0.96459681 -0.26372895
-		 -1.1227295e-008 0.99997157 0.0075470665 0.27800089 0.95965165 0.042240381 1.3608696e-008
+		 0.13585003 0.19546497 0.95361584 -0.22893296 1.3608696e-08 0.96459681 -0.26372895
+		 -1.1227295e-08 0.99997157 0.0075470665 0.27800089 0.95965165 0.042240381 1.3608696e-08
 		 0.96459681 -0.26372895 -0.17544305 0.94263625 -0.28400108 -0.26464507 0.96432722
-		 -0.0059959218 -1.1227295e-008 0.99997157 0.0075470665 -0.17544305 0.94263625 -0.28400108
+		 -0.0059959218 -1.1227295e-08 0.99997157 0.0075470665 -0.17544305 0.94263625 -0.28400108
 		 -0.44898507 0.86151814 -0.23706304 -0.56455308 0.824651 0.035076801 -0.26464507 0.96432722
 		 -0.0059959218 -0.53773099 0.84016901 0.070437804 -0.71071768 0.69993168 0.07054247
 		 -0.70806271 0.69176972 0.14178094 -0.56455308 0.824651 0.035076801 -0.66894186 0.6880219
@@ -10416,8 +9119,8 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.86249155 0.15894796 -0.20642094 0.96546668 0.23152892 0.017445594 0.97267163 0.48007411
 		 -0.074739419 0.87403816 0.15894796 -0.20642094 0.96546668 -0.031036487 -0.2649349
 		 0.96376669 0.037286595 -0.057637893 0.99764097 0.23152892 0.017445594 0.97267163
-		 -0.031036487 -0.2649349 0.96376669 -3.541599e-008 -0.30320391 0.95292568 -0.0095349699
-		 -0.132844 0.99109101 -0.031036487 -0.2649349 0.96376669 -3.541599e-008 -0.30320391
+		 -0.031036487 -0.2649349 0.96376669 -3.541599e-08 -0.30320391 0.95292568 -0.0095349699
+		 -0.132844 0.99109101 -0.031036487 -0.2649349 0.96376669 -3.541599e-08 -0.30320391
 		 0.95292568 0.046494894 -0.30075693 0.95256674 0.022464404 -0.13127701 0.99109113
 		 -0.0095349699 -0.132844 0.99109101 0.046494894 -0.30075693 0.95256674 -0.067713886
 		 -0.32357395 0.94377679 -0.067713886 -0.32357395 0.94377679 0.022464404 -0.13127701
@@ -10436,9 +9139,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.35745385 0.92878258 0.035858892 -0.4299069 0.90216082 -0.22938803 -0.37671506
 		 0.8974781 0.09792766 -0.35745385 0.92878258 0.11539099 -0.3752709 0.91970479 0.091888182
 		 -0.43263391 0.8968749 0.035858892 -0.4299069 0.90216082 0.11539099 -0.3752709 0.91970479
-		 2.7960009e-008 -0.39580813 0.91833323 2.7960009e-008 -0.39580813 0.91833323 0.091888182
-		 -0.43263391 0.8968749 2.7960009e-008 -0.39580813 0.91833323 -0.094678588 -0.40783197
-		 0.90813488 -0.077928707 -0.45365602 0.88776302 2.7960009e-008 -0.39580813 0.91833323
+		 2.7960009e-08 -0.39580813 0.91833323 2.7960009e-08 -0.39580813 0.91833323 0.091888182
+		 -0.43263391 0.8968749 2.7960009e-08 -0.39580813 0.91833323 -0.094678588 -0.40783197
+		 0.90813488 -0.077928707 -0.45365602 0.88776302 2.7960009e-08 -0.39580813 0.91833323
 		 -0.094678588 -0.40783197 0.90813488 -0.087495245 -0.3816742 0.92014652 -0.030624695
 		 -0.44148692 0.89674491 -0.077928707 -0.45365602 0.88776302 -0.087495245 -0.3816742
 		 0.92014652 0.162743 -0.298733 0.94035804 0.20233706 -0.35404512 0.91307825 -0.030624695
@@ -10559,9 +9262,9 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.36836305 0.66644704 0.64819509 0.36836305 0.66644704 0.64819509 0.52414769 0.54749268
 		 0.65231967 0.36836305 0.66644704 0.64819509 0.18983303 0.7400341 0.64522308 0.18983303
 		 0.7400341 0.64522308 0.36836305 0.66644704 0.64819509 0.18983303 0.7400341 0.64522308
-		 1.1976104e-007 0.76490319 0.64414519 1.1976104e-007 0.76490319 0.64414519 0.18983303
-		 0.7400341 0.64522308 1.1976104e-007 0.76490319 0.64414519 -0.18983303 0.7400341 0.64522308
-		 -0.18983303 0.7400341 0.64522308 1.1976104e-007 0.76490319 0.64414519 -0.18983303
+		 1.1976104e-07 0.76490319 0.64414519 1.1976104e-07 0.76490319 0.64414519 0.18983303
+		 0.7400341 0.64522308 1.1976104e-07 0.76490319 0.64414519 -0.18983303 0.7400341 0.64522308
+		 -0.18983303 0.7400341 0.64522308 1.1976104e-07 0.76490319 0.64414519 -0.18983303
 		 0.7400341 0.64522308 -0.36836305 0.66644704 0.64819509 -0.36836305 0.66644704 0.64819509
 		 -0.18983303 0.7400341 0.64522308 -0.36836305 0.66644704 0.64819509 -0.52414769 0.54749268
 		 0.65231967 -0.52414769 0.54749268 0.65231967 -0.36836305 0.66644704 0.64819509 -0.52414769
@@ -10590,10 +9293,10 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.74316472 0.73492217 -0.32538608 0.59499019 0.64873689 -0.55598289 0.51963794 0.60031474
 		 -0.29551387 0.74316472 0.63576603 -0.097752109 0.76566702 0.76501703 -0.077787608
 		 0.63929504 0.73492217 -0.32538608 0.59499019 0.093768001 0.99553508 -0.0108446 0.093768001
-		 0.99553508 -0.0108446 -3.7417789e-009 0.99994063 -0.010892596 -3.7417789e-009 0.99994063
+		 0.99553508 -0.0108446 -3.7417789e-09 0.99994063 -0.010892596 -3.7417789e-09 0.99994063
 		 -0.010892596 0 -0.99994063 0.010892596 0 -0.99994063 0.010892596 -0.093205385 -0.99558783
-		 0.010845198 -0.093205385 -0.99558783 0.010845198 -3.7417789e-009 0.99994063 -0.010892596
-		 -3.7417789e-009 0.99994063 -0.010892596 -0.093768001 0.99553508 -0.0108446 -0.093768001
+		 0.010845198 -0.093205385 -0.99558783 0.010845198 -3.7417789e-09 0.99994063 -0.010892596
+		 -3.7417789e-09 0.99994063 -0.010892596 -0.093768001 0.99553508 -0.0108446 -0.093768001
 		 0.99553508 -0.0108446 0.093205385 -0.99558783 0.010845198 0.093205385 -0.99558783
 		 0.010845198 0 -0.99994063 0.010892596 0 -0.99994063 0.010892596 0.018812807 -0.53533816
 		 0.8444283 0.0010382098 -0.54244787 0.84008884 0.0010382098 -0.54244787 0.84008884
@@ -10613,10 +9316,10 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 -0.23987591 -0.91692269 -0.31892389 -0.24413013 -0.96974248 0 0.25404391 0.96719271
 		 0 0.25404391 0.96719271 0 0.52736616 0.84963816 0 0.52736616 0.84963816 0 -0.24413013
 		 -0.96974248 0 -0.23987591 -0.91692269 -0.31892389 -0.033985216 -0.97323829 -0.22727108
-		 1.8773601e-008 -1 0 1.2766e-007 1 0 1.2766e-007 1 0 0.25404391 0.96719271 0 0.25404391
-		 0.96719271 0 1.8773601e-008 -1 0 0.03398532 -0.97323853 -0.22727016 0.20569293 -0.95188361
+		 1.8773601e-08 -1 0 1.2766e-07 1 0 1.2766e-07 1 0 0.25404391 0.96719271 0 0.25404391
+		 0.96719271 0 1.8773601e-08 -1 0 0.03398532 -0.97323853 -0.22727016 0.20569293 -0.95188361
 		 -0.22717392 0.2441299 -0.9697426 0 -0.25404391 0.96719271 0 -0.25404391 0.96719271
-		 0 1.2766e-007 1 0 1.2766e-007 1 0 0.2441299 -0.9697426 0 0.28063604 -0.93242407 -0.22765902
+		 0 1.2766e-07 1 0 1.2766e-07 1 0 0.2441299 -0.9697426 0 0.28063604 -0.93242407 -0.22765902
 		 0.52474105 -0.79620302 -0.301177 0.50239819 -0.86463636 0 -0.52736682 0.84963763
 		 0 -0.52736682 0.84963763 0 -0.25404391 0.96719271 0 -0.25404391 0.96719271 0 0.50239819
 		 -0.86463636 0 0.58002418 -0.79670125 -0.16982104 0.79949886 -0.58091891 -0.15275697
@@ -10643,30 +9346,30 @@ createNode mesh -n "polySurface1284Shape" -p "polySurface1284";
 		 0.80749649 0 0.5779112 0.80471319 0.13585003 0.27800089 0.95965165 0.042240381 0.28557509
 		 0.95835632 0 -0.27434391 -0.96163172 0 -0.27434391 -0.96163172 0 -0.59839392 -0.80120194
 		 0 -0.59839392 -0.80120194 0 0.28557509 0.95835632 0 0.27800089 0.95965165 0.042240381
-		 -1.1227295e-008 0.99997157 0.0075470665 -7.4841902e-009 1 0 -3.7420902e-009 -1 0
-		 -3.7420902e-009 -1 0 -0.27434391 -0.96163172 0 -0.27434391 -0.96163172 0 -7.4841902e-009
-		 1 0 -1.1227295e-008 0.99997157 0.0075470665 -0.26464507 0.96432722 -0.0059959218
-		 -0.28557509 0.95835632 0 0.27434391 -0.96163172 0 0.27434391 -0.96163172 0 -3.7420902e-009
-		 -1 0 -3.7420902e-009 -1 0 -0.28557509 0.95835632 0 -0.26464507 0.96432722 -0.0059959218
-		 -0.56455308 0.824651 0.035076801 -0.58987236 0.80749649 0 0.59839392 -0.80120194
-		 0 0.59839392 -0.80120194 0 0.27434391 -0.96163172 0 0.27434391 -0.96163172 0 -0.58987236
-		 0.80749649 0 -0.56455308 0.824651 0.035076801 -0.70806271 0.69176972 0.14178094 -0.73221624
-		 0.68107224 0 0.75575805 -0.65485108 0 0.75575805 -0.65485108 0 0.59839392 -0.80120194
-		 0 0.59839392 -0.80120194 0 -0.73221624 0.68107224 0 -0.70806271 0.69176972 0.14178094
-		 -0.77930886 0.58330393 0.22898498 -0.82875967 0.55960476 0 0.83716869 -0.5469448
-		 0 0.83716869 -0.5469448 0 0.75575805 -0.65485108 0 0.75575805 -0.65485108 0 -0.82875967
-		 0.55960476 0 -0.77930886 0.58330393 0.22898498 -0.88076824 0.3788811 0.28407106 -0.93640924
-		 0.3509101 0 0.93693984 -0.34949094 0 0.93693984 -0.34949094 0 0.83716869 -0.5469448
-		 0 0.83716869 -0.5469448 0 -0.93640924 0.3509101 0 -0.88076824 0.3788811 0.28407106
-		 -0.94797909 0.10276101 0.30129004 -0.99257678 0.12161998 0 0.99310189 -0.11725399
-		 0 0.99310189 -0.11725399 0 0.93693984 -0.34949094 0 0.93693984 -0.34949094 0 0 0
-		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0
-		 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1
+		 -1.1227295e-08 0.99997157 0.0075470665 -7.4841902e-09 1 0 -3.7420902e-09 -1 0 -3.7420902e-09
+		 -1 0 -0.27434391 -0.96163172 0 -0.27434391 -0.96163172 0 -7.4841902e-09 1 0 -1.1227295e-08
+		 0.99997157 0.0075470665 -0.26464507 0.96432722 -0.0059959218 -0.28557509 0.95835632
+		 0 0.27434391 -0.96163172 0 0.27434391 -0.96163172 0 -3.7420902e-09 -1 0 -3.7420902e-09
+		 -1 0 -0.28557509 0.95835632 0 -0.26464507 0.96432722 -0.0059959218 -0.56455308 0.824651
+		 0.035076801 -0.58987236 0.80749649 0 0.59839392 -0.80120194 0 0.59839392 -0.80120194
+		 0 0.27434391 -0.96163172 0 0.27434391 -0.96163172 0 -0.58987236 0.80749649 0 -0.56455308
+		 0.824651 0.035076801 -0.70806271 0.69176972 0.14178094 -0.73221624 0.68107224 0 0.75575805
+		 -0.65485108 0 0.75575805 -0.65485108 0 0.59839392 -0.80120194 0 0.59839392 -0.80120194
+		 0 -0.73221624 0.68107224 0 -0.70806271 0.69176972 0.14178094 -0.77930886 0.58330393
+		 0.22898498 -0.82875967 0.55960476 0 0.83716869 -0.5469448 0 0.83716869 -0.5469448
+		 0 0.75575805 -0.65485108 0 0.75575805 -0.65485108 0 -0.82875967 0.55960476 0 -0.77930886
+		 0.58330393 0.22898498 -0.88076824 0.3788811 0.28407106 -0.93640924 0.3509101 0 0.93693984
+		 -0.34949094 0 0.93693984 -0.34949094 0 0.83716869 -0.5469448 0 0.83716869 -0.5469448
+		 0 -0.93640924 0.3509101 0 -0.88076824 0.3788811 0.28407106 -0.94797909 0.10276101
+		 0.30129004 -0.99257678 0.12161998 0 0.99310189 -0.11725399 0 0.99310189 -0.11725399
+		 0 0.93693984 -0.34949094 0 0.93693984 -0.34949094 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1
 		 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
 		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0
 		 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1
 		 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
-		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1;
+		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0
+		 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1
+		 0 0 1;
 	setAttr ".n[1328:1367]" -type "float3"  0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0
 		 0 1 0 0 1 -0.22938803 -0.37671506 0.8974781 -0.24095593 -0.43776494 0.86619979 -0.46673304
 		 -0.33711702 0.81762606 -0.52897096 -0.29573396 0.79544389 0.20233706 -0.35404512
@@ -11432,7 +10135,7 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 -7.35850859 3.25692582 -5.63376474 -7.65295601 5.17859745 -5.4655118 -5.82038641 1.8882159 -4.68564892
 		 -6.5666151 1.47609496 -5.66440868 -4.75238371 0.55676329 -4.68604326 -5.36155462 -0.025902111 -5.66453266
 		 -3.36052632 -0.46498752 -4.68613625 -3.79117918 -1.17846525 -5.66443825 -1.73956728 -1.10732353 -4.68620396
-		 -1.96245599 -1.90299559 -5.66437197 1.8626451e-009 -1.32642126 -4.68622875 2.7939677e-009 -2.1501236 -5.66434669
+		 -1.96245599 -1.90299559 -5.66437197 1.8626451e-09 -1.32642126 -4.68622875 2.7939677e-09 -2.1501236 -5.66434669
 		 1.7395674 -1.10732818 -4.68620539 1.96245599 -1.90299559 -5.66437197 3.36052632 -0.46498564 -4.6861372
 		 3.79117918 -1.17846525 -5.66443825 4.75238371 0.55676329 -4.68604326 5.36155462 -0.025902096 -5.66453266
 		 5.82038641 1.8882159 -4.68564892 6.5666151 1.47609496 -5.66440868 6.49218035 3.42321324 -4.64736223
@@ -11440,7 +10143,7 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 6.49220085 6.69100285 -4.2599349 7.34853888 7.083795547 -5.18020439 5.82047844 8.19092369 -3.93759155
 		 6.56650829 8.83550453 -4.78333855 4.75233889 9.46159077 -3.58967495 5.36158705 10.31544971 -4.34694672
 		 3.36044288 10.42362404 -3.27871919 3.79123831 11.4325676 -3.95447659 1.73950529 11.021808624 -3.063964367
-		 1.96250987 12.12550163 -3.68250275 -6.519258e-009 11.22465992 -2.9873426 1.1175871e-008 12.3601141 -3.58532
+		 1.96250987 12.12550163 -3.68250275 -6.519258e-09 11.22465992 -2.9873426 1.1175871e-08 12.3601141 -3.58532
 		 -1.73950529 11.021808624 -3.063964367 -1.96250987 12.12550163 -3.68250275 -3.36044288 10.42362404 -3.27871919
 		 -3.79123831 11.4325676 -3.95447659 -4.75233889 9.46159077 -3.58967495 -5.36158705 10.31544971 -4.34694672
 		 -5.82047844 8.19092369 -3.93759155 -6.56650829 8.83550453 -4.78333855 -6.49220085 6.69100285 -4.2599349
@@ -11448,7 +10151,7 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 -6.8181529 3.44146657 -6.1432271 -7.097940445 5.23963785 -5.98814106 -5.33008814 2.19188213 -5.18725443
 		 -6.076316833 1.77976131 -6.16601419 -4.35204792 0.97497207 -5.18429661 -4.96121883 0.39230669 -6.16278601
 		 -3.0791049 0.044133097 -5.18132401 -3.50975776 -0.66934466 -6.15962601 -1.59451938 -0.54191303 -5.17917871
-		 -1.81740808 -1.33758509 -6.15734673 3.2782555e-007 -0.7419827 -5.17840052 3.2782555e-007 -1.56568503 -6.15651846
+		 -1.81740808 -1.33758509 -6.15734673 3.2782555e-07 -0.7419827 -5.17840052 3.2782555e-07 -1.56568503 -6.15651846
 		 1.59451938 -0.54191762 -5.17917967 1.81740785 -1.33758497 -6.15734625 3.0791049 0.044134855 -5.18132544
 		 3.50975776 -0.66934478 -6.15962648 4.3520484 0.97497213 -5.18429708 4.96121931 0.39230675 -6.16278648
 		 5.33008814 2.19188237 -5.18725443 6.076316833 1.77976131 -6.16601419 5.95182467 3.60775399 -5.15682459
@@ -11456,24 +10159,24 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 5.95078516 6.63140392 -4.79771042 6.80712318 7.024196625 -5.71797991 5.32933235 8.028289795 -4.50120211
 		 6.075362206 8.67287064 -5.3469491 4.35100508 9.21409512 -4.19150925 4.96025324 10.067954063 -4.94878054
 		 3.07779932 10.11408424 -3.91778064 3.50859475 11.1230278 -4.59353828 1.5936234 10.67510319 -3.72905087
-		 1.81662798 11.7787962 -4.34758949 3.7252903e-008 10.86563396 -3.66175389 5.5879354e-008 12.0010881424 -4.25973129
+		 1.81662798 11.7787962 -4.34758949 3.7252903e-08 10.86563396 -3.66175389 5.5879354e-08 12.0010881424 -4.25973129
 		 -1.59362328 10.67510319 -3.72905087 -1.81662786 11.7787962 -4.34758949 -3.07779932 10.11408424 -3.91778064
 		 -3.50859451 11.1230278 -4.59353781 -4.35100508 9.21409512 -4.19150877 -4.96025324 10.067954063 -4.94878054
 		 -5.32933235 8.028289795 -4.50120211 -6.075362206 8.67287064 -5.3469491 -5.95078516 6.63140392 -4.79771042
 		 -6.80712318 7.024196625 -5.71797991 -4.96097755 2.8112185 -5.8592844 -4.35178709 3.034752846 -4.93609953
-		 -3.078778267 2.56162095 -4.86543798 -1.59429526 2.26234102 -4.81664705 2.5518239e-007 2.15992141 -4.79923916
+		 -3.078778267 2.56162095 -4.86543798 -1.59429526 2.26234102 -4.81664705 2.5518239e-07 2.15992141 -4.79923916
 		 1.59429526 2.26233768 -4.81664753 3.078778267 2.56162214 -4.86543894 4.35178757 3.034752846 -4.93610001
 		 4.96097755 2.8112185 -5.85928488 3.50946689 2.27874851 -5.76810455 1.81721294 1.94151032 -5.70490694
-		 2.59839e-007 1.82600832 -5.68232155 -1.81721306 1.9415102 -5.70490742 -3.50946689 2.27874851 -5.76810408
+		 2.59839e-07 1.82600832 -5.68232155 -1.81721306 1.9415102 -5.70490742 -3.50946689 2.27874851 -5.76810408
 		 -4.96073627 5.2301302 -5.55578327 -4.35152626 5.094533443 -4.68790245 -3.078451633 5.079108715 -4.54955196
-		 -1.59407127 5.066595078 -4.45411491 1.8253921e-007 5.061825752 -4.42007732 1.59407127 5.066592693 -4.45411491
+		 -1.59407127 5.066595078 -4.45411491 1.8253921e-07 5.061825752 -4.42007732 1.59407127 5.066592693 -4.45411491
 		 3.078451633 5.079109192 -4.54955292 4.35152626 5.094533443 -4.68790293 4.96073627 5.2301302 -5.55578327
-		 3.50917602 5.22684145 -5.37658215 1.81701791 5.22060585 -5.25246763 1.9185244e-007 5.21770191 -5.20812464
+		 3.50917602 5.22684145 -5.37658215 1.81701791 5.22060585 -5.25246763 1.9185244e-07 5.21770191 -5.20812464
 		 -1.81701791 5.22060537 -5.25246811 -3.50917602 5.22684145 -5.37658167 -4.960495 7.64904213 -5.25228214
 		 -4.35126591 7.15431404 -4.43970585 -3.078125477 7.59659672 -4.23366642 -1.59384727 7.87084913 -4.091582775
-		 1.0989606e-007 7.96372986 -4.040915489 1.59384727 7.8708477 -4.091582775 3.078125477 7.59659672 -4.2336669
+		 1.0989606e-07 7.96372986 -4.040915489 1.59384727 7.8708477 -4.091582775 3.078125477 7.59659672 -4.2336669
 		 4.35126591 7.15431404 -4.43970585 4.960495 7.64904213 -5.25228214 3.50888538 8.17493439 -4.98506021
-		 1.81682301 8.49970055 -4.8000288 1.238659e-007 8.60939503 -4.73392773 -1.81682289 8.49970055 -4.8000288
+		 1.81682301 8.49970055 -4.8000288 1.238659e-07 8.60939503 -4.73392773 -1.81682289 8.49970055 -4.8000288
 		 -3.50888538 8.17493439 -4.98505974;
 	setAttr -s 271 ".ed";
 	setAttr ".ed[0:165]"  0 3 0 3 2 0 2 1 0 1 0 0 2 5 0 5 4 0 4 1 0 5 7 0 7 6 0
@@ -11556,13 +10259,13 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 0.56809103 0.76121676 0.15985656 0.62562841 0.76356727 0.15986453 0.6256265 0.76356715
 		 0.31277832 0.56808376 0.76121634 -0.15986498 -0.62562627 -0.76356727 -0.31277552
 		 -0.56808549 -0.7612164 -0.31278941 -0.56807816 -0.76121604 -0.15987329 -0.62562418
-		 -0.76356721 0.15985656 0.62562841 0.76356727 1.2055604e-006 0.64472097 0.76441795
-		 1.2426035e-006 0.64472097 0.76441801 0.15986453 0.6256265 0.76356715 -1.0843718e-007
+		 -0.76356721 0.15985656 0.62562841 0.76356727 1.2055604e-06 0.64472097 0.76441795
+		 1.2426035e-06 0.64472097 0.76441801 0.15986453 0.6256265 0.76356715 -1.0843718e-07
 		 -0.64472067 -0.76441824 -0.15986498 -0.62562627 -0.76356727 -0.15987329 -0.62562418
-		 -0.76356721 -6.8116279e-008 -0.64472073 -0.7644183 1.2055604e-006 0.64472097 0.76441795
-		 -0.15985662 0.62562805 0.76356751 -0.15986465 0.62562621 0.76356739 1.2426035e-006
-		 0.64472097 0.76441801 0.15986474 -0.62562615 -0.76356745 -1.0843718e-007 -0.64472067
-		 -0.76441824 -6.8116279e-008 -0.64472073 -0.7644183 0.15987304 -0.62562412 -0.76356727
+		 -0.76356721 -6.8116279e-08 -0.64472073 -0.7644183 1.2055604e-06 0.64472097 0.76441795
+		 -0.15985662 0.62562805 0.76356751 -0.15986465 0.62562621 0.76356739 1.2426035e-06
+		 0.64472097 0.76441801 0.15986474 -0.62562615 -0.76356745 -1.0843718e-07 -0.64472067
+		 -0.76441824 -6.8116279e-08 -0.64472073 -0.7644183 0.15987304 -0.62562412 -0.76356727
 		 -0.15985662 0.62562805 0.76356751 -0.31276566 0.56809092 0.7612164 -0.3127794 0.56808358
 		 0.76121593 -0.15986465 0.62562621 0.76356739 0.31277525 -0.56808573 -0.76121628 0.15986474
 		 -0.62562615 -0.76356745 0.15987304 -0.62562412 -0.76356727 0.31278917 -0.56807846
@@ -11595,12 +10298,12 @@ createNode mesh -n "polySurface1285Shape" -p "polySurface1285";
 		 0.7874583 -0.52593708 -0.32165465 -0.78733528 0.52596718 -0.16509378 -0.85762817
 		 0.48705041 -0.16437104 -0.85783595 0.48692855 -0.32048529 -0.78807133 0.5255785 0.16435301
 		 0.85783386 -0.48693833 0.32057405 0.78797954 -0.525662 0.3214027 0.7874583 -0.52593708
-		 0.16487354 0.85768431 -0.48702598 -0.16509378 -0.85762817 0.48705041 -4.3568264e-008
-		 -0.88093811 0.47323138 -5.2770897e-008 -0.88093805 0.47323141 -0.16437104 -0.85783595
-		 0.48692855 -7.0113946e-009 0.88094765 -0.47321361 0.16435301 0.85783386 -0.48693833
-		 0.16487354 0.85768431 -0.48702598 0 0.88094771 -0.47321364 -4.3568264e-008 -0.88093811
-		 0.47323138 0.16509371 -0.85762799 0.48705068 0.16437095 -0.85783583 0.48692882 -5.2770897e-008
-		 -0.88093805 0.47323141 -0.164353 0.85783368 -0.48693895 -7.0113946e-009 0.88094765
+		 0.16487354 0.85768431 -0.48702598 -0.16509378 -0.85762817 0.48705041 -4.3568264e-08
+		 -0.88093811 0.47323138 -5.2770897e-08 -0.88093805 0.47323141 -0.16437104 -0.85783595
+		 0.48692855 -7.0113946e-09 0.88094765 -0.47321361 0.16435301 0.85783386 -0.48693833
+		 0.16487354 0.85768431 -0.48702598 0 0.88094771 -0.47321364 -4.3568264e-08 -0.88093811
+		 0.47323138 0.16509371 -0.85762799 0.48705068 0.16437095 -0.85783583 0.48692882 -5.2770897e-08
+		 -0.88093805 0.47323141 -0.164353 0.85783368 -0.48693895 -7.0113946e-09 0.88094765
 		 -0.47321361 0 0.88094771 -0.47321364 -0.16487348 0.85768402 -0.48702654 0.16509371
 		 -0.85762799 0.48705068 0.32165444 -0.78733522 0.52596724 0.32048512 -0.78807127 0.52557868
 		 0.16437095 -0.85783583 0.48692882 -0.32057399 0.78797948 -0.52566218 -0.164353 0.85783368
@@ -14584,10 +13287,10 @@ createNode mesh -n "polySurface901Shape" -p "polySurface901";
 		 0.99858576 0.053166438 0 0.99858576 0.053166438 0 0.99432379 0.10639706 0 0.99432379
 		 0.10639706 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.089147344 0 0.99601847 -0.010744803 0 0.99994224
 		 -0.010744803 0 0.99994224 0.089147344 0 0.99601847 0.19869106 0 0.98006225 0.089147344
-		 0 0.99601847 0.089147344 0 0.99601847 0.19869106 0 0.98006225 -0.99996811 2.2027702e-006
-		 -0.0079823406 -0.99996811 2.2027702e-006 -0.0079823406 -0.99989301 1.10167e-006 0.014631
-		 -0.99989301 1.10167e-006 0.014631 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
-		 -0.99930638 0 0.037236813 -0.99989301 1.10167e-006 0.014631 -0.99989301 1.10167e-006
+		 0 0.99601847 0.089147344 0 0.99601847 0.19869106 0 0.98006225 -0.99996811 2.2027702e-06
+		 -0.0079823406 -0.99996811 2.2027702e-06 -0.0079823406 -0.99989301 1.10167e-06 0.014631
+		 -0.99989301 1.10167e-06 0.014631 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
+		 -0.99930638 0 0.037236813 -0.99989301 1.10167e-06 0.014631 -0.99989301 1.10167e-06
 		 0.014631 -0.99930638 0 0.037236813 -0.0082307803 0 -0.99996608 -0.016460992 0 -0.99986458
 		 -0.016460992 0 -0.99986458 -0.0082307803 0 -0.99996608 0 0 -1 -0.0082307803 0 -0.99996608
 		 -0.0082307803 0 -0.99996608 0 0 -1 -0.010744803 0 0.99994224 0 0 1 0 0 1 -0.010744803
@@ -14748,16 +13451,16 @@ createNode mesh -n "polySurface902Shape" -p "polySurface902";
 		 0 -0.99858576 0.05316636 0 -0.99858576 0.05316636 0 -0.99432379 0.10639629 0 -0.99432379
 		 0.10639629 0 0.99858576 0.053166438 0 0.99858576 0.053166438 0 0.99999994 0 0 0.99999994
 		 0 0 0.99432379 0.10639706 0 0.99432379 0.10639706 0 0.99858576 0.053166438 0 0.99858576
-		 0.053166438 0.99930638 0 0.037236813 0.99989301 1.10167e-006 0.014631 0.99989301
-		 1.10167e-006 0.014631 0.99930638 0 0.037236813 0 0 1 0.010744803 0 0.99994224 0.010744803
-		 0 0.99994224 0 0 1 -0.19869106 0 0.98006225 -0.19869106 0 0.98006225 -0.089147344
-		 0 0.99601847 -0.089147344 0 0.99601847 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0
-		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.016460992 0 -0.99986458 0.0082307803
-		 0 -0.99996608 0.0082307803 0 -0.99996608 0.016460992 0 -0.99986458 0.99996811 2.2027702e-006
-		 -0.0079823406 0.99989301 1.10167e-006 0.014631 0.99989301 1.10167e-006 0.014631 0.99996811
-		 2.2027702e-006 -0.0079823406 0.0082307803 0 -0.99996608 0 0 -1 0 0 -1 0.0082307803
-		 0 -0.99996608 -0.089147344 0 0.99601847 0.010744803 0 0.99994224 0.010744803 0 0.99994224
-		 -0.089147344 0 0.99601847;
+		 0.053166438 0.99930638 0 0.037236813 0.99989301 1.10167e-06 0.014631 0.99989301 1.10167e-06
+		 0.014631 0.99930638 0 0.037236813 0 0 1 0.010744803 0 0.99994224 0.010744803 0 0.99994224
+		 0 0 1 -0.19869106 0 0.98006225 -0.19869106 0 0.98006225 -0.089147344 0 0.99601847
+		 -0.089147344 0 0.99601847 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.016460992 0 -0.99986458 0.0082307803 0 -0.99996608
+		 0.0082307803 0 -0.99996608 0.016460992 0 -0.99986458 0.99996811 2.2027702e-06 -0.0079823406
+		 0.99989301 1.10167e-06 0.014631 0.99989301 1.10167e-06 0.014631 0.99996811 2.2027702e-06
+		 -0.0079823406 0.0082307803 0 -0.99996608 0 0 -1 0 0 -1 0.0082307803 0 -0.99996608
+		 -0.089147344 0 0.99601847 0.010744803 0 0.99994224 0.010744803 0 0.99994224 -0.089147344
+		 0 0.99601847;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -14922,9 +13625,9 @@ createNode mesh -n "polySurface903Shape" -p "polySurface903";
 		 0 0.99999994 0 0 0.99999994 0 0 0.99858576 0.05316636 0 0.99858576 0.05316636 0 0.99858576
 		 0.05316636 0 0.99858576 0.05316636 0 0.99432379 0.10639629 0 0.99432379 0.10639629
 		 0.19869106 0 0.98006225 0.089147344 0 0.99601847 0.089147344 0 0.99601847 0.19869106
-		 0 0.98006225 1 0 -9.6272299e-007 1 0 -1.9254501e-006 1 0 -1.9254501e-006 1 0 -9.6272299e-007
-		 1 0 0 1 0 -9.6272299e-007 1 0 -9.6272299e-007 1 0 0 -0.010744803 0 0.99994224 0 0
-		 1 0 0 1 -0.010744803 0 0.99994224 -0.0082307803 0 -0.99996608 -0.016460992 0 -0.99986458
+		 0 0.98006225 1 0 -9.6272299e-07 1 0 -1.9254501e-06 1 0 -1.9254501e-06 1 0 -9.6272299e-07
+		 1 0 0 1 0 -9.6272299e-07 1 0 -9.6272299e-07 1 0 0 -0.010744803 0 0.99994224 0 0 1
+		 0 0 1 -0.010744803 0 0.99994224 -0.0082307803 0 -0.99996608 -0.016460992 0 -0.99986458
 		 -0.016460992 0 -0.99986458 -0.0082307803 0 -0.99996608 0 0 -1 0 0 -1 0 0 -1 0 0 -1
 		 -0.99996811 0 -0.0079825809 -0.99996811 0 -0.0079825809 -0.99989301 0 0.014630901
 		 -0.99989301 0 0.014630901 0 0 -1 -0.0082307803 0 -0.99996608 -0.0082307803 0 -0.99996608
@@ -15087,16 +13790,16 @@ createNode mesh -n "polySurface904Shape" -p "polySurface904";
 		 0 -0.99858576 0.05316636 0 -0.99858576 0.05316636 0 -0.99432379 0.10639629 0 -0.99432379
 		 0.10639629 0 0.99858576 0.05316636 0 0.99858576 0.05316636 0 0.99999994 0 0 0.99999994
 		 0 0 0.99432379 0.10639629 0 0.99432379 0.10639629 0 0.99858576 0.05316636 0 0.99858576
-		 0.05316636 -1 0 -1.9254501e-006 -1 0 -9.6272299e-007 -1 0 -9.6272299e-007 -1 0 -1.9254501e-006
-		 -1 0 -9.6272299e-007 -1 0 0 -1 0 0 -1 0 -9.6272299e-007 0.99989301 0 0.014630901
-		 0.99930638 0 0.037236813 0.99930638 0 0.037236813 0.99989301 0 0.014630901 0.016460992
-		 0 -0.99986458 0.0082307803 0 -0.99996608 0.0082307803 0 -0.99996608 0.016460992 0
-		 -0.99986458 0.0082307803 0 -0.99996608 0 0 -1 0 0 -1 0.0082307803 0 -0.99996608 0
-		 0 1 0.010744803 0 0.99994224 0.010744803 0 0.99994224 0 0 1 0 0 -1 0 0 -1 0 0 -1
-		 0 0 -1 0.010744803 0 0.99994224 -0.089147344 0 0.99601847 -0.089147344 0 0.99601847
-		 0.010744803 0 0.99994224 0.99996811 0 -0.0079825809 0.99989301 0 0.014630901 0.99989301
-		 0 0.014630901 0.99996811 0 -0.0079825809 -0.19869106 0 0.98006225 -0.19869106 0 0.98006225
-		 -0.089147344 0 0.99601847 -0.089147344 0 0.99601847;
+		 0.05316636 -1 0 -1.9254501e-06 -1 0 -9.6272299e-07 -1 0 -9.6272299e-07 -1 0 -1.9254501e-06
+		 -1 0 -9.6272299e-07 -1 0 0 -1 0 0 -1 0 -9.6272299e-07 0.99989301 0 0.014630901 0.99930638
+		 0 0.037236813 0.99930638 0 0.037236813 0.99989301 0 0.014630901 0.016460992 0 -0.99986458
+		 0.0082307803 0 -0.99996608 0.0082307803 0 -0.99996608 0.016460992 0 -0.99986458 0.0082307803
+		 0 -0.99996608 0 0 -1 0 0 -1 0.0082307803 0 -0.99996608 0 0 1 0.010744803 0 0.99994224
+		 0.010744803 0 0.99994224 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.010744803 0 0.99994224
+		 -0.089147344 0 0.99601847 -0.089147344 0 0.99601847 0.010744803 0 0.99994224 0.99996811
+		 0 -0.0079825809 0.99989301 0 0.014630901 0.99989301 0 0.014630901 0.99996811 0 -0.0079825809
+		 -0.19869106 0 0.98006225 -0.19869106 0 0.98006225 -0.089147344 0 0.99601847 -0.089147344
+		 0 0.99601847;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -15264,29 +13967,28 @@ createNode mesh -n "polySurface905Shape" -p "polySurface905";
 		 0.001007201 0 -0.99999994 0 0.0008413117 -0.99454629 0.10429245 0.0016823611 -0.99476361
 		 0.10218874 -0.026274139 -0.99829507 0.052120578 -0.013134238 -0.99852669 0.052648369
 		 -0.013134238 -0.99852669 0.052648369 -0.026274139 -0.99829507 0.052120578 -0.054069262
-		 -0.99853504 0.0020147297 -0.027030315 -0.99963415 0.001007201 -2.7338235e-008 0.99432379
-		 0.10639629 -1.4256264e-008 0.99858576 0.053166438 -0.013134316 0.99852669 0.052648369
-		 0.00084128097 0.99454629 0.10429245 -1.4256264e-008 0.99858576 0.053166438 -1.1866336e-009
-		 0.99999994 1.1039771e-007 -0.027030315 0.99963415 0.0010072622 -0.013134316 0.99852669
+		 -0.99853504 0.0020147297 -0.027030315 -0.99963415 0.001007201 -2.7338235e-08 0.99432379
+		 0.10639629 -1.4256264e-08 0.99858576 0.053166438 -0.013134316 0.99852669 0.052648369
+		 0.00084128097 0.99454629 0.10429245 -1.4256264e-08 0.99858576 0.053166438 -1.1866336e-09
+		 0.99999994 1.1039771e-07 -0.027030315 0.99963415 0.0010072622 -0.013134316 0.99852669
 		 0.052648369 0.00084128097 0.99454629 0.10429245 -0.013134316 0.99852669 0.052648369
 		 -0.026274139 0.99829507 0.052120578 0.0016823611 0.99476361 0.10218874 -0.013134316
 		 0.99852669 0.052648369 -0.027030315 0.99963415 0.0010072622 -0.054069337 0.99853504
 		 0.0020147297 -0.026274139 0.99829507 0.052120578 0 -0.99858576 0.053166438 0 -0.99858576
 		 0.053166438 0 -0.99999994 0 0 -0.99999994 0 0 -0.99432379 0.10639706 0 -0.99432379
-		 0.10639706 0 -0.99858576 0.053166438 0 -0.99858576 0.053166438 0 0.99999994 1.1035343e-007
-		 -1.1866336e-009 0.99999994 1.1039771e-007 -1.4256264e-008 0.99858576 0.053166438
-		 0 0.99858576 0.053166438 0 0.99858576 0.053166438 -1.4256264e-008 0.99858576 0.053166438
-		 -2.7338235e-008 0.99432379 0.10639629 0 0.99432379 0.10639629 -0.99989289 1.3935899e-006
-		 0.014631998 -0.99989289 1.3935899e-006 0.014631998 -0.99930638 2.786471e-006 0.037236813
-		 -0.99930638 2.786471e-006 0.037236813 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0
-		 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -0.0082307803 0 -0.99996608 -0.016460992 0 -0.99986458
-		 -0.016460992 0 -0.99986458 -0.0082307803 0 -0.99996608 -0.0082307803 0 -0.99996608
-		 -0.0082307803 0 -0.99996608 0 0 -1 0 0 -1 -0.99996823 0 -0.0079803318 -0.99996823
-		 0 -0.0079803318 -0.99989289 1.3935899e-006 0.014631998 -0.99989289 1.3935899e-006
-		 0.014631998 0.089147344 0 0.99601847 -0.010744803 0 0.99994224 -0.010744803 0 0.99994224
-		 0.089147344 0 0.99601847 -0.010744803 0 0.99994224 0 0 1 0 0 1 -0.010744803 0 0.99994224
-		 0.19869106 0 0.98006225 0.089147344 0 0.99601847 0.089147344 0 0.99601847 0.19869106
-		 0 0.98006225;
+		 0.10639706 0 -0.99858576 0.053166438 0 -0.99858576 0.053166438 0 0.99999994 1.1035343e-07
+		 -1.1866336e-09 0.99999994 1.1039771e-07 -1.4256264e-08 0.99858576 0.053166438 0 0.99858576
+		 0.053166438 0 0.99858576 0.053166438 -1.4256264e-08 0.99858576 0.053166438 -2.7338235e-08
+		 0.99432379 0.10639629 0 0.99432379 0.10639629 -0.99989289 1.3935899e-06 0.014631998
+		 -0.99989289 1.3935899e-06 0.014631998 -0.99930638 2.786471e-06 0.037236813 -0.99930638
+		 2.786471e-06 0.037236813 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0
+		 0 1 0 0 1 0 0 1 0 0 -0.0082307803 0 -0.99996608 -0.016460992 0 -0.99986458 -0.016460992
+		 0 -0.99986458 -0.0082307803 0 -0.99996608 -0.0082307803 0 -0.99996608 -0.0082307803
+		 0 -0.99996608 0 0 -1 0 0 -1 -0.99996823 0 -0.0079803318 -0.99996823 0 -0.0079803318
+		 -0.99989289 1.3935899e-06 0.014631998 -0.99989289 1.3935899e-06 0.014631998 0.089147344
+		 0 0.99601847 -0.010744803 0 0.99994224 -0.010744803 0 0.99994224 0.089147344 0 0.99601847
+		 -0.010744803 0 0.99994224 0 0 1 0 0 1 -0.010744803 0 0.99994224 0.19869106 0 0.98006225
+		 0.089147344 0 0.99601847 0.089147344 0 0.99601847 0.19869106 0 0.98006225;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -15439,25 +14141,25 @@ createNode mesh -n "polySurface906Shape" -p "polySurface906";
 		 0.013134238 -0.99852669 0.052648295 -0.0008413117 -0.99454629 0.10429245 0.013134238
 		 -0.99852669 0.052648295 0.026274063 -0.99829507 0.052120503 -0.0016823611 -0.99476361
 		 0.10218874 0.013134238 -0.99852669 0.052648295 0.027030315 -0.99963415 0.001007201
-		 0.054069262 -0.99853504 0.0020147297 0.026274063 -0.99829507 0.052120503 1.3669155e-008
+		 0.054069262 -0.99853504 0.0020147297 0.026274063 -0.99829507 0.052120503 1.3669155e-08
 		 0.99432379 0.10639706 -0.00084129634 0.99454629 0.10429245 0.013134316 0.99852669
-		 0.052648369 1.3740707e-008 0.99858576 0.053166438 1.3740707e-008 0.99858576 0.053166438
-		 0.013134316 0.99852669 0.052648369 0.027030315 0.99963415 0.001007201 1.3773207e-008
-		 0.99999994 5.1325799e-010 -0.00084129634 0.99454629 0.10429245 -0.0016823611 0.99476361
+		 0.052648369 1.3740707e-08 0.99858576 0.053166438 1.3740707e-08 0.99858576 0.053166438
+		 0.013134316 0.99852669 0.052648369 0.027030315 0.99963415 0.001007201 1.3773207e-08
+		 0.99999994 5.1325799e-10 -0.00084129634 0.99454629 0.10429245 -0.0016823611 0.99476361
 		 0.10218874 0.026274139 0.99829507 0.052120578 0.013134316 0.99852669 0.052648369
 		 0.013134316 0.99852669 0.052648369 0.026274139 0.99829507 0.052120578 0.054069262
 		 0.99853504 0.0020147297 0.027030315 0.99963415 0.001007201 0 -0.99999994 0 0 -0.99999994
 		 0 0 -0.99858576 0.05316636 0 -0.99858576 0.05316636 0 -0.99858576 0.05316636 0 -0.99858576
 		 0.05316636 0 -0.99432379 0.10639629 0 -0.99432379 0.10639629 0 0.99858576 0.053166438
-		 1.3740707e-008 0.99858576 0.053166438 1.3773207e-008 0.99999994 5.1325799e-010 0
-		 0.99999994 0 0 0.99432379 0.10639706 1.3669155e-008 0.99432379 0.10639706 1.3740707e-008
-		 0.99858576 0.053166438 0 0.99858576 0.053166438 0.99996823 0 -0.0079803318 0.99989289
-		 1.3935899e-006 0.014631998 0.99989289 1.3935899e-006 0.014631998 0.99996823 0 -0.0079803318
-		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0.010744803 0 0.99994224 0.010744803 0 0.99994224
-		 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.016460992 0 -0.99986458 0.0082307803 0 -0.99996608
+		 1.3740707e-08 0.99858576 0.053166438 1.3773207e-08 0.99999994 5.1325799e-10 0 0.99999994
+		 0 0 0.99432379 0.10639706 1.3669155e-08 0.99432379 0.10639706 1.3740707e-08 0.99858576
+		 0.053166438 0 0.99858576 0.053166438 0.99996823 0 -0.0079803318 0.99989289 1.3935899e-06
+		 0.014631998 0.99989289 1.3935899e-06 0.014631998 0.99996823 0 -0.0079803318 -1 0
+		 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0.010744803 0 0.99994224 0.010744803 0 0.99994224 0
+		 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.016460992 0 -0.99986458 0.0082307803 0 -0.99996608
 		 0.0082307803 0 -0.99996608 0.016460992 0 -0.99986458 0.0082307803 0 -0.99996608 0
-		 0 -1 0 0 -1 0.0082307803 0 -0.99996608 0.99989289 1.3935899e-006 0.014631998 0.99930638
-		 2.786471e-006 0.037236813 0.99930638 2.786471e-006 0.037236813 0.99989289 1.3935899e-006
+		 0 -1 0 0 -1 0.0082307803 0 -0.99996608 0.99989289 1.3935899e-06 0.014631998 0.99930638
+		 2.786471e-06 0.037236813 0.99930638 2.786471e-06 0.037236813 0.99989289 1.3935899e-06
 		 0.014631998 -0.089147344 0 0.99601847 -0.089147344 0 0.99601847 0.010744803 0 0.99994224
 		 0.010744803 0 0.99994224 -0.19869106 0 0.98006225 -0.19869106 0 0.98006225 -0.089147344
 		 0 0.99601847 -0.089147344 0 0.99601847 -1 0 0 -1 0 0 -1 0 0 -1 0 0;
@@ -15607,16 +14309,16 @@ createNode mesh -n "polySurface907Shape" -p "polySurface907";
 		 -0.12295798 0 0.9984138 -0.056300797 0 0.9984138 -0.056300797 0 -0.9933418 -0.11520498
 		 0 -0.9933418 -0.11520498 0 -0.98737156 -0.15842193 0 -0.98737156 -0.15842193 0 -0.99742132
 		 -0.071768522 0 -0.99742132 -0.071768522 0 -0.9933418 -0.11520498 0 -0.9933418 -0.11520498
-		 -0.99998474 1.0924399e-006 -0.0055384687 -0.99998474 1.0924399e-006 -0.0055384687
-		 -0.9999485 5.4628526e-007 0.010154406 -0.9999485 5.4628526e-007 0.010154406 0 0 -1
-		 0 0 -1 0 0 -1 0 0 -1 0.99995232 5.8109113e-006 -0.0097657032 0.99995232 5.8109113e-006
-		 -0.0097657032 0.9996798 1.2925398e-005 -0.025304394 0.9996798 1.2925398e-005 -0.025304394
-		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.9999485 5.4628526e-007 0.010154406 -0.99966592 0 0.025844796
-		 -0.99966592 0 0.025844796 -0.9999485 5.4628526e-007 0.010154406 0.98848516 0.11565101
+		 -0.99998474 1.0924399e-06 -0.0055384687 -0.99998474 1.0924399e-06 -0.0055384687 -0.9999485
+		 5.4628526e-07 0.010154406 -0.9999485 5.4628526e-07 0.010154406 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0.99995232 5.8109113e-06 -0.0097657032 0.99995232 5.8109113e-06 -0.0097657032
+		 0.9996798 1.2925398e-05 -0.025304394 0.9996798 1.2925398e-05 -0.025304394 0 0 -1
+		 0 0 -1 0 0 -1 0 0 -1 -0.9999485 5.4628526e-07 0.010154406 -0.99966592 0 0.025844796
+		 -0.99966592 0 0.025844796 -0.9999485 5.4628526e-07 0.010154406 0.98848516 0.11565101
 		 0.097580813 0.98839164 -0.11362896 0.10084897 0.98839164 -0.11362896 0.10084897 0.98848516
 		 0.11565101 0.097580813 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0.99998331
-		 -1.3049803e-006 0.0057753315 0.99998331 -1.3049803e-006 0.0057753315 0.99995232 5.8109113e-006
-		 -0.0097657032 0.99995232 5.8109113e-006 -0.0097657032 0.98574662 0.11597496 -0.12187496
+		 -1.3049803e-06 0.0057753315 0.99998331 -1.3049803e-06 0.0057753315 0.99995232 5.8109113e-06
+		 -0.0097657032 0.99995232 5.8109113e-06 -0.0097657032 0.98574662 0.11597496 -0.12187496
 		 0.98574662 0.11597496 -0.12187496 0.98559338 -0.11537503 -0.12367004 0.98559338 -0.11537503
 		 -0.12367004;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
@@ -15923,16 +14625,16 @@ createNode mesh -n "polySurface909Shape" -p "polySurface909";
 		 -0.2155329 0 -0.99908882 -0.042681593 0 -0.99908882 -0.042681593 0 -0.9915663 -0.12960103
 		 0 -0.9915663 -0.12960103 0 0 1 0 0 1 0 0 1 0 0 1 0.98807138 0.11356104 0.10401405
 		 0.98820966 -0.11256795 0.10377996 0.98820966 -0.11256795 0.10377996 0.98807138 0.11356104
-		 0.10401405 0.99998331 0 0.0057908418 0.99998331 0 0.0057908418 0.99995255 -6.929958e-007
-		 -0.0097425869 0.99995255 -6.929958e-007 -0.0097425869 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998474
-		 0 -0.0055369884 -0.99998474 0 -0.0055369884 -0.9999485 5.8090831e-007 0.010155304
-		 -0.9999485 5.8090831e-007 0.010155304 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.99995255 -6.929958e-007
-		 -0.0097425869 0.99968058 -1.3858195e-006 -0.02527369 0.99968058 -1.3858195e-006 -0.02527369
-		 0.99995255 -6.929958e-007 -0.0097425869 0.98526067 0.11657596 -0.12518595 0.98526067
+		 0.10401405 0.99998331 0 0.0057908418 0.99998331 0 0.0057908418 0.99995255 -6.929958e-07
+		 -0.0097425869 0.99995255 -6.929958e-07 -0.0097425869 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998474
+		 0 -0.0055369884 -0.99998474 0 -0.0055369884 -0.9999485 5.8090831e-07 0.010155304
+		 -0.9999485 5.8090831e-07 0.010155304 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.99995255 -6.929958e-07
+		 -0.0097425869 0.99968058 -1.3858195e-06 -0.02527369 0.99968058 -1.3858195e-06 -0.02527369
+		 0.99995255 -6.929958e-07 -0.0097425869 0.98526067 0.11657596 -0.12518595 0.98526067
 		 0.11657596 -0.12518595 0.9853729 -0.11559598 -0.12521099 0.9853729 -0.11559598 -0.12521099
-		 -0.9999485 5.8090831e-007 0.010155304 -0.9999485 5.8090831e-007 0.010155304 -0.99966592
-		 1.1616698e-006 0.025845096 -0.99966592 1.1616698e-006 0.025845096 0 0 -1 0 0 -1 0
-		 0 -1 0 0 -1;
+		 -0.9999485 5.8090831e-07 0.010155304 -0.9999485 5.8090831e-07 0.010155304 -0.99966592
+		 1.1616698e-06 0.025845096 -0.99966592 1.1616698e-06 0.025845096 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -16077,54 +14779,53 @@ createNode mesh -n "polySurface910Shape" -p "polySurface910";
 		 32 31 0 10 9 0 9 35 0 35 32 0 9 21 0 21 34 0 34 35 0 24 25 0 24 28 0 32 33 0 34 33 0
 		 6 0 0 13 16 0 7 1 0 8 2 0 15 14 0 9 3 0 20 21 0 10 4 0 22 19 0 5 11 0 15 21 0 20 14 0
 		 13 19 0 22 16 0 24 33 0 34 28 0 17 23 0 18 12 0;
-	setAttr -s 136 ".n[0:135]" -type "float3"  0 6.6748798e-006 -1 0 6.6748798e-006
-		 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1
-		 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 6.6748798e-006 -1 0 6.6748798e-006
-		 -1 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 1 3.4658101e-006 2.2907902e-006
-		 1 3.4658101e-006 2.2907902e-006 1 3.4658101e-006 2.2907902e-006 1 3.4658101e-006
-		 2.2907902e-006 -1 -8.34697e-007 -2.3262001e-007 -1 -1.4603e-006 -2.5617101e-008 -1
-		 -3.8555499e-006 -1.22547e-006 -1 -3.5393e-006 -2.8137201e-006 1.7202894e-006 -0.99982166
-		 0.018886793 1.2541604e-005 -0.9999553 0.009452193 8.3610112e-006 -0.99998003 0.0063069905
-		 1.7202894e-006 -0.99982166 0.018886793 -3.8970992e-008 0.99999577 0.0029192194 -1.9485498e-008
-		 0.99999887 0.0014588899 -3.8970995e-008 0.99999887 0.0014588899 -7.7941884e-008 0.99999577
-		 0.0029192194 -1 1.86991e-006 2.3484799e-006 -1 9.3495498e-007 1.17424e-006 -1 -1.4603e-006
-		 -2.5617101e-008 -1 -8.34697e-007 -2.3262001e-007 -1 -3.5790299e-006 -1.2321301e-006
-		 -1 -3.5790299e-006 -1.2321301e-006 -1 -3.5790299e-006 -1.2321301e-006 -1 -3.5790299e-006
-		 -1.2321301e-006 -2.5853794e-007 -0.9999488 0.010113598 -2.6795908e-006 -0.99999434
-		 0.0033772811 -4.0194004e-006 -0.99998719 0.0050575905 -2.5853794e-007 -0.9999488
-		 0.010113598 1 4.0917002e-006 4.5073803e-006 1 4.3533805e-006 2.2536901e-006 1 1.9854203e-006
-		 1.82025e-006 1 1.6633099e-006 3.6404999e-006 1 1.6633099e-006 3.6404999e-006 1 1.9854203e-006
-		 1.82025e-006 1 -3.82542e-007 1.3868101e-006 1 -7.6508502e-007 2.7736203e-006 -2.2045097e-006
-		 0.99999577 0.0029041294 -1.1022598e-006 0.99999887 0.0014513398 -5.5112889e-007 0.99999887
-		 0.0014551099 -1.1022597e-006 0.99999577 0.0029116792 -3.1658212e-005 0.13917203 0.99026823
-		 -3.0846313e-005 0.13917007 0.99026847 -3.5253001e-005 0.13916601 0.99026906 -3.5253001e-005
-		 0.13916601 0.99026906 -2.9860799e-005 0.13917401 0.99026799 -2.6439702e-005 0.13917401
-		 0.99026799 -3.0846313e-005 0.13917007 0.99026847 -3.1658212e-005 0.13917203 0.99026823
-		 -2.5314584e-005 0.13916992 0.99026847 -2.5314584e-005 0.13916992 0.99026847 -2.9533683e-005
-		 0.13916992 0.99026847 -3.0783111e-005 0.13917105 0.99026829 -3.0783111e-005 0.13917105
-		 0.99026829 -2.9533683e-005 0.13916992 0.99026847 -3.3752814e-005 0.13917007 0.99026847
-		 -3.351731e-005 0.13917203 0.99026823 8.3610112e-006 -0.99998003 0.0063069905 1.2541604e-005
-		 -0.9999553 0.009452193 2.3361799e-005 -1 1.6686901e-005 1.16809e-005 -1 1.6687e-005
-		 -1 -3.8555499e-006 -1.22547e-006 -1 -1.4603e-006 -2.5617101e-008 -1 -2.0859e-006
-		 1.81385e-007 -1 -4.1717999e-006 3.6277103e-007 -1 -1.4603e-006 -2.5617101e-008 -1
-		 9.3495498e-007 1.17424e-006 -1 0 0 -1 -2.0859e-006 1.81385e-007 -3.8970995e-008 0.99999887
-		 0.0014588899 -1.9485498e-008 0.99999887 0.0014588899 0 1 -1.45106e-006 0 1 -1.45106e-006
-		 -5.5112889e-007 0.99999887 0.0014551099 -1.1022598e-006 0.99999887 0.0014513398 0
-		 1 -1.45106e-006 0 1 -1.45106e-006 1 -3.82542e-007 1.3868101e-006 1 1.9854203e-006
-		 1.82025e-006 1 2.3075302e-006 -3.34836e-012 1 0 0 -4.0194004e-006 -0.99998719 0.0050575905
-		 -2.6795908e-006 -0.99999434 0.0033772811 -3.8900803e-006 -1 9.06901e-006 -7.7801496e-006
-		 -1 1.45106e-006 1 1.9854203e-006 1.82025e-006 1 4.3533805e-006 2.2536901e-006 1 4.6150499e-006
-		 -6.69671e-012 1 2.3075302e-006 -3.34836e-012 -1.9485498e-008 0.99999887 0.0014588899
-		 -5.5112889e-007 0.99999887 0.0014551099 0 1 -1.45106e-006 0 1 -1.45106e-006 1.16809e-005
-		 -1 1.6687e-005 -3.8900803e-006 -1 9.06901e-006 -2.6795908e-006 -0.99999434 0.0033772811
-		 8.3610112e-006 -0.99998003 0.0063069905 -3.1658212e-005 0.13917203 0.99026823 -3.0783111e-005
-		 0.13917105 0.99026829 -3.351731e-005 0.13917203 0.99026823 -2.9860799e-005 0.13917401
-		 0.99026799 -1.9485498e-008 0.99999887 0.0014588899 -3.8970992e-008 0.99999577 0.0029192194
-		 -1.1022597e-006 0.99999577 0.0029116792 -5.5112889e-007 0.99999887 0.0014551099 1.4995701e-006
-		 -0.99998707 0.0050677108 1.4995701e-006 -0.99998707 0.0050677108 1.4995701e-006 -0.99998707
-		 0.0050677108 1.4995701e-006 -0.99998707 0.0050677108 0 -6.6748798e-006 1 0 -6.6748798e-006
-		 1 0 -6.6748798e-006 1 0 -6.6748798e-006 1 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006
-		 -1 0 6.6748798e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 6.6748798e-006 -1;
+	setAttr -s 136 ".n[0:135]" -type "float3"  0 6.6748798e-06 -1 0 6.6748798e-06
+		 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0
+		 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06 -1 0 6.6748798e-06
+		 -1 0 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 1 3.4658101e-06 2.2907902e-06
+		 1 3.4658101e-06 2.2907902e-06 1 3.4658101e-06 2.2907902e-06 1 3.4658101e-06 2.2907902e-06
+		 -1 -8.34697e-07 -2.3262001e-07 -1 -1.4603e-06 -2.5617101e-08 -1 -3.8555499e-06 -1.22547e-06
+		 -1 -3.5393e-06 -2.8137201e-06 1.7202894e-06 -0.99982166 0.018886793 1.2541604e-05
+		 -0.9999553 0.009452193 8.3610112e-06 -0.99998003 0.0063069905 1.7202894e-06 -0.99982166
+		 0.018886793 -3.8970992e-08 0.99999577 0.0029192194 -1.9485498e-08 0.99999887 0.0014588899
+		 -3.8970995e-08 0.99999887 0.0014588899 -7.7941884e-08 0.99999577 0.0029192194 -1
+		 1.86991e-06 2.3484799e-06 -1 9.3495498e-07 1.17424e-06 -1 -1.4603e-06 -2.5617101e-08
+		 -1 -8.34697e-07 -2.3262001e-07 -1 -3.5790299e-06 -1.2321301e-06 -1 -3.5790299e-06
+		 -1.2321301e-06 -1 -3.5790299e-06 -1.2321301e-06 -1 -3.5790299e-06 -1.2321301e-06
+		 -2.5853794e-07 -0.9999488 0.010113598 -2.6795908e-06 -0.99999434 0.0033772811 -4.0194004e-06
+		 -0.99998719 0.0050575905 -2.5853794e-07 -0.9999488 0.010113598 1 4.0917002e-06 4.5073803e-06
+		 1 4.3533805e-06 2.2536901e-06 1 1.9854203e-06 1.82025e-06 1 1.6633099e-06 3.6404999e-06
+		 1 1.6633099e-06 3.6404999e-06 1 1.9854203e-06 1.82025e-06 1 -3.82542e-07 1.3868101e-06
+		 1 -7.6508502e-07 2.7736203e-06 -2.2045097e-06 0.99999577 0.0029041294 -1.1022598e-06
+		 0.99999887 0.0014513398 -5.5112889e-07 0.99999887 0.0014551099 -1.1022597e-06 0.99999577
+		 0.0029116792 -3.1658212e-05 0.13917203 0.99026823 -3.0846313e-05 0.13917007 0.99026847
+		 -3.5253001e-05 0.13916601 0.99026906 -3.5253001e-05 0.13916601 0.99026906 -2.9860799e-05
+		 0.13917401 0.99026799 -2.6439702e-05 0.13917401 0.99026799 -3.0846313e-05 0.13917007
+		 0.99026847 -3.1658212e-05 0.13917203 0.99026823 -2.5314584e-05 0.13916992 0.99026847
+		 -2.5314584e-05 0.13916992 0.99026847 -2.9533683e-05 0.13916992 0.99026847 -3.0783111e-05
+		 0.13917105 0.99026829 -3.0783111e-05 0.13917105 0.99026829 -2.9533683e-05 0.13916992
+		 0.99026847 -3.3752814e-05 0.13917007 0.99026847 -3.351731e-05 0.13917203 0.99026823
+		 8.3610112e-06 -0.99998003 0.0063069905 1.2541604e-05 -0.9999553 0.009452193 2.3361799e-05
+		 -1 1.6686901e-05 1.16809e-05 -1 1.6687e-05 -1 -3.8555499e-06 -1.22547e-06 -1 -1.4603e-06
+		 -2.5617101e-08 -1 -2.0859e-06 1.81385e-07 -1 -4.1717999e-06 3.6277103e-07 -1 -1.4603e-06
+		 -2.5617101e-08 -1 9.3495498e-07 1.17424e-06 -1 0 0 -1 -2.0859e-06 1.81385e-07 -3.8970995e-08
+		 0.99999887 0.0014588899 -1.9485498e-08 0.99999887 0.0014588899 0 1 -1.45106e-06 0
+		 1 -1.45106e-06 -5.5112889e-07 0.99999887 0.0014551099 -1.1022598e-06 0.99999887 0.0014513398
+		 0 1 -1.45106e-06 0 1 -1.45106e-06 1 -3.82542e-07 1.3868101e-06 1 1.9854203e-06 1.82025e-06
+		 1 2.3075302e-06 -3.34836e-12 1 0 0 -4.0194004e-06 -0.99998719 0.0050575905 -2.6795908e-06
+		 -0.99999434 0.0033772811 -3.8900803e-06 -1 9.06901e-06 -7.7801496e-06 -1 1.45106e-06
+		 1 1.9854203e-06 1.82025e-06 1 4.3533805e-06 2.2536901e-06 1 4.6150499e-06 -6.69671e-12
+		 1 2.3075302e-06 -3.34836e-12 -1.9485498e-08 0.99999887 0.0014588899 -5.5112889e-07
+		 0.99999887 0.0014551099 0 1 -1.45106e-06 0 1 -1.45106e-06 1.16809e-05 -1 1.6687e-05
+		 -3.8900803e-06 -1 9.06901e-06 -2.6795908e-06 -0.99999434 0.0033772811 8.3610112e-06
+		 -0.99998003 0.0063069905 -3.1658212e-05 0.13917203 0.99026823 -3.0783111e-05 0.13917105
+		 0.99026829 -3.351731e-05 0.13917203 0.99026823 -2.9860799e-05 0.13917401 0.99026799
+		 -1.9485498e-08 0.99999887 0.0014588899 -3.8970992e-08 0.99999577 0.0029192194 -1.1022597e-06
+		 0.99999577 0.0029116792 -5.5112889e-07 0.99999887 0.0014551099 1.4995701e-06 -0.99998707
+		 0.0050677108 1.4995701e-06 -0.99998707 0.0050677108 1.4995701e-06 -0.99998707 0.0050677108
+		 1.4995701e-06 -0.99998707 0.0050677108 0 -6.6748798e-06 1 0 -6.6748798e-06 1 0 -6.6748798e-06
+		 1 0 -6.6748798e-06 1 0 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06
+		 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06 -1;
 	setAttr -s 34 -ch 136 ".fc[0:33]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -16349,9 +15050,9 @@ createNode mesh -n "polySurface911Shape" -p "polySurface911";
 		 0.0039113294 0.99995393 -0.0087674791 0.0039113294 0.99995393 -0.0082157832 0 0.99996632
 		 -0.0087674791 0.0039113294 0.99995393 -0.0044830819 0.010722304 0.99993241 -0.0044830819
 		 0.010722304 0.99993241 -0.0087674791 0.0039113294 0.99995393 -0.0044830819 0.010722304
-		 0.99993241 -5.2421101e-010 0.011655801 0.99993205 -5.2421101e-010 0.011655801 0.99993205
-		 -0.0044830819 0.010722304 0.99993241 -5.2421101e-010 0.011655801 0.99993205 0.0045366297
-		 0.0088030193 0.99995089 0.0045366297 0.0088030193 0.99995089 -5.2421101e-010 0.011655801
+		 0.99993241 -5.2421101e-10 0.011655801 0.99993205 -5.2421101e-10 0.011655801 0.99993205
+		 -0.0044830819 0.010722304 0.99993241 -5.2421101e-10 0.011655801 0.99993205 0.0045366297
+		 0.0088030193 0.99995089 0.0045366297 0.0088030193 0.99995089 -5.2421101e-10 0.011655801
 		 0.99993205 0.0045366297 0.0088030193 0.99995089 0.010151196 0.0039580688 0.99994063
 		 0.010151196 0.0039580688 0.99994063 0.0045366297 0.0088030193 0.99995089 0.010151196
 		 0.0039580688 0.99994063 0.0099000512 0 0.99995106 0.0099000512 0 0.99995106 0.010151196
@@ -16363,10 +15064,10 @@ createNode mesh -n "polySurface911Shape" -p "polySurface911";
 		 -0.99995089 0.0082154516 0 -0.99996632 0.008767019 0.0039115394 -0.99995393 0.008767019
 		 0.0039115394 -0.99995393 0.0082154516 0 -0.99996632 0.008767019 0.0039115394 -0.99995393
 		 0.0044822316 0.010723404 -0.99993241 0.0044822316 0.010723404 -0.99993241 0.008767019
-		 0.0039115394 -0.99995393 0.0044822316 0.010723404 -0.99993241 5.5009408e-010 0.011656501
-		 -0.99993205 5.5009408e-010 0.011656501 -0.99993205 0.0044822316 0.010723404 -0.99993241
-		 5.5009408e-010 0.011656501 -0.99993205 -0.0045361295 0.0088033294 -0.99995089 -0.0045361295
-		 0.0088033294 -0.99995089 5.5009408e-010 0.011656501 -0.99993205 -0.0045361295 0.0088033294
+		 0.0039115394 -0.99995393 0.0044822316 0.010723404 -0.99993241 5.5009408e-10 0.011656501
+		 -0.99993205 5.5009408e-10 0.011656501 -0.99993205 0.0044822316 0.010723404 -0.99993241
+		 5.5009408e-10 0.011656501 -0.99993205 -0.0045361295 0.0088033294 -0.99995089 -0.0045361295
+		 0.0088033294 -0.99995089 5.5009408e-10 0.011656501 -0.99993205 -0.0045361295 0.0088033294
 		 -0.99995089 -0.010150996 0.0039585787 -0.99994063 -0.010150996 0.0039585787 -0.99994063
 		 -0.0045361295 0.0088033294 -0.99995089 -0.010150996 0.0039585787 -0.99994063 -0.00989966
 		 0 -0.99995106 -0.00989966 0 -0.99995106 -0.010150996 0.0039585787 -0.99994063 -0.00989966
@@ -16381,35 +15082,35 @@ createNode mesh -n "polySurface911Shape" -p "polySurface911";
 		 -0.99995154 0 -0.014848295 -0.99988973 0.01803281 -0.012404306 -0.99976051 0.01803281
 		 -0.012404306 -0.99976051 0 -0.014848295 -0.99988973 0.01803281 -0.012404306 -0.99976051
 		 0.024921609 -0.005664852 -0.99967337 0.024921609 -0.005664852 -0.99967337 0.01803281
-		 -0.012404306 -0.99976051 -0.32873115 -0.94442356 -7.4374235e-005 -0.69636488 -0.7176879
-		 -1.2459397e-005 -0.69636488 -0.7176879 -1.2459397e-005 -0.32873115 -0.94442356 -7.4374235e-005
-		 -0.96001011 0.27996504 3.1558702e-005 -0.83605683 0.54864287 -2.9193495e-007 -0.83605683
-		 0.54864287 -2.9193495e-007 -0.96001011 0.27996504 3.1558702e-005 0.94200879 -0.33558798
+		 -0.012404306 -0.99976051 -0.32873115 -0.94442356 -7.4374235e-05 -0.69636488 -0.7176879
+		 -1.2459397e-05 -0.69636488 -0.7176879 -1.2459397e-05 -0.32873115 -0.94442356 -7.4374235e-05
+		 -0.96001011 0.27996504 3.1558702e-05 -0.83605683 0.54864287 -2.9193495e-07 -0.83605683
+		 0.54864287 -2.9193495e-07 -0.96001011 0.27996504 3.1558702e-05 0.94200879 -0.33558798
 		 -0.00015908299 0.69636285 -0.71768981 0.00015166597 0.69636285 -0.71768981 0.00015166597
-		 0.94200879 -0.33558798 -0.00015908299 -0.99999982 0.00065505691 7.538639e-007 -0.96001011
-		 0.27996504 3.1558702e-005 -0.96001011 0.27996504 3.1558702e-005 -0.99999982 0.00065505691
-		 7.538639e-007 0.99999982 0.00065504981 -3.1152591e-005 0.94200879 -0.33558798 -0.00015908299
-		 0.94200879 -0.33558798 -0.00015908299 0.99999982 0.00065504981 -3.1152591e-005 0.69636285
+		 0.94200879 -0.33558798 -0.00015908299 -0.99999982 0.00065505691 7.538639e-07 -0.96001011
+		 0.27996504 3.1558702e-05 -0.96001011 0.27996504 3.1558702e-05 -0.99999982 0.00065505691
+		 7.538639e-07 0.99999982 0.00065504981 -3.1152591e-05 0.94200879 -0.33558798 -0.00015908299
+		 0.94200879 -0.33558798 -0.00015908299 0.99999982 0.00065504981 -3.1152591e-05 0.69636285
 		 -0.71768981 0.00015166597 0.32872909 -0.94442421 0.00037567309 0.32872909 -0.94442421
-		 0.00037567309 0.69636285 -0.71768981 0.00015166597 -0.51970792 0.85434395 -2.4639098e-007
-		 7.6854096e-009 1 5.5076804e-008 7.6854096e-009 1 5.5076804e-008 -0.51970792 0.85434395
-		 -2.4639098e-007 0.51970792 0.85434395 1.7037198e-007 0.83605683 0.54864287 -2.1181796e-008
-		 0.83605683 0.54864287 -2.1181796e-008 0.51970792 0.85434395 1.7037198e-007 7.6854096e-009
-		 1 5.5076804e-008 0.51970792 0.85434395 1.7037198e-007 0.51970792 0.85434395 1.7037198e-007
-		 7.6854096e-009 1 5.5076804e-008 -0.83605683 0.54864287 -2.9193495e-007 -0.51970792
-		 0.85434395 -2.4639098e-007;
-	setAttr ".n[166:191]" -type "float3"  -0.51970792 0.85434395 -2.4639098e-007
-		 -0.83605683 0.54864287 -2.9193495e-007 -0.94200879 -0.33558798 3.1217798e-005 -0.99999982
-		 0.00065505691 7.538639e-007 -0.99999982 0.00065505691 7.538639e-007 -0.94200879 -0.33558798
-		 3.1217798e-005 0.32872909 -0.94442421 0.00037567309 -1.5061302e-008 -1 9.8302102e-005
-		 -1.5061302e-008 -1 9.8302102e-005 0.32872909 -0.94442421 0.00037567309 -0.69636488
-		 -0.7176879 -1.2459397e-005 -0.94200879 -0.33558798 3.1217798e-005 -0.94200879 -0.33558798
-		 3.1217798e-005 -0.69636488 -0.7176879 -1.2459397e-005 0.96001011 0.27996504 -1.8593602e-007
-		 0.99999982 0.00065504981 -3.1152591e-005 0.99999982 0.00065504981 -3.1152591e-005
-		 0.96001011 0.27996504 -1.8593602e-007 -1.5061302e-008 -1 9.8302102e-005 -0.32873115
-		 -0.94442356 -7.4374235e-005 -0.32873115 -0.94442356 -7.4374235e-005 -1.5061302e-008
-		 -1 9.8302102e-005 0.83605683 0.54864287 -2.1181796e-008 0.96001011 0.27996504 -1.8593602e-007
-		 0.96001011 0.27996504 -1.8593602e-007 0.83605683 0.54864287 -2.1181796e-008;
+		 0.00037567309 0.69636285 -0.71768981 0.00015166597 -0.51970792 0.85434395 -2.4639098e-07
+		 7.6854096e-09 1 5.5076804e-08 7.6854096e-09 1 5.5076804e-08 -0.51970792 0.85434395
+		 -2.4639098e-07 0.51970792 0.85434395 1.7037198e-07 0.83605683 0.54864287 -2.1181796e-08
+		 0.83605683 0.54864287 -2.1181796e-08 0.51970792 0.85434395 1.7037198e-07 7.6854096e-09
+		 1 5.5076804e-08 0.51970792 0.85434395 1.7037198e-07 0.51970792 0.85434395 1.7037198e-07
+		 7.6854096e-09 1 5.5076804e-08 -0.83605683 0.54864287 -2.9193495e-07 -0.51970792 0.85434395
+		 -2.4639098e-07;
+	setAttr ".n[166:191]" -type "float3"  -0.51970792 0.85434395 -2.4639098e-07
+		 -0.83605683 0.54864287 -2.9193495e-07 -0.94200879 -0.33558798 3.1217798e-05 -0.99999982
+		 0.00065505691 7.538639e-07 -0.99999982 0.00065505691 7.538639e-07 -0.94200879 -0.33558798
+		 3.1217798e-05 0.32872909 -0.94442421 0.00037567309 -1.5061302e-08 -1 9.8302102e-05
+		 -1.5061302e-08 -1 9.8302102e-05 0.32872909 -0.94442421 0.00037567309 -0.69636488
+		 -0.7176879 -1.2459397e-05 -0.94200879 -0.33558798 3.1217798e-05 -0.94200879 -0.33558798
+		 3.1217798e-05 -0.69636488 -0.7176879 -1.2459397e-05 0.96001011 0.27996504 -1.8593602e-07
+		 0.99999982 0.00065504981 -3.1152591e-05 0.99999982 0.00065504981 -3.1152591e-05 0.96001011
+		 0.27996504 -1.8593602e-07 -1.5061302e-08 -1 9.8302102e-05 -0.32873115 -0.94442356
+		 -7.4374235e-05 -0.32873115 -0.94442356 -7.4374235e-05 -1.5061302e-08 -1 9.8302102e-05
+		 0.83605683 0.54864287 -2.1181796e-08 0.96001011 0.27996504 -1.8593602e-07 0.96001011
+		 0.27996504 -1.8593602e-07 0.83605683 0.54864287 -2.1181796e-08;
 	setAttr -s 48 -ch 192 ".fc[0:47]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -16660,8 +15361,8 @@ createNode mesh -n "polySurface912Shape" -p "polySurface912";
 		 -0.16691901 -0.96119803 -0.21962802 -0.13313901 -0.94110501 -0.31079802 -0.16708396
 		 0.97750783 0.12869097 -0.13548599 0.98230296 0.12932299 -0.13548599 0.98230296 0.12932299
 		 -0.16708301 0.97750807 0.128691 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0
-		 -1 0 0 7.1558588e-008 0.13052697 -0.99144489 3.5779294e-008 0.13052697 -0.99144489
-		 -0.08789029 0.13002199 -0.98760796 -0.087890193 0.13002199 -0.98760796 3.5779294e-008
+		 -1 0 0 7.1558588e-08 0.13052697 -0.99144489 3.5779294e-08 0.13052697 -0.99144489
+		 -0.08789029 0.13002199 -0.98760796 -0.087890193 0.13002199 -0.98760796 3.5779294e-08
 		 0.13052697 -0.99144489 0 0.13052697 -0.99144489 -0.08789029 0.13002199 -0.98760796
 		 -0.08789029 0.13002199 -0.98760796;
 	setAttr -s 32 -ch 128 ".fc[0:31]" -type "polyFaces" 
@@ -17264,10 +15965,10 @@ createNode mesh -n "polySurface915Shape" -p "polySurface915";
 		 -0.12932201 0.13313901 -0.94110501 -0.31079802 0.16691901 -0.96119803 -0.21962802
 		 0.16708396 -0.97750783 -0.12869097 0.16708396 0.97750783 0.12869097 0.16708301 0.97750807
 		 0.128691 0.13548599 0.98230296 0.12932299 0.13548599 0.98230296 0.12932299 1 0 0
-		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -7.1558588e-008 0.13052697 -0.99144489
-		 0.087890193 0.13002199 -0.98760796 0.08789029 0.13002199 -0.98760796 -3.5779294e-008
-		 0.13052697 -0.99144489 -3.5779294e-008 0.13052697 -0.99144489 0.08789029 0.13002199
-		 -0.98760796 0.08789029 0.13002199 -0.98760796 0 0.13052697 -0.99144489;
+		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -7.1558588e-08 0.13052697 -0.99144489 0.087890193
+		 0.13002199 -0.98760796 0.08789029 0.13002199 -0.98760796 -3.5779294e-08 0.13052697
+		 -0.99144489 -3.5779294e-08 0.13052697 -0.99144489 0.08789029 0.13002199 -0.98760796
+		 0.08789029 0.13002199 -0.98760796 0 0.13052697 -0.99144489;
 	setAttr -s 32 -ch 128 ".fc[0:31]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -17649,15 +16350,15 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 4.0018320084 1.65200341 0.78533274 4.049062729 1.82664633 0.77440381 5.072072506 2.38535094 1.48557782
 		 5.23488188 2.4302671 1.36813378 5.26472759 2.6699574 1.36570883 -3.8227458 1.85716593 1.80188048
 		 -1.89776802 1.94713223 0.12512541 -1.90458369 1.52748072 0.23886798 1.89776802 1.94713223 0.12512541
-		 1.90458369 1.52748072 0.23886798 3.9796488e-010 2.82999802 -0.18371351 1.27992272 2.77428198 -0.17930226
-		 1.43662 2.96132183 1.2984517e-008 0 3.024991751 0 1.59331739 3.10818553 -0.035648521
-		 0 3.12273502 -0.012118526 -1.27992272 2.77428198 -0.17930226 -1.43662 2.96132183 1.2955724e-008
+		 1.90458369 1.52748072 0.23886798 3.9796488e-10 2.82999802 -0.18371351 1.27992272 2.77428198 -0.17930226
+		 1.43662 2.96132183 1.2984517e-08 0 3.024991751 0 1.59331739 3.10818553 -0.035648521
+		 0 3.12273502 -0.012118526 -1.27992272 2.77428198 -0.17930226 -1.43662 2.96132183 1.2955724e-08
 		 -1.59331739 3.10818553 -0.035648521 1.28249121 2.37932444 -0.08982522 1.28546131 1.76272273 0.0043830723
 		 1.4438566 1.63885534 0.23886798 1.44041288 2.42130876 0.12512541 1.60225177 1.4748019 0.25840229
 		 1.55005121 2.30763841 0.12512541 -1.28546131 1.76272273 0.0043830723 -1.28249121 2.37932444 -0.08982522
 		 -1.44041288 2.42130876 0.12512541 -1.4438566 1.63885534 0.23886798 -1.55005121 2.30763841 0.12512541
-		 -1.60225177 1.4748019 0.25840229 3.9796488e-010 1.82445574 0.021263331 0 1.70994365 0.26802453
-		 0 1.42770481 0.43019444 3.9796488e-010 2.3646841 -0.08982522 5.38726568 1.61898232 5.3903265
+		 -1.60225177 1.4748019 0.25840229 3.9796488e-10 1.82445574 0.021263331 0 1.70994365 0.26802453
+		 0 1.42770481 0.43019444 3.9796488e-10 2.3646841 -0.08982522 5.38726568 1.61898232 5.3903265
 		 5.44705153 1.63686097 3.10305357 6.5032115 2.39240098 5.39023066 6.47221851 2.43482041 3.0751791
 		 -5.44705153 1.63686097 3.10305357 -5.38726568 1.61898232 5.3903265 -6.47221851 2.43482041 3.0751791
 		 -6.5032115 2.39240098 5.39023066 -5.53381348 1.52244437 5.33431864 -6.56247139 2.22845268 5.33417511
@@ -17731,7 +16432,7 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 -0.084528625 -0.72458118 0.68398619 -0.00055785174 0.99990267 0.013939995 -0.30994004
 		 0.95075613 0 -0.30994004 0.95075613 0 -0.180723 0.98353404 0 0.18657492 0.9740926
 		 0.12780194 -0.019929402 0.99791604 -0.0613713 0.011869006 0.99992251 -0.0037725819
-		 0.027819809 0.98285633 0.18226206 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 -0.0083033359
+		 0.027819809 0.98285633 0.18226206 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 -0.0083033359
 		 -0.99979359 0.01854329 -0.0083047794 -0.99927694 0.037103295 0.0064183618 -0.9998073
 		 0.018552806 0.0064150519 -0.99997938 0 0 -1 0 0 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0
 		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0
@@ -17742,23 +16443,23 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 0.84158492 0.076829106 0.53756005 0.8397181 0.076829106 0.53756005 0.8397181 -0.13332705
 		 0.9804883 0.14445303 -0.10891506 0.99394655 -0.014418506 -0.28699508 0.95751333 -0.028321011
 		 -0.17954606 0.97616822 0.12189703 -0.17954606 0.97616822 0.12189703 0.027819809 0.98285633
-		 0.18226206 0.011970404 0.88017023 0.47450715 -0.10657401 0.93185413 0.34682804 -2.7880203e-009
-		 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009
-		 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 0 -1 0 0 -1 0
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.018339297 -0.9998318 0 0.013806094
-		 -0.99990469 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318
-		 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.0057155923
-		 0.013437804 -0.99989337 0 0.018339297 -0.9998318 0 0.03667251 -0.9993273 0 0.027610095
-		 -0.99961883 0 0.013806094 -0.99990469 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318
-		 0 0.018339297 -0.9998318 0 0.03667251 -0.9993273 0 0.03667251 -0.9993273 0 0.03667251
-		 -0.9993273 0 0.03667251 -0.9993273 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318
-		 0 0.018339297 -0.9998318 0.0057155923 0.013437804 -0.99989337 0.011430605 0.026874213
-		 -0.99957347 0 0.03667251 -0.9993273 0.075877383 -0.97952282 0.18648796 0.10278199
-		 -0.94661987 0.30552697 0.17196093 -0.8645367 0.47223482 0.15118897 -0.94927675 0.27570894
-		 0.15118897 -0.94927675 0.27570894 0 -0.96031582 0.27891493 0 -0.99002922 0.14086205
-		 0.075877383 -0.97952282 0.18648796 -0.13034999 -0.98226798 0.134754 0 -0.99002922
-		 0.14086205 0 -0.96031582 0.27891493 -0.26048508 -0.9271633 0.26928708 -0.26048508
-		 -0.9271633 0.26928708 -0.34657493 -0.82794082 0.44090793;
+		 0.18226206 0.011970404 0.88017023 0.47450715 -0.10657401 0.93185413 0.34682804 -2.7880203e-09
+		 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1
+		 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 0 -1 0 0 -1 0 0 -1
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.018339297 -0.9998318 0 0.013806094 -0.99990469
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318 0 0.018339297
+		 -0.9998318 0 0.018339297 -0.9998318 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.0057155923 0.013437804
+		 -0.99989337 0 0.018339297 -0.9998318 0 0.03667251 -0.9993273 0 0.027610095 -0.99961883
+		 0 0.013806094 -0.99990469 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318 0 0.018339297
+		 -0.9998318 0 0.03667251 -0.9993273 0 0.03667251 -0.9993273 0 0.03667251 -0.9993273
+		 0 0.03667251 -0.9993273 0 0.018339297 -0.9998318 0 0.018339297 -0.9998318 0 0.018339297
+		 -0.9998318 0.0057155923 0.013437804 -0.99989337 0.011430605 0.026874213 -0.99957347
+		 0 0.03667251 -0.9993273 0.075877383 -0.97952282 0.18648796 0.10278199 -0.94661987
+		 0.30552697 0.17196093 -0.8645367 0.47223482 0.15118897 -0.94927675 0.27570894 0.15118897
+		 -0.94927675 0.27570894 0 -0.96031582 0.27891493 0 -0.99002922 0.14086205 0.075877383
+		 -0.97952282 0.18648796 -0.13034999 -0.98226798 0.134754 0 -0.99002922 0.14086205
+		 0 -0.96031582 0.27891493 -0.26048508 -0.9271633 0.26928708 -0.26048508 -0.9271633
+		 0.26928708 -0.34657493 -0.82794082 0.44090793;
 	setAttr ".n[166:331]" -type "float3"  -0.19913413 -0.94001156 0.27699116 -0.13034999
 		 -0.98226798 0.134754 0.82946283 0 0.55856186 0.82946283 0 0.55856186 0.82946283 0
 		 0.55856186 0.82946283 0 0.55856186 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
@@ -17769,7 +16470,7 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 -0.33132911 -0.11672899 0.96464396 -0.23629697 0 0.9764179 -0.21588898 0 0.88825786
 		 -0.45934498 0 0.88825786 -0.45934498 0 0.88825786 -0.45934498 0.10549305 0.96563035
 		 -0.23754807 -0.019929402 0.99791604 -0.0613713 -0.11672899 0.96464396 -0.23629697
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.0083033359 -0.99979359 0.01854329 -2.7880203e-009
+		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.0083033359 -0.99979359 0.01854329 -2.7880203e-09
 		 -1 0 0 -1 0 0 -1 0 0 -1 0 0.0064150519 -0.99997938 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0
 		 0 -1 0 0 0.9998948 -0.014504797 0.098397978 0.98578078 0.13621397 0.098397978 0.98578078
 		 0.13621397 0 0.9998948 -0.014504797 0 0.9998948 -0.014504797 0 0.9998948 -0.014504797
@@ -17781,8 +16482,8 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 -0.13332705 0.9804883 0.14445303 0 0.9998948 -0.014504797 0 0.53915292 0.84220791
 		 0 0.53915292 0.84220791 0 0.53915292 0.84220791 0 0.53915292 0.84220791 0 0.53915292
 		 0.84220791 -0.089092813 0.73600304 0.67109007 -0.089092813 0.73600304 0.67109007
-		 0 0.53915292 0.84220791 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009
-		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009
+		 0 0.53915292 0.84220791 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09
+		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09
 		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0
 		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 -1 0 0 -0.99969512 0.024668703 0.0010380301
 		 -0.99961483 0.027730795 0.0011668798 -0.99961483 0.027730795 0.0011668798 -0.99969512
@@ -17844,7 +16545,7 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 0.79701787 0.59560186 0.047011402 0.78719705 0.61490709 -0.037392817 0.69341737 0.71956533
 		 -0.13503194 0.9138186 0.38301685 -0.044282511 0.92907023 0.36724308 -0.044282511
 		 0.92907023 0.36724308 -0.0044630715 0.92704922 0.37491313 0 0.79224253 0.61020643
-		 0.047011402 0.78719705 0.61490709 0 -1 0 -2.7880203e-009 -1 0 -0.0083047794 -0.99927694
+		 0.047011402 0.78719705 0.61490709 0 -1 0 -2.7880203e-09 -1 0 -0.0083047794 -0.99927694
 		 0.037103295 0 -0.99931127 0.03710971 0 -0.99931127 0.03710971 0 -0.99931127 0.03710971
 		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.99931127 0.03710971 0 -0.99931127 0.03710971 0 -0.99931127
 		 0.03710971 0.0064183618 -0.9998073 0.018552806 0 -1 0 0 -1 0 0.21520399 0.97652191
@@ -17862,54 +16563,53 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 0.048950899 0.99651909 -0.0674804 0.027819809 0.98285633 0.18226206 -0.17954606 0.97616822
 		 0.12189703 -0.060665976 0.99800164 0.017678095 -0.060665976 0.99800164 0.017678095
 		 -0.011097801 0.99981099 0.015958702 0.011316704 0.98970336 -0.14268605 0.048950899
-		 0.99651909 -0.0674804 0 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 0 -1 0 0 -1
-		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-009 -1 0 -2.7880203e-009 -1 0 0 -1 0 0
-		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.99724573 0.07416828
-		 -0.028308095 -0.99575186 0.087617993 -0.067274161 -0.89992553 0.43082276 0 -0.99724573
-		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
+		 0.99651909 -0.0674804 0 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 0 -1 0 0 -1
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -2.7880203e-09 -1 0 -2.7880203e-09 -1 0 0 -1 0 0 -1
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.99724573 0.07416828 -0.028308095
+		 -0.99575186 0.087617993 -0.067274161 -0.89992553 0.43082276 0 -0.99724573 0.07416828
 		 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573
-		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0.054486226 -0.91008949
-		 0.41081417 0.024125088 -0.99695551 0.074146673 0 -0.99724573 0.07416828 0 -0.99931127
-		 0.03710971 -0.0083047794 -0.99927694 0.037103295 -0.014722098 -0.99834174 0.05565099
+		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
+		 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0.054486226 -0.91008949 0.41081417
+		 0.024125088 -0.99695551 0.074146673 0 -0.99724573 0.07416828 0 -0.99931127 0.03710971
+		 -0.0083047794 -0.99927694 0.037103295 -0.014722098 -0.99834174 0.05565099 0 -0.99724573
+		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99931127 0.03710971
+		 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 -0.014722098 -0.99834174 0.05565099
+		 -0.028308095 -0.99575186 0.087617993 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
 		 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99931127
-		 0.03710971 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 -0.014722098 -0.99834174
-		 0.05565099 -0.028308095 -0.99575186 0.087617993 0 -0.99724573 0.07416828 0 -0.99724573
-		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
-		 0 -0.99931127 0.03710971 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 0 -0.99724573
-		 0.07416828 0 -0.99724573 0.07416828 0.014722098 -0.99834174 0.05565099 0.0064183618
-		 -0.9998073 0.018552806 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 0 -0.99724573
-		 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
-		 0.024125088 -0.99695551 0.074146673 0.014722098 -0.99834174 0.05565099 0 -0.99724573
-		 0.07416828 0.97162706 0.23651402 0.0013732001 0.97162706 0.23651402 0.0013732001
-		 0.97162706 0.23651402 0.0013732001 0.97162706 0.23651402 0.0013732001 -0.45010486
-		 0.76714772 0.45704481 -0.45010486 0.76714772 0.45704481 -0.45010486 0.76714772 0.45704481
-		 -0.45010486 0.76714772 0.45704481 0.96593535 0.17062606 0.19456507 0.96593535 0.17062606
-		 0.19456507 0.96593535 0.17062606 0.19456507 0.87986714 0.46639907 0.091135107 0.39667004
-		 0.89189506 -0.21720101 0.39667004 0.89189506 -0.21720101 0.39667004 0.89189506 -0.21720101
-		 0.39667004 0.89189506 -0.21720101 0.46333799 0.0727299 0.883192 0.46333799 0.0727299
-		 0.883192 0.27317816 0.17057008 0.94672042 0.46333799 0.0727299 0.883192 -0.601179
-		 -0.031045903 0.79851109 -0.601179 -0.031045903 0.79851109 -0.601179 -0.031045903
-		 0.79851109 -0.601179 -0.031045903 0.79851109 0.15392704 0.95955825 0.23570006 0.45192602
-		 0.89067703 -0.049570207 0.14841302 0.98704708 0.060924202 0.14434004 0.98646432 -0.077807233
-		 -0.9980405 0.062571332 -0.00011572707 -0.9980405 0.062571332 -0.00011572707 -0.9980405
-		 0.062571332 -0.00011572707 -0.9980405 0.062571332 -0.00011572707 0.45192602 0.89067703
-		 -0.049570207 0.71225005 0.70174003 -0.016148999 0.46511599 0.87628305 0.125679 0.45192602
-		 0.89067703 -0.049570207 0.47612804 0.53635401 0.69686908 0.47612804 0.53635401 0.69686908
-		 0.57090515 0.23006006 0.7881242 0.57090515 0.23006006 0.7881242 0.11836502 0.95334715
-		 0.27770302 0.11836502 0.95334715 0.27770302 0.15392704 0.95955825 0.23570006 0.14825997
-		 0.83755785 0.52584791 -0.9789179 0.12338398 0.16277596 -0.9789179 0.12338398 0.16277596
-		 -0.9291169 0.36320993 0.069428086 -0.9789179 0.12338398 0.16277596 -0.076172091 0.95985585
-		 -0.26995298 -0.076172091 0.95985585 -0.26995298 -0.22397697 0.82392895 -0.52055293
-		 -0.22397697 0.82392895 -0.52055293 -0.51569003 0.19173001 0.83504701 -0.51569003
-		 0.19173001 0.83504701 -0.52696794 0.45669794 0.71675092 -0.57933825 0.19213507 0.79211825
-		 0.47969788 0.87726986 0.016957296 0.10108498 0.98555088 0.13590899 0.135609 0.98843908
-		 0.067810498 0.54617596 0.83598691 -0.053081691 -0.26352799 0.84361601 0.46783003
-		 -0.63704604 0.75983107 0.12972701 -0.63101912 0.74574411 0.21373004 -0.2684159 0.94286966
-		 0.19735692 -0.20321001 0.25921801 0.94419903 0.069422804 0.25992104 0.96313107 0.27317816
-		 0.17057008 0.94672042 -0.224657 0.25831404 0.93957603 0.135609 0.98843908 0.067810498
-		 0.16879597 0.98547983 0.018366896 0.12402995 0.99065459 -0.056746073 0.24596895 0.95795685
-		 0.14770897;
+		 0.03710971 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
+		 0 -0.99724573 0.07416828 0.014722098 -0.99834174 0.05565099 0.0064183618 -0.9998073
+		 0.018552806 0 -0.99931127 0.03710971 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828
+		 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0 -0.99724573 0.07416828 0.024125088
+		 -0.99695551 0.074146673 0.014722098 -0.99834174 0.05565099 0 -0.99724573 0.07416828
+		 0.97162706 0.23651402 0.0013732001 0.97162706 0.23651402 0.0013732001 0.97162706
+		 0.23651402 0.0013732001 0.97162706 0.23651402 0.0013732001 -0.45010486 0.76714772
+		 0.45704481 -0.45010486 0.76714772 0.45704481 -0.45010486 0.76714772 0.45704481 -0.45010486
+		 0.76714772 0.45704481 0.96593535 0.17062606 0.19456507 0.96593535 0.17062606 0.19456507
+		 0.96593535 0.17062606 0.19456507 0.87986714 0.46639907 0.091135107 0.39667004 0.89189506
+		 -0.21720101 0.39667004 0.89189506 -0.21720101 0.39667004 0.89189506 -0.21720101 0.39667004
+		 0.89189506 -0.21720101 0.46333799 0.0727299 0.883192 0.46333799 0.0727299 0.883192
+		 0.27317816 0.17057008 0.94672042 0.46333799 0.0727299 0.883192 -0.601179 -0.031045903
+		 0.79851109 -0.601179 -0.031045903 0.79851109 -0.601179 -0.031045903 0.79851109 -0.601179
+		 -0.031045903 0.79851109 0.15392704 0.95955825 0.23570006 0.45192602 0.89067703 -0.049570207
+		 0.14841302 0.98704708 0.060924202 0.14434004 0.98646432 -0.077807233 -0.9980405 0.062571332
+		 -0.00011572707 -0.9980405 0.062571332 -0.00011572707 -0.9980405 0.062571332 -0.00011572707
+		 -0.9980405 0.062571332 -0.00011572707 0.45192602 0.89067703 -0.049570207 0.71225005
+		 0.70174003 -0.016148999 0.46511599 0.87628305 0.125679 0.45192602 0.89067703 -0.049570207
+		 0.47612804 0.53635401 0.69686908 0.47612804 0.53635401 0.69686908 0.57090515 0.23006006
+		 0.7881242 0.57090515 0.23006006 0.7881242 0.11836502 0.95334715 0.27770302 0.11836502
+		 0.95334715 0.27770302 0.15392704 0.95955825 0.23570006 0.14825997 0.83755785 0.52584791
+		 -0.9789179 0.12338398 0.16277596 -0.9789179 0.12338398 0.16277596 -0.9291169 0.36320993
+		 0.069428086 -0.9789179 0.12338398 0.16277596 -0.076172091 0.95985585 -0.26995298
+		 -0.076172091 0.95985585 -0.26995298 -0.22397697 0.82392895 -0.52055293 -0.22397697
+		 0.82392895 -0.52055293 -0.51569003 0.19173001 0.83504701 -0.51569003 0.19173001 0.83504701
+		 -0.52696794 0.45669794 0.71675092 -0.57933825 0.19213507 0.79211825 0.47969788 0.87726986
+		 0.016957296 0.10108498 0.98555088 0.13590899 0.135609 0.98843908 0.067810498 0.54617596
+		 0.83598691 -0.053081691 -0.26352799 0.84361601 0.46783003 -0.63704604 0.75983107
+		 0.12972701 -0.63101912 0.74574411 0.21373004 -0.2684159 0.94286966 0.19735692 -0.20321001
+		 0.25921801 0.94419903 0.069422804 0.25992104 0.96313107 0.27317816 0.17057008 0.94672042
+		 -0.224657 0.25831404 0.93957603 0.135609 0.98843908 0.067810498 0.16879597 0.98547983
+		 0.018366896 0.12402995 0.99065459 -0.056746073 0.24596895 0.95795685 0.14770897;
 	setAttr ".n[664:829]" -type "float3"  -0.019929402 0.99791604 -0.0613713 0.18657492
 		 0.9740926 0.12780194 0.16605093 0.95298356 0.25347489 0.16720594 0.98244768 0.082697272
 		 -0.6395722 0.19140805 0.74452025 -0.6395722 0.19140805 0.74452025 -0.57933825 0.19213507
@@ -17941,13 +16641,13 @@ createNode mesh -n "polySurface916Shape" -p "polySurface916";
 		 0.30487093 0.94558883 -0.80807263 0.12515794 0.57563376 -0.80960906 0.104893 0.57752103
 		 -0.80960906 0.104893 0.57752103 -0.80807263 0.12515794 0.57563376 0.007740079 0.17465097
 		 0.98459995 0.079341874 0.18494594 0.97954065 0.11089903 0.22321907 0.96843928 0.09459123
-		 0.20359805 0.97447431 0.048833694 0.89639986 0.44054794 -9.8501587e-005 0.90233481
+		 0.20359805 0.97447431 0.048833694 0.89639986 0.44054794 -9.8501587e-05 0.90233481
 		 0.43103594 -0.014668397 0.79955184 0.60041785 0.048833694 0.89639986 0.44054794 0.087774023
 		 0.14367804 0.98572421 -0.0076090521 0.32681909 0.94505626 -0.0076090521 0.32681909
 		 0.94505626 0.064201906 0.18350403 0.9809202 0.8076669 0.10515899 0.58018589 0.81106484
 		 0.12422797 0.57161289 0.81106484 0.12422797 0.57161289 0.8076669 0.10515899 0.58018589
 		 -0.129004 0.18369702 0.97448105 -0.12042706 0.2248861 0.96691447 -0.23773196 0.23302098
-		 0.94296587 -0.24918489 0.21819691 0.94355565 -9.8501587e-005 0.90233481 0.43103594
+		 0.94296587 -0.24918489 0.21819691 0.94355565 -9.8501587e-05 0.90233481 0.43103594
 		 -0.049030498 0.90599597 0.42043695 -0.047749814 0.73632318 0.67494315 -0.014668397
 		 0.79955184 0.60041785 -0.0041421796 0.66884089 0.7433939 -0.042867601 0.56179798
 		 0.82616299 -0.11364598 0.30487093 0.94558883 -0.0076090521 0.32681909 0.94505626
@@ -19150,8 +17850,8 @@ createNode mesh -n "polySurface938Shape" -p "polySurface938";
 		 0.99995005 0.0084215701 -0.0053911805 0.99995005 0.0084215701 -0.0053911805 0.99995005
 		 0.0084215701 -0.0053911805 -0.99995005 -0.0084205912 0.0053905505 -0.99995005 -0.0084205912
 		 0.0053905505 -0.99995005 -0.0084205912 0.0053905505 -0.99995005 -0.0084205912 0.0053905505
-		 -7.1775568e-009 0.53915179 0.84220862 -7.1775568e-009 0.53915179 0.84220862 -7.1775568e-009
-		 0.53915179 0.84220862 -7.1775568e-009 0.53915179 0.84220862 -0.010657699 0.84216094
+		 -7.1775568e-09 0.53915179 0.84220862 -7.1775568e-09 0.53915179 0.84220862 -7.1775568e-09
+		 0.53915179 0.84220862 -7.1775568e-09 0.53915179 0.84220862 -0.010657699 0.84216094
 		 -0.53912091 -0.010657699 0.84216094 -0.53912091 -0.010657699 0.84216094 -0.53912091
 		 -0.010657699 0.84216094 -0.53912091 0.010657592 -0.8421604 0.53912163 0.010657592
 		 -0.8421604 0.53912163 0.010657592 -0.8421604 0.53912163 0.010657592 -0.8421604 0.53912163;
@@ -19370,8 +18070,8 @@ createNode mesh -n "polySurface942Shape" -p "polySurface942";
 		 0.033401012 -0.84173924 0.53885013 0.033401012 -0.84173924 0.53885013 0.033401012
 		 -0.84173924 0.53885013 -0.033401601 0.84173805 -0.53885198 -0.033401601 0.84173805
 		 -0.53885198 -0.033401601 0.84173805 -0.53885198 -0.033401601 0.84173805 -0.53885198
-		 4.6547078e-007 0.53915179 0.84220862 4.6547078e-007 0.53915179 0.84220862 4.6547078e-007
-		 0.53915179 0.84220862 4.6547078e-007 0.53915179 0.84220862 0.99944198 0.028130703
+		 4.6547078e-07 0.53915179 0.84220862 4.6547078e-07 0.53915179 0.84220862 4.6547078e-07
+		 0.53915179 0.84220862 4.6547078e-07 0.53915179 0.84220862 0.99944198 0.028130703
 		 -0.018008202 0.99944198 0.028130703 -0.018008202 0.99944198 0.028130703 -0.018008202
 		 0.99944198 0.028130703 -0.018008202 -0.99944198 -0.028130703 0.018008202 -0.99944198
 		 -0.028130703 0.018008202 -0.99944198 -0.028130703 0.018008202 -0.99944198 -0.028130703
@@ -19904,8 +18604,8 @@ createNode mesh -n "polySurface980Shape" -p "polySurface980";
 		 -0.99995005 0.0084215701 -0.0053911805 -0.99995005 0.0084215701 -0.0053911805 -0.99995005
 		 0.0084215701 -0.0053911805 0.99995005 -0.0084205912 0.0053905505 0.99995005 -0.0084205912
 		 0.0053905505 0.99995005 -0.0084205912 0.0053905505 0.99995005 -0.0084205912 0.0053905505
-		 7.1775568e-009 0.53915179 0.84220862 7.1775568e-009 0.53915179 0.84220862 7.1775568e-009
-		 0.53915179 0.84220862 7.1775568e-009 0.53915179 0.84220862 0.010657699 0.84216094
+		 7.1775568e-09 0.53915179 0.84220862 7.1775568e-09 0.53915179 0.84220862 7.1775568e-09
+		 0.53915179 0.84220862 7.1775568e-09 0.53915179 0.84220862 0.010657699 0.84216094
 		 -0.53912091 0.010657699 0.84216094 -0.53912091 0.010657699 0.84216094 -0.53912091
 		 0.010657699 0.84216094 -0.53912091 -0.010657592 -0.8421604 0.53912163 -0.010657592
 		 -0.8421604 0.53912163 -0.010657592 -0.8421604 0.53912163 -0.010657592 -0.8421604
@@ -20125,8 +18825,8 @@ createNode mesh -n "polySurface984Shape" -p "polySurface984";
 		 -0.033401012 -0.84173924 0.53885013 -0.033401012 -0.84173924 0.53885013 -0.033401012
 		 -0.84173924 0.53885013 0.033401601 0.84173805 -0.53885198 0.033401601 0.84173805
 		 -0.53885198 0.033401601 0.84173805 -0.53885198 0.033401601 0.84173805 -0.53885198
-		 -4.6547078e-007 0.53915179 0.84220862 -4.6547078e-007 0.53915179 0.84220862 -4.6547078e-007
-		 0.53915179 0.84220862 -4.6547078e-007 0.53915179 0.84220862 -0.99944198 0.028130703
+		 -4.6547078e-07 0.53915179 0.84220862 -4.6547078e-07 0.53915179 0.84220862 -4.6547078e-07
+		 0.53915179 0.84220862 -4.6547078e-07 0.53915179 0.84220862 -0.99944198 0.028130703
 		 -0.018008202 -0.99944198 0.028130703 -0.018008202 -0.99944198 0.028130703 -0.018008202
 		 -0.99944198 0.028130703 -0.018008202 0.99944198 -0.028130703 0.018008202 0.99944198
 		 -0.028130703 0.018008202 0.99944198 -0.028130703 0.018008202 0.99944198 -0.028130703
@@ -20917,39 +19617,39 @@ createNode mesh -n "polySurface1249Shape" -p "polySurface1249";
 		 4 16 0 16 17 0 17 5 0 3 15 0 15 16 0 18 13 0 12 19 0 19 18 0 14 20 0 20 19 0 22 16 0
 		 15 21 0 21 22 0 23 17 0 22 23 0 17 14 0 2 5 0 11 8 0 6 10 0 21 18 0 19 22 0 15 13 0
 		 7 9 0 3 1 0 23 20 0;
-	setAttr -s 88 ".n[0:87]" -type "float3"  1.2151911e-016 0.99227875 0.12402797
-		 1.2151911e-016 0.99227875 0.12402797 1.2014882e-016 0.98108941 0.19355488 1.2014882e-016
-		 0.98108941 0.19355488 1.2228674e-016 0.99854708 0.053885903 1.2228674e-016 0.99854708
-		 0.053885903 1.2151911e-016 0.99227875 0.12402797 1.2151911e-016 0.99227875 0.12402797
-		 -1.2014882e-016 -0.98108941 0.19355488 -1.2014882e-016 -0.98108941 0.19355488 -1.2151911e-016
-		 -0.99227875 0.12402797 -1.2151911e-016 -0.99227875 0.12402797 -1.2151911e-016 -0.99227875
-		 0.12402797 -1.2151911e-016 -0.99227875 0.12402797 -1.2228674e-016 -0.99854708 0.053885903
-		 -1.2228674e-016 -0.99854708 0.053885903 -0.98835921 0.11344804 0.10136902 -0.97398126
+	setAttr -s 88 ".n[0:87]" -type "float3"  1.2151911e-16 0.99227875 0.12402797
+		 1.2151911e-16 0.99227875 0.12402797 1.2014882e-16 0.98108941 0.19355488 1.2014882e-16
+		 0.98108941 0.19355488 1.2228674e-16 0.99854708 0.053885903 1.2228674e-16 0.99854708
+		 0.053885903 1.2151911e-16 0.99227875 0.12402797 1.2151911e-16 0.99227875 0.12402797
+		 -1.2014882e-16 -0.98108941 0.19355488 -1.2014882e-16 -0.98108941 0.19355488 -1.2151911e-16
+		 -0.99227875 0.12402797 -1.2151911e-16 -0.99227875 0.12402797 -1.2151911e-16 -0.99227875
+		 0.12402797 -1.2151911e-16 -0.99227875 0.12402797 -1.2228674e-16 -0.99854708 0.053885903
+		 -1.2228674e-16 -0.99854708 0.053885903 -0.98835921 0.11344804 0.10136902 -0.97398126
 		 0.22588107 0.018394606 -0.97398126 0.22588107 0.018394606 -0.98835921 0.11344804
 		 0.10136902 -0.97398126 0.22588107 0.018394606 -0.98555505 0.11541401 -0.12393901
 		 -0.98555505 0.11541401 -0.12393901 -0.97398126 0.22588107 0.018394606 -0.98544884
 		 -0.11635497 -0.12390397 -0.9735465 -0.2277279 0.018632591 -0.9735465 -0.2277279 0.018632591
 		 -0.98544884 -0.11635497 -0.12390397 -0.9735465 -0.2277279 0.018632591 -0.98822862
 		 -0.11440197 0.10156997 -0.98822862 -0.11440197 0.10156997 -0.9735465 -0.2277279 0.018632591
-		 -1.201442e-016 -0.9810518 -0.19374596 -1.201442e-016 -0.9810518 -0.19374596 -1.2151744e-016
-		 -0.99226511 -0.12413701 -1.2151744e-016 -0.99226511 -0.12413701 -1.2151744e-016 -0.99226511
-		 -0.12413701 -1.2151744e-016 -0.99226511 -0.12413701 -1.222866e-016 -0.99854583 -0.053910293
-		 -1.222866e-016 -0.99854583 -0.053910293 1.2151744e-016 0.99226511 -0.12413701 1.2151744e-016
-		 0.99226511 -0.12413701 1.201442e-016 0.9810518 -0.19374596 1.201442e-016 0.9810518
-		 -0.19374596 1.222866e-016 0.99854583 -0.053910293 1.222866e-016 0.99854583 -0.053910293
-		 1.2151744e-016 0.99226511 -0.12413701 1.2151744e-016 0.99226511 -0.12413701 -0.98544884
+		 -1.201442e-16 -0.9810518 -0.19374596 -1.201442e-16 -0.9810518 -0.19374596 -1.2151744e-16
+		 -0.99226511 -0.12413701 -1.2151744e-16 -0.99226511 -0.12413701 -1.2151744e-16 -0.99226511
+		 -0.12413701 -1.2151744e-16 -0.99226511 -0.12413701 -1.222866e-16 -0.99854583 -0.053910293
+		 -1.222866e-16 -0.99854583 -0.053910293 1.2151744e-16 0.99226511 -0.12413701 1.2151744e-16
+		 0.99226511 -0.12413701 1.201442e-16 0.9810518 -0.19374596 1.201442e-16 0.9810518
+		 -0.19374596 1.222866e-16 0.99854583 -0.053910293 1.222866e-16 0.99854583 -0.053910293
+		 1.2151744e-16 0.99226511 -0.12413701 1.2151744e-16 0.99226511 -0.12413701 -0.98544884
 		 -0.11635497 -0.12390397 -0.98544884 -0.11635497 -0.12390397 -0.98555505 0.11541401
-		 -0.12393901 -0.98555505 0.11541401 -0.12393901 0.99998474 -1.2246282e-016 -0.0055385386
-		 0.99998474 -1.2246282e-016 -0.0055385386 0.9999485 -1.2245837e-016 0.010154406 0.9999485
-		 -1.2245837e-016 0.010154406 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.99995238 1.2245885e-016
-		 -0.0097600333 -0.99968004 1.2242551e-016 -0.025297401 -0.99968004 1.2242551e-016
-		 -0.025297401 -0.99995238 1.2245885e-016 -0.0097600333 0 0 -1 0 0 -1 0 0 -1 0 0 -1
-		 0.9999485 -1.2245837e-016 0.010154406 0.9999485 -1.2245837e-016 0.010154406 0.99966592
-		 -1.2242376e-016 0.025844796 0.99966592 -1.2242376e-016 0.025844796 -0.98822862 -0.11440197
-		 0.10156997 -0.98835921 0.11344804 0.10136902 -0.98835921 0.11344804 0.10136902 -0.98822862
-		 -0.11440197 0.10156997 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998331
-		 1.2246265e-016 0.0057796612 -0.99995238 1.2245885e-016 -0.0097600333 -0.99995238
-		 1.2245885e-016 -0.0097600333 -0.99998331 1.2246265e-016 0.0057796612;
+		 -0.12393901 -0.98555505 0.11541401 -0.12393901 0.99998474 -1.2246282e-16 -0.0055385386
+		 0.99998474 -1.2246282e-16 -0.0055385386 0.9999485 -1.2245837e-16 0.010154406 0.9999485
+		 -1.2245837e-16 0.010154406 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.99995238 1.2245885e-16
+		 -0.0097600333 -0.99968004 1.2242551e-16 -0.025297401 -0.99968004 1.2242551e-16 -0.025297401
+		 -0.99995238 1.2245885e-16 -0.0097600333 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.9999485 -1.2245837e-16
+		 0.010154406 0.9999485 -1.2245837e-16 0.010154406 0.99966592 -1.2242376e-16 0.025844796
+		 0.99966592 -1.2242376e-16 0.025844796 -0.98822862 -0.11440197 0.10156997 -0.98835921
+		 0.11344804 0.10136902 -0.98835921 0.11344804 0.10136902 -0.98822862 -0.11440197 0.10156997
+		 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998331 1.2246265e-16 0.0057796612
+		 -0.99995238 1.2245885e-16 -0.0097600333 -0.99995238 1.2245885e-16 -0.0097600333 -0.99998331
+		 1.2246265e-16 0.0057796612;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -21080,39 +19780,39 @@ createNode mesh -n "polySurface1250Shape" -p "polySurface1250";
 		 0 12 0 12 13 0 13 1 0 2 14 0 14 12 0 18 13 0 12 19 0 19 18 0 14 20 0 20 19 0 22 16 0
 		 15 21 0 21 22 0 23 17 0 22 23 0 11 8 0 6 10 0 5 2 0 19 22 0 21 18 0 15 13 0 7 9 0
 		 3 1 0 14 17 0 23 20 0;
-	setAttr -s 88 ".n[0:87]" -type "float3"  1.2153703e-016 0.99242514 0.12285101
-		 1.2153703e-016 0.99242514 0.12285101 1.2026039e-016 0.98200059 0.18887793 1.2026039e-016
-		 0.98200059 0.18887793 1.2227061e-016 0.99841529 0.056274716 1.2227061e-016 0.99841529
-		 0.056274716 1.2153703e-016 0.99242514 0.12285101 1.2153703e-016 0.99242514 0.12285101
-		 -1.2092125e-016 -0.98739696 0.15826298 -1.2092125e-016 -0.98739696 0.15826298 -1.2165065e-016
-		 -0.99335295 0.11510798 -1.2165065e-016 -0.99335295 0.11510798 -1.2165065e-016 -0.99335295
-		 0.11510798 -1.2165065e-016 -0.99335295 0.11510798 -1.2214918e-016 -0.99742371 0.071735479
-		 -1.2214918e-016 -0.99742371 0.071735479 -0.98574662 -0.11597496 -0.12187496 -0.9733988
+	setAttr -s 88 ".n[0:87]" -type "float3"  1.2153703e-16 0.99242514 0.12285101
+		 1.2153703e-16 0.99242514 0.12285101 1.2026039e-16 0.98200059 0.18887793 1.2026039e-16
+		 0.98200059 0.18887793 1.2227061e-16 0.99841529 0.056274716 1.2227061e-16 0.99841529
+		 0.056274716 1.2153703e-16 0.99242514 0.12285101 1.2153703e-16 0.99242514 0.12285101
+		 -1.2092125e-16 -0.98739696 0.15826298 -1.2092125e-16 -0.98739696 0.15826298 -1.2165065e-16
+		 -0.99335295 0.11510798 -1.2165065e-16 -0.99335295 0.11510798 -1.2165065e-16 -0.99335295
+		 0.11510798 -1.2165065e-16 -0.99335295 0.11510798 -1.2214918e-16 -0.99742371 0.071735479
+		 -1.2214918e-16 -0.99742371 0.071735479 -0.98574662 -0.11597496 -0.12187496 -0.9733988
 		 -0.22851095 0.016662396 -0.9733988 -0.22851095 0.016662396 -0.98574662 -0.11597496
 		 -0.12187496 -0.9733988 -0.22851095 0.016662396 -0.98848516 -0.11565101 0.097580813
 		 -0.98848516 -0.11565101 0.097580813 -0.9733988 -0.22851095 0.016662396 -0.98839164
 		 0.11362896 0.10084897 -0.97395605 0.22601001 0.018142201 -0.97395605 0.22601001 0.018142201
 		 -0.98839164 0.11362896 0.10084897 -0.97395605 0.22601001 0.018142201 -0.98559338
 		 0.11537503 -0.12367004 -0.98559338 0.11537503 -0.12367004 -0.97395605 0.22601001
-		 0.018142201 -1.2025599e-016 -0.98196465 -0.18906492 -1.2025599e-016 -0.98196465 -0.18906492
-		 -1.2153541e-016 -0.99241185 -0.12295798 -1.2153541e-016 -0.99241185 -0.12295798 -1.2153541e-016
-		 -0.99241185 -0.12295798 -1.2153541e-016 -0.99241185 -0.12295798 -1.2227044e-016 -0.9984138
-		 -0.056300797 -1.2227044e-016 -0.9984138 -0.056300797 1.2164928e-016 0.9933418 -0.11520498
-		 1.2164928e-016 0.9933418 -0.11520498 1.2091815e-016 0.98737156 -0.15842193 1.2091815e-016
-		 0.98737156 -0.15842193 1.2214889e-016 0.99742132 -0.071768522 1.2214889e-016 0.99742132
-		 -0.071768522 1.2164928e-016 0.9933418 -0.11520498 1.2164928e-016 0.9933418 -0.11520498
-		 0.99998474 -1.0924399e-006 -0.0055384687 0.99998474 -1.0924399e-006 -0.0055384687
-		 0.9999485 -5.4628526e-007 0.010154406 0.9999485 -5.4628526e-007 0.010154406 0 0 -1
-		 0 0 -1 0 0 -1 0 0 -1 -0.99995232 -5.8109113e-006 -0.0097657032 -0.99995232 -5.8109113e-006
-		 -0.0097657032 -0.9996798 -1.2925398e-005 -0.025304394 -0.9996798 -1.2925398e-005
-		 -0.025304394 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.9999485 -5.4628526e-007 0.010154406 0.99966592
-		 -1.2242376e-016 0.025844796 0.99966592 -1.2242376e-016 0.025844796 0.9999485 -5.4628526e-007
-		 0.010154406 -0.98848516 -0.11565101 0.097580813 -0.98839164 0.11362896 0.10084897
-		 -0.98839164 0.11362896 0.10084897 -0.98848516 -0.11565101 0.097580813 0 0 1 0 0 1
-		 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998331 1.3049803e-006 0.0057753315 -0.99998331
-		 1.3049803e-006 0.0057753315 -0.99995232 -5.8109113e-006 -0.0097657032 -0.99995232
-		 -5.8109113e-006 -0.0097657032 -0.98574662 -0.11597496 -0.12187496 -0.98574662 -0.11597496
-		 -0.12187496 -0.98559338 0.11537503 -0.12367004 -0.98559338 0.11537503 -0.12367004;
+		 0.018142201 -1.2025599e-16 -0.98196465 -0.18906492 -1.2025599e-16 -0.98196465 -0.18906492
+		 -1.2153541e-16 -0.99241185 -0.12295798 -1.2153541e-16 -0.99241185 -0.12295798 -1.2153541e-16
+		 -0.99241185 -0.12295798 -1.2153541e-16 -0.99241185 -0.12295798 -1.2227044e-16 -0.9984138
+		 -0.056300797 -1.2227044e-16 -0.9984138 -0.056300797 1.2164928e-16 0.9933418 -0.11520498
+		 1.2164928e-16 0.9933418 -0.11520498 1.2091815e-16 0.98737156 -0.15842193 1.2091815e-16
+		 0.98737156 -0.15842193 1.2214889e-16 0.99742132 -0.071768522 1.2214889e-16 0.99742132
+		 -0.071768522 1.2164928e-16 0.9933418 -0.11520498 1.2164928e-16 0.9933418 -0.11520498
+		 0.99998474 -1.0924399e-06 -0.0055384687 0.99998474 -1.0924399e-06 -0.0055384687 0.9999485
+		 -5.4628526e-07 0.010154406 0.9999485 -5.4628526e-07 0.010154406 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 -0.99995232 -5.8109113e-06 -0.0097657032 -0.99995232 -5.8109113e-06 -0.0097657032
+		 -0.9996798 -1.2925398e-05 -0.025304394 -0.9996798 -1.2925398e-05 -0.025304394 0 0
+		 -1 0 0 -1 0 0 -1 0 0 -1 0.9999485 -5.4628526e-07 0.010154406 0.99966592 -1.2242376e-16
+		 0.025844796 0.99966592 -1.2242376e-16 0.025844796 0.9999485 -5.4628526e-07 0.010154406
+		 -0.98848516 -0.11565101 0.097580813 -0.98839164 0.11362896 0.10084897 -0.98839164
+		 0.11362896 0.10084897 -0.98848516 -0.11565101 0.097580813 0 0 1 0 0 1 0 0 1 0 0 1
+		 0 0 1 0 0 1 0 0 1 0 0 1 -0.99998331 1.3049803e-06 0.0057753315 -0.99998331 1.3049803e-06
+		 0.0057753315 -0.99995232 -5.8109113e-06 -0.0097657032 -0.99995232 -5.8109113e-06
+		 -0.0097657032 -0.98574662 -0.11597496 -0.12187496 -0.98574662 -0.11597496 -0.12187496
+		 -0.98559338 0.11537503 -0.12367004 -0.98559338 0.11537503 -0.12367004;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -21243,39 +19943,39 @@ createNode mesh -n "polySurface1251Shape" -p "polySurface1251";
 		 4 16 0 16 17 0 17 5 0 3 15 0 15 16 0 18 13 0 12 19 0 19 18 0 14 20 0 20 19 0 22 16 0
 		 15 21 0 21 22 0 23 17 0 22 23 0 9 7 0 1 3 0 13 15 0 20 23 0 22 19 0 14 17 0 11 8 0
 		 6 10 0 5 2 0 21 18 0;
-	setAttr -s 88 ".n[0:87]" -type "float3"  1.2143371e-016 0.99158156 0.12948407
-		 1.2143371e-016 0.99158156 0.12948407 1.1959199e-016 0.97654265 0.21532393 1.1959199e-016
-		 0.97654265 0.21532393 1.2235319e-016 0.9990896 0.042661581 1.2235319e-016 0.9990896
-		 0.042661581 1.2143371e-016 0.99158156 0.12948407 1.2143371e-016 0.99158156 0.12948407
-		 -1.1959199e-016 -0.97654265 0.21532393 -1.1959199e-016 -0.97654265 0.21532393 -1.2143371e-016
-		 -0.99158156 0.12948407 -1.2143371e-016 -0.99158156 0.12948407 -1.2143371e-016 -0.99158156
-		 0.12948407 -1.2143371e-016 -0.99158156 0.12948407 -1.2235319e-016 -0.9990896 0.042661883
-		 -1.2235319e-016 -0.9990896 0.042661883 -0.98820966 0.11256795 0.10377996 -0.97410685
+	setAttr -s 88 ".n[0:87]" -type "float3"  1.2143371e-16 0.99158156 0.12948407
+		 1.2143371e-16 0.99158156 0.12948407 1.1959199e-16 0.97654265 0.21532393 1.1959199e-16
+		 0.97654265 0.21532393 1.2235319e-16 0.9990896 0.042661581 1.2235319e-16 0.9990896
+		 0.042661581 1.2143371e-16 0.99158156 0.12948407 1.2143371e-16 0.99158156 0.12948407
+		 -1.1959199e-16 -0.97654265 0.21532393 -1.1959199e-16 -0.97654265 0.21532393 -1.2143371e-16
+		 -0.99158156 0.12948407 -1.2143371e-16 -0.99158156 0.12948407 -1.2143371e-16 -0.99158156
+		 0.12948407 -1.2143371e-16 -0.99158156 0.12948407 -1.2235319e-16 -0.9990896 0.042661883
+		 -1.2235319e-16 -0.9990896 0.042661883 -0.98820966 0.11256795 0.10377996 -0.97410685
 		 0.22524197 0.019541997 -0.97410685 0.22524197 0.019541997 -0.98820966 0.11256795
 		 0.10377996 -0.97410685 0.22524197 0.019541997 -0.9853729 0.11559598 -0.12521099 -0.9853729
 		 0.11559598 -0.12521099 -0.97410685 0.22524197 0.019541997 -0.98526067 -0.11657596
 		 -0.12518595 -0.97365457 -0.22716691 0.019802693 -0.97365457 -0.22716691 0.019802693
 		 -0.98526067 -0.11657596 -0.12518595 -0.97365457 -0.22716691 0.019802693 -0.98807138
 		 -0.11356104 0.10401405 -0.98807138 -0.11356104 0.10401405 -0.97365457 -0.22716691
-		 0.019802693 -1.1958633e-016 -0.97649652 -0.21553312 -1.1958633e-016 -0.97649652 -0.21553312
-		 -1.2143186e-016 -0.9915663 -0.12960103 -1.2143186e-016 -0.9915663 -0.12960103 -1.2143186e-016
-		 -0.9915663 -0.12960103 -1.2143186e-016 -0.9915663 -0.12960103 -1.2235309e-016 -0.99908882
-		 -0.042681389 -1.2235309e-016 -0.99908882 -0.042681389 1.2143186e-016 0.9915663 -0.12960103
-		 1.2143186e-016 0.9915663 -0.12960103 1.1958635e-016 0.97649664 -0.2155329 1.1958635e-016
-		 0.97649664 -0.2155329 1.2235309e-016 0.99908882 -0.042681593 1.2235309e-016 0.99908882
-		 -0.042681593 1.2143186e-016 0.9915663 -0.12960103 1.2143186e-016 0.9915663 -0.12960103
+		 0.019802693 -1.1958633e-16 -0.97649652 -0.21553312 -1.1958633e-16 -0.97649652 -0.21553312
+		 -1.2143186e-16 -0.9915663 -0.12960103 -1.2143186e-16 -0.9915663 -0.12960103 -1.2143186e-16
+		 -0.9915663 -0.12960103 -1.2143186e-16 -0.9915663 -0.12960103 -1.2235309e-16 -0.99908882
+		 -0.042681389 -1.2235309e-16 -0.99908882 -0.042681389 1.2143186e-16 0.9915663 -0.12960103
+		 1.2143186e-16 0.9915663 -0.12960103 1.1958635e-16 0.97649664 -0.2155329 1.1958635e-16
+		 0.97649664 -0.2155329 1.2235309e-16 0.99908882 -0.042681593 1.2235309e-16 0.99908882
+		 -0.042681593 1.2143186e-16 0.9915663 -0.12960103 1.2143186e-16 0.9915663 -0.12960103
 		 0 0 1 0 0 1 0 0 1 0 0 1 -0.98807138 -0.11356104 0.10401405 -0.98820966 0.11256795
 		 0.10377996 -0.98820966 0.11256795 0.10377996 -0.98807138 -0.11356104 0.10401405 -0.99998331
-		 1.2246265e-016 0.0057908418 -0.99998331 1.2246265e-016 0.0057908418 -0.99995255 6.929958e-007
-		 -0.0097425869 -0.99995255 6.929958e-007 -0.0097425869 0 0 1 0 0 1 0 0 1 0 0 1 0.99998474
-		 -1.2246282e-016 -0.0055369884 0.99998474 -1.2246282e-016 -0.0055369884 0.9999485
-		 -5.8090831e-007 0.010155304 0.9999485 -5.8090831e-007 0.010155304 0 0 -1 0 0 -1 0
-		 0 -1 0 0 -1 -0.99995255 6.929958e-007 -0.0097425869 -0.99968058 1.3858195e-006 -0.02527369
-		 -0.99968058 1.3858195e-006 -0.02527369 -0.99995255 6.929958e-007 -0.0097425869 -0.98526067
-		 -0.11657596 -0.12518595 -0.98526067 -0.11657596 -0.12518595 -0.9853729 0.11559598
-		 -0.12521099 -0.9853729 0.11559598 -0.12521099 0.9999485 -5.8090831e-007 0.010155304
-		 0.9999485 -5.8090831e-007 0.010155304 0.99966592 -1.1616698e-006 0.025845096 0.99966592
-		 -1.1616698e-006 0.025845096 0 0 -1 0 0 -1 0 0 -1 0 0 -1;
+		 1.2246265e-16 0.0057908418 -0.99998331 1.2246265e-16 0.0057908418 -0.99995255 6.929958e-07
+		 -0.0097425869 -0.99995255 6.929958e-07 -0.0097425869 0 0 1 0 0 1 0 0 1 0 0 1 0.99998474
+		 -1.2246282e-16 -0.0055369884 0.99998474 -1.2246282e-16 -0.0055369884 0.9999485 -5.8090831e-07
+		 0.010155304 0.9999485 -5.8090831e-07 0.010155304 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.99995255
+		 6.929958e-07 -0.0097425869 -0.99968058 1.3858195e-06 -0.02527369 -0.99968058 1.3858195e-06
+		 -0.02527369 -0.99995255 6.929958e-07 -0.0097425869 -0.98526067 -0.11657596 -0.12518595
+		 -0.98526067 -0.11657596 -0.12518595 -0.9853729 0.11559598 -0.12521099 -0.9853729
+		 0.11559598 -0.12521099 0.9999485 -5.8090831e-07 0.010155304 0.9999485 -5.8090831e-07
+		 0.010155304 0.99966592 -1.1616698e-06 0.025845096 0.99966592 -1.1616698e-06 0.025845096
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -21420,54 +20120,53 @@ createNode mesh -n "polySurface1252Shape" -p "polySurface1252";
 		 32 31 0 10 9 0 9 35 0 35 32 0 9 21 0 21 34 0 34 35 0 24 25 0 24 28 0 32 33 0 34 33 0
 		 6 0 0 13 16 0 7 1 0 8 2 0 15 14 0 9 3 0 20 21 0 10 4 0 22 19 0 5 11 0 15 21 0 20 14 0
 		 13 19 0 22 16 0 24 33 0 34 28 0 17 23 0 18 12 0;
-	setAttr -s 136 ".n[0:135]" -type "float3"  0 6.6748798e-006 -1 0 6.6748798e-006
-		 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1
-		 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 6.6748798e-006 -1 0 6.6748798e-006
-		 -1 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 1 3.4658101e-006 2.2907902e-006
-		 1 3.4658101e-006 2.2907902e-006 1 3.4658101e-006 2.2907902e-006 1 3.4658101e-006
-		 2.2907902e-006 -1 -8.34697e-007 -2.3262001e-007 -1 -1.4603e-006 -2.5617101e-008 -1
-		 -3.8555499e-006 -1.22547e-006 -1 -3.5393e-006 -2.8137201e-006 1.7202894e-006 -0.99982166
-		 0.018886793 1.2541604e-005 -0.9999553 0.009452193 8.3610112e-006 -0.99998003 0.0063069905
-		 1.7202894e-006 -0.99982166 0.018886793 -3.8970992e-008 0.99999577 0.0029192194 -1.9485498e-008
-		 0.99999887 0.0014588899 -3.8970995e-008 0.99999887 0.0014588899 -7.7941884e-008 0.99999577
-		 0.0029192194 -1 1.86991e-006 2.3484799e-006 -1 9.3495498e-007 1.17424e-006 -1 -1.4603e-006
-		 -2.5617101e-008 -1 -8.34697e-007 -2.3262001e-007 -1 -3.5790299e-006 -1.2321301e-006
-		 -1 -3.5790299e-006 -1.2321301e-006 -1 -3.5790299e-006 -1.2321301e-006 -1 -3.5790299e-006
-		 -1.2321301e-006 -2.5853794e-007 -0.9999488 0.010113598 -2.6795908e-006 -0.99999434
-		 0.0033772811 -4.0194004e-006 -0.99998719 0.0050575905 -2.5853794e-007 -0.9999488
-		 0.010113598 1 4.0917002e-006 4.5073803e-006 1 4.3533805e-006 2.2536901e-006 1 1.9854203e-006
-		 1.82025e-006 1 1.6633099e-006 3.6404999e-006 1 1.6633099e-006 3.6404999e-006 1 1.9854203e-006
-		 1.82025e-006 1 -3.82542e-007 1.3868101e-006 1 -7.6508502e-007 2.7736203e-006 -2.2045097e-006
-		 0.99999577 0.0029041294 -1.1022598e-006 0.99999887 0.0014513398 -5.5112889e-007 0.99999887
-		 0.0014551099 -1.1022597e-006 0.99999577 0.0029116792 -3.1658212e-005 0.13917203 0.99026823
-		 -3.0846313e-005 0.13917007 0.99026847 -3.5253001e-005 0.13916601 0.99026906 -3.5253001e-005
-		 0.13916601 0.99026906 -2.9860799e-005 0.13917401 0.99026799 -2.6439702e-005 0.13917401
-		 0.99026799 -3.0846313e-005 0.13917007 0.99026847 -3.1658212e-005 0.13917203 0.99026823
-		 -2.5314584e-005 0.13916992 0.99026847 -2.5314584e-005 0.13916992 0.99026847 -2.9533683e-005
-		 0.13916992 0.99026847 -3.0783111e-005 0.13917105 0.99026829 -3.0783111e-005 0.13917105
-		 0.99026829 -2.9533683e-005 0.13916992 0.99026847 -3.3752814e-005 0.13917007 0.99026847
-		 -3.351731e-005 0.13917203 0.99026823 8.3610112e-006 -0.99998003 0.0063069905 1.2541604e-005
-		 -0.9999553 0.009452193 2.3361799e-005 -1 1.6686901e-005 1.16809e-005 -1 1.6687e-005
-		 -1 -3.8555499e-006 -1.22547e-006 -1 -1.4603e-006 -2.5617101e-008 -1 -2.0859e-006
-		 1.81385e-007 -1 -4.1717999e-006 3.6277103e-007 -1 -1.4603e-006 -2.5617101e-008 -1
-		 9.3495498e-007 1.17424e-006 -1 0 0 -1 -2.0859e-006 1.81385e-007 -3.8970995e-008 0.99999887
-		 0.0014588899 -1.9485498e-008 0.99999887 0.0014588899 0 1 -1.45106e-006 0 1 -1.45106e-006
-		 -5.5112889e-007 0.99999887 0.0014551099 -1.1022598e-006 0.99999887 0.0014513398 0
-		 1 -1.45106e-006 0 1 -1.45106e-006 1 -3.82542e-007 1.3868101e-006 1 1.9854203e-006
-		 1.82025e-006 1 2.3075302e-006 -3.34836e-012 1 0 0 -4.0194004e-006 -0.99998719 0.0050575905
-		 -2.6795908e-006 -0.99999434 0.0033772811 -3.8900803e-006 -1 9.06901e-006 -7.7801496e-006
-		 -1 1.45106e-006 1 1.9854203e-006 1.82025e-006 1 4.3533805e-006 2.2536901e-006 1 4.6150499e-006
-		 -6.69671e-012 1 2.3075302e-006 -3.34836e-012 -1.9485498e-008 0.99999887 0.0014588899
-		 -5.5112889e-007 0.99999887 0.0014551099 0 1 -1.45106e-006 0 1 -1.45106e-006 1.16809e-005
-		 -1 1.6687e-005 -3.8900803e-006 -1 9.06901e-006 -2.6795908e-006 -0.99999434 0.0033772811
-		 8.3610112e-006 -0.99998003 0.0063069905 -3.1658212e-005 0.13917203 0.99026823 -3.0783111e-005
-		 0.13917105 0.99026829 -3.351731e-005 0.13917203 0.99026823 -2.9860799e-005 0.13917401
-		 0.99026799 -1.9485498e-008 0.99999887 0.0014588899 -3.8970992e-008 0.99999577 0.0029192194
-		 -1.1022597e-006 0.99999577 0.0029116792 -5.5112889e-007 0.99999887 0.0014551099 1.4995701e-006
-		 -0.99998707 0.0050677108 1.4995701e-006 -0.99998707 0.0050677108 1.4995701e-006 -0.99998707
-		 0.0050677108 1.4995701e-006 -0.99998707 0.0050677108 0 -6.6748798e-006 1 0 -6.6748798e-006
-		 1 0 -6.6748798e-006 1 0 -6.6748798e-006 1 0 0 -1 0 0 -1 0 3.3374399e-006 -1 0 3.3374399e-006
-		 -1 0 6.6748798e-006 -1 0 3.3374399e-006 -1 0 3.3374399e-006 -1 0 6.6748798e-006 -1;
+	setAttr -s 136 ".n[0:135]" -type "float3"  0 6.6748798e-06 -1 0 6.6748798e-06
+		 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0
+		 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06 -1 0 6.6748798e-06
+		 -1 0 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 1 3.4658101e-06 2.2907902e-06
+		 1 3.4658101e-06 2.2907902e-06 1 3.4658101e-06 2.2907902e-06 1 3.4658101e-06 2.2907902e-06
+		 -1 -8.34697e-07 -2.3262001e-07 -1 -1.4603e-06 -2.5617101e-08 -1 -3.8555499e-06 -1.22547e-06
+		 -1 -3.5393e-06 -2.8137201e-06 1.7202894e-06 -0.99982166 0.018886793 1.2541604e-05
+		 -0.9999553 0.009452193 8.3610112e-06 -0.99998003 0.0063069905 1.7202894e-06 -0.99982166
+		 0.018886793 -3.8970992e-08 0.99999577 0.0029192194 -1.9485498e-08 0.99999887 0.0014588899
+		 -3.8970995e-08 0.99999887 0.0014588899 -7.7941884e-08 0.99999577 0.0029192194 -1
+		 1.86991e-06 2.3484799e-06 -1 9.3495498e-07 1.17424e-06 -1 -1.4603e-06 -2.5617101e-08
+		 -1 -8.34697e-07 -2.3262001e-07 -1 -3.5790299e-06 -1.2321301e-06 -1 -3.5790299e-06
+		 -1.2321301e-06 -1 -3.5790299e-06 -1.2321301e-06 -1 -3.5790299e-06 -1.2321301e-06
+		 -2.5853794e-07 -0.9999488 0.010113598 -2.6795908e-06 -0.99999434 0.0033772811 -4.0194004e-06
+		 -0.99998719 0.0050575905 -2.5853794e-07 -0.9999488 0.010113598 1 4.0917002e-06 4.5073803e-06
+		 1 4.3533805e-06 2.2536901e-06 1 1.9854203e-06 1.82025e-06 1 1.6633099e-06 3.6404999e-06
+		 1 1.6633099e-06 3.6404999e-06 1 1.9854203e-06 1.82025e-06 1 -3.82542e-07 1.3868101e-06
+		 1 -7.6508502e-07 2.7736203e-06 -2.2045097e-06 0.99999577 0.0029041294 -1.1022598e-06
+		 0.99999887 0.0014513398 -5.5112889e-07 0.99999887 0.0014551099 -1.1022597e-06 0.99999577
+		 0.0029116792 -3.1658212e-05 0.13917203 0.99026823 -3.0846313e-05 0.13917007 0.99026847
+		 -3.5253001e-05 0.13916601 0.99026906 -3.5253001e-05 0.13916601 0.99026906 -2.9860799e-05
+		 0.13917401 0.99026799 -2.6439702e-05 0.13917401 0.99026799 -3.0846313e-05 0.13917007
+		 0.99026847 -3.1658212e-05 0.13917203 0.99026823 -2.5314584e-05 0.13916992 0.99026847
+		 -2.5314584e-05 0.13916992 0.99026847 -2.9533683e-05 0.13916992 0.99026847 -3.0783111e-05
+		 0.13917105 0.99026829 -3.0783111e-05 0.13917105 0.99026829 -2.9533683e-05 0.13916992
+		 0.99026847 -3.3752814e-05 0.13917007 0.99026847 -3.351731e-05 0.13917203 0.99026823
+		 8.3610112e-06 -0.99998003 0.0063069905 1.2541604e-05 -0.9999553 0.009452193 2.3361799e-05
+		 -1 1.6686901e-05 1.16809e-05 -1 1.6687e-05 -1 -3.8555499e-06 -1.22547e-06 -1 -1.4603e-06
+		 -2.5617101e-08 -1 -2.0859e-06 1.81385e-07 -1 -4.1717999e-06 3.6277103e-07 -1 -1.4603e-06
+		 -2.5617101e-08 -1 9.3495498e-07 1.17424e-06 -1 0 0 -1 -2.0859e-06 1.81385e-07 -3.8970995e-08
+		 0.99999887 0.0014588899 -1.9485498e-08 0.99999887 0.0014588899 0 1 -1.45106e-06 0
+		 1 -1.45106e-06 -5.5112889e-07 0.99999887 0.0014551099 -1.1022598e-06 0.99999887 0.0014513398
+		 0 1 -1.45106e-06 0 1 -1.45106e-06 1 -3.82542e-07 1.3868101e-06 1 1.9854203e-06 1.82025e-06
+		 1 2.3075302e-06 -3.34836e-12 1 0 0 -4.0194004e-06 -0.99998719 0.0050575905 -2.6795908e-06
+		 -0.99999434 0.0033772811 -3.8900803e-06 -1 9.06901e-06 -7.7801496e-06 -1 1.45106e-06
+		 1 1.9854203e-06 1.82025e-06 1 4.3533805e-06 2.2536901e-06 1 4.6150499e-06 -6.69671e-12
+		 1 2.3075302e-06 -3.34836e-12 -1.9485498e-08 0.99999887 0.0014588899 -5.5112889e-07
+		 0.99999887 0.0014551099 0 1 -1.45106e-06 0 1 -1.45106e-06 1.16809e-05 -1 1.6687e-05
+		 -3.8900803e-06 -1 9.06901e-06 -2.6795908e-06 -0.99999434 0.0033772811 8.3610112e-06
+		 -0.99998003 0.0063069905 -3.1658212e-05 0.13917203 0.99026823 -3.0783111e-05 0.13917105
+		 0.99026829 -3.351731e-05 0.13917203 0.99026823 -2.9860799e-05 0.13917401 0.99026799
+		 -1.9485498e-08 0.99999887 0.0014588899 -3.8970992e-08 0.99999577 0.0029192194 -1.1022597e-06
+		 0.99999577 0.0029116792 -5.5112889e-07 0.99999887 0.0014551099 1.4995701e-06 -0.99998707
+		 0.0050677108 1.4995701e-06 -0.99998707 0.0050677108 1.4995701e-06 -0.99998707 0.0050677108
+		 1.4995701e-06 -0.99998707 0.0050677108 0 -6.6748798e-06 1 0 -6.6748798e-06 1 0 -6.6748798e-06
+		 1 0 -6.6748798e-06 1 0 0 -1 0 0 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06
+		 -1 0 3.3374399e-06 -1 0 3.3374399e-06 -1 0 6.6748798e-06 -1;
 	setAttr -s 34 -ch 136 ".fc[0:33]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -21903,22 +20602,22 @@ createNode mesh -n "polySurface1255Shape" -p "polySurface1255";
 		 13 4 0 13 14 0 14 5 0 14 15 0 15 6 0 16 17 0 17 11 0 10 16 0 17 18 0 18 12 0 18 19 0
 		 19 13 0 19 20 0 20 14 0 16 21 0 21 18 0 21 20 0 10 22 0 22 21 0 22 14 0 15 23 0 23 7 0
 		 23 9 0 23 22 0;
-	setAttr -s 88 ".n[0:87]" -type "float3"  1 0 1.2246469e-016 1 0 1.2246469e-016
-		 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016
-		 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016
-		 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 1 0 1.2246469e-016 -1.2246469e-016
-		 0 1 -1.2246469e-016 0 1 -1.2246469e-016 0 1 -1.2246469e-016 0 1 -1.2246469e-016 0
-		 1 -1.2246469e-016 0 1 -1.2246469e-016 0 1 -1.2246469e-016 0 1 0 -1 0 0 -1 0 0 -1
-		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1.2246469e-016 0 -1 1.2246469e-016 0 -1 1.2246469e-016
-		 0 -1 1.2246469e-016 0 -1 1.2246469e-016 0 -1 1.2246469e-016 0 -1 1.2246469e-016 0
-		 -1 1.2246469e-016 0 -1 -1.2246469e-016 0 1 -1.2246469e-016 0 1 -1.2246469e-016 0
-		 1 -1.2246469e-016 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1.2246469e-016
-		 0 -1 1.2246469e-016 0 -1 1.2246469e-016 0 -1 1.2246469e-016 0 -1 -1 0 -1.2246469e-016
-		 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016
-		 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 0 1 0 0 1 0 0 1 0
-		 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1
-		 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016
-		 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016 -1 0 -1.2246469e-016;
+	setAttr -s 88 ".n[0:87]" -type "float3"  1 0 1.2246469e-16 1 0 1.2246469e-16
+		 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16
+		 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16
+		 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 1 0 1.2246469e-16 -1.2246469e-16
+		 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 -1.2246469e-16
+		 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1
+		 0 0 -1 0 0 -1 0 1.2246469e-16 0 -1 1.2246469e-16 0 -1 1.2246469e-16 0 -1 1.2246469e-16
+		 0 -1 1.2246469e-16 0 -1 1.2246469e-16 0 -1 1.2246469e-16 0 -1 1.2246469e-16 0 -1
+		 -1.2246469e-16 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 -1.2246469e-16 0 1 0 -1
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1.2246469e-16 0 -1 1.2246469e-16
+		 0 -1 1.2246469e-16 0 -1 1.2246469e-16 0 -1 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16
+		 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1
+		 0 -1.2246469e-16 -1 0 -1.2246469e-16 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0
+		 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16
+		 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1 0 -1.2246469e-16 -1
+		 0 -1.2246469e-16 -1 0 -1.2246469e-16;
 	setAttr -s 22 -ch 88 ".fc[0:21]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -21989,8 +20688,6 @@ createNode mesh -n "polySurface1255Shape" -p "polySurface1255";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "transform415" -p "polySurface854";
-	setAttr ".v" no;
 createNode transform -n "polySurface1274" -p "polySurface854";
 	setAttr ".s" -type "double3" -1 1 1 ;
 	setAttr ".rp" -type "double3" -2.6519732224313834 1.8548443871631957 2.406579852104187 ;
@@ -22564,27 +21261,27 @@ createNode mesh -n "polySurface1269Shape" -p "polySurface1269";
 		 -0.0055573285 -0.99998462 0.00011833396 -0.0055573285 -0.99998462 0.00011833396 -0.0055573285
 		 -0.99998462 0.00011833396 -0.0055573285 -0.99998462 -0.00011838796 0.005557348 0.99998462
 		 -0.00011838796 0.005557348 0.99998462 -0.00011838796 0.005557348 0.99998462 -0.00011838796
-		 0.005557348 0.99998462 -0.99977314 -0.021297501 -3.3060903e-007 -0.99977314 -0.021297501
-		 -3.3060903e-007 -0.99977314 -0.021297501 -3.3060903e-007 -0.99977314 -0.021297501
-		 -3.3060903e-007 -0.021288197 0.99975789 -0.0055566393 -0.021288197 0.99975789 -0.0055566393
-		 -0.021288197 0.99975789 -0.0055566393 -0.021288197 0.99975789 -0.0055566393 0.021288197
-		 -0.99975789 0.0055576996 0.021288197 -0.99975789 0.0055576996 0.021288197 -0.99975789
-		 0.0055576996 0.021288197 -0.99975789 0.0055576996 -0.99958736 -0.02872231 0 -0.99958736
-		 -0.02872231 0 -0.99958736 -0.02872231 0 -0.99958736 -0.02872231 0 0.99958736 0.02872231
-		 0 0.99958736 0.02872231 0 0.99958736 0.02872231 0 0.99958736 0.02872231 0 0 0 1 0
-		 0 1 0 0 1 0 0 1 -0.028719915 0.99958754 0 -0.028719915 0.99958754 0 -0.028719915
-		 0.99958754 0 -0.028719915 0.99958754 0 0.028719915 -0.99958754 0 0.028719915 -0.99958754
-		 0 0.028719915 -0.99958754 0 0.028719915 -0.99958754 0 0.99997056 0.0076751867 0 0.99997056
-		 0.0076751867 0 0.99997056 0.0076751867 0 0.99997056 0.0076751867 0 -0.99997056 -0.0076751867
-		 0 -0.99997056 -0.0076751867 0 -0.99997056 -0.0076751867 0 -0.99997056 -0.0076751867
+		 0.005557348 0.99998462 -0.99977314 -0.021297501 -3.3060903e-07 -0.99977314 -0.021297501
+		 -3.3060903e-07 -0.99977314 -0.021297501 -3.3060903e-07 -0.99977314 -0.021297501 -3.3060903e-07
+		 -0.021288197 0.99975789 -0.0055566393 -0.021288197 0.99975789 -0.0055566393 -0.021288197
+		 0.99975789 -0.0055566393 -0.021288197 0.99975789 -0.0055566393 0.021288197 -0.99975789
+		 0.0055576996 0.021288197 -0.99975789 0.0055576996 0.021288197 -0.99975789 0.0055576996
+		 0.021288197 -0.99975789 0.0055576996 -0.99958736 -0.02872231 0 -0.99958736 -0.02872231
+		 0 -0.99958736 -0.02872231 0 -0.99958736 -0.02872231 0 0.99958736 0.02872231 0 0.99958736
+		 0.02872231 0 0.99958736 0.02872231 0 0.99958736 0.02872231 0 0 0 1 0 0 1 0 0 1 0
+		 0 1 -0.028719915 0.99958754 0 -0.028719915 0.99958754 0 -0.028719915 0.99958754 0
+		 -0.028719915 0.99958754 0 0.028719915 -0.99958754 0 0.028719915 -0.99958754 0 0.028719915
+		 -0.99958754 0 0.028719915 -0.99958754 0 0.99997056 0.0076751867 0 0.99997056 0.0076751867
+		 0 0.99997056 0.0076751867 0 0.99997056 0.0076751867 0 -0.99997056 -0.0076751867 0
+		 -0.99997056 -0.0076751867 0 -0.99997056 -0.0076751867 0 -0.99997056 -0.0076751867
 		 0 0 0 1 0 0 1 0 0 1 0 0 1 -0.0076722167 0.99997056 0 -0.0076722167 0.99997056 0 -0.0076722167
 		 0.99997056 0 -0.0076722167 0.99997056 0 0.0076722167 -0.99997056 0 0.0076722167 -0.99997056
 		 0 0.0076722167 -0.99997056 0 0.0076722167 -0.99997056 0 -0.00011833396 -0.0055573285
 		 -0.99998462 -0.00011833396 -0.0055573285 -0.99998462 -0.00011833396 -0.0055573285
 		 -0.99998462 -0.00011833396 -0.0055573285 -0.99998462 0.00011838796 0.005557348 0.99998462
 		 0.00011838796 0.005557348 0.99998462 0.00011838796 0.005557348 0.99998462 0.00011838796
-		 0.005557348 0.99998462 0.99977314 -0.021297501 -3.3060903e-007 0.99977314 -0.021297501
-		 -3.3060903e-007 0.99977314 -0.021297501 -3.3060903e-007 0.99977314 -0.021297501 -3.3060903e-007
+		 0.005557348 0.99998462 0.99977314 -0.021297501 -3.3060903e-07 0.99977314 -0.021297501
+		 -3.3060903e-07 0.99977314 -0.021297501 -3.3060903e-07 0.99977314 -0.021297501 -3.3060903e-07
 		 0.021288197 0.99975789 -0.0055566393 0.021288197 0.99975789 -0.0055566393 0.021288197
 		 0.99975789 -0.0055566393 0.021288197 0.99975789 -0.0055566393 -0.021288197 -0.99975789
 		 0.0055576996 -0.021288197 -0.99975789 0.0055576996 -0.021288197 -0.99975789 0.0055576996
@@ -24085,10 +22782,10 @@ createNode mesh -n "polySurface1272Shape" -p "polySurface1272";
 		 0.02872231 0 -0.99958736 0.02872231 0 -0.99958736 0.02872231 0 -0.99958736 0.02872231
 		 0 0 0 1 0 0 1 0 0 1 0 0 1 0.028719915 0.99958754 0 0.028719915 0.99958754 0 0.028719915
 		 0.99958754 0 0.028719915 0.99958754 0 -0.028719915 -0.99958754 0 -0.028719915 -0.99958754
-		 0 -0.028719915 -0.99958754 0 -0.028719915 -0.99958754 0 -0.99975038 0.022339007 8.740303e-005
-		 -0.99975038 0.022339007 8.740303e-005 -0.99975038 0.022339007 8.740303e-005 -0.99975038
-		 0.022339007 8.740303e-005 0.99974954 -0.022382911 1.9130908e-005 0.99974954 -0.022382911
-		 1.9130908e-005 0.99974954 -0.022382911 1.9130908e-005 0.99974954 -0.022382911 1.9130908e-005
+		 0 -0.028719915 -0.99958754 0 -0.028719915 -0.99958754 0 -0.99975038 0.022339007 8.740303e-05
+		 -0.99975038 0.022339007 8.740303e-05 -0.99975038 0.022339007 8.740303e-05 -0.99975038
+		 0.022339007 8.740303e-05 0.99974954 -0.022382911 1.9130908e-05 0.99974954 -0.022382911
+		 1.9130908e-05 0.99974954 -0.022382911 1.9130908e-05 0.99974954 -0.022382911 1.9130908e-05
 		 0.00011864096 0.0055610379 0.99998462 0.00011864096 0.0055610379 0.99998462 0.00011864096
 		 0.0055610379 0.99998462 0.00011864096 0.0055610379 0.99998462 -0.022378504 -0.9997341
 		 0.0055538206 -0.022378504 -0.9997341 0.0055538206 -0.022378504 -0.9997341 0.0055538206
@@ -24157,10 +22854,10 @@ createNode mesh -n "polySurface1272Shape" -p "polySurface1272";
 		 -0.70090699 0.71291602 -0.0219108 0.53911394 0.50939488 -0.67072588 0.53911394 0.50939488
 		 -0.67072588 0.53911394 0.50939488 -0.67072588 0.53911394 0.50939488 -0.67072588 -0.53909492
 		 -0.50941193 0.67072791 -0.53909492 -0.50941193 0.67072791 -0.53909492 -0.50941193
-		 0.67072791 -0.53909492 -0.50941193 0.67072791 0.99975038 0.022339007 8.740303e-005
-		 0.99975038 0.022339007 8.740303e-005 0.99975038 0.022339007 8.740303e-005 0.99975038
-		 0.022339007 8.740303e-005 -0.99974954 -0.022382911 1.9130908e-005 -0.99974954 -0.022382911
-		 1.9130908e-005 -0.99974954 -0.022382911 1.9130908e-005 -0.99974954 -0.022382911 1.9130908e-005
+		 0.67072791 -0.53909492 -0.50941193 0.67072791 0.99975038 0.022339007 8.740303e-05
+		 0.99975038 0.022339007 8.740303e-05 0.99975038 0.022339007 8.740303e-05 0.99975038
+		 0.022339007 8.740303e-05 -0.99974954 -0.022382911 1.9130908e-05 -0.99974954 -0.022382911
+		 1.9130908e-05 -0.99974954 -0.022382911 1.9130908e-05 -0.99974954 -0.022382911 1.9130908e-05
 		 -0.00011864096 0.0055610379 0.99998462 -0.00011864096 0.0055610379 0.99998462 -0.00011864096
 		 0.0055610379 0.99998462 -0.00011864096 0.0055610379 0.99998462 0.022378504 -0.9997341
 		 0.0055538206 0.022378504 -0.9997341 0.0055538206 0.022378504 -0.9997341 0.0055538206
@@ -26237,17 +24934,17 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532
 		 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013924907 -0.0010518905
 		 0.99999851 0.0013924907 -0.0010518905 0.99999851 0.0013924907 -0.0010518905 0.99999851
-		 0.0013924907 -0.0010518905 0.99999851 0.60876197 0.7933529 -9.9011095e-006 0.60876197
-		 0.7933529 -9.9011095e-006 0.60876197 0.7933529 -9.9011095e-006 0.60876197 0.7933529
-		 -9.9011095e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
+		 0.0013924907 -0.0010518905 0.99999851 0.60876197 0.7933529 -9.9011095e-06 0.60876197
+		 0.7933529 -9.9011095e-06 0.60876197 0.7933529 -9.9011095e-06 0.60876197 0.7933529
+		 -9.9011095e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
 		 -0.79335183 0.60876089 0.0017445695 -0.79335183 0.60876089 0.0017445695 -0.79335183
 		 0.60876089 0.0017445695 -0.79335183 0.60876089 0.0017445695 0.7933532 -0.60875916
 		 -0.0017454005 0.7933532 -0.60875916 -0.0017454005 0.7933532 -0.60875916 -0.0017454005
 		 0.7933532 -0.60875916 -0.0017454005 0.0013924907 -0.0010518905 0.99999851 0.0013924907
 		 -0.0010518905 0.99999851 0.0013924907 -0.0010518905 0.99999851 0.0013924907 -0.0010518905
-		 0.99999851 0.60876197 0.7933529 -9.9011395e-006 0.60876197 0.7933529 -9.9011395e-006
-		 0.60876197 0.7933529 -9.9011395e-006 0.60876197 0.7933529 -9.9011395e-006 -0.0013904807
+		 0.99999851 0.60876197 0.7933529 -9.9011395e-06 0.60876197 0.7933529 -9.9011395e-06
+		 0.60876197 0.7933529 -9.9011395e-06 0.60876197 0.7933529 -9.9011395e-06 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089 0.0017432297
 		 -0.79335183 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297 -0.79335183
@@ -26255,16 +24952,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017445596 0.79335183 -0.60876089 -0.0017445596 0.79335183 -0.60876089 -0.0017445596
 		 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851 0.0013924807
 		 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851 0.60875976 0.79335469
-		 -7.1505574e-006 0.60875976 0.79335469 -7.1505574e-006 0.60875976 0.79335469 -7.1505574e-006
-		 0.60875976 0.79335469 -7.1505574e-006 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807
+		 -7.1505574e-06 0.60875976 0.79335469 -7.1505574e-06 0.60875976 0.79335469 -7.1505574e-06
+		 0.60875976 0.79335469 -7.1505574e-06 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807
 		 0.0010544906 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906
 		 -0.99999851 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296
 		 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296 0.79335183
 		 -0.60876089 -0.0017432297 0.79335183 -0.60876089 -0.0017432297 0.79335183 -0.60876089
 		 -0.0017432297 0.79335183 -0.60876089 -0.0017432297 0.0013924907 -0.0010518905 0.99999851
 		 0.0013924907 -0.0010518905 0.99999851 0.0013924907 -0.0010518905 0.99999851 0.0013924907
-		 -0.0010518905 0.99999851 0.60876197 0.7933529 -1.1563599e-005 0.60876197 0.7933529
-		 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005
+		 -0.0010518905 0.99999851 0.60876197 0.7933529 -1.1563599e-05 0.60876197 0.7933529
+		 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05
 		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089
 		 0.0017475598 -0.79335183 0.60876089 0.0017475598 -0.79335183 0.60876089 0.0017475598
@@ -26272,25 +24969,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876089 -0.0017458897 0.79335183 -0.60876089 -0.0017458897 0.79335183 -0.60876089
 		 -0.0017458897 0.0013903194 -0.0010502295 0.99999857 0.0013903194 -0.0010502295 0.99999857
 		 0.0013903194 -0.0010502295 0.99999857 0.0013903194 -0.0010502295 0.99999857 0.60876089
-		 0.79335386 -1.0478499e-005 0.60876089 0.79335386 -1.0478499e-005 0.60876089 0.79335386
-		 -1.0478499e-005 0.60876089 0.79335386 -1.0478499e-005 -0.0013926507 0.0010561605
-		 -0.99999851 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507 0.0010561605 -0.99999851
-		 -0.0013926507 0.0010561605 -0.99999851 -0.79335183 0.60876089 0.0017467296 -0.79335183
-		 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089
-		 0.0017467296 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198
-		 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013903194
-		 -0.0010502295 0.99999857 0.0013903194 -0.0010502295 0.99999857 0.0013903194 -0.0010502295
-		 0.99999857 0.0013903194 -0.0010502295 0.99999857 0.60876197 0.7933529 -1.1563699e-005
-		 0.60876197 0.7933529 -1.1563699e-005 0.60876197 0.7933529 -1.1563699e-005 0.60876197
-		 0.7933529 -1.1563699e-005 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194 0.0010502195
+		 0.79335386 -1.0478499e-05 0.60876089 0.79335386 -1.0478499e-05 0.60876089 0.79335386
+		 -1.0478499e-05 0.60876089 0.79335386 -1.0478499e-05 -0.0013926507 0.0010561605 -0.99999851
+		 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507
+		 0.0010561605 -0.99999851 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089
+		 0.0017467296 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296
+		 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183
+		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013903194 -0.0010502295
+		 0.99999857 0.0013903194 -0.0010502295 0.99999857 0.0013903194 -0.0010502295 0.99999857
+		 0.0013903194 -0.0010502295 0.99999857 0.60876197 0.7933529 -1.1563699e-05 0.60876197
+		 0.7933529 -1.1563699e-05 0.60876197 0.7933529 -1.1563699e-05 0.60876197 0.7933529
+		 -1.1563699e-05 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194 0.0010502195
 		 -0.99999857 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194 0.0010502195 -0.99999857
 		 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198 -0.79335183
 		 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198 0.79335183 -0.60876089
 		 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296
 		 0.79335183 -0.60876089 -0.0017467296 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.60876197 0.7933529 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005
-		 0.60876197 0.7933529 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005 -0.0013903194
+		 0.99999851 0.60876197 0.7933529 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05
+		 0.60876197 0.7933529 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05 -0.0013903194
 		 0.0010502195 -0.99999857 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194 0.0010502195
 		 -0.99999857 -0.0013903194 0.0010502195 -0.99999857 -0.79335183 0.60876089 0.0017467296
 		 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296 -0.79335183
@@ -26298,8 +24995,8 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338
-		 -1.1562705e-005 0.60876131 0.79335338 -1.1562705e-005 0.60876131 0.79335338 -1.1562705e-005
-		 0.60876131 0.79335338 -1.1562705e-005 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194
+		 -1.1562705e-05 0.60876131 0.79335338 -1.1562705e-05 0.60876131 0.79335338 -1.1562705e-05
+		 0.60876131 0.79335338 -1.1562705e-05 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194
 		 0.0010502195 -0.99999857 -0.0013903194 0.0010502195 -0.99999857 -0.0013903194 0.0010502195
 		 -0.99999857 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198;
 	setAttr ".n[166:331]" -type "float3"  -0.79335183 0.60876089 0.0017467198 -0.79335183
@@ -26307,16 +25004,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017445596 0.79335183 -0.60876089 -0.0017445596 0.79335183 -0.60876089 -0.0017445596
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876197 0.7933529
-		 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005 0.60876197 0.7933529 -1.1563599e-005
-		 0.60876197 0.7933529 -1.1563599e-005 -0.0013903194 0.0010502295 -0.99999857 -0.0013903194
+		 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05 0.60876197 0.7933529 -1.1563599e-05
+		 0.60876197 0.7933529 -1.1563599e-05 -0.0013903194 0.0010502295 -0.99999857 -0.0013903194
 		 0.0010502295 -0.99999857 -0.0013903194 0.0010502295 -0.99999857 -0.0013903194 0.0010502295
 		 -0.99999857 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198
 		 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198 0.79335183
 		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089
 		 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013883094 -0.0010528396 0.99999857
 		 0.0013883094 -0.0010528396 0.99999857 0.0013883094 -0.0010528396 0.99999857 0.0013883094
-		 -0.0010528396 0.99999857 0.60876304 0.79335207 -1.1565502e-005 0.60876304 0.79335207
-		 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005
+		 -0.0010528396 0.99999857 0.60876304 0.79335207 -1.1565502e-05 0.60876304 0.79335207
+		 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05
 		 -0.0013924907 0.0010518905 -0.99999851 -0.0013924907 0.0010518905 -0.99999851 -0.0013924907
 		 0.0010518905 -0.99999851 -0.0013924907 0.0010518905 -0.99999851 -0.7933532 0.60875916
 		 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604
@@ -26324,25 +25021,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089
 		 -0.0017467198 0.0013883094 -0.0010528296 0.99999857 0.0013883094 -0.0010528296 0.99999857
 		 0.0013883094 -0.0010528296 0.99999857 0.0013883094 -0.0010528296 0.99999857 0.60876018
-		 0.79335421 -9.8982327e-006 0.60876018 0.79335421 -9.8982327e-006 0.60876018 0.79335421
-		 -9.8982327e-006 0.60876018 0.79335421 -9.8982327e-006 -0.0013924807 0.0010518905
-		 -0.99999851 -0.0013924807 0.0010518905 -0.99999851 -0.0013924807 0.0010518905 -0.99999851
-		 -0.0013924807 0.0010518905 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532
-		 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
-		 0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604
-		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013883094
-		 -0.0010528296 0.99999857 0.0013883094 -0.0010528296 0.99999857 0.0013883094 -0.0010528296
-		 0.99999857 0.0013883094 -0.0010528296 0.99999857 0.60876131 0.79335338 -9.9001345e-006
-		 0.60876131 0.79335338 -9.9001345e-006 0.60876131 0.79335338 -9.9001345e-006 0.60876131
-		 0.79335338 -9.9001345e-006 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296
+		 0.79335421 -9.8982327e-06 0.60876018 0.79335421 -9.8982327e-06 0.60876018 0.79335421
+		 -9.8982327e-06 0.60876018 0.79335421 -9.8982327e-06 -0.0013924807 0.0010518905 -0.99999851
+		 -0.0013924807 0.0010518905 -0.99999851 -0.0013924807 0.0010518905 -0.99999851 -0.0013924807
+		 0.0010518905 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
+		 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604
+		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532
+		 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013883094 -0.0010528296
+		 0.99999857 0.0013883094 -0.0010528296 0.99999857 0.0013883094 -0.0010528296 0.99999857
+		 0.0013883094 -0.0010528296 0.99999857 0.60876131 0.79335338 -9.9001345e-06 0.60876131
+		 0.79335338 -9.9001345e-06 0.60876131 0.79335338 -9.9001345e-06 0.60876131 0.79335338
+		 -9.9001345e-06 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296
 		 -0.99999857 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296 -0.99999857
 		 -0.79335183 0.60876089 0.0017458997 -0.79335183 0.60876089 0.0017458997 -0.79335183
 		 0.60876089 0.0017458997 -0.79335183 0.60876089 0.0017458997 0.79335183 -0.60876089
 		 -0.0017475697 0.79335183 -0.60876089 -0.0017475697 0.79335183 -0.60876089 -0.0017475697
 		 0.79335183 -0.60876089 -0.0017475697 0.0013926408 -0.0010561605 0.99999851 0.0013926408
 		 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605
-		 0.99999851 0.60876089 0.79335386 -1.2644998e-005 0.60876089 0.79335386 -1.2644998e-005
-		 0.60876089 0.79335386 -1.2644998e-005 0.60876089 0.79335386 -1.2644998e-005 -0.0013904807
+		 0.99999851 0.60876089 0.79335386 -1.2644998e-05 0.60876089 0.79335386 -1.2644998e-05
+		 0.60876089 0.79335386 -1.2644998e-05 0.60876089 0.79335386 -1.2644998e-05 -0.0013904807
 		 0.0010544906 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906
 		 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.79335183 0.60876089 0.0017467198
 		 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198 -0.79335183
@@ -26350,16 +25047,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017458997 0.79335183 -0.60876089 -0.0017458997 0.79335183 -0.60876089 -0.0017458997
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
 		 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.60876131 0.79335338
-		 -1.1562605e-005 0.60876131 0.79335338 -1.1562605e-005 0.60876131 0.79335338 -1.1562605e-005
-		 0.60876131 0.79335338 -1.1562605e-005 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094
+		 -1.1562605e-05 0.60876131 0.79335338 -1.1562605e-05 0.60876131 0.79335338 -1.1562605e-05
+		 0.60876131 0.79335338 -1.1562605e-05 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094
 		 0.0010528296 -0.99999857 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296
 		 -0.99999857 -0.79335183 0.60876089 0.0017458897 -0.79335183 0.60876089 0.0017458897
 		 -0.79335183 0.60876089 0.0017458897 -0.79335183 0.60876089 0.0017458897 0.79335183
 		 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089
 		 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.0013926408 -0.0010561605 0.99999851
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
-		 -0.0010561605 0.99999851 0.60876197 0.7933529 -1.2647798e-005 0.60876197 0.7933529
-		 -1.2647798e-005 0.60876197 0.7933529 -1.2647798e-005 0.60876197 0.7933529 -1.2647798e-005
+		 -0.0010561605 0.99999851 0.60876197 0.7933529 -1.2647798e-05 0.60876197 0.7933529
+		 -1.2647798e-05 0.60876197 0.7933529 -1.2647798e-05 0.60876197 0.7933529 -1.2647798e-05
 		 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094
 		 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.79335183 0.60876089
 		 0.0017467198 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198
@@ -26367,17 +25064,17 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60875916 -0.0017437406 0.7933532 -0.60875916 -0.0017437406 0.7933532 -0.60875916
 		 -0.0017437406 0.0013926507 -0.0010561605 0.99999851 0.0013926507 -0.0010561605 0.99999851
 		 0.0013926507 -0.0010561605 0.99999851 0.0013926507 -0.0010561605 0.99999851 0.60876304
-		 0.79335207 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005 0.60876304 0.79335207
-		 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005 -0.0013883094 0.0010528296
-		 -0.99999857 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296 -0.99999857
-		 -0.0013883094 0.0010528296 -0.99999857 -0.7933532 0.60875916 0.0017437305 -0.7933532
-		 0.60875916 0.0017437305 -0.7933532 0.60875916 0.0017437305 -0.7933532 0.60875916
-		 0.0017437305 0.7933532 -0.60875916 -0.0017445703 0.7933532 -0.60875916 -0.0017445703
-		 0.7933532 -0.60875916 -0.0017445703 0.7933532 -0.60875916 -0.0017445703;
+		 0.79335207 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05 0.60876304 0.79335207
+		 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05 -0.0013883094 0.0010528296 -0.99999857
+		 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094 0.0010528296 -0.99999857 -0.0013883094
+		 0.0010528296 -0.99999857 -0.7933532 0.60875916 0.0017437305 -0.7933532 0.60875916
+		 0.0017437305 -0.7933532 0.60875916 0.0017437305 -0.7933532 0.60875916 0.0017437305
+		 0.7933532 -0.60875916 -0.0017445703 0.7933532 -0.60875916 -0.0017445703 0.7933532
+		 -0.60875916 -0.0017445703 0.7933532 -0.60875916 -0.0017445703;
 	setAttr ".n[332:497]" -type "float3"  0.0013926408 -0.0010561504 0.99999851
 		 0.0013926408 -0.0010561504 0.99999851 0.0013926408 -0.0010561504 0.99999851 0.0013926408
-		 -0.0010561504 0.99999851 0.60876089 0.79335386 -1.0982399e-005 0.60876089 0.79335386
-		 -1.0982399e-005 0.60876089 0.79335386 -1.0982399e-005 0.60876089 0.79335386 -1.0982399e-005
+		 -0.0010561504 0.99999851 0.60876089 0.79335386 -1.0982399e-05 0.60876089 0.79335386
+		 -1.0982399e-05 0.60876089 0.79335386 -1.0982399e-05 0.60876089 0.79335386 -1.0982399e-05
 		 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094
 		 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.7933532 0.60875916
 		 0.0017453905 -0.7933532 0.60875916 0.0017453905 -0.7933532 0.60875916 0.0017453905
@@ -26385,25 +25082,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60875916 -0.0017437406 0.7933532 -0.60875916 -0.0017437406 0.7933532 -0.60875916
 		 -0.0017437406 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876018
-		 0.79335421 -8.8149318e-006 0.60876018 0.79335421 -8.8149318e-006 0.60876018 0.79335421
-		 -8.8149318e-006 0.60876018 0.79335421 -8.8149318e-006 -0.0013904807 0.0010545006
-		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
-		 -0.0013904807 0.0010545006 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532
-		 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
-		 0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604
-		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013904807
-		 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.0013904807 -0.0010544906
-		 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.60876131 0.79335338 -9.9001345e-006
-		 0.60876131 0.79335338 -9.9001345e-006 0.60876131 0.79335338 -9.9001345e-006 0.60876131
-		 0.79335338 -9.9001345e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
+		 0.79335421 -8.8149318e-06 0.60876018 0.79335421 -8.8149318e-06 0.60876018 0.79335421
+		 -8.8149318e-06 0.60876018 0.79335421 -8.8149318e-06 -0.0013904807 0.0010545006 -0.99999851
+		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 0.0010545006 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
+		 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604
+		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532
+		 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013904807 -0.0010544906
+		 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851
+		 0.0013904807 -0.0010544906 0.99999851 0.60876131 0.79335338 -9.9001345e-06 0.60876131
+		 0.79335338 -9.9001345e-06 0.60876131 0.79335338 -9.9001345e-06 0.60876131 0.79335338
+		 -9.9001345e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
 		 -0.7933532 0.60875916 0.0017432305 -0.7933532 0.60875916 0.0017432305 -0.7933532
 		 0.60875916 0.0017432305 -0.7933532 0.60875916 0.0017432305 0.79335183 -0.60876089
 		 -0.0017437297 0.79335183 -0.60876089 -0.0017437297 0.79335183 -0.60876089 -0.0017437297
 		 0.79335183 -0.60876089 -0.0017437297 0.0013904807 -0.0010544906 0.99999851 0.0013904807
 		 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.0013904807 -0.0010544906
-		 0.99999851 0.60875911 0.79335511 -7.1494605e-006 0.60875911 0.79335511 -7.1494605e-006
-		 0.60875911 0.79335511 -7.1494605e-006 0.60875911 0.79335511 -7.1494605e-006 -0.0013904807
+		 0.99999851 0.60875911 0.79335511 -7.1494605e-06 0.60875911 0.79335511 -7.1494605e-06
+		 0.60875911 0.79335511 -7.1494605e-06 0.60875911 0.79335511 -7.1494605e-06 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089 0.0017445596
 		 -0.79335183 0.60876089 0.0017445596 -0.79335183 0.60876089 0.0017445596 -0.79335183
@@ -26411,16 +25108,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017453897 0.79335183 -0.60876089 -0.0017453897 0.79335183 -0.60876089 -0.0017453897
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876197 0.7933529
-		 -9.902029e-006 0.60876197 0.7933529 -9.902029e-006 0.60876197 0.7933529 -9.902029e-006
-		 0.60876197 0.7933529 -9.902029e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 -9.902029e-06 0.60876197 0.7933529 -9.902029e-06 0.60876197 0.7933529 -9.902029e-06
+		 0.60876197 0.7933529 -9.902029e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.79335183 0.60876089 0.0017453897 -0.79335183 0.60876089 0.0017453897
 		 -0.79335183 0.60876089 0.0017453897 -0.79335183 0.60876089 0.0017453897 0.79335183
 		 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089
 		 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.0013926408 -0.0010561605 0.99999851
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
-		 -0.0010561605 0.99999851 0.60876131 0.79335338 -8.8168144e-006 0.60876131 0.79335338
-		 -8.8168144e-006 0.60876131 0.79335338 -8.8168144e-006 0.60876131 0.79335338 -8.8168144e-006
+		 -0.0010561605 0.99999851 0.60876131 0.79335338 -8.8168144e-06 0.60876131 0.79335338
+		 -8.8168144e-06 0.60876131 0.79335338 -8.8168144e-06 0.60876131 0.79335338 -8.8168144e-06
 		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089
 		 0.0017467396 -0.79335183 0.60876089 0.0017467396 -0.79335183 0.60876089 0.0017467396
@@ -26428,34 +25125,34 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60875916 -0.0017445703 0.7933532 -0.60875916 -0.0017445703 0.7933532 -0.60875916
 		 -0.0017445703 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851
 		 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851 0.60876369
-		 0.79335165 -1.1567495e-005 0.60876369 0.79335165 -1.1567495e-005 0.60876369 0.79335165
-		 -1.1567495e-005 0.60876369 0.79335165 -1.1567495e-005 -0.0013904807 0.0010545006
-		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
-		 -0.0013904807 0.0010545006 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532
-		 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
-		 0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604
-		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013924807
-		 -0.0010518805 0.99999851 0.0013924807 -0.0010518805 0.99999851 0.0013924807 -0.0010518805
-		 0.99999851 0.0013924807 -0.0010518805 0.99999851 0.60876131 0.79335338 -9.9001345e-006
-		 0.60876131 0.79335338 -9.9001345e-006 0.60876131 0.79335338 -9.9001345e-006 0.60876131
-		 0.79335338 -9.9001345e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
+		 0.79335165 -1.1567495e-05 0.60876369 0.79335165 -1.1567495e-05 0.60876369 0.79335165
+		 -1.1567495e-05 0.60876369 0.79335165 -1.1567495e-05 -0.0013904807 0.0010545006 -0.99999851
+		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 0.0010545006 -0.99999851 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916
+		 0.0017445604 -0.7933532 0.60875916 0.0017445604 -0.7933532 0.60875916 0.0017445604
+		 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532
+		 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.0013924807 -0.0010518805
+		 0.99999851 0.0013924807 -0.0010518805 0.99999851 0.0013924807 -0.0010518805 0.99999851
+		 0.0013924807 -0.0010518805 0.99999851 0.60876131 0.79335338 -9.9001345e-06 0.60876131
+		 0.79335338 -9.9001345e-06 0.60876131 0.79335338 -9.9001345e-06 0.60876131 0.79335338
+		 -9.9001345e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
 		 -0.79335183 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297 -0.79335183
 		 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297 0.7933532 -0.60875916
 		 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604
 		 0.7933532 -0.60875916 -0.0017445604 0.0013924807 -0.0010518805 0.99999851 0.0013924807
 		 -0.0010518805 0.99999851 0.0013924807 -0.0010518805 0.99999851 0.0013924807 -0.0010518805
-		 0.99999851 0.60876018 0.79335421 -7.1513618e-006 0.60876018 0.79335421 -7.1513618e-006;
-	setAttr ".n[498:663]" -type "float3"  0.60876018 0.79335421 -7.1513618e-006
-		 0.60876018 0.79335421 -7.1513618e-006 -0.0013904707 0.0010545006 -0.99999851 -0.0013904707
+		 0.99999851 0.60876018 0.79335421 -7.1513618e-06 0.60876018 0.79335421 -7.1513618e-06;
+	setAttr ".n[498:663]" -type "float3"  0.60876018 0.79335421 -7.1513618e-06
+		 0.60876018 0.79335421 -7.1513618e-06 -0.0013904707 0.0010545006 -0.99999851 -0.0013904707
 		 0.0010545006 -0.99999851 -0.0013904707 0.0010545006 -0.99999851 -0.0013904707 0.0010545006
 		 -0.99999851 -0.79335183 0.60876089 0.0017445596 -0.79335183 0.60876089 0.0017445596
 		 -0.79335183 0.60876089 0.0017445596 -0.79335183 0.60876089 0.0017445596 0.79335183
 		 -0.60876089 -0.0017423895 0.79335183 -0.60876089 -0.0017423895 0.79335183 -0.60876089
 		 -0.0017423895 0.79335183 -0.60876089 -0.0017423895 0.0013903194 -0.0010502195 0.99999857
 		 0.0013903194 -0.0010502195 0.99999857 0.0013903194 -0.0010502195 0.99999857 0.0013903194
-		 -0.0010502195 0.99999857 0.60876131 0.79335338 -9.9001345e-006 0.60876131 0.79335338
-		 -9.9001345e-006 0.60876131 0.79335338 -9.9001345e-006 0.60876131 0.79335338 -9.9001345e-006
+		 -0.0010502195 0.99999857 0.60876131 0.79335338 -9.9001345e-06 0.60876131 0.79335338
+		 -9.9001345e-06 0.60876131 0.79335338 -9.9001345e-06 0.60876131 0.79335338 -9.9001345e-06
 		 -0.0013904707 0.0010545006 -0.99999851 -0.0013904707 0.0010545006 -0.99999851 -0.0013904707
 		 0.0010545006 -0.99999851 -0.0013904707 0.0010545006 -0.99999851 -0.79335183 0.60876089
 		 0.0017453897 -0.79335183 0.60876089 0.0017453897 -0.79335183 0.60876089 0.0017453897
@@ -26463,25 +25160,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876089 -0.0017445596 0.79335183 -0.60876089 -0.0017445596 0.79335183 -0.60876089
 		 -0.0017445596 0.0013903194 -0.0010502195 0.99999857 0.0013903194 -0.0010502195 0.99999857
 		 0.0013903194 -0.0010502195 0.99999857 0.0013903194 -0.0010502195 0.99999857 0.60876131
-		 0.79335338 -8.8168345e-006 0.60876131 0.79335338 -8.8168345e-006 0.60876131 0.79335338
-		 -8.8168345e-006 0.60876131 0.79335338 -8.8168345e-006 -0.0013926408 0.0010561704
-		 -0.99999851 -0.0013926408 0.0010561704 -0.99999851 -0.0013926408 0.0010561704 -0.99999851
-		 -0.0013926408 0.0010561704 -0.99999851 -0.79335183 0.60876089 0.0017445695 -0.79335183
-		 0.60876089 0.0017445695 -0.79335183 0.60876089 0.0017445695 -0.79335183 0.60876089
-		 0.0017445695 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296
-		 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.0013903194
-		 -0.0010502195 0.99999857 0.0013903194 -0.0010502195 0.99999857 0.0013903194 -0.0010502195
-		 0.99999857 0.0013903194 -0.0010502195 0.99999857 0.60876131 0.79335338 -9.9001845e-006
-		 0.60876131 0.79335338 -9.9001845e-006 0.60876131 0.79335338 -9.9001845e-006 0.60876131
-		 0.79335338 -9.9001845e-006 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
+		 0.79335338 -8.8168345e-06 0.60876131 0.79335338 -8.8168345e-06 0.60876131 0.79335338
+		 -8.8168345e-06 0.60876131 0.79335338 -8.8168345e-06 -0.0013926408 0.0010561704 -0.99999851
+		 -0.0013926408 0.0010561704 -0.99999851 -0.0013926408 0.0010561704 -0.99999851 -0.0013926408
+		 0.0010561704 -0.99999851 -0.79335183 0.60876089 0.0017445695 -0.79335183 0.60876089
+		 0.0017445695 -0.79335183 0.60876089 0.0017445695 -0.79335183 0.60876089 0.0017445695
+		 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183
+		 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.0013903194 -0.0010502195
+		 0.99999857 0.0013903194 -0.0010502195 0.99999857 0.0013903194 -0.0010502195 0.99999857
+		 0.0013903194 -0.0010502195 0.99999857 0.60876131 0.79335338 -9.9001845e-06 0.60876131
+		 0.79335338 -9.9001845e-06 0.60876131 0.79335338 -9.9001845e-06 0.60876131 0.79335338
+		 -9.9001845e-06 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851
 		 -0.79334927 0.60876417 0.0017454006 -0.79334927 0.60876417 0.0017454006 -0.79334927
 		 0.60876417 0.0017454006 -0.79334927 0.60876417 0.0017454006 0.79335183 -0.60876089
 		 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198
 		 0.79335183 -0.60876089 -0.0017467198 0.0013903094 -0.0010502295 0.99999857 0.0013903094
 		 -0.0010502295 0.99999857 0.0013903094 -0.0010502295 0.99999857 0.0013903094 -0.0010502295
-		 0.99999857 0.60876018 0.79335421 -8.8139232e-006 0.60876018 0.79335421 -8.8139232e-006
-		 0.60876018 0.79335421 -8.8139232e-006 0.60876018 0.79335421 -8.8139232e-006 -0.0013926408
+		 0.99999857 0.60876018 0.79335421 -8.8139232e-06 0.60876018 0.79335421 -8.8139232e-06
+		 0.60876018 0.79335421 -8.8139232e-06 0.60876018 0.79335421 -8.8139232e-06 -0.0013926408
 		 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.79335022 0.60876316 0.0017467304
 		 -0.79335022 0.60876316 0.0017467304 -0.79335022 0.60876316 0.0017467304 -0.79335022
@@ -26489,16 +25186,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017445596 0.79335183 -0.60876089 -0.0017445596 0.79335183 -0.60876089 -0.0017445596
 		 0.0013903094 -0.0010502295 0.99999857 0.0013903094 -0.0010502295 0.99999857 0.0013903094
 		 -0.0010502295 0.99999857 0.0013903094 -0.0010502295 0.99999857 0.60876131 0.79335338
-		 -1.1562705e-005 0.60876131 0.79335338 -1.1562705e-005 0.60876131 0.79335338 -1.1562705e-005
-		 0.60876131 0.79335338 -1.1562705e-005 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507
+		 -1.1562705e-05 0.60876131 0.79335338 -1.1562705e-05 0.60876131 0.79335338 -1.1562705e-05
+		 0.60876131 0.79335338 -1.1562705e-05 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507
 		 0.0010561605 -0.99999851 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507 0.0010561605
 		 -0.99999851 -0.79335022 0.60876316 0.0017475606 -0.79335022 0.60876316 0.0017475606
 		 -0.79335022 0.60876316 0.0017475606 -0.79335022 0.60876316 0.0017475606 0.79335183
 		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089
 		 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013924807 -0.0010518905 0.99999851
 		 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851 0.0013924807
-		 -0.0010518905 0.99999851 0.60876131 0.79335338 -1.0479405e-005 0.60876131 0.79335338
-		 -1.0479405e-005 0.60876131 0.79335338 -1.0479405e-005 0.60876131 0.79335338 -1.0479405e-005
+		 -0.0010518905 0.99999851 0.60876131 0.79335338 -1.0479405e-05 0.60876131 0.79335338
+		 -1.0479405e-05 0.60876131 0.79335338 -1.0479405e-05 0.60876131 0.79335338 -1.0479405e-05
 		 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507 0.0010561605 -0.99999851 -0.0013926507
 		 0.0010561605 -0.99999851 -0.0013926507 0.0010561605 -0.99999851 -0.79335022 0.60876316
 		 0.0017467304 -0.79335022 0.60876316 0.0017467304 -0.79335022 0.60876316 0.0017467304
@@ -26506,34 +25203,34 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60875916 -0.0017445604 0.7933532 -0.60875916 -0.0017445604 0.7933532 -0.60875916
 		 -0.0017445604 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851
 		 0.0013924807 -0.0010518905 0.99999851 0.0013924807 -0.0010518905 0.99999851 0.60876304
-		 0.79335207 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005 0.60876304 0.79335207
-		 -1.1565502e-005 0.60876304 0.79335207 -1.1565502e-005 -0.0013904707 0.0010544906
-		 -0.99999851 -0.0013904707 0.0010544906 -0.99999851 -0.0013904707 0.0010544906 -0.99999851
-		 -0.0013904707 0.0010544906 -0.99999851 -0.79335183 0.60876089 0.0017467396 -0.79335183
-		 0.60876089 0.0017467396 -0.79335183 0.60876089 0.0017467396 -0.79335183 0.60876089
-		 0.0017467396 0.79335183 -0.60876089 -0.0017424097 0.79335183 -0.60876089 -0.0017424097
-		 0.79335183 -0.60876089 -0.0017424097 0.79335183 -0.60876089 -0.0017424097 0.0013904807
-		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -1.1562705e-005
-		 0.60876131 0.79335338 -1.1562705e-005 0.60876131 0.79335338 -1.1562705e-005 0.60876131
-		 0.79335338 -1.1562705e-005 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
+		 0.79335207 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05 0.60876304 0.79335207
+		 -1.1565502e-05 0.60876304 0.79335207 -1.1565502e-05 -0.0013904707 0.0010544906 -0.99999851
+		 -0.0013904707 0.0010544906 -0.99999851 -0.0013904707 0.0010544906 -0.99999851 -0.0013904707
+		 0.0010544906 -0.99999851 -0.79335183 0.60876089 0.0017467396 -0.79335183 0.60876089
+		 0.0017467396 -0.79335183 0.60876089 0.0017467396 -0.79335183 0.60876089 0.0017467396
+		 0.79335183 -0.60876089 -0.0017424097 0.79335183 -0.60876089 -0.0017424097 0.79335183
+		 -0.60876089 -0.0017424097 0.79335183 -0.60876089 -0.0017424097 0.0013904807 -0.0010545006
+		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851
+		 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -1.1562705e-05 0.60876131
+		 0.79335338 -1.1562705e-05 0.60876131 0.79335338 -1.1562705e-05 0.60876131 0.79335338
+		 -1.1562705e-05 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
 		 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857;
 	setAttr ".n[664:829]" -type "float3"  -0.79335183 0.60876089 0.0017467198 -0.79335183
 		 0.60876089 0.0017467198 -0.79335183 0.60876089 0.0017467198 -0.79335183 0.60876089
 		 0.0017467198 0.79335183 -0.60876089 -0.0017475598 0.79335183 -0.60876089 -0.0017475598
 		 0.79335183 -0.60876089 -0.0017475598 0.79335183 -0.60876089 -0.0017475598 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876197 0.7933529 -1.1564498e-005
-		 0.60876197 0.7933529 -1.1564498e-005 0.60876197 0.7933529 -1.1564498e-005 0.60876197
-		 0.7933529 -1.1564498e-005 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
+		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876197 0.7933529 -1.1564498e-05
+		 0.60876197 0.7933529 -1.1564498e-05 0.60876197 0.7933529 -1.1564498e-05 0.60876197
+		 0.7933529 -1.1564498e-05 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
 		 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857
 		 -0.79335183 0.60876089 0.0017475598 -0.79335183 0.60876089 0.0017475598 -0.79335183
 		 0.60876089 0.0017475598 -0.79335183 0.60876089 0.0017475598 0.79335183 -0.60876089
 		 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198
 		 0.79335183 -0.60876089 -0.0017467198 0.0013883094 -0.0010528396 0.99999857 0.0013883094
 		 -0.0010528396 0.99999857 0.0013883094 -0.0010528396 0.99999857 0.0013883094 -0.0010528396
-		 0.99999857 0.60876131 0.79335338 -1.0479305e-005 0.60876131 0.79335338 -1.0479305e-005
-		 0.60876131 0.79335338 -1.0479305e-005 0.60876131 0.79335338 -1.0479305e-005 -0.0013904807
+		 0.99999857 0.60876131 0.79335338 -1.0479305e-05 0.60876131 0.79335338 -1.0479305e-05
+		 0.60876131 0.79335338 -1.0479305e-05 0.60876131 0.79335338 -1.0479305e-05 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089 0.0017423998
 		 -0.79335183 0.60876089 0.0017423998 -0.79335183 0.60876089 0.0017423998 -0.79335183
@@ -26541,16 +25238,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017475598 0.79335183 -0.60876089 -0.0017475598 0.79335183 -0.60876089 -0.0017475598
 		 0.0013882994 -0.0010528296 0.99999857 0.0013882994 -0.0010528296 0.99999857 0.0013882994
 		 -0.0010528296 0.99999857 0.0013882994 -0.0010528296 0.99999857 0.60875976 0.79335469
-		 -8.2337365e-006 0.60875976 0.79335469 -8.2337365e-006 0.60875976 0.79335469 -8.2337365e-006
-		 0.60875976 0.79335469 -8.2337365e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 -8.2337365e-06 0.60875976 0.79335469 -8.2337365e-06 0.60875976 0.79335469 -8.2337365e-06
+		 0.60875976 0.79335469 -8.2337365e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.79335183 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297
 		 -0.79335183 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297 0.79334837
 		 -0.60876536 -0.001746721 0.79334837 -0.60876536 -0.001746721 0.79334837 -0.60876536
 		 -0.001746721 0.79334837 -0.60876536 -0.001746721 0.0013882994 -0.0010528296 0.99999857
 		 0.0013882994 -0.0010528296 0.99999857 0.0013882994 -0.0010528296 0.99999857 0.0013882994
-		 -0.0010528296 0.99999857 0.60875911 0.79335511 -7.1484806e-006 0.60875911 0.79335511
-		 -7.1484806e-006 0.60875911 0.79335511 -7.1484806e-006 0.60875911 0.79335511 -7.1484806e-006
+		 -0.0010528296 0.99999857 0.60875911 0.79335511 -7.1484806e-06 0.60875911 0.79335511
+		 -7.1484806e-06 0.60875911 0.79335511 -7.1484806e-06 0.60875911 0.79335511 -7.1484806e-06
 		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089
 		 0.0017423998 -0.79335183 0.60876089 0.0017423998 -0.79335183 0.60876089 0.0017423998
@@ -26558,25 +25255,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876536 -0.0017475609 0.79334837 -0.60876536 -0.0017475609 0.79334837 -0.60876536
 		 -0.0017475609 0.0013882994 -0.0010528296 0.99999857 0.0013882994 -0.0010528296 0.99999857
 		 0.0013882994 -0.0010528296 0.99999857 0.0013882994 -0.0010528296 0.99999857 0.60875976
-		 0.79335469 -8.2337565e-006 0.60875976 0.79335469 -8.2337565e-006 0.60875976 0.79335469
-		 -8.2337565e-006 0.60875976 0.79335469 -8.2337565e-006 -0.0013904807 0.0010545006
-		 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851
-		 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089 0.0017423895 -0.79335183
-		 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089
-		 0.0017423895 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198
-		 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013904807
-		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -8.2375846e-006
-		 0.60876131 0.79335338 -8.2375846e-006 0.60876131 0.79335338 -8.2375846e-006 0.60876131
-		 0.79335338 -8.2375846e-006 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906
+		 0.79335469 -8.2337565e-06 0.60875976 0.79335469 -8.2337565e-06 0.60875976 0.79335469
+		 -8.2337565e-06 0.60875976 0.79335469 -8.2337565e-06 -0.0013904807 0.0010545006 -0.99999851
+		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 0.0010545006 -0.99999851 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089
+		 0.0017423895 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895
+		 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183
+		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013904807 -0.0010545006
+		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851
+		 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -8.2375846e-06 0.60876131
+		 0.79335338 -8.2375846e-06 0.60876131 0.79335338 -8.2375846e-06 0.60876131 0.79335338
+		 -8.2375846e-06 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906
 		 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906 -0.99999851
 		 -0.79335183 0.60876089 0.0017502297 -0.79335183 0.60876089 0.0017502297 -0.79335183
 		 0.60876089 0.0017502297 -0.79335183 0.60876089 0.0017502297 0.79335183 -0.60876089
 		 -0.0017475598 0.79335183 -0.60876089 -0.0017475598 0.79335183 -0.60876089 -0.0017475598
 		 0.79335183 -0.60876089 -0.0017475598 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.60876197 0.7933529 -1.5972899e-005 0.60876197 0.7933529 -1.5972899e-005
-		 0.60876197 0.7933529 -1.5972899e-005 0.60876197 0.7933529 -1.5972899e-005 -0.0013904807
+		 0.99999851 0.60876197 0.7933529 -1.5972899e-05 0.60876197 0.7933529 -1.5972899e-05
+		 0.60876197 0.7933529 -1.5972899e-05 0.60876197 0.7933529 -1.5972899e-05 -0.0013904807
 		 0.0010544906 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.0013904807 0.0010544906
 		 -0.99999851 -0.0013904807 0.0010544906 -0.99999851 -0.79335183 0.60876089 0.0017510597
 		 -0.79335183 0.60876089 0.0017510597 -0.79335183 0.60876089 0.0017510597 -0.79335183
@@ -26584,8 +25281,8 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017458897 0.79335183 -0.60876089 -0.0017458897 0.79335183 -0.60876089 -0.0017458897
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338
-		 -1.4887707e-005 0.60876131 0.79335338 -1.4887707e-005 0.60876131 0.79335338 -1.4887707e-005
-		 0.60876131 0.79335338 -1.4887707e-005 -0.0013883094 0.0010528195 -0.99999857 -0.0013883094
+		 -1.4887707e-05 0.60876131 0.79335338 -1.4887707e-05 0.60876131 0.79335338 -1.4887707e-05
+		 0.60876131 0.79335338 -1.4887707e-05 -0.0013883094 0.0010528195 -0.99999857 -0.0013883094
 		 0.0010528195 -0.99999857 -0.0013883094 0.0010528195 -0.99999857 -0.0013883094 0.0010528195
 		 -0.99999857 -0.79335183 0.60876089 0.0017502297 -0.79335183 0.60876089 0.0017502297
 		 -0.79335183 0.60876089 0.0017502297 -0.79335183 0.60876089 0.0017502297 0.79335183
@@ -26593,8 +25290,8 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 	setAttr ".n[830:995]" -type "float3"  0.79335183 -0.60876089 -0.0017467296
 		 0.79335183 -0.60876089 -0.0017467296 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.60876197 0.7933529 -1.5972899e-005 0.60876197 0.7933529 -1.5972899e-005
-		 0.60876197 0.7933529 -1.5972899e-005 0.60876197 0.7933529 -1.5972899e-005 -0.0013926408
+		 0.99999851 0.60876197 0.7933529 -1.5972899e-05 0.60876197 0.7933529 -1.5972899e-05
+		 0.60876197 0.7933529 -1.5972899e-05 0.60876197 0.7933529 -1.5972899e-05 -0.0013926408
 		 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.79335493 0.6087569 0.0017424099
 		 -0.79335493 0.6087569 0.0017424099 -0.79335493 0.6087569 0.0017424099 -0.79335493
@@ -26602,16 +25299,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017432297 0.79335487 -0.6087569 -0.0017432297 0.79335487 -0.6087569 -0.0017432297
 		 0.0013904807 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.0013904807
 		 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.60876197 0.7933529
-		 -8.2395491e-006 0.60876197 0.7933529 -8.2395491e-006 0.60876197 0.7933529 -8.2395491e-006
-		 0.60876197 0.7933529 -8.2395491e-006 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408
+		 -8.2395491e-06 0.60876197 0.7933529 -8.2395491e-06 0.60876197 0.7933529 -8.2395491e-06
+		 0.60876197 0.7933529 -8.2395491e-06 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408
 		 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.79335487 0.6087569 0.0017432297 -0.79335487 0.6087569 0.0017432297
 		 -0.79335487 0.6087569 0.0017432297 -0.79335487 0.6087569 0.0017432297 0.79335183
 		 -0.60876089 -0.0017423895 0.79335183 -0.60876089 -0.0017423895 0.79335183 -0.60876089
 		 -0.0017423895 0.79335183 -0.60876089 -0.0017423895 0.0013904807 -0.0010544906 0.99999851
 		 0.0013904807 -0.0010544906 0.99999851 0.0013904807 -0.0010544906 0.99999851 0.0013904807
-		 -0.0010544906 0.99999851 0.60876131 0.79335338 -7.1543036e-006 0.60876131 0.79335338
-		 -7.1543036e-006 0.60876131 0.79335338 -7.1543036e-006 0.60876131 0.79335338 -7.1543036e-006
+		 -0.0010544906 0.99999851 0.60876131 0.79335338 -7.1543036e-06 0.60876131 0.79335338
+		 -7.1543036e-06 0.60876131 0.79335338 -7.1543036e-06 0.60876131 0.79335338 -7.1543036e-06
 		 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408
 		 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.79335183 0.60876089
 		 0.0017467296 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296
@@ -26619,25 +25316,25 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876089 -0.0017432197 0.79335183 -0.60876089 -0.0017432197 0.79335183 -0.60876089
 		 -0.0017432197 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851
 		 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.60876197
-		 0.7933529 -1.1564599e-005 0.60876197 0.7933529 -1.1564599e-005 0.60876197 0.7933529
-		 -1.1564599e-005 0.60876197 0.7933529 -1.1564599e-005 -0.0013926408 0.0010561605 -0.99999851
+		 0.7933529 -1.1564599e-05 0.60876197 0.7933529 -1.1564599e-05 0.60876197 0.7933529
+		 -1.1564599e-05 0.60876197 0.7933529 -1.1564599e-05 -0.0013926408 0.0010561605 -0.99999851
 		 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408
 		 0.0010561605 -0.99999851 -0.79335183 0.60876089 0.0017475598 -0.79335183 0.60876089
 		 0.0017475598 -0.79335183 0.60876089 0.0017475598 -0.79335183 0.60876089 0.0017475598
 		 0.79335183 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.79335183
 		 -0.60876089 -0.0017467198 0.79335183 -0.60876089 -0.0017467198 0.0013904807 -0.0010545006
 		 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851
-		 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -1.0479405e-005 0.60876131
-		 0.79335338 -1.0479405e-005 0.60876131 0.79335338 -1.0479405e-005 0.60876131 0.79335338
-		 -1.0479405e-005 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
+		 0.0013904807 -0.0010545006 0.99999851 0.60876131 0.79335338 -1.0479405e-05 0.60876131
+		 0.79335338 -1.0479405e-05 0.60876131 0.79335338 -1.0479405e-05 0.60876131 0.79335338
+		 -1.0479405e-05 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851
 		 -0.79335183 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296 -0.79335183
 		 0.60876089 0.0017467296 -0.79335183 0.60876089 0.0017467296 0.79335183 -0.60876089
 		 -0.0017475598 0.79335183 -0.60876089 -0.0017475598 0.79335183 -0.60876089 -0.0017475598
 		 0.79335183 -0.60876089 -0.0017475598 0.0013904807 -0.0010545006 0.99999851 0.0013904807
 		 -0.0010545006 0.99999851 0.0013904807 -0.0010545006 0.99999851 0.0013904807 -0.0010545006
-		 0.99999851 0.60876197 0.7933529 -1.1564599e-005 0.60876197 0.7933529 -1.1564599e-005
-		 0.60876197 0.7933529 -1.1564599e-005 0.60876197 0.7933529 -1.1564599e-005 -0.0013926408
+		 0.99999851 0.60876197 0.7933529 -1.1564599e-05 0.60876197 0.7933529 -1.1564599e-05
+		 0.60876197 0.7933529 -1.1564599e-05 0.60876197 0.7933529 -1.1564599e-05 -0.0013926408
 		 0.0010561605 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.0013926408 0.0010561605
 		 -0.99999851 -0.0013926408 0.0010561605 -0.99999851 -0.79335183 0.60876089 0.0017432297
 		 -0.79335183 0.60876089 0.0017432297 -0.79335183 0.60876089 0.0017432297 -0.79335183
@@ -26645,16 +25342,16 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017467296 0.79335183 -0.60876089 -0.0017467296 0.79335183 -0.60876089 -0.0017467296
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
 		 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.60875911 0.79335511
-		 -7.1484806e-006 0.60875911 0.79335511 -7.1484806e-006 0.60875911 0.79335511 -7.1484806e-006
-		 0.60875911 0.79335511 -7.1484806e-006 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
+		 -7.1484806e-06 0.60875911 0.79335511 -7.1484806e-06 0.60875911 0.79335511 -7.1484806e-06
+		 0.60875911 0.79335511 -7.1484806e-06 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006
 		 -0.99999851 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895
 		 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895 0.79334837
 		 -0.60876536 -0.0017475609 0.79334837 -0.60876536 -0.0017475609 0.79334837 -0.60876536
 		 -0.0017475609 0.79334837 -0.60876536 -0.0017475609 0.0013926408 -0.0010561605 0.99999851
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
-		 -0.0010561605 0.99999851 0.60875911 0.79335511 -8.233711e-006 0.60875911 0.79335511
-		 -8.233711e-006 0.60875911 0.79335511 -8.233711e-006 0.60875911 0.79335511 -8.233711e-006
+		 -0.0010561605 0.99999851 0.60875911 0.79335511 -8.233711e-06 0.60875911 0.79335511
+		 -8.233711e-06 0.60875911 0.79335511 -8.233711e-06 0.60875911 0.79335511 -8.233711e-06
 		 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.0013904807
 		 0.0010545006 -0.99999851 -0.0013904807 0.0010545006 -0.99999851 -0.79335183 0.60876089
 		 0.0017432197 -0.79335183 0.60876089 0.0017432197 -0.79335183 0.60876089 0.0017432197
@@ -26662,17 +25359,17 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.60876089 -0.0017423998 0.79335183 -0.60876089 -0.0017423998 0.79335183 -0.60876089
 		 -0.0017423998 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851;
-	setAttr ".n[996:1161]" -type "float3"  0.60876131 0.79335338 -7.1542831e-006
-		 0.60876131 0.79335338 -7.1542831e-006 0.60876131 0.79335338 -7.1542831e-006 0.60876131
-		 0.79335338 -7.1542831e-006 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
+	setAttr ".n[996:1161]" -type "float3"  0.60876131 0.79335338 -7.1542831e-06
+		 0.60876131 0.79335338 -7.1542831e-06 0.60876131 0.79335338 -7.1542831e-06 0.60876131
+		 0.79335338 -7.1542831e-06 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
 		 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857
 		 -0.79335183 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895 -0.79335183
 		 0.60876089 0.0017423895 -0.79335183 0.60876089 0.0017423895 0.79335183 -0.60876089
 		 -0.0017432297 0.79335183 -0.60876089 -0.0017432297 0.79335183 -0.60876089 -0.0017432297
 		 0.79335183 -0.60876089 -0.0017432297 0.0013926408 -0.0010561605 0.99999851 0.0013926408
 		 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605
-		 0.99999851 0.60876197 0.7933529 -8.239479e-006 0.60876197 0.7933529 -8.239479e-006
-		 0.60876197 0.7933529 -8.239479e-006 0.60876197 0.7933529 -8.239479e-006 -0.0013883094
+		 0.99999851 0.60876197 0.7933529 -8.239479e-06 0.60876197 0.7933529 -8.239479e-06
+		 0.60876197 0.7933529 -8.239479e-06 0.60876197 0.7933529 -8.239479e-06 -0.0013883094
 		 0.0010528396 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.0013883094 0.0010528396
 		 -0.99999857 -0.0013883094 0.0010528396 -0.99999857 -0.79335183 0.60876089 0.0017432197
 		 -0.79335183 0.60876089 0.0017432197 -0.79335183 0.60876089 0.0017432197 -0.79335183
@@ -26680,8 +25377,8 @@ createNode mesh -n "polySurface1279Shape" -p "polySurface1279";
 		 -0.0017423998 0.79335183 -0.60876089 -0.0017423998 0.79335183 -0.60876089 -0.0017423998
 		 0.0013926408 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.0013926408
 		 -0.0010561605 0.99999851 0.0013926408 -0.0010561605 0.99999851 0.60876131 0.79335338
-		 -7.1542831e-006 0.60876131 0.79335338 -7.1542831e-006 0.60876131 0.79335338 -7.1542831e-006
-		 0.60876131 0.79335338 -7.1542831e-006 -0.61410916 -0.78922123 0 -0.61410916 -0.78922123
+		 -7.1542831e-06 0.60876131 0.79335338 -7.1542831e-06 0.60876131 0.79335338 -7.1542831e-06
+		 0.60876131 0.79335338 -7.1542831e-06 -0.61410916 -0.78922123 0 -0.61410916 -0.78922123
 		 0 -0.61410916 -0.78922123 0 -0.61410916 -0.78922123 0 0.61630392 0.78711885 -0.024764597
 		 0.61153197 0.79083198 -0.024764601 0.61153197 0.79083198 -0.024764601 0.61630392
 		 0.78711885 -0.024764597 0.61153197 0.79083198 -0.024764601 0.61153215 0.79083216
@@ -28471,17 +27168,17 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088
 		 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.0013901107 -0.0010594606
 		 0.99999851 0.0013901107 -0.0010594606 0.99999851 0.0013901107 -0.0010594606 0.99999851
-		 0.0013901107 -0.0010594606 0.99999851 0.60876197 0.7933529 -1.0652899e-005 0.60876197
-		 0.7933529 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529
-		 -1.0652899e-005 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
+		 0.0013901107 -0.0010594606 0.99999851 0.60876197 0.7933529 -1.0652899e-05 0.60876197
+		 0.7933529 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529
+		 -1.0652899e-05 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
 		 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851
 		 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 -0.79335088
 		 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 0.79335088 -0.60876197
 		 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299
 		 0.79335088 -0.60876197 -0.0017459299 0.0013901107 -0.0010594606 0.99999851 0.0013901107
 		 -0.0010594606 0.99999851 0.0013901107 -0.0010594606 0.99999851 0.0013901107 -0.0010594606
-		 0.99999851 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005
-		 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005 -0.0013935907
+		 0.99999851 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05
+		 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05 -0.0013935907
 		 0.0010549105 -0.99999851 -0.0013935907 0.0010549105 -0.99999851 -0.0013935907 0.0010549105
 		 -0.99999851 -0.0013935907 0.0010549105 -0.99999851 -0.79335088 0.60876197 0.0017459199
 		 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088
@@ -28489,16 +27186,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149
 		 0.0013901107 -0.0010594606 0.99999851 0.0013901107 -0.0010594606 0.99999851 0.0013901107
 		 -0.0010594606 0.99999851 0.0013901107 -0.0010594606 0.99999851 0.60876197 0.7933529
-		 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005
-		 0.60876197 0.7933529 -1.0652899e-005 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
+		 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05
+		 0.60876197 0.7933529 -1.0652899e-05 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
 		 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
 		 -0.99999851 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299
 		 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 0.79335356
 		 -0.60875863 -0.0017459191 0.79335356 -0.60875863 -0.0017459191 0.79335356 -0.60875863
 		 -0.0017459191 0.79335356 -0.60875863 -0.0017459191 0.0013863394 -0.0010565595 0.99999857
 		 0.0013863394 -0.0010565595 0.99999857 0.0013863394 -0.0010565595 0.99999857 0.0013863394
-		 -0.0010565595 0.99999857 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529
-		 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005 0.60876197 0.7933529 -1.0652899e-005
+		 -0.0010565595 0.99999857 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529
+		 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05 0.60876197 0.7933529 -1.0652899e-05
 		 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
 		 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.79335088 0.60876197
 		 0.0017459299 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299
@@ -28506,25 +27203,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863
 		 -0.0017459291 0.0013863494 -0.0010565695 0.99999857 0.0013863494 -0.0010565695 0.99999857
 		 0.0013863494 -0.0010565695 0.99999857 0.0013863494 -0.0010565695 0.99999857 0.60876417
-		 0.79335123 -1.0658003e-005 0.60876417 0.79335123 -1.0658003e-005 0.60876417 0.79335123
-		 -1.0658003e-005 0.60876417 0.79335123 -1.0658003e-005 -0.0013898395 0.0010520195
-		 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857
-		 -0.0013898395 0.0010520195 -0.99999857 -0.79335088 0.60876197 0.0017459199 -0.79335088
-		 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
-		 0.0017459199 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291
-		 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.0013901207
-		 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606
-		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.60876417 0.79335123 -1.0658003e-005
-		 0.60876417 0.79335123 -1.0658003e-005 0.60876417 0.79335123 -1.0658003e-005 0.60876417
-		 0.79335123 -1.0658003e-005 -0.0013936107 0.0010549206 -0.99999851 -0.0013936107 0.0010549206
+		 0.79335123 -1.0658003e-05 0.60876417 0.79335123 -1.0658003e-05 0.60876417 0.79335123
+		 -1.0658003e-05 0.60876417 0.79335123 -1.0658003e-05 -0.0013898395 0.0010520195 -0.99999857
+		 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
+		 0.0010520195 -0.99999857 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
+		 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199
+		 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.79335356
+		 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.0013901207 -0.0010594606
+		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851
+		 0.0013901207 -0.0010594606 0.99999851 0.60876417 0.79335123 -1.0658003e-05 0.60876417
+		 0.79335123 -1.0658003e-05 0.60876417 0.79335123 -1.0658003e-05 0.60876417 0.79335123
+		 -1.0658003e-05 -0.0013936107 0.0010549206 -0.99999851 -0.0013936107 0.0010549206
 		 -0.99999851 -0.0013936107 0.0010549206 -0.99999851 -0.0013936107 0.0010549206 -0.99999851
 		 -0.79335356 0.60875863 0.001738389 -0.79335356 0.60875863 0.001738389 -0.79335356
 		 0.60875863 0.001738389 -0.79335356 0.60875863 0.001738389 0.79335356 -0.60875863
 		 -0.0017459191 0.79335356 -0.60875863 -0.0017459191 0.79335356 -0.60875863 -0.0017459191
 		 0.79335356 -0.60875863 -0.0017459191 0.0013898395 -0.0010520095 0.99999857 0.0013898395
 		 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095
-		 0.99999857 0.60876089 0.79335386 -4.866929e-006 0.60876089 0.79335386 -4.866929e-006
-		 0.60876089 0.79335386 -4.866929e-006 0.60876089 0.79335386 -4.866929e-006 -0.0013936107
+		 0.99999857 0.60876089 0.79335386 -4.866929e-06 0.60876089 0.79335386 -4.866929e-06
+		 0.60876089 0.79335386 -4.866929e-06 0.60876089 0.79335386 -4.866929e-06 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.79335356 0.60875863 0.0017459389
 		 -0.79335356 0.60875863 0.0017459389 -0.79335356 0.60875863 0.0017459389 -0.79335356
@@ -28532,8 +27229,8 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017459191 0.79335356 -0.60875863 -0.0017459191 0.79335356 -0.60875863 -0.0017459191
 		 0.0013860695 -0.0010491295 0.99999857 0.0013860695 -0.0010491295 0.99999857 0.0013860695
 		 -0.0010491295 0.99999857 0.0013860695 -0.0010491295 0.99999857 0.60875911 0.79335511
-		 -1.0646401e-005 0.60875911 0.79335511 -1.0646401e-005 0.60875911 0.79335511 -1.0646401e-005
-		 0.60875911 0.79335511 -1.0646401e-005 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
+		 -1.0646401e-05 0.60875911 0.79335511 -1.0646401e-05 0.60875911 0.79335511 -1.0646401e-05
+		 0.60875911 0.79335511 -1.0646401e-05 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.79335356 0.60875863 0.0017459291 -0.79335356 0.60875863 0.0017459291;
 	setAttr ".n[166:331]" -type "float3"  -0.79335356 0.60875863 0.0017459291 -0.79335356
@@ -28541,16 +27238,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017459097 0.79335487 -0.6087569 -0.0017459097 0.79335487 -0.6087569 -0.0017459097
 		 0.0013860695 -0.0010491195 0.99999857 0.0013860695 -0.0010491195 0.99999857 0.0013860695
 		 -0.0010491195 0.99999857 0.0013860695 -0.0010491195 0.99999857 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
-		 0.60876089 0.79335386 -1.0649698e-005 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
+		 0.60876089 0.79335386 -1.0649698e-05 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
 		 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195
 		 -0.99999857 -0.79335356 0.60875863 0.0017459291 -0.79335356 0.60875863 0.0017459291
 		 -0.79335356 0.60875863 0.0017459291 -0.79335356 0.60875863 0.0017459291 0.79335183
 		 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.79335183 -0.60876089
 		 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.0013898395 -0.0010520195 0.99999857
 		 0.0013898395 -0.0010520195 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.0013898395
-		 -0.0010520195 0.99999857 0.60876131 0.79335338 -1.0651505e-005 0.60876131 0.79335338
-		 -1.0651505e-005 0.60876131 0.79335338 -1.0651505e-005 0.60876131 0.79335338 -1.0651505e-005
+		 -0.0010520195 0.99999857 0.60876131 0.79335338 -1.0651505e-05 0.60876131 0.79335338
+		 -1.0651505e-05 0.60876131 0.79335338 -1.0651505e-05 0.60876131 0.79335338 -1.0651505e-05
 		 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
 		 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.79335099 0.60876203
 		 0.0017421599 -0.79335099 0.60876203 0.0017421599 -0.79335099 0.60876203 0.0017421599
@@ -28558,25 +27255,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.79335183 -0.60876089
 		 -0.0017459297 0.0013898294 -0.0010520195 0.99999857 0.0013898294 -0.0010520195 0.99999857
 		 0.0013898294 -0.0010520195 0.99999857 0.0013898294 -0.0010520195 0.99999857 0.60876089
-		 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386
-		 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 -0.0013936007 0.0010549105
-		 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851
-		 -0.0013936007 0.0010549105 -0.99999851 -0.79335088 0.60876197 0.0017459397 -0.79335088
-		 0.60876197 0.0017459397 -0.79335088 0.60876197 0.0017459397 -0.79335088 0.60876197
-		 0.0017459397 0.79335183 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297
-		 0.79335183 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.0013898294
-		 -0.0010520195 0.99999857 0.0013898294 -0.0010520195 0.99999857 0.0013898294 -0.0010520195
-		 0.99999857 0.0013898294 -0.0010520195 0.99999857 0.60875911 0.79335511 -1.0646401e-005
-		 0.60875911 0.79335511 -1.0646401e-005 0.60875911 0.79335511 -1.0646401e-005 0.60875911
-		 0.79335511 -1.0646401e-005 -0.0013898395 0.0010520295 -0.99999857 -0.0013898395 0.0010520295
+		 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386
+		 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 -0.0013936007 0.0010549105 -0.99999851
+		 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
+		 0.0010549105 -0.99999851 -0.79335088 0.60876197 0.0017459397 -0.79335088 0.60876197
+		 0.0017459397 -0.79335088 0.60876197 0.0017459397 -0.79335088 0.60876197 0.0017459397
+		 0.79335183 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.79335183
+		 -0.60876089 -0.0017459297 0.79335183 -0.60876089 -0.0017459297 0.0013898294 -0.0010520195
+		 0.99999857 0.0013898294 -0.0010520195 0.99999857 0.0013898294 -0.0010520195 0.99999857
+		 0.0013898294 -0.0010520195 0.99999857 0.60875911 0.79335511 -1.0646401e-05 0.60875911
+		 0.79335511 -1.0646401e-05 0.60875911 0.79335511 -1.0646401e-05 0.60875911 0.79335511
+		 -1.0646401e-05 -0.0013898395 0.0010520295 -0.99999857 -0.0013898395 0.0010520295
 		 -0.99999857 -0.0013898395 0.0010520295 -0.99999857 -0.0013898395 0.0010520295 -0.99999857
 		 -0.79335356 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169 -0.79335356
 		 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169 0.79335356 -0.60875863
 		 -0.0017459489 0.79335356 -0.60875863 -0.0017459489 0.79335356 -0.60875863 -0.0017459489
 		 0.79335356 -0.60875863 -0.0017459489 0.0013936107 -0.0010549105 0.99999851 0.0013936107
 		 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105
-		 0.99999851 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006
-		 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006 -0.0013898395
+		 0.99999851 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06
+		 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06 -0.0013898395
 		 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.79335356 0.60875863 0.0017459191
 		 -0.79335356 0.60875863 0.0017459191 -0.79335356 0.60875863 0.0017459191 -0.79335356
@@ -28584,16 +27281,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299
 		 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.0013936107
 		 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
-		 0.60876089 0.79335386 -1.0649698e-005 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
+		 0.60876089 0.79335386 -1.0649698e-05 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
 		 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195
 		 -0.99999857 -0.79335356 0.60875863 0.0017459191 -0.79335356 0.60875863 0.0017459191
 		 -0.79335356 0.60875863 0.0017459191 -0.79335356 0.60875863 0.0017459191 0.79335356
 		 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863
 		 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.0013936107 -0.0010549105 0.99999851
 		 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.0013936107
-		 -0.0010549105 0.99999851 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207
-		 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010549105 0.99999851 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207
+		 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05
 		 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395
 		 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.79335356 0.60875863
 		 0.0017459191 -0.79335356 0.60875863 0.0017459191 -0.79335356 0.60875863 0.0017459191
@@ -28601,17 +27298,17 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197
 		 -0.0017459299 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851
 		 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.60876089
-		 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 -0.0013898395 0.0010520095
-		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857
-		 -0.0013898395 0.0010520095 -0.99999857 -0.79335088 0.60876197 0.0017459199 -0.79335088
-		 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
-		 0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199
-		 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199;
+		 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 -0.0013898395 0.0010520095 -0.99999857
+		 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395
+		 0.0010520095 -0.99999857 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
+		 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199
+		 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088
+		 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199;
 	setAttr ".n[332:497]" -type "float3"  0.0013898294 -0.0010520195 0.99999857
 		 0.0013898294 -0.0010520195 0.99999857 0.0013898294 -0.0010520195 0.99999857 0.0013898294
-		 -0.0010520195 0.99999857 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010520195 0.99999857 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
 		 -0.0013860594 0.0010491295 -0.99999857 -0.0013860594 0.0010491295 -0.99999857 -0.0013860594
 		 0.0010491295 -0.99999857 -0.0013860594 0.0010491295 -0.99999857 -0.79335088 0.60876197
 		 0.0017459299 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299
@@ -28619,25 +27316,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60876203 -0.0017421701 0.79335099 -0.60876203 -0.0017421701 0.79335099 -0.60876203
 		 -0.0017421701 0.0013898395 -0.0010520295 0.99999857 0.0013898395 -0.0010520295 0.99999857
 		 0.0013898395 -0.0010520295 0.99999857 0.0013898395 -0.0010520295 0.99999857 0.60876304
-		 0.79335207 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207
-		 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005 -0.0013860695 0.0010491295
-		 -0.99999857 -0.0013860695 0.0010491295 -0.99999857 -0.0013860695 0.0010491295 -0.99999857
-		 -0.0013860695 0.0010491295 -0.99999857 -0.79335088 0.60876197 0.0017459098 -0.79335088
-		 0.60876197 0.0017459098 -0.79335088 0.60876197 0.0017459098 -0.79335088 0.60876197
-		 0.0017459098 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299
-		 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.0013936107
-		 -0.0010549206 0.99999851 0.0013936107 -0.0010549206 0.99999851 0.0013936107 -0.0010549206
-		 0.99999851 0.0013936107 -0.0010549206 0.99999851 0.60876304 0.79335207 -1.0654701e-005
-		 0.60876304 0.79335207 -1.0654701e-005 0.60876304 0.79335207 -1.0654701e-005 0.60876304
-		 0.79335207 -1.0654701e-005 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294 0.0010520195
+		 0.79335207 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207
+		 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05 -0.0013860695 0.0010491295 -0.99999857
+		 -0.0013860695 0.0010491295 -0.99999857 -0.0013860695 0.0010491295 -0.99999857 -0.0013860695
+		 0.0010491295 -0.99999857 -0.79335088 0.60876197 0.0017459098 -0.79335088 0.60876197
+		 0.0017459098 -0.79335088 0.60876197 0.0017459098 -0.79335088 0.60876197 0.0017459098
+		 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.79335088
+		 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.0013936107 -0.0010549206
+		 0.99999851 0.0013936107 -0.0010549206 0.99999851 0.0013936107 -0.0010549206 0.99999851
+		 0.0013936107 -0.0010549206 0.99999851 0.60876304 0.79335207 -1.0654701e-05 0.60876304
+		 0.79335207 -1.0654701e-05 0.60876304 0.79335207 -1.0654701e-05 0.60876304 0.79335207
+		 -1.0654701e-05 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294 0.0010520195
 		 -0.99999857 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294 0.0010520195 -0.99999857
 		 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 -0.79335088
 		 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 0.79335088 -0.60876197
 		 -0.0017459397 0.79335088 -0.60876197 -0.0017459397 0.79335088 -0.60876197 -0.0017459397
 		 0.79335088 -0.60876197 -0.0017459397 0.0013936007 -0.0010549105 0.99999851 0.0013936007
 		 -0.0010549105 0.99999851 0.0013936007 -0.0010549105 0.99999851 0.0013936007 -0.0010549105
-		 0.99999851 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
-		 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 -0.0013898294
+		 0.99999851 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
+		 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 -0.0013898294
 		 0.0010520195 -0.99999857 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294 0.0010520195
 		 -0.99999857 -0.0013898294 0.0010520195 -0.99999857 -0.79335088 0.60876197 0.0017459299
 		 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 -0.79335088
@@ -28645,16 +27342,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017459397 0.79335088 -0.60876197 -0.0017459397 0.79335088 -0.60876197 -0.0017459397
 		 0.0013936007 -0.0010549105 0.99999851 0.0013936007 -0.0010549105 0.99999851 0.0013936007
 		 -0.0010549105 0.99999851 0.0013936007 -0.0010549105 0.99999851 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
-		 0.60876089 0.79335386 -1.0649698e-005 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
+		 0.60876089 0.79335386 -1.0649698e-05 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294
 		 0.0010520195 -0.99999857 -0.0013898294 0.0010520195 -0.99999857 -0.0013898294 0.0010520195
 		 -0.99999857 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299
 		 -0.79335088 0.60876197 0.0017459299 -0.79335088 0.60876197 0.0017459299 0.79335356
 		 -0.60875863 -0.001738399 0.79335356 -0.60875863 -0.001738399 0.79335356 -0.60875863
 		 -0.001738399 0.79335356 -0.60875863 -0.001738399 0.0013936107 -0.0010549206 0.99999851
 		 0.0013936107 -0.0010549206 0.99999851 0.0013936107 -0.0010549206 0.99999851 0.0013936107
-		 -0.0010549206 0.99999851 0.60876536 0.7933504 -1.0659805e-005 0.60876536 0.7933504
-		 -1.0659805e-005 0.60876536 0.7933504 -1.0659805e-005 0.60876536 0.7933504 -1.0659805e-005
+		 -0.0010549206 0.99999851 0.60876536 0.7933504 -1.0659805e-05 0.60876536 0.7933504
+		 -1.0659805e-05 0.60876536 0.7933504 -1.0659805e-05 0.60876536 0.7933504 -1.0659805e-05
 		 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.79335088 0.60876197
 		 0.0017459397 -0.79335088 0.60876197 0.0017459397 -0.79335088 0.60876197 0.0017459397
@@ -28662,34 +27359,34 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60876203 -0.0017421701 0.79335099 -0.60876203 -0.0017421701 0.79335099 -0.60876203
 		 -0.0017421701 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851
 		 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.60876304
-		 0.79335207 -1.0654901e-005 0.60876304 0.79335207 -1.0654901e-005 0.60876304 0.79335207
-		 -1.0654901e-005 0.60876304 0.79335207 -1.0654901e-005 -0.0013936007 0.0010549105
-		 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851
-		 -0.0013936007 0.0010549105 -0.99999851 -0.79335088 0.60876197 0.0017459199 -0.79335088
-		 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
-		 0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199
-		 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.0013901207
-		 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606
-		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.60876417 0.79335123 -1.0658003e-005
-		 0.60876417 0.79335123 -1.0658003e-005 0.60876417 0.79335123 -1.0658003e-005 0.60876417
-		 0.79335123 -1.0658003e-005 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
+		 0.79335207 -1.0654901e-05 0.60876304 0.79335207 -1.0654901e-05 0.60876304 0.79335207
+		 -1.0654901e-05 0.60876304 0.79335207 -1.0654901e-05 -0.0013936007 0.0010549105 -0.99999851
+		 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
+		 0.0010549105 -0.99999851 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197
+		 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199
+		 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088
+		 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.0013901207 -0.0010594606
+		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851
+		 0.0013901207 -0.0010594606 0.99999851 0.60876417 0.79335123 -1.0658003e-05 0.60876417
+		 0.79335123 -1.0658003e-05 0.60876417 0.79335123 -1.0658003e-05 0.60876417 0.79335123
+		 -1.0658003e-05 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
 		 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851
 		 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 -0.79335088
 		 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 0.79335088 -0.60876197
 		 -0.0017459098 0.79335088 -0.60876197 -0.0017459098 0.79335088 -0.60876197 -0.0017459098
 		 0.79335088 -0.60876197 -0.0017459098 0.0013863494 -0.0010565695 0.99999857 0.0013863494
 		 -0.0010565695 0.99999857 0.0013863494 -0.0010565695 0.99999857 0.0013863494 -0.0010565695
-		 0.99999857 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005;
-	setAttr ".n[498:663]" -type "float3"  0.60876089 0.79335386 -1.0649698e-005
-		 0.60876089 0.79335386 -1.0649698e-005 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
+		 0.99999857 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05;
+	setAttr ".n[498:663]" -type "float3"  0.60876089 0.79335386 -1.0649698e-05
+		 0.60876089 0.79335386 -1.0649698e-05 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007
 		 0.0010549105 -0.99999851 -0.0013936007 0.0010549105 -0.99999851 -0.0013936007 0.0010549105
 		 -0.99999851 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199
 		 -0.79335088 0.60876197 0.0017459199 -0.79335088 0.60876197 0.0017459199 0.79335088
 		 -0.60876197 -0.0017459098 0.79335088 -0.60876197 -0.0017459098 0.79335088 -0.60876197
 		 -0.0017459098 0.79335088 -0.60876197 -0.0017459098 0.0013863494 -0.0010565695 0.99999857
 		 0.0013863494 -0.0010565695 0.99999857 0.0013863494 -0.0010565695 0.99999857 0.0013863494
-		 -0.0010565695 0.99999857 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386
-		 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005 0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010565695 0.99999857 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386
+		 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05 0.60876089 0.79335386 -1.0649698e-05
 		 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
 		 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.79335088 0.60876197
 		 0.0017459098 -0.79335088 0.60876197 0.0017459098 -0.79335088 0.60876197 0.0017459098
@@ -28697,25 +27394,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60876197 -0.0017459199 0.79335088 -0.60876197 -0.0017459199 0.79335088 -0.60876197
 		 -0.0017459199 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851
 		 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.60876304
-		 0.79335207 -1.0654701e-005 0.60876304 0.79335207 -1.0654701e-005 0.60876304 0.79335207
-		 -1.0654701e-005 0.60876304 0.79335207 -1.0654701e-005 -0.0013898395 0.0010520195
-		 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857
-		 -0.0013898395 0.0010520195 -0.99999857 -0.79335088 0.60876197 0.0017473698 -0.79335088
-		 0.60876197 0.0017473698 -0.79335088 0.60876197 0.0017473698 -0.79335088 0.60876197
-		 0.0017473698 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299
-		 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.0013901207
-		 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606
-		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.60876304 0.79335207 -8.7707213e-006
-		 0.60876304 0.79335207 -8.7707213e-006 0.60876304 0.79335207 -8.7707213e-006 0.60876304
-		 0.79335207 -8.7707213e-006 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
+		 0.79335207 -1.0654701e-05 0.60876304 0.79335207 -1.0654701e-05 0.60876304 0.79335207
+		 -1.0654701e-05 0.60876304 0.79335207 -1.0654701e-05 -0.0013898395 0.0010520195 -0.99999857
+		 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395
+		 0.0010520195 -0.99999857 -0.79335088 0.60876197 0.0017473698 -0.79335088 0.60876197
+		 0.0017473698 -0.79335088 0.60876197 0.0017473698 -0.79335088 0.60876197 0.0017473698
+		 0.79335088 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.79335088
+		 -0.60876197 -0.0017459299 0.79335088 -0.60876197 -0.0017459299 0.0013901207 -0.0010594606
+		 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851
+		 0.0013901207 -0.0010594606 0.99999851 0.60876304 0.79335207 -8.7707213e-06 0.60876304
+		 0.79335207 -8.7707213e-06 0.60876304 0.79335207 -8.7707213e-06 0.60876304 0.79335207
+		 -8.7707213e-06 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851
 		 -0.79335183 0.60876089 0.0017459198 -0.79335183 0.60876089 0.0017459198 -0.79335183
 		 0.60876089 0.0017459198 -0.79335183 0.60876089 0.0017459198 0.79335487 -0.6087569
 		 -0.0017459198 0.79335487 -0.6087569 -0.0017459198 0.79335487 -0.6087569 -0.0017459198
 		 0.79335487 -0.6087569 -0.0017459198 0.0013901207 -0.0010594606 0.99999851 0.0013901207
 		 -0.0010594606 0.99999851 0.0013901207 -0.0010594606 0.99999851 0.0013901207 -0.0010594606
-		 0.99999851 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005
-		 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005 -0.0013936107
+		 0.99999851 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05
+		 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.79335356 0.60875863 0.0017421589
 		 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589 -0.79335356
@@ -28723,16 +27420,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017459297 0.79335487 -0.6087569 -0.0017459297 0.79335487 -0.6087569 -0.0017459297
 		 0.0013901207 -0.0010594506 0.99999851 0.0013901207 -0.0010594506 0.99999851 0.0013901207
 		 -0.0010594506 0.99999851 0.0013901207 -0.0010594506 0.99999851 0.60876089 0.79335386
-		 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006
-		 0.60876089 0.79335386 -7.7583181e-006 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
+		 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06
+		 0.60876089 0.79335386 -7.7583181e-06 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.79335487 0.6087569 0.0017459297 -0.79335487 0.6087569 0.0017459297
 		 -0.79335487 0.6087569 0.0017459297 -0.79335487 0.6087569 0.0017459297 0.79335487
 		 -0.6087569 -0.0017459297 0.79335487 -0.6087569 -0.0017459297 0.79335487 -0.6087569
 		 -0.0017459297 0.79335487 -0.6087569 -0.0017459297 0.0013901307 -0.0010594506 0.99999851
 		 0.0013901307 -0.0010594506 0.99999851 0.0013901307 -0.0010594506 0.99999851 0.0013901307
-		 -0.0010594506 0.99999851 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207
-		 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005 0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010594506 0.99999851 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207
+		 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05 0.60876304 0.79335207 -1.0654801e-05
 		 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.79335356 0.60875863
 		 0.0017444891 -0.79335356 0.60875863 0.0017444891 -0.79335356 0.60875863 0.0017444891
@@ -28740,34 +27437,34 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60875863 -0.0017459291 0.79335356 -0.60875863 -0.0017459291 0.79335356 -0.60875863
 		 -0.0017459291 0.0013901207 -0.0010594506 0.99999851 0.0013901207 -0.0010594506 0.99999851
 		 0.0013901207 -0.0010594506 0.99999851 0.0013901207 -0.0010594506 0.99999851 0.60876304
-		 0.79335207 -1.2538801e-005 0.60876304 0.79335207 -1.2538801e-005 0.60876304 0.79335207
-		 -1.2538801e-005 0.60876304 0.79335207 -1.2538801e-005 -0.0013863494 0.0010565595
-		 -0.99999857 -0.0013863494 0.0010565595 -0.99999857 -0.0013863494 0.0010565595 -0.99999857
-		 -0.0013863494 0.0010565595 -0.99999857 -0.79335356 0.60875863 0.001742179 -0.79335356
-		 0.60875863 0.001742179 -0.79335356 0.60875863 0.001742179 -0.79335356 0.60875863
-		 0.001742179 0.79335493 -0.6087569 -0.0017407298 0.79335493 -0.6087569 -0.0017407298
-		 0.79335493 -0.6087569 -0.0017407298 0.79335493 -0.6087569 -0.0017407298 0.0013898395
-		 -0.0010520195 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.0013898395 -0.0010520195
-		 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.60875911 0.79335511 -7.7551613e-006
-		 0.60875911 0.79335511 -7.7551613e-006 0.60875911 0.79335511 -7.7551613e-006 0.60875911
-		 0.79335511 -7.7551613e-006 -0.0013901207 0.0010594506 -0.99999851 -0.0013901207 0.0010594506
+		 0.79335207 -1.2538801e-05 0.60876304 0.79335207 -1.2538801e-05 0.60876304 0.79335207
+		 -1.2538801e-05 0.60876304 0.79335207 -1.2538801e-05 -0.0013863494 0.0010565595 -0.99999857
+		 -0.0013863494 0.0010565595 -0.99999857 -0.0013863494 0.0010565595 -0.99999857 -0.0013863494
+		 0.0010565595 -0.99999857 -0.79335356 0.60875863 0.001742179 -0.79335356 0.60875863
+		 0.001742179 -0.79335356 0.60875863 0.001742179 -0.79335356 0.60875863 0.001742179
+		 0.79335493 -0.6087569 -0.0017407298 0.79335493 -0.6087569 -0.0017407298 0.79335493
+		 -0.6087569 -0.0017407298 0.79335493 -0.6087569 -0.0017407298 0.0013898395 -0.0010520195
+		 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.0013898395 -0.0010520195 0.99999857
+		 0.0013898395 -0.0010520195 0.99999857 0.60875911 0.79335511 -7.7551613e-06 0.60875911
+		 0.79335511 -7.7551613e-06 0.60875911 0.79335511 -7.7551613e-06 0.60875911 0.79335511
+		 -7.7551613e-06 -0.0013901207 0.0010594506 -0.99999851 -0.0013901207 0.0010594506
 		 -0.99999851 -0.0013901207 0.0010594506 -0.99999851 -0.0013901207 0.0010594506 -0.99999851;
 	setAttr ".n[664:829]" -type "float3"  -0.79335356 0.60875863 0.0017421589 -0.79335356
 		 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863
 		 0.0017421589 0.79335493 -0.6087569 -0.0017421498 0.79335493 -0.6087569 -0.0017421498
 		 0.79335493 -0.6087569 -0.0017421498 0.79335493 -0.6087569 -0.0017421498 0.0013860695
 		 -0.0010491295 0.99999857 0.0013860695 -0.0010491295 0.99999857 0.0013860695 -0.0010491295
-		 0.99999857 0.0013860695 -0.0010491295 0.99999857 0.60875911 0.79335511 -7.7550912e-006
-		 0.60875911 0.79335511 -7.7550912e-006 0.60875911 0.79335511 -7.7550912e-006 0.60875911
-		 0.79335511 -7.7550912e-006 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195
+		 0.99999857 0.0013860695 -0.0010491295 0.99999857 0.60875911 0.79335511 -7.7550912e-06
+		 0.60875911 0.79335511 -7.7550912e-06 0.60875911 0.79335511 -7.7550912e-06 0.60875911
+		 0.79335511 -7.7550912e-06 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195
 		 -0.99999857 -0.0013898395 0.0010520195 -0.99999857 -0.0013898395 0.0010520195 -0.99999857
 		 -0.79335356 0.60875863 0.0017346289 -0.79335356 0.60875863 0.0017346289 -0.79335356
 		 0.60875863 0.0017346289 -0.79335356 0.60875863 0.0017346289 0.79335493 -0.6087569
 		 -0.0017421498 0.79335493 -0.6087569 -0.0017421498 0.79335493 -0.6087569 -0.0017421498
 		 0.79335493 -0.6087569 -0.0017421498 0.0013860594 -0.0010491195 0.99999857 0.0013860594
 		 -0.0010491195 0.99999857 0.0013860594 -0.0010491195 0.99999857 0.0013860594 -0.0010491195
-		 0.99999857 0.60875404 0.79335904 -1.9623501e-006 0.60875404 0.79335904 -1.9623501e-006
-		 0.60875404 0.79335904 -1.9623501e-006 0.60875404 0.79335904 -1.9623501e-006 -0.0013898294
+		 0.99999857 0.60875404 0.79335904 -1.9623501e-06 0.60875404 0.79335904 -1.9623501e-06
+		 0.60875404 0.79335904 -1.9623501e-06 0.60875404 0.79335904 -1.9623501e-06 -0.0013898294
 		 0.0010520295 -0.99999857 -0.0013898294 0.0010520295 -0.99999857 -0.0013898294 0.0010520295
 		 -0.99999857 -0.0013898294 0.0010520295 -0.99999857 -0.79335356 0.60875863 0.001742149
 		 -0.79335356 0.60875863 0.001742149 -0.79335356 0.60875863 0.001742149 -0.79335356
@@ -28775,16 +27472,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017407099 0.79335493 -0.6087569 -0.0017407099 0.79335493 -0.6087569 -0.0017407099
 		 0.0013898395 -0.0010520195 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.0013898395
 		 -0.0010520195 0.99999857 0.0013898395 -0.0010520195 0.99999857 0.60875911 0.79335511
-		 -7.7550512e-006 0.60875911 0.79335511 -7.7550512e-006 0.60875911 0.79335511 -7.7550512e-006
-		 0.60875911 0.79335511 -7.7550512e-006 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007
+		 -7.7550512e-06 0.60875911 0.79335511 -7.7550512e-06 0.60875911 0.79335511 -7.7550512e-06
+		 0.60875911 0.79335511 -7.7550512e-06 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007
 		 0.0010549206 -0.99999851 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007 0.0010549206
 		 -0.99999851 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589
 		 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589 0.79335356
 		 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.79335356 -0.60875863
 		 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.0013898395 -0.0010520095 0.99999857
 		 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395
-		 -0.0010520095 0.99999857 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386
-		 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006
+		 -0.0010520095 0.99999857 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386
+		 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06
 		 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007
 		 0.0010549206 -0.99999851 -0.0013936007 0.0010549206 -0.99999851 -0.79335356 0.60875863
 		 0.001742169 -0.79335356 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169
@@ -28792,25 +27489,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60875863 -0.0017421589 0.79335356 -0.60875863 -0.0017421589 0.79335356 -0.60875863
 		 -0.0017421589 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857
 		 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.60876018
-		 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421
-		 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006 -0.0013936007 0.0010549206
-		 -0.99999851 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007 0.0010549206 -0.99999851
-		 -0.0013936007 0.0010549206 -0.99999851 -0.79335356 0.60875863 0.0017421589 -0.79335356
-		 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863
-		 0.0017421589 0.79335356 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149
-		 0.79335356 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.0013898395
-		 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095
-		 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.60876089 0.79335386 -7.7583181e-006
-		 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089
-		 0.79335386 -7.7583181e-006 -0.0013936107 0.0010549305 -0.99999851 -0.0013936107 0.0010549305
+		 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421
+		 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06 -0.0013936007 0.0010549206 -0.99999851
+		 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007 0.0010549206 -0.99999851 -0.0013936007
+		 0.0010549206 -0.99999851 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863
+		 0.0017421589 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589
+		 0.79335356 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.79335356
+		 -0.60875863 -0.001742149 0.79335356 -0.60875863 -0.001742149 0.0013898395 -0.0010520095
+		 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857
+		 0.0013898395 -0.0010520095 0.99999857 0.60876089 0.79335386 -7.7583181e-06 0.60876089
+		 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386
+		 -7.7583181e-06 -0.0013936107 0.0010549305 -0.99999851 -0.0013936107 0.0010549305
 		 -0.99999851 -0.0013936107 0.0010549305 -0.99999851 -0.0013936107 0.0010549305 -0.99999851
 		 -0.79335356 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169 -0.79335356
 		 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169 0.79335356 -0.60875863
 		 -0.0017496989 0.79335356 -0.60875863 -0.0017496989 0.79335356 -0.60875863 -0.0017496989
 		 0.79335356 -0.60875863 -0.0017496989 0.0013898395 -0.0010520095 0.99999857 0.0013898395
 		 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095
-		 0.99999857 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006
-		 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006 -0.0013936107
+		 0.99999857 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06
+		 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06 -0.0013936107
 		 0.0010549305 -0.99999851 -0.0013936107 0.0010549305 -0.99999851 -0.0013936107 0.0010549305
 		 -0.99999851 -0.0013936107 0.0010549305 -0.99999851 -0.79335356 0.60875863 0.001742169
 		 -0.79335356 0.60875863 0.001742169 -0.79335356 0.60875863 0.001742169 -0.79335356
@@ -28818,8 +27515,8 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017496989 0.79335356 -0.60875863 -0.0017496989 0.79335356 -0.60875863 -0.0017496989
 		 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395
 		 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.60876018 0.79335421
-		 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006 0.60876018 0.79335421 -7.7583618e-006
-		 0.60876018 0.79335421 -7.7583618e-006 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
+		 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06 0.60876018 0.79335421 -7.7583618e-06
+		 0.60876018 0.79335421 -7.7583618e-06 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107
 		 0.0010549105 -0.99999851 -0.0013936107 0.0010549105 -0.99999851 -0.0013936107 0.0010549105
 		 -0.99999851 -0.79335356 0.60875863 0.0017497089 -0.79335356 0.60875863 0.0017497089
 		 -0.79335356 0.60875863 0.0017497089 -0.79335356 0.60875863 0.0017497089 0.79335356
@@ -28827,8 +27524,8 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 	setAttr ".n[830:995]" -type "float3"  0.79335356 -0.60875863 -0.0017496989
 		 0.79335356 -0.60875863 -0.0017496989 0.0013898395 -0.0010520095 0.99999857 0.0013898395
 		 -0.0010520095 0.99999857 0.0013898395 -0.0010520095 0.99999857 0.0013898395 -0.0010520095
-		 0.99999857 0.60876018 0.79335421 -1.3541104e-005 0.60876018 0.79335421 -1.3541104e-005
-		 0.60876018 0.79335421 -1.3541104e-005 0.60876018 0.79335421 -1.3541104e-005 -0.0013898395
+		 0.99999857 0.60876018 0.79335421 -1.3541104e-05 0.60876018 0.79335421 -1.3541104e-05
+		 0.60876018 0.79335421 -1.3541104e-05 0.60876018 0.79335421 -1.3541104e-05 -0.0013898395
 		 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.7933479 0.60876596 0.0017497197
 		 -0.7933479 0.60876596 0.0017497197 -0.7933479 0.60876596 0.0017497197 -0.7933479
@@ -28836,16 +27533,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017497197 0.7933479 -0.60876596 -0.0017497197 0.7933479 -0.60876596 -0.0017497197
 		 0.0013898294 -0.0010520295 0.99999857 0.0013898294 -0.0010520295 0.99999857 0.0013898294
 		 -0.0010520295 0.99999857 0.0013898294 -0.0010520295 0.99999857 0.60876089 0.79335386
-		 -1.3541097e-005 0.60876089 0.79335386 -1.3541097e-005 0.60876089 0.79335386 -1.3541097e-005
-		 0.60876089 0.79335386 -1.3541097e-005 -0.0013860695 0.0010491195 -0.99999857 -0.0013860695
+		 -1.3541097e-05 0.60876089 0.79335386 -1.3541097e-05 0.60876089 0.79335386 -1.3541097e-05
+		 0.60876089 0.79335386 -1.3541097e-05 -0.0013860695 0.0010491195 -0.99999857 -0.0013860695
 		 0.0010491195 -0.99999857 -0.0013860695 0.0010491195 -0.99999857 -0.0013860695 0.0010491195
 		 -0.99999857 -0.7933479 0.60876596 0.0017496798 -0.7933479 0.60876596 0.0017496798
 		 -0.7933479 0.60876596 0.0017496798 -0.7933479 0.60876596 0.0017496798 0.7933479 -0.60876596
 		 -0.0017496998 0.7933479 -0.60876596 -0.0017496998 0.7933479 -0.60876596 -0.0017496998
 		 0.7933479 -0.60876596 -0.0017496998 0.0013936007 -0.0010549206 0.99999851 0.0013936007
 		 -0.0010549206 0.99999851 0.0013936007 -0.0010549206 0.99999851 0.0013936007 -0.0010549206
-		 0.99999851 0.60876089 0.79335386 -1.3540897e-005 0.60876089 0.79335386 -1.3540897e-005
-		 0.60876089 0.79335386 -1.3540897e-005 0.60876089 0.79335386 -1.3540897e-005 -0.0013860695
+		 0.99999851 0.60876089 0.79335386 -1.3540897e-05 0.60876089 0.79335386 -1.3540897e-05
+		 0.60876089 0.79335386 -1.3540897e-05 0.60876089 0.79335386 -1.3540897e-05 -0.0013860695
 		 0.0010491195 -0.99999857 -0.0013860695 0.0010491195 -0.99999857 -0.0013860695 0.0010491195
 		 -0.99999857 -0.0013860695 0.0010491195 -0.99999857 -0.7933479 0.60876596 0.0017496798
 		 -0.7933479 0.60876596 0.0017496798 -0.7933479 0.60876596 0.0017496798 -0.7933479
@@ -28853,16 +27550,16 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.0017496998 0.7933479 -0.60876596 -0.0017496998 0.7933479 -0.60876596 -0.0017496998
 		 0.0013936007 -0.0010549206 0.99999851 0.0013936007 -0.0010549206 0.99999851 0.0013936007
 		 -0.0010549206 0.99999851 0.0013936007 -0.0010549206 0.99999851 0.60876089 0.79335386
-		 -1.3540897e-005 0.60876089 0.79335386 -1.3540897e-005 0.60876089 0.79335386 -1.3540897e-005
-		 0.60876089 0.79335386 -1.3540897e-005 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395
+		 -1.3540897e-05 0.60876089 0.79335386 -1.3540897e-05 0.60876089 0.79335386 -1.3540897e-05
+		 0.60876089 0.79335386 -1.3540897e-05 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395
 		 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.7933479 0.60876596 0.0017496898 -0.7933479 0.60876596 0.0017496898
 		 -0.7933479 0.60876596 0.0017496898 -0.7933479 0.60876596 0.0017496898 0.79335356
 		 -0.60875863 -0.0017421589 0.79335356 -0.60875863 -0.0017421589 0.79335356 -0.60875863
 		 -0.0017421589 0.79335356 -0.60875863 -0.0017421589 0.0013936107 -0.0010549305 0.99999851
 		 0.0013936107 -0.0010549305 0.99999851 0.0013936107 -0.0010549305 0.99999851 0.0013936107
-		 -0.0010549305 0.99999851 0.60876483 0.7933507 -1.3551095e-005 0.60876483 0.7933507
-		 -1.3551095e-005 0.60876483 0.7933507 -1.3551095e-005 0.60876483 0.7933507 -1.3551095e-005
+		 -0.0010549305 0.99999851 0.60876483 0.7933507 -1.3551095e-05 0.60876483 0.7933507
+		 -1.3551095e-05 0.60876483 0.7933507 -1.3551095e-05 0.60876483 0.7933507 -1.3551095e-05
 		 -0.0013898495 0.0010520195 -0.99999857 -0.0013898495 0.0010520195 -0.99999857 -0.0013898495
 		 0.0010520195 -0.99999857 -0.0013898495 0.0010520195 -0.99999857 -0.79335356 0.60875863
 		 0.001742149 -0.79335356 0.60875863 0.001742149 -0.79335356 0.60875863 0.001742149
@@ -28870,25 +27567,25 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.60875863 -0.0017421589 0.79335356 -0.60875863 -0.0017421589 0.79335356 -0.60875863
 		 -0.0017421589 0.0013936207 -0.0010549105 0.99999851 0.0013936207 -0.0010549105 0.99999851
 		 0.0013936207 -0.0010549105 0.99999851 0.0013936207 -0.0010549105 0.99999851 0.60876483
-		 0.7933507 -7.7683571e-006 0.60876483 0.7933507 -7.7683571e-006 0.60876483 0.7933507
-		 -7.7683571e-006 0.60876483 0.7933507 -7.7683571e-006 -0.0013898395 0.0010520095 -0.99999857
+		 0.7933507 -7.7683571e-06 0.60876483 0.7933507 -7.7683571e-06 0.60876483 0.7933507
+		 -7.7683571e-06 0.60876483 0.7933507 -7.7683571e-06 -0.0013898395 0.0010520095 -0.99999857
 		 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395
 		 0.0010520095 -0.99999857 -0.79335493 0.6087569 0.0017421597 -0.79335493 0.6087569
 		 0.0017421597 -0.79335493 0.6087569 0.0017421597 -0.79335493 0.6087569 0.0017421597
 		 0.79335356 -0.60875863 -0.001742169 0.79335356 -0.60875863 -0.001742169 0.79335356
 		 -0.60875863 -0.001742169 0.79335356 -0.60875863 -0.001742169 0.0013936107 -0.0010549006
 		 0.99999851 0.0013936107 -0.0010549006 0.99999851 0.0013936107 -0.0010549006 0.99999851
-		 0.0013936107 -0.0010549006 0.99999851 0.60876089 0.79335386 -7.7583181e-006 0.60876089
-		 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386
-		 -7.7583181e-006 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
+		 0.0013936107 -0.0010549006 0.99999851 0.60876089 0.79335386 -7.7583181e-06 0.60876089
+		 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386
+		 -7.7583181e-06 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857
 		 -0.79335493 0.6087569 0.0017421498 -0.79335493 0.6087569 0.0017421498 -0.79335493
 		 0.6087569 0.0017421498 -0.79335493 0.6087569 0.0017421498 0.79335356 -0.60875863
 		 -0.0017421589 0.79335356 -0.60875863 -0.0017421589 0.79335356 -0.60875863 -0.0017421589
 		 0.79335356 -0.60875863 -0.0017421589 0.0013936107 -0.0010549006 0.99999851 0.0013936107
 		 -0.0010549006 0.99999851 0.0013936107 -0.0010549006 0.99999851 0.0013936107 -0.0010549006
-		 0.99999851 0.60876089 0.79335386 -7.758289e-006 0.60876089 0.79335386 -7.758289e-006
-		 0.60876089 0.79335386 -7.758289e-006 0.60876089 0.79335386 -7.758289e-006 -0.0013898395
+		 0.99999851 0.60876089 0.79335386 -7.758289e-06 0.60876089 0.79335386 -7.758289e-06
+		 0.60876089 0.79335386 -7.758289e-06 0.60876089 0.79335386 -7.758289e-06 -0.0013898395
 		 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.79335493 0.6087569 0.0017421597
 		 -0.79335493 0.6087569 0.0017421597 -0.79335493 0.6087569 0.0017421597 -0.79335493
@@ -28896,17 +27593,17 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.001742169 0.79335356 -0.60875863 -0.001742169 0.79335356 -0.60875863 -0.001742169
 		 0.0013936107 -0.0010549006 0.99999851 0.0013936107 -0.0010549006 0.99999851 0.0013936107
 		 -0.0010549006 0.99999851 0.0013936107 -0.0010549006 0.99999851;
-	setAttr ".n[996:1039]" -type "float3"  0.60876089 0.79335386 -7.7583181e-006
-		 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 0.60876089
-		 0.79335386 -7.7583181e-006 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
+	setAttr ".n[996:1039]" -type "float3"  0.60876089 0.79335386 -7.7583181e-06
+		 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 0.60876089
+		 0.79335386 -7.7583181e-06 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095
 		 -0.99999857 -0.0013898395 0.0010520095 -0.99999857 -0.0013898395 0.0010520095 -0.99999857
 		 -0.79335493 0.6087569 0.0017421597 -0.79335493 0.6087569 0.0017421597 -0.79335493
 		 0.6087569 0.0017421597 -0.79335493 0.6087569 0.0017421597 0.79335356 -0.60875863
 		 -0.001742169 0.79335356 -0.60875863 -0.001742169 0.79335356 -0.60875863 -0.001742169
 		 0.79335356 -0.60875863 -0.001742169 0.0013936107 -0.0010549006 0.99999851 0.0013936107
 		 -0.0010549006 0.99999851 0.0013936107 -0.0010549006 0.99999851 0.0013936107 -0.0010549006
-		 0.99999851 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006
-		 0.60876089 0.79335386 -7.7583181e-006 0.60876089 0.79335386 -7.7583181e-006 -0.0013898294
+		 0.99999851 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06
+		 0.60876089 0.79335386 -7.7583181e-06 0.60876089 0.79335386 -7.7583181e-06 -0.0013898294
 		 0.0010520295 -0.99999857 -0.0013898294 0.0010520295 -0.99999857 -0.0013898294 0.0010520295
 		 -0.99999857 -0.0013898294 0.0010520295 -0.99999857 -0.79335356 0.60875863 0.0017421589
 		 -0.79335356 0.60875863 0.0017421589 -0.79335356 0.60875863 0.0017421589 -0.79335356
@@ -28914,8 +27611,8 @@ createNode mesh -n "polySurface1280Shape" -p "polySurface1280";
 		 -0.001742169 0.79335356 -0.60875863 -0.001742169 0.79335356 -0.60875863 -0.001742169
 		 0.0013936107 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.0013936107
 		 -0.0010549105 0.99999851 0.0013936107 -0.0010549105 0.99999851 0.60875911 0.79335511
-		 -7.7550912e-006 0.60875911 0.79335511 -7.7550912e-006 0.60875911 0.79335511 -7.7550912e-006
-		 0.60875911 0.79335511 -7.7550912e-006;
+		 -7.7550912e-06 0.60875911 0.79335511 -7.7550912e-06 0.60875911 0.79335511 -7.7550912e-06
+		 0.60875911 0.79335511 -7.7550912e-06;
 	setAttr -s 260 -ch 1040 ".fc[0:259]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -30524,34 +29221,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.0013901207 -0.0010594506 0.99999851 -0.60876197 0.7933529 -1.0652999e-005 -0.60876197
-		 0.7933529 -1.0652999e-005 -0.60876197 0.7933529 -1.0652999e-005 -0.60876197 0.7933529
-		 -1.0652999e-005 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
+		 -0.0013901207 -0.0010594506 0.99999851 -0.60876197 0.7933529 -1.0652999e-05 -0.60876197
+		 0.7933529 -1.0652999e-05 -0.60876197 0.7933529 -1.0652999e-05 -0.60876197 0.7933529
+		 -1.0652999e-05 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863
 		 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088
 		 -0.60876197 -0.0017459199 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549006
+		 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549006
 		 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.0013936007 0.0010549006 -0.99999851 0.79335356 0.60875863 0.0017459191 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863
 		 0.0017459191 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.0013901107
 		 -0.0010594404 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.0013901107 -0.0010594404
-		 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.60875976 0.79335469 -1.0647796e-005
-		 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976
-		 0.79335469 -1.0647796e-005 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006
+		 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.60875976 0.79335469 -1.0647796e-05
+		 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976
+		 0.79335469 -1.0647796e-05 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006
 		 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013901107 -0.0010594506 0.99999851 -0.0013901107
 		 -0.0010594506 0.99999851 -0.0013901107 -0.0010594506 0.99999851 -0.0013901107 -0.0010594506
-		 0.99999851 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005
-		 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005 0.0013936007
+		 0.99999851 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05
+		 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459199
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088
@@ -30559,16 +29256,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107
 		 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005
-		 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05
+		 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335088
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.0013901107 -0.0010594606 0.99999851
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107
-		 -0.0010594606 0.99999851 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005
+		 -0.0010594606 0.99999851 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05
 		 0.0013935907 0.0010549105 -0.99999851 0.0013935907 0.0010549105 -0.99999851 0.0013935907
 		 0.0010549105 -0.99999851 0.0013935907 0.0010549105 -0.99999851 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -30576,17 +29273,17 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863
 		 -0.001742149 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549105 -0.99999851
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197
 		 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356
 		 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.0013863394 -0.0010565595
 		 0.99999857 -0.0013863394 -0.0010565595 0.99999857 -0.0013863394 -0.0010565595 0.99999857
-		 -0.0013863394 -0.0010565595 0.99999857 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
+		 -0.0013863394 -0.0010565595 0.99999857 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299;
 	setAttr ".n[166:331]" -type "float3"  0.79335088 0.60876197 0.0017459299 0.79335088
@@ -30594,16 +29291,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291
 		 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876417 0.79335123
-		 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005
-		 -0.60876417 0.79335123 -1.0658003e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395
+		 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05
+		 -0.60876417 0.79335123 -1.0658003e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 -0.79335356
 		 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123
-		 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005
+		 -0.0010594606 0.99999851 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123
+		 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335183 0.60876089
 		 0.0017421796 0.79335183 0.60876089 0.0017421796 0.79335183 0.60876089 0.0017421796
@@ -30611,25 +29308,25 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197
 		 -0.0017459397 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
 		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857
-		 -0.60876197 0.7933529 -7.7616287e-006 -0.60876197 0.7933529 -7.7616287e-006 -0.60876197
-		 0.7933529 -7.7616287e-006 -0.60876197 0.7933529 -7.7616287e-006 0.0013936007 0.0010549105
+		 -0.60876197 0.7933529 -7.7616287e-06 -0.60876197 0.7933529 -7.7616287e-06 -0.60876197
+		 0.7933529 -7.7616287e-06 -0.60876197 0.7933529 -7.7616287e-06 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.79335183 0.60876089 0.0017444898 0.79335183
 		 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089
 		 0.0017444898 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -1.2533797e-005
-		 -0.60876089 0.79335386 -1.2533797e-005 -0.60876089 0.79335386 -1.2533797e-005 -0.60876089
-		 0.79335386 -1.2533797e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -1.2533797e-05
+		 -0.60876089 0.79335386 -1.2533797e-05 -0.60876089 0.79335386 -1.2533797e-05 -0.60876089
+		 0.79335386 -1.2533797e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183
 		 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.60876197 0.7933529 -1.2536999e-005 -0.60876197 0.7933529 -1.2536999e-005
-		 -0.60876197 0.7933529 -1.2536999e-005 -0.60876197 0.7933529 -1.2536999e-005 0.0013936107
+		 0.99999857 -0.60876197 0.7933529 -1.2536999e-05 -0.60876197 0.7933529 -1.2536999e-05
+		 -0.60876197 0.7933529 -1.2536999e-05 -0.60876197 0.7933529 -1.2536999e-05 0.0013936107
 		 0.0010549206 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.0013936107 0.0010549206
 		 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.79335183 0.60876089 0.0017444898
 		 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183
@@ -30637,16 +29334,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.0013898495 -0.0010520295 0.99999857 -0.0013898495 -0.0010520295 0.99999857 -0.0013898495
 		 -0.0010520295 0.99999857 -0.0013898495 -0.0010520295 0.99999857 -0.60876536 0.7933504
-		 -1.2543906e-005 -0.60876536 0.7933504 -1.2543906e-005 -0.60876536 0.7933504 -1.2543906e-005
-		 -0.60876536 0.7933504 -1.2543906e-005 0.0013936107 0.0010549206 -0.99999851 0.0013936107
+		 -1.2543906e-05 -0.60876536 0.7933504 -1.2543906e-05 -0.60876536 0.7933504 -1.2543906e-05
+		 -0.60876536 0.7933504 -1.2543906e-05 0.0013936107 0.0010549206 -0.99999851 0.0013936107
 		 0.0010549206 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.0013936107 0.0010549206
 		 -0.99999851 0.79335356 0.60875863 0.001738389 0.79335356 0.60875863 0.001738389 0.79335356
 		 0.60875863 0.001738389 0.79335356 0.60875863 0.001738389 -0.79335356 -0.60875863
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.79335356 -0.60875863 -0.0017459191 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.60876089 0.79335386 -4.866929e-006 -0.60876089 0.79335386 -4.866929e-006
-		 -0.60876089 0.79335386 -4.866929e-006 -0.60876089 0.79335386 -4.866929e-006 0.0013936107
+		 0.99999857 -0.60876089 0.79335386 -4.866929e-06 -0.60876089 0.79335386 -4.866929e-06
+		 -0.60876089 0.79335386 -4.866929e-06 -0.60876089 0.79335386 -4.866929e-06 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356 0.60875863 0.0017459389
 		 0.79335356 0.60875863 0.0017459389 0.79335356 0.60875863 0.0017459389 0.79335356
@@ -30654,8 +29351,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695
 		 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.60875911 0.79335511
-		 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005
-		 -0.60875911 0.79335511 -1.0646401e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05
+		 -0.60875911 0.79335511 -1.0646401e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291
 		 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291 -0.79335487
@@ -30663,8 +29360,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459097 -0.79335487 -0.6087569 -0.0017459097;
 	setAttr ".n[332:497]" -type "float3"  -0.0013860695 -0.0010491195 0.99999857
 		 -0.0013860695 -0.0010491195 0.99999857 -0.0013860695 -0.0010491195 0.99999857 -0.0013860695
-		 -0.0010491195 0.99999857 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386
-		 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010491195 0.99999857 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386
+		 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
 		 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863
 		 0.0017459291 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291
@@ -30672,42 +29369,42 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089
 		 -0.0017459297 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.60876131 0.79335338 -1.0651505e-005 -0.60876131 0.79335338 -1.0651505e-005 -0.60876131
-		 0.79335338 -1.0651505e-005 -0.60876131 0.79335338 -1.0651505e-005 0.0013898395 0.0010520195
+		 -0.60876131 0.79335338 -1.0651505e-05 -0.60876131 0.79335338 -1.0651505e-05 -0.60876131
+		 0.79335338 -1.0651505e-05 -0.60876131 0.79335338 -1.0651505e-05 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.0013898395 0.0010520195 -0.99999857 0.79335099 0.60876203 0.0017421599 0.79335099
 		 0.60876203 0.0017421599 0.79335099 0.60876203 0.0017421599 0.79335099 0.60876203
 		 0.0017421599 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297
 		 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 0.79335088
 		 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 -0.79335183 -0.60876089
 		 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297
 		 -0.79335183 -0.60876089 -0.0017459297 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005
-		 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005 0.0013898395
+		 0.99999857 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05
+		 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05 0.0013898395
 		 0.0010520295 -0.99999857 0.0013898395 0.0010520295 -0.99999857 0.0013898395 0.0010520295
 		 -0.99999857 0.0013898395 0.0010520295 -0.99999857 0.79335356 0.60875863 0.001742169
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 -0.79335356 -0.60875863 -0.0017459489 -0.79335356 -0.60875863 -0.0017459489
 		 -0.79335356 -0.60875863 -0.0017459489 -0.79335356 -0.60875863 -0.0017459489 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
-		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876018 0.79335421 -7.7583618e-006
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
+		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876018 0.79335421 -7.7583618e-06
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299
 		 -0.79335088 -0.60876197 -0.0017459299 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
-		 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 0.0013898395
+		 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863 0.0017459191
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356
@@ -30715,16 +29412,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291
 		 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
-		 -0.60876304 0.79335207 -1.0654801e-005 0.0013898395 0.0010520095 -0.99999857 0.0013898395
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
+		 -0.60876304 0.79335207 -1.0654801e-05 0.0013898395 0.0010520095 -0.99999857 0.0013898395
 		 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.0013936107 -0.0010549105 0.99999851
 		 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
-		 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386
-		 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386
+		 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
 		 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395
 		 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -30732,17 +29429,17 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
 		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005;
-	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 0.0013860594 0.0010491295 -0.99999857 0.0013860594
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05;
+	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 0.0013860594 0.0010491295 -0.99999857 0.0013860594
 		 0.0010491295 -0.99999857 0.0013860594 0.0010491295 -0.99999857 0.0013860594 0.0010491295
 		 -0.99999857 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203
 		 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013898395 -0.0010520295 0.99999857
 		 -0.0013898395 -0.0010520295 0.99999857 -0.0013898395 -0.0010520295 0.99999857 -0.0013898395
-		 -0.0010520295 0.99999857 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010520295 0.99999857 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
 		 0.0013860695 0.0010491295 -0.99999857 0.0013860695 0.0010491295 -0.99999857 0.0013860695
 		 0.0010491295 -0.99999857 0.0013860695 0.0010491295 -0.99999857 0.79335088 0.60876197
 		 0.0017459098 0.79335088 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098
@@ -30750,25 +29447,25 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206
 		 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851
-		 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304
-		 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 0.0013898294 0.0010520195
+		 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304
+		 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857
 		 0.0013898294 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017459299 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197
 		 0.0017459299 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397
 		 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.0013936007
 		 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105
-		 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
+		 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397
 		 -0.79335088 -0.60876197 -0.0017459397 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007
 		 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105
-		 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 0.0013898294
+		 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 0.0013898294
 		 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088
@@ -30776,16 +29473,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.001738399 -0.79335356 -0.60875863 -0.001738399 -0.79335356 -0.60875863 -0.001738399
 		 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107
 		 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.60876536 0.7933504
-		 -1.0659805e-005 -0.60876536 0.7933504 -1.0659805e-005 -0.60876536 0.7933504 -1.0659805e-005
-		 -0.60876536 0.7933504 -1.0659805e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -1.0659805e-05 -0.60876536 0.7933504 -1.0659805e-05 -0.60876536 0.7933504 -1.0659805e-05
+		 -0.60876536 0.7933504 -1.0659805e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397
 		 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203
 		 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654901e-005 -0.60876304 0.79335207
-		 -1.0654901e-005 -0.60876304 0.79335207 -1.0654901e-005 -0.60876304 0.79335207 -1.0654901e-005
+		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654901e-05 -0.60876304 0.79335207
+		 -1.0654901e-05 -0.60876304 0.79335207 -1.0654901e-05 -0.60876304 0.79335207 -1.0654901e-05
 		 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -30793,34 +29490,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606
 		 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851
-		 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417
-		 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 0.0013936007 0.0010549105
+		 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417
+		 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197
 		 0.0017459199 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098
 		 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695
-		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851;
 	setAttr ".n[664:829]" -type "float3"  0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197
 		 0.0017459199 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098
 		 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695
-		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
+		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.79335088 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098 0.79335088
 		 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
 		 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606
-		 0.99999851 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005
-		 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 0.0013898395
+		 0.99999851 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05
+		 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017473698
 		 0.79335088 0.60876197 0.0017473698 0.79335088 0.60876197 0.0017473698 0.79335088
@@ -30828,16 +29525,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
 		 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.60876304 0.79335207
-		 -8.7707213e-006 -0.60876304 0.79335207 -8.7707213e-006 -0.60876304 0.79335207 -8.7707213e-006
-		 -0.60876304 0.79335207 -8.7707213e-006 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -8.7707213e-06 -0.60876304 0.79335207 -8.7707213e-06 -0.60876304 0.79335207 -8.7707213e-06
+		 -0.60876304 0.79335207 -8.7707213e-06 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335183 0.60876089 0.0017459198 0.79335183 0.60876089 0.0017459198
 		 0.79335183 0.60876089 0.0017459198 0.79335183 0.60876089 0.0017459198 -0.79335487
 		 -0.6087569 -0.0017459198 -0.79335487 -0.6087569 -0.0017459198 -0.79335487 -0.6087569
 		 -0.0017459198 -0.79335487 -0.6087569 -0.0017459198 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589
@@ -30845,34 +29542,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.79335487 -0.6087569
 		 -0.0017459297 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 0.0013936107 0.0010549105
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 0.0013936107 0.0010549105
 		 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.79335487 0.6087569 0.0017459297 0.79335487
 		 0.6087569 0.0017459297 0.79335487 0.6087569 0.0017459297 0.79335487 0.6087569 0.0017459297
 		 -0.79335487 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.79335487
 		 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.0013901307 -0.0010594506
 		 0.99999851 -0.0013901307 -0.0010594506 0.99999851 -0.0013901307 -0.0010594506 0.99999851
-		 -0.0013901307 -0.0010594506 0.99999851 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304
-		 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
+		 -0.0013901307 -0.0010594506 0.99999851 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304
+		 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356
 		 0.60875863 0.0017444891 0.79335356 0.60875863 0.0017444891 0.79335356 0.60875863
 		 0.0017444891 0.79335356 0.60875863 0.0017444891 -0.79335356 -0.60875863 -0.0017459291
 		 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356
 		 -0.60875863 -0.0017459291 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876304 0.79335207 -1.2538801e-005 -0.60876304 0.79335207 -1.2538801e-005 -0.60876304
-		 0.79335207 -1.2538801e-005 -0.60876304 0.79335207 -1.2538801e-005 0.0013863494 0.0010565595
+		 -0.60876304 0.79335207 -1.2538801e-05 -0.60876304 0.79335207 -1.2538801e-05 -0.60876304
+		 0.79335207 -1.2538801e-05 -0.60876304 0.79335207 -1.2538801e-05 0.0013863494 0.0010565595
 		 -0.99999857 0.0013863494 0.0010565595 -0.99999857 0.0013863494 0.0010565595 -0.99999857
 		 0.0013863494 0.0010565595 -0.99999857 0.79335356 0.60875863 0.001742179 0.79335356
 		 0.60875863 0.001742179 0.79335356 0.60875863 0.001742179 0.79335356 0.60875863 0.001742179
 		 -0.79335493 -0.6087569 -0.0017407298 -0.79335493 -0.6087569 -0.0017407298 -0.79335493
 		 -0.6087569 -0.0017407298 -0.79335493 -0.6087569 -0.0017407298 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.0013898395 -0.0010520195 0.99999857 -0.60875911 0.79335511 -7.7551613e-006 -0.60875911
-		 0.79335511 -7.7551613e-006 -0.60875911 0.79335511 -7.7551613e-006 -0.60875911 0.79335511
-		 -7.7551613e-006 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851
+		 -0.0013898395 -0.0010520195 0.99999857 -0.60875911 0.79335511 -7.7551613e-06 -0.60875911
+		 0.79335511 -7.7551613e-06 -0.60875911 0.79335511 -7.7551613e-06 -0.60875911 0.79335511
+		 -7.7551613e-06 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851
 		 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 -0.79335493 -0.6087569 -0.0017421498
@@ -30880,8 +29577,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 	setAttr ".n[830:995]" -type "float3"  -0.79335493 -0.6087569 -0.0017421498
 		 -0.79335493 -0.6087569 -0.0017421498 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695
 		 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295
-		 0.99999857 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006
-		 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006 0.0013898395
+		 0.99999857 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06
+		 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863 0.0017346289
 		 0.79335356 0.60875863 0.0017346289 0.79335356 0.60875863 0.0017346289 0.79335356
@@ -30889,153 +29586,153 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017421498 -0.79335493 -0.6087569 -0.0017421498 -0.79335493 -0.6087569 -0.0017421498
 		 -0.0013860594 -0.0010491195 0.99999857 -0.0013860594 -0.0010491195 0.99999857 -0.0013860594
 		 -0.0010491195 0.99999857 -0.0013860594 -0.0010491195 0.99999857 -0.60875404 0.79335904
-		 -1.9623501e-006 -0.60875404 0.79335904 -1.9623501e-006 -0.60875404 0.79335904 -1.9623501e-006
-		 -0.60875404 0.79335904 -1.9623501e-006 0.0013898294 0.0010520295 -0.99999857 0.0013898294
+		 -1.9623501e-06 -0.60875404 0.79335904 -1.9623501e-06 -0.60875404 0.79335904 -1.9623501e-06
+		 -0.60875404 0.79335904 -1.9623501e-06 0.0013898294 0.0010520295 -0.99999857 0.0013898294
 		 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295
 		 -0.99999857 0.79335356 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 0.79335356
 		 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 -0.79335493 -0.6087569 -0.0017407099
 		 -0.79335493 -0.6087569 -0.0017407099 -0.79335493 -0.6087569 -0.0017407099 -0.79335493
 		 -0.6087569 -0.0017407099 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.60875911 0.79335511 -7.7550512e-006 -0.60875911 0.79335511 -7.7550512e-006 -0.60875911
-		 0.79335511 -7.7550512e-006 -0.60875911 0.79335511 -7.7550512e-006 0.0013936007 0.0010549206
+		 -0.60875911 0.79335511 -7.7550512e-06 -0.60875911 0.79335511 -7.7550512e-06 -0.60875911
+		 0.79335511 -7.7550512e-06 -0.60875911 0.79335511 -7.7550512e-06 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.0013936007 0.0010549206 -0.99999851 0.79335356 0.60875863 0.0017421589 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149
 		 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206
+		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 0.79335356 0.60875863 0.001742169 -0.79335356 -0.60875863 -0.0017421589
 		 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 0.0013936007 0.0010549206
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.0013936007 0.0010549206 -0.99999851 0.79335356 0.60875863 0.0017421589 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149
 		 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305
+		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305
 		 -0.99999851 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305 -0.99999851
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 0.79335356 0.60875863 0.001742169 -0.79335356 -0.60875863 -0.0017496989
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 0.0013936107 0.0010549305
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 0.0013936107 0.0010549305
 		 -0.99999851 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305 -0.99999851
 		 0.0013936107 0.0010549305 -0.99999851 0.79335356 0.60875863 0.001742169 0.79335356
 		 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.0013898395 -0.0010520095 0.99999857 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421
-		 -7.7583618e-006 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
+		 -0.0013898395 -0.0010520095 0.99999857 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421
+		 -7.7583618e-06 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356
 		 0.60875863 0.0017497089 0.79335356 0.60875863 0.0017497089 0.79335356 0.60875863
 		 0.0017497089 0.79335356 0.60875863 0.0017497089 -0.79335356 -0.60875863 -0.0017496989
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857;
-	setAttr ".n[996:1161]" -type "float3"  -0.60876018 0.79335421 -1.3541104e-005
-		 -0.60876018 0.79335421 -1.3541104e-005 -0.60876018 0.79335421 -1.3541104e-005 -0.60876018
-		 0.79335421 -1.3541104e-005 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
+	setAttr ".n[996:1161]" -type "float3"  -0.60876018 0.79335421 -1.3541104e-05
+		 -0.60876018 0.79335421 -1.3541104e-05 -0.60876018 0.79335421 -1.3541104e-05 -0.60876018
+		 0.79335421 -1.3541104e-05 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.7933479 0.60876596 0.0017497197 0.7933479 0.60876596 0.0017497197 0.7933479 0.60876596
 		 0.0017497197 0.7933479 0.60876596 0.0017497197 -0.7933479 -0.60876596 -0.0017497197
 		 -0.7933479 -0.60876596 -0.0017497197 -0.7933479 -0.60876596 -0.0017497197 -0.7933479
 		 -0.60876596 -0.0017497197 -0.0013898294 -0.0010520295 0.99999857 -0.0013898294 -0.0010520295
 		 0.99999857 -0.0013898294 -0.0010520295 0.99999857 -0.0013898294 -0.0010520295 0.99999857
-		 -0.60876089 0.79335386 -1.3541097e-005 -0.60876089 0.79335386 -1.3541097e-005 -0.60876089
-		 0.79335386 -1.3541097e-005 -0.60876089 0.79335386 -1.3541097e-005 0.0013860695 0.0010491195
+		 -0.60876089 0.79335386 -1.3541097e-05 -0.60876089 0.79335386 -1.3541097e-05 -0.60876089
+		 0.79335386 -1.3541097e-05 -0.60876089 0.79335386 -1.3541097e-05 0.0013860695 0.0010491195
 		 -0.99999857 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
 		 0.0013860695 0.0010491195 -0.99999857 0.7933479 0.60876596 0.0017496798 0.7933479
 		 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798
 		 -0.7933479 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.7933479
 		 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.0013936007 -0.0010549206
 		 0.99999851 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206 0.99999851
-		 -0.0013936007 -0.0010549206 0.99999851 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089
-		 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089 0.79335386
-		 -1.3540897e-005 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
+		 -0.0013936007 -0.0010549206 0.99999851 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089
+		 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089 0.79335386
+		 -1.3540897e-05 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
 		 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857 0.7933479
 		 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798
 		 0.7933479 0.60876596 0.0017496798 -0.7933479 -0.60876596 -0.0017496998 -0.7933479
 		 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.7933479 -0.60876596
 		 -0.0017496998 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206
 		 0.99999851 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206 0.99999851
-		 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089
-		 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 0.0013898395 0.0010520095
+		 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089
+		 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.7933479 0.60876596 0.0017496898 0.7933479
 		 0.60876596 0.0017496898 0.7933479 0.60876596 0.0017496898 0.7933479 0.60876596 0.0017496898
 		 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.0013936107 -0.0010549305
 		 0.99999851 -0.0013936107 -0.0010549305 0.99999851 -0.0013936107 -0.0010549305 0.99999851
-		 -0.0013936107 -0.0010549305 0.99999851 -0.60876483 0.7933507 -1.3551095e-005 -0.60876483
-		 0.7933507 -1.3551095e-005 -0.60876483 0.7933507 -1.3551095e-005 -0.60876483 0.7933507
-		 -1.3551095e-005 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857
+		 -0.0013936107 -0.0010549305 0.99999851 -0.60876483 0.7933507 -1.3551095e-05 -0.60876483
+		 0.7933507 -1.3551095e-05 -0.60876483 0.7933507 -1.3551095e-05 -0.60876483 0.7933507
+		 -1.3551095e-05 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857
 		 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857 0.79335356
 		 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149
 		 0.79335356 0.60875863 0.001742149 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863
 		 -0.0017421589 -0.0013936207 -0.0010549105 0.99999851 -0.0013936207 -0.0010549105
 		 0.99999851 -0.0013936207 -0.0010549105 0.99999851 -0.0013936207 -0.0010549105 0.99999851
-		 -0.60876483 0.7933507 -7.7683571e-006 -0.60876483 0.7933507 -7.7683571e-006 -0.60876483
-		 0.7933507 -7.7683571e-006 -0.60876483 0.7933507 -7.7683571e-006 0.0013898395 0.0010520095
+		 -0.60876483 0.7933507 -7.7683571e-06 -0.60876483 0.7933507 -7.7683571e-06 -0.60876483
+		 0.7933507 -7.7683571e-06 -0.60876483 0.7933507 -7.7683571e-06 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.79335493
 		 0.6087569 0.0017421498 0.79335493 0.6087569 0.0017421498 0.79335493 0.6087569 0.0017421498
 		 0.79335493 0.6087569 0.0017421498 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863
 		 -0.0017421589 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.60876089 0.79335386 -7.758289e-006 -0.60876089 0.79335386 -7.758289e-006 -0.60876089
-		 0.79335386 -7.758289e-006 -0.60876089 0.79335386 -7.758289e-006 0.0013898395 0.0010520095
+		 -0.60876089 0.79335386 -7.758289e-06 -0.60876089 0.79335386 -7.758289e-06 -0.60876089
+		 0.79335386 -7.758289e-06 -0.60876089 0.79335386 -7.758289e-06 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857;
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857;
 	setAttr ".n[1162:1199]" -type "float3"  0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857
 		 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 -0.79335356 -0.60875863 -0.001742169
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
 		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851
-		 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911
-		 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006;
+		 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911
+		 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06;
 	setAttr -s 300 -ch 1200 ".fc[0:299]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -32759,68 +31456,68 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.0013903194 -0.0010502295
 		 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857
-		 -0.0013903194 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197
-		 0.7933529 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529
-		 -1.1563699e-005 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851
+		 -0.0013903194 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197
+		 0.7933529 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529
+		 -1.1563699e-05 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851
 		 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851 0.79335183
 		 0.60876089 0.0017458997 0.79335183 0.60876089 0.0017458997 0.79335183 0.60876089
 		 0.0017458997 0.79335183 0.60876089 0.0017458997 -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183
 		 -0.60876089 -0.0017475598 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295
 		 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857
-		 -0.60876304 0.79335207 -1.2648902e-005 -0.60876304 0.79335207 -1.2648902e-005 -0.60876304
-		 0.79335207 -1.2648902e-005 -0.60876304 0.79335207 -1.2648902e-005 0.0013926507 0.0010561605
+		 -0.60876304 0.79335207 -1.2648902e-05 -0.60876304 0.79335207 -1.2648902e-05 -0.60876304
+		 0.79335207 -1.2648902e-05 -0.60876304 0.79335207 -1.2648902e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.7933532 0.60875916 0.0017424006 0.7933532
 		 0.60875916 0.0017424006 0.7933532 0.60875916 0.0017424006 0.7933532 0.60875916 0.0017424006
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013924907 -0.0010518805
 		 0.99999851 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805 0.99999851
-		 -0.0013924907 -0.0010518805 0.99999851 -0.60876018 0.79335421 -8.2357028e-006 -0.60876018
-		 0.79335421 -8.2357028e-006 -0.60876018 0.79335421 -8.2357028e-006 -0.60876018 0.79335421
-		 -8.2357028e-006 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
+		 -0.0013924907 -0.0010518805 0.99999851 -0.60876018 0.79335421 -8.2357028e-06 -0.60876018
+		 0.79335421 -8.2357028e-06 -0.60876018 0.79335421 -8.2357028e-06 -0.60876018 0.79335421
+		 -8.2357028e-06 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.7933532
 		 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305
 		 0.7933532 0.60875916 0.0017437305 -0.7933532 -0.60875916 -0.0017432205 -0.7933532
 		 -0.60875916 -0.0017432205 -0.7933532 -0.60875916 -0.0017432205 -0.7933532 -0.60875916
 		 -0.0017432205 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805
 		 0.99999851 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805 0.99999851
-		 -0.60876304 0.79335207 -1.0986402e-005 -0.60876304 0.79335207 -1.0986402e-005 -0.60876304
-		 0.79335207 -1.0986402e-005 -0.60876304 0.79335207 -1.0986402e-005 0.0013926507 0.0010561605
+		 -0.60876304 0.79335207 -1.0986402e-05 -0.60876304 0.79335207 -1.0986402e-05 -0.60876304
+		 0.79335207 -1.0986402e-05 -0.60876304 0.79335207 -1.0986402e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013924907 -0.0010518905
 		 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851
-		 -0.0013924907 -0.0010518905 0.99999851 -0.60876197 0.7933529 -9.9011095e-006 -0.60876197
-		 0.7933529 -9.9011095e-006 -0.60876197 0.7933529 -9.9011095e-006 -0.60876197 0.7933529
-		 -9.9011095e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
+		 -0.0013924907 -0.0010518905 0.99999851 -0.60876197 0.7933529 -9.9011095e-06 -0.60876197
+		 0.7933529 -9.9011095e-06 -0.60876197 0.7933529 -9.9011095e-06 -0.60876197 0.7933529
+		 -9.9011095e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183
 		 0.60876089 0.0017445695 0.79335183 0.60876089 0.0017445695 0.79335183 0.60876089
 		 0.0017445695 0.79335183 0.60876089 0.0017445695 -0.7933532 -0.60875916 -0.0017454005
 		 -0.7933532 -0.60875916 -0.0017454005 -0.7933532 -0.60875916 -0.0017454005 -0.7933532
 		 -0.60875916 -0.0017454005 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905
 		 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851
-		 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197
-		 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 0.0013904807 0.0010545006
+		 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197
+		 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017432297 0.79335183
 		 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089
 		 0.0017432297 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60875976 0.79335469 -7.1505574e-006
-		 -0.60875976 0.79335469 -7.1505574e-006 -0.60875976 0.79335469 -7.1505574e-006 -0.60875976
-		 0.79335469 -7.1505574e-006 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60875976 0.79335469 -7.1505574e-06
+		 -0.60875976 0.79335469 -7.1505574e-06 -0.60875976 0.79335469 -7.1505574e-06 -0.60875976
+		 0.79335469 -7.1505574e-06 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089
 		 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297
 		 -0.79335183 -0.60876089 -0.0017432297 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907
 		 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905
-		 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
-		 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 0.0013904807
+		 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
+		 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017475598
 		 0.79335183 0.60876089 0.0017475598;
@@ -32829,16 +31526,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897
 		 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194
 		 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.60876089 0.79335386
-		 -1.0478499e-005 -0.60876089 0.79335386 -1.0478499e-005 -0.60876089 0.79335386 -1.0478499e-005
-		 -0.60876089 0.79335386 -1.0478499e-005 0.0013926507 0.0010561605 -0.99999851 0.0013926507
+		 -1.0478499e-05 -0.60876089 0.79335386 -1.0478499e-05 -0.60876089 0.79335386 -1.0478499e-05
+		 -0.60876089 0.79335386 -1.0478499e-05 0.0013926507 0.0010561605 -0.99999851 0.0013926507
 		 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
 		 -0.99999851 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013903194 -0.0010502295 0.99999857
 		 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194
-		 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529
-		 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005
+		 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529
+		 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.7933532 0.60875916
 		 0.0017445703 0.7933532 0.60875916 0.0017445703 0.7933532 0.60875916 0.0017445703
@@ -32846,25 +31543,25 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916
 		 -0.0017445703 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197
-		 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 0.0013904807 0.0010545006
+		 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197
+		 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423895 0.79335183
 		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089
 		 0.0017423895 -0.7933532 -0.60875916 -0.0017453905 -0.7933532 -0.60875916 -0.0017453905
 		 -0.7933532 -0.60875916 -0.0017453905 -0.7933532 -0.60875916 -0.0017453905 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -8.2375846e-006
-		 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131
-		 0.79335338 -8.2375846e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -8.2375846e-06
+		 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131
+		 0.79335338 -8.2375846e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 0.79335183
 		 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 -0.79335183 -0.60876089
 		 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895
 		 -0.79335183 -0.60876089 -0.0017423895 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -9.9010886e-006 -0.60876197 0.7933529 -9.9010886e-006
-		 -0.60876197 0.7933529 -9.9010886e-006 -0.60876197 0.7933529 -9.9010886e-006 0.0013904807
+		 0.99999851 -0.60876197 0.7933529 -9.9010886e-06 -0.60876197 0.7933529 -9.9010886e-06
+		 -0.60876197 0.7933529 -9.9010886e-06 -0.60876197 0.7933529 -9.9010886e-06 0.0013904807
 		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183
@@ -32872,16 +31569,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876304 0.79335207
-		 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
-		 -0.60876304 0.79335207 -1.1565502e-005 0.0013903194 0.0010502195 -0.99999857 0.0013903194
+		 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
+		 -0.60876304 0.79335207 -1.1565502e-05 0.0013903194 0.0010502195 -0.99999857 0.0013903194
 		 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529
-		 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
+		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529
+		 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
 		 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194
 		 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.79335183 0.60876089
 		 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296
@@ -32889,8 +31586,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
 		 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131
-		 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 0.0013903194 0.0010502195
+		 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131
+		 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 0.0013903194 0.0010502195
 		 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857
 		 0.0013903194 0.0010502195 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183
 		 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089
@@ -32898,8 +31595,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596;
 	setAttr ".n[332:497]" -type "float3"  -0.0013904807 -0.0010545006 0.99999851
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529
-		 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
+		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529
+		 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
 		 0.0013903194 0.0010502295 -0.99999857 0.0013903194 0.0010502295 -0.99999857 0.0013903194
 		 0.0010502295 -0.99999857 0.0013903194 0.0010502295 -0.99999857 0.79335183 0.60876089
 		 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
@@ -32907,42 +31604,42 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396
 		 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857
-		 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304
-		 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 0.0013924907 0.0010518905
+		 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304
+		 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 0.0013924907 0.0010518905
 		 -0.99999851 0.0013924907 0.0010518905 -0.99999851 0.0013924907 0.0010518905 -0.99999851
 		 0.0013924907 0.0010518905 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013883094 -0.0010528296
 		 0.99999857 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296 0.99999857
-		 -0.0013883094 -0.0010528296 0.99999857 -0.60876018 0.79335421 -9.8982327e-006 -0.60876018
-		 0.79335421 -9.8982327e-006 -0.60876018 0.79335421 -9.8982327e-006 -0.60876018 0.79335421
-		 -9.8982327e-006 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851
+		 -0.0013883094 -0.0010528296 0.99999857 -0.60876018 0.79335421 -9.8982327e-06 -0.60876018
+		 0.79335421 -9.8982327e-06 -0.60876018 0.79335421 -9.8982327e-06 -0.60876018 0.79335421
+		 -9.8982327e-06 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851
 		 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 0.7933532 0.60875916 0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916
 		 -0.0017445604 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296
 		 0.99999857 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296 0.99999857
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 0.0013883094 0.0010528296
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 0.0013883094 0.0010528296
 		 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857
 		 0.0013883094 0.0010528296 -0.99999857 0.79335183 0.60876089 0.0017458997 0.79335183
 		 0.60876089 0.0017458997 0.79335183 0.60876089 0.0017458997 0.79335183 0.60876089
 		 0.0017458997 -0.79335183 -0.60876089 -0.0017475697 -0.79335183 -0.60876089 -0.0017475697
 		 -0.79335183 -0.60876089 -0.0017475697 -0.79335183 -0.60876089 -0.0017475697 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876089 0.79335386 -1.2644998e-005
-		 -0.60876089 0.79335386 -1.2644998e-005 -0.60876089 0.79335386 -1.2644998e-005 -0.60876089
-		 0.79335386 -1.2644998e-005 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876089 0.79335386 -1.2644998e-05
+		 -0.60876089 0.79335386 -1.2644998e-05 -0.60876089 0.79335386 -1.2644998e-05 -0.60876089
+		 0.79335386 -1.2644998e-05 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183
 		 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183 -0.60876089
 		 -0.0017458997 -0.79335183 -0.60876089 -0.0017458997 -0.79335183 -0.60876089 -0.0017458997
 		 -0.79335183 -0.60876089 -0.0017458997 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -1.1562605e-005 -0.60876131 0.79335338 -1.1562605e-005
-		 -0.60876131 0.79335338 -1.1562605e-005 -0.60876131 0.79335338 -1.1562605e-005 0.0013883094
+		 0.99999851 -0.60876131 0.79335338 -1.1562605e-05 -0.60876131 0.79335338 -1.1562605e-05
+		 -0.60876131 0.79335338 -1.1562605e-05 -0.60876131 0.79335338 -1.1562605e-05 0.0013883094
 		 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296
 		 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.79335183 0.60876089 0.0017458897
 		 0.79335183 0.60876089 0.0017458897 0.79335183 0.60876089 0.0017458897 0.79335183
@@ -32950,16 +31647,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529
-		 -1.2647798e-005 -0.60876197 0.7933529 -1.2647798e-005 -0.60876197 0.7933529 -1.2647798e-005
-		 -0.60876197 0.7933529 -1.2647798e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -1.2647798e-05 -0.60876197 0.7933529 -1.2647798e-05 -0.60876197 0.7933529 -1.2647798e-05
+		 -0.60876197 0.7933529 -1.2647798e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.7933532
 		 -0.60875916 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.7933532 -0.60875916
 		 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.0013926507 -0.0010561605 0.99999851
 		 -0.0013926507 -0.0010561605 0.99999851 -0.0013926507 -0.0010561605 0.99999851 -0.0013926507
-		 -0.0010561605 0.99999851 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207
-		 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
+		 -0.0010561605 0.99999851 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207
+		 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
 		 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094
 		 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.7933532 0.60875916
 		 0.0017437305 0.7933532 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305
@@ -32967,51 +31664,51 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916
 		 -0.0017445703 -0.0013926408 -0.0010561504 0.99999851 -0.0013926408 -0.0010561504
 		 0.99999851 -0.0013926408 -0.0010561504 0.99999851 -0.0013926408 -0.0010561504 0.99999851
-		 -0.60876089 0.79335386 -1.0982399e-005 -0.60876089 0.79335386 -1.0982399e-005;
-	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0982399e-005
-		 -0.60876089 0.79335386 -1.0982399e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -0.60876089 0.79335386 -1.0982399e-05 -0.60876089 0.79335386 -1.0982399e-05;
+	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0982399e-05
+		 -0.60876089 0.79335386 -1.0982399e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.7933532 0.60875916 0.0017453905 0.7933532 0.60875916 0.0017453905 0.7933532
 		 0.60875916 0.0017453905 0.7933532 0.60875916 0.0017453905 -0.7933532 -0.60875916
 		 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406
 		 -0.7933532 -0.60875916 -0.0017437406 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876018 0.79335421 -8.8149318e-006 -0.60876018 0.79335421 -8.8149318e-006
-		 -0.60876018 0.79335421 -8.8149318e-006 -0.60876018 0.79335421 -8.8149318e-006 0.0013904807
+		 0.99999851 -0.60876018 0.79335421 -8.8149318e-06 -0.60876018 0.79335421 -8.8149318e-06
+		 -0.60876018 0.79335421 -8.8149318e-06 -0.60876018 0.79335421 -8.8149318e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.7933532 0.60875916 0.0017445604
 		 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916
 		 0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013904807
 		 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
-		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.7933532 0.60875916 0.0017432305 0.7933532 0.60875916 0.0017432305 0.7933532 0.60875916
 		 0.0017432305 0.7933532 0.60875916 0.0017432305 -0.79335183 -0.60876089 -0.0017437297
 		 -0.79335183 -0.60876089 -0.0017437297 -0.79335183 -0.60876089 -0.0017437297 -0.79335183
 		 -0.60876089 -0.0017437297 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.60875911 0.79335511 -7.1494605e-006 -0.60875911 0.79335511 -7.1494605e-006 -0.60875911
-		 0.79335511 -7.1494605e-006 -0.60875911 0.79335511 -7.1494605e-006 0.0013904807 0.0010545006
+		 -0.60875911 0.79335511 -7.1494605e-06 -0.60875911 0.79335511 -7.1494605e-06 -0.60875911
+		 0.79335511 -7.1494605e-06 -0.60875911 0.79335511 -7.1494605e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017445596 0.79335183
 		 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 0.79335183 0.60876089
 		 0.0017445596 -0.79335183 -0.60876089 -0.0017453897 -0.79335183 -0.60876089 -0.0017453897
 		 -0.79335183 -0.60876089 -0.0017453897 -0.79335183 -0.60876089 -0.0017453897 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -9.902029e-006
-		 -0.60876197 0.7933529 -9.902029e-006 -0.60876197 0.7933529 -9.902029e-006 -0.60876197
-		 0.7933529 -9.902029e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -9.902029e-06
+		 -0.60876197 0.7933529 -9.902029e-06 -0.60876197 0.7933529 -9.902029e-06 -0.60876197
+		 0.7933529 -9.902029e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 0.79335183
 		 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 -0.79335183 -0.60876089
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.79335183 -0.60876089 -0.0017467296 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -8.8168144e-006 -0.60876131 0.79335338 -8.8168144e-006
-		 -0.60876131 0.79335338 -8.8168144e-006 -0.60876131 0.79335338 -8.8168144e-006 0.0013904807
+		 0.99999851 -0.60876131 0.79335338 -8.8168144e-06 -0.60876131 0.79335338 -8.8168144e-06
+		 -0.60876131 0.79335338 -8.8168144e-06 -0.60876131 0.79335338 -8.8168144e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017467396
 		 0.79335183 0.60876089 0.0017467396 0.79335183 0.60876089 0.0017467396 0.79335183
@@ -33019,16 +31716,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703
 		 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876369 0.79335165
-		 -1.1567495e-005 -0.60876369 0.79335165 -1.1567495e-005 -0.60876369 0.79335165 -1.1567495e-005
-		 -0.60876369 0.79335165 -1.1567495e-005 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -1.1567495e-05 -0.60876369 0.79335165 -1.1567495e-05 -0.60876369 0.79335165 -1.1567495e-05
+		 -0.60876369 0.79335165 -1.1567495e-05 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 -0.7933532 -0.60875916
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807
 		 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805
-		 0.99999851 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 0.0013904807
+		 0.99999851 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017432297
 		 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183
@@ -33036,8 +31733,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807
 		 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.60876018 0.79335421
-		 -7.1513618e-006 -0.60876018 0.79335421 -7.1513618e-006 -0.60876018 0.79335421 -7.1513618e-006
-		 -0.60876018 0.79335421 -7.1513618e-006 0.0013904707 0.0010545006 -0.99999851 0.0013904707
+		 -7.1513618e-06 -0.60876018 0.79335421 -7.1513618e-06 -0.60876018 0.79335421 -7.1513618e-06
+		 -0.60876018 0.79335421 -7.1513618e-06 0.0013904707 0.0010545006 -0.99999851 0.0013904707
 		 0.0010545006 -0.99999851 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
 		 -0.99999851;
 	setAttr ".n[664:829]" -type "float3"  0.79335183 0.60876089 0.0017445596 0.79335183
@@ -33045,17 +31742,17 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 0.0017445596 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895
 		 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195
-		 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
+		 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
 		 -0.99999851 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 0.79335183
 		 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 -0.79335183 -0.60876089
 		 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.79335183 -0.60876089 -0.0017445596 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195
-		 0.99999857 -0.60876131 0.79335338 -8.8168345e-006 -0.60876131 0.79335338 -8.8168345e-006
-		 -0.60876131 0.79335338 -8.8168345e-006 -0.60876131 0.79335338 -8.8168345e-006 0.0013926408
+		 0.99999857 -0.60876131 0.79335338 -8.8168345e-06 -0.60876131 0.79335338 -8.8168345e-06
+		 -0.60876131 0.79335338 -8.8168345e-06 -0.60876131 0.79335338 -8.8168345e-06 0.0013926408
 		 0.0010561704 -0.99999851 0.0013926408 0.0010561704 -0.99999851 0.0013926408 0.0010561704
 		 -0.99999851 0.0013926408 0.0010561704 -0.99999851 0.79335183 0.60876089 0.0017445695
 		 0.79335183 0.60876089 0.0017445695 0.79335183 0.60876089 0.0017445695 0.79335183
@@ -33063,16 +31760,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338
-		 -9.9001845e-006 -0.60876131 0.79335338 -9.9001845e-006 -0.60876131 0.79335338 -9.9001845e-006
-		 -0.60876131 0.79335338 -9.9001845e-006 0.0013926408 0.0010561605 -0.99999851 0.0013926408
+		 -9.9001845e-06 -0.60876131 0.79335338 -9.9001845e-06 -0.60876131 0.79335338 -9.9001845e-06
+		 -0.60876131 0.79335338 -9.9001845e-06 0.0013926408 0.0010561605 -0.99999851 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.79334927 0.60876417 0.0017454006 0.79334927 0.60876417 0.0017454006
 		 0.79334927 0.60876417 0.0017454006 0.79334927 0.60876417 0.0017454006 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013903094 -0.0010502295 0.99999857
 		 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094
-		 -0.0010502295 0.99999857 -0.60876018 0.79335421 -8.8139232e-006 -0.60876018 0.79335421
-		 -8.8139232e-006 -0.60876018 0.79335421 -8.8139232e-006 -0.60876018 0.79335421 -8.8139232e-006
+		 -0.0010502295 0.99999857 -0.60876018 0.79335421 -8.8139232e-06 -0.60876018 0.79335421
+		 -8.8139232e-06 -0.60876018 0.79335421 -8.8139232e-06 -0.60876018 0.79335421 -8.8139232e-06
 		 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335022 0.60876316
 		 0.0017467304 0.79335022 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304
@@ -33080,25 +31777,25 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089
 		 -0.0017445596 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295
 		 0.99999857 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295 0.99999857
-		 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131
-		 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 0.0013926507 0.0010561605
+		 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131
+		 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.79335022 0.60876316 0.0017475606 0.79335022
 		 0.60876316 0.0017475606 0.79335022 0.60876316 0.0017475606 0.79335022 0.60876316
 		 0.0017475606 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876131 0.79335338 -1.0479405e-005
-		 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131
-		 0.79335338 -1.0479405e-005 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
+		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876131 0.79335338 -1.0479405e-05
+		 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131
+		 0.79335338 -1.0479405e-05 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.79335022 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304 0.79335022
 		 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304 -0.7933532 -0.60875916
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
-		 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 0.0013904707
+		 0.99999851 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
+		 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 0.0013904707
 		 0.0010544906 -0.99999851 0.0013904707 0.0010544906 -0.99999851 0.0013904707 0.0010544906
 		 -0.99999851 0.0013904707 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017467396
 		 0.79335183 0.60876089 0.0017467396 0.79335183 0.60876089 0.0017467396 0.79335183
@@ -33106,8 +31803,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017424097 -0.79335183 -0.60876089 -0.0017424097 -0.79335183 -0.60876089 -0.0017424097
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338
-		 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005
-		 -0.60876131 0.79335338 -1.1562705e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05
+		 -0.60876131 0.79335338 -1.1562705e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183
@@ -33115,8 +31812,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 	setAttr ".n[830:995]" -type "float3"  -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -1.1564498e-005 -0.60876197 0.7933529 -1.1564498e-005
-		 -0.60876197 0.7933529 -1.1564498e-005 -0.60876197 0.7933529 -1.1564498e-005 0.0013883094
+		 0.99999851 -0.60876197 0.7933529 -1.1564498e-05 -0.60876197 0.7933529 -1.1564498e-05
+		 -0.60876197 0.7933529 -1.1564498e-05 -0.60876197 0.7933529 -1.1564498e-05 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.79335183 0.60876089 0.0017475598
 		 0.79335183 0.60876089 0.0017475598 0.79335183 0.60876089 0.0017475598 0.79335183
@@ -33124,16 +31821,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094
 		 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.60876131 0.79335338
-		 -1.0479305e-005 -0.60876131 0.79335338 -1.0479305e-005 -0.60876131 0.79335338 -1.0479305e-005
-		 -0.60876131 0.79335338 -1.0479305e-005 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -1.0479305e-05 -0.60876131 0.79335338 -1.0479305e-05 -0.60876131 0.79335338 -1.0479305e-05
+		 -0.60876131 0.79335338 -1.0479305e-05 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998
 		 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998 -0.79335183
 		 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089
 		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.0013882994 -0.0010528296 0.99999857
 		 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994
-		 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337365e-006 -0.60875976 0.79335469
-		 -8.2337365e-006 -0.60875976 0.79335469 -8.2337365e-006 -0.60875976 0.79335469 -8.2337365e-006
+		 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337365e-06 -0.60875976 0.79335469
+		 -8.2337365e-06 -0.60875976 0.79335469 -8.2337365e-06 -0.60875976 0.79335469 -8.2337365e-06
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089
 		 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297
@@ -33141,94 +31838,94 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876536 -0.001746721 -0.79334837 -0.60876536 -0.001746721 -0.79334837 -0.60876536
 		 -0.001746721 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857
 		 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.60875911
-		 0.79335511 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 -0.60875911 0.79335511
-		 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 0.0013904807 0.0010545006
-		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
-		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183
-		 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089
-		 0.0017423998 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609
-		 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013882994
-		 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296
-		 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337565e-006
-		 -0.60875976 0.79335469 -8.2337565e-006 -0.60875976 0.79335469 -8.2337565e-006 -0.60875976
-		 0.79335469 -8.2337565e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
-		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
-		 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183
-		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79335183 -0.60876089
-		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
-		 -0.79335183 -0.60876089 -0.0017467198 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
+		 0.79335511 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 -0.60875911 0.79335511
+		 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 0.0013904807 0.0010545006 -0.99999851
+		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089
+		 0.0017423998 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998
+		 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.79334837
+		 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013882994 -0.0010528296
+		 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857
+		 -0.0013882994 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337565e-06 -0.60875976
+		 0.79335469 -8.2337565e-06 -0.60875976 0.79335469 -8.2337565e-06 -0.60875976 0.79335469
+		 -8.2337565e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
+		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183
+		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089
+		 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79335183 -0.60876089 -0.0017467198
+		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183
+		 -0.60876089 -0.0017467198 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
+		 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131
+		 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 0.0013904807 0.0010544906
+		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
+		 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017502297 0.79335183
+		 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089
+		 0.0017502297 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
+		 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006
-		 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006 0.0013904807
-		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
-		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017502297
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.5972899e-05
+		 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197
+		 0.7933529 -1.5972899e-05 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
+		 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 0.79335183
+		 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 -0.79335183 -0.60876089
+		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897
+		 -0.79335183 -0.60876089 -0.0017458897 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
+		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
+		 0.99999851 -0.60876131 0.79335338 -1.4887707e-05 -0.60876131 0.79335338 -1.4887707e-05
+		 -0.60876131 0.79335338 -1.4887707e-05 -0.60876131 0.79335338 -1.4887707e-05 0.0013883094
+		 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.0013883094 0.0010528195
+		 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.79335183 0.60876089 0.0017502297
 		 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183
-		 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089
-		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
+		 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
+		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529
-		 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005
-		 -0.60876197 0.7933529 -1.5972899e-005 0.0013904807 0.0010544906 -0.99999851 0.0013904807
-		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
-		 -0.99999851 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597
-		 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 -0.79335183
-		 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089
-		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.0013904807 -0.0010545006 0.99999851
-		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.4887707e-005 -0.60876131 0.79335338
-		 -1.4887707e-005 -0.60876131 0.79335338 -1.4887707e-005 -0.60876131 0.79335338 -1.4887707e-005
-		 0.0013883094 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.0013883094
-		 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.79335183 0.60876089
-		 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297
-		 0.79335183 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017467296 -0.79335183
-		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
-		 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851;
-	setAttr ".n[996:1161]" -type "float3"  -0.60876197 0.7933529 -1.5972899e-005
-		 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197
-		 0.7933529 -1.5972899e-005 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
+		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851;
+	setAttr ".n[996:1161]" -type "float3"  -0.60876197 0.7933529 -1.5972899e-05
+		 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197
+		 0.7933529 -1.5972899e-05 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.79335493 0.6087569 0.0017424099 0.79335493 0.6087569 0.0017424099 0.79335493 0.6087569
 		 0.0017424099 0.79335493 0.6087569 0.0017424099 -0.79335487 -0.6087569 -0.0017432297
 		 -0.79335487 -0.6087569 -0.0017432297 -0.79335487 -0.6087569 -0.0017432297 -0.79335487
 		 -0.6087569 -0.0017432297 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.60876197 0.7933529 -8.2395491e-006 -0.60876197 0.7933529 -8.2395491e-006 -0.60876197
-		 0.7933529 -8.2395491e-006 -0.60876197 0.7933529 -8.2395491e-006 0.0013926408 0.0010561605
+		 -0.60876197 0.7933529 -8.2395491e-06 -0.60876197 0.7933529 -8.2395491e-06 -0.60876197
+		 0.7933529 -8.2395491e-06 -0.60876197 0.7933529 -8.2395491e-06 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.79335487 0.6087569 0.0017432297 0.79335487
 		 0.6087569 0.0017432297 0.79335487 0.6087569 0.0017432297 0.79335487 0.6087569 0.0017432297
 		 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.79335183
 		 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -7.1543036e-006 -0.60876131
-		 0.79335338 -7.1543036e-006 -0.60876131 0.79335338 -7.1543036e-006 -0.60876131 0.79335338
-		 -7.1543036e-006 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
+		 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -7.1543036e-06 -0.60876131
+		 0.79335338 -7.1543036e-06 -0.60876131 0.79335338 -7.1543036e-06 -0.60876131 0.79335338
+		 -7.1543036e-06 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089
 		 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089 -0.0017432197
 		 -0.79335183 -0.60876089 -0.0017432197 -0.79335183 -0.60876089 -0.0017432197 -0.79335183
 		 -0.60876089 -0.0017432197 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197
-		 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 0.0013926408 0.0010561605
+		 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197
+		 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.79335183 0.60876089 0.0017475598 0.79335183
 		 0.60876089 0.0017475598 0.79335183 0.60876089 0.0017475598 0.79335183 0.60876089
 		 0.0017475598 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.0479405e-005
-		 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131
-		 0.79335338 -1.0479405e-005 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.0479405e-05
+		 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131
+		 0.79335338 -1.0479405e-05 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089
 		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005
-		 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 0.0013926408
+		 0.99999851 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05
+		 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335183 0.60876089 0.0017432297
 		 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183
@@ -33236,16 +31933,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60875911 0.79335511
-		 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006
-		 -0.60875911 0.79335511 -7.1484806e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06
+		 -0.60875911 0.79335511 -7.1484806e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895
 		 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79334837
 		 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536
 		 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013926408 -0.0010561605 0.99999851
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
-		 -0.0010561605 0.99999851 -0.60875911 0.79335511 -8.233711e-006 -0.60875911 0.79335511
-		 -8.233711e-006 -0.60875911 0.79335511 -8.233711e-006 -0.60875911 0.79335511 -8.233711e-006
+		 -0.0010561605 0.99999851 -0.60875911 0.79335511 -8.233711e-06 -0.60875911 0.79335511
+		 -8.233711e-06 -0.60875911 0.79335511 -8.233711e-06 -0.60875911 0.79335511 -8.233711e-06
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089
 		 0.0017432197 0.79335183 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197
@@ -33253,8 +31950,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 -0.60876089 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998 -0.79335183 -0.60876089
 		 -0.0017423998 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
 		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851
-		 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131
-		 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006 0.0013883094 0.0010528396
+		 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131
+		 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857;
 	setAttr ".n[1162:1199]" -type "float3"  0.0013883094 0.0010528396 -0.99999857
 		 0.0013883094 0.0010528396 -0.99999857 0.79335183 0.60876089 0.0017423895 0.79335183
@@ -33262,17 +31959,17 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_right|poly
 		 0.0017423895 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297
 		 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529 -8.239479e-006
-		 -0.60876197 0.7933529 -8.239479e-006 -0.60876197 0.7933529 -8.239479e-006 -0.60876197
-		 0.7933529 -8.239479e-006 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
+		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529 -8.239479e-06
+		 -0.60876197 0.7933529 -8.239479e-06 -0.60876197 0.7933529 -8.239479e-06 -0.60876197
+		 0.7933529 -8.239479e-06 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857
 		 0.79335183 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197 0.79335183
 		 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197 -0.79335183 -0.60876089
 		 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998
 		 -0.79335183 -0.60876089 -0.0017423998 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006
-		 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006;
+		 0.99999851 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06
+		 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06;
 	setAttr -s 300 -ch 1200 ".fc[0:299]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -34356,38 +33053,37 @@ createNode mesh -n "polySurface1281Shape" -p "polySurface1281";
 		 0 -0.75522268 -0.65546805 0 -0.75522268 -0.65546805 0 -0.83744001 -0.54652935 0 -0.83744001
 		 -0.54652935 0 -0.83744001 -0.54652929 0 -0.83744001 -0.54652929 0 -0.83744001 -0.54652929
 		 0 -0.83744001 -0.54652929 0 -0.83743995 -0.54652917 0 -0.83743995 -0.54652917 -1
-		 3.4154922e-007 0 -1 -1.2712249e-007 0 -1 -1.0895759e-007 0 -1 3.415492e-007 0 -1
-		 -7.156931e-008 0 -0.99999994 -3.4761811e-008 0 -1 -4.4416776e-008 0 -1 -7.156931e-008
-		 0 -1 -1.2712249e-007 0 -0.99999994 -2.8724133e-007 0 -1 -1.7040421e-007 0 -1 -1.0895759e-007
-		 0 -0.99999994 -3.4761811e-008 0 -1.000000119209 0 0 -0.99999988 0 0 -1 -4.4416776e-008
-		 0 1 0 0 1 2.9953671e-007 0 1.000000119209 4.2819332e-007 0 1 0 0 1 0 0 1 0 0 0.99999994
-		 0 0 0.99999994 0 0 1 2.9953671e-007 0 1 3.4080838e-007 0 0.99999988 5.744829e-007
-		 0 1.000000119209 4.2819332e-007 0 1 0 0 0.99999988 0 0 1.000000119209 0 0 0.99999994
-		 0 0 0 0.97287828 -0.23131758 0 0.97287828 -0.23131764 0 0.97287822 -0.23131761 0
-		 0.97287822 -0.23131761 0 0.97287828 -0.2313177 0 0.97287828 -0.2313177 0 0.97287822
-		 -0.23131768 0 0.97287828 -0.23131768 0 0.092375092 -0.9957242 0 0.092375092 -0.9957242
-		 0 0.0923751 -0.99572432 0 0.0923751 -0.99572426 0 0.092375055 -0.99572426 0 0.092375062
-		 -0.99572432 0 0.092375055 -0.9957242 0 0.092375055 -0.9957242 -0.87287939 0.1319855
-		 -0.4697462 -0.87287933 0.1319855 -0.4697462 -0.87287939 0.1319855 -0.4697462 -0.87287933
-		 0.13198549 -0.46974617 -0.91434073 0.26374868 -0.30727479 -0.91434073 0.26374871
-		 -0.30727479 -0.91434067 0.26374868 -0.30727479 -0.91434062 0.26374865 -0.30727476
-		 0.87287855 0.13198589 -0.46974763 0.87287855 0.13198589 -0.4697476 0.87287849 0.13198587
-		 -0.46974757 0.87287843 0.13198589 -0.46974754 0.9143405 0.26374897 -0.30727473 0.91434062
-		 0.263749 -0.30727476 0.91434044 0.263749 -0.30727473 0.91434056 0.26374903 -0.30727476
-		 0 0.90802801 0.41890952 0 0.9845233 0.17525356 0 0.9845233 0.1752536 0 0.90802795
-		 0.41890952 0 -0.883955 -0.46757191 0 -0.98607904 -0.16627662 0 -0.9860791 -0.16627657
-		 0 -0.883955 -0.46757191 1 2.9953671e-007 0 0.99999994 9.2327902e-008 0 1 1.0302154e-007
-		 0 1 3.4080838e-007 0 0 0.90802795 0.41890952 0 0.9845233 0.1752536 0 0.98452324 0.17525363
-		 0 0.90802801 0.41890952 -1 -1.7040421e-007 0 -1 1.2877694e-008 0 -0.99999994 1.1540989e-008
-		 0 -1 -1.0895759e-007 0 0 -0.883955 -0.46757191 0 -0.98607916 -0.16627668 0 -0.98607904
-		 -0.16627662 0 -0.883955 -0.46757191 0 0.9845233 0.17525356 0 0.99632716 0.085627548
-		 0 0.99632716 0.085627578 0 0.9845233 0.1752536 0 -0.98607904 -0.16627662 0 -0.99632716
-		 -0.085627481 0 -0.99632716 -0.085627444 0 -0.9860791 -0.16627657 0.99999994 9.2327902e-008
-		 0 0.99999982 1.2845263e-007 0 0.99999982 1.2845264e-007 0 1 1.0302154e-007 0 0 0.9845233
-		 0.1752536 0 0.99632716 0.085627578;
+		 3.4154922e-07 0 -1 -1.2712249e-07 0 -1 -1.0895759e-07 0 -1 3.415492e-07 0 -1 -7.156931e-08
+		 0 -0.99999994 -3.4761811e-08 0 -1 -4.4416776e-08 0 -1 -7.156931e-08 0 -1 -1.2712249e-07
+		 0 -0.99999994 -2.8724133e-07 0 -1 -1.7040421e-07 0 -1 -1.0895759e-07 0 -0.99999994
+		 -3.4761811e-08 0 -1.000000119209 0 0 -0.99999988 0 0 -1 -4.4416776e-08 0 1 0 0 1
+		 2.9953671e-07 0 1.000000119209 4.2819332e-07 0 1 0 0 1 0 0 1 0 0 0.99999994 0 0 0.99999994
+		 0 0 1 2.9953671e-07 0 1 3.4080838e-07 0 0.99999988 5.744829e-07 0 1.000000119209
+		 4.2819332e-07 0 1 0 0 0.99999988 0 0 1.000000119209 0 0 0.99999994 0 0 0 0.97287828
+		 -0.23131758 0 0.97287828 -0.23131764 0 0.97287822 -0.23131761 0 0.97287822 -0.23131761
+		 0 0.97287828 -0.2313177 0 0.97287828 -0.2313177 0 0.97287822 -0.23131768 0 0.97287828
+		 -0.23131768 0 0.092375092 -0.9957242 0 0.092375092 -0.9957242 0 0.0923751 -0.99572432
+		 0 0.0923751 -0.99572426 0 0.092375055 -0.99572426 0 0.092375062 -0.99572432 0 0.092375055
+		 -0.9957242 0 0.092375055 -0.9957242 -0.87287939 0.1319855 -0.4697462 -0.87287933
+		 0.1319855 -0.4697462 -0.87287939 0.1319855 -0.4697462 -0.87287933 0.13198549 -0.46974617
+		 -0.91434073 0.26374868 -0.30727479 -0.91434073 0.26374871 -0.30727479 -0.91434067
+		 0.26374868 -0.30727479 -0.91434062 0.26374865 -0.30727476 0.87287855 0.13198589 -0.46974763
+		 0.87287855 0.13198589 -0.4697476 0.87287849 0.13198587 -0.46974757 0.87287843 0.13198589
+		 -0.46974754 0.9143405 0.26374897 -0.30727473 0.91434062 0.263749 -0.30727476 0.91434044
+		 0.263749 -0.30727473 0.91434056 0.26374903 -0.30727476 0 0.90802801 0.41890952 0
+		 0.9845233 0.17525356 0 0.9845233 0.1752536 0 0.90802795 0.41890952 0 -0.883955 -0.46757191
+		 0 -0.98607904 -0.16627662 0 -0.9860791 -0.16627657 0 -0.883955 -0.46757191 1 2.9953671e-07
+		 0 0.99999994 9.2327902e-08 0 1 1.0302154e-07 0 1 3.4080838e-07 0 0 0.90802795 0.41890952
+		 0 0.9845233 0.1752536 0 0.98452324 0.17525363 0 0.90802801 0.41890952 -1 -1.7040421e-07
+		 0 -1 1.2877694e-08 0 -0.99999994 1.1540989e-08 0 -1 -1.0895759e-07 0 0 -0.883955
+		 -0.46757191 0 -0.98607916 -0.16627668 0 -0.98607904 -0.16627662 0 -0.883955 -0.46757191
+		 0 0.9845233 0.17525356 0 0.99632716 0.085627548 0 0.99632716 0.085627578 0 0.9845233
+		 0.1752536 0 -0.98607904 -0.16627662 0 -0.99632716 -0.085627481 0 -0.99632716 -0.085627444
+		 0 -0.9860791 -0.16627657 0.99999994 9.2327902e-08 0 0.99999982 1.2845263e-07 0 0.99999982
+		 1.2845264e-07 0 1 1.0302154e-07 0 0 0.9845233 0.1752536 0 0.99632716 0.085627578;
 	setAttr ".n[166:331]" -type "float3"  0 0.99632716 0.085627608 0 0.98452324
-		 0.17525363 -1 1.2877694e-008 0 -0.99999994 1.605658e-008 0 -0.99999982 1.6056578e-008
-		 0 -0.99999994 1.1540989e-008 0 0 -0.98607916 -0.16627668 0 -0.99632722 -0.085627519
+		 0.17525363 -1 1.2877694e-08 0 -0.99999994 1.605658e-08 0 -0.99999982 1.6056578e-08
+		 0 -0.99999994 1.1540989e-08 0 0 -0.98607916 -0.16627668 0 -0.99632722 -0.085627519
 		 0 -0.99632716 -0.085627481 0 -0.98607904 -0.16627662 0 -0.49487421 0.86896461 0 -0.49487397
 		 0.86896473 0 -0.46162578 0.88707477 0 -0.46162584 0.88707471 0 -0.49487397 0.86896473
 		 0 -0.49487385 0.86896485 0 -0.4616257 0.88707489 0 -0.46162578 0.88707477 0 -0.46162584
@@ -34407,38 +33103,38 @@ createNode mesh -n "polySurface1281Shape" -p "polySurface1281";
 		 0 -0.75522268 -0.65546805 0 -0.7552228 -0.65546787 0 -0.83744001 -0.54652935 0 -0.83744001
 		 -0.54652929 0 -0.83744001 -0.54652929 0 -0.83744001 -0.54652935 0 -0.83744001 -0.54652929
 		 0 -0.83743995 -0.54652917 0 -0.83743995 -0.54652917 0 -0.83744001 -0.54652929 0.99999994
-		 6.830993e-007 0 1 6.8309924e-007 0 0.99999994 2.2960047e-007 0 0.99999994 1.7394854e-007
-		 0 0.99999994 0 0 1 0 0 1 -1.3551663e-007 0 1 -1.8370396e-007 0 0.99999994 1.7394854e-007
-		 0 0.99999994 2.2960047e-007 0 1.000000119209 1.6761221e-007 0 0.99999988 0 0 1 -1.8370396e-007
-		 0 1 -1.3551663e-007 0 0.99999994 -3.5719819e-007 0 1 -3.5719825e-007 0 -1 0 0 -1
-		 0 0 -0.99999994 2.140966e-007 0 -1 2.2375781e-007 0 -1 1.4313868e-007 0 -0.99999994
-		 1.4313866e-007 0 -1 -2.2328305e-008 0 -1 2.1075307e-008 0 -1 2.2375781e-007 0 -0.99999994
-		 2.140966e-007 0 -0.99999988 2.8724136e-007 0 -1 2.5421036e-007 0 -1 2.1075307e-008
-		 0 -1 -2.2328305e-008 0 -1 -1.7859912e-007 0 -0.99999994 -1.7859909e-007 0 0 0.97287828
-		 -0.23131768 0 0.97287828 -0.2313177 0 0.97287828 -0.2313177 0 0.97287822 -0.23131768
-		 0 0.97287822 -0.23131761 0 0.97287828 -0.23131758 0 0.97287828 -0.23131764 0 0.97287822
-		 -0.23131761 0 0.092375092 -0.9957242 0 0.0923751 -0.99572426 0 0.0923751 -0.99572432
-		 0 0.092375092 -0.9957242 0 0.092375055 -0.99572426 0 0.092375055 -0.9957242 0 0.092375055
-		 -0.9957242 0 0.092375062 -0.99572432 0.87287909 0.13198592 -0.46974653 0.87287909
-		 0.1319859 -0.46974653 0.87287909 0.13198592 -0.46974656 0.87287903 0.13198592 -0.4697465
-		 0.91434056 0.2637493 -0.3072747 0.9143405 0.26374924 -0.30727464 0.9143405 0.26374927
-		 -0.30727464 0.9143405 0.26374927 -0.30727467 -0.87287855 0.13198589 -0.46974763 -0.87287843
-		 0.13198589 -0.46974754 -0.87287849 0.13198587 -0.46974757 -0.87287855 0.13198589
-		 -0.4697476 -0.91434067 0.26374894 -0.30727455 -0.91434067 0.26374894 -0.30727455
-		 -0.91434056 0.26374888 -0.30727452 -0.91434067 0.26374894 -0.30727458 0 0.90802801
-		 0.41890952 0 0.90802795 0.41890952 0 0.98452324 0.17525356 0 0.9845233 0.1752536
-		 0 -0.883955 -0.46757182 0 -0.88395506 -0.46757177 0 -0.98607898 -0.1662766 0 -0.9860791
-		 -0.1662766 -1 2.2375781e-007 0 -1 2.5421036e-007 0 -1 4.0790965e-008 0 -0.99999994
-		 5.7943339e-008 0 0 0.90802795 0.41890952 0 0.90802801 0.41890952 0 0.9845233 0.17525356
-		 0 0.98452324 0.17525356 1.000000119209 1.6761221e-007 0 0.99999994 2.2960047e-007
-		 0 0.99999994 1.1588651e-007 0 0.99999994 8.1581803e-008 0 0 -0.883955 -0.46757191
-		 0 -0.883955 -0.46757182 0 -0.9860791 -0.1662766 0 -0.9860791 -0.16627657 0 0.9845233
-		 0.1752536 0 0.98452324 0.17525356 0 0.9963271 0.085627556 0 0.9963271 0.085627571;
+		 6.830993e-07 0 1 6.8309924e-07 0 0.99999994 2.2960047e-07 0 0.99999994 1.7394854e-07
+		 0 0.99999994 0 0 1 0 0 1 -1.3551663e-07 0 1 -1.8370396e-07 0 0.99999994 1.7394854e-07
+		 0 0.99999994 2.2960047e-07 0 1.000000119209 1.6761221e-07 0 0.99999988 0 0 1 -1.8370396e-07
+		 0 1 -1.3551663e-07 0 0.99999994 -3.5719819e-07 0 1 -3.5719825e-07 0 -1 0 0 -1 0 0
+		 -0.99999994 2.140966e-07 0 -1 2.2375781e-07 0 -1 1.4313868e-07 0 -0.99999994 1.4313866e-07
+		 0 -1 -2.2328305e-08 0 -1 2.1075307e-08 0 -1 2.2375781e-07 0 -0.99999994 2.140966e-07
+		 0 -0.99999988 2.8724136e-07 0 -1 2.5421036e-07 0 -1 2.1075307e-08 0 -1 -2.2328305e-08
+		 0 -1 -1.7859912e-07 0 -0.99999994 -1.7859909e-07 0 0 0.97287828 -0.23131768 0 0.97287828
+		 -0.2313177 0 0.97287828 -0.2313177 0 0.97287822 -0.23131768 0 0.97287822 -0.23131761
+		 0 0.97287828 -0.23131758 0 0.97287828 -0.23131764 0 0.97287822 -0.23131761 0 0.092375092
+		 -0.9957242 0 0.0923751 -0.99572426 0 0.0923751 -0.99572432 0 0.092375092 -0.9957242
+		 0 0.092375055 -0.99572426 0 0.092375055 -0.9957242 0 0.092375055 -0.9957242 0 0.092375062
+		 -0.99572432 0.87287909 0.13198592 -0.46974653 0.87287909 0.1319859 -0.46974653 0.87287909
+		 0.13198592 -0.46974656 0.87287903 0.13198592 -0.4697465 0.91434056 0.2637493 -0.3072747
+		 0.9143405 0.26374924 -0.30727464 0.9143405 0.26374927 -0.30727464 0.9143405 0.26374927
+		 -0.30727467 -0.87287855 0.13198589 -0.46974763 -0.87287843 0.13198589 -0.46974754
+		 -0.87287849 0.13198587 -0.46974757 -0.87287855 0.13198589 -0.4697476 -0.91434067
+		 0.26374894 -0.30727455 -0.91434067 0.26374894 -0.30727455 -0.91434056 0.26374888
+		 -0.30727452 -0.91434067 0.26374894 -0.30727458 0 0.90802801 0.41890952 0 0.90802795
+		 0.41890952 0 0.98452324 0.17525356 0 0.9845233 0.1752536 0 -0.883955 -0.46757182
+		 0 -0.88395506 -0.46757177 0 -0.98607898 -0.1662766 0 -0.9860791 -0.1662766 -1 2.2375781e-07
+		 0 -1 2.5421036e-07 0 -1 4.0790965e-08 0 -0.99999994 5.7943339e-08 0 0 0.90802795
+		 0.41890952 0 0.90802801 0.41890952 0 0.9845233 0.17525356 0 0.98452324 0.17525356
+		 1.000000119209 1.6761221e-07 0 0.99999994 2.2960047e-07 0 0.99999994 1.1588651e-07
+		 0 0.99999994 8.1581803e-08 0 0 -0.883955 -0.46757191 0 -0.883955 -0.46757182 0 -0.9860791
+		 -0.1662766 0 -0.9860791 -0.16627657 0 0.9845233 0.1752536 0 0.98452324 0.17525356
+		 0 0.9963271 0.085627556 0 0.9963271 0.085627571;
 	setAttr ".n[332:351]" -type "float3"  0 -0.9860791 -0.1662766 0 -0.98607898
-		 -0.1662766 0 -0.9963271 -0.085627466 0 -0.99632722 -0.085627459 -0.99999994 5.7943339e-008
-		 0 -1 4.0790965e-008 0 -0.99999988 0 0 -0.99999982 0 0 0 0.98452324 0.17525356 0 0.9845233
-		 0.17525356 0 0.99632716 0.085627548 0 0.9963271 0.085627556 0.99999994 8.1581803e-008
-		 0 0.99999994 1.1588651e-007 0 0.99999982 0 0 0.99999988 0 0 0 -0.9860791 -0.16627657
+		 -0.1662766 0 -0.9963271 -0.085627466 0 -0.99632722 -0.085627459 -0.99999994 5.7943339e-08
+		 0 -1 4.0790965e-08 0 -0.99999988 0 0 -0.99999982 0 0 0 0.98452324 0.17525356 0 0.9845233
+		 0.17525356 0 0.99632716 0.085627548 0 0.9963271 0.085627556 0.99999994 8.1581803e-08
+		 0 0.99999994 1.1588651e-07 0 0.99999982 0 0 0.99999988 0 0 0 -0.9860791 -0.16627657
 		 0 -0.9860791 -0.1662766 0 -0.99632722 -0.085627459 0 -0.99632716 -0.085627444;
 	setAttr -s 88 -ch 352 ".fc[0:87]" -type "polyFaces" 
 		f 4 0 1 2 3
@@ -35588,34 +34284,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.0013901207 -0.0010594506 0.99999851 -0.60876197 0.7933529 -1.0652999e-005 -0.60876197
-		 0.7933529 -1.0652999e-005 -0.60876197 0.7933529 -1.0652999e-005 -0.60876197 0.7933529
-		 -1.0652999e-005 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
+		 -0.0013901207 -0.0010594506 0.99999851 -0.60876197 0.7933529 -1.0652999e-05 -0.60876197
+		 0.7933529 -1.0652999e-05 -0.60876197 0.7933529 -1.0652999e-05 -0.60876197 0.7933529
+		 -1.0652999e-05 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863
 		 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088
 		 -0.60876197 -0.0017459199 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549006
+		 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549006
 		 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.0013936007 0.0010549006 -0.99999851 0.79335356 0.60875863 0.0017459191 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863
 		 0.0017459191 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.0013901107
 		 -0.0010594404 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.0013901107 -0.0010594404
-		 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.60875976 0.79335469 -1.0647796e-005
-		 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976
-		 0.79335469 -1.0647796e-005 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006
+		 0.99999851 -0.0013901107 -0.0010594404 0.99999851 -0.60875976 0.79335469 -1.0647796e-05
+		 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976
+		 0.79335469 -1.0647796e-05 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006
 		 -0.99999851 0.0013936007 0.0010549006 -0.99999851 0.0013936007 0.0010549006 -0.99999851
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013901107 -0.0010594506 0.99999851 -0.0013901107
 		 -0.0010594506 0.99999851 -0.0013901107 -0.0010594506 0.99999851 -0.0013901107 -0.0010594506
-		 0.99999851 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005
-		 -0.60875976 0.79335469 -1.0647796e-005 -0.60875976 0.79335469 -1.0647796e-005 0.0013936007
+		 0.99999851 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05
+		 -0.60875976 0.79335469 -1.0647796e-05 -0.60875976 0.79335469 -1.0647796e-05 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459199
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088
@@ -35623,16 +34319,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107
 		 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005
-		 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05
+		 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335088
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.0013901107 -0.0010594606 0.99999851
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107
-		 -0.0010594606 0.99999851 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005
+		 -0.0010594606 0.99999851 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05
 		 0.0013935907 0.0010549105 -0.99999851 0.0013935907 0.0010549105 -0.99999851 0.0013935907
 		 0.0010549105 -0.99999851 0.0013935907 0.0010549105 -0.99999851 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -35640,17 +34336,17 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863
 		 -0.001742149 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851
 		 -0.0013901107 -0.0010594606 0.99999851 -0.0013901107 -0.0010594606 0.99999851 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 0.0013936007 0.0010549105 -0.99999851
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197
 		 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356
 		 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.0013863394 -0.0010565595
 		 0.99999857 -0.0013863394 -0.0010565595 0.99999857 -0.0013863394 -0.0010565595 0.99999857
-		 -0.0013863394 -0.0010565595 0.99999857 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197
-		 0.7933529 -1.0652899e-005 -0.60876197 0.7933529 -1.0652899e-005 -0.60876197 0.7933529
-		 -1.0652899e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
+		 -0.0013863394 -0.0010565595 0.99999857 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197
+		 0.7933529 -1.0652899e-05 -0.60876197 0.7933529 -1.0652899e-05 -0.60876197 0.7933529
+		 -1.0652899e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299;
 	setAttr ".n[166:331]" -type "float3"  0.79335088 0.60876197 0.0017459299 0.79335088
@@ -35658,16 +34354,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291
 		 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876417 0.79335123
-		 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005
-		 -0.60876417 0.79335123 -1.0658003e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395
+		 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05
+		 -0.60876417 0.79335123 -1.0658003e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
 		 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 -0.79335356
 		 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123
-		 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005
+		 -0.0010594606 0.99999851 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123
+		 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335183 0.60876089
 		 0.0017421796 0.79335183 0.60876089 0.0017421796 0.79335183 0.60876089 0.0017421796
@@ -35675,25 +34371,25 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197
 		 -0.0017459397 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
 		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857
-		 -0.60876197 0.7933529 -7.7616287e-006 -0.60876197 0.7933529 -7.7616287e-006 -0.60876197
-		 0.7933529 -7.7616287e-006 -0.60876197 0.7933529 -7.7616287e-006 0.0013936007 0.0010549105
+		 -0.60876197 0.7933529 -7.7616287e-06 -0.60876197 0.7933529 -7.7616287e-06 -0.60876197
+		 0.7933529 -7.7616287e-06 -0.60876197 0.7933529 -7.7616287e-06 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.79335183 0.60876089 0.0017444898 0.79335183
 		 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089
 		 0.0017444898 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -1.2533797e-005
-		 -0.60876089 0.79335386 -1.2533797e-005 -0.60876089 0.79335386 -1.2533797e-005 -0.60876089
-		 0.79335386 -1.2533797e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -1.2533797e-05
+		 -0.60876089 0.79335386 -1.2533797e-05 -0.60876089 0.79335386 -1.2533797e-05 -0.60876089
+		 0.79335386 -1.2533797e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183
 		 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.60876197 0.7933529 -1.2536999e-005 -0.60876197 0.7933529 -1.2536999e-005
-		 -0.60876197 0.7933529 -1.2536999e-005 -0.60876197 0.7933529 -1.2536999e-005 0.0013936107
+		 0.99999857 -0.60876197 0.7933529 -1.2536999e-05 -0.60876197 0.7933529 -1.2536999e-05
+		 -0.60876197 0.7933529 -1.2536999e-05 -0.60876197 0.7933529 -1.2536999e-05 0.0013936107
 		 0.0010549206 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.0013936107 0.0010549206
 		 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.79335183 0.60876089 0.0017444898
 		 0.79335183 0.60876089 0.0017444898 0.79335183 0.60876089 0.0017444898 0.79335183
@@ -35701,16 +34397,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.0013898495 -0.0010520295 0.99999857 -0.0013898495 -0.0010520295 0.99999857 -0.0013898495
 		 -0.0010520295 0.99999857 -0.0013898495 -0.0010520295 0.99999857 -0.60876536 0.7933504
-		 -1.2543906e-005 -0.60876536 0.7933504 -1.2543906e-005 -0.60876536 0.7933504 -1.2543906e-005
-		 -0.60876536 0.7933504 -1.2543906e-005 0.0013936107 0.0010549206 -0.99999851 0.0013936107
+		 -1.2543906e-05 -0.60876536 0.7933504 -1.2543906e-05 -0.60876536 0.7933504 -1.2543906e-05
+		 -0.60876536 0.7933504 -1.2543906e-05 0.0013936107 0.0010549206 -0.99999851 0.0013936107
 		 0.0010549206 -0.99999851 0.0013936107 0.0010549206 -0.99999851 0.0013936107 0.0010549206
 		 -0.99999851 0.79335356 0.60875863 0.001738389 0.79335356 0.60875863 0.001738389 0.79335356
 		 0.60875863 0.001738389 0.79335356 0.60875863 0.001738389 -0.79335356 -0.60875863
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.79335356 -0.60875863 -0.0017459191 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.60876089 0.79335386 -4.866929e-006 -0.60876089 0.79335386 -4.866929e-006
-		 -0.60876089 0.79335386 -4.866929e-006 -0.60876089 0.79335386 -4.866929e-006 0.0013936107
+		 0.99999857 -0.60876089 0.79335386 -4.866929e-06 -0.60876089 0.79335386 -4.866929e-06
+		 -0.60876089 0.79335386 -4.866929e-06 -0.60876089 0.79335386 -4.866929e-06 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356 0.60875863 0.0017459389
 		 0.79335356 0.60875863 0.0017459389 0.79335356 0.60875863 0.0017459389 0.79335356
@@ -35718,8 +34414,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191 -0.79335356 -0.60875863 -0.0017459191
 		 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695
 		 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.60875911 0.79335511
-		 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005
-		 -0.60875911 0.79335511 -1.0646401e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05
+		 -0.60875911 0.79335511 -1.0646401e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291
 		 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291 -0.79335487
@@ -35727,8 +34423,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459097 -0.79335487 -0.6087569 -0.0017459097;
 	setAttr ".n[332:497]" -type "float3"  -0.0013860695 -0.0010491195 0.99999857
 		 -0.0013860695 -0.0010491195 0.99999857 -0.0013860695 -0.0010491195 0.99999857 -0.0013860695
-		 -0.0010491195 0.99999857 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386
-		 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010491195 0.99999857 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386
+		 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
 		 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863
 		 0.0017459291 0.79335356 0.60875863 0.0017459291 0.79335356 0.60875863 0.0017459291
@@ -35736,42 +34432,42 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089
 		 -0.0017459297 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.60876131 0.79335338 -1.0651505e-005 -0.60876131 0.79335338 -1.0651505e-005 -0.60876131
-		 0.79335338 -1.0651505e-005 -0.60876131 0.79335338 -1.0651505e-005 0.0013898395 0.0010520195
+		 -0.60876131 0.79335338 -1.0651505e-05 -0.60876131 0.79335338 -1.0651505e-05 -0.60876131
+		 0.79335338 -1.0651505e-05 -0.60876131 0.79335338 -1.0651505e-05 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.0013898395 0.0010520195 -0.99999857 0.79335099 0.60876203 0.0017421599 0.79335099
 		 0.60876203 0.0017421599 0.79335099 0.60876203 0.0017421599 0.79335099 0.60876203
 		 0.0017421599 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297
 		 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 0.79335088
 		 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 -0.79335183 -0.60876089
 		 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297 -0.79335183 -0.60876089 -0.0017459297
 		 -0.79335183 -0.60876089 -0.0017459297 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294
 		 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
-		 0.99999857 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005
-		 -0.60875911 0.79335511 -1.0646401e-005 -0.60875911 0.79335511 -1.0646401e-005 0.0013898395
+		 0.99999857 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05
+		 -0.60875911 0.79335511 -1.0646401e-05 -0.60875911 0.79335511 -1.0646401e-05 0.0013898395
 		 0.0010520295 -0.99999857 0.0013898395 0.0010520295 -0.99999857 0.0013898395 0.0010520295
 		 -0.99999857 0.0013898395 0.0010520295 -0.99999857 0.79335356 0.60875863 0.001742169
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 -0.79335356 -0.60875863 -0.0017459489 -0.79335356 -0.60875863 -0.0017459489
 		 -0.79335356 -0.60875863 -0.0017459489 -0.79335356 -0.60875863 -0.0017459489 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
-		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876018 0.79335421 -7.7583618e-006
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
+		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876018 0.79335421 -7.7583618e-06
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356
 		 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299
 		 -0.79335088 -0.60876197 -0.0017459299 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
-		 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 0.0013898395
+		 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863 0.0017459191
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 0.79335356
@@ -35779,16 +34475,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291
 		 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
 		 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
-		 -0.60876304 0.79335207 -1.0654801e-005 0.0013898395 0.0010520095 -0.99999857 0.0013898395
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
+		 -0.60876304 0.79335207 -1.0654801e-05 0.0013898395 0.0010520095 -0.99999857 0.0013898395
 		 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191
 		 0.79335356 0.60875863 0.0017459191 0.79335356 0.60875863 0.0017459191 -0.79335088
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.0013936107 -0.0010549105 0.99999851
 		 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107
-		 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386
-		 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
+		 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386
+		 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
 		 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395
 		 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -35796,17 +34492,17 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195
 		 0.99999857 -0.0013898294 -0.0010520195 0.99999857 -0.0013898294 -0.0010520195 0.99999857
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005;
-	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 0.0013860594 0.0010491295 -0.99999857 0.0013860594
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05;
+	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 0.0013860594 0.0010491295 -0.99999857 0.0013860594
 		 0.0010491295 -0.99999857 0.0013860594 0.0010491295 -0.99999857 0.0013860594 0.0010491295
 		 -0.99999857 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203
 		 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013898395 -0.0010520295 0.99999857
 		 -0.0013898395 -0.0010520295 0.99999857 -0.0013898395 -0.0010520295 0.99999857 -0.0013898395
-		 -0.0010520295 0.99999857 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010520295 0.99999857 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
 		 0.0013860695 0.0010491295 -0.99999857 0.0013860695 0.0010491295 -0.99999857 0.0013860695
 		 0.0010491295 -0.99999857 0.0013860695 0.0010491295 -0.99999857 0.79335088 0.60876197
 		 0.0017459098 0.79335088 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098
@@ -35814,25 +34510,25 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459299 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206
 		 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851
-		 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304
-		 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 0.0013898294 0.0010520195
+		 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304
+		 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857
 		 0.0013898294 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017459299 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197
 		 0.0017459299 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397
 		 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.0013936007
 		 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105
-		 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
+		 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088
 		 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 -0.79335088 -0.60876197
 		 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397 -0.79335088 -0.60876197 -0.0017459397
 		 -0.79335088 -0.60876197 -0.0017459397 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007
 		 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105 0.99999851 -0.0013936007 -0.0010549105
-		 0.99999851 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 0.0013898294
+		 0.99999851 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 0.0013898294
 		 0.0010520195 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.0013898294 0.0010520195
 		 -0.99999857 0.0013898294 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017459299
 		 0.79335088 0.60876197 0.0017459299 0.79335088 0.60876197 0.0017459299 0.79335088
@@ -35840,16 +34536,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.001738399 -0.79335356 -0.60875863 -0.001738399 -0.79335356 -0.60875863 -0.001738399
 		 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.0013936107
 		 -0.0010549206 0.99999851 -0.0013936107 -0.0010549206 0.99999851 -0.60876536 0.7933504
-		 -1.0659805e-005 -0.60876536 0.7933504 -1.0659805e-005 -0.60876536 0.7933504 -1.0659805e-005
-		 -0.60876536 0.7933504 -1.0659805e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -1.0659805e-05 -0.60876536 0.7933504 -1.0659805e-05 -0.60876536 0.7933504 -1.0659805e-05
+		 -0.60876536 0.7933504 -1.0659805e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397
 		 0.79335088 0.60876197 0.0017459397 0.79335088 0.60876197 0.0017459397 -0.79335099
 		 -0.60876203 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.79335099 -0.60876203
 		 -0.0017421701 -0.79335099 -0.60876203 -0.0017421701 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654901e-005 -0.60876304 0.79335207
-		 -1.0654901e-005 -0.60876304 0.79335207 -1.0654901e-005 -0.60876304 0.79335207 -1.0654901e-005
+		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654901e-05 -0.60876304 0.79335207
+		 -1.0654901e-05 -0.60876304 0.79335207 -1.0654901e-05 -0.60876304 0.79335207 -1.0654901e-05
 		 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007
 		 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197
 		 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199
@@ -35857,34 +34553,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197
 		 -0.0017459199 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606
 		 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851
-		 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 -0.60876417
-		 0.79335123 -1.0658003e-005 -0.60876417 0.79335123 -1.0658003e-005 0.0013936007 0.0010549105
+		 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 -0.60876417
+		 0.79335123 -1.0658003e-05 -0.60876417 0.79335123 -1.0658003e-05 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851
 		 0.0013936007 0.0010549105 -0.99999851 0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197
 		 0.0017459199 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098
 		 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695
-		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
+		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105
 		 -0.99999851 0.0013936007 0.0010549105 -0.99999851 0.0013936007 0.0010549105 -0.99999851;
 	setAttr ".n[664:829]" -type "float3"  0.79335088 0.60876197 0.0017459199 0.79335088
 		 0.60876197 0.0017459199 0.79335088 0.60876197 0.0017459199 0.79335088 0.60876197
 		 0.0017459199 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098
 		 -0.79335088 -0.60876197 -0.0017459098 -0.79335088 -0.60876197 -0.0017459098 -0.0013863494
 		 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.0013863494 -0.0010565695
-		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-005
-		 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089 0.79335386 -1.0649698e-005 -0.60876089
-		 0.79335386 -1.0649698e-005 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
+		 0.99999857 -0.0013863494 -0.0010565695 0.99999857 -0.60876089 0.79335386 -1.0649698e-05
+		 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089 0.79335386 -1.0649698e-05 -0.60876089
+		 0.79335386 -1.0649698e-05 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857
 		 0.79335088 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098 0.79335088
 		 0.60876197 0.0017459098 0.79335088 0.60876197 0.0017459098 -0.79335088 -0.60876197
 		 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199 -0.79335088 -0.60876197 -0.0017459199
 		 -0.79335088 -0.60876197 -0.0017459199 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
 		 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606
-		 0.99999851 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005
-		 -0.60876304 0.79335207 -1.0654701e-005 -0.60876304 0.79335207 -1.0654701e-005 0.0013898395
+		 0.99999851 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05
+		 -0.60876304 0.79335207 -1.0654701e-05 -0.60876304 0.79335207 -1.0654701e-05 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335088 0.60876197 0.0017473698
 		 0.79335088 0.60876197 0.0017473698 0.79335088 0.60876197 0.0017473698 0.79335088
@@ -35892,16 +34588,16 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299 -0.79335088 -0.60876197 -0.0017459299
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
 		 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.60876304 0.79335207
-		 -8.7707213e-006 -0.60876304 0.79335207 -8.7707213e-006 -0.60876304 0.79335207 -8.7707213e-006
-		 -0.60876304 0.79335207 -8.7707213e-006 0.0013936107 0.0010549105 -0.99999851 0.0013936107
+		 -8.7707213e-06 -0.60876304 0.79335207 -8.7707213e-06 -0.60876304 0.79335207 -8.7707213e-06
+		 -0.60876304 0.79335207 -8.7707213e-06 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105
 		 -0.99999851 0.79335183 0.60876089 0.0017459198 0.79335183 0.60876089 0.0017459198
 		 0.79335183 0.60876089 0.0017459198 0.79335183 0.60876089 0.0017459198 -0.79335487
 		 -0.6087569 -0.0017459198 -0.79335487 -0.6087569 -0.0017459198 -0.79335487 -0.6087569
 		 -0.0017459198 -0.79335487 -0.6087569 -0.0017459198 -0.0013901207 -0.0010594606 0.99999851
 		 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207 -0.0010594606 0.99999851 -0.0013901207
-		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005
+		 -0.0010594606 0.99999851 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107
 		 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589
@@ -35909,34 +34605,34 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.79335487 -0.6087569
 		 -0.0017459297 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 0.0013936107 0.0010549105
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 0.0013936107 0.0010549105
 		 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.79335487 0.6087569 0.0017459297 0.79335487
 		 0.6087569 0.0017459297 0.79335487 0.6087569 0.0017459297 0.79335487 0.6087569 0.0017459297
 		 -0.79335487 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.79335487
 		 -0.6087569 -0.0017459297 -0.79335487 -0.6087569 -0.0017459297 -0.0013901307 -0.0010594506
 		 0.99999851 -0.0013901307 -0.0010594506 0.99999851 -0.0013901307 -0.0010594506 0.99999851
-		 -0.0013901307 -0.0010594506 0.99999851 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304
-		 0.79335207 -1.0654801e-005 -0.60876304 0.79335207 -1.0654801e-005 -0.60876304 0.79335207
-		 -1.0654801e-005 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
+		 -0.0013901307 -0.0010594506 0.99999851 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304
+		 0.79335207 -1.0654801e-05 -0.60876304 0.79335207 -1.0654801e-05 -0.60876304 0.79335207
+		 -1.0654801e-05 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356
 		 0.60875863 0.0017444891 0.79335356 0.60875863 0.0017444891 0.79335356 0.60875863
 		 0.0017444891 0.79335356 0.60875863 0.0017444891 -0.79335356 -0.60875863 -0.0017459291
 		 -0.79335356 -0.60875863 -0.0017459291 -0.79335356 -0.60875863 -0.0017459291 -0.79335356
 		 -0.60875863 -0.0017459291 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506
 		 0.99999851 -0.0013901207 -0.0010594506 0.99999851 -0.0013901207 -0.0010594506 0.99999851
-		 -0.60876304 0.79335207 -1.2538801e-005 -0.60876304 0.79335207 -1.2538801e-005 -0.60876304
-		 0.79335207 -1.2538801e-005 -0.60876304 0.79335207 -1.2538801e-005 0.0013863494 0.0010565595
+		 -0.60876304 0.79335207 -1.2538801e-05 -0.60876304 0.79335207 -1.2538801e-05 -0.60876304
+		 0.79335207 -1.2538801e-05 -0.60876304 0.79335207 -1.2538801e-05 0.0013863494 0.0010565595
 		 -0.99999857 0.0013863494 0.0010565595 -0.99999857 0.0013863494 0.0010565595 -0.99999857
 		 0.0013863494 0.0010565595 -0.99999857 0.79335356 0.60875863 0.001742179 0.79335356
 		 0.60875863 0.001742179 0.79335356 0.60875863 0.001742179 0.79335356 0.60875863 0.001742179
 		 -0.79335493 -0.6087569 -0.0017407298 -0.79335493 -0.6087569 -0.0017407298 -0.79335493
 		 -0.6087569 -0.0017407298 -0.79335493 -0.6087569 -0.0017407298 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.0013898395 -0.0010520195 0.99999857 -0.60875911 0.79335511 -7.7551613e-006 -0.60875911
-		 0.79335511 -7.7551613e-006 -0.60875911 0.79335511 -7.7551613e-006 -0.60875911 0.79335511
-		 -7.7551613e-006 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851
+		 -0.0013898395 -0.0010520195 0.99999857 -0.60875911 0.79335511 -7.7551613e-06 -0.60875911
+		 0.79335511 -7.7551613e-06 -0.60875911 0.79335511 -7.7551613e-06 -0.60875911 0.79335511
+		 -7.7551613e-06 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851
 		 0.0013901207 0.0010594506 -0.99999851 0.0013901207 0.0010594506 -0.99999851 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 -0.79335493 -0.6087569 -0.0017421498
@@ -35944,8 +34640,8 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 	setAttr ".n[830:995]" -type "float3"  -0.79335493 -0.6087569 -0.0017421498
 		 -0.79335493 -0.6087569 -0.0017421498 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695
 		 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295 0.99999857 -0.0013860695 -0.0010491295
-		 0.99999857 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006
-		 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006 0.0013898395
+		 0.99999857 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06
+		 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06 0.0013898395
 		 0.0010520195 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.0013898395 0.0010520195
 		 -0.99999857 0.0013898395 0.0010520195 -0.99999857 0.79335356 0.60875863 0.0017346289
 		 0.79335356 0.60875863 0.0017346289 0.79335356 0.60875863 0.0017346289 0.79335356
@@ -35953,153 +34649,153 @@ createNode mesh -n "polySurface1278Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017421498 -0.79335493 -0.6087569 -0.0017421498 -0.79335493 -0.6087569 -0.0017421498
 		 -0.0013860594 -0.0010491195 0.99999857 -0.0013860594 -0.0010491195 0.99999857 -0.0013860594
 		 -0.0010491195 0.99999857 -0.0013860594 -0.0010491195 0.99999857 -0.60875404 0.79335904
-		 -1.9623501e-006 -0.60875404 0.79335904 -1.9623501e-006 -0.60875404 0.79335904 -1.9623501e-006
-		 -0.60875404 0.79335904 -1.9623501e-006 0.0013898294 0.0010520295 -0.99999857 0.0013898294
+		 -1.9623501e-06 -0.60875404 0.79335904 -1.9623501e-06 -0.60875404 0.79335904 -1.9623501e-06
+		 -0.60875404 0.79335904 -1.9623501e-06 0.0013898294 0.0010520295 -0.99999857 0.0013898294
 		 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295
 		 -0.99999857 0.79335356 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 0.79335356
 		 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 -0.79335493 -0.6087569 -0.0017407099
 		 -0.79335493 -0.6087569 -0.0017407099 -0.79335493 -0.6087569 -0.0017407099 -0.79335493
 		 -0.6087569 -0.0017407099 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195
 		 0.99999857 -0.0013898395 -0.0010520195 0.99999857 -0.0013898395 -0.0010520195 0.99999857
-		 -0.60875911 0.79335511 -7.7550512e-006 -0.60875911 0.79335511 -7.7550512e-006 -0.60875911
-		 0.79335511 -7.7550512e-006 -0.60875911 0.79335511 -7.7550512e-006 0.0013936007 0.0010549206
+		 -0.60875911 0.79335511 -7.7550512e-06 -0.60875911 0.79335511 -7.7550512e-06 -0.60875911
+		 0.79335511 -7.7550512e-06 -0.60875911 0.79335511 -7.7550512e-06 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.0013936007 0.0010549206 -0.99999851 0.79335356 0.60875863 0.0017421589 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149
 		 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206
+		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 0.79335356 0.60875863 0.001742169 -0.79335356 -0.60875863 -0.0017421589
 		 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 0.0013936007 0.0010549206
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 0.0013936007 0.0010549206
 		 -0.99999851 0.0013936007 0.0010549206 -0.99999851 0.0013936007 0.0010549206 -0.99999851
 		 0.0013936007 0.0010549206 -0.99999851 0.79335356 0.60875863 0.0017421589 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149
 		 -0.79335356 -0.60875863 -0.001742149 -0.79335356 -0.60875863 -0.001742149 -0.0013898395
 		 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
-		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-006
-		 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305
+		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.60876089 0.79335386 -7.7583181e-06
+		 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305
 		 -0.99999851 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305 -0.99999851
 		 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863
 		 0.001742169 0.79335356 0.60875863 0.001742169 -0.79335356 -0.60875863 -0.0017496989
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 0.0013936107 0.0010549305
+		 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 0.0013936107 0.0010549305
 		 -0.99999851 0.0013936107 0.0010549305 -0.99999851 0.0013936107 0.0010549305 -0.99999851
 		 0.0013936107 0.0010549305 -0.99999851 0.79335356 0.60875863 0.001742169 0.79335356
 		 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169 0.79335356 0.60875863 0.001742169
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857
-		 -0.0013898395 -0.0010520095 0.99999857 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018
-		 0.79335421 -7.7583618e-006 -0.60876018 0.79335421 -7.7583618e-006 -0.60876018 0.79335421
-		 -7.7583618e-006 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
+		 -0.0013898395 -0.0010520095 0.99999857 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018
+		 0.79335421 -7.7583618e-06 -0.60876018 0.79335421 -7.7583618e-06 -0.60876018 0.79335421
+		 -7.7583618e-06 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851
 		 0.0013936107 0.0010549105 -0.99999851 0.0013936107 0.0010549105 -0.99999851 0.79335356
 		 0.60875863 0.0017497089 0.79335356 0.60875863 0.0017497089 0.79335356 0.60875863
 		 0.0017497089 0.79335356 0.60875863 0.0017497089 -0.79335356 -0.60875863 -0.0017496989
 		 -0.79335356 -0.60875863 -0.0017496989 -0.79335356 -0.60875863 -0.0017496989 -0.79335356
 		 -0.60875863 -0.0017496989 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095
 		 0.99999857 -0.0013898395 -0.0010520095 0.99999857 -0.0013898395 -0.0010520095 0.99999857;
-	setAttr ".n[996:1161]" -type "float3"  -0.60876018 0.79335421 -1.3541104e-005
-		 -0.60876018 0.79335421 -1.3541104e-005 -0.60876018 0.79335421 -1.3541104e-005 -0.60876018
-		 0.79335421 -1.3541104e-005 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
+	setAttr ".n[996:1161]" -type "float3"  -0.60876018 0.79335421 -1.3541104e-05
+		 -0.60876018 0.79335421 -1.3541104e-05 -0.60876018 0.79335421 -1.3541104e-05 -0.60876018
+		 0.79335421 -1.3541104e-05 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.7933479 0.60876596 0.0017497197 0.7933479 0.60876596 0.0017497197 0.7933479 0.60876596
 		 0.0017497197 0.7933479 0.60876596 0.0017497197 -0.7933479 -0.60876596 -0.0017497197
 		 -0.7933479 -0.60876596 -0.0017497197 -0.7933479 -0.60876596 -0.0017497197 -0.7933479
 		 -0.60876596 -0.0017497197 -0.0013898294 -0.0010520295 0.99999857 -0.0013898294 -0.0010520295
 		 0.99999857 -0.0013898294 -0.0010520295 0.99999857 -0.0013898294 -0.0010520295 0.99999857
-		 -0.60876089 0.79335386 -1.3541097e-005 -0.60876089 0.79335386 -1.3541097e-005 -0.60876089
-		 0.79335386 -1.3541097e-005 -0.60876089 0.79335386 -1.3541097e-005 0.0013860695 0.0010491195
+		 -0.60876089 0.79335386 -1.3541097e-05 -0.60876089 0.79335386 -1.3541097e-05 -0.60876089
+		 0.79335386 -1.3541097e-05 -0.60876089 0.79335386 -1.3541097e-05 0.0013860695 0.0010491195
 		 -0.99999857 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
 		 0.0013860695 0.0010491195 -0.99999857 0.7933479 0.60876596 0.0017496798 0.7933479
 		 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798
 		 -0.7933479 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.7933479
 		 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.0013936007 -0.0010549206
 		 0.99999851 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206 0.99999851
-		 -0.0013936007 -0.0010549206 0.99999851 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089
-		 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089 0.79335386
-		 -1.3540897e-005 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
+		 -0.0013936007 -0.0010549206 0.99999851 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089
+		 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089 0.79335386
+		 -1.3540897e-05 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857
 		 0.0013860695 0.0010491195 -0.99999857 0.0013860695 0.0010491195 -0.99999857 0.7933479
 		 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798 0.7933479 0.60876596 0.0017496798
 		 0.7933479 0.60876596 0.0017496798 -0.7933479 -0.60876596 -0.0017496998 -0.7933479
 		 -0.60876596 -0.0017496998 -0.7933479 -0.60876596 -0.0017496998 -0.7933479 -0.60876596
 		 -0.0017496998 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206
 		 0.99999851 -0.0013936007 -0.0010549206 0.99999851 -0.0013936007 -0.0010549206 0.99999851
-		 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 -0.60876089
-		 0.79335386 -1.3540897e-005 -0.60876089 0.79335386 -1.3540897e-005 0.0013898395 0.0010520095
+		 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 -0.60876089
+		 0.79335386 -1.3540897e-05 -0.60876089 0.79335386 -1.3540897e-05 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.7933479 0.60876596 0.0017496898 0.7933479
 		 0.60876596 0.0017496898 0.7933479 0.60876596 0.0017496898 0.7933479 0.60876596 0.0017496898
 		 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.0013936107 -0.0010549305
 		 0.99999851 -0.0013936107 -0.0010549305 0.99999851 -0.0013936107 -0.0010549305 0.99999851
-		 -0.0013936107 -0.0010549305 0.99999851 -0.60876483 0.7933507 -1.3551095e-005 -0.60876483
-		 0.7933507 -1.3551095e-005 -0.60876483 0.7933507 -1.3551095e-005 -0.60876483 0.7933507
-		 -1.3551095e-005 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857
+		 -0.0013936107 -0.0010549305 0.99999851 -0.60876483 0.7933507 -1.3551095e-05 -0.60876483
+		 0.7933507 -1.3551095e-05 -0.60876483 0.7933507 -1.3551095e-05 -0.60876483 0.7933507
+		 -1.3551095e-05 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857
 		 0.0013898495 0.0010520195 -0.99999857 0.0013898495 0.0010520195 -0.99999857 0.79335356
 		 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149 0.79335356 0.60875863 0.001742149
 		 0.79335356 0.60875863 0.001742149 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863
 		 -0.0017421589 -0.0013936207 -0.0010549105 0.99999851 -0.0013936207 -0.0010549105
 		 0.99999851 -0.0013936207 -0.0010549105 0.99999851 -0.0013936207 -0.0010549105 0.99999851
-		 -0.60876483 0.7933507 -7.7683571e-006 -0.60876483 0.7933507 -7.7683571e-006 -0.60876483
-		 0.7933507 -7.7683571e-006 -0.60876483 0.7933507 -7.7683571e-006 0.0013898395 0.0010520095
+		 -0.60876483 0.7933507 -7.7683571e-06 -0.60876483 0.7933507 -7.7683571e-06 -0.60876483
+		 0.7933507 -7.7683571e-06 -0.60876483 0.7933507 -7.7683571e-06 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.79335493
 		 0.6087569 0.0017421498 0.79335493 0.6087569 0.0017421498 0.79335493 0.6087569 0.0017421498
 		 0.79335493 0.6087569 0.0017421498 -0.79335356 -0.60875863 -0.0017421589 -0.79335356
 		 -0.60875863 -0.0017421589 -0.79335356 -0.60875863 -0.0017421589 -0.79335356 -0.60875863
 		 -0.0017421589 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.60876089 0.79335386 -7.758289e-006 -0.60876089 0.79335386 -7.758289e-006 -0.60876089
-		 0.79335386 -7.758289e-006 -0.60876089 0.79335386 -7.758289e-006 0.0013898395 0.0010520095
+		 -0.60876089 0.79335386 -7.758289e-06 -0.60876089 0.79335386 -7.758289e-06 -0.60876089
+		 0.79335386 -7.758289e-06 -0.60876089 0.79335386 -7.758289e-06 0.0013898395 0.0010520095
 		 -0.99999857 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857;
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898395 0.0010520095 -0.99999857 0.0013898395 0.0010520095 -0.99999857;
 	setAttr ".n[1162:1199]" -type "float3"  0.0013898395 0.0010520095 -0.99999857
 		 0.0013898395 0.0010520095 -0.99999857 0.79335493 0.6087569 0.0017421597 0.79335493
 		 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597 0.79335493 0.6087569 0.0017421597
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.0013936107 -0.0010549006
 		 0.99999851 -0.0013936107 -0.0010549006 0.99999851 -0.0013936107 -0.0010549006 0.99999851
-		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089
-		 0.79335386 -7.7583181e-006 -0.60876089 0.79335386 -7.7583181e-006 -0.60876089 0.79335386
-		 -7.7583181e-006 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857
+		 -0.0013936107 -0.0010549006 0.99999851 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089
+		 0.79335386 -7.7583181e-06 -0.60876089 0.79335386 -7.7583181e-06 -0.60876089 0.79335386
+		 -7.7583181e-06 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857
 		 0.0013898294 0.0010520295 -0.99999857 0.0013898294 0.0010520295 -0.99999857 0.79335356
 		 0.60875863 0.0017421589 0.79335356 0.60875863 0.0017421589 0.79335356 0.60875863
 		 0.0017421589 0.79335356 0.60875863 0.0017421589 -0.79335356 -0.60875863 -0.001742169
 		 -0.79335356 -0.60875863 -0.001742169 -0.79335356 -0.60875863 -0.001742169 -0.79335356
 		 -0.60875863 -0.001742169 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105
 		 0.99999851 -0.0013936107 -0.0010549105 0.99999851 -0.0013936107 -0.0010549105 0.99999851
-		 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006 -0.60875911
-		 0.79335511 -7.7550912e-006 -0.60875911 0.79335511 -7.7550912e-006;
+		 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06 -0.60875911
+		 0.79335511 -7.7550912e-06 -0.60875911 0.79335511 -7.7550912e-06;
 	setAttr -s 300 -ch 1200 ".fc[0:299]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -37826,68 +36522,68 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.0013903194 -0.0010502295
 		 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857
-		 -0.0013903194 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197
-		 0.7933529 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529
-		 -1.1563699e-005 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851
+		 -0.0013903194 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197
+		 0.7933529 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529
+		 -1.1563699e-05 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851
 		 0.0013926507 0.0010561704 -0.99999851 0.0013926507 0.0010561704 -0.99999851 0.79335183
 		 0.60876089 0.0017458997 0.79335183 0.60876089 0.0017458997 0.79335183 0.60876089
 		 0.0017458997 0.79335183 0.60876089 0.0017458997 -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183
 		 -0.60876089 -0.0017475598 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295
 		 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857
-		 -0.60876304 0.79335207 -1.2648902e-005 -0.60876304 0.79335207 -1.2648902e-005 -0.60876304
-		 0.79335207 -1.2648902e-005 -0.60876304 0.79335207 -1.2648902e-005 0.0013926507 0.0010561605
+		 -0.60876304 0.79335207 -1.2648902e-05 -0.60876304 0.79335207 -1.2648902e-05 -0.60876304
+		 0.79335207 -1.2648902e-05 -0.60876304 0.79335207 -1.2648902e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.7933532 0.60875916 0.0017424006 0.7933532
 		 0.60875916 0.0017424006 0.7933532 0.60875916 0.0017424006 0.7933532 0.60875916 0.0017424006
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013924907 -0.0010518805
 		 0.99999851 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805 0.99999851
-		 -0.0013924907 -0.0010518805 0.99999851 -0.60876018 0.79335421 -8.2357028e-006 -0.60876018
-		 0.79335421 -8.2357028e-006 -0.60876018 0.79335421 -8.2357028e-006 -0.60876018 0.79335421
-		 -8.2357028e-006 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
+		 -0.0013924907 -0.0010518805 0.99999851 -0.60876018 0.79335421 -8.2357028e-06 -0.60876018
+		 0.79335421 -8.2357028e-06 -0.60876018 0.79335421 -8.2357028e-06 -0.60876018 0.79335421
+		 -8.2357028e-06 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.7933532
 		 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305
 		 0.7933532 0.60875916 0.0017437305 -0.7933532 -0.60875916 -0.0017432205 -0.7933532
 		 -0.60875916 -0.0017432205 -0.7933532 -0.60875916 -0.0017432205 -0.7933532 -0.60875916
 		 -0.0017432205 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805
 		 0.99999851 -0.0013924907 -0.0010518805 0.99999851 -0.0013924907 -0.0010518805 0.99999851
-		 -0.60876304 0.79335207 -1.0986402e-005 -0.60876304 0.79335207 -1.0986402e-005 -0.60876304
-		 0.79335207 -1.0986402e-005 -0.60876304 0.79335207 -1.0986402e-005 0.0013926507 0.0010561605
+		 -0.60876304 0.79335207 -1.0986402e-05 -0.60876304 0.79335207 -1.0986402e-05 -0.60876304
+		 0.79335207 -1.0986402e-05 -0.60876304 0.79335207 -1.0986402e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013924907 -0.0010518905
 		 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851
-		 -0.0013924907 -0.0010518905 0.99999851 -0.60876197 0.7933529 -9.9011095e-006 -0.60876197
-		 0.7933529 -9.9011095e-006 -0.60876197 0.7933529 -9.9011095e-006 -0.60876197 0.7933529
-		 -9.9011095e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
+		 -0.0013924907 -0.0010518905 0.99999851 -0.60876197 0.7933529 -9.9011095e-06 -0.60876197
+		 0.7933529 -9.9011095e-06 -0.60876197 0.7933529 -9.9011095e-06 -0.60876197 0.7933529
+		 -9.9011095e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183
 		 0.60876089 0.0017445695 0.79335183 0.60876089 0.0017445695 0.79335183 0.60876089
 		 0.0017445695 0.79335183 0.60876089 0.0017445695 -0.7933532 -0.60875916 -0.0017454005
 		 -0.7933532 -0.60875916 -0.0017454005 -0.7933532 -0.60875916 -0.0017454005 -0.7933532
 		 -0.60875916 -0.0017454005 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905
 		 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851
-		 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197
-		 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 0.0013904807 0.0010545006
+		 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197
+		 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017432297 0.79335183
 		 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089
 		 0.0017432297 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60875976 0.79335469 -7.1505574e-006
-		 -0.60875976 0.79335469 -7.1505574e-006 -0.60875976 0.79335469 -7.1505574e-006 -0.60875976
-		 0.79335469 -7.1505574e-006 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60875976 0.79335469 -7.1505574e-06
+		 -0.60875976 0.79335469 -7.1505574e-06 -0.60875976 0.79335469 -7.1505574e-06 -0.60875976
+		 0.79335469 -7.1505574e-06 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089
 		 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297
 		 -0.79335183 -0.60876089 -0.0017432297 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907
 		 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905 0.99999851 -0.0013924907 -0.0010518905
-		 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
-		 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 0.0013904807
+		 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
+		 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017475598
 		 0.79335183 0.60876089 0.0017475598;
@@ -37896,16 +36592,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897
 		 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194
 		 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.60876089 0.79335386
-		 -1.0478499e-005 -0.60876089 0.79335386 -1.0478499e-005 -0.60876089 0.79335386 -1.0478499e-005
-		 -0.60876089 0.79335386 -1.0478499e-005 0.0013926507 0.0010561605 -0.99999851 0.0013926507
+		 -1.0478499e-05 -0.60876089 0.79335386 -1.0478499e-05 -0.60876089 0.79335386 -1.0478499e-05
+		 -0.60876089 0.79335386 -1.0478499e-05 0.0013926507 0.0010561605 -0.99999851 0.0013926507
 		 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
 		 -0.99999851 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013903194 -0.0010502295 0.99999857
 		 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194 -0.0010502295 0.99999857 -0.0013903194
-		 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529
-		 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005 -0.60876197 0.7933529 -1.1563699e-005
+		 -0.0010502295 0.99999857 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529
+		 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05 -0.60876197 0.7933529 -1.1563699e-05
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.7933532 0.60875916
 		 0.0017445703 0.7933532 0.60875916 0.0017445703 0.7933532 0.60875916 0.0017445703
@@ -37913,25 +36609,25 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916
 		 -0.0017445703 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 -0.60876197
-		 0.7933529 -9.9011395e-006 -0.60876197 0.7933529 -9.9011395e-006 0.0013904807 0.0010545006
+		 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 -0.60876197
+		 0.7933529 -9.9011395e-06 -0.60876197 0.7933529 -9.9011395e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423895 0.79335183
 		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089
 		 0.0017423895 -0.7933532 -0.60875916 -0.0017453905 -0.7933532 -0.60875916 -0.0017453905
 		 -0.7933532 -0.60875916 -0.0017453905 -0.7933532 -0.60875916 -0.0017453905 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -8.2375846e-006
-		 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131
-		 0.79335338 -8.2375846e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -8.2375846e-06
+		 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131
+		 0.79335338 -8.2375846e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 0.79335183
 		 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 -0.79335183 -0.60876089
 		 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895
 		 -0.79335183 -0.60876089 -0.0017423895 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -9.9010886e-006 -0.60876197 0.7933529 -9.9010886e-006
-		 -0.60876197 0.7933529 -9.9010886e-006 -0.60876197 0.7933529 -9.9010886e-006 0.0013904807
+		 0.99999851 -0.60876197 0.7933529 -9.9010886e-06 -0.60876197 0.7933529 -9.9010886e-06
+		 -0.60876197 0.7933529 -9.9010886e-06 -0.60876197 0.7933529 -9.9010886e-06 0.0013904807
 		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183
@@ -37939,16 +36635,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876304 0.79335207
-		 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
-		 -0.60876304 0.79335207 -1.1565502e-005 0.0013903194 0.0010502195 -0.99999857 0.0013903194
+		 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
+		 -0.60876304 0.79335207 -1.1565502e-05 0.0013903194 0.0010502195 -0.99999857 0.0013903194
 		 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529
-		 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
+		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529
+		 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
 		 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194
 		 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.79335183 0.60876089
 		 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296
@@ -37956,8 +36652,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
 		 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131
-		 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 0.0013903194 0.0010502195
+		 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131
+		 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 0.0013903194 0.0010502195
 		 -0.99999857 0.0013903194 0.0010502195 -0.99999857 0.0013903194 0.0010502195 -0.99999857
 		 0.0013903194 0.0010502195 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183
 		 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089
@@ -37965,8 +36661,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596;
 	setAttr ".n[332:497]" -type "float3"  -0.0013904807 -0.0010545006 0.99999851
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529
-		 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005 -0.60876197 0.7933529 -1.1563599e-005
+		 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529
+		 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05 -0.60876197 0.7933529 -1.1563599e-05
 		 0.0013903194 0.0010502295 -0.99999857 0.0013903194 0.0010502295 -0.99999857 0.0013903194
 		 0.0010502295 -0.99999857 0.0013903194 0.0010502295 -0.99999857 0.79335183 0.60876089
 		 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
@@ -37974,42 +36670,42 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396
 		 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857
-		 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304
-		 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 0.0013924907 0.0010518905
+		 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304
+		 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 0.0013924907 0.0010518905
 		 -0.99999851 0.0013924907 0.0010518905 -0.99999851 0.0013924907 0.0010518905 -0.99999851
 		 0.0013924907 0.0010518905 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013883094 -0.0010528296
 		 0.99999857 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296 0.99999857
-		 -0.0013883094 -0.0010528296 0.99999857 -0.60876018 0.79335421 -9.8982327e-006 -0.60876018
-		 0.79335421 -9.8982327e-006 -0.60876018 0.79335421 -9.8982327e-006 -0.60876018 0.79335421
-		 -9.8982327e-006 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851
+		 -0.0013883094 -0.0010528296 0.99999857 -0.60876018 0.79335421 -9.8982327e-06 -0.60876018
+		 0.79335421 -9.8982327e-06 -0.60876018 0.79335421 -9.8982327e-06 -0.60876018 0.79335421
+		 -9.8982327e-06 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851
 		 0.0013924807 0.0010518905 -0.99999851 0.0013924807 0.0010518905 -0.99999851 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604
 		 0.7933532 0.60875916 0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532
 		 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916
 		 -0.0017445604 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296
 		 0.99999857 -0.0013883094 -0.0010528296 0.99999857 -0.0013883094 -0.0010528296 0.99999857
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 0.0013883094 0.0010528296
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 0.0013883094 0.0010528296
 		 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857
 		 0.0013883094 0.0010528296 -0.99999857 0.79335183 0.60876089 0.0017458997 0.79335183
 		 0.60876089 0.0017458997 0.79335183 0.60876089 0.0017458997 0.79335183 0.60876089
 		 0.0017458997 -0.79335183 -0.60876089 -0.0017475697 -0.79335183 -0.60876089 -0.0017475697
 		 -0.79335183 -0.60876089 -0.0017475697 -0.79335183 -0.60876089 -0.0017475697 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876089 0.79335386 -1.2644998e-005
-		 -0.60876089 0.79335386 -1.2644998e-005 -0.60876089 0.79335386 -1.2644998e-005 -0.60876089
-		 0.79335386 -1.2644998e-005 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876089 0.79335386 -1.2644998e-05
+		 -0.60876089 0.79335386 -1.2644998e-05 -0.60876089 0.79335386 -1.2644998e-05 -0.60876089
+		 0.79335386 -1.2644998e-05 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
 		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 0.79335183
 		 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183 -0.60876089
 		 -0.0017458997 -0.79335183 -0.60876089 -0.0017458997 -0.79335183 -0.60876089 -0.0017458997
 		 -0.79335183 -0.60876089 -0.0017458997 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -1.1562605e-005 -0.60876131 0.79335338 -1.1562605e-005
-		 -0.60876131 0.79335338 -1.1562605e-005 -0.60876131 0.79335338 -1.1562605e-005 0.0013883094
+		 0.99999851 -0.60876131 0.79335338 -1.1562605e-05 -0.60876131 0.79335338 -1.1562605e-05
+		 -0.60876131 0.79335338 -1.1562605e-05 -0.60876131 0.79335338 -1.1562605e-05 0.0013883094
 		 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296
 		 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.79335183 0.60876089 0.0017458897
 		 0.79335183 0.60876089 0.0017458897 0.79335183 0.60876089 0.0017458897 0.79335183
@@ -38017,16 +36713,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529
-		 -1.2647798e-005 -0.60876197 0.7933529 -1.2647798e-005 -0.60876197 0.7933529 -1.2647798e-005
-		 -0.60876197 0.7933529 -1.2647798e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -1.2647798e-05 -0.60876197 0.7933529 -1.2647798e-05 -0.60876197 0.7933529 -1.2647798e-05
+		 -0.60876197 0.7933529 -1.2647798e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.7933532
 		 -0.60875916 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.7933532 -0.60875916
 		 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.0013926507 -0.0010561605 0.99999851
 		 -0.0013926507 -0.0010561605 0.99999851 -0.0013926507 -0.0010561605 0.99999851 -0.0013926507
-		 -0.0010561605 0.99999851 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207
-		 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
+		 -0.0010561605 0.99999851 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207
+		 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
 		 0.0013883094 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.0013883094
 		 0.0010528296 -0.99999857 0.0013883094 0.0010528296 -0.99999857 0.7933532 0.60875916
 		 0.0017437305 0.7933532 0.60875916 0.0017437305 0.7933532 0.60875916 0.0017437305
@@ -38034,51 +36730,51 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916
 		 -0.0017445703 -0.0013926408 -0.0010561504 0.99999851 -0.0013926408 -0.0010561504
 		 0.99999851 -0.0013926408 -0.0010561504 0.99999851 -0.0013926408 -0.0010561504 0.99999851
-		 -0.60876089 0.79335386 -1.0982399e-005 -0.60876089 0.79335386 -1.0982399e-005;
-	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0982399e-005
-		 -0.60876089 0.79335386 -1.0982399e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -0.60876089 0.79335386 -1.0982399e-05 -0.60876089 0.79335386 -1.0982399e-05;
+	setAttr ".n[498:663]" -type "float3"  -0.60876089 0.79335386 -1.0982399e-05
+		 -0.60876089 0.79335386 -1.0982399e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.7933532 0.60875916 0.0017453905 0.7933532 0.60875916 0.0017453905 0.7933532
 		 0.60875916 0.0017453905 0.7933532 0.60875916 0.0017453905 -0.7933532 -0.60875916
 		 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406 -0.7933532 -0.60875916 -0.0017437406
 		 -0.7933532 -0.60875916 -0.0017437406 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876018 0.79335421 -8.8149318e-006 -0.60876018 0.79335421 -8.8149318e-006
-		 -0.60876018 0.79335421 -8.8149318e-006 -0.60876018 0.79335421 -8.8149318e-006 0.0013904807
+		 0.99999851 -0.60876018 0.79335421 -8.8149318e-06 -0.60876018 0.79335421 -8.8149318e-06
+		 -0.60876018 0.79335421 -8.8149318e-06 -0.60876018 0.79335421 -8.8149318e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.7933532 0.60875916 0.0017445604
 		 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916
 		 0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.0013904807
 		 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
-		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.7933532 0.60875916 0.0017432305 0.7933532 0.60875916 0.0017432305 0.7933532 0.60875916
 		 0.0017432305 0.7933532 0.60875916 0.0017432305 -0.79335183 -0.60876089 -0.0017437297
 		 -0.79335183 -0.60876089 -0.0017437297 -0.79335183 -0.60876089 -0.0017437297 -0.79335183
 		 -0.60876089 -0.0017437297 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.60875911 0.79335511 -7.1494605e-006 -0.60875911 0.79335511 -7.1494605e-006 -0.60875911
-		 0.79335511 -7.1494605e-006 -0.60875911 0.79335511 -7.1494605e-006 0.0013904807 0.0010545006
+		 -0.60875911 0.79335511 -7.1494605e-06 -0.60875911 0.79335511 -7.1494605e-06 -0.60875911
+		 0.79335511 -7.1494605e-06 -0.60875911 0.79335511 -7.1494605e-06 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017445596 0.79335183
 		 0.60876089 0.0017445596 0.79335183 0.60876089 0.0017445596 0.79335183 0.60876089
 		 0.0017445596 -0.79335183 -0.60876089 -0.0017453897 -0.79335183 -0.60876089 -0.0017453897
 		 -0.79335183 -0.60876089 -0.0017453897 -0.79335183 -0.60876089 -0.0017453897 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -9.902029e-006
-		 -0.60876197 0.7933529 -9.902029e-006 -0.60876197 0.7933529 -9.902029e-006 -0.60876197
-		 0.7933529 -9.902029e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -9.902029e-06
+		 -0.60876197 0.7933529 -9.902029e-06 -0.60876197 0.7933529 -9.902029e-06 -0.60876197
+		 0.7933529 -9.902029e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 0.79335183
 		 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 -0.79335183 -0.60876089
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.79335183 -0.60876089 -0.0017467296 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -8.8168144e-006 -0.60876131 0.79335338 -8.8168144e-006
-		 -0.60876131 0.79335338 -8.8168144e-006 -0.60876131 0.79335338 -8.8168144e-006 0.0013904807
+		 0.99999851 -0.60876131 0.79335338 -8.8168144e-06 -0.60876131 0.79335338 -8.8168144e-06
+		 -0.60876131 0.79335338 -8.8168144e-06 -0.60876131 0.79335338 -8.8168144e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017467396
 		 0.79335183 0.60876089 0.0017467396 0.79335183 0.60876089 0.0017467396 0.79335183
@@ -38086,16 +36782,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703 -0.7933532 -0.60875916 -0.0017445703
 		 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876369 0.79335165
-		 -1.1567495e-005 -0.60876369 0.79335165 -1.1567495e-005 -0.60876369 0.79335165 -1.1567495e-005
-		 -0.60876369 0.79335165 -1.1567495e-005 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -1.1567495e-05 -0.60876369 0.79335165 -1.1567495e-05 -0.60876369 0.79335165 -1.1567495e-05
+		 -0.60876369 0.79335165 -1.1567495e-05 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.7933532 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 0.7933532
 		 0.60875916 0.0017445604 0.7933532 0.60875916 0.0017445604 -0.7933532 -0.60875916
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807
 		 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805
-		 0.99999851 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 0.0013904807
+		 0.99999851 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017432297
 		 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183
@@ -38103,8 +36799,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.0013924807
 		 -0.0010518805 0.99999851 -0.0013924807 -0.0010518805 0.99999851 -0.60876018 0.79335421
-		 -7.1513618e-006 -0.60876018 0.79335421 -7.1513618e-006 -0.60876018 0.79335421 -7.1513618e-006
-		 -0.60876018 0.79335421 -7.1513618e-006 0.0013904707 0.0010545006 -0.99999851 0.0013904707
+		 -7.1513618e-06 -0.60876018 0.79335421 -7.1513618e-06 -0.60876018 0.79335421 -7.1513618e-06
+		 -0.60876018 0.79335421 -7.1513618e-06 0.0013904707 0.0010545006 -0.99999851 0.0013904707
 		 0.0010545006 -0.99999851 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
 		 -0.99999851;
 	setAttr ".n[664:829]" -type "float3"  0.79335183 0.60876089 0.0017445596 0.79335183
@@ -38112,17 +36808,17 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 0.0017445596 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895
 		 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195
-		 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338 -9.9001345e-006
-		 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131 0.79335338 -9.9001345e-006 -0.60876131
-		 0.79335338 -9.9001345e-006 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
+		 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338 -9.9001345e-06
+		 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131 0.79335338 -9.9001345e-06 -0.60876131
+		 0.79335338 -9.9001345e-06 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006
 		 -0.99999851 0.0013904707 0.0010545006 -0.99999851 0.0013904707 0.0010545006 -0.99999851
 		 0.79335183 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 0.79335183
 		 0.60876089 0.0017453897 0.79335183 0.60876089 0.0017453897 -0.79335183 -0.60876089
 		 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596
 		 -0.79335183 -0.60876089 -0.0017445596 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195
-		 0.99999857 -0.60876131 0.79335338 -8.8168345e-006 -0.60876131 0.79335338 -8.8168345e-006
-		 -0.60876131 0.79335338 -8.8168345e-006 -0.60876131 0.79335338 -8.8168345e-006 0.0013926408
+		 0.99999857 -0.60876131 0.79335338 -8.8168345e-06 -0.60876131 0.79335338 -8.8168345e-06
+		 -0.60876131 0.79335338 -8.8168345e-06 -0.60876131 0.79335338 -8.8168345e-06 0.0013926408
 		 0.0010561704 -0.99999851 0.0013926408 0.0010561704 -0.99999851 0.0013926408 0.0010561704
 		 -0.99999851 0.0013926408 0.0010561704 -0.99999851 0.79335183 0.60876089 0.0017445695
 		 0.79335183 0.60876089 0.0017445695 0.79335183 0.60876089 0.0017445695 0.79335183
@@ -38130,16 +36826,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.0013903194
 		 -0.0010502195 0.99999857 -0.0013903194 -0.0010502195 0.99999857 -0.60876131 0.79335338
-		 -9.9001845e-006 -0.60876131 0.79335338 -9.9001845e-006 -0.60876131 0.79335338 -9.9001845e-006
-		 -0.60876131 0.79335338 -9.9001845e-006 0.0013926408 0.0010561605 -0.99999851 0.0013926408
+		 -9.9001845e-06 -0.60876131 0.79335338 -9.9001845e-06 -0.60876131 0.79335338 -9.9001845e-06
+		 -0.60876131 0.79335338 -9.9001845e-06 0.0013926408 0.0010561605 -0.99999851 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.79334927 0.60876417 0.0017454006 0.79334927 0.60876417 0.0017454006
 		 0.79334927 0.60876417 0.0017454006 0.79334927 0.60876417 0.0017454006 -0.79335183
 		 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013903094 -0.0010502295 0.99999857
 		 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094
-		 -0.0010502295 0.99999857 -0.60876018 0.79335421 -8.8139232e-006 -0.60876018 0.79335421
-		 -8.8139232e-006 -0.60876018 0.79335421 -8.8139232e-006 -0.60876018 0.79335421 -8.8139232e-006
+		 -0.0010502295 0.99999857 -0.60876018 0.79335421 -8.8139232e-06 -0.60876018 0.79335421
+		 -8.8139232e-06 -0.60876018 0.79335421 -8.8139232e-06 -0.60876018 0.79335421 -8.8139232e-06
 		 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335022 0.60876316
 		 0.0017467304 0.79335022 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304
@@ -38147,25 +36843,25 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876089 -0.0017445596 -0.79335183 -0.60876089 -0.0017445596 -0.79335183 -0.60876089
 		 -0.0017445596 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295
 		 0.99999857 -0.0013903094 -0.0010502295 0.99999857 -0.0013903094 -0.0010502295 0.99999857
-		 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131
-		 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 0.0013926507 0.0010561605
+		 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131
+		 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.0013926507 0.0010561605 -0.99999851 0.79335022 0.60876316 0.0017475606 0.79335022
 		 0.60876316 0.0017475606 0.79335022 0.60876316 0.0017475606 0.79335022 0.60876316
 		 0.0017475606 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876131 0.79335338 -1.0479405e-005
-		 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131
-		 0.79335338 -1.0479405e-005 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
+		 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.60876131 0.79335338 -1.0479405e-05
+		 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131
+		 0.79335338 -1.0479405e-05 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605
 		 -0.99999851 0.0013926507 0.0010561605 -0.99999851 0.0013926507 0.0010561605 -0.99999851
 		 0.79335022 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304 0.79335022
 		 0.60876316 0.0017467304 0.79335022 0.60876316 0.0017467304 -0.7933532 -0.60875916
 		 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604 -0.7933532 -0.60875916 -0.0017445604
 		 -0.7933532 -0.60875916 -0.0017445604 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807
 		 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905 0.99999851 -0.0013924807 -0.0010518905
-		 0.99999851 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005
-		 -0.60876304 0.79335207 -1.1565502e-005 -0.60876304 0.79335207 -1.1565502e-005 0.0013904707
+		 0.99999851 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05
+		 -0.60876304 0.79335207 -1.1565502e-05 -0.60876304 0.79335207 -1.1565502e-05 0.0013904707
 		 0.0010544906 -0.99999851 0.0013904707 0.0010544906 -0.99999851 0.0013904707 0.0010544906
 		 -0.99999851 0.0013904707 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017467396
 		 0.79335183 0.60876089 0.0017467396 0.79335183 0.60876089 0.0017467396 0.79335183
@@ -38173,8 +36869,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017424097 -0.79335183 -0.60876089 -0.0017424097 -0.79335183 -0.60876089 -0.0017424097
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338
-		 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005 -0.60876131 0.79335338 -1.1562705e-005
-		 -0.60876131 0.79335338 -1.1562705e-005 0.0013883094 0.0010528396 -0.99999857 0.0013883094
+		 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05 -0.60876131 0.79335338 -1.1562705e-05
+		 -0.60876131 0.79335338 -1.1562705e-05 0.0013883094 0.0010528396 -0.99999857 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198
 		 0.79335183 0.60876089 0.0017467198 0.79335183 0.60876089 0.0017467198 -0.79335183
@@ -38182,8 +36878,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 	setAttr ".n[830:995]" -type "float3"  -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -1.1564498e-005 -0.60876197 0.7933529 -1.1564498e-005
-		 -0.60876197 0.7933529 -1.1564498e-005 -0.60876197 0.7933529 -1.1564498e-005 0.0013883094
+		 0.99999851 -0.60876197 0.7933529 -1.1564498e-05 -0.60876197 0.7933529 -1.1564498e-05
+		 -0.60876197 0.7933529 -1.1564498e-05 -0.60876197 0.7933529 -1.1564498e-05 0.0013883094
 		 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.79335183 0.60876089 0.0017475598
 		 0.79335183 0.60876089 0.0017475598 0.79335183 0.60876089 0.0017475598 0.79335183
@@ -38191,16 +36887,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.0013883094
 		 -0.0010528396 0.99999857 -0.0013883094 -0.0010528396 0.99999857 -0.60876131 0.79335338
-		 -1.0479305e-005 -0.60876131 0.79335338 -1.0479305e-005 -0.60876131 0.79335338 -1.0479305e-005
-		 -0.60876131 0.79335338 -1.0479305e-005 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -1.0479305e-05 -0.60876131 0.79335338 -1.0479305e-05 -0.60876131 0.79335338 -1.0479305e-05
+		 -0.60876131 0.79335338 -1.0479305e-05 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998
 		 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998 -0.79335183
 		 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089
 		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.0013882994 -0.0010528296 0.99999857
 		 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994
-		 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337365e-006 -0.60875976 0.79335469
-		 -8.2337365e-006 -0.60875976 0.79335469 -8.2337365e-006 -0.60875976 0.79335469 -8.2337365e-006
+		 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337365e-06 -0.60875976 0.79335469
+		 -8.2337365e-06 -0.60875976 0.79335469 -8.2337365e-06 -0.60875976 0.79335469 -8.2337365e-06
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089
 		 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297
@@ -38208,94 +36904,94 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876536 -0.001746721 -0.79334837 -0.60876536 -0.001746721 -0.79334837 -0.60876536
 		 -0.001746721 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857
 		 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.60875911
-		 0.79335511 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 -0.60875911 0.79335511
-		 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 0.0013904807 0.0010545006
-		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
-		 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183
-		 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089
-		 0.0017423998 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609
-		 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013882994
-		 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296
-		 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337565e-006
-		 -0.60875976 0.79335469 -8.2337565e-006 -0.60875976 0.79335469 -8.2337565e-006 -0.60875976
-		 0.79335469 -8.2337565e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
-		 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
-		 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183
-		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79335183 -0.60876089
-		 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
-		 -0.79335183 -0.60876089 -0.0017467198 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
+		 0.79335511 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 -0.60875911 0.79335511
+		 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 0.0013904807 0.0010545006 -0.99999851
+		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 0.0010545006 -0.99999851 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089
+		 0.0017423998 0.79335183 0.60876089 0.0017423998 0.79335183 0.60876089 0.0017423998
+		 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.79334837
+		 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013882994 -0.0010528296
+		 0.99999857 -0.0013882994 -0.0010528296 0.99999857 -0.0013882994 -0.0010528296 0.99999857
+		 -0.0013882994 -0.0010528296 0.99999857 -0.60875976 0.79335469 -8.2337565e-06 -0.60875976
+		 0.79335469 -8.2337565e-06 -0.60875976 0.79335469 -8.2337565e-06 -0.60875976 0.79335469
+		 -8.2337565e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851
+		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183
+		 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089
+		 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79335183 -0.60876089 -0.0017467198
+		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.79335183
+		 -0.60876089 -0.0017467198 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
+		 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 -0.60876131
+		 0.79335338 -8.2375846e-06 -0.60876131 0.79335338 -8.2375846e-06 0.0013904807 0.0010544906
+		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
+		 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017502297 0.79335183
+		 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089
+		 0.0017502297 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
+		 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006
-		 -0.60876131 0.79335338 -8.2375846e-006 -0.60876131 0.79335338 -8.2375846e-006 0.0013904807
-		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
-		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.79335183 0.60876089 0.0017502297
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529 -1.5972899e-05
+		 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197
+		 0.7933529 -1.5972899e-05 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
+		 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851
+		 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 0.79335183
+		 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 -0.79335183 -0.60876089
+		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897
+		 -0.79335183 -0.60876089 -0.0017458897 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
+		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
+		 0.99999851 -0.60876131 0.79335338 -1.4887707e-05 -0.60876131 0.79335338 -1.4887707e-05
+		 -0.60876131 0.79335338 -1.4887707e-05 -0.60876131 0.79335338 -1.4887707e-05 0.0013883094
+		 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.0013883094 0.0010528195
+		 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.79335183 0.60876089 0.0017502297
 		 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183
-		 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089
-		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
+		 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
+		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876197 0.7933529
-		 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005
-		 -0.60876197 0.7933529 -1.5972899e-005 0.0013904807 0.0010544906 -0.99999851 0.0013904807
-		 0.0010544906 -0.99999851 0.0013904807 0.0010544906 -0.99999851 0.0013904807 0.0010544906
-		 -0.99999851 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597
-		 0.79335183 0.60876089 0.0017510597 0.79335183 0.60876089 0.0017510597 -0.79335183
-		 -0.60876089 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.79335183 -0.60876089
-		 -0.0017458897 -0.79335183 -0.60876089 -0.0017458897 -0.0013904807 -0.0010545006 0.99999851
-		 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
-		 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.4887707e-005 -0.60876131 0.79335338
-		 -1.4887707e-005 -0.60876131 0.79335338 -1.4887707e-005 -0.60876131 0.79335338 -1.4887707e-005
-		 0.0013883094 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.0013883094
-		 0.0010528195 -0.99999857 0.0013883094 0.0010528195 -0.99999857 0.79335183 0.60876089
-		 0.0017502297 0.79335183 0.60876089 0.0017502297 0.79335183 0.60876089 0.0017502297
-		 0.79335183 0.60876089 0.0017502297 -0.79335183 -0.60876089 -0.0017467296 -0.79335183
-		 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089
-		 -0.0017467296 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851;
-	setAttr ".n[996:1161]" -type "float3"  -0.60876197 0.7933529 -1.5972899e-005
-		 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197 0.7933529 -1.5972899e-005 -0.60876197
-		 0.7933529 -1.5972899e-005 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
+		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851;
+	setAttr ".n[996:1161]" -type "float3"  -0.60876197 0.7933529 -1.5972899e-05
+		 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197 0.7933529 -1.5972899e-05 -0.60876197
+		 0.7933529 -1.5972899e-05 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.79335493 0.6087569 0.0017424099 0.79335493 0.6087569 0.0017424099 0.79335493 0.6087569
 		 0.0017424099 0.79335493 0.6087569 0.0017424099 -0.79335487 -0.6087569 -0.0017432297
 		 -0.79335487 -0.6087569 -0.0017432297 -0.79335487 -0.6087569 -0.0017432297 -0.79335487
 		 -0.6087569 -0.0017432297 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.60876197 0.7933529 -8.2395491e-006 -0.60876197 0.7933529 -8.2395491e-006 -0.60876197
-		 0.7933529 -8.2395491e-006 -0.60876197 0.7933529 -8.2395491e-006 0.0013926408 0.0010561605
+		 -0.60876197 0.7933529 -8.2395491e-06 -0.60876197 0.7933529 -8.2395491e-06 -0.60876197
+		 0.7933529 -8.2395491e-06 -0.60876197 0.7933529 -8.2395491e-06 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.79335487 0.6087569 0.0017432297 0.79335487
 		 0.6087569 0.0017432297 0.79335487 0.6087569 0.0017432297 0.79335487 0.6087569 0.0017432297
 		 -0.79335183 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.79335183
 		 -0.60876089 -0.0017423895 -0.79335183 -0.60876089 -0.0017423895 -0.0013904807 -0.0010544906
 		 0.99999851 -0.0013904807 -0.0010544906 0.99999851 -0.0013904807 -0.0010544906 0.99999851
-		 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -7.1543036e-006 -0.60876131
-		 0.79335338 -7.1543036e-006 -0.60876131 0.79335338 -7.1543036e-006 -0.60876131 0.79335338
-		 -7.1543036e-006 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
+		 -0.0013904807 -0.0010544906 0.99999851 -0.60876131 0.79335338 -7.1543036e-06 -0.60876131
+		 0.79335338 -7.1543036e-06 -0.60876131 0.79335338 -7.1543036e-06 -0.60876131 0.79335338
+		 -7.1543036e-06 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089
 		 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089 -0.0017432197
 		 -0.79335183 -0.60876089 -0.0017432197 -0.79335183 -0.60876089 -0.0017432197 -0.79335183
 		 -0.60876089 -0.0017432197 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
 		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851
-		 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197
-		 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 0.0013926408 0.0010561605
+		 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197
+		 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.0013926408 0.0010561605 -0.99999851 0.79335183 0.60876089 0.0017475598 0.79335183
 		 0.60876089 0.0017475598 0.79335183 0.60876089 0.0017475598 0.79335183 0.60876089
 		 0.0017475598 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198
 		 -0.79335183 -0.60876089 -0.0017467198 -0.79335183 -0.60876089 -0.0017467198 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.0479405e-005
-		 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131 0.79335338 -1.0479405e-005 -0.60876131
-		 0.79335338 -1.0479405e-005 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
+		 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.60876131 0.79335338 -1.0479405e-05
+		 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131 0.79335338 -1.0479405e-05 -0.60876131
+		 0.79335338 -1.0479405e-05 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851
 		 0.79335183 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 0.79335183
 		 0.60876089 0.0017467296 0.79335183 0.60876089 0.0017467296 -0.79335183 -0.60876089
 		 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598 -0.79335183 -0.60876089 -0.0017475598
 		 -0.79335183 -0.60876089 -0.0017475598 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807
 		 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006 0.99999851 -0.0013904807 -0.0010545006
-		 0.99999851 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005
-		 -0.60876197 0.7933529 -1.1564599e-005 -0.60876197 0.7933529 -1.1564599e-005 0.0013926408
+		 0.99999851 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05
+		 -0.60876197 0.7933529 -1.1564599e-05 -0.60876197 0.7933529 -1.1564599e-05 0.0013926408
 		 0.0010561605 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.0013926408 0.0010561605
 		 -0.99999851 0.0013926408 0.0010561605 -0.99999851 0.79335183 0.60876089 0.0017432297
 		 0.79335183 0.60876089 0.0017432297 0.79335183 0.60876089 0.0017432297 0.79335183
@@ -38303,16 +36999,16 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296 -0.79335183 -0.60876089 -0.0017467296
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60875911 0.79335511
-		 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006 -0.60875911 0.79335511 -7.1484806e-006
-		 -0.60875911 0.79335511 -7.1484806e-006 0.0013904807 0.0010545006 -0.99999851 0.0013904807
+		 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06 -0.60875911 0.79335511 -7.1484806e-06
+		 -0.60875911 0.79335511 -7.1484806e-06 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006
 		 -0.99999851 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895
 		 0.79335183 0.60876089 0.0017423895 0.79335183 0.60876089 0.0017423895 -0.79334837
 		 -0.60876536 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.79334837 -0.60876536
 		 -0.0017475609 -0.79334837 -0.60876536 -0.0017475609 -0.0013926408 -0.0010561605 0.99999851
 		 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
-		 -0.0010561605 0.99999851 -0.60875911 0.79335511 -8.233711e-006 -0.60875911 0.79335511
-		 -8.233711e-006 -0.60875911 0.79335511 -8.233711e-006 -0.60875911 0.79335511 -8.233711e-006
+		 -0.0010561605 0.99999851 -0.60875911 0.79335511 -8.233711e-06 -0.60875911 0.79335511
+		 -8.233711e-06 -0.60875911 0.79335511 -8.233711e-06 -0.60875911 0.79335511 -8.233711e-06
 		 0.0013904807 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.0013904807
 		 0.0010545006 -0.99999851 0.0013904807 0.0010545006 -0.99999851 0.79335183 0.60876089
 		 0.0017432197 0.79335183 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197
@@ -38320,8 +37016,8 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 -0.60876089 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998 -0.79335183 -0.60876089
 		 -0.0017423998 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
 		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851
-		 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131
-		 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006 0.0013883094 0.0010528396
+		 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131
+		 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857;
 	setAttr ".n[1162:1199]" -type "float3"  0.0013883094 0.0010528396 -0.99999857
 		 0.0013883094 0.0010528396 -0.99999857 0.79335183 0.60876089 0.0017423895 0.79335183
@@ -38329,17 +37025,17 @@ createNode mesh -n "polySurface1277Shape" -p "|polySurface439|buttons_center|pol
 		 0.0017423895 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297
 		 -0.79335183 -0.60876089 -0.0017432297 -0.79335183 -0.60876089 -0.0017432297 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529 -8.239479e-006
-		 -0.60876197 0.7933529 -8.239479e-006 -0.60876197 0.7933529 -8.239479e-006 -0.60876197
-		 0.7933529 -8.239479e-006 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
+		 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.60876197 0.7933529 -8.239479e-06
+		 -0.60876197 0.7933529 -8.239479e-06 -0.60876197 0.7933529 -8.239479e-06 -0.60876197
+		 0.7933529 -8.239479e-06 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396
 		 -0.99999857 0.0013883094 0.0010528396 -0.99999857 0.0013883094 0.0010528396 -0.99999857
 		 0.79335183 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197 0.79335183
 		 0.60876089 0.0017432197 0.79335183 0.60876089 0.0017432197 -0.79335183 -0.60876089
 		 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998 -0.79335183 -0.60876089 -0.0017423998
 		 -0.79335183 -0.60876089 -0.0017423998 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408
 		 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605 0.99999851 -0.0013926408 -0.0010561605
-		 0.99999851 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006
-		 -0.60876131 0.79335338 -7.1542831e-006 -0.60876131 0.79335338 -7.1542831e-006;
+		 0.99999851 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06
+		 -0.60876131 0.79335338 -7.1542831e-06 -0.60876131 0.79335338 -7.1542831e-06;
 	setAttr -s 300 -ch 1200 ".fc[0:299]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -39537,10 +38233,10 @@ createNode mesh -n "screenExtend_holderShape" -p "screenExtend_holder";
 	setAttr -s 240 ".n";
 	setAttr ".n[0:165]" -type "float3"  0.0025954256 -0.97994822 0.19923508 0.33510914
 		 -0.86678773 0.36929765 0.3351092 -0.86678785 0.36929768 0.29823363 -0.87811601 0.37412408
-		 -1.3209816e-006 0 1 3.5172623e-006 0 0.99999988 3.5172623e-006 0 0.99999988 -1.3209816e-006
+		 -1.3209816e-06 0 1 3.5172623e-06 0 0.99999988 3.5172623e-06 0 0.99999988 -1.3209816e-06
 		 0 1 0.29823369 0.87811601 0.37412378 0.33510923 0.86678797 0.36929742 0.33510917
-		 0.86678779 0.36929736 0.0025954393 0.97994822 0.19923492 -3.9350448e-006 0 -1 0 0
-		 -0.99999988 0 0 -0.99999988 -3.9350448e-006 0 -1 1.000000119209 0 0 1.000000119209
+		 0.86678779 0.36929736 0.0025954393 0.97994822 0.19923492 -3.9350448e-06 0 -1 0 0
+		 -0.99999988 0 0 -0.99999988 -3.9350448e-06 0 -1 1.000000119209 0 0 1.000000119209
 		 0 0 1.000000119209 0 0 1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988 0 0 -0.99999988
 		 0 0 0.031309515 0.98219359 -0.18524429 0.34187409 0.88427609 -0.31808457 0.34187409
 		 0.88427609 -0.31808457 0.30352467 0.89658183 -0.32251126 -0.99999994 0 0 -0.99999994
@@ -39552,60 +38248,59 @@ createNode mesh -n "screenExtend_holderShape" -p "screenExtend_holder";
 		 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882 0 0.99999994 0 0 0.99999994
 		 0 0 0.99999994 0 0 0.99999994 0 0 0.016818972 0.9198516 0.39190525 0.29823369 0.87811601
 		 0.37412378 0.0025954393 0.97994822 0.19923492 -0.23799887 0.96934301 0.061080448
-		 -1.5323949e-005 0 1 -1.3209816e-006 0 1 -1.3209816e-006 0 1 -1.5323949e-005 0 1 -0.23799881
+		 -1.5323949e-05 0 1 -1.3209816e-06 0 1 -1.3209816e-06 0 1 -1.5323949e-05 0 1 -0.23799881
 		 -0.96934295 0.061080497 0.0025954256 -0.97994822 0.19923508 0.29823363 -0.87811601
 		 0.37412408 0.016818974 -0.91985172 0.39190531 -0.23160106 -0.97098589 -0.059559435
 		 0.031309515 -0.98219359 -0.18524441 0.0025954256 -0.97994822 0.19923508 -0.23799881
 		 -0.96934295 0.061080497 0.017201753 -0.94083405 -0.33843064 0.30352473 -0.89658189
 		 -0.32251158 0.031309515 -0.98219359 -0.18524441 -0.23160106 -0.97098589 -0.059559435
-		 -1.5323949e-005 0 -1 -3.9350448e-006 0 -1 -3.9350448e-006 0 -1 -1.5323949e-005 0
-		 -1 -0.23160106 0.97098589 -0.059559435 0.031309515 0.98219359 -0.18524429 0.30352467
-		 0.89658183 -0.32251126 0.017201753 0.94083405 -0.33843064 -0.23799887 0.96934301
-		 0.061080448 0.0025954393 0.97994822 0.19923492 0.031309515 0.98219359 -0.18524429
-		 -0.23160106 0.97098589 -0.059559435 0.99955034 -0.029982438 0 0.99955034 -0.029982438
-		 0 0.99955034 -0.029982438 0 0.99955034 -0.029982438 0 2.2466716e-006 0 -1 2.2466718e-006
-		 0 -1.000000119209 2.2466713e-006 0 -0.99999994 2.2466716e-006 0 -1 0 0 1.000000119209
-		 0 0 1 0 0 1 0 0 0.99999994 2.2466706e-006 0 1 2.2466706e-006 0 1 2.2466704e-006 0
-		 0.99999988 2.2466704e-006 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988
-		 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504
-		 0.029982368 0 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0 1 -6.578785e-007 0 -0.99999994
-		 -6.578785e-007 0 -0.99999994 -6.578785e-007 0 -1 -6.578785e-007 0 -1 0.0025995434
-		 -0.97994828 0.19923511 0.33511713 -0.86678511 0.36929658 0.33511713 -0.86678511 0.36929655
-		 0.2982409 -0.87811387 0.37412319 -2.6280131e-006 0 1 1.7586311e-006 0 0.99999988
-		 1.7586311e-006 0 0.99999988 -2.6280131e-006 0 1 0.29824099 0.87811404 0.37412295
-		 0.33511719 0.86678529 0.36929631 0.33511722 0.86678523 0.36929631 0.0025995297 0.97994828
-		 0.19923493 -3.274554e-006 0 -1 -1.7586311e-006 0 -0.99999988 -1.7586311e-006 0 -0.99999988
-		 -3.274554e-006 0 -1 1.000000119209 0 0 1.000000119209 0 0 1.000000119209 0 0 1.000000119209
-		 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 0.031310424 0.98219353
-		 -0.18524434 0.34187606 0.88427544 -0.31808433 0.34187606 0.88427544 -0.31808433 0.30352616
-		 0.89658147 -0.32251114 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994
-		 0 0 0.30352613 -0.89658141 -0.3225114 0.34187603 -0.88427538 -0.3180846 0.34187603
-		 -0.88427538 -0.3180846 0.031310432 -0.98219359 -0.18524453 0.99999994 0 0 0.99999994
-		 0 0 0.99999994 0 0 0.99999994 0 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0
-		 0.9960897 0.088347882 0 0.9960897 0.088347882 0 -0.99999994 0 0 -0.99999994 0 0;
+		 -1.5323949e-05 0 -1 -3.9350448e-06 0 -1 -3.9350448e-06 0 -1 -1.5323949e-05 0 -1 -0.23160106
+		 0.97098589 -0.059559435 0.031309515 0.98219359 -0.18524429 0.30352467 0.89658183
+		 -0.32251126 0.017201753 0.94083405 -0.33843064 -0.23799887 0.96934301 0.061080448
+		 0.0025954393 0.97994822 0.19923492 0.031309515 0.98219359 -0.18524429 -0.23160106
+		 0.97098589 -0.059559435 0.99955034 -0.029982438 0 0.99955034 -0.029982438 0 0.99955034
+		 -0.029982438 0 0.99955034 -0.029982438 0 2.2466716e-06 0 -1 2.2466718e-06 0 -1.000000119209
+		 2.2466713e-06 0 -0.99999994 2.2466716e-06 0 -1 0 0 1.000000119209 0 0 1 0 0 1 0 0
+		 0.99999994 2.2466706e-06 0 1 2.2466706e-06 0 1 2.2466704e-06 0 0.99999988 2.2466704e-06
+		 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988 0.9995504 0.029982368
+		 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0 0 0.99999994
+		 0 0 0.99999994 0 0 1 0 0 1 -6.578785e-07 0 -0.99999994 -6.578785e-07 0 -0.99999994
+		 -6.578785e-07 0 -1 -6.578785e-07 0 -1 0.0025995434 -0.97994828 0.19923511 0.33511713
+		 -0.86678511 0.36929658 0.33511713 -0.86678511 0.36929655 0.2982409 -0.87811387 0.37412319
+		 -2.6280131e-06 0 1 1.7586311e-06 0 0.99999988 1.7586311e-06 0 0.99999988 -2.6280131e-06
+		 0 1 0.29824099 0.87811404 0.37412295 0.33511719 0.86678529 0.36929631 0.33511722
+		 0.86678523 0.36929631 0.0025995297 0.97994828 0.19923493 -3.274554e-06 0 -1 -1.7586311e-06
+		 0 -0.99999988 -1.7586311e-06 0 -0.99999988 -3.274554e-06 0 -1 1.000000119209 0 0
+		 1.000000119209 0 0 1.000000119209 0 0 1.000000119209 0 0 -0.99999994 0 0 -0.99999994
+		 0 0 -0.99999994 0 0 -0.99999994 0 0 0.031310424 0.98219353 -0.18524434 0.34187606
+		 0.88427544 -0.31808433 0.34187606 0.88427544 -0.31808433 0.30352616 0.89658147 -0.32251114
+		 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 0.30352613 -0.89658141
+		 -0.3225114 0.34187603 -0.88427538 -0.3180846 0.34187603 -0.88427538 -0.3180846 0.031310432
+		 -0.98219359 -0.18524453 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0
+		 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0 0.9960897
+		 0.088347882 0 -0.99999994 0 0 -0.99999994 0 0;
 	setAttr ".n[166:239]" -type "float3"  -0.99999994 0 0 -0.99999994 0 0 0.9960897
 		 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882
 		 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.016818972 0.9198516
 		 0.39190525 0.29824099 0.87811404 0.37412295 0.0025995297 0.97994828 0.19923493 -0.23799887
-		 0.96934301 0.061080448 -1.5323949e-005 0 1 -2.6280131e-006 0 1 -2.6280131e-006 0
-		 1 -1.5323949e-005 0 1 -0.23799881 -0.96934295 0.061080497 0.0025995434 -0.97994828
-		 0.19923511 0.2982409 -0.87811387 0.37412319 0.016818974 -0.91985172 0.39190531 -0.23160158
-		 -0.97098583 -0.059559438 0.031310432 -0.98219359 -0.18524453 0.0025995434 -0.97994828
-		 0.19923511 -0.23799881 -0.96934295 0.061080497 0.017198654 -0.94083416 -0.33843073
-		 0.30352613 -0.89658141 -0.3225114 0.031310432 -0.98219359 -0.18524453 -0.23160158
-		 -0.97098583 -0.059559438 -7.6619745e-006 0 -1 -3.274554e-006 0 -1 -3.274554e-006
-		 0 -1 -7.6619745e-006 0 -1 -0.23160158 0.97098583 -0.059559438 0.031310424 0.98219353
-		 -0.18524434 0.30352616 0.89658147 -0.32251114 0.017198654 0.94083416 -0.33843073
-		 -0.23799887 0.96934301 0.061080448 0.0025995297 0.97994828 0.19923493 0.031310424
-		 0.98219353 -0.18524434 -0.23160158 0.97098583 -0.059559438 0.9995504 -0.029982368
-		 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 -2.2466716e-006
-		 0 -1 -2.2466718e-006 0 -1.000000119209 -2.2466713e-006 0 -0.99999994 -2.2466716e-006
-		 0 -1 -1.1233359e-006 0 1.000000119209 -1.1233358e-006 0 1 -1.1233359e-006 0 1 -1.1233357e-006
-		 0 0.99999994 0 0 1 0 0 1 0 0 0.99999988 0 0 0.99999994 0 0 -1.000000119209 0 0 -1
-		 0 0 -1 0 0 -0.99999988 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034
-		 0.029982438 0 0.99955034 0.029982438 0 -6.578785e-007 0 0.99999994 -6.578785e-007
-		 0 0.99999994 -6.578785e-007 0 1 -6.578785e-007 0 1 0 0 -0.99999994 0 0 -0.99999994
-		 0 0 -1 0 0 -1;
+		 0.96934301 0.061080448 -1.5323949e-05 0 1 -2.6280131e-06 0 1 -2.6280131e-06 0 1 -1.5323949e-05
+		 0 1 -0.23799881 -0.96934295 0.061080497 0.0025995434 -0.97994828 0.19923511 0.2982409
+		 -0.87811387 0.37412319 0.016818974 -0.91985172 0.39190531 -0.23160158 -0.97098583
+		 -0.059559438 0.031310432 -0.98219359 -0.18524453 0.0025995434 -0.97994828 0.19923511
+		 -0.23799881 -0.96934295 0.061080497 0.017198654 -0.94083416 -0.33843073 0.30352613
+		 -0.89658141 -0.3225114 0.031310432 -0.98219359 -0.18524453 -0.23160158 -0.97098583
+		 -0.059559438 -7.6619745e-06 0 -1 -3.274554e-06 0 -1 -3.274554e-06 0 -1 -7.6619745e-06
+		 0 -1 -0.23160158 0.97098583 -0.059559438 0.031310424 0.98219353 -0.18524434 0.30352616
+		 0.89658147 -0.32251114 0.017198654 0.94083416 -0.33843073 -0.23799887 0.96934301
+		 0.061080448 0.0025995297 0.97994828 0.19923493 0.031310424 0.98219353 -0.18524434
+		 -0.23160158 0.97098583 -0.059559438 0.9995504 -0.029982368 0 0.9995504 -0.029982368
+		 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 -2.2466716e-06 0 -1 -2.2466718e-06
+		 0 -1.000000119209 -2.2466713e-06 0 -0.99999994 -2.2466716e-06 0 -1 -1.1233359e-06
+		 0 1.000000119209 -1.1233358e-06 0 1 -1.1233359e-06 0 1 -1.1233357e-06 0 0.99999994
+		 0 0 1 0 0 1 0 0 0.99999988 0 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988
+		 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034
+		 0.029982438 0 -6.578785e-07 0 0.99999994 -6.578785e-07 0 0.99999994 -6.578785e-07
+		 0 1 -6.578785e-07 0 1 0 0 -0.99999994 0 0 -0.99999994 0 0 -1 0 0 -1;
 	setAttr -s 60 -ch 240 ".fc[0:59]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -40169,15 +38864,14 @@ createNode mesh -n "screenExtend_3Shape" -p "|polySurface439|screenExtend_holder
 		 -0.025238423 0 -0.99968135 -0.025238423 0 -0.99968135 -0.025238423 0 -0.99968135
 		 -0.025238423 0 0.025237814 -0.99968147 0 0.025237814 -0.99968147 0 0.025237814 -0.99968147
 		 0 0.025237814 -0.99968147 0 0.99968147 0.025238309 0 0.99968147 0.025238309 0 0.99968147
-		 0.025238309 0 0.99968147 0.025238309 -1 7.6626594e-007 0 -0.99999994 7.6626588e-007
-		 0 -1 7.6626594e-007 0 -0.99999994 7.6626594e-007 0 0.99999994 5.0503888e-007 0 1
-		 5.0503894e-007 0 0.99999994 5.0503888e-007 0 1 5.0503894e-007 0 0 0.99968153 0.025238305
-		 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 -0.025238326
-		 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141
-		 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184
-		 0 -0.99968153 -0.025238184 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141 0
-		 0.025238324 -0.99968141 0 0.025238324 -0.99968141 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0
-		 0 1 0 0 1 0 0 1 0 0;
+		 0.025238309 0 0.99968147 0.025238309 -1 7.6626594e-07 0 -0.99999994 7.6626588e-07
+		 0 -1 7.6626594e-07 0 -0.99999994 7.6626594e-07 0 0.99999994 5.0503888e-07 0 1 5.0503894e-07
+		 0 0.99999994 5.0503888e-07 0 1 5.0503894e-07 0 0 0.99968153 0.025238305 0 0.99968153
+		 0.025238305 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 -0.025238326 0.99968141
+		 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.99968153
+		 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153
+		 -0.025238184 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141
+		 0 0.025238324 -0.99968141 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0;
 	setAttr -s 12 -ch 48 ".fc[0:11]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -40271,12 +38965,12 @@ createNode mesh -n "screenExtend_4Shape" -p "|polySurface439|screenExtend_holder
 		 -0.025238356 0 -0.99968147 -0.025238356 0 -0.99968147 -0.025238356 0 -0.99968147
 		 -0.025238356 0 0.025236819 -0.99968147 0 0.025236819 -0.99968147 0 0.025236819 -0.99968147
 		 0 0.025236819 -0.99968147 0 0.99968141 0.025238287 0 0.99968141 0.025238287 0 0.99968141
-		 0.025238287 0 0.99968141 0.025238287 -1 1.4592304e-007 0 -1 1.4592302e-007 0 -0.99999988
-		 1.4592301e-007 0 -0.99999994 1.4592301e-007 0 1 1.4592302e-007 0 1 1.4592304e-007
-		 0 0.99999994 1.4592301e-007 0 0.99999988 1.4592301e-007 0 0 0 0.99999988 0 0 0.99999988
-		 0 0 0.99999988 0 0 0.99999988 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99999988 0 0 -0.99999988
-		 0 0 -0.99999988 0 0 -0.99999988 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0;
+		 0.025238287 0 0.99968141 0.025238287 -1 1.4592304e-07 0 -1 1.4592302e-07 0 -0.99999988
+		 1.4592301e-07 0 -0.99999994 1.4592301e-07 0 1 1.4592302e-07 0 1 1.4592304e-07 0 0.99999994
+		 1.4592301e-07 0 0.99999988 1.4592301e-07 0 0 0 0.99999988 0 0 0.99999988 0 0 0.99999988
+		 0 0 0.99999988 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99999988 0 0 -0.99999988 0 0 -0.99999988
+		 0 0 -0.99999988 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0 0;
 	setAttr -s 12 -ch 48 ".fc[0:11]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -40497,10 +39191,10 @@ createNode mesh -n "screenExtend_holder1Shape" -p "screenExtend_holder1";
 	setAttr -s 240 ".n";
 	setAttr ".n[0:165]" -type "float3"  0.0025954256 -0.97994822 0.19923508 0.33510914
 		 -0.86678773 0.36929765 0.3351092 -0.86678785 0.36929768 0.29823363 -0.87811601 0.37412408
-		 -1.3209816e-006 0 1 3.5172623e-006 0 0.99999988 3.5172623e-006 0 0.99999988 -1.3209816e-006
+		 -1.3209816e-06 0 1 3.5172623e-06 0 0.99999988 3.5172623e-06 0 0.99999988 -1.3209816e-06
 		 0 1 0.29823369 0.87811601 0.37412378 0.33510923 0.86678797 0.36929742 0.33510917
-		 0.86678779 0.36929736 0.0025954393 0.97994822 0.19923492 -3.9350448e-006 0 -1 0 0
-		 -0.99999988 0 0 -0.99999988 -3.9350448e-006 0 -1 1.000000119209 0 0 1.000000119209
+		 0.86678779 0.36929736 0.0025954393 0.97994822 0.19923492 -3.9350448e-06 0 -1 0 0
+		 -0.99999988 0 0 -0.99999988 -3.9350448e-06 0 -1 1.000000119209 0 0 1.000000119209
 		 0 0 1.000000119209 0 0 1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988 0 0 -0.99999988
 		 0 0 0.031309515 0.98219359 -0.18524429 0.34187409 0.88427609 -0.31808457 0.34187409
 		 0.88427609 -0.31808457 0.30352467 0.89658183 -0.32251126 -0.99999994 0 0 -0.99999994
@@ -40512,60 +39206,59 @@ createNode mesh -n "screenExtend_holder1Shape" -p "screenExtend_holder1";
 		 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882 0 0.99999994 0 0 0.99999994
 		 0 0 0.99999994 0 0 0.99999994 0 0 0.016818972 0.9198516 0.39190525 0.29823369 0.87811601
 		 0.37412378 0.0025954393 0.97994822 0.19923492 -0.23799887 0.96934301 0.061080448
-		 -1.5323949e-005 0 1 -1.3209816e-006 0 1 -1.3209816e-006 0 1 -1.5323949e-005 0 1 -0.23799881
+		 -1.5323949e-05 0 1 -1.3209816e-06 0 1 -1.3209816e-06 0 1 -1.5323949e-05 0 1 -0.23799881
 		 -0.96934295 0.061080497 0.0025954256 -0.97994822 0.19923508 0.29823363 -0.87811601
 		 0.37412408 0.016818974 -0.91985172 0.39190531 -0.23160106 -0.97098589 -0.059559435
 		 0.031309515 -0.98219359 -0.18524441 0.0025954256 -0.97994822 0.19923508 -0.23799881
 		 -0.96934295 0.061080497 0.017201753 -0.94083405 -0.33843064 0.30352473 -0.89658189
 		 -0.32251158 0.031309515 -0.98219359 -0.18524441 -0.23160106 -0.97098589 -0.059559435
-		 -1.5323949e-005 0 -1 -3.9350448e-006 0 -1 -3.9350448e-006 0 -1 -1.5323949e-005 0
-		 -1 -0.23160106 0.97098589 -0.059559435 0.031309515 0.98219359 -0.18524429 0.30352467
-		 0.89658183 -0.32251126 0.017201753 0.94083405 -0.33843064 -0.23799887 0.96934301
-		 0.061080448 0.0025954393 0.97994822 0.19923492 0.031309515 0.98219359 -0.18524429
-		 -0.23160106 0.97098589 -0.059559435 0.99955034 -0.029982438 0 0.99955034 -0.029982438
-		 0 0.99955034 -0.029982438 0 0.99955034 -0.029982438 0 2.2466716e-006 0 -1 2.2466718e-006
-		 0 -1.000000119209 2.2466713e-006 0 -0.99999994 2.2466716e-006 0 -1 0 0 1.000000119209
-		 0 0 1 0 0 1 0 0 0.99999994 2.2466706e-006 0 1 2.2466706e-006 0 1 2.2466704e-006 0
-		 0.99999988 2.2466704e-006 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988
-		 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504
-		 0.029982368 0 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0 1 -6.578785e-007 0 -0.99999994
-		 -6.578785e-007 0 -0.99999994 -6.578785e-007 0 -1 -6.578785e-007 0 -1 0.0025995434
-		 -0.97994828 0.19923511 0.33511713 -0.86678511 0.36929658 0.33511713 -0.86678511 0.36929655
-		 0.2982409 -0.87811387 0.37412319 -2.6280131e-006 0 1 1.7586311e-006 0 0.99999988
-		 1.7586311e-006 0 0.99999988 -2.6280131e-006 0 1 0.29824099 0.87811404 0.37412295
-		 0.33511719 0.86678529 0.36929631 0.33511722 0.86678523 0.36929631 0.0025995297 0.97994828
-		 0.19923493 -3.274554e-006 0 -1 -1.7586311e-006 0 -0.99999988 -1.7586311e-006 0 -0.99999988
-		 -3.274554e-006 0 -1 1.000000119209 0 0 1.000000119209 0 0 1.000000119209 0 0 1.000000119209
-		 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 0.031310424 0.98219353
-		 -0.18524434 0.34187606 0.88427544 -0.31808433 0.34187606 0.88427544 -0.31808433 0.30352616
-		 0.89658147 -0.32251114 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994
-		 0 0 0.30352613 -0.89658141 -0.3225114 0.34187603 -0.88427538 -0.3180846 0.34187603
-		 -0.88427538 -0.3180846 0.031310432 -0.98219359 -0.18524453 0.99999994 0 0 0.99999994
-		 0 0 0.99999994 0 0 0.99999994 0 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0
-		 0.9960897 0.088347882 0 0.9960897 0.088347882 0 -0.99999994 0 0 -0.99999994 0 0;
+		 -1.5323949e-05 0 -1 -3.9350448e-06 0 -1 -3.9350448e-06 0 -1 -1.5323949e-05 0 -1 -0.23160106
+		 0.97098589 -0.059559435 0.031309515 0.98219359 -0.18524429 0.30352467 0.89658183
+		 -0.32251126 0.017201753 0.94083405 -0.33843064 -0.23799887 0.96934301 0.061080448
+		 0.0025954393 0.97994822 0.19923492 0.031309515 0.98219359 -0.18524429 -0.23160106
+		 0.97098589 -0.059559435 0.99955034 -0.029982438 0 0.99955034 -0.029982438 0 0.99955034
+		 -0.029982438 0 0.99955034 -0.029982438 0 2.2466716e-06 0 -1 2.2466718e-06 0 -1.000000119209
+		 2.2466713e-06 0 -0.99999994 2.2466716e-06 0 -1 0 0 1.000000119209 0 0 1 0 0 1 0 0
+		 0.99999994 2.2466706e-06 0 1 2.2466706e-06 0 1 2.2466704e-06 0 0.99999988 2.2466704e-06
+		 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988 0.9995504 0.029982368
+		 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0.9995504 0.029982368 0 0 0 0.99999994
+		 0 0 0.99999994 0 0 1 0 0 1 -6.578785e-07 0 -0.99999994 -6.578785e-07 0 -0.99999994
+		 -6.578785e-07 0 -1 -6.578785e-07 0 -1 0.0025995434 -0.97994828 0.19923511 0.33511713
+		 -0.86678511 0.36929658 0.33511713 -0.86678511 0.36929655 0.2982409 -0.87811387 0.37412319
+		 -2.6280131e-06 0 1 1.7586311e-06 0 0.99999988 1.7586311e-06 0 0.99999988 -2.6280131e-06
+		 0 1 0.29824099 0.87811404 0.37412295 0.33511719 0.86678529 0.36929631 0.33511722
+		 0.86678523 0.36929631 0.0025995297 0.97994828 0.19923493 -3.274554e-06 0 -1 -1.7586311e-06
+		 0 -0.99999988 -1.7586311e-06 0 -0.99999988 -3.274554e-06 0 -1 1.000000119209 0 0
+		 1.000000119209 0 0 1.000000119209 0 0 1.000000119209 0 0 -0.99999994 0 0 -0.99999994
+		 0 0 -0.99999994 0 0 -0.99999994 0 0 0.031310424 0.98219353 -0.18524434 0.34187606
+		 0.88427544 -0.31808433 0.34187606 0.88427544 -0.31808433 0.30352616 0.89658147 -0.32251114
+		 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 -0.99999994 0 0 0.30352613 -0.89658141
+		 -0.3225114 0.34187603 -0.88427538 -0.3180846 0.34187603 -0.88427538 -0.3180846 0.031310432
+		 -0.98219359 -0.18524453 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0
+		 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0 0.9960897 0.088347882 0 0.9960897
+		 0.088347882 0 -0.99999994 0 0 -0.99999994 0 0;
 	setAttr ".n[166:239]" -type "float3"  -0.99999994 0 0 -0.99999994 0 0 0.9960897
 		 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882 0 0.9960897 -0.088347882
 		 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.016818972 0.9198516
 		 0.39190525 0.29824099 0.87811404 0.37412295 0.0025995297 0.97994828 0.19923493 -0.23799887
-		 0.96934301 0.061080448 -1.5323949e-005 0 1 -2.6280131e-006 0 1 -2.6280131e-006 0
-		 1 -1.5323949e-005 0 1 -0.23799881 -0.96934295 0.061080497 0.0025995434 -0.97994828
-		 0.19923511 0.2982409 -0.87811387 0.37412319 0.016818974 -0.91985172 0.39190531 -0.23160158
-		 -0.97098583 -0.059559438 0.031310432 -0.98219359 -0.18524453 0.0025995434 -0.97994828
-		 0.19923511 -0.23799881 -0.96934295 0.061080497 0.017198654 -0.94083416 -0.33843073
-		 0.30352613 -0.89658141 -0.3225114 0.031310432 -0.98219359 -0.18524453 -0.23160158
-		 -0.97098583 -0.059559438 -7.6619745e-006 0 -1 -3.274554e-006 0 -1 -3.274554e-006
-		 0 -1 -7.6619745e-006 0 -1 -0.23160158 0.97098583 -0.059559438 0.031310424 0.98219353
-		 -0.18524434 0.30352616 0.89658147 -0.32251114 0.017198654 0.94083416 -0.33843073
-		 -0.23799887 0.96934301 0.061080448 0.0025995297 0.97994828 0.19923493 0.031310424
-		 0.98219353 -0.18524434 -0.23160158 0.97098583 -0.059559438 0.9995504 -0.029982368
-		 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 -2.2466716e-006
-		 0 -1 -2.2466718e-006 0 -1.000000119209 -2.2466713e-006 0 -0.99999994 -2.2466716e-006
-		 0 -1 -1.1233359e-006 0 1.000000119209 -1.1233358e-006 0 1 -1.1233359e-006 0 1 -1.1233357e-006
-		 0 0.99999994 0 0 1 0 0 1 0 0 0.99999988 0 0 0.99999994 0 0 -1.000000119209 0 0 -1
-		 0 0 -1 0 0 -0.99999988 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034
-		 0.029982438 0 0.99955034 0.029982438 0 -6.578785e-007 0 0.99999994 -6.578785e-007
-		 0 0.99999994 -6.578785e-007 0 1 -6.578785e-007 0 1 0 0 -0.99999994 0 0 -0.99999994
-		 0 0 -1 0 0 -1;
+		 0.96934301 0.061080448 -1.5323949e-05 0 1 -2.6280131e-06 0 1 -2.6280131e-06 0 1 -1.5323949e-05
+		 0 1 -0.23799881 -0.96934295 0.061080497 0.0025995434 -0.97994828 0.19923511 0.2982409
+		 -0.87811387 0.37412319 0.016818974 -0.91985172 0.39190531 -0.23160158 -0.97098583
+		 -0.059559438 0.031310432 -0.98219359 -0.18524453 0.0025995434 -0.97994828 0.19923511
+		 -0.23799881 -0.96934295 0.061080497 0.017198654 -0.94083416 -0.33843073 0.30352613
+		 -0.89658141 -0.3225114 0.031310432 -0.98219359 -0.18524453 -0.23160158 -0.97098583
+		 -0.059559438 -7.6619745e-06 0 -1 -3.274554e-06 0 -1 -3.274554e-06 0 -1 -7.6619745e-06
+		 0 -1 -0.23160158 0.97098583 -0.059559438 0.031310424 0.98219353 -0.18524434 0.30352616
+		 0.89658147 -0.32251114 0.017198654 0.94083416 -0.33843073 -0.23799887 0.96934301
+		 0.061080448 0.0025995297 0.97994828 0.19923493 0.031310424 0.98219353 -0.18524434
+		 -0.23160158 0.97098583 -0.059559438 0.9995504 -0.029982368 0 0.9995504 -0.029982368
+		 0 0.9995504 -0.029982368 0 0.9995504 -0.029982368 0 -2.2466716e-06 0 -1 -2.2466718e-06
+		 0 -1.000000119209 -2.2466713e-06 0 -0.99999994 -2.2466716e-06 0 -1 -1.1233359e-06
+		 0 1.000000119209 -1.1233358e-06 0 1 -1.1233359e-06 0 1 -1.1233357e-06 0 0.99999994
+		 0 0 1 0 0 1 0 0 0.99999988 0 0 0.99999994 0 0 -1.000000119209 0 0 -1 0 0 -1 0 0 -0.99999988
+		 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034 0.029982438 0 0.99955034
+		 0.029982438 0 -6.578785e-07 0 0.99999994 -6.578785e-07 0 0.99999994 -6.578785e-07
+		 0 1 -6.578785e-07 0 1 0 0 -0.99999994 0 0 -0.99999994 0 0 -1 0 0 -1;
 	setAttr -s 60 -ch 240 ".fc[0:59]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -41129,15 +39822,14 @@ createNode mesh -n "screenExtend_3Shape" -p "|polySurface439|screenExtend_holder
 		 -0.025238423 0 -0.99968135 -0.025238423 0 -0.99968135 -0.025238423 0 -0.99968135
 		 -0.025238423 0 0.025237814 -0.99968147 0 0.025237814 -0.99968147 0 0.025237814 -0.99968147
 		 0 0.025237814 -0.99968147 0 0.99968147 0.025238309 0 0.99968147 0.025238309 0 0.99968147
-		 0.025238309 0 0.99968147 0.025238309 -1 7.6626594e-007 0 -0.99999994 7.6626588e-007
-		 0 -1 7.6626594e-007 0 -0.99999994 7.6626594e-007 0 0.99999994 5.0503888e-007 0 1
-		 5.0503894e-007 0 0.99999994 5.0503888e-007 0 1 5.0503894e-007 0 0 0.99968153 0.025238305
-		 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 -0.025238326
-		 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141
-		 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184
-		 0 -0.99968153 -0.025238184 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141 0
-		 0.025238324 -0.99968141 0 0.025238324 -0.99968141 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0
-		 0 1 0 0 1 0 0 1 0 0;
+		 0.025238309 0 0.99968147 0.025238309 -1 7.6626594e-07 0 -0.99999994 7.6626588e-07
+		 0 -1 7.6626594e-07 0 -0.99999994 7.6626594e-07 0 0.99999994 5.0503888e-07 0 1 5.0503894e-07
+		 0 0.99999994 5.0503888e-07 0 1 5.0503894e-07 0 0 0.99968153 0.025238305 0 0.99968153
+		 0.025238305 0 0.99968153 0.025238305 0 0.99968153 0.025238305 0 -0.025238326 0.99968141
+		 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.025238326 0.99968141 0 -0.99968153
+		 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153 -0.025238184 0 -0.99968153
+		 -0.025238184 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141 0 0.025238324 -0.99968141
+		 0 0.025238324 -0.99968141 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0;
 	setAttr -s 12 -ch 48 ".fc[0:11]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -41231,12 +39923,12 @@ createNode mesh -n "screenExtend_4Shape" -p "|polySurface439|screenExtend_holder
 		 -0.025238356 0 -0.99968147 -0.025238356 0 -0.99968147 -0.025238356 0 -0.99968147
 		 -0.025238356 0 0.025236819 -0.99968147 0 0.025236819 -0.99968147 0 0.025236819 -0.99968147
 		 0 0.025236819 -0.99968147 0 0.99968141 0.025238287 0 0.99968141 0.025238287 0 0.99968141
-		 0.025238287 0 0.99968141 0.025238287 -1 1.4592304e-007 0 -1 1.4592302e-007 0 -0.99999988
-		 1.4592301e-007 0 -0.99999994 1.4592301e-007 0 1 1.4592302e-007 0 1 1.4592304e-007
-		 0 0.99999994 1.4592301e-007 0 0.99999988 1.4592301e-007 0 0 0 0.99999988 0 0 0.99999988
-		 0 0 0.99999988 0 0 0.99999988 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99999988 0 0 -0.99999988
-		 0 0 -0.99999988 0 0 -0.99999988 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0;
+		 0.025238287 0 0.99968141 0.025238287 -1 1.4592304e-07 0 -1 1.4592302e-07 0 -0.99999988
+		 1.4592301e-07 0 -0.99999994 1.4592301e-07 0 1 1.4592302e-07 0 1 1.4592304e-07 0 0.99999994
+		 1.4592301e-07 0 0.99999988 1.4592301e-07 0 0 0 0.99999988 0 0 0.99999988 0 0 0.99999988
+		 0 0 0.99999988 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99999988 0 0 -0.99999988 0 0 -0.99999988
+		 0 0 -0.99999988 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0 0;
 	setAttr -s 12 -ch 48 ".fc[0:11]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -41283,9 +39975,9 @@ createNode transform -n "door" -p "polySurface439";
 	setAttr ".sp" -type "double3" 0 18.891560953070119 50.733988170445272 ;
 	setAttr ".spt" -type "double3" 0 376.08988975395386 1010.0033589177993 ;
 createNode transform -n "doorHandle" -p "door";
-	setAttr ".t" -type "double3" 6.340529373680963e-017 -4.552886218169002 3.2463510393246531e-014 ;
-	setAttr ".rp" -type "double3" 3.814697265625e-006 2.8010000288486481 50.762163162231445 ;
-	setAttr ".sp" -type "double3" 3.814697265625e-006 2.8010000288486481 50.762163162231445 ;
+	setAttr ".t" -type "double3" 6.340529373680963e-17 -4.552886218169002 3.2463510393246531e-14 ;
+	setAttr ".rp" -type "double3" 3.814697265625e-06 2.8010000288486481 50.762163162231445 ;
+	setAttr ".sp" -type "double3" 3.814697265625e-06 2.8010000288486481 50.762163162231445 ;
 createNode mesh -n "doorHandleShape" -p "doorHandle";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41425,10 +40117,10 @@ createNode mesh -n "doorHandleShape" -p "doorHandle";
 		 0.00062395656 0.99792701 -0.064352997 0.00062395656 0.99792701 -0.064352997 0.00062395656
 		 0.99792701 -0.064352997 0.00062395656 0.75115114 0.66009921 -0.0064001139 0.75115091
 		 0.66009945 -0.0064001069 0.75115091 0.66009945 -0.0064001069 0.75115114 0.66009921
-		 -0.0064001139 -8.6732095e-019 0.0096953902 0.99995297 -8.6732095e-019 0.0096953902
-		 0.99995297 -8.6732095e-019 0.0096953902 0.99995297 -8.6732095e-019 0.0096953902 0.99995297
-		 -8.6732095e-019 0.0096953902 0.99995297 -8.6732095e-019 0.0096953902 0.99995297 -8.6732095e-019
-		 0.0096953902 0.99995297 -8.6732095e-019 0.0096953902 0.99995297 0.13557516 0.00086268829
+		 -0.0064001139 -8.6732095e-19 0.0096953902 0.99995297 -8.6732095e-19 0.0096953902
+		 0.99995297 -8.6732095e-19 0.0096953902 0.99995297 -8.6732095e-19 0.0096953902 0.99995297
+		 -8.6732095e-19 0.0096953902 0.99995297 -8.6732095e-19 0.0096953902 0.99995297 -8.6732095e-19
+		 0.0096953902 0.99995297 -8.6732095e-19 0.0096953902 0.99995297 0.13557516 0.00086268829
 		 0.9907667 0.13557516 0.00086268829 0.9907667 0.13557516 0.00086268829 0.9907667 0.13557516
 		 0.00086268829 0.9907667 -0.016674308 -0.99981409 0.0096940417 -0.016674308 -0.99981409
 		 0.0096940417 -0.016674308 -0.99981409 0.0096940417 -0.016674308 -0.99981409 0.0096940417
@@ -41491,10 +40183,10 @@ createNode mesh -n "doorHandleShape" -p "doorHandle";
 		 0.99792713 -0.064350739 0.00062393502 0.99792713 -0.064350739 0.00062393502 0.99792713
 		 -0.064350739 0.00062393502 0.75115091 0.66009945 -0.0064000944 0.75115091 0.66009945
 		 -0.0064000944 0.75115091 0.66009945 -0.0064000944 0.75115091 0.66009945 -0.0064000944
-		 8.6732095e-019 -0.0096953902 -0.99995297 8.6732095e-019 -0.0096953902 -0.99995297
-		 8.6732095e-019 -0.0096953902 -0.99995297 8.6732095e-019 -0.0096953902 -0.99995297
-		 8.6732095e-019 -0.0096953902 -0.99995297 8.6732095e-019 -0.0096953902 -0.99995297
-		 8.6732095e-019 -0.0096953902 -0.99995297 8.6732095e-019 -0.0096953902 -0.99995297;
+		 8.6732095e-19 -0.0096953902 -0.99995297 8.6732095e-19 -0.0096953902 -0.99995297 8.6732095e-19
+		 -0.0096953902 -0.99995297 8.6732095e-19 -0.0096953902 -0.99995297 8.6732095e-19 -0.0096953902
+		 -0.99995297 8.6732095e-19 -0.0096953902 -0.99995297 8.6732095e-19 -0.0096953902 -0.99995297
+		 8.6732095e-19 -0.0096953902 -0.99995297;
 	setAttr -s 50 -ch 208 ".fc[0:49]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -41650,7 +40342,7 @@ createNode mesh -n "doorHandleShape" -p "doorHandle";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "polySurface1282" -p "door";
-	setAttr ".t" -type "double3" 0 -5.1618200457332213 9.7390531179739604e-015 ;
+	setAttr ".t" -type "double3" 0 -5.1618200457332213 9.7390531179739604e-15 ;
 	setAttr ".s" -type "double3" 1.5092048031874441 1.5092048031874441 1 ;
 createNode mesh -n "polySurface1282Shape" -p "polySurface1282";
 	setAttr -k off ".v";
@@ -41798,119 +40490,117 @@ createNode mesh -n "polySurface1282Shape" -p "polySurface1282";
 		 63 64 0 54 65 0 64 55 0 3 56 0 55 7 0 48 54 0 57 49 0 58 50 0 2 59 0 61 51 0 4 60 0
 		 62 52 0 9 63 0 65 53 0 10 64 0;
 	setAttr -s 264 ".n";
-	setAttr ".n[0:165]" -type "float3"  0.19535214 0.98065108 -0.01268493 -1.2459837e-007
+	setAttr ".n[0:165]" -type "float3"  0.19535214 0.98065108 -0.01268493 -1.2459837e-07
 		 0.99991626 -0.012936944 0.19541126 0.98063004 -0.013383307 0.19541126 0.98063004
 		 -0.013383305 -0.19555807 0.98060083 -0.013382858 -0.19555807 0.98060083 -0.013382858
-		 -1.2459837e-007 0.99991626 -0.012936944 -0.1954989 0.98062193 -0.012684378 1 -3.1526486e-007
-		 -3.3411641e-006 1 -3.1193397e-007 -3.3058636e-006 1 0 0 1.000000119209 0 0 -0.99999994
-		 -3.0499973e-007 -3.8573676e-006 -0.99999994 -3.0825566e-007 -3.8985454e-006 -1.000000119209
+		 -1.2459837e-07 0.99991626 -0.012936944 -0.1954989 0.98062193 -0.012684378 1 -3.1526486e-07
+		 -3.3411641e-06 1 -3.1193397e-07 -3.3058636e-06 1 0 0 1.000000119209 0 0 -0.99999994
+		 -3.0499973e-07 -3.8573676e-06 -0.99999994 -3.0825566e-07 -3.8985454e-06 -1.000000119209
 		 0 0 -1 0 0 -0.19361407 -0.98098636 0.013389033 -0.1936141 -0.98098636 0.013389034
-		 -0.19367629 -0.98098332 0.012692415 6.6393085e-008 -0.99991632 0.012934261 6.6393085e-008
+		 -0.19367629 -0.98098332 0.012692415 6.6393085e-08 -0.99991632 0.012934261 6.6393085e-08
 		 -0.99991632 0.012934261 0.19353066 -0.98101217 0.012692442 0.19346859 -0.98101509
 		 0.013389322 0.1934686 -0.98101515 0.013389321 -0.20095347 -0.97949588 0.014330174
 		 -0.2009535 -0.97949594 0.014330175 -0.2009535 -0.979496 0.014330175 -0.20095348 -0.97949594
 		 0.014330174 0.20085548 -0.97951609 0.014330312 0.20085548 -0.97951603 0.014330311
-		 0.20085548 -0.97951609 0.01433031 0.20085546 -0.97951603 0.01433031 -1 -2.4539972e-008
-		 0 -1 -2.453997e-008 0 -0.99999994 -2.4539972e-008 0 -0.99999994 -2.453997e-008 0
-		 1 -1.3213831e-008 0 0.99999994 -1.321383e-008 0 1 -1.3213831e-008 0 1 -1.3213831e-008
-		 0 0.19917026 0.97986007 -0.014335654 0.19917025 0.97985995 -0.014335652 0.19917026
-		 0.97986001 -0.014335654 0.19917025 0.97986001 -0.014335653 -0.19926721 0.97984028
-		 -0.014335212 -0.19926721 0.97984028 -0.014335213 -0.19926719 0.97984028 -0.014335212
-		 -0.19926724 0.97984034 -0.014335214 0.00017256543 0.0039597075 0.99999207 -1.9726825e-008
-		 0.0019066844 0.99999821 -9.830112e-005 4.2452903e-005 1 -9.8301105e-005 4.2452899e-005
-		 1 -2.5114286e-007 -0.0051712957 -0.99998659 -0.00048236508 -0.0060509583 -0.99998158
-		 9.5764117e-005 -4.1041778e-005 -0.99999988 9.5764139e-005 -4.1041785e-005 -1.000000119209
-		 0.00048124362 -0.0060531469 -0.99998152 -2.5114286e-007 -0.0051712957 -0.99998659
-		 -9.5251729e-005 -4.0091483e-005 -1 -9.5251729e-005 -4.009148e-005 -1 -1.9726825e-008
-		 0.0019066844 0.99999821 -0.00017047921 0.0039602332 0.99999213 9.4165087e-005 4.1470357e-005
-		 1 9.4165072e-005 4.147035e-005 0.99999994 -0.00012198645 0.0038644311 0.99999261
-		 0.00017256543 0.0039597075 0.99999207 3.7156999e-005 0.0064645251 0.99997908 3.7156995e-005
-		 0.0064645247 0.99997908 -0.00048236508 -0.0060509583 -0.99998158 0.00048794391 -0.0059286724
-		 -0.99998236 4.2158917e-005 -0.0064645275 -0.99997908 4.2158925e-005 -0.0064645279
-		 -0.9999792 -0.00017047921 0.0039602332 0.99999213 0.00012471399 0.0038648879 0.99999249
-		 -5.1448147e-005 0.0064645247 0.99997914 -5.144814e-005 0.0064645233 0.99997902 -0.00048793416
-		 -0.0059306794 -0.99998224 0.00048124362 -0.0060531469 -0.99998152 -5.2162733e-005
-		 -0.0064645279 -0.9999792 -5.216273e-005 -0.0064645275 -0.99997908 4.172345e-007 -0.0049796384
-		 -0.9999876 -0.00048793416 -0.0059306794 -0.99998224 9.8610733e-005 -4.058973e-005
-		 -0.99999988 9.8610755e-005 -4.0589737e-005 -1 0.00012471399 0.0038648879 0.99999249
-		 1.1728865e-006 0.0018227109 0.99999839 -9.7498734e-005 3.9219954e-005 1 -9.7498734e-005
-		 3.9219954e-005 1 1.1728865e-006 0.0018227109 0.99999839 -0.00012198645 0.0038644311
-		 0.99999261 9.8724347e-005 4.0150255e-005 1 9.8724347e-005 4.0150255e-005 1 0.00048794391
-		 -0.0059286724 -0.99998236 4.172345e-007 -0.0049796384 -0.9999876 -9.6232994e-005
-		 -4.1552823e-005 -1 -9.6232972e-005 -4.1552812e-005 -0.99999994 -0.22280866 -0.97484791
-		 0.0052760933 -2.6218208e-006 -0.99998534 0.0054120845 -3.1074262e-006 -0.99998534
-		 0.005412085 -0.22280861 -0.97484779 0.0052760933 -1.2459837e-007 0.99991626 -0.012936944
-		 0.19535214 0.98065108 -0.01268493 0.19472195 0.9808442 -0.0053106961 3.676293e-007
-		 0.99998528 -0.0054135569 -2.6218208e-006 -0.99998534 0.0054120845 0.22269848 -0.97487301
-		 0.0052761161 0.22269851 -0.97487301 0.005276117 -3.1074262e-006 -0.99998534 0.005412085
-		 -0.1954989 0.98062193 -0.012684378 -1.2459837e-007 0.99991626 -0.012936944 3.676293e-007
-		 0.99998528 -0.0054135569 -0.19486806 0.98081505 -0.0053090132 -1 1.7590328e-005 3.8352508e-005
-		 -1 1.7590328e-005 3.8352508e-005 -1 1.7590328e-005 3.8352508e-005 -0.99999994 1.7590328e-005
-		 3.8352504e-005 1 -3.1193397e-007 -3.3058636e-006 1 -3.1526486e-007 -3.3411641e-006
-		 0.99999994 -3.6329882e-006 -3.8502261e-005 0.99999988 -3.6329882e-006 -3.8502258e-005
-		 0.99999994 1.7262299e-005 4.4780569e-005 1 1.72623e-005 4.4780572e-005 0.99999994
-		 1.7262299e-005 4.4780572e-005 0.99999994 1.7262299e-005 4.4780572e-005 -0.99999994
-		 -3.0825566e-007 -3.8985454e-006 -0.99999994 -3.0499973e-007 -3.8573676e-006 -0.99999994
-		 -3.5522178e-006 -4.4925313e-005 -0.99999994 -3.5522178e-006 -4.4925313e-005 0.23171094
-		 0.97277051 -0.0052566812 -8.0809838e-007 0.99998534 -0.0053995443 -3.0111266e-007
-		 0.9999854 -0.0053995447 0.23171091 0.97277045 -0.0052566812 6.6393085e-008 -0.99991632
-		 0.012934261 -0.19367629 -0.98098332 0.012692415 -0.19433105 -0.98092169 0.0052988385
-		 -1.1273086e-006 -0.99998534 0.0054003526 -8.0809838e-007 0.99998534 -0.0053995443
-		 -0.23182055 0.97274441 -0.0052483645 -0.23182054 0.97274435 -0.0052483645 -3.0111266e-007
-		 0.9999854 -0.0053995447 0.19353066 -0.98101217 0.012692442 6.6393085e-008 -0.99991632
-		 0.012934261 -1.1273086e-006 -0.99998534 0.0054003526 0.19418329 -0.98095101 0.0052961223
-		 -0.00022388285 -0.0042295163 -0.999991 -3.6010505e-007 -0.0026543885 -0.99999636
-		 -3.9572282e-007 -0.0026543888 -0.99999642 -0.00030094903 -0.0034652343 -0.99999392
-		 -1.9726825e-008 0.0019066844 0.99999821 0.00017256543 0.0039597075 0.99999207 0.00030057793
-		 0.0034650168 0.99999392 1.1471203e-006 0.0026545785 0.99999642 -3.6010505e-007 -0.0026543885
-		 -0.99999636 0.00022190224 -0.0042290571 -0.99999106 0.00029951485 -0.0034647621 -0.99999392
-		 -3.9572282e-007 -0.0026543888 -0.99999642 -0.00017047921 0.0039602332 0.99999213
-		 -1.9726825e-008 0.0019066844 0.99999821 1.1471203e-006 0.0026545785 0.99999642 -0.00029693943
-		 0.0034645475 0.99999392 0.00017001231 -0.004115256 -0.99999154 -0.00022388285 -0.0042295163
-		 -0.999991 -0.00030094903 -0.0034652343 -0.99999392 0.00026391202 -0.0033236954 -0.99999434
-		 0.00017256543 0.0039597075 0.99999207 -0.00012198645 0.0038644311 0.99999261;
+		 0.20085548 -0.97951609 0.01433031 0.20085546 -0.97951603 0.01433031 -1 -2.4539972e-08
+		 0 -1 -2.453997e-08 0 -0.99999994 -2.4539972e-08 0 -0.99999994 -2.453997e-08 0 1 -1.3213831e-08
+		 0 0.99999994 -1.321383e-08 0 1 -1.3213831e-08 0 1 -1.3213831e-08 0 0.19917026 0.97986007
+		 -0.014335654 0.19917025 0.97985995 -0.014335652 0.19917026 0.97986001 -0.014335654
+		 0.19917025 0.97986001 -0.014335653 -0.19926721 0.97984028 -0.014335212 -0.19926721
+		 0.97984028 -0.014335213 -0.19926719 0.97984028 -0.014335212 -0.19926724 0.97984034
+		 -0.014335214 0.00017256543 0.0039597075 0.99999207 -1.9726825e-08 0.0019066844 0.99999821
+		 -9.830112e-05 4.2452903e-05 1 -9.8301105e-05 4.2452899e-05 1 -2.5114286e-07 -0.0051712957
+		 -0.99998659 -0.00048236508 -0.0060509583 -0.99998158 9.5764117e-05 -4.1041778e-05
+		 -0.99999988 9.5764139e-05 -4.1041785e-05 -1.000000119209 0.00048124362 -0.0060531469
+		 -0.99998152 -2.5114286e-07 -0.0051712957 -0.99998659 -9.5251729e-05 -4.0091483e-05
+		 -1 -9.5251729e-05 -4.009148e-05 -1 -1.9726825e-08 0.0019066844 0.99999821 -0.00017047921
+		 0.0039602332 0.99999213 9.4165087e-05 4.1470357e-05 1 9.4165072e-05 4.147035e-05
+		 0.99999994 -0.00012198645 0.0038644311 0.99999261 0.00017256543 0.0039597075 0.99999207
+		 3.7156999e-05 0.0064645251 0.99997908 3.7156995e-05 0.0064645247 0.99997908 -0.00048236508
+		 -0.0060509583 -0.99998158 0.00048794391 -0.0059286724 -0.99998236 4.2158917e-05 -0.0064645275
+		 -0.99997908 4.2158925e-05 -0.0064645279 -0.9999792 -0.00017047921 0.0039602332 0.99999213
+		 0.00012471399 0.0038648879 0.99999249 -5.1448147e-05 0.0064645247 0.99997914 -5.144814e-05
+		 0.0064645233 0.99997902 -0.00048793416 -0.0059306794 -0.99998224 0.00048124362 -0.0060531469
+		 -0.99998152 -5.2162733e-05 -0.0064645279 -0.9999792 -5.216273e-05 -0.0064645275 -0.99997908
+		 4.172345e-07 -0.0049796384 -0.9999876 -0.00048793416 -0.0059306794 -0.99998224 9.8610733e-05
+		 -4.058973e-05 -0.99999988 9.8610755e-05 -4.0589737e-05 -1 0.00012471399 0.0038648879
+		 0.99999249 1.1728865e-06 0.0018227109 0.99999839 -9.7498734e-05 3.9219954e-05 1 -9.7498734e-05
+		 3.9219954e-05 1 1.1728865e-06 0.0018227109 0.99999839 -0.00012198645 0.0038644311
+		 0.99999261 9.8724347e-05 4.0150255e-05 1 9.8724347e-05 4.0150255e-05 1 0.00048794391
+		 -0.0059286724 -0.99998236 4.172345e-07 -0.0049796384 -0.9999876 -9.6232994e-05 -4.1552823e-05
+		 -1 -9.6232972e-05 -4.1552812e-05 -0.99999994 -0.22280866 -0.97484791 0.0052760933
+		 -2.6218208e-06 -0.99998534 0.0054120845 -3.1074262e-06 -0.99998534 0.005412085 -0.22280861
+		 -0.97484779 0.0052760933 -1.2459837e-07 0.99991626 -0.012936944 0.19535214 0.98065108
+		 -0.01268493 0.19472195 0.9808442 -0.0053106961 3.676293e-07 0.99998528 -0.0054135569
+		 -2.6218208e-06 -0.99998534 0.0054120845 0.22269848 -0.97487301 0.0052761161 0.22269851
+		 -0.97487301 0.005276117 -3.1074262e-06 -0.99998534 0.005412085 -0.1954989 0.98062193
+		 -0.012684378 -1.2459837e-07 0.99991626 -0.012936944 3.676293e-07 0.99998528 -0.0054135569
+		 -0.19486806 0.98081505 -0.0053090132 -1 1.7590328e-05 3.8352508e-05 -1 1.7590328e-05
+		 3.8352508e-05 -1 1.7590328e-05 3.8352508e-05 -0.99999994 1.7590328e-05 3.8352504e-05
+		 1 -3.1193397e-07 -3.3058636e-06 1 -3.1526486e-07 -3.3411641e-06 0.99999994 -3.6329882e-06
+		 -3.8502261e-05 0.99999988 -3.6329882e-06 -3.8502258e-05 0.99999994 1.7262299e-05
+		 4.4780569e-05 1 1.72623e-05 4.4780572e-05 0.99999994 1.7262299e-05 4.4780572e-05
+		 0.99999994 1.7262299e-05 4.4780572e-05 -0.99999994 -3.0825566e-07 -3.8985454e-06
+		 -0.99999994 -3.0499973e-07 -3.8573676e-06 -0.99999994 -3.5522178e-06 -4.4925313e-05
+		 -0.99999994 -3.5522178e-06 -4.4925313e-05 0.23171094 0.97277051 -0.0052566812 -8.0809838e-07
+		 0.99998534 -0.0053995443 -3.0111266e-07 0.9999854 -0.0053995447 0.23171091 0.97277045
+		 -0.0052566812 6.6393085e-08 -0.99991632 0.012934261 -0.19367629 -0.98098332 0.012692415
+		 -0.19433105 -0.98092169 0.0052988385 -1.1273086e-06 -0.99998534 0.0054003526 -8.0809838e-07
+		 0.99998534 -0.0053995443 -0.23182055 0.97274441 -0.0052483645 -0.23182054 0.97274435
+		 -0.0052483645 -3.0111266e-07 0.9999854 -0.0053995447 0.19353066 -0.98101217 0.012692442
+		 6.6393085e-08 -0.99991632 0.012934261 -1.1273086e-06 -0.99998534 0.0054003526 0.19418329
+		 -0.98095101 0.0052961223 -0.00022388285 -0.0042295163 -0.999991 -3.6010505e-07 -0.0026543885
+		 -0.99999636 -3.9572282e-07 -0.0026543888 -0.99999642 -0.00030094903 -0.0034652343
+		 -0.99999392 -1.9726825e-08 0.0019066844 0.99999821 0.00017256543 0.0039597075 0.99999207
+		 0.00030057793 0.0034650168 0.99999392 1.1471203e-06 0.0026545785 0.99999642 -3.6010505e-07
+		 -0.0026543885 -0.99999636 0.00022190224 -0.0042290571 -0.99999106 0.00029951485 -0.0034647621
+		 -0.99999392 -3.9572282e-07 -0.0026543888 -0.99999642 -0.00017047921 0.0039602332
+		 0.99999213 -1.9726825e-08 0.0019066844 0.99999821 1.1471203e-06 0.0026545785 0.99999642
+		 -0.00029693943 0.0034645475 0.99999392 0.00017001231 -0.004115256 -0.99999154 -0.00022388285
+		 -0.0042295163 -0.999991 -0.00030094903 -0.0034652343 -0.99999392 0.00026391202 -0.0033236954
+		 -0.99999434 0.00017256543 0.0039597075 0.99999207 -0.00012198645 0.0038644311 0.99999261;
 	setAttr ".n[166:263]" -type "float3"  -0.0002653696 0.003323908 0.99999446
 		 0.00030057793 0.0034650168 0.99999392 0.00022190224 -0.0042290571 -0.99999106 -0.00017266144
 		 -0.0041147685 -0.99999154 -0.00026627193 -0.0033232204 -0.99999434 0.00029951485
 		 -0.0034647621 -0.99999392 0.00012471399 0.0038648879 0.99999249 -0.00017047921 0.0039602332
 		 0.99999213 -0.00029693943 0.0034645475 0.99999392 0.00026875539 0.0033234211 0.99999452
-		 -0.00017266144 -0.0041147685 -0.99999154 -1.0876636e-006 -0.0025131945 -0.99999684
-		 -1.0609028e-006 -0.002513194 -0.99999684 -0.00026627193 -0.0033232204 -0.99999434
-		 1.1728865e-006 0.0018227109 0.99999839 0.00012471399 0.0038648879 0.99999249 0.00026875539
-		 0.0033234211 0.99999452 1.0612117e-006 0.0025129949 0.99999684 -1.0876636e-006 -0.0025131945
+		 -0.00017266144 -0.0041147685 -0.99999154 -1.0876636e-06 -0.0025131945 -0.99999684
+		 -1.0609028e-06 -0.002513194 -0.99999684 -0.00026627193 -0.0033232204 -0.99999434
+		 1.1728865e-06 0.0018227109 0.99999839 0.00012471399 0.0038648879 0.99999249 0.00026875539
+		 0.0033234211 0.99999452 1.0612117e-06 0.0025129949 0.99999684 -1.0876636e-06 -0.0025131945
 		 -0.99999684 0.00017001231 -0.004115256 -0.99999154 0.00026391202 -0.0033236954 -0.99999434
-		 -1.0609028e-006 -0.002513194 -0.99999684 -0.00012198645 0.0038644311 0.99999261 1.1728865e-006
-		 0.0018227109 0.99999839 1.0612117e-006 0.0025129949 0.99999684 -0.0002653696 0.003323908
-		 0.99999446 -1 2.361185e-008 0 -1 2.3611852e-008 0 -1 2.3611848e-008 0 -0.99999994
-		 2.3611848e-008 0 -0.2045939 -0.97870851 0.016462754 -0.20459393 -0.97870851 0.016462754
-		 -0.20459391 -0.97870845 0.016462754 -0.2045939 -0.97870845 0.016462754 0.20449638
-		 -0.97872889 0.016463133 0.20449638 -0.97872883 0.016463131 0.20449637 -0.97872889
-		 0.016463133 0.20449638 -0.97872889 0.016463134 0.99999994 0 0 0.99999988 0 0 0.99999994
-		 0 0 1 0 0 0.21051878 0.97745162 -0.016437542 0.21051876 0.97745156 -0.01643754 0.21051878
+		 -1.0609028e-06 -0.002513194 -0.99999684 -0.00012198645 0.0038644311 0.99999261 1.1728865e-06
+		 0.0018227109 0.99999839 1.0612117e-06 0.0025129949 0.99999684 -0.0002653696 0.003323908
+		 0.99999446 -1 2.361185e-08 0 -1 2.3611852e-08 0 -1 2.3611848e-08 0 -0.99999994 2.3611848e-08
+		 0 -0.2045939 -0.97870851 0.016462754 -0.20459393 -0.97870851 0.016462754 -0.20459391
+		 -0.97870845 0.016462754 -0.2045939 -0.97870845 0.016462754 0.20449638 -0.97872889
+		 0.016463133 0.20449638 -0.97872883 0.016463131 0.20449637 -0.97872889 0.016463133
+		 0.20449638 -0.97872889 0.016463134 0.99999994 0 0 0.99999988 0 0 0.99999994 0 0 1
+		 0 0 0.21051878 0.97745162 -0.016437542 0.21051876 0.97745156 -0.01643754 0.21051878
 		 0.97745162 -0.016437542 0.21051878 0.97745156 -0.016437542 -0.21062234 0.97742939
 		 -0.016437132 -0.21062233 0.97742927 -0.01643713 -0.21062233 0.97742927 -0.01643713
 		 -0.21062237 0.97742939 -0.016437132 0.00048794391 -0.0059286724 -0.99998236 -0.00048236508
 		 -0.0060509583 -0.99998158 -0.00097960373 -0.0075104032 -0.99997127 0.00093682838
 		 -0.007177053 -0.99997371 0.00067349937 0.007095397 0.99997455 -0.00063930365 0.0068774163
 		 0.99997622 -0.00093033549 0.0071768747 0.99997377 0.00098493393 0.0075106299 0.99997133
-		 -5.8021465e-007 0.0079831965 0.99996811 0.00067349937 0.007095397 0.99997455 0.00098493393
-		 0.0075106299 0.99997133 -4.1284542e-007 0.0079831947 0.99996805 -0.00048236508 -0.0060509583
-		 -0.99998158 -2.5114286e-007 -0.0051712957 -0.99998659 -1.112851e-006 -0.0079828128
+		 -5.8021465e-07 0.0079831965 0.99996811 0.00067349937 0.007095397 0.99997455 0.00098493393
+		 0.0075106299 0.99997133 -4.1284542e-07 0.0079831947 0.99996805 -0.00048236508 -0.0060509583
+		 -0.99998158 -2.5114286e-07 -0.0051712957 -0.99998659 -1.112851e-06 -0.0079828128
 		 -0.99996811 -0.00097960373 -0.0075104032 -0.99997127 -0.00067863154 0.0070959069
-		 0.99997455 -5.8021465e-007 0.0079831965 0.99996811 -4.1284542e-007 0.0079831947 0.99996805
-		 -0.00098799809 0.0075112861 0.99997121 -2.5114286e-007 -0.0051712957 -0.99998659
-		 0.00048124362 -0.0060531469 -0.99998152 0.00097829045 -0.0075110719 -0.99997133 -1.112851e-006
-		 -0.0079828128 -0.99996811 0.00063566287 0.0068778647 0.9999761 -0.00067863154 0.0070959069
-		 0.99997455 -0.00098799809 0.0075112861 0.99997121 0.00092920574 0.0071774549 0.99997383
-		 0.00048124362 -0.0060531469 -0.99998152 -0.00048793416 -0.0059306794 -0.99998224
-		 -0.00093559263 -0.00717763 -0.99997377 0.00097829045 -0.0075110719 -0.99997133 1.0136318e-006
-		 0.0075055119 0.99997175 0.00063566287 0.0068778647 0.9999761 0.00092920574 0.0071774549
-		 0.99997383 8.8375765e-007 0.0075055133 0.99997181 -0.00048793416 -0.0059306794 -0.99998224
-		 4.172345e-007 -0.0049796384 -0.9999876 5.5135735e-007 -0.0075058029 -0.99997181 -0.00093559263
-		 -0.00717763 -0.99997377 -0.00063930365 0.0068774163 0.99997622 1.0136318e-006 0.0075055119
-		 0.99997175 8.8375765e-007 0.0075055133 0.99997181 -0.00093033549 0.0071768747 0.99997377
-		 4.172345e-007 -0.0049796384 -0.9999876 0.00048794391 -0.0059286724 -0.99998236 0.00093682838
-		 -0.007177053 -0.99997371 5.5135735e-007 -0.0075058029 -0.99997181;
+		 0.99997455 -5.8021465e-07 0.0079831965 0.99996811 -4.1284542e-07 0.0079831947 0.99996805
+		 -0.00098799809 0.0075112861 0.99997121 -2.5114286e-07 -0.0051712957 -0.99998659 0.00048124362
+		 -0.0060531469 -0.99998152 0.00097829045 -0.0075110719 -0.99997133 -1.112851e-06 -0.0079828128
+		 -0.99996811 0.00063566287 0.0068778647 0.9999761 -0.00067863154 0.0070959069 0.99997455
+		 -0.00098799809 0.0075112861 0.99997121 0.00092920574 0.0071774549 0.99997383 0.00048124362
+		 -0.0060531469 -0.99998152 -0.00048793416 -0.0059306794 -0.99998224 -0.00093559263
+		 -0.00717763 -0.99997377 0.00097829045 -0.0075110719 -0.99997133 1.0136318e-06 0.0075055119
+		 0.99997175 0.00063566287 0.0068778647 0.9999761 0.00092920574 0.0071774549 0.99997383
+		 8.8375765e-07 0.0075055133 0.99997181 -0.00048793416 -0.0059306794 -0.99998224 4.172345e-07
+		 -0.0049796384 -0.9999876 5.5135735e-07 -0.0075058029 -0.99997181 -0.00093559263 -0.00717763
+		 -0.99997377 -0.00063930365 0.0068774163 0.99997622 1.0136318e-06 0.0075055119 0.99997175
+		 8.8375765e-07 0.0075055133 0.99997181 -0.00093033549 0.0071768747 0.99997377 4.172345e-07
+		 -0.0049796384 -0.9999876 0.00048794391 -0.0059286724 -0.99998236 0.00093682838 -0.007177053
+		 -0.99997371 5.5135735e-07 -0.0075058029 -0.99997181;
 	setAttr -s 66 -ch 264 ".fc[0:65]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -42683,17 +41373,17 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 	setAttr ".n[0:165]" -type "float3"  0.51707906 -0.85589749 0.0082983812 0.51707906
 		 -0.85589737 0.0082983812 0.517079 -0.85589737 0.0082983803 0.51707906 -0.85589743
 		 0.0082983822 -0.51713037 0.85586649 -0.0082978858 -0.51713037 0.85586649 -0.0082978848
-		 -0.51713032 0.85586649 -0.0082978848 -0.51713032 0.85586643 -0.0082978848 -9.9919271e-006
-		 0.0096971216 0.99995291 -9.9919253e-006 0.0096971216 0.99995291 -9.9919271e-006 0.0096971225
-		 0.99995297 -9.9919262e-006 0.0096971206 0.99995291 0.85594434 0.51704347 -0.0050123259
+		 -0.51713032 0.85586649 -0.0082978848 -0.51713032 0.85586643 -0.0082978848 -9.9919271e-06
+		 0.0096971216 0.99995291 -9.9919253e-06 0.0096971216 0.99995291 -9.9919271e-06 0.0096971225
+		 0.99995297 -9.9919262e-06 0.0096971206 0.99995291 0.85594434 0.51704347 -0.0050123259
 		 0.85594434 0.51704347 -0.0050123255 0.85594445 0.51704353 -0.0050123264 0.85594445
 		 0.51704347 -0.0050123259 -0.85593325 -0.51706213 0.0050138286 -0.85593319 -0.51706207
 		 0.0050138277 -0.85593325 -0.51706213 0.0050138286 -0.85593319 -0.51706207 0.0050138277
 		 0.99159187 -0.12939778 0.0012546311 0.99159193 -0.12939781 0.0012546313 0.99159187
 		 -0.12939778 0.0012546311 0.99159193 -0.12939781 0.0012546313 -0.99159366 0.12938449
 		 -0.0012543981 -0.99159378 0.12938452 -0.0012543984 -0.99159366 0.12938449 -0.0012543981
-		 -0.99159378 0.12938452 -0.0012543984 7.4940508e-006 0.0096951248 0.99995303 7.4940508e-006
-		 0.0096951239 0.99995297 7.4940508e-006 0.0096951239 0.99995297 7.4940508e-006 0.0096951239
+		 -0.99159378 0.12938452 -0.0012543984 7.4940508e-06 0.0096951248 0.99995303 7.4940508e-06
+		 0.0096951239 0.99995297 7.4940508e-06 0.0096951239 0.99995297 7.4940508e-06 0.0096951239
 		 0.99995297 0.12939638 0.99154633 -0.0096135214 0.12939638 0.99154621 -0.0096135214
 		 0.12939639 0.99154633 -0.0096135223 0.12939638 0.99154633 -0.0096135214 -0.12940003
 		 -0.9915458 0.0096135717 -0.12940004 -0.99154592 0.0096135726 -0.12940004 -0.99154586
@@ -42709,16 +41399,16 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 -0.94954002 -0.31363082 0.003040863 -0.94954014 -0.31363082 0.0030408632 -0.94954014
 		 -0.31363079 0.003040863 0.94953561 0.31364411 -0.0030406492 0.94953579 0.31364417
 		 -0.0030406495 0.94953567 0.31364414 -0.0030406495 0.94953573 0.31364417 -0.0030406497
-		 -4.996034e-006 0.009692613 0.99995303 -4.996034e-006 0.0096926112 0.99995297 -4.9960345e-006
-		 0.009692613 0.99995303 -4.9960345e-006 0.009692613 0.99995303 0.31365091 -0.94949371
+		 -4.996034e-06 0.009692613 0.99995303 -4.996034e-06 0.0096926112 0.99995297 -4.9960345e-06
+		 0.009692613 0.99995303 -4.9960345e-06 0.009692613 0.99995303 0.31365091 -0.94949371
 		 0.0092054382 0.31365088 -0.94949365 0.0092054373 0.31365091 -0.94949371 0.0092054382
 		 0.31365091 -0.94949371 0.0092054373 -0.31365502 0.94949239 -0.0092057539 -0.31365493
 		 0.94949228 -0.0092057521 -0.31365502 0.94949239 -0.0092057539 -0.31365493 0.94949228
 		 -0.0092057521 -0.83724922 0.54679567 -0.0053015323 -0.83724934 0.54679567 -0.0053015328
 		 -0.83724922 0.54679567 -0.0053015323 -0.83724934 0.54679567 -0.0053015328 0.83725309
 		 -0.54678982 0.0053021964 0.83725303 -0.54678988 0.0053021959 0.83725315 -0.54678988
-		 0.0053021968 0.83725309 -0.54678988 0.0053021964 -4.9960304e-006 0.0096944962 0.99995297
-		 -4.9960308e-006 0.0096944971 0.99995303 -4.9960304e-006 0.0096944971 0.99995291 -4.9960304e-006
+		 0.0053021968 0.83725309 -0.54678988 0.0053021964 -4.9960304e-06 0.0096944962 0.99995297
+		 -4.9960308e-06 0.0096944971 0.99995303 -4.9960304e-06 0.0096944971 0.99995291 -4.9960304e-06
 		 0.0096944971 0.99995297 -0.54682904 -0.83720481 0.0081186481 -0.5468291 -0.83720493
 		 0.008118649 -0.54682904 -0.83720493 0.0081186481 -0.54682904 -0.83720487 0.0081186481
 		 0.54682255 0.83720911 -0.0081185512 0.54682255 0.83720911 -0.0081185512 0.54682249
@@ -42780,50 +41470,50 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 -0.0015798808 0.0090404553 0.99995798 -0.66297042 -0.74861032 0.0072582867 -0.66297048
 		 -0.74861026 0.0072582862 -0.66297048 -0.74861038 0.0072582876 -0.66297054 -0.74861032
 		 0.0072582867 -1 0 0 -0.99999988 0 0 -1 0 0 -1.000000119209 0 0 0.99999994 0 0 0.99999988
-		 0 0 0.99999994 0 0 0.99999994 0 0 -1 0 0 -1 -1.2420815e-008 0 -1 -1.2420818e-008
-		 0 -1 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0 0.99999994 0 0 0.6629703 -0.74861044
-		 0.0072582867 0.66297036 -0.74861044 0.0072582872 0.66297036 -0.7486105 0.0072582876
-		 0.66297036 -0.7486105 0.0072582867 0 0.99995297 -0.0096947411 0 0.99995297 -0.0096947411
-		 0 0.99995297 -0.0096947411 0 0.99995297 -0.0096947411 0.75347859 0.65744168 -0.0063740122
-		 0.75347859 0.65744162 -0.0063740117 0.75347853 0.65744156 -0.0063740113 0.75347859
-		 0.65744156 -0.0063740122 2.6468408e-007 0.99995303 -0.0096952002 2.6468408e-007 0.99995303
-		 -0.0096952002 2.6468408e-007 0.99995303 -0.0096952002 2.6468408e-007 0.99995303 -0.0096952002
-		 -0.75347883 0.6574412 -0.006374008 -0.75347883 0.65744132 -0.006374009 -0.75347883
-		 0.65744126 -0.006374009 -0.75347877 0.65744126 -0.0063740085 -0.99999994 7.8425664e-008
-		 0 -0.99999994 7.8425664e-008 0 -1 7.8425671e-008 0 -1 7.8425664e-008 0 -1.764562e-008
-		 -0.99995303 0.0096957739 -1.764562e-008 -0.99995303 0.0096957739 -1.764562e-008 -0.99995303
-		 0.009695773 -1.764562e-008 -0.99995303 0.009695773 -0.99999988 0 0 -0.99999988 0
-		 0 -0.99999988 0 0 -0.99999994 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99995303 0.0096956976
-		 0 -0.99995303 0.0096956976 0 -0.99995303 0.0096956976 0 -0.99995303 0.0096956976
-		 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.66271603 0.74858516
-		 -0.020683378 0.66271597 0.74858516 -0.020683374 0.66271597 0.74858516 -0.020683376
-		 0.66271603 0.74858505 -0.020683378 -1.000000119209 1.2750689e-008 0 -1.000000119209
-		 1.275069e-008 0 -1 1.275069e-008 0 -1 1.2750689e-008 0 -0.66271532 -0.74858439 0.020731851
-		 -0.66271532 -0.74858439 0.020731851 -0.66271526 -0.74858439 0.02073185 -0.66271532
-		 -0.74858439 0.020731851 0 0.99961931 -0.027590806 0 0.99961931 -0.027590806 0 0.99961931
-		 -0.027590806 0 0.99961931 -0.027590806 0 -0.99961674 0.027681617 0 -0.99961674 0.027681617
-		 0 -0.99961674 0.027681617 0 -0.99961674 0.027681617 0 0.99961925 -0.027590305 0 0.99961925
-		 -0.027590305 0 0.99961925 -0.027590305 0 0.99961925 -0.027590305 0 -0.99961686 0.027681656
-		 0 -0.9996168 0.027681656 0 -0.9996168 0.027681654 0 -0.99961686 0.027681656 -0.66271597
-		 0.7485851 -0.020683378 -0.66271597 0.74858516 -0.020683374 -0.66271597 0.7485851
-		 -0.020683374 -0.66271603 0.74858516 -0.020683376;
+		 0 0 0.99999994 0 0 0.99999994 0 0 -1 0 0 -1 -1.2420815e-08 0 -1 -1.2420818e-08 0
+		 -1 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0 0.99999994 0 0 0.6629703 -0.74861044 0.0072582867
+		 0.66297036 -0.74861044 0.0072582872 0.66297036 -0.7486105 0.0072582876 0.66297036
+		 -0.7486105 0.0072582867 0 0.99995297 -0.0096947411 0 0.99995297 -0.0096947411 0 0.99995297
+		 -0.0096947411 0 0.99995297 -0.0096947411 0.75347859 0.65744168 -0.0063740122 0.75347859
+		 0.65744162 -0.0063740117 0.75347853 0.65744156 -0.0063740113 0.75347859 0.65744156
+		 -0.0063740122 2.6468408e-07 0.99995303 -0.0096952002 2.6468408e-07 0.99995303 -0.0096952002
+		 2.6468408e-07 0.99995303 -0.0096952002 2.6468408e-07 0.99995303 -0.0096952002 -0.75347883
+		 0.6574412 -0.006374008 -0.75347883 0.65744132 -0.006374009 -0.75347883 0.65744126
+		 -0.006374009 -0.75347877 0.65744126 -0.0063740085 -0.99999994 7.8425664e-08 0 -0.99999994
+		 7.8425664e-08 0 -1 7.8425671e-08 0 -1 7.8425664e-08 0 -1.764562e-08 -0.99995303 0.0096957739
+		 -1.764562e-08 -0.99995303 0.0096957739 -1.764562e-08 -0.99995303 0.009695773 -1.764562e-08
+		 -0.99995303 0.009695773 -0.99999988 0 0 -0.99999988 0 0 -0.99999988 0 0 -0.99999994
+		 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -0.99995303 0.0096956976 0 -0.99995303 0.0096956976
+		 0 -0.99995303 0.0096956976 0 -0.99995303 0.0096956976 0.99999994 0 0 0.99999994 0
+		 0 0.99999994 0 0 0.99999994 0 0 0.66271603 0.74858516 -0.020683378 0.66271597 0.74858516
+		 -0.020683374 0.66271597 0.74858516 -0.020683376 0.66271603 0.74858505 -0.020683378
+		 -1.000000119209 1.2750689e-08 0 -1.000000119209 1.275069e-08 0 -1 1.275069e-08 0
+		 -1 1.2750689e-08 0 -0.66271532 -0.74858439 0.020731851 -0.66271532 -0.74858439 0.020731851
+		 -0.66271526 -0.74858439 0.02073185 -0.66271532 -0.74858439 0.020731851 0 0.99961931
+		 -0.027590806 0 0.99961931 -0.027590806 0 0.99961931 -0.027590806 0 0.99961931 -0.027590806
+		 0 -0.99961674 0.027681617 0 -0.99961674 0.027681617 0 -0.99961674 0.027681617 0 -0.99961674
+		 0.027681617 0 0.99961925 -0.027590305 0 0.99961925 -0.027590305 0 0.99961925 -0.027590305
+		 0 0.99961925 -0.027590305 0 -0.99961686 0.027681656 0 -0.9996168 0.027681656 0 -0.9996168
+		 0.027681654 0 -0.99961686 0.027681656 -0.66271597 0.7485851 -0.020683378 -0.66271597
+		 0.74858516 -0.020683374 -0.66271597 0.7485851 -0.020683374 -0.66271603 0.74858516
+		 -0.020683376;
 	setAttr ".n[332:497]" -type "float3"  0.66271538 -0.74858433 0.020731853 0.66271538
 		 -0.74858433 0.020731855 0.66271538 -0.74858433 0.020731853 0.66271538 -0.74858421
-		 0.020731855 0.99999994 2.1676169e-007 0 1 2.1676171e-007 0 1 2.1676171e-007 0 1.000000119209
-		 2.1676172e-007 0 0.75926024 -0.65053934 0.017957497 0.75926018 -0.65053928 0.017957496
+		 0.020731855 0.99999994 2.1676169e-07 0 1 2.1676171e-07 0 1 2.1676171e-07 0 1.000000119209
+		 2.1676172e-07 0 0.75926024 -0.65053934 0.017957497 0.75926018 -0.65053928 0.017957496
 		 0.75926024 -0.65053934 0.017957497 0.75926018 -0.65053928 0.017957496 -0.7534253
 		 0.65728134 -0.018204186 -0.75342536 0.65728134 -0.018204186 -0.75342536 0.65728128
-		 -0.018204186 -0.75342536 0.65728134 -0.018204186 -0.99999988 -3.9616065e-008 0 -0.99999994
-		 -3.9616062e-008 0 -1 -3.9616069e-008 0 -1 -3.9616069e-008 0 0 -0.99961919 0.027592873
-		 0 -0.99961919 0.027592873 0 -0.99961919 0.027592873 0 -0.99961919 0.027592873 1.3437422e-007
-		 0.99961656 -0.027688442 1.3437422e-007 0.99961656 -0.027688442 1.3437422e-007 0.99961656
-		 -0.027688442 1.3437422e-007 0.99961656 -0.027688442 2.520205e-007 -0.99961925 0.02759322
-		 2.520205e-007 -0.99961931 0.027593222 2.520205e-007 -0.99961931 0.027593222 2.5202047e-007
-		 -0.99961919 0.027593218 4.8996139e-007 0.99961662 -0.027685683 4.8996139e-007 0.99961668
-		 -0.027685685 4.8996139e-007 0.99961668 -0.027685685 4.8996145e-007 0.99961668 -0.027685687
+		 -0.018204186 -0.75342536 0.65728134 -0.018204186 -0.99999988 -3.9616065e-08 0 -0.99999994
+		 -3.9616062e-08 0 -1 -3.9616069e-08 0 -1 -3.9616069e-08 0 0 -0.99961919 0.027592873
+		 0 -0.99961919 0.027592873 0 -0.99961919 0.027592873 0 -0.99961919 0.027592873 1.3437422e-07
+		 0.99961656 -0.027688442 1.3437422e-07 0.99961656 -0.027688442 1.3437422e-07 0.99961656
+		 -0.027688442 1.3437422e-07 0.99961656 -0.027688442 2.520205e-07 -0.99961925 0.02759322
+		 2.520205e-07 -0.99961931 0.027593222 2.520205e-07 -0.99961931 0.027593222 2.5202047e-07
+		 -0.99961919 0.027593218 4.8996139e-07 0.99961662 -0.027685683 4.8996139e-07 0.99961668
+		 -0.027685685 4.8996139e-07 0.99961668 -0.027685685 4.8996145e-07 0.99961668 -0.027685687
 		 -0.75926018 -0.65053928 0.017957497 -0.75926018 -0.65053934 0.017957497 -0.75926018
-		 -0.65053928 0.017957497 -0.75926018 -0.65053934 0.017957497 1 1.7166963e-007 0 0.99999994
-		 1.7166961e-007 0 0.99999994 1.7166961e-007 0 0.99999994 1.7166963e-007 0 0.75342542
+		 -0.65053928 0.017957497 -0.75926018 -0.65053934 0.017957497 1 1.7166963e-07 0 0.99999994
+		 1.7166961e-07 0 0.99999994 1.7166961e-07 0 0.99999994 1.7166963e-07 0 0.75342542
 		 0.65728134 -0.018204186 0.75342536 0.65728122 -0.018204188 0.75342542 0.65728134
 		 -0.018204186 0.75342536 0.65728134 -0.018204188 0.025970114 0.0096918931 0.99961573
 		 0.02597012 0.0096918941 0.99961573 0.025970114 0.0096918922 0.99961573 0.025970118
@@ -42834,43 +41524,43 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 0.0096918931 0.99961573 0 0.0096957097 0.99995291 0 0.0096957097 0.99995297 0 0.0096957106
 		 0.99995297 0 0.0096957106 0.99995291 0 0.0096958727 0.99995297 0 0.0096958717 0.99995297
 		 0 0.0096958727 0.99995297 0 0.0096958727 0.99995297 0 0.0096940985 0.99995297 0 0.0096940985
-		 0.99995297 0 0.0096940976 0.99995285 0 0.0096940985 0.99995291 2.4987542e-006 0.0096957106
-		 0.99995291 2.4987542e-006 0.0096957106 0.99995297 2.4987539e-006 0.0096957097 0.99995297
-		 2.4987542e-006 0.0096957097 0.99995291 -1.0713411e-006 -0.0096941004 -0.99995297
-		 -1.0713411e-006 -0.0096941004 -0.99995303 -1.0713409e-006 -0.0096940985 -0.99995291
-		 -1.0713411e-006 -0.0096941004 -0.99995297 -1.0713411e-006 -0.0096941004 -0.99995303
-		 -1.071341e-006 -0.0096940994 -0.99995297 -1.071341e-006 -0.0096940994 -0.99995297
-		 -1.071341e-006 -0.0096940994 -0.99995297 -0.31493038 0.64475322 0.69649988 -0.31493035
-		 0.64475322 0.69649982 -0.31493035 0.64475328 0.69649994 -0.31493035 0.64475328 0.69649982
-		 -0.34433925 0.3265312 0.88023174 -0.34433919 0.32653117 0.88023174 -0.34433925 0.3265312
-		 0.8802318 -0.34433922 0.32653117 0.88023174 -0.87050432 -0.2803022 -0.40454045 -0.87050426
-		 -0.2803022 -0.40454045 -0.8705042 -0.2803022 -0.40454042 -0.8705042 -0.2803022 -0.40454045
-		 -0.90601975 -0.14824258 -0.39642453 -0.90601963 -0.14824256 -0.3964245 -0.90601969
-		 -0.14824258 -0.39642453 -0.90601975 -0.14824258 -0.39642456 0.31493062 0.6447531
-		 0.69649988 0.31493059 0.6447531 0.69649988 0.31493059 0.6447531 0.69649988 0.31493065
-		 0.64475316 0.69649988 0.34433976 0.32653099 0.8802315 0.34433979 0.32653099 0.8802315
-		 0.34433982 0.32653102 0.88023156 0.34433979 0.32653099 0.88023156 0.87408906 0.28612357
-		 0.39255777 0.87408912 0.2861236 0.3925578 0.87408894 0.28612357 0.39255774 0.87408906
-		 0.2861236 0.39255777 0.90455872 0.11577227 0.41032946 0.90455866 0.11577226 0.4103294
-		 0.90455878 0.11577228 0.41032946 0.90455872 0.11577226 0.41032943 -0.2164084 -0.28983077
-		 -0.93229043 -0.21640842 -0.2898308 -0.93229049 -0.2164084 -0.28983077 -0.93229049
-		 -0.2164084 -0.28983077 -0.93229043 -0.33665878 -0.17606823 -0.92501938 -0.33665878
-		 -0.17606825 -0.92501938 -0.33665875 -0.17606823 -0.92501938 -0.33665878 -0.17606823
-		 -0.92501938 0.21640871 -0.28983101 -0.93229038 0.21640871 -0.28983101 -0.93229038
-		 0.21640868 -0.28983098 -0.93229026 0.21640871 -0.28983101 -0.93229032 0.33665964
-		 -0.17606832 -0.92501903 0.33665964 -0.17606832 -0.92501903 0.33665967 -0.17606835
-		 -0.92501909 0.33665967 -0.17606834 -0.92501903 -0.87410408 0.28609037 0.39254826
-		 -0.87410408 0.28609037 0.39254826 -0.8741042 0.2860904 0.39254829 -0.87410414 0.2860904
-		 0.39254829 -0.90457827 0.11577257 0.4102861 -0.90457839 0.11577259 0.41028613 -0.90457833
-		 0.11577258 0.41028613 -0.90457839 0.1157726 0.41028613 0.87047142 -0.28030857 -0.40460658
-		 0.87047142 -0.2803086 -0.40460661 0.87047148 -0.2803086 -0.40460661 0.87047142 -0.2803086
-		 -0.40460658 0.90600193 -0.14827462 -0.39645332 0.90600187 -0.14827462 -0.39645326
-		 0.90600181 -0.14827462 -0.39645329 0.90600181 -0.1482746 -0.39645326 0.10249173 0.82784092
-		 -0.55152035 0.10249174 0.82784092 -0.55152035 0.10249174 0.82784092 -0.55152041 0.10249174
-		 0.82784098 -0.55152041 0.59963053 0.78780323 -0.14074449 0.59963053 0.78780335 -0.14074451
-		 0.59963053 0.78780335 -0.14074451 0.59963059 0.78780335 -0.14074451 0.77914304 0.61074328
-		 0.14116959 0.77914298 0.61074328 0.14116961 0.77914298 0.61074328 0.14116961 0.77914298
-		 0.61074328 0.14116961 0.3092795 0.45850766 0.83313668 0.3092795 0.45850766 0.83313674;
+		 0.99995297 0 0.0096940976 0.99995285 0 0.0096940985 0.99995291 2.4987542e-06 0.0096957106
+		 0.99995291 2.4987542e-06 0.0096957106 0.99995297 2.4987539e-06 0.0096957097 0.99995297
+		 2.4987542e-06 0.0096957097 0.99995291 -1.0713411e-06 -0.0096941004 -0.99995297 -1.0713411e-06
+		 -0.0096941004 -0.99995303 -1.0713409e-06 -0.0096940985 -0.99995291 -1.0713411e-06
+		 -0.0096941004 -0.99995297 -1.0713411e-06 -0.0096941004 -0.99995303 -1.071341e-06
+		 -0.0096940994 -0.99995297 -1.071341e-06 -0.0096940994 -0.99995297 -1.071341e-06 -0.0096940994
+		 -0.99995297 -0.31493038 0.64475322 0.69649988 -0.31493035 0.64475322 0.69649982 -0.31493035
+		 0.64475328 0.69649994 -0.31493035 0.64475328 0.69649982 -0.34433925 0.3265312 0.88023174
+		 -0.34433919 0.32653117 0.88023174 -0.34433925 0.3265312 0.8802318 -0.34433922 0.32653117
+		 0.88023174 -0.87050432 -0.2803022 -0.40454045 -0.87050426 -0.2803022 -0.40454045
+		 -0.8705042 -0.2803022 -0.40454042 -0.8705042 -0.2803022 -0.40454045 -0.90601975 -0.14824258
+		 -0.39642453 -0.90601963 -0.14824256 -0.3964245 -0.90601969 -0.14824258 -0.39642453
+		 -0.90601975 -0.14824258 -0.39642456 0.31493062 0.6447531 0.69649988 0.31493059 0.6447531
+		 0.69649988 0.31493059 0.6447531 0.69649988 0.31493065 0.64475316 0.69649988 0.34433976
+		 0.32653099 0.8802315 0.34433979 0.32653099 0.8802315 0.34433982 0.32653102 0.88023156
+		 0.34433979 0.32653099 0.88023156 0.87408906 0.28612357 0.39255777 0.87408912 0.2861236
+		 0.3925578 0.87408894 0.28612357 0.39255774 0.87408906 0.2861236 0.39255777 0.90455872
+		 0.11577227 0.41032946 0.90455866 0.11577226 0.4103294 0.90455878 0.11577228 0.41032946
+		 0.90455872 0.11577226 0.41032943 -0.2164084 -0.28983077 -0.93229043 -0.21640842 -0.2898308
+		 -0.93229049 -0.2164084 -0.28983077 -0.93229049 -0.2164084 -0.28983077 -0.93229043
+		 -0.33665878 -0.17606823 -0.92501938 -0.33665878 -0.17606825 -0.92501938 -0.33665875
+		 -0.17606823 -0.92501938 -0.33665878 -0.17606823 -0.92501938 0.21640871 -0.28983101
+		 -0.93229038 0.21640871 -0.28983101 -0.93229038 0.21640868 -0.28983098 -0.93229026
+		 0.21640871 -0.28983101 -0.93229032 0.33665964 -0.17606832 -0.92501903 0.33665964
+		 -0.17606832 -0.92501903 0.33665967 -0.17606835 -0.92501909 0.33665967 -0.17606834
+		 -0.92501903 -0.87410408 0.28609037 0.39254826 -0.87410408 0.28609037 0.39254826 -0.8741042
+		 0.2860904 0.39254829 -0.87410414 0.2860904 0.39254829 -0.90457827 0.11577257 0.4102861
+		 -0.90457839 0.11577259 0.41028613 -0.90457833 0.11577258 0.41028613 -0.90457839 0.1157726
+		 0.41028613 0.87047142 -0.28030857 -0.40460658 0.87047142 -0.2803086 -0.40460661 0.87047148
+		 -0.2803086 -0.40460661 0.87047142 -0.2803086 -0.40460658 0.90600193 -0.14827462 -0.39645332
+		 0.90600187 -0.14827462 -0.39645326 0.90600181 -0.14827462 -0.39645329 0.90600181
+		 -0.1482746 -0.39645326 0.10249173 0.82784092 -0.55152035 0.10249174 0.82784092 -0.55152035
+		 0.10249174 0.82784092 -0.55152041 0.10249174 0.82784098 -0.55152041 0.59963053 0.78780323
+		 -0.14074449 0.59963053 0.78780335 -0.14074451 0.59963053 0.78780335 -0.14074451 0.59963059
+		 0.78780335 -0.14074451 0.77914304 0.61074328 0.14116959 0.77914298 0.61074328 0.14116961
+		 0.77914298 0.61074328 0.14116961 0.77914298 0.61074328 0.14116961 0.3092795 0.45850766
+		 0.83313668 0.3092795 0.45850766 0.83313674;
 	setAttr ".n[498:663]" -type "float3"  0.30927953 0.45850775 0.83313674 0.3092795
 		 0.45850769 0.83313668 -0.30952969 0.45708087 0.83382767 -0.30952966 0.45708087 0.83382767
 		 -0.30952963 0.45708084 0.83382761 -0.30952963 0.45708084 0.83382761 -0.79756868 0.587758
@@ -42909,10 +41599,10 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 0.37605202 0.9265914 0.0036460839 0.37605202 0.92659134 0.0036460843 0.37605199 0.9265914
 		 0.0036460846 0.37605208 0.9265914 -0.0036460625 -0.37605208 0.92659146 -0.0036460622
 		 -0.37605202 0.9265914 -0.003646062 -0.37605205 0.9265914 -0.0036460622 -0.37605202
-		 -1.0713412e-006 -0.0096940957 -0.99995297 -1.0713412e-006 -0.0096940957 -0.99995297
-		 -1.0713412e-006 -0.0096940957 -0.99995297 -1.0713412e-006 -0.0096940957 -0.99995297
-		 -1.0713413e-006 -0.0096940966 -0.99995303 -1.0713413e-006 -0.0096940957 -0.99995297
-		 -1.0713412e-006 -0.0096940957 -0.99995291 -1.0713414e-006 -0.0096940966 -0.99995303
+		 -1.0713412e-06 -0.0096940957 -0.99995297 -1.0713412e-06 -0.0096940957 -0.99995297
+		 -1.0713412e-06 -0.0096940957 -0.99995297 -1.0713412e-06 -0.0096940957 -0.99995297
+		 -1.0713413e-06 -0.0096940966 -0.99995303 -1.0713413e-06 -0.0096940957 -0.99995297
+		 -1.0713412e-06 -0.0096940957 -0.99995291 -1.0713414e-06 -0.0096940966 -0.99995303
 		 -0.90455878 0.11577228 0.41032949 -0.90455872 0.11577227 0.41032946 -0.90455878 0.11577227
 		 0.41032943 -0.90455872 0.11577226 0.41032943 -0.87408805 0.28612438 0.39255935 -0.87408805
 		 0.28612441 0.39255932 -0.87408805 0.28612444 0.39255938 -0.87408799 0.28612441 0.39255935
@@ -42988,21 +41678,21 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 0 -0.99981302 0.019338075 0 -0.99981302 0.019338075 0 -0.99981302 0.019338075 0 -0.99981302
 		 0.019338075 0 0.068173215 -0.99767345 0 0.068173215 -0.99767345 0 0.068173215 -0.99767345
 		 0 0.068173215 -0.99767345 0 0.068173289 -0.99767345 0 0.068173289 -0.99767345 0 0.068173289
-		 -0.99767345 0 0.068173289 -0.99767345 1 -2.0540833e-007 0 1 -2.0540834e-007 0 0.99999994
-		 -2.0540831e-007 0 1 -2.0540833e-007 0 0.99999994 0 0 1 0 0 1 0 0 1 0 0 0 -0.11128898
+		 -0.99767345 0 0.068173289 -0.99767345 1 -2.0540833e-07 0 1 -2.0540834e-07 0 0.99999994
+		 -2.0540831e-07 0 1 -2.0540833e-07 0 0.99999994 0 0 1 0 0 1 0 0 1 0 0 0 -0.11128898
 		 0.99378812 0 -0.11128898 0.99378812 0 -0.11128898 0.99378812 0 -0.11128898 0.99378812
 		 0 -0.11128901 0.99378812 0 -0.11128901 0.99378812 0 -0.11128901 0.99378812 0 -0.11128901
-		 0.99378812 -1 -3.4030123e-008 0 -0.99999994 -3.4030123e-008 0 -1 -3.403013e-008 0
-		 -1 -3.4030123e-008 0 -1 0 0 -1 0 0 -1 0 0 -0.99999994 0 0 0 -0.081156321 -0.99670136
+		 0.99378812 -1 -3.4030123e-08 0 -0.99999994 -3.4030123e-08 0 -1 -3.403013e-08 0 -1
+		 -3.4030123e-08 0 -1 0 0 -1 0 0 -1 0 0 -0.99999994 0 0 0 -0.081156321 -0.99670136
 		 0 -0.081156321 -0.99670136 0 -0.081156321 -0.99670136 0 -0.081156321 -0.99670136
 		 0 -0.081156336 -0.99670136 0 -0.081156336 -0.99670136 0 -0.081156336 -0.99670136
-		 0 -0.081156336 -0.99670136 1 1.6276267e-007 0 1 1.6276266e-007 0 0.99999994 1.6276266e-007
-		 0 0.99999994 1.6276266e-007 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0
-		 0 0.0379708 0.9992789 0 0.0379708 0.9992789;
+		 0 -0.081156336 -0.99670136 1 1.6276267e-07 0 1 1.6276266e-07 0 0.99999994 1.6276266e-07
+		 0 0.99999994 1.6276266e-07 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 1 0 0 0
+		 0.0379708 0.9992789 0 0.0379708 0.9992789;
 	setAttr ".n[830:995]" -type "float3"  0 0.0379708 0.9992789 0 0.0379708 0.9992789
 		 0 0.037970796 0.9992789 0 0.037970796 0.9992789 0 0.037970796 0.9992789 0 0.037970796
-		 0.9992789 -0.99999994 -3.467332e-008 0 -0.99999994 -3.4673317e-008 0 -1 -3.467332e-008
-		 0 -0.99999994 -3.4673317e-008 0 -1 0 0 -1 0 0 -0.99999994 0 0 -0.99999994 0 0 0 0.99995303
+		 0.9992789 -0.99999994 -3.467332e-08 0 -0.99999994 -3.4673317e-08 0 -1 -3.467332e-08
+		 0 -0.99999994 -3.4673317e-08 0 -1 0 0 -1 0 0 -0.99999994 0 0 -0.99999994 0 0 0 0.99995303
 		 -0.0096903061 0 0.99995303 -0.0096903061 0 0.99995303 -0.0096903061 0 0.99995303
 		 -0.0096903061 0 0.99995303 -0.0096903089 0 0.99995303 -0.0096903089 0 0.99995303
 		 -0.0096903089 0 0.99995303 -0.0096903089 0 0.023099318 -0.99973315 0 0.023099318
@@ -43011,31 +41701,31 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 -0.034011334 0.99942142 0 -0.034011334 0.99942142 0 0.023099318 -0.99973315 0 0.023099318
 		 -0.99973315 0 0.023099318 -0.99973315 0 0.023099318 -0.99973315 0 -0.034011345 0.99942142
 		 0 -0.034011345 0.99942142 0 -0.034011345 0.99942142 0 -0.034011345 0.99942142 0.99999988
-		 1.1926213e-007 0 1 1.1926214e-007 0 0.99999994 1.1926213e-007 0 1 1.1926215e-007
-		 0 0 0.99998945 -0.0045993724 0 0.99998945 -0.0045993724 0 0.99998945 -0.0045993724
-		 0 0.99998945 -0.0045993724 0 0.99998945 -0.0045966627 0 0.99998945 -0.0045966627
-		 0 0.99998945 -0.0045966627 0 0.99998945 -0.0045966627 0 -0.99995291 0.0096958652
-		 0 -0.99995291 0.0096958652 0 -0.99995291 0.0096958652 0 -0.99995291 0.0096958652
-		 0 -0.99981302 0.019338071 0 -0.99981302 0.019338071 0 -0.99981302 0.019338071 0 -0.99981302
+		 1.1926213e-07 0 1 1.1926214e-07 0 0.99999994 1.1926213e-07 0 1 1.1926215e-07 0 0
+		 0.99998945 -0.0045993724 0 0.99998945 -0.0045993724 0 0.99998945 -0.0045993724 0
+		 0.99998945 -0.0045993724 0 0.99998945 -0.0045966627 0 0.99998945 -0.0045966627 0
+		 0.99998945 -0.0045966627 0 0.99998945 -0.0045966627 0 -0.99995291 0.0096958652 0
+		 -0.99995291 0.0096958652 0 -0.99995291 0.0096958652 0 -0.99995291 0.0096958652 0
+		 -0.99981302 0.019338071 0 -0.99981302 0.019338071 0 -0.99981302 0.019338071 0 -0.99981302
 		 0.019338071 0 -0.99995309 0.0096923234 0 -0.99995309 0.0096923234 0 -0.99995309 0.0096923234
 		 0 -0.99995309 0.0096923234 0 -0.99981308 0.019338079 0 -0.99981308 0.019338079 0
 		 -0.99981308 0.019338079 0 -0.99981308 0.019338079 0 0.068173215 -0.99767345 0 0.068173215
 		 -0.99767345 0 0.068173215 -0.99767345 0 0.068173215 -0.99767345 0 0.068173289 -0.99767345
-		 0 0.068173289 -0.99767345 0 0.068173289 -0.99767345 0 0.068173289 -0.99767345 1 2.5676041e-008
-		 0 1 2.5676043e-008 0 0.99999994 2.5676039e-008 0 1 2.5676041e-008 0 0.99999994 -3.4030123e-008
-		 0 1 -3.4030123e-008 0 1 -3.4030123e-008 0 1 -3.403013e-008 0 0 -0.11128898 0.99378812
+		 0 0.068173289 -0.99767345 0 0.068173289 -0.99767345 0 0.068173289 -0.99767345 1 2.5676041e-08
+		 0 1 2.5676043e-08 0 0.99999994 2.5676039e-08 0 1 2.5676041e-08 0 0.99999994 -3.4030123e-08
+		 0 1 -3.4030123e-08 0 1 -3.4030123e-08 0 1 -3.403013e-08 0 0 -0.11128898 0.99378812
 		 0 -0.11128898 0.99378812 0 -0.11128898 0.99378812 0 -0.11128898 0.99378812 0 -0.11128903
 		 0.99378812 0 -0.11128903 0.99378812 0 -0.11128903 0.99378812 0 -0.11128903 0.99378812
-		 -1 0 0 -0.99999994 0 0 -1 0 0 -1 0 0 -1 2.0540834e-007 0 -1 2.0540833e-007 0 -1 2.0540833e-007
-		 0 -0.99999994 2.0540831e-007 0 0 -0.081156336 -0.99670136 0 -0.081156336 -0.99670136
+		 -1 0 0 -0.99999994 0 0 -1 0 0 -1 0 0 -1 2.0540834e-07 0 -1 2.0540833e-07 0 -1 2.0540833e-07
+		 0 -0.99999994 2.0540831e-07 0 0 -0.081156336 -0.99670136 0 -0.081156336 -0.99670136
 		 0 -0.081156336 -0.99670136 0 -0.081156336 -0.99670136 0 -0.081156321 -0.99670136
 		 0 -0.081156321 -0.99670136 0 -0.081156321 -0.99670136 0 -0.081156321 -0.99670136
 		 1 0 0 1 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994 0 0 0.99999994
 		 0 0 1 0 0 0 0.037970796 0.9992789 0 0.037970796 0.9992789 0 0.037970796 0.9992789
 		 0 0.037970796 0.9992789 0 0.037970811 0.9992789 0 0.037970811 0.9992789 0 0.037970811
-		 0.9992789 0 0.037970811 0.9992789 -0.99999994 -1.3869328e-007 0 -0.99999994 -1.3869327e-007
-		 0 -1 -1.3869328e-007 0 -0.99999994 -1.3869327e-007 0 -1 1.0850845e-007 0 -1 1.0850846e-007
-		 0 -0.99999994 1.0850844e-007 0 -0.99999994 1.0850844e-007 0 0 0.99995309 -0.0096903071
+		 0.9992789 0 0.037970811 0.9992789 -0.99999994 -1.3869328e-07 0 -0.99999994 -1.3869327e-07
+		 0 -1 -1.3869328e-07 0 -0.99999994 -1.3869327e-07 0 -1 1.0850845e-07 0 -1 1.0850846e-07
+		 0 -0.99999994 1.0850844e-07 0 -0.99999994 1.0850844e-07 0 0 0.99995309 -0.0096903071
 		 0 0.99995309 -0.0096903071 0 0.99995309 -0.0096903071 0 0.99995309 -0.0096903071
 		 0 0.99995303 -0.0096903061 0 0.99995303 -0.0096903061 0 0.99995303 -0.0096903061
 		 0 0.99995303 -0.0096903061 0 0.023099309 -0.99973315 0 0.023099309 -0.99973315 0
@@ -43049,8 +41739,8 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 -0.0045966622 0 0.99998939 -0.0045966622 0 0.99998939 -0.0045966622 0 0.99998945
 		 -0.0045966627 0 0.99998945 -0.0045966627 0 0.99998945 -0.0045966627 0 0.99998945
 		 -0.0045966627 0.0016198955 0.007009482 0.99997413 0.0015555207 0.0090723019 0.9999575
-		 0.0015630594 0.008830755 0.99995983 0.0016198956 0.0070094825 0.99997413 -1 -1.2420818e-008
-		 0 -1 -1.2420815e-008 0 -1 -2.6720366e-008 0 -1 -2.6720366e-008 0 -0.0018217278 -0.0072983364
+		 0.0015630594 0.008830755 0.99995983 0.0016198956 0.0070094825 0.99997413 -1 -1.2420818e-08
+		 0 -1 -1.2420815e-08 0 -1 -2.6720366e-08 0 -1 -2.6720366e-08 0 -0.0018217278 -0.0072983364
 		 -0.99997175 -0.0016913519 -0.0090631275 -0.99995744 -0.001675238 -0.0092812432 -0.99995548
 		 -0.001821728 -0.0072983364 -0.99997175 0.025352951 -0.0050243912 -0.99966592 0.025824286
 		 -0.005413848 -0.99965179 0.084018767 -0.053544916 -0.99502444 0.025352949 -0.0050243908
@@ -43063,29 +41753,29 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 0.014784753 0.99988925 -0.0016676509 0.014784754 0.99988931 -0.0016676509 0.014784754
 		 0.99988931 -0.0016676506 0.014784752 0.99988925 -0.0039850525 0.011783904 0.99992263
 		 -0.0039850525 0.011783903 0.99992257 -0.0039850525 0.011783904 0.99992263 -0.003985052
-		 0.011783903 0.99992263 -0.99999994 9.4661019e-008 0 -0.99999988 9.4661011e-008 0
-		 -0.99999994 9.4661004e-008 0 -0.99999994 9.4661004e-008 0 0.002636347 -0.011076636
-		 -0.99993527 0.0026363467 -0.011076635 -0.99993509 0.002636347 -0.011076636 -0.99993521
-		 0.0026363465 -0.011076635 -0.99993509 0.0016856003 -0.014687839 -0.99989063 0.0016856001
-		 -0.014687839 -0.99989063 0.0016856006 -0.014687841 -0.9998908 0.0016856004 -0.014687839
-		 -0.99989074 0.00081271282 -0.012073545 -0.99992681 0.00081271277 -0.012073545 -0.99992681
-		 0.00081271277 -0.012073543 -0.99992675 0.00081271271 -0.012073542 -0.99992675 -0.0032302719
-		 -0.011387031 -0.99992996 -0.0032302719 -0.01138703 -0.9999299 -0.0032302714 -0.011387029
-		 -0.99992985 -0.0032302716 -0.011387031 -0.99992985 0.99999988 0 0 0.99999988 0 0
-		 0.99999988 0 0 0.99999982 0 0 0.0040522921 0.011819068 0.99992192 0.0040522921 0.011819068
-		 0.99992192 0.0040522921 0.011819067 0.99992192 0.0040522926 0.011819068 0.99992204
-		 -0.0016250976 0.012226529 0.99992394 -0.0016250978 0.012226529 0.999924 -0.0016250977
-		 0.012226528 0.99992388 -0.0016250974 0.012226528 0.99992383 0.01891003 0.0050241249
-		 0.99980855 0.019411549 0.0054918663 0.99979645 0.057625525 0.041149635 0.99748987
-		 0.018910028 0.0050241244 0.99980849 0.019411549 0.0054918663 0.99979645 0.068533622
-		 0.051334422 0.99632722 0.068533614 0.051334422 0.99632722 0.057625525 0.041149635
-		 0.99748987 0 0.0096957516 0.99995297 0 0.0096957516 0.99995291 0 0.0096957516 0.99995291
-		 0 0.0096957516 0.99995291 0 0.99961931 -0.027590297 0 0.99961931 -0.027590297 0 0.99961931
-		 -0.027590297 0 0.99961931 -0.027590297 0 0.0096951816 0.99995291 0 0.0096951816 0.99995291
-		 0 0.0096951816 0.99995291 0 0.0096951816 0.99995291 0 -0.99961674 0.027682593 0 -0.99961674
-		 0.027682593 0 -0.99961674 0.027682593 0 -0.99961674 0.027682593 0 -0.99995303 0.0096954433
-		 0 -0.99995303 0.0096954433 0 -0.99995303 0.0096954433 0 -0.99995303 0.0096954433
-		 0 -0.0096966485 -0.99995291 0 -0.0096966485 -0.99995291 0 -0.0096966485 -0.99995291
+		 0.011783903 0.99992263 -0.99999994 9.4661019e-08 0 -0.99999988 9.4661011e-08 0 -0.99999994
+		 9.4661004e-08 0 -0.99999994 9.4661004e-08 0 0.002636347 -0.011076636 -0.99993527
+		 0.0026363467 -0.011076635 -0.99993509 0.002636347 -0.011076636 -0.99993521 0.0026363465
+		 -0.011076635 -0.99993509 0.0016856003 -0.014687839 -0.99989063 0.0016856001 -0.014687839
+		 -0.99989063 0.0016856006 -0.014687841 -0.9998908 0.0016856004 -0.014687839 -0.99989074
+		 0.00081271282 -0.012073545 -0.99992681 0.00081271277 -0.012073545 -0.99992681 0.00081271277
+		 -0.012073543 -0.99992675 0.00081271271 -0.012073542 -0.99992675 -0.0032302719 -0.011387031
+		 -0.99992996 -0.0032302719 -0.01138703 -0.9999299 -0.0032302714 -0.011387029 -0.99992985
+		 -0.0032302716 -0.011387031 -0.99992985 0.99999988 0 0 0.99999988 0 0 0.99999988 0
+		 0 0.99999982 0 0 0.0040522921 0.011819068 0.99992192 0.0040522921 0.011819068 0.99992192
+		 0.0040522921 0.011819067 0.99992192 0.0040522926 0.011819068 0.99992204 -0.0016250976
+		 0.012226529 0.99992394 -0.0016250978 0.012226529 0.999924 -0.0016250977 0.012226528
+		 0.99992388 -0.0016250974 0.012226528 0.99992383 0.01891003 0.0050241249 0.99980855
+		 0.019411549 0.0054918663 0.99979645 0.057625525 0.041149635 0.99748987 0.018910028
+		 0.0050241244 0.99980849 0.019411549 0.0054918663 0.99979645 0.068533622 0.051334422
+		 0.99632722 0.068533614 0.051334422 0.99632722 0.057625525 0.041149635 0.99748987
+		 0 0.0096957516 0.99995297 0 0.0096957516 0.99995291 0 0.0096957516 0.99995291 0 0.0096957516
+		 0.99995291 0 0.99961931 -0.027590297 0 0.99961931 -0.027590297 0 0.99961931 -0.027590297
+		 0 0.99961931 -0.027590297 0 0.0096951816 0.99995291 0 0.0096951816 0.99995291 0 0.0096951816
+		 0.99995291 0 0.0096951816 0.99995291 0 -0.99961674 0.027682593 0 -0.99961674 0.027682593
+		 0 -0.99961674 0.027682593 0 -0.99961674 0.027682593 0 -0.99995303 0.0096954433 0
+		 -0.99995303 0.0096954433 0 -0.99995303 0.0096954433 0 -0.99995303 0.0096954433 0
+		 -0.0096966485 -0.99995291 0 -0.0096966485 -0.99995291 0 -0.0096966485 -0.99995291
 		 0 -0.0096966485 -0.99995291 0 -0.0096953334 -0.99995291 0 -0.0096953334 -0.99995291
 		 0 -0.0096953325 -0.99995291 0 -0.0096953334 -0.99995297 -0.059429538 -0.042483792
 		 -0.99732804 -0.07144291 -0.053187758 -0.99602562 -0.071442917 -0.053187758 -0.99602556
@@ -43095,46 +41785,46 @@ createNode mesh -n "polySurface1283Shape" -p "polySurface1283";
 		 -0.00061698304 -0.011600035 -0.99993235 -0.00061698316 -0.011600038 -0.99993253 0
 		 -0.0096943183 -0.99995291 0 -0.0096943183 -0.99995291 0 -0.0096943183 -0.99995291
 		 0 -0.0096943183 -0.99995291 0 0.99995303 -0.0096949032 0 0.99995303 -0.0096949032
-		 0 0.99995303 -0.0096949032 0 0.99995303 -0.0096949032 -2.2761944e-007 0.99961668
-		 -0.027688375 -2.2761944e-007 0.99961668 -0.027688375 -2.2761944e-007 0.99961668 -0.027688375
-		 -2.2761944e-007 0.99961668 -0.027688375 0 0.0096958689 0.99995297 0 0.0096958689
-		 0.99995297 0 0.0096958689 0.99995297 0 0.0096958689 0.99995297 0 -0.99961931 0.027590087
-		 0 -0.99961931 0.027590087 0 -0.99961931 0.027590087 0 -0.99961931 0.027590087 0.0018994107
-		 0.011806969 0.99992841 0.0018994109 0.01180697 0.99992853 0.0018994109 0.01180697
-		 0.99992847 0.001899411 0.011806971 0.99992853 -1.3877217e-007 -0.99961925 0.027592348
-		 -1.3877217e-007 -0.99961931 0.02759235 -1.3877217e-007 -0.99961931 0.02759235 -1.3877217e-007
-		 -0.99961919 0.027592348 0.0014652261 0.015058476 0.9998855 0.0014652261 0.015058475
-		 0.9998855 0.0014652261 0.015058476 0.99988556 0.0014652261 0.015058476 0.99988556
-		 -0.017391294 0.051799387 0.99850595 -0.017391294 0.051799387 0.99850601 -0.017391294
-		 0.05179939 0.99850613 -0.017391294 0.051799383 0.99850601 -0.0029483286 0.011013235
-		 0.99993491 -0.0029483289 0.011013235 0.99993503;
+		 0 0.99995303 -0.0096949032 0 0.99995303 -0.0096949032 -2.2761944e-07 0.99961668 -0.027688375
+		 -2.2761944e-07 0.99961668 -0.027688375 -2.2761944e-07 0.99961668 -0.027688375 -2.2761944e-07
+		 0.99961668 -0.027688375 0 0.0096958689 0.99995297 0 0.0096958689 0.99995297 0 0.0096958689
+		 0.99995297 0 0.0096958689 0.99995297 0 -0.99961931 0.027590087 0 -0.99961931 0.027590087
+		 0 -0.99961931 0.027590087 0 -0.99961931 0.027590087 0.0018994107 0.011806969 0.99992841
+		 0.0018994109 0.01180697 0.99992853 0.0018994109 0.01180697 0.99992847 0.001899411
+		 0.011806971 0.99992853 -1.3877217e-07 -0.99961925 0.027592348 -1.3877217e-07 -0.99961931
+		 0.02759235 -1.3877217e-07 -0.99961931 0.02759235 -1.3877217e-07 -0.99961919 0.027592348
+		 0.0014652261 0.015058476 0.9998855 0.0014652261 0.015058475 0.9998855 0.0014652261
+		 0.015058476 0.99988556 0.0014652261 0.015058476 0.99988556 -0.017391294 0.051799387
+		 0.99850595 -0.017391294 0.051799387 0.99850601 -0.017391294 0.05179939 0.99850613
+		 -0.017391294 0.051799383 0.99850601 -0.0029483286 0.011013235 0.99993491 -0.0029483289
+		 0.011013235 0.99993503;
 	setAttr ".n[1162:1235]" -type "float3"  -0.0029483286 0.011013234 0.99993497
 		 -0.0029483286 0.011013234 0.99993497 0 0.99961936 -0.027590232 0 0.99961936 -0.027590232
 		 0 0.99961936 -0.027590232 0 0.99961936 -0.027590232 0 0.0096951807 0.99995297 0 0.0096951807
 		 0.99995297 0 0.0096951807 0.99995297 0 0.0096951807 0.99995297 0 -0.99961674 0.027681997
-		 0 -0.9996168 0.027681999 0 -0.9996168 0.027681999 0 -0.99961674 0.027681997 9.7163566e-009
-		 -0.99995303 0.0096955243 9.7163566e-009 -0.99995297 0.0096955253 9.7163584e-009 -0.99995309
-		 0.0096955253 9.7163566e-009 -0.99995303 0.0096955243 0 -0.0096966503 -0.99995303
-		 0 -0.0096966503 -0.99995303 0 -0.0096966503 -0.99995303 0 -0.0096966503 -0.99995303
+		 0 -0.9996168 0.027681999 0 -0.9996168 0.027681999 0 -0.99961674 0.027681997 9.7163566e-09
+		 -0.99995303 0.0096955243 9.7163566e-09 -0.99995297 0.0096955253 9.7163584e-09 -0.99995309
+		 0.0096955253 9.7163566e-09 -0.99995303 0.0096955243 0 -0.0096966503 -0.99995303 0
+		 -0.0096966503 -0.99995303 0 -0.0096966503 -0.99995303 0 -0.0096966503 -0.99995303
 		 0.0029473137 -0.011012546 -0.99993497 0.0029473135 -0.011012545 -0.99993497 0.0029473135
 		 -0.011012546 -0.99993503 0.0029473137 -0.011012545 -0.99993497 0.017727932 -0.053075053
 		 -0.99843311 0.017727932 -0.05307506 -0.99843317 0.017727932 -0.05307506 -0.99843317
 		 0.017727934 -0.053075064 -0.99843323 -0.0014824953 -0.01495736 -0.99988711 -0.0014824953
 		 -0.01495736 -0.99988705 -0.0014824952 -0.01495736 -0.99988699 -0.0014824953 -0.014957359
 		 -0.99988699 0 -0.0096943164 -0.99995297 0 -0.0096943164 -0.99995297 0 -0.0096943164
-		 -0.99995297 0 -0.0096943164 -0.99995297 -1.4574519e-007 0.99995291 -0.009695203 -1.4574519e-007
-		 0.99995291 -0.009695203 -1.4574519e-007 0.99995291 -0.009695203 -1.4574519e-007 0.99995291
-		 -0.009695203 -2.697916e-007 0.99961656 -0.027687548 -2.697916e-007 0.99961668 -0.027687546
-		 -2.697916e-007 0.99961668 -0.027687546 -2.6979163e-007 0.99961662 -0.027687546 0
-		 0.0096940985 0.99995303 0 0.0096940976 0.99995297 0 0.0096940985 0.99995303 0 0.0096940985
-		 0.99995303 0.21282193 0.97692943 -0.017770045 0.21282195 0.97692943 -0.017770046
-		 0.21282193 0.97692925 -0.017770045 0.21282193 0.97692937 -0.017770045 -0.20774035
-		 0.97802228 -0.017789835 -0.20774034 0.97802222 -0.017789833 -0.20774031 0.97802216
-		 -0.017789831 -0.20774034 0.97802216 -0.017789831 1 0 0 0.99999988 0 0 0.99999994
-		 0 0 1 0 0 -0.99999994 0 0 -1 0 0 -1 0 0 -1 0 0 -0.16079642 -0.98682439 0.017950445
-		 -0.1607964 -0.98682433 0.017950444 -0.1607964 -0.98682433 0.017950445 -0.16079642
-		 -0.98682439 0.017950445 0.18538018 -0.98250431 0.017871447 0.18538021 -0.98250437
-		 0.017871451 0.18538019 -0.98250431 0.017871451 0.18538019 -0.98250437 0.017871452;
+		 -0.99995297 0 -0.0096943164 -0.99995297 -1.4574519e-07 0.99995291 -0.009695203 -1.4574519e-07
+		 0.99995291 -0.009695203 -1.4574519e-07 0.99995291 -0.009695203 -1.4574519e-07 0.99995291
+		 -0.009695203 -2.697916e-07 0.99961656 -0.027687548 -2.697916e-07 0.99961668 -0.027687546
+		 -2.697916e-07 0.99961668 -0.027687546 -2.6979163e-07 0.99961662 -0.027687546 0 0.0096940985
+		 0.99995303 0 0.0096940976 0.99995297 0 0.0096940985 0.99995303 0 0.0096940985 0.99995303
+		 0.21282193 0.97692943 -0.017770045 0.21282195 0.97692943 -0.017770046 0.21282193
+		 0.97692925 -0.017770045 0.21282193 0.97692937 -0.017770045 -0.20774035 0.97802228
+		 -0.017789835 -0.20774034 0.97802222 -0.017789833 -0.20774031 0.97802216 -0.017789831
+		 -0.20774034 0.97802216 -0.017789831 1 0 0 0.99999988 0 0 0.99999994 0 0 1 0 0 -0.99999994
+		 0 0 -1 0 0 -1 0 0 -1 0 0 -0.16079642 -0.98682439 0.017950445 -0.1607964 -0.98682433
+		 0.017950444 -0.1607964 -0.98682433 0.017950445 -0.16079642 -0.98682439 0.017950445
+		 0.18538018 -0.98250431 0.017871447 0.18538021 -0.98250437 0.017871451 0.18538019
+		 -0.98250431 0.017871451 0.18538019 -0.98250437 0.017871452;
 	setAttr -s 305 -ch 1236 ".fc[0:304]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
@@ -44009,49 +42699,6 @@ createNode mesh -n "pCube6Shape" -p "pCube6";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 7 ".lnk";
-	setAttr -s 7 ".slnk";
-createNode displayLayerManager -n "layerManager";
-	setAttr -s 2 ".dli[1]"  1;
-	setAttr -s 2 ".dli";
-createNode displayLayer -n "defaultLayer";
-createNode renderLayerManager -n "renderLayerManager";
-createNode renderLayer -n "defaultRenderLayer";
-	setAttr ".g" yes;
-createNode lambert -n "escapePod_mat";
-createNode shadingEngine -n "polySurface862SG";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo1";
-createNode shadingEngine -n "polySurface862SG1";
-	setAttr ".ihi" 0;
-	setAttr -s 122 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo2";
-createNode file -n "n_escapePod";
-	setAttr ".ftn" -type "string" "C:/Users/Jonathan/Dropbox/Game Workshop II/anna's rush order/part4/escapePod_ja.psd";
-createNode place2dTexture -n "place2dTexture1";
-createNode bump2d -n "bump2d1";
-	setAttr ".bd" 0.090000003576278687;
-	setAttr ".bi" 1;
-	setAttr ".vc2" -type "float3" 9.9999997e-006 9.9999997e-006 0 ;
-createNode file -n "n_escapePodNormal";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "/Users/amf336/Desktop/jon0310/escapePodNormal_ja.psd";
-createNode place2dTexture -n "place2dTexture2";
-createNode phong -n "blinn1";
-	setAttr ".it" -type "float3" 0.89742887 0.89742887 0.89742887 ;
-	setAttr ".cp" 6.311790943145752;
-createNode shadingEngine -n "polySurface1285SG";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo3";
-createNode shadingEngine -n "polySurface1285SG1";
-	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo4";
 createNode animCurveTL -n "camera1_translateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
@@ -44104,12 +42751,50 @@ createNode animCurveTA -n "camera1_rotateY";
 createNode animCurveTA -n "camera1_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 140 0 250 0 313 3.9875920935634422e-016
-		 351 2.1167467171937253e-016 450 4.1709318456010444e-016;
+	setAttr -s 6 ".ktv[0:5]"  1 0 140 0 250 0 313 3.9875920935634422e-16
+		 351 2.1167467171937253e-16 450 4.1709318456010444e-16;
 	setAttr -s 6 ".kix[0:5]"  1 1 1 1 1 1;
 	setAttr -s 6 ".kiy[0:5]"  0 0 0 0 0 0;
 	setAttr -s 6 ".kox[0:5]"  1 1 1 1 1 1;
 	setAttr -s 6 ".koy[0:5]"  0 0 0 0 0 0;
+createNode displayLayer -n "layer1";
+	setAttr ".do" 1;
+createNode displayLayerManager -n "layerManager";
+	setAttr -s 2 ".dli[1]"  1;
+	setAttr -s 2 ".dli";
+createNode materialInfo -n "materialInfo2";
+createNode shadingEngine -n "polySurface862SG1";
+	setAttr ".ihi" 0;
+	setAttr -s 122 ".dsm";
+	setAttr ".ro" yes;
+createNode lambert -n "escapePod_mat";
+createNode file -n "n_escapePod";
+	setAttr ".ftn" -type "string" "C:/Users/Jonathan/Dropbox/Game Workshop II/anna's rush order/part4/escapePod_ja.psd";
+createNode place2dTexture -n "place2dTexture1";
+createNode bump2d -n "bump2d1";
+	setAttr ".bd" 0.090000003576278687;
+	setAttr ".bi" 1;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "n_escapePodNormal";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "/Users/amf336/Desktop/jon0310/escapePodNormal_ja.psd";
+createNode place2dTexture -n "place2dTexture2";
+createNode materialInfo -n "materialInfo5";
+createNode shadingEngine -n "lambert2SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "escapePodFloor_mat";
+createNode file -n "file1";
+	setAttr ".ftn" -type "string" "C:/Users/Jonathan/Dropbox/Game Workshop II/anna's rush order/part4/escapePodFloor_ja.psd";
+createNode place2dTexture -n "place2dTexture3";
+createNode materialInfo -n "materialInfo4";
+createNode shadingEngine -n "polySurface1285SG1";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode phong -n "blinn1";
+	setAttr ".it" -type "float3" 0.89742887 0.89742887 0.89742887 ;
+	setAttr ".cp" 6.311790943145752;
 createNode animCurveTL -n "polySurface901_translateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
@@ -44300,7 +42985,7 @@ createNode animCurveTA -n "polySurface1247_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 23 ".ktv[0:22]"  160 0 170 0 170.004 0 173 -2.9561538696289062
 		 179 3.0560307502746582 184 0 260 0 263 1.3622612953186035 266 0 270 -5.0297555923461914
-		 274 3.0348477363586426 277 -4.9588122367858887 280 0 286 -3.0103788375854492 293 1.7043323516845703
+		 274 3.0348477363586426 277 -4.9588122367858896 280 0 286 -3.0103788375854492 293 1.7043323516845703
 		 300 -1.3617825508117676 304 3.6383118629455566 310 0 315 -2.5301103591918945 320 0.9390154480934142
 		 325 -2.83249831199646 330 0.086372636258602142 335 0;
 	setAttr -s 23 ".kix[0:22]"  1 1 1 1 1 1 1 1 0.93400681018829346 1 1 
@@ -44315,10 +43000,10 @@ createNode animCurveTA -n "polySurface1247_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 23 ".ktv[0:22]"  160 0 170 0 170.004 0 173 0 179 0.077725425362586975
-		 184 0 260 0 263 0 266 0 270 -1.8636063217825718e-017 274 0 277 3.1060104673725687e-018
-		 280 0 286 1.9412565421078554e-019 293 -0.69593048095703125 300 -0.43911746144294739
-		 304 -0.2255984544754028 310 0 315 1.2424041869490275e-017 320 -9.3180316089128591e-018
-		 325 0 330 7.7650261684314217e-019 335 0;
+		 184 0 260 0 263 0 266 0 270 -1.8636063217825718e-17 274 0 277 3.1060104673725687e-18
+		 280 0 286 1.9412565421078554e-19 293 -0.69593048095703125 300 -0.43911746144294739
+		 304 -0.2255984544754028 310 0 315 1.2424041869490275e-17 320 -9.3180316089128591e-18
+		 325 0 330 7.7650261684314217e-19 335 0;
 	setAttr -s 23 ".kix[0:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.99983960390090942 
 		0.99983084201812744 1 1 1 1 1 1;
 	setAttr -s 23 ".kiy[0:22]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01790732704102993 
@@ -44407,7 +43092,7 @@ createNode animCurveTA -n "polySurface1274_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  160 0 172 0 174 1.3653469085693359 177 0
 		 179 -1.3383637666702271 182 0 260 0 264 3.1699898242950439 268 0 273 -2.9722661972045898
-		 281 -0.2108234316110611 288 -2.9734725952148437 296 0 300 4.1610174179077148 304 0.24728004634380338
+		 281 -0.2108234316110611 288 -2.9734725952148438 296 0 300 4.1610174179077148 304 0.24728004634380338
 		 308 1.3455288410186768 313 0 323 0 335 0;
 	setAttr -s 19 ".kix[0:18]"  1 1 1 0.97529435157775879 1 1 1 1 0.96148353815078735 
 		1 1 1 0.97036111354827881 1 1 1 1 1 1;
@@ -44421,9 +43106,9 @@ createNode animCurveTA -n "polySurface1274_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  160 0 172 0 174 -0.032714046537876129 177 0
-		 179 -1.5530052336862843e-018 182 0 260 0 264 -6.2120209347451373e-018 268 0 273 0
-		 281 -4.6590158044564296e-018 288 4.9696167477961099e-017 296 0 300 0.77294105291366577
-		 304 0.59843963384628296 308 0.27548220753669739 313 0 323 0 335 0;
+		 179 -1.5530052336862843e-18 182 0 260 0 264 -6.2120209347451373e-18 268 0 273 0 281 -4.6590158044564296e-18
+		 288 4.9696167477961099e-17 296 0 300 0.77294105291366577 304 0.59843963384628296
+		 308 0.27548220753669739 313 0 323 0 335 0;
 	setAttr -s 19 ".kix[0:18]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.9996609091758728 
 		0.99961233139038086 1 1 1;
 	setAttr -s 19 ".kiy[0:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.026038048788905144 
@@ -44510,7 +43195,7 @@ createNode animCurveTA -n "screenExtend_1_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 24 ".ktv[0:23]"  175 0 185 0 189 0 193 0 195 0 198 0 260 0
 		 265 0 269 0 272 0 274 0 290 0 295 0 301 0 307 0 311 0 320 0 335 0 336 0 340 0.16726045310497284
-		 344 -0.38133302330970764 347 0.35237446427345276 350 0.3074411153793335 352 0.36000201106071472;
+		 344 -0.3813330233097077 347 0.35237446427345276 350 0.3074411153793335 352 0.36000201106071472;
 	setAttr -s 24 ".kix[0:23]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1;
 	setAttr -s 24 ".kiy[0:23]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -44537,12 +43222,12 @@ createNode animCurveTA -n "screenExtend_1_rotateY";
 createNode animCurveTA -n "screenExtend_1_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  175 82.391441345214844 185 -26.368810653686523
-		 189 -25.115480422973633 193 -26.368810653686523 195 -23.516124725341797 198 -26.368810653686523
-		 260 -26.368810653686523 265 -17.957391738891602 269 -20.200239181518555 272 -17.221912384033203
+	setAttr -s 24 ".ktv[0:23]"  175 82.391441345214844 185 -26.368810653686527
+		 189 -25.115480422973633 193 -26.368810653686527 195 -23.516124725341797 198 -26.368810653686527
+		 260 -26.368810653686527 265 -17.957391738891602 269 -20.200239181518555 272 -17.221912384033203
 		 274 -20.200239181518555 290 -27.862436294555664 295 -26.442195892333984 301 -27.862436294555664
-		 307 -24.175149917602539 311 -27.862436294555664 320 -20.614788055419922 335 -26.368810653686523
-		 336 -26.368810653686523 340 -19.525848388671875 344 -10.594623565673828 347 0.63466298580169678
+		 307 -24.175149917602539 311 -27.862436294555664 320 -20.614788055419922 335 -26.368810653686527
+		 336 -26.368810653686527 340 -19.525848388671875 344 -10.594623565673828 347 0.63466298580169678
 		 350 -3.0312678813934326 352 1.2684781551361084;
 	setAttr -s 24 ".ktl[17:23]" no yes yes yes yes yes yes;
 	setAttr -s 24 ".kix[0:23]"  1 1 1 1 1 1 1 1 1 1 0.97068452835083008 
@@ -44556,10 +43241,10 @@ createNode animCurveTA -n "screenExtend_1_rotateZ";
 createNode animCurveTA -n "screenExtend_2_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  180 0 190 0 260 0 264 0 269 -4.9704889270339852e-017
-		 273 0 276 -4.970258970823696e-017 282 0 295 0 300 0 304 4.9712330587130385e-017 311 -0.43630188703536987
+	setAttr -s 24 ".ktv[0:23]"  180 0 190 0 260 0 264 0 269 -4.9704889270339852e-17
+		 273 0 276 -4.9702589708236973e-17 282 0 295 0 300 0 304 4.9712330587130385e-17 311 -0.43630188703536987
 		 322 -0.39195367693901062 327 -0.41683042049407959 335 0 336 0 339 0 342 0.50385898351669312
-		 345 -0.024890486150979996 348 -4.9755893226909877e-017 350 0 354 0 356 0 358 0;
+		 345 -0.024890486150979996 348 -4.9755893226909877e-17 350 0 354 0 356 0 358 0;
 	setAttr -s 24 ".ktl[14:23]" no yes yes yes yes yes yes yes yes yes;
 	setAttr -s 24 ".kix[0:23]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1;
@@ -44590,9 +43275,9 @@ createNode animCurveTA -n "screenExtend_2_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 24 ".ktv[0:23]"  180 0 190 -161.46342468261719 260 -161.46342468261719
 		 264 -179.67376708984375 269 -150.33509826660156 273 -167.11274719238281 276 -161.19761657714844
-		 282 -158.930908203125 295 -164.68620300292969 300 -162.12777709960937 304 -165.33760070800781
-		 311 -164.60543823242187 322 -155.88314819335937 327 -160.54013061523437 335 -161.46342468261719
-		 336 -161.46342468261719 339 -161.46342468261719 342 -171.44869995117187 345 -184.41291809082031
+		 282 -158.930908203125 295 -164.68620300292969 300 -162.12777709960938 304 -165.33760070800781
+		 311 -164.60543823242188 322 -155.88314819335938 327 -160.54013061523438 335 -161.46342468261719
+		 336 -161.46342468261719 339 -161.46342468261719 342 -171.44869995117188 345 -184.41291809082031
 		 348 -161.46342468261719 350 -158.51202392578125 354 -177.2950439453125 356 -172.3984375
 		 358 -173.64276123046875;
 	setAttr -s 24 ".ktl[14:23]" no yes yes yes yes yes yes yes yes yes;
@@ -44620,9 +43305,9 @@ createNode animCurveTA -n "screenExtend_3_rotateX";
 createNode animCurveTA -n "screenExtend_3_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  189 0 197 -91.987503051757813 201 -89.523353576660156
-		 205 -90.645767211914063 336 -90.645767211914063 341 -89.351654052734375 344 -93.436721801757812
-		 348 -88.798065185546875 351 -92.761810302734375 354 -90.645767211914063;
+	setAttr -s 10 ".ktv[0:9]"  189 0 197 -91.987503051757812 201 -89.523353576660156
+		 205 -90.645767211914062 336 -90.645767211914062 341 -89.351654052734375 344 -93.436721801757812
+		 348 -88.798065185546875 351 -92.761810302734375 354 -90.645767211914062;
 	setAttr -s 10 ".kix[0:9]"  1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 10 ".kiy[0:9]"  0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 10 ".kox[0:9]"  1 1 1 1 1 1 1 1 1 1;
@@ -44649,9 +43334,9 @@ createNode animCurveTA -n "screenExtend_4_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  196 0 207 283.25003051757812 211 271.94976806640625
-		 213 274.10421752929687 216 271.94976806640625 336 271.94976806640625 340 269.40280151367187
-		 343 275.4302978515625 346 270.81689453125 352 157.17036437988281 356 194.03868103027344
-		 359 177.01959228515625 361 185.04827880859375 363 180.201416015625;
+		 213 274.10421752929688 216 271.94976806640625 336 271.94976806640625 340 269.40280151367188
+		 343 275.4302978515625 346 270.81689453125 352 157.17036437988281 356 194.03868103027347
+		 359 177.01959228515628 361 185.04827880859378 363 180.201416015625;
 	setAttr -s 14 ".kix[0:13]"  1 1 1 1 1 1 1 1 0.45958712697029114 1 1 
 		1 1 1;
 	setAttr -s 14 ".kiy[0:13]"  0 0 0 0 0 0 0 0 -0.88813269138336182 0 
@@ -44696,7 +43381,7 @@ createNode animCurveTA -n "screenExtend_1_rotateY1";
 	setAttr -s 26 ".ktv[0:25]"  215 0 227 0 230 0 235 0 237 0 240 0 260 0
 		 266 -0.30704867839813232 272 -0.01034967415034771 276 -1.0565353631973267 280 -0.98000830411911011
 		 283 -0.97083741426467896 286 -0.96649932861328136 291 -0.96153485774993896 300 -0.96648293733596802
-		 304 -0.96913999319076549 308 -0.96122050285339355 315 -0.28300678730010986 320 -0.97163379192352306
+		 304 -0.96913999319076549 308 -0.96122050285339355 315 -0.28300678730010992 320 -0.97163379192352306
 		 323 -1.62762451171875 335 0 336 0 340 0 350 0 365 0 375 0;
 	setAttr -s 26 ".ktl[20:25]" no yes yes yes yes yes;
 	setAttr -s 26 ".kix[0:25]"  1 1 1 1 1 1 1 1 1 1 0.99999260902404785 
@@ -44717,7 +43402,7 @@ createNode animCurveTA -n "screenExtend_1_rotateZ1";
 	setAttr -s 26 ".ktv[0:25]"  215 82.391441345214844 227 -17.871284484863281
 		 230 -20.335960388183594 235 -16.53938102722168 237 -19.743337631225586 240 -17.871284484863281
 		 260 -17.871284484863281 266 -11.001927375793457 272 3.1893630027770996 276 10.880167961120605
-		 280 20.972297668457031 283 16.641254425048828 286 20.17988395690918 291 22.548711776733398
+		 280 20.972297668457031 283 16.641254425048832 286 20.17988395690918 291 22.548711776733398
 		 300 8.3381814956665039 304 10.124759674072266 308 5.8510780334472656 315 10.317952156066895
 		 320 14.783235549926758 323 19.519811630249023 335 -17.871284484863281 336 -17.871284484863281
 		 340 -21.116559982299805 350 86.621467590332031 365 25.934988021850586 375 43.754570007324219;
@@ -44737,8 +43422,8 @@ createNode animCurveTA -n "screenExtend_1_rotateZ1";
 createNode animCurveTA -n "screenExtend_2_rotateX1";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  225 0 235 0 260 0 270 0 274 1.2426839394321929e-017
-		 278 6.2135847196931688e-018 284 0 287 0 294 0 305 0 307 0 321 0 327 0 335 0 336 0
+	setAttr -s 23 ".ktv[0:22]"  225 0 235 0 260 0 270 0 274 1.2426839394321929e-17
+		 278 6.2135847196931688e-18 284 0 287 0 294 0 305 0 307 0 321 0 327 0 335 0 336 0
 		 349 0 352 0 356 0 359 0 361 0 363 0 371 -0.55320411920547485 375 -0.52638012170791626;
 	setAttr -s 23 ".kix[0:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1;
@@ -44765,10 +43450,10 @@ createNode animCurveTA -n "screenExtend_2_rotateY1";
 createNode animCurveTA -n "screenExtend_2_rotateZ1";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  225 0 235 -185.43011474609375 260 -185.43011474609375
+	setAttr -s 23 ".ktv[0:22]"  225 0 235 -185.43011474609378 260 -185.43011474609378
 		 270 -194.34930419921875 274 -187.98863220214844 278 -177.7076416015625 284 -166.90653991699219
 		 287 -177.68852233886719 294 -174.34413146972656 305 -179.86393737792969 307 -174.93801879882812
-		 321 -189.502197265625 327 -176.94044494628906 335 -185.43011474609375 336 -185.43011474609375
+		 321 -189.502197265625 327 -176.94044494628906 335 -185.43011474609378 336 -185.43011474609378
 		 349 -203.29592895507812 352 -165.2789306640625 356 -187.13230895996094 359 -169.43829345703125
 		 361 -175.37464904785156 363 -174.02522277832031 371 -180.7882080078125 375 -179.00042724609375;
 	setAttr -s 23 ".kix[0:22]"  1 1 1 1 0.75393682718276978 0.7495657205581665 
@@ -44790,7 +43475,7 @@ createNode animCurveTA -n "screenExtend_3_rotateX1";
 createNode animCurveTA -n "screenExtend_3_rotateY1";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  234 0 243 -91.860557556152344 248 -83.9486083984375
+	setAttr -s 4 ".ktv[0:3]"  234 0 243 -91.860557556152358 248 -83.9486083984375
 		 253 -89.980514526367188;
 	setAttr -s 4 ".kix[0:3]"  1 1 1 1;
 	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
@@ -44815,7 +43500,7 @@ createNode animCurveTA -n "screenExtend_4_rotateX1";
 createNode animCurveTA -n "screenExtend_4_rotateY1";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  242 0 250 270.48199462890625 253 265.64401245117187
+	setAttr -s 4 ".ktv[0:3]"  242 0 250 270.48199462890625 253 265.64401245117188
 		 258 270.48199462890625;
 	setAttr -s 4 ".kix[0:3]"  1 1 1 1;
 	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
@@ -44829,6 +43514,31 @@ createNode animCurveTA -n "screenExtend_4_rotateZ1";
 	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
 	setAttr -s 4 ".kox[0:3]"  1 1 1 1;
 	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode animCurveTA -n "doorHandle_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  30 0 48 0 52 0 56 0 60 0 68 0 80 0;
+	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
+createNode animCurveTA -n "doorHandle_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  30 0 48 0 52 0 56 0 60 0 68 0 80 0;
+	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
+createNode animCurveTA -n "doorHandle_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  30 0 48 -159.75051879882812 52 -151.90116882324219
+		 56 -159.75051879882812 60 -159.75051879882812 68 -170.71910095214847 80 -64.612319946289062;
+	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
+	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
+	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
 createNode animCurveTL -n "door_translateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
@@ -44857,8 +43567,8 @@ createNode animCurveTL -n "door_translateZ";
 createNode animCurveTA -n "door_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  77 0 81 -0.63778126239776611 85 0 90 0 112 -91.845001220703125
-		 119 -89.452293395996094 126 -91.845001220703125 130 -90.430320739746094 135 -91.845001220703125;
+	setAttr -s 9 ".ktv[0:8]"  77 0 81 -0.63778126239776611 85 0 90 0 112 -91.845001220703139
+		 119 -89.452293395996094 126 -91.845001220703139 130 -90.430320739746094 135 -91.845001220703139;
 	setAttr -s 9 ".kix[0:8]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 9 ".kiy[0:8]"  0 0 0 0 0 0 0 0 0;
 	setAttr -s 9 ".kox[0:8]"  1 1 1 1 1 1 1 1 1;
@@ -44881,108 +43591,12 @@ createNode animCurveTA -n "door_rotateZ";
 	setAttr -s 9 ".kiy[0:8]"  0 0 0 0 0 0 0 0 0;
 	setAttr -s 9 ".kox[0:8]"  1 1 1 1 1 1 1 1 1;
 	setAttr -s 9 ".koy[0:8]"  0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "doorHandle_rotateX";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  30 0 48 0 52 0 56 0 60 0 68 0 80 0;
-	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
-	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
-createNode animCurveTA -n "doorHandle_rotateY";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  30 0 48 0 52 0 56 0 60 0 68 0 80 0;
-	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
-	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
-createNode animCurveTA -n "doorHandle_rotateZ";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  30 0 48 -159.75051879882812 52 -151.90116882324219
-		 56 -159.75051879882812 60 -159.75051879882812 68 -170.71910095214844 80 -64.612319946289062;
-	setAttr -s 7 ".kix[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".kiy[0:6]"  0 0 0 0 0 0 0;
-	setAttr -s 7 ".kox[0:6]"  1 1 1 1 1 1 1;
-	setAttr -s 7 ".koy[0:6]"  0 0 0 0 0 0 0;
-createNode displayLayer -n "layer1";
-	setAttr ".do" 1;
-createNode lambert -n "escapePodFloor_mat";
-createNode shadingEngine -n "lambert2SG";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo5";
-createNode file -n "file1";
-	setAttr ".ftn" -type "string" "C:/Users/Jonathan/Dropbox/Game Workshop II/anna's rush order/part4/escapePodFloor_ja.psd";
-createNode place2dTexture -n "place2dTexture3";
-createNode script -n "uiConfigurationScriptNode";
-	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n"
-		+ "            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n"
-		+ "            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
-		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n"
-		+ "            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n"
-		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n"
-		+ "            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n"
-		+ "                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n"
-		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n"
-		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
-		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n"
-		+ "                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
-		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n"
-		+ "                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n"
-		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
-		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n"
-		+ "                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
-		+ "                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n"
-		+ "\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
-	setAttr ".st" 3;
-createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 720 -ast 1 -aet 720 ";
-	setAttr ".st" 6;
+createNode lightLinker -s -n "lightLinker1";
+	setAttr -s 7 ".lnk";
+	setAttr -s 7 ".slnk";
 select -ne :time1;
-	setAttr ".o" 435;
-	setAttr ".unw" 435;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 7 ".st";
 select -ne :initialShadingGroup;
@@ -45011,6 +43625,8 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
 connectAttr "camera1_translateZ.o" "camera1.tz";
@@ -45172,28 +43788,10 @@ connectAttr "doorHandle_rotateX.o" "doorHandle.rx";
 connectAttr "doorHandle_rotateY.o" "doorHandle.ry";
 connectAttr "doorHandle_rotateZ.o" "doorHandle.rz";
 connectAttr "layer1.di" "doorHandle.do";
-relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "polySurface862SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "polySurface862SG1.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "polySurface1285SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "polySurface1285SG1.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "polySurface862SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "polySurface862SG1.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "polySurface1285SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "polySurface1285SG1.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
-connectAttr "layerManager.dli[0]" "defaultLayer.id";
-connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "n_escapePod.oc" "escapePod_mat.c";
-connectAttr "bump2d1.o" "escapePod_mat.n";
-connectAttr "escapePod_mat.oc" "polySurface862SG.ss";
-connectAttr "polySurface862SG.msg" "materialInfo1.sg";
-connectAttr "escapePod_mat.msg" "materialInfo1.m";
-connectAttr "n_escapePod.msg" "materialInfo1.t" -na;
+connectAttr "layerManager.dli[1]" "layer1.id";
+connectAttr "polySurface862SG1.msg" "materialInfo2.sg";
+connectAttr "escapePod_mat.msg" "materialInfo2.m";
+connectAttr "n_escapePod.msg" "materialInfo2.t" -na;
 connectAttr "escapePod_mat.oc" "polySurface862SG1.ss";
 connectAttr "polySurface862Shape.iog" "polySurface862SG1.dsm" -na;
 connectAttr "polySurface863Shape.iog" "polySurface862SG1.dsm" -na;
@@ -45329,9 +43927,8 @@ connectAttr "|polySurface439|screenExtend_holder1|screenExtend_1|screenExtend_2|
 connectAttr "doorHandleShape.iog" "polySurface862SG1.dsm" -na;
 connectAttr "polySurface1282Shape.iog" "polySurface862SG1.dsm" -na;
 connectAttr "polySurface1283Shape.iog" "polySurface862SG1.dsm" -na;
-connectAttr "polySurface862SG1.msg" "materialInfo2.sg";
-connectAttr "escapePod_mat.msg" "materialInfo2.m";
-connectAttr "n_escapePod.msg" "materialInfo2.t" -na;
+connectAttr "n_escapePod.oc" "escapePod_mat.c";
+connectAttr "bump2d1.o" "escapePod_mat.n";
 connectAttr "place2dTexture1.o" "n_escapePod.uv";
 connectAttr "place2dTexture1.ofu" "n_escapePod.ofu";
 connectAttr "place2dTexture1.ofv" "n_escapePod.ofv";
@@ -45355,21 +43952,12 @@ connectAttr "place2dTexture2.vt2" "n_escapePodNormal.vt2";
 connectAttr "place2dTexture2.vt3" "n_escapePodNormal.vt3";
 connectAttr "place2dTexture2.vc1" "n_escapePodNormal.vc1";
 connectAttr "place2dTexture2.ofs" "n_escapePodNormal.fs";
-connectAttr "blinn1.oc" "polySurface1285SG.ss";
-connectAttr "polySurface1285SG.msg" "materialInfo3.sg";
-connectAttr "blinn1.msg" "materialInfo3.m";
-connectAttr "blinn1.oc" "polySurface1285SG1.ss";
-connectAttr "polySurface1285Shape.iog" "polySurface1285SG1.dsm" -na;
-connectAttr "pCube6Shape.iog" "polySurface1285SG1.dsm" -na;
-connectAttr "polySurface1285SG1.msg" "materialInfo4.sg";
-connectAttr "blinn1.msg" "materialInfo4.m";
-connectAttr "layerManager.dli[1]" "layer1.id";
-connectAttr "file1.oc" "escapePodFloor_mat.c";
-connectAttr "escapePodFloor_mat.oc" "lambert2SG.ss";
-connectAttr "polySurface868Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo5.sg";
 connectAttr "escapePodFloor_mat.msg" "materialInfo5.m";
 connectAttr "file1.msg" "materialInfo5.t" -na;
+connectAttr "escapePodFloor_mat.oc" "lambert2SG.ss";
+connectAttr "polySurface868Shape.iog" "lambert2SG.dsm" -na;
+connectAttr "file1.oc" "escapePodFloor_mat.c";
 connectAttr "place2dTexture3.c" "file1.c";
 connectAttr "place2dTexture3.tf" "file1.tf";
 connectAttr "place2dTexture3.rf" "file1.rf";
@@ -45388,9 +43976,22 @@ connectAttr "place2dTexture3.vt3" "file1.vt3";
 connectAttr "place2dTexture3.vc1" "file1.vc1";
 connectAttr "place2dTexture3.o" "file1.uv";
 connectAttr "place2dTexture3.ofs" "file1.fs";
-connectAttr "polySurface862SG.pa" ":renderPartition.st" -na;
+connectAttr "polySurface1285SG1.msg" "materialInfo4.sg";
+connectAttr "blinn1.msg" "materialInfo4.m";
+connectAttr "blinn1.oc" "polySurface1285SG1.ss";
+connectAttr "polySurface1285Shape.iog" "polySurface1285SG1.dsm" -na;
+connectAttr "pCube6Shape.iog" "polySurface1285SG1.dsm" -na;
+relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "polySurface862SG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "polySurface1285SG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "polySurface862SG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "polySurface1285SG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 connectAttr "polySurface862SG1.pa" ":renderPartition.st" -na;
-connectAttr "polySurface1285SG.pa" ":renderPartition.st" -na;
 connectAttr "polySurface1285SG1.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "escapePod_mat.msg" ":defaultShaderList1.s" -na;
@@ -45403,5 +44004,4 @@ connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of escapePod_ja.ma
+// End of escapePodFIXED_ja.ma
