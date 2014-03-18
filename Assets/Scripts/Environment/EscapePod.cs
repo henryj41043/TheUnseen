@@ -36,6 +36,8 @@ public class EscapePod : Interactive {
 		escapePod.Play("BreakEverything");
 
 		yield return new WaitForSeconds(7.0f);
+		GameObject music = GameObject.FindGameObjectWithTag("Music");
+		GameObject.Destroy(music);
 		escapePodSound.PlayOneShot(shutdownSound);
 
 		foreach (GameObject g in onLights) {

@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Ending : MonoBehaviour {
+	public GameObject endingcamera;
 	public Camera endingCamera;
 	public GameObject finalPos;
 	public GameObject startPos;
@@ -18,12 +19,15 @@ public class Ending : MonoBehaviour {
 	public GameObject creatureCollection;
 	public GameObject creatureHand;
 	public Texture2D black;
+	public GameObject creditsCamera;
+	public PlayEndCredits credits;
 
 	private bool isOver = false;
 
 	void OnTriggerEnter(Collider player){
 		if (player.gameObject.tag == "Player") {
 			player.gameObject.SetActive(false);
+			endingcamera.SetActive(true);
 			endingCamera.GetComponent<AudioListener>().enabled = true;
 			startLerp = true;
 			startTime = Time.time;
@@ -68,7 +72,9 @@ public class Ending : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		isOver = true;
 		yield return new WaitForSeconds(3.0f);
-		Application.LoadLevel("MainMenu");
+		creditsCamera.SetActive(true);
+		credits.PlayCredits();
+		this.gameObject.SetActive(false);
 	}
 
 	void OnGUI() {
