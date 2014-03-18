@@ -33,6 +33,18 @@ public class DemoControl : MonoBehaviour {
 			level2Flag = true;
 		}
 
+		if (Input.GetKeyDown(KeyCode.O)) {
+			if (Application.loadedLevelName.Equals("Level2")) {
+				foreach (GameObject g in GameObject.FindGameObjectsWithTag("Objective")) {
+					g.GetComponent<Objective>().Interact();
+				}
+			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.I)) {
+			GetComponent<CharacterStats>().invincible = !GetComponent<CharacterStats>().invincible;
+		}
+
 		if (Input.GetKeyDown(KeyCode.Alpha0)) {
 			showFPS = !showFPS;
 		}

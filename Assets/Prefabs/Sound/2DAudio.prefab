@@ -238,14 +238,14 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Priority: 1
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 400
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

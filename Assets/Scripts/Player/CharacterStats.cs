@@ -18,6 +18,7 @@ public class CharacterStats : MonoBehaviour
 	public AudioClip[] hitSounds;
 	public AudioClip[] deathSounds;
 	public Texture2D[] bloodOverlay;
+	public bool invincible = false;
 	
 	[System.NonSerialized]
 	public float sprintEnergy;
@@ -42,7 +43,7 @@ public class CharacterStats : MonoBehaviour
 	}
 
 	void Update() {
-		if (isDead == false && playerHealth <= 0) {
+		if (isDead == false && playerHealth <= 0 && invincible == false) {
 			Die();
 		}
 

@@ -1943,7 +1943,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: .25
-  far clip plane: 100
+  far clip plane: 120
   field of view: 60
   orthographic: 0
   orthographic size: 100
@@ -2438,6 +2438,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 73d95208216daef49a3a9547e32bf932, type: 3}
   - {fileID: 2800000, guid: 2239c216dca4ced4faf3cd64a1cb38e4, type: 3}
   - {fileID: 2800000, guid: f04ceab7f0d078b45ad8830072b8f14a, type: 3}
+  invincible: 1
   isDead: 0
 --- !u!114 &11400014
 MonoBehaviour:
@@ -3208,10 +3209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshhold: .25
-  intensity: .5
-  blurSize: 2
+  intensity: 1
+  blurSize: 4
   resolution: 1
-  blurIterations: 2
+  blurIterations: 3
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
 --- !u!114 &11400060

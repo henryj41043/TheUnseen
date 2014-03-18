@@ -22,6 +22,7 @@ TagManager:
   - AttractiveSound
   - Brightness
   - AudioLogKiosk
+  - Objective
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

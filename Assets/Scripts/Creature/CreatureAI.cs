@@ -63,6 +63,7 @@ public class CreatureAI : MonoBehaviour {
 	public AudioClip attackSound;
 	public AudioClip[] growls;
 	public AudioClip[] roars;
+	public LightningBolt lightning;
 
 	private AIPath aiPath;
 	private Animator anim;
@@ -163,6 +164,7 @@ public class CreatureAI : MonoBehaviour {
 
 			// Check State
 			if (currentState == States.Wander) {
+				lightning.gameObject.SetActive(false);
 				randomNoiseTimer += Time.deltaTime;
 				aiPath.speed = actualWalkSpeed;
 				if(aiPath.target == null) {
@@ -184,6 +186,7 @@ public class CreatureAI : MonoBehaviour {
 					randomNoiseTimer = 0f;
 				}
 			}else if(currentState == States.ChasePOI){
+				lightning.gameObject.SetActive(false);
 				currentTarget = newTarget;
 				if (currentTarget != null){
 					aiPath.speed = actualRunSpeed;
@@ -193,6 +196,7 @@ public class CreatureAI : MonoBehaviour {
 					}
 				}
 			}else if(currentState == States.ChasePlayer){
+				lightning.gameObject.SetActive(false);
 				currentTarget = newTarget;
 				if (currentTarget != null){
 					aiPath.speed = actualChaseSpeed;
@@ -208,6 +212,7 @@ public class CreatureAI : MonoBehaviour {
 					}
 				}
 			}else if(currentState == States.ChaseLastKnown){
+				lightning.gameObject.SetActive(false);
 				aiPath.target = lastPosMarker.transform;
 				if(progressTimer == 0f){
 					lastProgress = (lastPosMarker.transform.position - transform.position).magnitude;
@@ -237,8 +242,15 @@ public class CreatureAI : MonoBehaviour {
 				if(currentTarget != null && CanDrain(currentTarget)){
 					if(Vector3.Distance(transform.position, currentTarget.transform.position) > drainRange){
 						currentState = States.ChasePOI;
+						lightning.gameObject.SetActive(false);
 					}else{
 						currentTarget.GetComponent<Drainable>().Drain(ratioDrainPerSecond*delay);
+						if (currentTarget == null) {
+							lightning.gameObject.SetActive(false);
+						} else {
+							lightning.gameObject.SetActive(true);
+							lightning.target = currentTarget.transform;
+						}
 						superSayianCharge += ratioDrainPerSecond*delay;
 					}
 				}else{
@@ -256,6 +268,7 @@ public class CreatureAI : MonoBehaviour {
 					}
 				}
 			}else if (currentState == States.Searching){
+				lightning.gameObject.SetActive(false);
 				timeSearchedSoFar += delay;
 				if (timeSearchedSoFar > searchTime){
 					currentState = States.Wander;
@@ -267,7 +280,7 @@ public class CreatureAI : MonoBehaviour {
 						soundSource.Play();
 					}
 				}
-			}
+			} 
 		}
 	}
 
