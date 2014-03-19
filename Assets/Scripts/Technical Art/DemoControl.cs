@@ -7,6 +7,7 @@ public class DemoControl : MonoBehaviour {
 	private bool level0Flag = false;
 	private bool level1Flag = false;
 	private bool level2Flag = false;
+	private bool quitFlag = false;
 	private bool showFPS = false;
 
 	private float updateInterval = 0.5F;
@@ -31,6 +32,11 @@ public class DemoControl : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha3)) {
 			StartCoroutine(LoadLevel2());
 			level2Flag = true;
+		}
+
+		if (Input.GetKeyDown(KeyCode.Delete)) {
+			StartCoroutine(QuitGame());
+			quitFlag = true;
 		}
 
 		if (Input.GetKeyDown(KeyCode.O)) {
@@ -104,5 +110,13 @@ public class DemoControl : MonoBehaviour {
 		}
 		yield return new WaitForSeconds(0.5f);
 		level2Flag = false;
+	}
+
+	IEnumerator QuitGame() {
+		if (quitFlag) {
+			Application.Quit();
+		}
+		yield return new WaitForSeconds(0.5f);
+		quitFlag = false;
 	}
 }

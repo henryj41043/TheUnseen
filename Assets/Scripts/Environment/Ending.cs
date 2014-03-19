@@ -12,11 +12,13 @@ public class Ending : MonoBehaviour {
 	public float cameraSpeed = 1.0f;
 	public EscapePod escapePod;
 	public AudioClip lightOff;
+	public AudioClip growl1;
+	public AudioClip growl2;
 	public AudioClip roar1;
 	public AudioClip roar2;
 	public AudioClip roar3;
 	public AudioClip creatureBang;
-	public GameObject creatureCollection;
+	public GameObject[] creatureCollection;
 	public GameObject creatureHand;
 	public Texture2D black;
 	public GameObject creditsCamera;
@@ -61,19 +63,45 @@ public class Ending : MonoBehaviour {
 	}
 
 	IEnumerator SpawnCreatures() {
-		creatureCollection.SetActive(true);
+		RenderSettings.fog = true;
+		float t = Time.time;
+		while (Time.time < t + 0.5f) {
+			RenderSettings.fogDensity += 0.0005f;
+			yield return new WaitForSeconds(0.01f);
+		}
+
+		audio.PlayOneShot(growl1);
+		yield return new WaitForSeconds(0.5f);
+		audio.PlayOneShot(growl2);
+		foreach (GameObject g in creatureCollection) {
+			g.SetActive(true);
+		}
+		yield return new WaitForSeconds(1.5f);
+		audio.PlayOneShot(growl1);
 		audio.PlayOneShot(roar1);
+		yield return new WaitForSeconds(0.5f);
 		audio.PlayOneShot(roar2);
 		audio.PlayOneShot(roar3);
-		yield return new WaitForSeconds(4.0f);
+		yield return new WaitForSeconds(2.0f);
+		float start = Time.time;
+		while (Time.time < start + 0.5f) {
+			AudioListener.volume -= 0.2f; 
+			yield return new WaitForSeconds(0.1f);
+		}
+		//yield return new WaitForSeconds(3.5f);
 		creatureHand.SetActive(true);
 		yield return new WaitForSeconds(0.5f);
+		AudioListener.volume = 1.0f; 
 		audio.PlayOneShot(creatureBang);
+		foreach (GameObject g in escapePod.sparks) {
+			g.SetActive(false);
+		}
 		yield return new WaitForSeconds(0.5f);
 		isOver = true;
-		yield return new WaitForSeconds(3.0f);
+		yield return new WaitForSeconds(4.0f);
 		creditsCamera.SetActive(true);
 		credits.PlayCredits();
+		RenderSettings.fog = false;
 		this.gameObject.SetActive(false);
 	}
 

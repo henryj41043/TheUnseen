@@ -2,11 +2,15 @@
 using System.Collections;
 
 public class PEGIE : MonoBehaviour {
+	public bool destroy = true;
+
 	public void Talk() {
 		if (audio.isPlaying) audio.Stop();
 		audio.clip = speech;
 		audio.Play();
-		Destroy(gameObject);
+		if (destroy) {
+			Destroy(gameObject);
+		}
 	}
 
 	[SerializeField] private AudioClip speech;
